@@ -1,0 +1,6 @@
+['/home/ubuntu/oss-cad-suite/bin/tabbypy3', '/home/ubuntu/FPGA/clean-v11/run_current.py']
+test1 logic 286 221 DFF 222 222 gain 22.727 CPU% -8.23 RSS% -2.83
+test2 logic 25 15 DFF 0 0 gain 40.0 CPU% -3.4 RSS% 0.0
+test3 logic 12 12 DFF 17 12 gain 0.0 CPU% -4.39 RSS% -0.95
+test4 logic 35 26 DFF 10 10 gain 25.714 CPU% -6.03 RSS% -0.94
+VALIDATION PASS 22.11038961038961 /home/ubuntu/FPGA/clean-v11/competition-v11-t6r8mp9n

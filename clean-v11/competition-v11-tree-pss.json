@@ -1,0 +1,3081 @@
+{
+  "status": "PASS",
+  "report_dir": "/home/ubuntu/FPGA/clean-v11/competition-v11-t6r8mp9n",
+  "cases": [
+    {
+      "name": "test1",
+      "sampled_peak_pss_mib": {
+        "baseline": [
+          41.4677734375,
+          41.7333984375,
+          41.4560546875,
+          41.7177734375,
+          42.0771484375,
+          41.6162109375,
+          41.5458984375,
+          41.0654296875,
+          41.4287109375,
+          41.4169921875,
+          40.9521484375,
+          41.7412109375,
+          41.548828125,
+          42.033203125,
+          41.27734375,
+          41.98046875,
+          41.2763671875,
+          41.650390625,
+          41.0166015625,
+          41.2763671875,
+          41.4736328125
+        ],
+        "candidate": [
+          40.5693359375,
+          40.8193359375,
+          40.6474609375,
+          40.9404296875,
+          40.8427734375,
+          40.4873046875,
+          40.75,
+          40.6474609375,
+          40.9169921875,
+          40.5341796875,
+          40.4169921875,
+          40.4638671875,
+          40.8115234375,
+          40.9716796875,
+          40.66796875,
+          40.5185546875,
+          40.654296875,
+          40.73828125,
+          40.498046875,
+          40.3828125,
+          41.0146484375
+        ]
+      },
+      "peak_compositions": {
+        "baseline": [
+          [
+            {
+              "pid": 182992,
+              "pss_kib": 26460,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 182994,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 182995,
+              "pss_kib": 15829,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183017,
+              "pss_kib": 26588,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183019,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183020,
+              "pss_kib": 15973,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183022,
+              "pss_kib": 26592,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183024,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183025,
+              "pss_kib": 15685,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183037,
+              "pss_kib": 26756,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183039,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183040,
+              "pss_kib": 15793,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183042,
+              "pss_kib": 27088,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183044,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183045,
+              "pss_kib": 15829,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183067,
+              "pss_kib": 26764,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183069,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183070,
+              "pss_kib": 15677,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183076,
+              "pss_kib": 26600,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183079,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183080,
+              "pss_kib": 15769,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183092,
+              "pss_kib": 26272,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183094,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183095,
+              "pss_kib": 15609,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183107,
+              "pss_kib": 26520,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183109,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183110,
+              "pss_kib": 15733,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183122,
+              "pss_kib": 26560,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183124,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183125,
+              "pss_kib": 15677,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183127,
+              "pss_kib": 26156,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183129,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183130,
+              "pss_kib": 15605,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183152,
+              "pss_kib": 26732,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183154,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183155,
+              "pss_kib": 15837,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183157,
+              "pss_kib": 26572,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183159,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183160,
+              "pss_kib": 15804,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183172,
+              "pss_kib": 27059,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183174,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183175,
+              "pss_kib": 15813,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183177,
+              "pss_kib": 26492,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183179,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183180,
+              "pss_kib": 15602,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183202,
+              "pss_kib": 27068,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183204,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183205,
+              "pss_kib": 15750,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183211,
+              "pss_kib": 26160,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183214,
+              "pss_kib": 170,
+              "command": "sh"
+            }
+          ],
+          [
+            {
+              "pid": 183227,
+              "pss_kib": 26732,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183229,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183230,
+              "pss_kib": 15744,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183233,
+              "pss_kib": 26136,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183244,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183245,
+              "pss_kib": 15695,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183257,
+              "pss_kib": 26284,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183259,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183260,
+              "pss_kib": 15813,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183262,
+              "pss_kib": 26572,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183264,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183265,
+              "pss_kib": 15727,
+              "command": "yosys-abc"
+            }
+          ]
+        ],
+        "candidate": [
+          [
+            {
+              "pid": 182997,
+              "pss_kib": 25640,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 182999,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183000,
+              "pss_kib": 15729,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183002,
+              "pss_kib": 25496,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183014,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183015,
+              "pss_kib": 16133,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183027,
+              "pss_kib": 25296,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183029,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183030,
+              "pss_kib": 16157,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183032,
+              "pss_kib": 25640,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183034,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183035,
+              "pss_kib": 16109,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183047,
+              "pss_kib": 25644,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183059,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183060,
+              "pss_kib": 16009,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183062,
+              "pss_kib": 25352,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183064,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183065,
+              "pss_kib": 15937,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183082,
+              "pss_kib": 25596,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183084,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183085,
+              "pss_kib": 15958,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183087,
+              "pss_kib": 25632,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183089,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183090,
+              "pss_kib": 15821,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183112,
+              "pss_kib": 25720,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183114,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183115,
+              "pss_kib": 16009,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183117,
+              "pss_kib": 25468,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183119,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183120,
+              "pss_kib": 15869,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183132,
+              "pss_kib": 25276,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183134,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183135,
+              "pss_kib": 15941,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183137,
+              "pss_kib": 25288,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183139,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183140,
+              "pss_kib": 15977,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183162,
+              "pss_kib": 25636,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183164,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183165,
+              "pss_kib": 15985,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183167,
+              "pss_kib": 25632,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183169,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183170,
+              "pss_kib": 16153,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183182,
+              "pss_kib": 25484,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183194,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183195,
+              "pss_kib": 15990,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183197,
+              "pss_kib": 25364,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183199,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183200,
+              "pss_kib": 15957,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183217,
+              "pss_kib": 25468,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183219,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183220,
+              "pss_kib": 15988,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183222,
+              "pss_kib": 25612,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183224,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183225,
+              "pss_kib": 15934,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183247,
+              "pss_kib": 25288,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183249,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183250,
+              "pss_kib": 16012,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183252,
+              "pss_kib": 25172,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183254,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183255,
+              "pss_kib": 16006,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183267,
+              "pss_kib": 25644,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183269,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183270,
+              "pss_kib": 16181,
+              "command": "yosys-abc"
+            }
+          ]
+        ]
+      },
+      "max_overhead_percent": -2.52512358716086
+    },
+    {
+      "name": "test2",
+      "sampled_peak_pss_mib": {
+        "baseline": [
+          35.1640625,
+          36.275390625,
+          36.119140625,
+          35.4296875,
+          36.162109375,
+          35.74609375,
+          35.0771484375,
+          35.67578125,
+          35.7275390625,
+          35.6142578125,
+          36.4052734375,
+          35.7724609375,
+          36.3173828125,
+          35.0751953125,
+          35.65234375,
+          35.7978515625,
+          36.24609375,
+          35.15234375,
+          35.39453125,
+          35.65625,
+          35.2880859375
+        ],
+        "candidate": [
+          36.5,
+          36.533203125,
+          36.5439453125,
+          36.12109375,
+          36.32421875,
+          36.6806640625,
+          36.4873046875,
+          36.328125,
+          36.48828125,
+          36.599609375,
+          36.54296875,
+          36.7392578125,
+          35.974609375,
+          36.53125,
+          36.287109375,
+          36.0166015625,
+          36.4892578125,
+          36.4921875,
+          36.65625,
+          36.3486328125,
+          36.6435546875
+        ]
+      },
+      "peak_compositions": {
+        "baseline": [
+          [
+            {
+              "pid": 183272,
+              "pss_kib": 21270,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183273,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183274,
+              "pss_kib": 14568,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183291,
+              "pss_kib": 21814,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183292,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183293,
+              "pss_kib": 15162,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183294,
+              "pss_kib": 21494,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183295,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183296,
+              "pss_kib": 15322,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183303,
+              "pss_kib": 21253,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183304,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183305,
+              "pss_kib": 14853,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183306,
+              "pss_kib": 21682,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183307,
+              "pss_kib": 174,
+              "command": "sh"
+            }
+          ],
+          [
+            {
+              "pid": 183315,
+              "pss_kib": 21481,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183316,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183317,
+              "pss_kib": 14953,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183318,
+              "pss_kib": 21258,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183319,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183320,
+              "pss_kib": 14487,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183327,
+              "pss_kib": 21685,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183328,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183329,
+              "pss_kib": 14677,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183330,
+              "pss_kib": 21257,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183331,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183332,
+              "pss_kib": 15154,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183339,
+              "pss_kib": 21821,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183340,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183341,
+              "pss_kib": 14474,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183342,
+              "pss_kib": 21814,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183343,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183344,
+              "pss_kib": 15295,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183361,
+              "pss_kib": 21825,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183362,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183363,
+              "pss_kib": 14632,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183364,
+              "pss_kib": 21786,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183365,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183366,
+              "pss_kib": 15233,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183373,
+              "pss_kib": 21254,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183374,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183375,
+              "pss_kib": 14493,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183381,
+              "pss_kib": 21749,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183382,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183383,
+              "pss_kib": 14589,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183390,
+              "pss_kib": 21746,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183391,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183392,
+              "pss_kib": 14737,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183393,
+              "pss_kib": 21925,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183394,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183395,
+              "pss_kib": 15017,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183402,
+              "pss_kib": 21237,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183403,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183404,
+              "pss_kib": 14585,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183405,
+              "pss_kib": 21257,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183406,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183407,
+              "pss_kib": 14813,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183414,
+              "pss_kib": 21792,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183425,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183426,
+              "pss_kib": 14550,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183427,
+              "pss_kib": 21261,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183428,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183429,
+              "pss_kib": 14704,
+              "command": "yosys-abc"
+            }
+          ]
+        ],
+        "candidate": [
+          [
+            {
+              "pid": 183275,
+              "pss_kib": 21801,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183276,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183277,
+              "pss_kib": 15405,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183278,
+              "pss_kib": 21977,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183289,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183290,
+              "pss_kib": 15263,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183297,
+              "pss_kib": 21809,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183298,
+              "pss_kib": 174,
+              "command": "sh"
+            }
+          ],
+          [
+            {
+              "pid": 183300,
+              "pss_kib": 21530,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183301,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183302,
+              "pss_kib": 15288,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183309,
+              "pss_kib": 21521,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183310,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183311,
+              "pss_kib": 15501,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183312,
+              "pss_kib": 22101,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183313,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183314,
+              "pss_kib": 15290,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183321,
+              "pss_kib": 21829,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183322,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183323,
+              "pss_kib": 15360,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183324,
+              "pss_kib": 21825,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183325,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183326,
+              "pss_kib": 15201,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183333,
+              "pss_kib": 21797,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183334,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183335,
+              "pss_kib": 15397,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183336,
+              "pss_kib": 21902,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183337,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183338,
+              "pss_kib": 15402,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183355,
+              "pss_kib": 21813,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183356,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183357,
+              "pss_kib": 15433,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183358,
+              "pss_kib": 21870,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183359,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183360,
+              "pss_kib": 15577,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183367,
+              "pss_kib": 21425,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183368,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183369,
+              "pss_kib": 15243,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183370,
+              "pss_kib": 21789,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183371,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183372,
+              "pss_kib": 15449,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183384,
+              "pss_kib": 21550,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183385,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183386,
+              "pss_kib": 15434,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183387,
+              "pss_kib": 21426,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183388,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183389,
+              "pss_kib": 15285,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183396,
+              "pss_kib": 21622,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183397,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183398,
+              "pss_kib": 15573,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183399,
+              "pss_kib": 21621,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183400,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183401,
+              "pss_kib": 15573,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183408,
+              "pss_kib": 21793,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183409,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183410,
+              "pss_kib": 15573,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183411,
+              "pss_kib": 21622,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183412,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183413,
+              "pss_kib": 15429,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183430,
+              "pss_kib": 21854,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183431,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183432,
+              "pss_kib": 15495,
+              "command": "yosys-abc"
+            }
+          ]
+        ]
+      },
+      "max_overhead_percent": 0.9174065827945999
+    },
+    {
+      "name": "test3",
+      "sampled_peak_pss_mib": {
+        "baseline": [
+          36.2705078125,
+          36.2744140625,
+          36.3876953125,
+          36.6162109375,
+          36.234375,
+          36.5751953125,
+          36.6845703125,
+          36.5400390625,
+          36.248046875,
+          36.89453125,
+          36.4697265625,
+          36.328125,
+          36.595703125,
+          36.546875,
+          36.841796875,
+          36.5673828125,
+          36.455078125,
+          36.6416015625,
+          36.9072265625,
+          36.240234375,
+          36.7314453125
+        ],
+        "candidate": [
+          36.70703125,
+          36.80859375,
+          36.51171875,
+          36.3408203125,
+          36.6953125,
+          36.4521484375,
+          36.3984375,
+          36.5478515625,
+          36.65234375,
+          36.271484375,
+          36.3037109375,
+          36.7109375,
+          35.98828125,
+          36.6591796875,
+          36.6640625,
+          36.140625,
+          36.3056640625,
+          36.640625,
+          36.7509765625,
+          36.5634765625,
+          36.7158203125
+        ]
+      },
+      "peak_compositions": {
+        "baseline": [
+          [
+            {
+              "pid": 183433,
+              "pss_kib": 21622,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183434,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183435,
+              "pss_kib": 15349,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183442,
+              "pss_kib": 21822,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183443,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183444,
+              "pss_kib": 15153,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183445,
+              "pss_kib": 21894,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183446,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183447,
+              "pss_kib": 15197,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183454,
+              "pss_kib": 22045,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183455,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183456,
+              "pss_kib": 15280,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183457,
+              "pss_kib": 21689,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183458,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183459,
+              "pss_kib": 15245,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183466,
+              "pss_kib": 21953,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183467,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183468,
+              "pss_kib": 15330,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183469,
+              "pss_kib": 22110,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183470,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183471,
+              "pss_kib": 15285,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183488,
+              "pss_kib": 21974,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183489,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183490,
+              "pss_kib": 15269,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183491,
+              "pss_kib": 21622,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183492,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183493,
+              "pss_kib": 15322,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183500,
+              "pss_kib": 22277,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183501,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183502,
+              "pss_kib": 15333,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183503,
+              "pss_kib": 21822,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183504,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183505,
+              "pss_kib": 15349,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183512,
+              "pss_kib": 21974,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183513,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183514,
+              "pss_kib": 15056,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183515,
+              "pss_kib": 21975,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183516,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183517,
+              "pss_kib": 15325,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183524,
+              "pss_kib": 22046,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183525,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183526,
+              "pss_kib": 15204,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183527,
+              "pss_kib": 22229,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183528,
+              "pss_kib": 164,
+              "command": "sh"
+            },
+            {
+              "pid": 183529,
+              "pss_kib": 15333,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183546,
+              "pss_kib": 22020,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183547,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183548,
+              "pss_kib": 15255,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183549,
+              "pss_kib": 21878,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183550,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183551,
+              "pss_kib": 15282,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183558,
+              "pss_kib": 22154,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183559,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183560,
+              "pss_kib": 15197,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183561,
+              "pss_kib": 22274,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183567,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183568,
+              "pss_kib": 15349,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183575,
+              "pss_kib": 21782,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183576,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183577,
+              "pss_kib": 15158,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183578,
+              "pss_kib": 22278,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183579,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183580,
+              "pss_kib": 15165,
+              "command": "yosys-abc"
+            }
+          ]
+        ],
+        "candidate": [
+          [
+            {
+              "pid": 183436,
+              "pss_kib": 22149,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183437,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183438,
+              "pss_kib": 15269,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183439,
+              "pss_kib": 22221,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183440,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183441,
+              "pss_kib": 15301,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183448,
+              "pss_kib": 21849,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183449,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183450,
+              "pss_kib": 15369,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183451,
+              "pss_kib": 21934,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183452,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183453,
+              "pss_kib": 15109,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183460,
+              "pss_kib": 22070,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183461,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183462,
+              "pss_kib": 15336,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183463,
+              "pss_kib": 22002,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183464,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183465,
+              "pss_kib": 15155,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183472,
+              "pss_kib": 21742,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183473,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183474,
+              "pss_kib": 15356,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183485,
+              "pss_kib": 22098,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183486,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183487,
+              "pss_kib": 15153,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183494,
+              "pss_kib": 21985,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183495,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183496,
+              "pss_kib": 15373,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183497,
+              "pss_kib": 21610,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183498,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183499,
+              "pss_kib": 15358,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183506,
+              "pss_kib": 21933,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183507,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183508,
+              "pss_kib": 15068,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183509,
+              "pss_kib": 22053,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183510,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183511,
+              "pss_kib": 15369,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183518,
+              "pss_kib": 21609,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183519,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183520,
+              "pss_kib": 15069,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183521,
+              "pss_kib": 22013,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183522,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183523,
+              "pss_kib": 15356,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183530,
+              "pss_kib": 22097,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183531,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183532,
+              "pss_kib": 15273,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183533,
+              "pss_kib": 21713,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183538,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183539,
+              "pss_kib": 15121,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183552,
+              "pss_kib": 21986,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183553,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183554,
+              "pss_kib": 15021,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183555,
+              "pss_kib": 22049,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183556,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183557,
+              "pss_kib": 15301,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183569,
+              "pss_kib": 22166,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183570,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183571,
+              "pss_kib": 15297,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183572,
+              "pss_kib": 22006,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183573,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183574,
+              "pss_kib": 15265,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183581,
+              "pss_kib": 22154,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183582,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183583,
+              "pss_kib": 15273,
+              "command": "yosys-abc"
+            }
+          ]
+        ]
+      },
+      "max_overhead_percent": -0.2672452570581907
+    },
+    {
+      "name": "test4",
+      "sampled_peak_pss_mib": {
+        "baseline": [
+          37.1142578125,
+          36.8564453125,
+          37.220703125,
+          37.0234375,
+          36.728515625,
+          37.3798828125,
+          37.2626953125,
+          37.078125,
+          36.79296875,
+          37.173828125,
+          36.48046875,
+          37.52734375,
+          37.1875,
+          36.93359375,
+          37.140625,
+          36.5185546875,
+          36.7548828125,
+          36.921875,
+          36.80859375,
+          37.3359375,
+          36.8857421875
+        ],
+        "candidate": [
+          37.2978515625,
+          37.044921875,
+          37.2314453125,
+          37.1298828125,
+          36.9658203125,
+          37.05859375,
+          37.00390625,
+          37.234375,
+          37.5810546875,
+          36.6650390625,
+          38.3427734375,
+          36.955078125,
+          37.2138671875,
+          36.8720703125,
+          37.984375,
+          36.6650390625,
+          37.1767578125,
+          37.21875,
+          37.3837890625,
+          37.009765625,
+          36.7392578125
+        ]
+      },
+      "peak_compositions": {
+        "baseline": [
+          [
+            {
+              "pid": 183584,
+              "pss_kib": 22358,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183585,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183586,
+              "pss_kib": 15477,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183593,
+              "pss_kib": 22153,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183594,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183595,
+              "pss_kib": 15414,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183596,
+              "pss_kib": 22606,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183607,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183608,
+              "pss_kib": 15334,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183615,
+              "pss_kib": 22433,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183616,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183617,
+              "pss_kib": 15309,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183618,
+              "pss_kib": 22182,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183619,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183620,
+              "pss_kib": 15258,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183627,
+              "pss_kib": 22854,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183628,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183629,
+              "pss_kib": 15253,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183630,
+              "pss_kib": 22458,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183631,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183632,
+              "pss_kib": 15529,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183639,
+              "pss_kib": 22457,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183640,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183641,
+              "pss_kib": 15341,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183642,
+              "pss_kib": 22201,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183643,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183644,
+              "pss_kib": 15301,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183661,
+              "pss_kib": 22477,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183662,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183663,
+              "pss_kib": 15419,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183664,
+              "pss_kib": 21925,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183665,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183666,
+              "pss_kib": 15257,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183673,
+              "pss_kib": 22857,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183674,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183675,
+              "pss_kib": 15401,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183676,
+              "pss_kib": 22449,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183677,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183678,
+              "pss_kib": 15457,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183685,
+              "pss_kib": 22353,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183686,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183687,
+              "pss_kib": 15297,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183688,
+              "pss_kib": 22445,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183689,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183690,
+              "pss_kib": 15413,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183697,
+              "pss_kib": 21933,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183698,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183699,
+              "pss_kib": 15292,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183700,
+              "pss_kib": 21990,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183701,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183702,
+              "pss_kib": 15477,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183719,
+              "pss_kib": 22225,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183720,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183721,
+              "pss_kib": 15413,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183722,
+              "pss_kib": 22181,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183723,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183724,
+              "pss_kib": 15341,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183736,
+              "pss_kib": 22577,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183737,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183738,
+              "pss_kib": 15485,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183739,
+              "pss_kib": 22181,
+              "command": "yosys-original"
+            },
+            {
+              "pid": 183740,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183741,
+              "pss_kib": 15420,
+              "command": "yosys-abc"
+            }
+          ]
+        ],
+        "candidate": [
+          [
+            {
+              "pid": 183587,
+              "pss_kib": 22098,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183588,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183589,
+              "pss_kib": 15925,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183590,
+              "pss_kib": 22470,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183591,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183592,
+              "pss_kib": 15294,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183609,
+              "pss_kib": 22568,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183610,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183611,
+              "pss_kib": 15383,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183612,
+              "pss_kib": 22478,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183613,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183614,
+              "pss_kib": 15373,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183621,
+              "pss_kib": 22234,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183622,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183623,
+              "pss_kib": 15449,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183624,
+              "pss_kib": 22577,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183625,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183626,
+              "pss_kib": 15197,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183633,
+              "pss_kib": 22234,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183634,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183635,
+              "pss_kib": 15484,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183636,
+              "pss_kib": 22645,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183637,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183638,
+              "pss_kib": 15313,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183645,
+              "pss_kib": 22449,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183646,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183647,
+              "pss_kib": 15864,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183648,
+              "pss_kib": 22286,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183649,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183650,
+              "pss_kib": 15089,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183667,
+              "pss_kib": 22209,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183668,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183669,
+              "pss_kib": 16880,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183670,
+              "pss_kib": 22226,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183671,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183672,
+              "pss_kib": 15442,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183679,
+              "pss_kib": 22641,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183680,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183681,
+              "pss_kib": 15292,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183682,
+              "pss_kib": 22162,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183683,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183684,
+              "pss_kib": 15425,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183691,
+              "pss_kib": 22097,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183692,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183693,
+              "pss_kib": 16625,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183694,
+              "pss_kib": 22214,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183695,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183696,
+              "pss_kib": 15161,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183713,
+              "pss_kib": 22586,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183714,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183715,
+              "pss_kib": 15313,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183716,
+              "pss_kib": 22505,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183717,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183718,
+              "pss_kib": 15437,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183725,
+              "pss_kib": 22569,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183726,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183727,
+              "pss_kib": 15542,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183733,
+              "pss_kib": 22525,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183734,
+              "pss_kib": 170,
+              "command": "sh"
+            },
+            {
+              "pid": 183735,
+              "pss_kib": 15203,
+              "command": "yosys-abc"
+            }
+          ],
+          [
+            {
+              "pid": 183742,
+              "pss_kib": 22150,
+              "command": "yosys-competiti"
+            },
+            {
+              "pid": 183743,
+              "pss_kib": 174,
+              "command": "sh"
+            },
+            {
+              "pid": 183744,
+              "pss_kib": 15297,
+              "command": "yosys-abc"
+            }
+          ]
+        ]
+      },
+      "max_overhead_percent": 2.172894764234412
+    }
+  ],
+  "interval_seconds": 0.001,
+  "note": "Sampled process-tree PSS apportions shared resident pages; non-atomic /proc reads and brief missed peaks remain limitations. Not official memory metric."
+}

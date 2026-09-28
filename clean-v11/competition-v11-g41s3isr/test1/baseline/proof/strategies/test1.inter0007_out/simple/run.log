@@ -1,0 +1,1102 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+
+-- Executing script file `run.ys' --
+
+1. Executing Verilog-2005 frontend: ../../../partitions/test1.inter0007_out.sv
+Parsing SystemVerilog input from `../../../partitions/test1.inter0007_out.sv' to AST representation.
+Generating RTLIL representation for module `\miter'.
+Generating RTLIL representation for module `\miter_cmp_prop'.
+Generating RTLIL representation for module `\miter_def_prop'.
+Generating RTLIL representation for module `\gold.test1.inter0007_out'.
+Generating RTLIL representation for module `\gate.test1.inter0007_out'.
+Successfully finished Verilog frontend.
+
+2. Executing RTLIL frontend.
+Input filename: ../../../partitions/test1.inter0007_out.il
+Replacing existing blackbox module \gold.test1.inter0007_out.
+Replacing existing blackbox module \gate.test1.inter0007_out.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     \miter_cmp_prop
+Used module:     \gate.test1.inter0007_out
+Used module:     \gold.test1.inter0007_out
+Parameter 1 (\WIDTH) = 1
+Parameter 2 (\TYPE) = 48'011000010111001101110011011001010111001001110100
+
+3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\miter_cmp_prop'.
+Parameter 1 (\WIDTH) = 1
+Parameter 2 (\TYPE) = 48'011000010111001101110011011001010111001001110100
+Generating RTLIL representation for module `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop'.
+
+3.3. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     $paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop
+Used module:     \gate.test1.inter0007_out
+Used module:     \gold.test1.inter0007_out
+
+3.4. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     $paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop
+Used module:     \gate.test1.inter0007_out
+Used module:     \gold.test1.inter0007_out
+Removing unused module `\miter_def_prop'.
+Removing unused module `\miter_cmp_prop'.
+Removed 2 unused modules.
+Module $paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop directly or indirectly contains formal properties -> setting "keep" attribute.
+Module miter directly or indirectly contains formal properties -> setting "keep" attribute.
+Mapping positional arguments of cell miter.__po_inter0007_out__assert ($paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop).
+
+4. Executing PROC pass (convert processes to netlists).
+
+4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 3 assignments to connections.
+
+4.4. Executing PROC_INIT pass (extract init attributes).
+
+4.5. Executing PROC_ARST pass (detect async resets in processes).
+
+4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.$proc$../../../partitions/test1.inter0007_out.sv:66$5048'.
+Creating decoders for process `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.$proc$../../../partitions/test1.inter0007_out.sv:60$5043'.
+
+4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.\i' from process `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.$proc$../../../partitions/test1.inter0007_out.sv:60$5043'.
+No latch inferred for signal `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.\okay' from process `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.$proc$../../../partitions/test1.inter0007_out.sv:60$5043'.
+
+4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.$proc$../../../partitions/test1.inter0007_out.sv:66$5048'.
+Removing empty process `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.$proc$../../../partitions/test1.inter0007_out.sv:60$5043'.
+Cleaned up 0 empty switches.
+
+4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gold.test1.inter0007_out.
+Optimizing module $paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.
+<suppressed ~1 debug messages>
+Optimizing module gate.test1.inter0007_out.
+Optimizing module miter.
+
+5. Executing ASYNC2SYNC pass.
+Replacing gold.test1.inter0007_out.$procdff$375 ($adff): ARST=\reset, D=$0\inter0007[0:0], Q=\inter0007_out
+Replacing gold.test1.inter0007_out.$procdff$367 ($adff): ARST=\reset, D=$0\state[3:0], Q=$auto$rename.cc:496:execute$493
+Replacing gate.test1.inter0007_out.$flatten\inter0007_out_$lut_Y_A_dffeas_q.$procdff$65 ($adff): ARST=\reset, D=$auto$rename.cc:496:execute$4416, Q=$auto$rename.cc:496:execute$3200
+Replacing gate.test1.inter0007_out.$flatten\state_dffeas_q.$procdff$65 ($adff): ARST=\reset, D=$auto$rename.cc:496:execute$4413, Q=$auto$rename.cc:496:execute$4416
+Replacing gate.test1.inter0007_out.$flatten\state_dffeas_q_3.$procdff$65 ($adff): ARST=\reset, D=$auto$rename.cc:496:execute$4440, Q=$auto$rename.cc:496:execute$4443
+Replacing gate.test1.inter0007_out.$flatten\state_dffeas_q_1.$procdff$65 ($adff): ARST=\reset, D=$auto$rename.cc:496:execute$4422, Q=$auto$rename.cc:496:execute$4425
+Replacing gate.test1.inter0007_out.$flatten\state_dffeas_q_2.$procdff$65 ($adff): ARST=\reset, D=$auto$rename.cc:496:execute$4431, Q=$auto$rename.cc:496:execute$4434
+
+6. Executing FORMALFF pass.
+
+7. Executing SETUNDEF pass (replace undef values with defined constants).
+
+8. Executing FLATTEN pass (flatten design).
+Deleting now unused module gold.test1.inter0007_out.
+Deleting now unused module $paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.
+Deleting now unused module gate.test1.inter0007_out.
+<suppressed ~3 debug messages>
+
+9. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+10. Executing OPT_EXPR pass (perform const folding).
+Optimizing module miter.
+<suppressed ~1 debug messages>
+
+11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \miter..
+Removed 1 unused cells and 7 unused wires.
+<suppressed ~2 debug messages>
+
+12. Executing SAT pass (solving SAT problems in the circuit).
+Using SAT solver `minisat`.
+
+Setting up time step 1:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clock
+Import def constraint for this timestep: \__pi_reset
+Import def constraint for this timestep: \__pi_valid
+Imported 55 cells to SAT database.
+Import proof for assert: \__po_inter0007_out__assert.okay when 1'1.
+
+** Trying induction with length 1 **
+
+Setting up time step 1:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clock
+Import def constraint for this timestep: \__pi_reset
+Import def constraint for this timestep: \__pi_valid
+Imported 55 cells to SAT database.
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$5054 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$5056 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$5058 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$5060 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$5062 = 1'0
+Import set-constraint from init attribute: $flatten\gold.$auto$async2sync.cc:253:execute$5050 = 1'1
+Import set-constraint from init attribute: $flatten\gold.$auto$async2sync.cc:253:execute$5052 = 4'0000
+Final init constraint equation: { $flatten\gold.$auto$async2sync.cc:253:execute$5052 $flatten\gold.$auto$async2sync.cc:253:execute$5050 $flatten\gate.$auto$async2sync.cc:253:execute$5062 $flatten\gate.$auto$async2sync.cc:253:execute$5060 $flatten\gate.$auto$async2sync.cc:253:execute$5058 $flatten\gate.$auto$async2sync.cc:253:execute$5056 $flatten\gate.$auto$async2sync.cc:253:execute$5054 } = 10'0000100000
+Import proof for assert: \__po_inter0007_out__assert.okay when 1'1.
+Import show expression: \__po_inter0007_out__assert.i
+Import show expression: \__po_inter0007_out__assert.okay
+Import show expression: \__po_inter0007_out__assert.in_gate
+Import show expression: \__po_inter0007_out__assert.in_gold
+Import show expression: \gate.valid
+Import show expression: \gate.clock
+Import show expression: \gate.reset
+Import show expression: \gate.inter0007_out
+Import show expression: \gate.__pi_clock
+Import show expression: \gate.__pi_reset
+Import show expression: \gate.__pi_valid
+Import show expression: \gate.__po_inter0007_out
+Import show expression: \gold.valid
+Import show expression: \gold.clock
+Import show expression: \gold.reset
+Import show expression: \gold.inter0007_out
+Import show expression: \gold.__pi_clock
+Import show expression: \gold.__pi_reset
+Import show expression: \gold.__pi_valid
+Import show expression: \gold.__po_inter0007_out
+Import show expression: \__po_inter0007_out__gate
+Import show expression: \__po_inter0007_out__gold
+Import show expression: \__pi_valid
+Import show expression: \__pi_reset
+Import show expression: \__pi_clock
+
+[base case 1] Solving problem with 2692 variables and 7340 clauses..
+Base case for induction length 1 proven.
+
+Setting up time step 2:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clock
+Import def constraint for this timestep: \__pi_reset
+Import def constraint for this timestep: \__pi_valid
+Imported 55 cells to SAT database.
+Import proof for assert: \__po_inter0007_out__assert.okay when 1'1.
+Import show expression: \__po_inter0007_out__assert.i
+Import show expression: \__po_inter0007_out__assert.okay
+Import show expression: \__po_inter0007_out__assert.in_gate
+Import show expression: \__po_inter0007_out__assert.in_gold
+Import show expression: \gate.valid
+Import show expression: \gate.clock
+Import show expression: \gate.reset
+Import show expression: \gate.inter0007_out
+Import show expression: \gate.__pi_clock
+Import show expression: \gate.__pi_reset
+Import show expression: \gate.__pi_valid
+Import show expression: \gate.__po_inter0007_out
+Import show expression: \gold.valid
+Import show expression: \gold.clock
+Import show expression: \gold.reset
+Import show expression: \gold.inter0007_out
+Import show expression: \gold.__pi_clock
+Import show expression: \gold.__pi_reset
+Import show expression: \gold.__pi_valid
+Import show expression: \gold.__po_inter0007_out
+Import show expression: \__po_inter0007_out__gate
+Import show expression: \__po_inter0007_out__gold
+Import show expression: \__pi_valid
+Import show expression: \__pi_reset
+Import show expression: \__pi_clock
+
+[induction step 1] Solving problem with 5365 variables and 14600 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                     Dec       Hex                                 Bin
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5054                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5056                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5058                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5060                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5062                0         0                                   0
+  init $flatten\gold.$auto$async2sync.cc:253:execute$5050                0         0                                   0
+  init $flatten\gold.$auto$async2sync.cc:253:execute$5052               13         d                                1101
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     1 \__pi_clock                                                       0         0                                   0
+     1 \__pi_reset                                                       0         0                                   0
+     1 \__pi_valid                                                       0         0                                   0
+     1 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     1 \__po_inter0007_out__assert.in_gate                               0         0                                   0
+     1 \__po_inter0007_out__assert.in_gold                               0         0                                   0
+     1 \__po_inter0007_out__assert.okay                                  1         1                                   1
+     1 \__po_inter0007_out__gate                                         0         0                                   0
+     1 \__po_inter0007_out__gold                                         0         0                                   0
+     1 \gate.__pi_clock                                                  0         0                                   0
+     1 \gate.__pi_reset                                                  0         0                                   0
+     1 \gate.__pi_valid                                                  0         0                                   0
+     1 \gate.__po_inter0007_out                                          0         0                                   0
+     1 \gate.clock                                                       0         0                                   0
+     1 \gate.inter0007_out                                               0         0                                   0
+     1 \gate.reset                                                       0         0                                   0
+     1 \gate.valid                                                       0         0                                   0
+     1 \gold.__pi_clock                                                  0         0                                   0
+     1 \gold.__pi_reset                                                  0         0                                   0
+     1 \gold.__pi_valid                                                  0         0                                   0
+     1 \gold.__po_inter0007_out                                          0         0                                   0
+     1 \gold.clock                                                       0         0                                   0
+     1 \gold.inter0007_out                                               0         0                                   0
+     1 \gold.reset                                                       0         0                                   0
+     1 \gold.valid                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     2 \__pi_clock                                                       0         0                                   0
+     2 \__pi_reset                                                       0         0                                   0
+     2 \__pi_valid                                                       0         0                                   0
+     2 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     2 \__po_inter0007_out__assert.in_gate                               1         1                                   1
+     2 \__po_inter0007_out__assert.in_gold                               0         0                                   0
+     2 \__po_inter0007_out__assert.okay                                  0         0                                   0
+     2 \__po_inter0007_out__gate                                         1         1                                   1
+     2 \__po_inter0007_out__gold                                         0         0                                   0
+     2 \gate.__pi_clock                                                  0         0                                   0
+     2 \gate.__pi_reset                                                  0         0                                   0
+     2 \gate.__pi_valid                                                  0         0                                   0
+     2 \gate.__po_inter0007_out                                          1         1                                   1
+     2 \gate.clock                                                       0         0                                   0
+     2 \gate.inter0007_out                                               1         1                                   1
+     2 \gate.reset                                                       0         0                                   0
+     2 \gate.valid                                                       0         0                                   0
+     2 \gold.__pi_clock                                                  0         0                                   0
+     2 \gold.__pi_reset                                                  0         0                                   0
+     2 \gold.__pi_valid                                                  0         0                                   0
+     2 \gold.__po_inter0007_out                                          0         0                                   0
+     2 \gold.clock                                                       0         0                                   0
+     2 \gold.inter0007_out                                               0         0                                   0
+     2 \gold.reset                                                       0         0                                   0
+     2 \gold.valid                                                       0         0                                   0
+
+** Trying induction with length 2 **
+
+Setting up time step 2:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clock
+Import def constraint for this timestep: \__pi_reset
+Import def constraint for this timestep: \__pi_valid
+Imported 55 cells to SAT database.
+Import proof for assert: \__po_inter0007_out__assert.okay when 1'1.
+Import show expression: \__po_inter0007_out__assert.i
+Import show expression: \__po_inter0007_out__assert.okay
+Import show expression: \__po_inter0007_out__assert.in_gate
+Import show expression: \__po_inter0007_out__assert.in_gold
+Import show expression: \gate.valid
+Import show expression: \gate.clock
+Import show expression: \gate.reset
+Import show expression: \gate.inter0007_out
+Import show expression: \gate.__pi_clock
+Import show expression: \gate.__pi_reset
+Import show expression: \gate.__pi_valid
+Import show expression: \gate.__po_inter0007_out
+Import show expression: \gold.valid
+Import show expression: \gold.clock
+Import show expression: \gold.reset
+Import show expression: \gold.inter0007_out
+Import show expression: \gold.__pi_clock
+Import show expression: \gold.__pi_reset
+Import show expression: \gold.__pi_valid
+Import show expression: \gold.__po_inter0007_out
+Import show expression: \__po_inter0007_out__gate
+Import show expression: \__po_inter0007_out__gold
+Import show expression: \__pi_valid
+Import show expression: \__pi_reset
+Import show expression: \__pi_clock
+
+[base case 2] Solving problem with 5507 variables and 15044 clauses..
+Base case for induction length 2 proven.
+
+Setting up time step 3:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clock
+Import def constraint for this timestep: \__pi_reset
+Import def constraint for this timestep: \__pi_valid
+Imported 55 cells to SAT database.
+Import proof for assert: \__po_inter0007_out__assert.okay when 1'1.
+Import show expression: \__po_inter0007_out__assert.i
+Import show expression: \__po_inter0007_out__assert.okay
+Import show expression: \__po_inter0007_out__assert.in_gate
+Import show expression: \__po_inter0007_out__assert.in_gold
+Import show expression: \gate.valid
+Import show expression: \gate.clock
+Import show expression: \gate.reset
+Import show expression: \gate.inter0007_out
+Import show expression: \gate.__pi_clock
+Import show expression: \gate.__pi_reset
+Import show expression: \gate.__pi_valid
+Import show expression: \gate.__po_inter0007_out
+Import show expression: \gold.valid
+Import show expression: \gold.clock
+Import show expression: \gold.reset
+Import show expression: \gold.inter0007_out
+Import show expression: \gold.__pi_clock
+Import show expression: \gold.__pi_reset
+Import show expression: \gold.__pi_valid
+Import show expression: \gold.__po_inter0007_out
+Import show expression: \__po_inter0007_out__gate
+Import show expression: \__po_inter0007_out__gold
+Import show expression: \__pi_valid
+Import show expression: \__pi_reset
+Import show expression: \__pi_clock
+
+[induction step 2] Solving problem with 8271 variables and 22586 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                     Dec       Hex                                 Bin
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5054                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5056                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5058                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5060                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5062                0         0                                   0
+  init $flatten\gold.$auto$async2sync.cc:253:execute$5050                0         0                                   0
+  init $flatten\gold.$auto$async2sync.cc:253:execute$5052               14         e                                1110
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     1 \__pi_clock                                                       0         0                                   0
+     1 \__pi_reset                                                       0         0                                   0
+     1 \__pi_valid                                                       0         0                                   0
+     1 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     1 \__po_inter0007_out__assert.in_gate                               0         0                                   0
+     1 \__po_inter0007_out__assert.in_gold                               0         0                                   0
+     1 \__po_inter0007_out__assert.okay                                  1         1                                   1
+     1 \__po_inter0007_out__gate                                         0         0                                   0
+     1 \__po_inter0007_out__gold                                         0         0                                   0
+     1 \gate.__pi_clock                                                  0         0                                   0
+     1 \gate.__pi_reset                                                  0         0                                   0
+     1 \gate.__pi_valid                                                  0         0                                   0
+     1 \gate.__po_inter0007_out                                          0         0                                   0
+     1 \gate.clock                                                       0         0                                   0
+     1 \gate.inter0007_out                                               0         0                                   0
+     1 \gate.reset                                                       0         0                                   0
+     1 \gate.valid                                                       0         0                                   0
+     1 \gold.__pi_clock                                                  0         0                                   0
+     1 \gold.__pi_reset                                                  0         0                                   0
+     1 \gold.__pi_valid                                                  0         0                                   0
+     1 \gold.__po_inter0007_out                                          0         0                                   0
+     1 \gold.clock                                                       0         0                                   0
+     1 \gold.inter0007_out                                               0         0                                   0
+     1 \gold.reset                                                       0         0                                   0
+     1 \gold.valid                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     2 \__pi_clock                                                       0         0                                   0
+     2 \__pi_reset                                                       0         0                                   0
+     2 \__pi_valid                                                       0         0                                   0
+     2 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     2 \__po_inter0007_out__assert.in_gate                               1         1                                   1
+     2 \__po_inter0007_out__assert.in_gold                               1         1                                   1
+     2 \__po_inter0007_out__assert.okay                                  1         1                                   1
+     2 \__po_inter0007_out__gate                                         1         1                                   1
+     2 \__po_inter0007_out__gold                                         1         1                                   1
+     2 \gate.__pi_clock                                                  0         0                                   0
+     2 \gate.__pi_reset                                                  0         0                                   0
+     2 \gate.__pi_valid                                                  0         0                                   0
+     2 \gate.__po_inter0007_out                                          1         1                                   1
+     2 \gate.clock                                                       0         0                                   0
+     2 \gate.inter0007_out                                               1         1                                   1
+     2 \gate.reset                                                       0         0                                   0
+     2 \gate.valid                                                       0         0                                   0
+     2 \gold.__pi_clock                                                  0         0                                   0
+     2 \gold.__pi_reset                                                  0         0                                   0
+     2 \gold.__pi_valid                                                  0         0                                   0
+     2 \gold.__po_inter0007_out                                          1         1                                   1
+     2 \gold.clock                                                       0         0                                   0
+     2 \gold.inter0007_out                                               1         1                                   1
+     2 \gold.reset                                                       0         0                                   0
+     2 \gold.valid                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     3 \__pi_clock                                                       0         0                                   0
+     3 \__pi_reset                                                       0         0                                   0
+     3 \__pi_valid                                                       0         0                                   0
+     3 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     3 \__po_inter0007_out__assert.in_gate                               1         1                                   1
+     3 \__po_inter0007_out__assert.in_gold                               0         0                                   0
+     3 \__po_inter0007_out__assert.okay                                  0         0                                   0
+     3 \__po_inter0007_out__gate                                         1         1                                   1
+     3 \__po_inter0007_out__gold                                         0         0                                   0
+     3 \gate.__pi_clock                                                  0         0                                   0
+     3 \gate.__pi_reset                                                  0         0                                   0
+     3 \gate.__pi_valid                                                  0         0                                   0
+     3 \gate.__po_inter0007_out                                          1         1                                   1
+     3 \gate.clock                                                       0         0                                   0
+     3 \gate.inter0007_out                                               1         1                                   1
+     3 \gate.reset                                                       0         0                                   0
+     3 \gate.valid                                                       0         0                                   0
+     3 \gold.__pi_clock                                                  0         0                                   0
+     3 \gold.__pi_reset                                                  0         0                                   0
+     3 \gold.__pi_valid                                                  0         0                                   0
+     3 \gold.__po_inter0007_out                                          0         0                                   0
+     3 \gold.clock                                                       0         0                                   0
+     3 \gold.inter0007_out                                               0         0                                   0
+     3 \gold.reset                                                       0         0                                   0
+     3 \gold.valid                                                       0         0                                   0
+
+** Trying induction with length 3 **
+
+Setting up time step 3:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clock
+Import def constraint for this timestep: \__pi_reset
+Import def constraint for this timestep: \__pi_valid
+Imported 55 cells to SAT database.
+Import proof for assert: \__po_inter0007_out__assert.okay when 1'1.
+Import show expression: \__po_inter0007_out__assert.i
+Import show expression: \__po_inter0007_out__assert.okay
+Import show expression: \__po_inter0007_out__assert.in_gate
+Import show expression: \__po_inter0007_out__assert.in_gold
+Import show expression: \gate.valid
+Import show expression: \gate.clock
+Import show expression: \gate.reset
+Import show expression: \gate.inter0007_out
+Import show expression: \gate.__pi_clock
+Import show expression: \gate.__pi_reset
+Import show expression: \gate.__pi_valid
+Import show expression: \gate.__po_inter0007_out
+Import show expression: \gold.valid
+Import show expression: \gold.clock
+Import show expression: \gold.reset
+Import show expression: \gold.inter0007_out
+Import show expression: \gold.__pi_clock
+Import show expression: \gold.__pi_reset
+Import show expression: \gold.__pi_valid
+Import show expression: \gold.__po_inter0007_out
+Import show expression: \__po_inter0007_out__gate
+Import show expression: \__po_inter0007_out__gold
+Import show expression: \__pi_valid
+Import show expression: \__pi_reset
+Import show expression: \__pi_clock
+
+[base case 3] Solving problem with 8395 variables and 22976 clauses..
+Base case for induction length 3 proven.
+
+Setting up time step 4:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clock
+Import def constraint for this timestep: \__pi_reset
+Import def constraint for this timestep: \__pi_valid
+Imported 55 cells to SAT database.
+Import proof for assert: \__po_inter0007_out__assert.okay when 1'1.
+Import show expression: \__po_inter0007_out__assert.i
+Import show expression: \__po_inter0007_out__assert.okay
+Import show expression: \__po_inter0007_out__assert.in_gate
+Import show expression: \__po_inter0007_out__assert.in_gold
+Import show expression: \gate.valid
+Import show expression: \gate.clock
+Import show expression: \gate.reset
+Import show expression: \gate.inter0007_out
+Import show expression: \gate.__pi_clock
+Import show expression: \gate.__pi_reset
+Import show expression: \gate.__pi_valid
+Import show expression: \gate.__po_inter0007_out
+Import show expression: \gold.valid
+Import show expression: \gold.clock
+Import show expression: \gold.reset
+Import show expression: \gold.inter0007_out
+Import show expression: \gold.__pi_clock
+Import show expression: \gold.__pi_reset
+Import show expression: \gold.__pi_valid
+Import show expression: \gold.__po_inter0007_out
+Import show expression: \__po_inter0007_out__gate
+Import show expression: \__po_inter0007_out__gold
+Import show expression: \__pi_valid
+Import show expression: \__pi_reset
+Import show expression: \__pi_clock
+
+[induction step 3] Solving problem with 11248 variables and 30794 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                     Dec       Hex                                 Bin
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5054                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5056                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5058                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5060                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5062                0         0                                   0
+  init $flatten\gold.$auto$async2sync.cc:253:execute$5050                1         1                                   1
+  init $flatten\gold.$auto$async2sync.cc:253:execute$5052               15         f                                1111
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     1 \__pi_clock                                                       0         0                                   0
+     1 \__pi_reset                                                       0         0                                   0
+     1 \__pi_valid                                                       0         0                                   0
+     1 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     1 \__po_inter0007_out__assert.in_gate                               1         1                                   1
+     1 \__po_inter0007_out__assert.in_gold                               1         1                                   1
+     1 \__po_inter0007_out__assert.okay                                  1         1                                   1
+     1 \__po_inter0007_out__gate                                         1         1                                   1
+     1 \__po_inter0007_out__gold                                         1         1                                   1
+     1 \gate.__pi_clock                                                  0         0                                   0
+     1 \gate.__pi_reset                                                  0         0                                   0
+     1 \gate.__pi_valid                                                  0         0                                   0
+     1 \gate.__po_inter0007_out                                          1         1                                   1
+     1 \gate.clock                                                       0         0                                   0
+     1 \gate.inter0007_out                                               1         1                                   1
+     1 \gate.reset                                                       0         0                                   0
+     1 \gate.valid                                                       0         0                                   0
+     1 \gold.__pi_clock                                                  0         0                                   0
+     1 \gold.__pi_reset                                                  0         0                                   0
+     1 \gold.__pi_valid                                                  0         0                                   0
+     1 \gold.__po_inter0007_out                                          1         1                                   1
+     1 \gold.clock                                                       0         0                                   0
+     1 \gold.inter0007_out                                               1         1                                   1
+     1 \gold.reset                                                       0         0                                   0
+     1 \gold.valid                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     2 \__pi_clock                                                       0         0                                   0
+     2 \__pi_reset                                                       0         0                                   0
+     2 \__pi_valid                                                       0         0                                   0
+     2 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     2 \__po_inter0007_out__assert.in_gate                               0         0                                   0
+     2 \__po_inter0007_out__assert.in_gold                               0         0                                   0
+     2 \__po_inter0007_out__assert.okay                                  1         1                                   1
+     2 \__po_inter0007_out__gate                                         0         0                                   0
+     2 \__po_inter0007_out__gold                                         0         0                                   0
+     2 \gate.__pi_clock                                                  0         0                                   0
+     2 \gate.__pi_reset                                                  0         0                                   0
+     2 \gate.__pi_valid                                                  0         0                                   0
+     2 \gate.__po_inter0007_out                                          0         0                                   0
+     2 \gate.clock                                                       0         0                                   0
+     2 \gate.inter0007_out                                               0         0                                   0
+     2 \gate.reset                                                       0         0                                   0
+     2 \gate.valid                                                       0         0                                   0
+     2 \gold.__pi_clock                                                  0         0                                   0
+     2 \gold.__pi_reset                                                  0         0                                   0
+     2 \gold.__pi_valid                                                  0         0                                   0
+     2 \gold.__po_inter0007_out                                          0         0                                   0
+     2 \gold.clock                                                       0         0                                   0
+     2 \gold.inter0007_out                                               0         0                                   0
+     2 \gold.reset                                                       0         0                                   0
+     2 \gold.valid                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     3 \__pi_clock                                                       0         0                                   0
+     3 \__pi_reset                                                       0         0                                   0
+     3 \__pi_valid                                                       0         0                                   0
+     3 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     3 \__po_inter0007_out__assert.in_gate                               1         1                                   1
+     3 \__po_inter0007_out__assert.in_gold                               1         1                                   1
+     3 \__po_inter0007_out__assert.okay                                  1         1                                   1
+     3 \__po_inter0007_out__gate                                         1         1                                   1
+     3 \__po_inter0007_out__gold                                         1         1                                   1
+     3 \gate.__pi_clock                                                  0         0                                   0
+     3 \gate.__pi_reset                                                  0         0                                   0
+     3 \gate.__pi_valid                                                  0         0                                   0
+     3 \gate.__po_inter0007_out                                          1         1                                   1
+     3 \gate.clock                                                       0         0                                   0
+     3 \gate.inter0007_out                                               1         1                                   1
+     3 \gate.reset                                                       0         0                                   0
+     3 \gate.valid                                                       0         0                                   0
+     3 \gold.__pi_clock                                                  0         0                                   0
+     3 \gold.__pi_reset                                                  0         0                                   0
+     3 \gold.__pi_valid                                                  0         0                                   0
+     3 \gold.__po_inter0007_out                                          1         1                                   1
+     3 \gold.clock                                                       0         0                                   0
+     3 \gold.inter0007_out                                               1         1                                   1
+     3 \gold.reset                                                       0         0                                   0
+     3 \gold.valid                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     4 \__pi_clock                                                       0         0                                   0
+     4 \__pi_reset                                                       0         0                                   0
+     4 \__pi_valid                                                       0         0                                   0
+     4 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     4 \__po_inter0007_out__assert.in_gate                               0         0                                   0
+     4 \__po_inter0007_out__assert.in_gold                               1         1                                   1
+     4 \__po_inter0007_out__assert.okay                                  0         0                                   0
+     4 \__po_inter0007_out__gate                                         0         0                                   0
+     4 \__po_inter0007_out__gold                                         1         1                                   1
+     4 \gate.__pi_clock                                                  0         0                                   0
+     4 \gate.__pi_reset                                                  0         0                                   0
+     4 \gate.__pi_valid                                                  0         0                                   0
+     4 \gate.__po_inter0007_out                                          0         0                                   0
+     4 \gate.clock                                                       0         0                                   0
+     4 \gate.inter0007_out                                               0         0                                   0
+     4 \gate.reset                                                       0         0                                   0
+     4 \gate.valid                                                       0         0                                   0
+     4 \gold.__pi_clock                                                  0         0                                   0
+     4 \gold.__pi_reset                                                  0         0                                   0
+     4 \gold.__pi_valid                                                  0         0                                   0
+     4 \gold.__po_inter0007_out                                          1         1                                   1
+     4 \gold.clock                                                       0         0                                   0
+     4 \gold.inter0007_out                                               1         1                                   1
+     4 \gold.reset                                                       0         0                                   0
+     4 \gold.valid                                                       0         0                                   0
+
+** Trying induction with length 4 **
+
+Setting up time step 4:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clock
+Import def constraint for this timestep: \__pi_reset
+Import def constraint for this timestep: \__pi_valid
+Imported 55 cells to SAT database.
+Import proof for assert: \__po_inter0007_out__assert.okay when 1'1.
+Import show expression: \__po_inter0007_out__assert.i
+Import show expression: \__po_inter0007_out__assert.okay
+Import show expression: \__po_inter0007_out__assert.in_gate
+Import show expression: \__po_inter0007_out__assert.in_gold
+Import show expression: \gate.valid
+Import show expression: \gate.clock
+Import show expression: \gate.reset
+Import show expression: \gate.inter0007_out
+Import show expression: \gate.__pi_clock
+Import show expression: \gate.__pi_reset
+Import show expression: \gate.__pi_valid
+Import show expression: \gate.__po_inter0007_out
+Import show expression: \gold.valid
+Import show expression: \gold.clock
+Import show expression: \gold.reset
+Import show expression: \gold.inter0007_out
+Import show expression: \gold.__pi_clock
+Import show expression: \gold.__pi_reset
+Import show expression: \gold.__pi_valid
+Import show expression: \gold.__po_inter0007_out
+Import show expression: \__po_inter0007_out__gate
+Import show expression: \__po_inter0007_out__gold
+Import show expression: \__pi_valid
+Import show expression: \__pi_reset
+Import show expression: \__pi_clock
+
+[base case 4] Solving problem with 11362 variables and 31154 clauses..
+Base case for induction length 4 proven.
+
+Setting up time step 5:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clock
+Import def constraint for this timestep: \__pi_reset
+Import def constraint for this timestep: \__pi_valid
+Imported 55 cells to SAT database.
+Import proof for assert: \__po_inter0007_out__assert.okay when 1'1.
+Import show expression: \__po_inter0007_out__assert.i
+Import show expression: \__po_inter0007_out__assert.okay
+Import show expression: \__po_inter0007_out__assert.in_gate
+Import show expression: \__po_inter0007_out__assert.in_gold
+Import show expression: \gate.valid
+Import show expression: \gate.clock
+Import show expression: \gate.reset
+Import show expression: \gate.inter0007_out
+Import show expression: \gate.__pi_clock
+Import show expression: \gate.__pi_reset
+Import show expression: \gate.__pi_valid
+Import show expression: \gate.__po_inter0007_out
+Import show expression: \gold.valid
+Import show expression: \gold.clock
+Import show expression: \gold.reset
+Import show expression: \gold.inter0007_out
+Import show expression: \gold.__pi_clock
+Import show expression: \gold.__pi_reset
+Import show expression: \gold.__pi_valid
+Import show expression: \gold.__po_inter0007_out
+Import show expression: \__po_inter0007_out__gate
+Import show expression: \__po_inter0007_out__gold
+Import show expression: \__pi_valid
+Import show expression: \__pi_reset
+Import show expression: \__pi_clock
+
+[induction step 4] Solving problem with 14296 variables and 39224 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                     Dec       Hex                                 Bin
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5054                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5056                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5058                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5060                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5062                0         0                                   0
+  init $flatten\gold.$auto$async2sync.cc:253:execute$5050                0         0                                   0
+  init $flatten\gold.$auto$async2sync.cc:253:execute$5052               14         e                                1110
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     1 \__pi_clock                                                       0         0                                   0
+     1 \__pi_reset                                                       0         0                                   0
+     1 \__pi_valid                                                       1         1                                   1
+     1 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     1 \__po_inter0007_out__assert.in_gate                               0         0                                   0
+     1 \__po_inter0007_out__assert.in_gold                               0         0                                   0
+     1 \__po_inter0007_out__assert.okay                                  1         1                                   1
+     1 \__po_inter0007_out__gate                                         0         0                                   0
+     1 \__po_inter0007_out__gold                                         0         0                                   0
+     1 \gate.__pi_clock                                                  0         0                                   0
+     1 \gate.__pi_reset                                                  0         0                                   0
+     1 \gate.__pi_valid                                                  1         1                                   1
+     1 \gate.__po_inter0007_out                                          0         0                                   0
+     1 \gate.clock                                                       0         0                                   0
+     1 \gate.inter0007_out                                               0         0                                   0
+     1 \gate.reset                                                       0         0                                   0
+     1 \gate.valid                                                       1         1                                   1
+     1 \gold.__pi_clock                                                  0         0                                   0
+     1 \gold.__pi_reset                                                  0         0                                   0
+     1 \gold.__pi_valid                                                  1         1                                   1
+     1 \gold.__po_inter0007_out                                          0         0                                   0
+     1 \gold.clock                                                       0         0                                   0
+     1 \gold.inter0007_out                                               0         0                                   0
+     1 \gold.reset                                                       0         0                                   0
+     1 \gold.valid                                                       1         1                                   1
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     2 \__pi_clock                                                       0         0                                   0
+     2 \__pi_reset                                                       0         0                                   0
+     2 \__pi_valid                                                       0         0                                   0
+     2 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     2 \__po_inter0007_out__assert.in_gate                               1         1                                   1
+     2 \__po_inter0007_out__assert.in_gold                               1         1                                   1
+     2 \__po_inter0007_out__assert.okay                                  1         1                                   1
+     2 \__po_inter0007_out__gate                                         1         1                                   1
+     2 \__po_inter0007_out__gold                                         1         1                                   1
+     2 \gate.__pi_clock                                                  0         0                                   0
+     2 \gate.__pi_reset                                                  0         0                                   0
+     2 \gate.__pi_valid                                                  0         0                                   0
+     2 \gate.__po_inter0007_out                                          1         1                                   1
+     2 \gate.clock                                                       0         0                                   0
+     2 \gate.inter0007_out                                               1         1                                   1
+     2 \gate.reset                                                       0         0                                   0
+     2 \gate.valid                                                       0         0                                   0
+     2 \gold.__pi_clock                                                  0         0                                   0
+     2 \gold.__pi_reset                                                  0         0                                   0
+     2 \gold.__pi_valid                                                  0         0                                   0
+     2 \gold.__po_inter0007_out                                          1         1                                   1
+     2 \gold.clock                                                       0         0                                   0
+     2 \gold.inter0007_out                                               1         1                                   1
+     2 \gold.reset                                                       0         0                                   0
+     2 \gold.valid                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     3 \__pi_clock                                                       0         0                                   0
+     3 \__pi_reset                                                       0         0                                   0
+     3 \__pi_valid                                                       0         0                                   0
+     3 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     3 \__po_inter0007_out__assert.in_gate                               0         0                                   0
+     3 \__po_inter0007_out__assert.in_gold                               0         0                                   0
+     3 \__po_inter0007_out__assert.okay                                  1         1                                   1
+     3 \__po_inter0007_out__gate                                         0         0                                   0
+     3 \__po_inter0007_out__gold                                         0         0                                   0
+     3 \gate.__pi_clock                                                  0         0                                   0
+     3 \gate.__pi_reset                                                  0         0                                   0
+     3 \gate.__pi_valid                                                  0         0                                   0
+     3 \gate.__po_inter0007_out                                          0         0                                   0
+     3 \gate.clock                                                       0         0                                   0
+     3 \gate.inter0007_out                                               0         0                                   0
+     3 \gate.reset                                                       0         0                                   0
+     3 \gate.valid                                                       0         0                                   0
+     3 \gold.__pi_clock                                                  0         0                                   0
+     3 \gold.__pi_reset                                                  0         0                                   0
+     3 \gold.__pi_valid                                                  0         0                                   0
+     3 \gold.__po_inter0007_out                                          0         0                                   0
+     3 \gold.clock                                                       0         0                                   0
+     3 \gold.inter0007_out                                               0         0                                   0
+     3 \gold.reset                                                       0         0                                   0
+     3 \gold.valid                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     4 \__pi_clock                                                       0         0                                   0
+     4 \__pi_reset                                                       0         0                                   0
+     4 \__pi_valid                                                       0         0                                   0
+     4 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     4 \__po_inter0007_out__assert.in_gate                               1         1                                   1
+     4 \__po_inter0007_out__assert.in_gold                               1         1                                   1
+     4 \__po_inter0007_out__assert.okay                                  1         1                                   1
+     4 \__po_inter0007_out__gate                                         1         1                                   1
+     4 \__po_inter0007_out__gold                                         1         1                                   1
+     4 \gate.__pi_clock                                                  0         0                                   0
+     4 \gate.__pi_reset                                                  0         0                                   0
+     4 \gate.__pi_valid                                                  0         0                                   0
+     4 \gate.__po_inter0007_out                                          1         1                                   1
+     4 \gate.clock                                                       0         0                                   0
+     4 \gate.inter0007_out                                               1         1                                   1
+     4 \gate.reset                                                       0         0                                   0
+     4 \gate.valid                                                       0         0                                   0
+     4 \gold.__pi_clock                                                  0         0                                   0
+     4 \gold.__pi_reset                                                  0         0                                   0
+     4 \gold.__pi_valid                                                  0         0                                   0
+     4 \gold.__po_inter0007_out                                          1         1                                   1
+     4 \gold.clock                                                       0         0                                   0
+     4 \gold.inter0007_out                                               1         1                                   1
+     4 \gold.reset                                                       0         0                                   0
+     4 \gold.valid                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     5 \__pi_clock                                                       0         0                                   0
+     5 \__pi_reset                                                       0         0                                   0
+     5 \__pi_valid                                                       0         0                                   0
+     5 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     5 \__po_inter0007_out__assert.in_gate                               0         0                                   0
+     5 \__po_inter0007_out__assert.in_gold                               1         1                                   1
+     5 \__po_inter0007_out__assert.okay                                  0         0                                   0
+     5 \__po_inter0007_out__gate                                         0         0                                   0
+     5 \__po_inter0007_out__gold                                         1         1                                   1
+     5 \gate.__pi_clock                                                  0         0                                   0
+     5 \gate.__pi_reset                                                  0         0                                   0
+     5 \gate.__pi_valid                                                  0         0                                   0
+     5 \gate.__po_inter0007_out                                          0         0                                   0
+     5 \gate.clock                                                       0         0                                   0
+     5 \gate.inter0007_out                                               0         0                                   0
+     5 \gate.reset                                                       0         0                                   0
+     5 \gate.valid                                                       0         0                                   0
+     5 \gold.__pi_clock                                                  0         0                                   0
+     5 \gold.__pi_reset                                                  0         0                                   0
+     5 \gold.__pi_valid                                                  0         0                                   0
+     5 \gold.__po_inter0007_out                                          1         1                                   1
+     5 \gold.clock                                                       0         0                                   0
+     5 \gold.inter0007_out                                               1         1                                   1
+     5 \gold.reset                                                       0         0                                   0
+     5 \gold.valid                                                       0         0                                   0
+
+** Trying induction with length 5 **
+
+Setting up time step 5:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clock
+Import def constraint for this timestep: \__pi_reset
+Import def constraint for this timestep: \__pi_valid
+Imported 55 cells to SAT database.
+Import proof for assert: \__po_inter0007_out__assert.okay when 1'1.
+Import show expression: \__po_inter0007_out__assert.i
+Import show expression: \__po_inter0007_out__assert.okay
+Import show expression: \__po_inter0007_out__assert.in_gate
+Import show expression: \__po_inter0007_out__assert.in_gold
+Import show expression: \gate.valid
+Import show expression: \gate.clock
+Import show expression: \gate.reset
+Import show expression: \gate.inter0007_out
+Import show expression: \gate.__pi_clock
+Import show expression: \gate.__pi_reset
+Import show expression: \gate.__pi_valid
+Import show expression: \gate.__po_inter0007_out
+Import show expression: \gold.valid
+Import show expression: \gold.clock
+Import show expression: \gold.reset
+Import show expression: \gold.inter0007_out
+Import show expression: \gold.__pi_clock
+Import show expression: \gold.__pi_reset
+Import show expression: \gold.__pi_valid
+Import show expression: \gold.__po_inter0007_out
+Import show expression: \__po_inter0007_out__gate
+Import show expression: \__po_inter0007_out__gold
+Import show expression: \__pi_valid
+Import show expression: \__pi_reset
+Import show expression: \__pi_clock
+
+[base case 5] Solving problem with 14398 variables and 39548 clauses..
+Base case for induction length 5 proven.
+
+Setting up time step 6:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clock
+Import def constraint for this timestep: \__pi_reset
+Import def constraint for this timestep: \__pi_valid
+Imported 55 cells to SAT database.
+Import proof for assert: \__po_inter0007_out__assert.okay when 1'1.
+Import show expression: \__po_inter0007_out__assert.i
+Import show expression: \__po_inter0007_out__assert.okay
+Import show expression: \__po_inter0007_out__assert.in_gate
+Import show expression: \__po_inter0007_out__assert.in_gold
+Import show expression: \gate.valid
+Import show expression: \gate.clock
+Import show expression: \gate.reset
+Import show expression: \gate.inter0007_out
+Import show expression: \gate.__pi_clock
+Import show expression: \gate.__pi_reset
+Import show expression: \gate.__pi_valid
+Import show expression: \gate.__po_inter0007_out
+Import show expression: \gold.valid
+Import show expression: \gold.clock
+Import show expression: \gold.reset
+Import show expression: \gold.inter0007_out
+Import show expression: \gold.__pi_clock
+Import show expression: \gold.__pi_reset
+Import show expression: \gold.__pi_valid
+Import show expression: \gold.__po_inter0007_out
+Import show expression: \__po_inter0007_out__gate
+Import show expression: \__po_inter0007_out__gold
+Import show expression: \__pi_valid
+Import show expression: \__pi_reset
+Import show expression: \__pi_clock
+
+[induction step 5] Solving problem with 17413 variables and 47870 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                     Dec       Hex                                 Bin
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5054                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5056                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5058                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5060                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$5062                0         0                                   0
+  init $flatten\gold.$auto$async2sync.cc:253:execute$5050                0         0                                   0
+  init $flatten\gold.$auto$async2sync.cc:253:execute$5052               15         f                                1111
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     1 \__pi_clock                                                       0         0                                   0
+     1 \__pi_reset                                                       0         0                                   0
+     1 \__pi_valid                                                       1         1                                   1
+     1 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     1 \__po_inter0007_out__assert.in_gate                               0         0                                   0
+     1 \__po_inter0007_out__assert.in_gold                               0         0                                   0
+     1 \__po_inter0007_out__assert.okay                                  1         1                                   1
+     1 \__po_inter0007_out__gate                                         0         0                                   0
+     1 \__po_inter0007_out__gold                                         0         0                                   0
+     1 \gate.__pi_clock                                                  0         0                                   0
+     1 \gate.__pi_reset                                                  0         0                                   0
+     1 \gate.__pi_valid                                                  1         1                                   1
+     1 \gate.__po_inter0007_out                                          0         0                                   0
+     1 \gate.clock                                                       0         0                                   0
+     1 \gate.inter0007_out                                               0         0                                   0
+     1 \gate.reset                                                       0         0                                   0
+     1 \gate.valid                                                       1         1                                   1
+     1 \gold.__pi_clock                                                  0         0                                   0
+     1 \gold.__pi_reset                                                  0         0                                   0
+     1 \gold.__pi_valid                                                  1         1                                   1
+     1 \gold.__po_inter0007_out                                          0         0                                   0
+     1 \gold.clock                                                       0         0                                   0
+     1 \gold.inter0007_out                                               0         0                                   0
+     1 \gold.reset                                                       0         0                                   0
+     1 \gold.valid                                                       1         1                                   1
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     2 \__pi_clock                                                       0         0                                   0
+     2 \__pi_reset                                                       0         0                                   0
+     2 \__pi_valid                                                       1         1                                   1
+     2 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     2 \__po_inter0007_out__assert.in_gate                               0         0                                   0
+     2 \__po_inter0007_out__assert.in_gold                               0         0                                   0
+     2 \__po_inter0007_out__assert.okay                                  1         1                                   1
+     2 \__po_inter0007_out__gate                                         0         0                                   0
+     2 \__po_inter0007_out__gold                                         0         0                                   0
+     2 \gate.__pi_clock                                                  0         0                                   0
+     2 \gate.__pi_reset                                                  0         0                                   0
+     2 \gate.__pi_valid                                                  1         1                                   1
+     2 \gate.__po_inter0007_out                                          0         0                                   0
+     2 \gate.clock                                                       0         0                                   0
+     2 \gate.inter0007_out                                               0         0                                   0
+     2 \gate.reset                                                       0         0                                   0
+     2 \gate.valid                                                       1         1                                   1
+     2 \gold.__pi_clock                                                  0         0                                   0
+     2 \gold.__pi_reset                                                  0         0                                   0
+     2 \gold.__pi_valid                                                  1         1                                   1
+     2 \gold.__po_inter0007_out                                          0         0                                   0
+     2 \gold.clock                                                       0         0                                   0
+     2 \gold.inter0007_out                                               0         0                                   0
+     2 \gold.reset                                                       0         0                                   0
+     2 \gold.valid                                                       1         1                                   1
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     3 \__pi_clock                                                       0         0                                   0
+     3 \__pi_reset                                                       0         0                                   0
+     3 \__pi_valid                                                       0         0                                   0
+     3 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     3 \__po_inter0007_out__assert.in_gate                               1         1                                   1
+     3 \__po_inter0007_out__assert.in_gold                               1         1                                   1
+     3 \__po_inter0007_out__assert.okay                                  1         1                                   1
+     3 \__po_inter0007_out__gate                                         1         1                                   1
+     3 \__po_inter0007_out__gold                                         1         1                                   1
+     3 \gate.__pi_clock                                                  0         0                                   0
+     3 \gate.__pi_reset                                                  0         0                                   0
+     3 \gate.__pi_valid                                                  0         0                                   0
+     3 \gate.__po_inter0007_out                                          1         1                                   1
+     3 \gate.clock                                                       0         0                                   0
+     3 \gate.inter0007_out                                               1         1                                   1
+     3 \gate.reset                                                       0         0                                   0
+     3 \gate.valid                                                       0         0                                   0
+     3 \gold.__pi_clock                                                  0         0                                   0
+     3 \gold.__pi_reset                                                  0         0                                   0
+     3 \gold.__pi_valid                                                  0         0                                   0
+     3 \gold.__po_inter0007_out                                          1         1                                   1
+     3 \gold.clock                                                       0         0                                   0
+     3 \gold.inter0007_out                                               1         1                                   1
+     3 \gold.reset                                                       0         0                                   0
+     3 \gold.valid                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     4 \__pi_clock                                                       0         0                                   0
+     4 \__pi_reset                                                       0         0                                   0
+     4 \__pi_valid                                                       0         0                                   0
+     4 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     4 \__po_inter0007_out__assert.in_gate                               0         0                                   0
+     4 \__po_inter0007_out__assert.in_gold                               0         0                                   0
+     4 \__po_inter0007_out__assert.okay                                  1         1                                   1
+     4 \__po_inter0007_out__gate                                         0         0                                   0
+     4 \__po_inter0007_out__gold                                         0         0                                   0
+     4 \gate.__pi_clock                                                  0         0                                   0
+     4 \gate.__pi_reset                                                  0         0                                   0
+     4 \gate.__pi_valid                                                  0         0                                   0
+     4 \gate.__po_inter0007_out                                          0         0                                   0
+     4 \gate.clock                                                       0         0                                   0
+     4 \gate.inter0007_out                                               0         0                                   0
+     4 \gate.reset                                                       0         0                                   0
+     4 \gate.valid                                                       0         0                                   0
+     4 \gold.__pi_clock                                                  0         0                                   0
+     4 \gold.__pi_reset                                                  0         0                                   0
+     4 \gold.__pi_valid                                                  0         0                                   0
+     4 \gold.__po_inter0007_out                                          0         0                                   0
+     4 \gold.clock                                                       0         0                                   0
+     4 \gold.inter0007_out                                               0         0                                   0
+     4 \gold.reset                                                       0         0                                   0
+     4 \gold.valid                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     5 \__pi_clock                                                       0         0                                   0
+     5 \__pi_reset                                                       0         0                                   0
+     5 \__pi_valid                                                       0         0                                   0
+     5 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     5 \__po_inter0007_out__assert.in_gate                               1         1                                   1
+     5 \__po_inter0007_out__assert.in_gold                               1         1                                   1
+     5 \__po_inter0007_out__assert.okay                                  1         1                                   1
+     5 \__po_inter0007_out__gate                                         1         1                                   1
+     5 \__po_inter0007_out__gold                                         1         1                                   1
+     5 \gate.__pi_clock                                                  0         0                                   0
+     5 \gate.__pi_reset                                                  0         0                                   0
+     5 \gate.__pi_valid                                                  0         0                                   0
+     5 \gate.__po_inter0007_out                                          1         1                                   1
+     5 \gate.clock                                                       0         0                                   0
+     5 \gate.inter0007_out                                               1         1                                   1
+     5 \gate.reset                                                       0         0                                   0
+     5 \gate.valid                                                       0         0                                   0
+     5 \gold.__pi_clock                                                  0         0                                   0
+     5 \gold.__pi_reset                                                  0         0                                   0
+     5 \gold.__pi_valid                                                  0         0                                   0
+     5 \gold.__po_inter0007_out                                          1         1                                   1
+     5 \gold.clock                                                       0         0                                   0
+     5 \gold.inter0007_out                                               1         1                                   1
+     5 \gold.reset                                                       0         0                                   0
+     5 \gold.valid                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     6 \__pi_clock                                                       0         0                                   0
+     6 \__pi_reset                                                       0         0                                   0
+     6 \__pi_valid                                                       0         0                                   0
+     6 \__po_inter0007_out__assert.i                                     1         1    00000000000000000000000000000001
+     6 \__po_inter0007_out__assert.in_gate                               1         1                                   1
+     6 \__po_inter0007_out__assert.in_gold                               0         0                                   0
+     6 \__po_inter0007_out__assert.okay                                  0         0                                   0
+     6 \__po_inter0007_out__gate                                         1         1                                   1
+     6 \__po_inter0007_out__gold                                         0         0                                   0
+     6 \gate.__pi_clock                                                  0         0                                   0
+     6 \gate.__pi_reset                                                  0         0                                   0
+     6 \gate.__pi_valid                                                  0         0                                   0
+     6 \gate.__po_inter0007_out                                          1         1                                   1
+     6 \gate.clock                                                       0         0                                   0
+     6 \gate.inter0007_out                                               1         1                                   1
+     6 \gate.reset                                                       0         0                                   0
+     6 \gate.valid                                                       0         0                                   0
+     6 \gold.__pi_clock                                                  0         0                                   0
+     6 \gold.__pi_reset                                                  0         0                                   0
+     6 \gold.__pi_valid                                                  0         0                                   0
+     6 \gold.__po_inter0007_out                                          0         0                                   0
+     6 \gold.clock                                                       0         0                                   0
+     6 \gold.inter0007_out                                               0         0                                   0
+     6 \gold.reset                                                       0         0                                   0
+     6 \gold.valid                                                       0         0                                   0
+
+Reached maximum number of time steps -> proof failed.
+Dumping SAT model to VCD file trace.vcd
+
+   ______                   ___       ___       _ _            _ _ 
+  (_____ \                 / __)     / __)     (_) |          | | |
+   _____) )___ ___   ___ _| |__    _| |__ _____ _| | _____  __| | |
+  |  ____/ ___) _ \ / _ (_   __)  (_   __|____ | | || ___ |/ _  |_|
+  | |   | |  | |_| | |_| || |       | |  / ___ | | || ____( (_| |_ 
+  |_|   |_|   \___/ \___/ |_|       |_|  \_____|_|\_)_____)\____|_|
+
+End of script. Logfile hash: c66803ca65, time: 0.09s, user: 0.09s, system: 0.00s, MEM: 39.75 MB peak
+Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+Time spent: 97% 1x sat (0 sec), 1% 2x read_verilog (0 sec), ...

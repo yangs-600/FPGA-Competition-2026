@@ -1,0 +1,14 @@
+[
+  {
+    "path": "passes/opt/CMakeLists.txt",
+    "crlf_lines": 93
+  },
+  {
+    "path": "techlibs/intel/synth_intel.cc",
+    "crlf_lines": 302
+  },
+  {
+    "path": "techlibs/intel/CMakeLists.txt",
+    "crlf_lines": 54
+  }
+]

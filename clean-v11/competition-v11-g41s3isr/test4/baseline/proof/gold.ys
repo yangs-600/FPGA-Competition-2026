@@ -1,0 +1,9 @@
+read_verilog "/home/ubuntu/FPGA/clean-v11/competition_case/test4/test4.v"
+prep -top test4 -flatten
+memory_map
+opt_clean
+rename -hide
+opt_clean
+check -initdrv
+setundef -undriven -undef
+write_rtlil /home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test4/baseline/proof/gold.il

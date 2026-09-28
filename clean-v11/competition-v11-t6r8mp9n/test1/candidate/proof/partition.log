@@ -1,0 +1,1151 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+
+-- Executing script file `partition.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: combined.il
+
+2. Executing INSBUF pass (insert buffer cells for connected wires).
+Add gold.test1/$auto$insbuf.cc:97:execute$4535: 1'0 -> $auto$wreduce.cc:513:run$472 [1]
+Add gold.test1/$auto$insbuf.cc:97:execute$4536: 1'0 -> $auto$wreduce.cc:513:run$472 [2]
+Add gold.test1/$auto$insbuf.cc:97:execute$4537: 1'0 -> $auto$wreduce.cc:513:run$472 [3]
+
+3. Executing EQY PARTITION task.
+
+3.1. Processing module pair gold.test1 / gate.test1.
+
+3.1.1. Processing matched IDs for module test1.
+
+3.1.2. Create fragment partitions for module test1.
+Adding output bit \por6_out to partition 0.
+Adding output bit \inter0009_out [11] to partition 1.
+Adding output bit \inter0009_out [10] to partition 1.
+Adding output bit \inter0009_out [9] to partition 1.
+Adding output bit \inter0009_out [8] to partition 1.
+Adding output bit \inter0009_out [7] to partition 1.
+Adding output bit \inter0009_out [6] to partition 1.
+Adding output bit \inter0009_out [5] to partition 1.
+Adding output bit \inter0009_out [4] to partition 1.
+Adding output bit \inter0009_out [3] to partition 1.
+Adding output bit \inter0009_out [2] to partition 1.
+Adding output bit \inter0009_out [1] to partition 1.
+Adding output bit \inter0009_out [0] to partition 1.
+Adding output bit \inter0008_out [11] to partition 2.
+Adding output bit \inter0008_out [10] to partition 2.
+Adding output bit \inter0008_out [9] to partition 2.
+Adding output bit \inter0008_out [8] to partition 2.
+Adding output bit \inter0008_out [7] to partition 2.
+Adding output bit \inter0008_out [6] to partition 2.
+Adding output bit \inter0008_out [5] to partition 2.
+Adding output bit \inter0008_out [4] to partition 2.
+Adding output bit \inter0008_out [3] to partition 2.
+Adding output bit \inter0008_out [2] to partition 2.
+Adding output bit \inter0008_out [1] to partition 2.
+Adding output bit \inter0008_out [0] to partition 2.
+Adding output bit \inter0007_out to partition 3.
+
+Final list of fragment partitions:
+  0 \por6_out <= \valid \reset \clock
+  1 \inter0009_out [0] \inter0009_out [1] \inter0009_out [2] \inter0009_out [3] \inter0009_out [4] \inter0009_out [5] \inter0009_out [6] \inter0009_out [7] \inter0009_out [8] \inter0009_out [9] \inter0009_out [10] \inter0009_out [11] <= \Q0 [14] \Q0 [13] \Q0 [12] \Q0 [11] \Q0 [10] \Q0 [9] \Q0 [8] \Q0 [7] \Q0 [6] \Q0 [5] \Q0 [4] \I0 [14] \I0 [13] \I0 [12] \I0 [11] \I0 [10] \I0 [9] \I0 [8] \I0 [7] \I0 [6] \I0 [5] \I0 [4] \Q1 [14] \Q1 [13] \Q1 [12] \Q1 [11] \Q1 [10] \Q1 [9] \Q1 [8] \Q1 [7] \Q1 [6] \Q1 [5] \Q1 [4] \I1 [14] \I1 [13] \I1 [12] \I1 [11] \I1 [10] \I1 [9] \I1 [8] \I1 [7] \I1 [6] \I1 [5] \I1 [4] \Q2 [14] \Q2 [13] \Q2 [12] \Q2 [11] \Q2 [10] \Q2 [9] \Q2 [8] \Q2 [7] \Q2 [6] \Q2 [5] \Q2 [4] \I2 [14] \I2 [13] \I2 [12] \I2 [11] \I2 [10] \I2 [9] \I2 [8] \I2 [7] \I2 [6] \I2 [5] \I2 [4] \Q3 [14] \Q3 [13] \Q3 [12] \Q3 [11] \Q3 [10] \Q3 [9] \Q3 [8] \Q3 [7] \Q3 [6] \Q3 [5] \Q3 [4] \I3 [14] \I3 [13] \I3 [12] \I3 [11] \I3 [10] \I3 [9] \I3 [8] \I3 [7] \I3 [6] \I3 [5] \I3 [4] \Q4 [14] \Q4 [13] \Q4 [12] \Q4 [11] \Q4 [10] \Q4 [9] \Q4 [8] \Q4 [7] \Q4 [6] \Q4 [5] \Q4 [4] \I4 [14] \I4 [13] \I4 [12] \I4 [11] \I4 [10] \I4 [9] \I4 [8] \I4 [7] \I4 [6] \I4 [5] \I4 [4] \Q5 [14] \Q5 [13] \Q5 [12] \Q5 [11] \Q5 [10] \Q5 [9] \Q5 [8] \Q5 [7] \Q5 [6] \Q5 [5] \Q5 [4] \I5 [14] \I5 [13] \I5 [12] \I5 [11] \I5 [10] \I5 [9] \I5 [8] \I5 [7] \I5 [6] \I5 [5] \I5 [4] \Q6 [14] \Q6 [13] \Q6 [12] \Q6 [11] \Q6 [10] \Q6 [9] \Q6 [8] \Q6 [7] \Q6 [6] \Q6 [5] \Q6 [4] \I6 [14] \I6 [13] \I6 [12] \I6 [11] \I6 [10] \I6 [9] \I6 [8] \I6 [7] \I6 [6] \I6 [5] \I6 [4] \Q7 [14] \Q7 [13] \Q7 [12] \Q7 [11] \Q7 [10] \Q7 [9] \Q7 [8] \Q7 [7] \Q7 [6] \Q7 [5] \Q7 [4] \I7 [14] \I7 [13] \I7 [12] \I7 [11] \I7 [10] \I7 [9] \I7 [8] \I7 [7] \I7 [6] \I7 [5] \I7 [4] \I2 [15] \I6 [15] \I4 [15] \I0 [15] \Q1 [15] \Q5 [15] \Q7 [15] \Q3 [15] \Q2 [15] \Q6 [15] \Q4 [15] \Q0 [15] \I1 [15] \I5 [15] \I7 [15] \I3 [15] \valid \reset \clock
+  2 \inter0008_out [0] \inter0008_out [1] \inter0008_out [2] \inter0008_out [3] \inter0008_out [4] \inter0008_out [5] \inter0008_out [6] \inter0008_out [7] \inter0008_out [8] \inter0008_out [9] \inter0008_out [10] \inter0008_out [11] <= \I0 [14] \I0 [13] \I0 [12] \I0 [11] \I0 [10] \I0 [9] \I0 [8] \I0 [7] \I0 [6] \I0 [5] \I0 [4] \Q0 [14] \Q0 [13] \Q0 [12] \Q0 [11] \Q0 [10] \Q0 [9] \Q0 [8] \Q0 [7] \Q0 [6] \Q0 [5] \Q0 [4] \I1 [14] \I1 [13] \I1 [12] \I1 [11] \I1 [10] \I1 [9] \I1 [8] \I1 [7] \I1 [6] \I1 [5] \I1 [4] \Q1 [14] \Q1 [13] \Q1 [12] \Q1 [11] \Q1 [10] \Q1 [9] \Q1 [8] \Q1 [7] \Q1 [6] \Q1 [5] \Q1 [4] \I2 [14] \I2 [13] \I2 [12] \I2 [11] \I2 [10] \I2 [9] \I2 [8] \I2 [7] \I2 [6] \I2 [5] \I2 [4] \Q2 [14] \Q2 [13] \Q2 [12] \Q2 [11] \Q2 [10] \Q2 [9] \Q2 [8] \Q2 [7] \Q2 [6] \Q2 [5] \Q2 [4] \I3 [14] \I3 [13] \I3 [12] \I3 [11] \I3 [10] \I3 [9] \I3 [8] \I3 [7] \I3 [6] \I3 [5] \I3 [4] \Q3 [14] \Q3 [13] \Q3 [12] \Q3 [11] \Q3 [10] \Q3 [9] \Q3 [8] \Q3 [7] \Q3 [6] \Q3 [5] \Q3 [4] \I4 [14] \I4 [13] \I4 [12] \I4 [11] \I4 [10] \I4 [9] \I4 [8] \I4 [7] \I4 [6] \I4 [5] \I4 [4] \Q4 [14] \Q4 [13] \Q4 [12] \Q4 [11] \Q4 [10] \Q4 [9] \Q4 [8] \Q4 [7] \Q4 [6] \Q4 [5] \Q4 [4] \I5 [14] \I5 [13] \I5 [12] \I5 [11] \I5 [10] \I5 [9] \I5 [8] \I5 [7] \I5 [6] \I5 [5] \I5 [4] \Q5 [14] \Q5 [13] \Q5 [12] \Q5 [11] \Q5 [10] \Q5 [9] \Q5 [8] \Q5 [7] \Q5 [6] \Q5 [5] \Q5 [4] \I6 [14] \I6 [13] \I6 [12] \I6 [11] \I6 [10] \I6 [9] \I6 [8] \I6 [7] \I6 [6] \I6 [5] \I6 [4] \Q6 [14] \Q6 [13] \Q6 [12] \Q6 [11] \Q6 [10] \Q6 [9] \Q6 [8] \Q6 [7] \Q6 [6] \Q6 [5] \Q6 [4] \I7 [14] \I7 [13] \I7 [12] \I7 [11] \I7 [10] \I7 [9] \I7 [8] \I7 [7] \I7 [6] \I7 [5] \I7 [4] \Q7 [14] \Q7 [13] \Q7 [12] \Q7 [11] \Q7 [10] \Q7 [9] \Q7 [8] \Q7 [7] \Q7 [6] \Q7 [5] \Q7 [4] \Q1 [15] \Q5 [15] \Q7 [15] \Q3 [15] \Q2 [15] \Q6 [15] \Q0 [15] \Q4 [15] \I2 [15] \I6 [15] \I4 [15] \I0 [15] \I1 [15] \I5 [15] \I7 [15] \I3 [15] \valid \reset \clock
+  3 \inter0007_out <= \valid \clock \reset
+
+3.1.3. Execute partitioning commands for module test1.
+
+Amending partitions:
+Execute queued amend rules.
+Find automatic amend rules.
+  Checking partition 0:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 1:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 2:
+    Found 0 po matches and 0 auto/pi matches.
+  Checking partition 3:
+    Found 0 po matches and 0 auto/pi matches.
+
+Assigning partition names:
+Automatically naming partition 0 'por6_out' using a PO name: por6_out
+Automatically naming partition 1 'inter0009_out' using a PO name: inter0009_out
+Automatically naming partition 2 'inter0008_out' using a PO name: inter0008_out
+Automatically naming partition 3 'inter0007_out' using a PO name: inter0007_out
+
+Partition Summary:
+  Fragments:
+       0: \por6_out
+       1: \inter0009_out
+       2: \inter0008_out
+       3: \inter0007_out
+  Partitions:
+       0: por6_out
+       1: inter0009_out
+       2: inter0008_out
+       3: inter0007_out
+  Fragment-Partition-Matrix:
+           0          
+           0123
+       0   #...  por6_out
+       1   .#..  inter0009_out
+       2   ..#.  inter0008_out
+       3   ...#  inter0007_out
+  Legend for Fragment-Partition-Matrix:
+      #  .... partition is this single fragment
+      *  .... fragments merged into single partition
+      +  .... fragments amended to the partition
+      =  .... fragment is driving a partition input
+      -  .... fragment is driving an amended fragment
+      .  .... no relationship between fragment and partition
+      ,  .... unused fragment index (as result of grouping)
+
+3.1.4. Write partitions for module test1.
+Adding non-output bit \valid to partition 4.
+Adding non-output bit \reset to partition 4.
+Adding output bit \por6_out to partition 4.
+Adding output bit \inter0009_out [11] to partition 4.
+Adding output bit \inter0009_out [10] to partition 4.
+Adding output bit \inter0009_out [9] to partition 4.
+Adding output bit \inter0009_out [8] to partition 4.
+Adding output bit \inter0009_out [7] to partition 4.
+Adding output bit \inter0009_out [6] to partition 4.
+Adding output bit \inter0009_out [5] to partition 4.
+Adding output bit \inter0009_out [4] to partition 4.
+Adding output bit \inter0009_out [3] to partition 4.
+Adding output bit \inter0009_out [2] to partition 4.
+Adding output bit \inter0009_out [1] to partition 4.
+Adding output bit \inter0009_out [0] to partition 4.
+Adding output bit \inter0008_out [11] to partition 4.
+Adding output bit \inter0008_out [10] to partition 4.
+Adding output bit \inter0008_out [9] to partition 4.
+Adding output bit \inter0008_out [8] to partition 4.
+Adding output bit \inter0008_out [7] to partition 4.
+Adding output bit \inter0008_out [6] to partition 4.
+Adding output bit \inter0008_out [5] to partition 4.
+Adding output bit \inter0008_out [4] to partition 4.
+Adding output bit \inter0008_out [3] to partition 4.
+Adding output bit \inter0008_out [2] to partition 4.
+Adding output bit \inter0008_out [1] to partition 4.
+Adding output bit \inter0008_out [0] to partition 4.
+Adding output bit \inter0007_out to partition 4.
+Adding non-output bit \clock to partition 4.
+Adding non-output bit \Q7 [15] to partition 4.
+Adding non-output bit \Q7 [14] to partition 4.
+Adding non-output bit \Q7 [13] to partition 4.
+Adding non-output bit \Q7 [12] to partition 4.
+Adding non-output bit \Q7 [11] to partition 4.
+Adding non-output bit \Q7 [10] to partition 4.
+Adding non-output bit \Q7 [9] to partition 4.
+Adding non-output bit \Q7 [8] to partition 4.
+Adding non-output bit \Q7 [7] to partition 4.
+Adding non-output bit \Q7 [6] to partition 4.
+Adding non-output bit \Q7 [5] to partition 4.
+Adding non-output bit \Q7 [4] to partition 4.
+Adding non-output bit \Q7 [3] to partition 4.
+Adding non-output bit \Q7 [2] to partition 4.
+Adding non-output bit \Q7 [1] to partition 4.
+Adding non-output bit \Q7 [0] to partition 4.
+Adding non-output bit \Q6 [15] to partition 4.
+Adding non-output bit \Q6 [14] to partition 4.
+Adding non-output bit \Q6 [13] to partition 4.
+Adding non-output bit \Q6 [12] to partition 4.
+Adding non-output bit \Q6 [11] to partition 4.
+Adding non-output bit \Q6 [10] to partition 4.
+Adding non-output bit \Q6 [9] to partition 4.
+Adding non-output bit \Q6 [8] to partition 4.
+Adding non-output bit \Q6 [7] to partition 4.
+Adding non-output bit \Q6 [6] to partition 4.
+Adding non-output bit \Q6 [5] to partition 4.
+Adding non-output bit \Q6 [4] to partition 4.
+Adding non-output bit \Q6 [3] to partition 4.
+Adding non-output bit \Q6 [2] to partition 4.
+Adding non-output bit \Q6 [1] to partition 4.
+Adding non-output bit \Q6 [0] to partition 4.
+Adding non-output bit \Q5 [15] to partition 4.
+Adding non-output bit \Q5 [14] to partition 4.
+Adding non-output bit \Q5 [13] to partition 4.
+Adding non-output bit \Q5 [12] to partition 4.
+Adding non-output bit \Q5 [11] to partition 4.
+Adding non-output bit \Q5 [10] to partition 4.
+Adding non-output bit \Q5 [9] to partition 4.
+Adding non-output bit \Q5 [8] to partition 4.
+Adding non-output bit \Q5 [7] to partition 4.
+Adding non-output bit \Q5 [6] to partition 4.
+Adding non-output bit \Q5 [5] to partition 4.
+Adding non-output bit \Q5 [4] to partition 4.
+Adding non-output bit \Q5 [3] to partition 4.
+Adding non-output bit \Q5 [2] to partition 4.
+Adding non-output bit \Q5 [1] to partition 4.
+Adding non-output bit \Q5 [0] to partition 4.
+Adding non-output bit \Q4 [15] to partition 4.
+Adding non-output bit \Q4 [14] to partition 4.
+Adding non-output bit \Q4 [13] to partition 4.
+Adding non-output bit \Q4 [12] to partition 4.
+Adding non-output bit \Q4 [11] to partition 4.
+Adding non-output bit \Q4 [10] to partition 4.
+Adding non-output bit \Q4 [9] to partition 4.
+Adding non-output bit \Q4 [8] to partition 4.
+Adding non-output bit \Q4 [7] to partition 4.
+Adding non-output bit \Q4 [6] to partition 4.
+Adding non-output bit \Q4 [5] to partition 4.
+Adding non-output bit \Q4 [4] to partition 4.
+Adding non-output bit \Q4 [3] to partition 4.
+Adding non-output bit \Q4 [2] to partition 4.
+Adding non-output bit \Q4 [1] to partition 4.
+Adding non-output bit \Q4 [0] to partition 4.
+Adding non-output bit \Q3 [15] to partition 4.
+Adding non-output bit \Q3 [14] to partition 4.
+Adding non-output bit \Q3 [13] to partition 4.
+Adding non-output bit \Q3 [12] to partition 4.
+Adding non-output bit \Q3 [11] to partition 4.
+Adding non-output bit \Q3 [10] to partition 4.
+Adding non-output bit \Q3 [9] to partition 4.
+Adding non-output bit \Q3 [8] to partition 4.
+Adding non-output bit \Q3 [7] to partition 4.
+Adding non-output bit \Q3 [6] to partition 4.
+Adding non-output bit \Q3 [5] to partition 4.
+Adding non-output bit \Q3 [4] to partition 4.
+Adding non-output bit \Q3 [3] to partition 4.
+Adding non-output bit \Q3 [2] to partition 4.
+Adding non-output bit \Q3 [1] to partition 4.
+Adding non-output bit \Q3 [0] to partition 4.
+Adding non-output bit \Q2 [15] to partition 4.
+Adding non-output bit \Q2 [14] to partition 4.
+Adding non-output bit \Q2 [13] to partition 4.
+Adding non-output bit \Q2 [12] to partition 4.
+Adding non-output bit \Q2 [11] to partition 4.
+Adding non-output bit \Q2 [10] to partition 4.
+Adding non-output bit \Q2 [9] to partition 4.
+Adding non-output bit \Q2 [8] to partition 4.
+Adding non-output bit \Q2 [7] to partition 4.
+Adding non-output bit \Q2 [6] to partition 4.
+Adding non-output bit \Q2 [5] to partition 4.
+Adding non-output bit \Q2 [4] to partition 4.
+Adding non-output bit \Q2 [3] to partition 4.
+Adding non-output bit \Q2 [2] to partition 4.
+Adding non-output bit \Q2 [1] to partition 4.
+Adding non-output bit \Q2 [0] to partition 4.
+Adding non-output bit \Q1 [15] to partition 4.
+Adding non-output bit \Q1 [14] to partition 4.
+Adding non-output bit \Q1 [13] to partition 4.
+Adding non-output bit \Q1 [12] to partition 4.
+Adding non-output bit \Q1 [11] to partition 4.
+Adding non-output bit \Q1 [10] to partition 4.
+Adding non-output bit \Q1 [9] to partition 4.
+Adding non-output bit \Q1 [8] to partition 4.
+Adding non-output bit \Q1 [7] to partition 4.
+Adding non-output bit \Q1 [6] to partition 4.
+Adding non-output bit \Q1 [5] to partition 4.
+Adding non-output bit \Q1 [4] to partition 4.
+Adding non-output bit \Q1 [3] to partition 4.
+Adding non-output bit \Q1 [2] to partition 4.
+Adding non-output bit \Q1 [1] to partition 4.
+Adding non-output bit \Q1 [0] to partition 4.
+Adding non-output bit \Q0 [15] to partition 4.
+Adding non-output bit \Q0 [14] to partition 4.
+Adding non-output bit \Q0 [13] to partition 4.
+Adding non-output bit \Q0 [12] to partition 4.
+Adding non-output bit \Q0 [11] to partition 4.
+Adding non-output bit \Q0 [10] to partition 4.
+Adding non-output bit \Q0 [9] to partition 4.
+Adding non-output bit \Q0 [8] to partition 4.
+Adding non-output bit \Q0 [7] to partition 4.
+Adding non-output bit \Q0 [6] to partition 4.
+Adding non-output bit \Q0 [5] to partition 4.
+Adding non-output bit \Q0 [4] to partition 4.
+Adding non-output bit \Q0 [3] to partition 4.
+Adding non-output bit \Q0 [2] to partition 4.
+Adding non-output bit \Q0 [1] to partition 4.
+Adding non-output bit \Q0 [0] to partition 4.
+Adding non-output bit \I7 [15] to partition 4.
+Adding non-output bit \I7 [14] to partition 4.
+Adding non-output bit \I7 [13] to partition 4.
+Adding non-output bit \I7 [12] to partition 4.
+Adding non-output bit \I7 [11] to partition 4.
+Adding non-output bit \I7 [10] to partition 4.
+Adding non-output bit \I7 [9] to partition 4.
+Adding non-output bit \I7 [8] to partition 4.
+Adding non-output bit \I7 [7] to partition 4.
+Adding non-output bit \I7 [6] to partition 4.
+Adding non-output bit \I7 [5] to partition 4.
+Adding non-output bit \I7 [4] to partition 4.
+Adding non-output bit \I7 [3] to partition 4.
+Adding non-output bit \I7 [2] to partition 4.
+Adding non-output bit \I7 [1] to partition 4.
+Adding non-output bit \I7 [0] to partition 4.
+Adding non-output bit \I6 [15] to partition 4.
+Adding non-output bit \I6 [14] to partition 4.
+Adding non-output bit \I6 [13] to partition 4.
+Adding non-output bit \I6 [12] to partition 4.
+Adding non-output bit \I6 [11] to partition 4.
+Adding non-output bit \I6 [10] to partition 4.
+Adding non-output bit \I6 [9] to partition 4.
+Adding non-output bit \I6 [8] to partition 4.
+Adding non-output bit \I6 [7] to partition 4.
+Adding non-output bit \I6 [6] to partition 4.
+Adding non-output bit \I6 [5] to partition 4.
+Adding non-output bit \I6 [4] to partition 4.
+Adding non-output bit \I6 [3] to partition 4.
+Adding non-output bit \I6 [2] to partition 4.
+Adding non-output bit \I6 [1] to partition 4.
+Adding non-output bit \I6 [0] to partition 4.
+Adding non-output bit \I5 [15] to partition 4.
+Adding non-output bit \I5 [14] to partition 4.
+Adding non-output bit \I5 [13] to partition 4.
+Adding non-output bit \I5 [12] to partition 4.
+Adding non-output bit \I5 [11] to partition 4.
+Adding non-output bit \I5 [10] to partition 4.
+Adding non-output bit \I5 [9] to partition 4.
+Adding non-output bit \I5 [8] to partition 4.
+Adding non-output bit \I5 [7] to partition 4.
+Adding non-output bit \I5 [6] to partition 4.
+Adding non-output bit \I5 [5] to partition 4.
+Adding non-output bit \I5 [4] to partition 4.
+Adding non-output bit \I5 [3] to partition 4.
+Adding non-output bit \I5 [2] to partition 4.
+Adding non-output bit \I5 [1] to partition 4.
+Adding non-output bit \I5 [0] to partition 4.
+Adding non-output bit \I4 [15] to partition 4.
+Adding non-output bit \I4 [14] to partition 4.
+Adding non-output bit \I4 [13] to partition 4.
+Adding non-output bit \I4 [12] to partition 4.
+Adding non-output bit \I4 [11] to partition 4.
+Adding non-output bit \I4 [10] to partition 4.
+Adding non-output bit \I4 [9] to partition 4.
+Adding non-output bit \I4 [8] to partition 4.
+Adding non-output bit \I4 [7] to partition 4.
+Adding non-output bit \I4 [6] to partition 4.
+Adding non-output bit \I4 [5] to partition 4.
+Adding non-output bit \I4 [4] to partition 4.
+Adding non-output bit \I4 [3] to partition 4.
+Adding non-output bit \I4 [2] to partition 4.
+Adding non-output bit \I4 [1] to partition 4.
+Adding non-output bit \I4 [0] to partition 4.
+Adding non-output bit \I3 [15] to partition 4.
+Adding non-output bit \I3 [14] to partition 4.
+Adding non-output bit \I3 [13] to partition 4.
+Adding non-output bit \I3 [12] to partition 4.
+Adding non-output bit \I3 [11] to partition 4.
+Adding non-output bit \I3 [10] to partition 4.
+Adding non-output bit \I3 [9] to partition 4.
+Adding non-output bit \I3 [8] to partition 4.
+Adding non-output bit \I3 [7] to partition 4.
+Adding non-output bit \I3 [6] to partition 4.
+Adding non-output bit \I3 [5] to partition 4.
+Adding non-output bit \I3 [4] to partition 4.
+Adding non-output bit \I3 [3] to partition 4.
+Adding non-output bit \I3 [2] to partition 4.
+Adding non-output bit \I3 [1] to partition 4.
+Adding non-output bit \I3 [0] to partition 4.
+Adding non-output bit \I2 [15] to partition 4.
+Adding non-output bit \I2 [14] to partition 4.
+Adding non-output bit \I2 [13] to partition 4.
+Adding non-output bit \I2 [12] to partition 4.
+Adding non-output bit \I2 [11] to partition 4.
+Adding non-output bit \I2 [10] to partition 4.
+Adding non-output bit \I2 [9] to partition 4.
+Adding non-output bit \I2 [8] to partition 4.
+Adding non-output bit \I2 [7] to partition 4.
+Adding non-output bit \I2 [6] to partition 4.
+Adding non-output bit \I2 [5] to partition 4.
+Adding non-output bit \I2 [4] to partition 4.
+Adding non-output bit \I2 [3] to partition 4.
+Adding non-output bit \I2 [2] to partition 4.
+Adding non-output bit \I2 [1] to partition 4.
+Adding non-output bit \I2 [0] to partition 4.
+Adding non-output bit \I1 [15] to partition 4.
+Adding non-output bit \I1 [14] to partition 4.
+Adding non-output bit \I1 [13] to partition 4.
+Adding non-output bit \I1 [12] to partition 4.
+Adding non-output bit \I1 [11] to partition 4.
+Adding non-output bit \I1 [10] to partition 4.
+Adding non-output bit \I1 [9] to partition 4.
+Adding non-output bit \I1 [8] to partition 4.
+Adding non-output bit \I1 [7] to partition 4.
+Adding non-output bit \I1 [6] to partition 4.
+Adding non-output bit \I1 [5] to partition 4.
+Adding non-output bit \I1 [4] to partition 4.
+Adding non-output bit \I1 [3] to partition 4.
+Adding non-output bit \I1 [2] to partition 4.
+Adding non-output bit \I1 [1] to partition 4.
+Adding non-output bit \I1 [0] to partition 4.
+Adding non-output bit \I0 [15] to partition 4.
+Adding non-output bit \I0 [14] to partition 4.
+Adding non-output bit \I0 [13] to partition 4.
+Adding non-output bit \I0 [12] to partition 4.
+Adding non-output bit \I0 [11] to partition 4.
+Adding non-output bit \I0 [10] to partition 4.
+Adding non-output bit \I0 [9] to partition 4.
+Adding non-output bit \I0 [8] to partition 4.
+Adding non-output bit \I0 [7] to partition 4.
+Adding non-output bit \I0 [6] to partition 4.
+Adding non-output bit \I0 [5] to partition 4.
+Adding non-output bit \I0 [4] to partition 4.
+Adding non-output bit \I0 [3] to partition 4.
+Adding non-output bit \I0 [2] to partition 4.
+Adding non-output bit \I0 [1] to partition 4.
+Adding non-output bit \I0 [0] to partition 4.
+Writing partition 0 as test1.por6_out.
+  partition pi bit 0: \valid <-> \valid
+  partition pi bit 1: \reset <-> \reset
+  partition pi bit 2: \clock <-> \clock
+  partition po bit 0: \por6_out <-> \por6_out
+
+3.1.5. Executing RTLIL backend.
+Output filename: partitions/test1.por6_out.il
+<suppressed ~15144 debug messages>
+
+3.1.6. Executing CHECK pass (checking for obvious problems).
+Checking module gate.test1.por6_out...
+Checking module gold.test1.por6_out...
+Found and reported 0 problems.
+
+Writing partition 1 as test1.inter0009_out.
+  partition pi bit 0: \Q0 [14] <-> \Q0 [14]
+  partition pi bit 1: \Q0 [13] <-> \Q0 [13]
+  partition pi bit 2: \Q0 [12] <-> \Q0 [12]
+  partition pi bit 3: \Q0 [11] <-> \Q0 [11]
+  partition pi bit 4: \Q0 [10] <-> \Q0 [10]
+  partition pi bit 5: \Q0 [9] <-> \Q0 [9]
+  partition pi bit 6: \Q0 [8] <-> \Q0 [8]
+  partition pi bit 7: \Q0 [7] <-> \Q0 [7]
+  partition pi bit 8: \Q0 [6] <-> \Q0 [6]
+  partition pi bit 9: \Q0 [5] <-> \Q0 [5]
+  partition pi bit 10: \Q0 [4] <-> \Q0 [4]
+  partition pi bit 11: \I0 [14] <-> \I0 [14]
+  partition pi bit 12: \I0 [13] <-> \I0 [13]
+  partition pi bit 13: \I0 [12] <-> \I0 [12]
+  partition pi bit 14: \I0 [11] <-> \I0 [11]
+  partition pi bit 15: \I0 [10] <-> \I0 [10]
+  partition pi bit 16: \I0 [9] <-> \I0 [9]
+  partition pi bit 17: \I0 [8] <-> \I0 [8]
+  partition pi bit 18: \I0 [7] <-> \I0 [7]
+  partition pi bit 19: \I0 [6] <-> \I0 [6]
+  partition pi bit 20: \I0 [5] <-> \I0 [5]
+  partition pi bit 21: \I0 [4] <-> \I0 [4]
+  partition pi bit 22: \Q1 [14] <-> \Q1 [14]
+  partition pi bit 23: \Q1 [13] <-> \Q1 [13]
+  partition pi bit 24: \Q1 [12] <-> \Q1 [12]
+  partition pi bit 25: \Q1 [11] <-> \Q1 [11]
+  partition pi bit 26: \Q1 [10] <-> \Q1 [10]
+  partition pi bit 27: \Q1 [9] <-> \Q1 [9]
+  partition pi bit 28: \Q1 [8] <-> \Q1 [8]
+  partition pi bit 29: \Q1 [7] <-> \Q1 [7]
+  partition pi bit 30: \Q1 [6] <-> \Q1 [6]
+  partition pi bit 31: \Q1 [5] <-> \Q1 [5]
+  partition pi bit 32: \Q1 [4] <-> \Q1 [4]
+  partition pi bit 33: \I1 [14] <-> \I1 [14]
+  partition pi bit 34: \I1 [13] <-> \I1 [13]
+  partition pi bit 35: \I1 [12] <-> \I1 [12]
+  partition pi bit 36: \I1 [11] <-> \I1 [11]
+  partition pi bit 37: \I1 [10] <-> \I1 [10]
+  partition pi bit 38: \I1 [9] <-> \I1 [9]
+  partition pi bit 39: \I1 [8] <-> \I1 [8]
+  partition pi bit 40: \I1 [7] <-> \I1 [7]
+  partition pi bit 41: \I1 [6] <-> \I1 [6]
+  partition pi bit 42: \I1 [5] <-> \I1 [5]
+  partition pi bit 43: \I1 [4] <-> \I1 [4]
+  partition pi bit 44: \Q2 [14] <-> \Q2 [14]
+  partition pi bit 45: \Q2 [13] <-> \Q2 [13]
+  partition pi bit 46: \Q2 [12] <-> \Q2 [12]
+  partition pi bit 47: \Q2 [11] <-> \Q2 [11]
+  partition pi bit 48: \Q2 [10] <-> \Q2 [10]
+  partition pi bit 49: \Q2 [9] <-> \Q2 [9]
+  partition pi bit 50: \Q2 [8] <-> \Q2 [8]
+  partition pi bit 51: \Q2 [7] <-> \Q2 [7]
+  partition pi bit 52: \Q2 [6] <-> \Q2 [6]
+  partition pi bit 53: \Q2 [5] <-> \Q2 [5]
+  partition pi bit 54: \Q2 [4] <-> \Q2 [4]
+  partition pi bit 55: \I2 [14] <-> \I2 [14]
+  partition pi bit 56: \I2 [13] <-> \I2 [13]
+  partition pi bit 57: \I2 [12] <-> \I2 [12]
+  partition pi bit 58: \I2 [11] <-> \I2 [11]
+  partition pi bit 59: \I2 [10] <-> \I2 [10]
+  partition pi bit 60: \I2 [9] <-> \I2 [9]
+  partition pi bit 61: \I2 [8] <-> \I2 [8]
+  partition pi bit 62: \I2 [7] <-> \I2 [7]
+  partition pi bit 63: \I2 [6] <-> \I2 [6]
+  partition pi bit 64: \I2 [5] <-> \I2 [5]
+  partition pi bit 65: \I2 [4] <-> \I2 [4]
+  partition pi bit 66: \Q3 [14] <-> \Q3 [14]
+  partition pi bit 67: \Q3 [13] <-> \Q3 [13]
+  partition pi bit 68: \Q3 [12] <-> \Q3 [12]
+  partition pi bit 69: \Q3 [11] <-> \Q3 [11]
+  partition pi bit 70: \Q3 [10] <-> \Q3 [10]
+  partition pi bit 71: \Q3 [9] <-> \Q3 [9]
+  partition pi bit 72: \Q3 [8] <-> \Q3 [8]
+  partition pi bit 73: \Q3 [7] <-> \Q3 [7]
+  partition pi bit 74: \Q3 [6] <-> \Q3 [6]
+  partition pi bit 75: \Q3 [5] <-> \Q3 [5]
+  partition pi bit 76: \Q3 [4] <-> \Q3 [4]
+  partition pi bit 77: \I3 [14] <-> \I3 [14]
+  partition pi bit 78: \I3 [13] <-> \I3 [13]
+  partition pi bit 79: \I3 [12] <-> \I3 [12]
+  partition pi bit 80: \I3 [11] <-> \I3 [11]
+  partition pi bit 81: \I3 [10] <-> \I3 [10]
+  partition pi bit 82: \I3 [9] <-> \I3 [9]
+  partition pi bit 83: \I3 [8] <-> \I3 [8]
+  partition pi bit 84: \I3 [7] <-> \I3 [7]
+  partition pi bit 85: \I3 [6] <-> \I3 [6]
+  partition pi bit 86: \I3 [5] <-> \I3 [5]
+  partition pi bit 87: \I3 [4] <-> \I3 [4]
+  partition pi bit 88: \Q4 [14] <-> \Q4 [14]
+  partition pi bit 89: \Q4 [13] <-> \Q4 [13]
+  partition pi bit 90: \Q4 [12] <-> \Q4 [12]
+  partition pi bit 91: \Q4 [11] <-> \Q4 [11]
+  partition pi bit 92: \Q4 [10] <-> \Q4 [10]
+  partition pi bit 93: \Q4 [9] <-> \Q4 [9]
+  partition pi bit 94: \Q4 [8] <-> \Q4 [8]
+  partition pi bit 95: \Q4 [7] <-> \Q4 [7]
+  partition pi bit 96: \Q4 [6] <-> \Q4 [6]
+  partition pi bit 97: \Q4 [5] <-> \Q4 [5]
+  partition pi bit 98: \Q4 [4] <-> \Q4 [4]
+  partition pi bit 99: \I4 [14] <-> \I4 [14]
+  partition pi bit 100: \I4 [13] <-> \I4 [13]
+  partition pi bit 101: \I4 [12] <-> \I4 [12]
+  partition pi bit 102: \I4 [11] <-> \I4 [11]
+  partition pi bit 103: \I4 [10] <-> \I4 [10]
+  partition pi bit 104: \I4 [9] <-> \I4 [9]
+  partition pi bit 105: \I4 [8] <-> \I4 [8]
+  partition pi bit 106: \I4 [7] <-> \I4 [7]
+  partition pi bit 107: \I4 [6] <-> \I4 [6]
+  partition pi bit 108: \I4 [5] <-> \I4 [5]
+  partition pi bit 109: \I4 [4] <-> \I4 [4]
+  partition pi bit 110: \Q5 [14] <-> \Q5 [14]
+  partition pi bit 111: \Q5 [13] <-> \Q5 [13]
+  partition pi bit 112: \Q5 [12] <-> \Q5 [12]
+  partition pi bit 113: \Q5 [11] <-> \Q5 [11]
+  partition pi bit 114: \Q5 [10] <-> \Q5 [10]
+  partition pi bit 115: \Q5 [9] <-> \Q5 [9]
+  partition pi bit 116: \Q5 [8] <-> \Q5 [8]
+  partition pi bit 117: \Q5 [7] <-> \Q5 [7]
+  partition pi bit 118: \Q5 [6] <-> \Q5 [6]
+  partition pi bit 119: \Q5 [5] <-> \Q5 [5]
+  partition pi bit 120: \Q5 [4] <-> \Q5 [4]
+  partition pi bit 121: \I5 [14] <-> \I5 [14]
+  partition pi bit 122: \I5 [13] <-> \I5 [13]
+  partition pi bit 123: \I5 [12] <-> \I5 [12]
+  partition pi bit 124: \I5 [11] <-> \I5 [11]
+  partition pi bit 125: \I5 [10] <-> \I5 [10]
+  partition pi bit 126: \I5 [9] <-> \I5 [9]
+  partition pi bit 127: \I5 [8] <-> \I5 [8]
+  partition pi bit 128: \I5 [7] <-> \I5 [7]
+  partition pi bit 129: \I5 [6] <-> \I5 [6]
+  partition pi bit 130: \I5 [5] <-> \I5 [5]
+  partition pi bit 131: \I5 [4] <-> \I5 [4]
+  partition pi bit 132: \Q6 [14] <-> \Q6 [14]
+  partition pi bit 133: \Q6 [13] <-> \Q6 [13]
+  partition pi bit 134: \Q6 [12] <-> \Q6 [12]
+  partition pi bit 135: \Q6 [11] <-> \Q6 [11]
+  partition pi bit 136: \Q6 [10] <-> \Q6 [10]
+  partition pi bit 137: \Q6 [9] <-> \Q6 [9]
+  partition pi bit 138: \Q6 [8] <-> \Q6 [8]
+  partition pi bit 139: \Q6 [7] <-> \Q6 [7]
+  partition pi bit 140: \Q6 [6] <-> \Q6 [6]
+  partition pi bit 141: \Q6 [5] <-> \Q6 [5]
+  partition pi bit 142: \Q6 [4] <-> \Q6 [4]
+  partition pi bit 143: \I6 [14] <-> \I6 [14]
+  partition pi bit 144: \I6 [13] <-> \I6 [13]
+  partition pi bit 145: \I6 [12] <-> \I6 [12]
+  partition pi bit 146: \I6 [11] <-> \I6 [11]
+  partition pi bit 147: \I6 [10] <-> \I6 [10]
+  partition pi bit 148: \I6 [9] <-> \I6 [9]
+  partition pi bit 149: \I6 [8] <-> \I6 [8]
+  partition pi bit 150: \I6 [7] <-> \I6 [7]
+  partition pi bit 151: \I6 [6] <-> \I6 [6]
+  partition pi bit 152: \I6 [5] <-> \I6 [5]
+  partition pi bit 153: \I6 [4] <-> \I6 [4]
+  partition pi bit 154: \Q7 [14] <-> \Q7 [14]
+  partition pi bit 155: \Q7 [13] <-> \Q7 [13]
+  partition pi bit 156: \Q7 [12] <-> \Q7 [12]
+  partition pi bit 157: \Q7 [11] <-> \Q7 [11]
+  partition pi bit 158: \Q7 [10] <-> \Q7 [10]
+  partition pi bit 159: \Q7 [9] <-> \Q7 [9]
+  partition pi bit 160: \Q7 [8] <-> \Q7 [8]
+  partition pi bit 161: \Q7 [7] <-> \Q7 [7]
+  partition pi bit 162: \Q7 [6] <-> \Q7 [6]
+  partition pi bit 163: \Q7 [5] <-> \Q7 [5]
+  partition pi bit 164: \Q7 [4] <-> \Q7 [4]
+  partition pi bit 165: \I7 [14] <-> \I7 [14]
+  partition pi bit 166: \I7 [13] <-> \I7 [13]
+  partition pi bit 167: \I7 [12] <-> \I7 [12]
+  partition pi bit 168: \I7 [11] <-> \I7 [11]
+  partition pi bit 169: \I7 [10] <-> \I7 [10]
+  partition pi bit 170: \I7 [9] <-> \I7 [9]
+  partition pi bit 171: \I7 [8] <-> \I7 [8]
+  partition pi bit 172: \I7 [7] <-> \I7 [7]
+  partition pi bit 173: \I7 [6] <-> \I7 [6]
+  partition pi bit 174: \I7 [5] <-> \I7 [5]
+  partition pi bit 175: \I7 [4] <-> \I7 [4]
+  partition pi bit 176: \I2 [15] <-> \I2 [15]
+  partition pi bit 177: \I6 [15] <-> \I6 [15]
+  partition pi bit 178: \I4 [15] <-> \I4 [15]
+  partition pi bit 179: \I0 [15] <-> \I0 [15]
+  partition pi bit 180: \Q1 [15] <-> \Q1 [15]
+  partition pi bit 181: \Q5 [15] <-> \Q5 [15]
+  partition pi bit 182: \Q7 [15] <-> \Q7 [15]
+  partition pi bit 183: \Q3 [15] <-> \Q3 [15]
+  partition pi bit 184: \Q2 [15] <-> \Q2 [15]
+  partition pi bit 185: \Q6 [15] <-> \Q6 [15]
+  partition pi bit 186: \Q4 [15] <-> \Q4 [15]
+  partition pi bit 187: \Q0 [15] <-> \Q0 [15]
+  partition pi bit 188: \I1 [15] <-> \I1 [15]
+  partition pi bit 189: \I5 [15] <-> \I5 [15]
+  partition pi bit 190: \I7 [15] <-> \I7 [15]
+  partition pi bit 191: \I3 [15] <-> \I3 [15]
+  partition pi bit 192: \valid <-> \valid
+  partition pi bit 193: \reset <-> \reset
+  partition pi bit 194: \clock <-> \clock
+  partition po bit 0: \inter0009_out [0] <-> \inter0009_out [0]
+  partition po bit 1: \inter0009_out [1] <-> \inter0009_out [1]
+  partition po bit 2: \inter0009_out [2] <-> \inter0009_out [2]
+  partition po bit 3: \inter0009_out [3] <-> \inter0009_out [3]
+  partition po bit 4: \inter0009_out [4] <-> \inter0009_out [4]
+  partition po bit 5: \inter0009_out [5] <-> \inter0009_out [5]
+  partition po bit 6: \inter0009_out [6] <-> \inter0009_out [6]
+  partition po bit 7: \inter0009_out [7] <-> \inter0009_out [7]
+  partition po bit 8: \inter0009_out [8] <-> \inter0009_out [8]
+  partition po bit 9: \inter0009_out [9] <-> \inter0009_out [9]
+  partition po bit 10: \inter0009_out [10] <-> \inter0009_out [10]
+  partition po bit 11: \inter0009_out [11] <-> \inter0009_out [11]
+
+3.1.7. Executing RTLIL backend.
+Output filename: partitions/test1.inter0009_out.il
+<suppressed ~5141 debug messages>
+
+3.1.8. Executing CHECK pass (checking for obvious problems).
+Checking module gate.test1.inter0009_out...
+Checking module gold.test1.inter0009_out...
+Found and reported 0 problems.
+
+Writing partition 2 as test1.inter0008_out.
+  partition pi bit 0: \I0 [14] <-> \I0 [14]
+  partition pi bit 1: \I0 [13] <-> \I0 [13]
+  partition pi bit 2: \I0 [12] <-> \I0 [12]
+  partition pi bit 3: \I0 [11] <-> \I0 [11]
+  partition pi bit 4: \I0 [10] <-> \I0 [10]
+  partition pi bit 5: \I0 [9] <-> \I0 [9]
+  partition pi bit 6: \I0 [8] <-> \I0 [8]
+  partition pi bit 7: \I0 [7] <-> \I0 [7]
+  partition pi bit 8: \I0 [6] <-> \I0 [6]
+  partition pi bit 9: \I0 [5] <-> \I0 [5]
+  partition pi bit 10: \I0 [4] <-> \I0 [4]
+  partition pi bit 11: \Q0 [14] <-> \Q0 [14]
+  partition pi bit 12: \Q0 [13] <-> \Q0 [13]
+  partition pi bit 13: \Q0 [12] <-> \Q0 [12]
+  partition pi bit 14: \Q0 [11] <-> \Q0 [11]
+  partition pi bit 15: \Q0 [10] <-> \Q0 [10]
+  partition pi bit 16: \Q0 [9] <-> \Q0 [9]
+  partition pi bit 17: \Q0 [8] <-> \Q0 [8]
+  partition pi bit 18: \Q0 [7] <-> \Q0 [7]
+  partition pi bit 19: \Q0 [6] <-> \Q0 [6]
+  partition pi bit 20: \Q0 [5] <-> \Q0 [5]
+  partition pi bit 21: \Q0 [4] <-> \Q0 [4]
+  partition pi bit 22: \I1 [14] <-> \I1 [14]
+  partition pi bit 23: \I1 [13] <-> \I1 [13]
+  partition pi bit 24: \I1 [12] <-> \I1 [12]
+  partition pi bit 25: \I1 [11] <-> \I1 [11]
+  partition pi bit 26: \I1 [10] <-> \I1 [10]
+  partition pi bit 27: \I1 [9] <-> \I1 [9]
+  partition pi bit 28: \I1 [8] <-> \I1 [8]
+  partition pi bit 29: \I1 [7] <-> \I1 [7]
+  partition pi bit 30: \I1 [6] <-> \I1 [6]
+  partition pi bit 31: \I1 [5] <-> \I1 [5]
+  partition pi bit 32: \I1 [4] <-> \I1 [4]
+  partition pi bit 33: \Q1 [14] <-> \Q1 [14]
+  partition pi bit 34: \Q1 [13] <-> \Q1 [13]
+  partition pi bit 35: \Q1 [12] <-> \Q1 [12]
+  partition pi bit 36: \Q1 [11] <-> \Q1 [11]
+  partition pi bit 37: \Q1 [10] <-> \Q1 [10]
+  partition pi bit 38: \Q1 [9] <-> \Q1 [9]
+  partition pi bit 39: \Q1 [8] <-> \Q1 [8]
+  partition pi bit 40: \Q1 [7] <-> \Q1 [7]
+  partition pi bit 41: \Q1 [6] <-> \Q1 [6]
+  partition pi bit 42: \Q1 [5] <-> \Q1 [5]
+  partition pi bit 43: \Q1 [4] <-> \Q1 [4]
+  partition pi bit 44: \I2 [14] <-> \I2 [14]
+  partition pi bit 45: \I2 [13] <-> \I2 [13]
+  partition pi bit 46: \I2 [12] <-> \I2 [12]
+  partition pi bit 47: \I2 [11] <-> \I2 [11]
+  partition pi bit 48: \I2 [10] <-> \I2 [10]
+  partition pi bit 49: \I2 [9] <-> \I2 [9]
+  partition pi bit 50: \I2 [8] <-> \I2 [8]
+  partition pi bit 51: \I2 [7] <-> \I2 [7]
+  partition pi bit 52: \I2 [6] <-> \I2 [6]
+  partition pi bit 53: \I2 [5] <-> \I2 [5]
+  partition pi bit 54: \I2 [4] <-> \I2 [4]
+  partition pi bit 55: \Q2 [14] <-> \Q2 [14]
+  partition pi bit 56: \Q2 [13] <-> \Q2 [13]
+  partition pi bit 57: \Q2 [12] <-> \Q2 [12]
+  partition pi bit 58: \Q2 [11] <-> \Q2 [11]
+  partition pi bit 59: \Q2 [10] <-> \Q2 [10]
+  partition pi bit 60: \Q2 [9] <-> \Q2 [9]
+  partition pi bit 61: \Q2 [8] <-> \Q2 [8]
+  partition pi bit 62: \Q2 [7] <-> \Q2 [7]
+  partition pi bit 63: \Q2 [6] <-> \Q2 [6]
+  partition pi bit 64: \Q2 [5] <-> \Q2 [5]
+  partition pi bit 65: \Q2 [4] <-> \Q2 [4]
+  partition pi bit 66: \I3 [14] <-> \I3 [14]
+  partition pi bit 67: \I3 [13] <-> \I3 [13]
+  partition pi bit 68: \I3 [12] <-> \I3 [12]
+  partition pi bit 69: \I3 [11] <-> \I3 [11]
+  partition pi bit 70: \I3 [10] <-> \I3 [10]
+  partition pi bit 71: \I3 [9] <-> \I3 [9]
+  partition pi bit 72: \I3 [8] <-> \I3 [8]
+  partition pi bit 73: \I3 [7] <-> \I3 [7]
+  partition pi bit 74: \I3 [6] <-> \I3 [6]
+  partition pi bit 75: \I3 [5] <-> \I3 [5]
+  partition pi bit 76: \I3 [4] <-> \I3 [4]
+  partition pi bit 77: \Q3 [14] <-> \Q3 [14]
+  partition pi bit 78: \Q3 [13] <-> \Q3 [13]
+  partition pi bit 79: \Q3 [12] <-> \Q3 [12]
+  partition pi bit 80: \Q3 [11] <-> \Q3 [11]
+  partition pi bit 81: \Q3 [10] <-> \Q3 [10]
+  partition pi bit 82: \Q3 [9] <-> \Q3 [9]
+  partition pi bit 83: \Q3 [8] <-> \Q3 [8]
+  partition pi bit 84: \Q3 [7] <-> \Q3 [7]
+  partition pi bit 85: \Q3 [6] <-> \Q3 [6]
+  partition pi bit 86: \Q3 [5] <-> \Q3 [5]
+  partition pi bit 87: \Q3 [4] <-> \Q3 [4]
+  partition pi bit 88: \I4 [14] <-> \I4 [14]
+  partition pi bit 89: \I4 [13] <-> \I4 [13]
+  partition pi bit 90: \I4 [12] <-> \I4 [12]
+  partition pi bit 91: \I4 [11] <-> \I4 [11]
+  partition pi bit 92: \I4 [10] <-> \I4 [10]
+  partition pi bit 93: \I4 [9] <-> \I4 [9]
+  partition pi bit 94: \I4 [8] <-> \I4 [8]
+  partition pi bit 95: \I4 [7] <-> \I4 [7]
+  partition pi bit 96: \I4 [6] <-> \I4 [6]
+  partition pi bit 97: \I4 [5] <-> \I4 [5]
+  partition pi bit 98: \I4 [4] <-> \I4 [4]
+  partition pi bit 99: \Q4 [14] <-> \Q4 [14]
+  partition pi bit 100: \Q4 [13] <-> \Q4 [13]
+  partition pi bit 101: \Q4 [12] <-> \Q4 [12]
+  partition pi bit 102: \Q4 [11] <-> \Q4 [11]
+  partition pi bit 103: \Q4 [10] <-> \Q4 [10]
+  partition pi bit 104: \Q4 [9] <-> \Q4 [9]
+  partition pi bit 105: \Q4 [8] <-> \Q4 [8]
+  partition pi bit 106: \Q4 [7] <-> \Q4 [7]
+  partition pi bit 107: \Q4 [6] <-> \Q4 [6]
+  partition pi bit 108: \Q4 [5] <-> \Q4 [5]
+  partition pi bit 109: \Q4 [4] <-> \Q4 [4]
+  partition pi bit 110: \I5 [14] <-> \I5 [14]
+  partition pi bit 111: \I5 [13] <-> \I5 [13]
+  partition pi bit 112: \I5 [12] <-> \I5 [12]
+  partition pi bit 113: \I5 [11] <-> \I5 [11]
+  partition pi bit 114: \I5 [10] <-> \I5 [10]
+  partition pi bit 115: \I5 [9] <-> \I5 [9]
+  partition pi bit 116: \I5 [8] <-> \I5 [8]
+  partition pi bit 117: \I5 [7] <-> \I5 [7]
+  partition pi bit 118: \I5 [6] <-> \I5 [6]
+  partition pi bit 119: \I5 [5] <-> \I5 [5]
+  partition pi bit 120: \I5 [4] <-> \I5 [4]
+  partition pi bit 121: \Q5 [14] <-> \Q5 [14]
+  partition pi bit 122: \Q5 [13] <-> \Q5 [13]
+  partition pi bit 123: \Q5 [12] <-> \Q5 [12]
+  partition pi bit 124: \Q5 [11] <-> \Q5 [11]
+  partition pi bit 125: \Q5 [10] <-> \Q5 [10]
+  partition pi bit 126: \Q5 [9] <-> \Q5 [9]
+  partition pi bit 127: \Q5 [8] <-> \Q5 [8]
+  partition pi bit 128: \Q5 [7] <-> \Q5 [7]
+  partition pi bit 129: \Q5 [6] <-> \Q5 [6]
+  partition pi bit 130: \Q5 [5] <-> \Q5 [5]
+  partition pi bit 131: \Q5 [4] <-> \Q5 [4]
+  partition pi bit 132: \I6 [14] <-> \I6 [14]
+  partition pi bit 133: \I6 [13] <-> \I6 [13]
+  partition pi bit 134: \I6 [12] <-> \I6 [12]
+  partition pi bit 135: \I6 [11] <-> \I6 [11]
+  partition pi bit 136: \I6 [10] <-> \I6 [10]
+  partition pi bit 137: \I6 [9] <-> \I6 [9]
+  partition pi bit 138: \I6 [8] <-> \I6 [8]
+  partition pi bit 139: \I6 [7] <-> \I6 [7]
+  partition pi bit 140: \I6 [6] <-> \I6 [6]
+  partition pi bit 141: \I6 [5] <-> \I6 [5]
+  partition pi bit 142: \I6 [4] <-> \I6 [4]
+  partition pi bit 143: \Q6 [14] <-> \Q6 [14]
+  partition pi bit 144: \Q6 [13] <-> \Q6 [13]
+  partition pi bit 145: \Q6 [12] <-> \Q6 [12]
+  partition pi bit 146: \Q6 [11] <-> \Q6 [11]
+  partition pi bit 147: \Q6 [10] <-> \Q6 [10]
+  partition pi bit 148: \Q6 [9] <-> \Q6 [9]
+  partition pi bit 149: \Q6 [8] <-> \Q6 [8]
+  partition pi bit 150: \Q6 [7] <-> \Q6 [7]
+  partition pi bit 151: \Q6 [6] <-> \Q6 [6]
+  partition pi bit 152: \Q6 [5] <-> \Q6 [5]
+  partition pi bit 153: \Q6 [4] <-> \Q6 [4]
+  partition pi bit 154: \I7 [14] <-> \I7 [14]
+  partition pi bit 155: \I7 [13] <-> \I7 [13]
+  partition pi bit 156: \I7 [12] <-> \I7 [12]
+  partition pi bit 157: \I7 [11] <-> \I7 [11]
+  partition pi bit 158: \I7 [10] <-> \I7 [10]
+  partition pi bit 159: \I7 [9] <-> \I7 [9]
+  partition pi bit 160: \I7 [8] <-> \I7 [8]
+  partition pi bit 161: \I7 [7] <-> \I7 [7]
+  partition pi bit 162: \I7 [6] <-> \I7 [6]
+  partition pi bit 163: \I7 [5] <-> \I7 [5]
+  partition pi bit 164: \I7 [4] <-> \I7 [4]
+  partition pi bit 165: \Q7 [14] <-> \Q7 [14]
+  partition pi bit 166: \Q7 [13] <-> \Q7 [13]
+  partition pi bit 167: \Q7 [12] <-> \Q7 [12]
+  partition pi bit 168: \Q7 [11] <-> \Q7 [11]
+  partition pi bit 169: \Q7 [10] <-> \Q7 [10]
+  partition pi bit 170: \Q7 [9] <-> \Q7 [9]
+  partition pi bit 171: \Q7 [8] <-> \Q7 [8]
+  partition pi bit 172: \Q7 [7] <-> \Q7 [7]
+  partition pi bit 173: \Q7 [6] <-> \Q7 [6]
+  partition pi bit 174: \Q7 [5] <-> \Q7 [5]
+  partition pi bit 175: \Q7 [4] <-> \Q7 [4]
+  partition pi bit 176: \Q1 [15] <-> \Q1 [15]
+  partition pi bit 177: \Q5 [15] <-> \Q5 [15]
+  partition pi bit 178: \Q7 [15] <-> \Q7 [15]
+  partition pi bit 179: \Q3 [15] <-> \Q3 [15]
+  partition pi bit 180: \Q2 [15] <-> \Q2 [15]
+  partition pi bit 181: \Q6 [15] <-> \Q6 [15]
+  partition pi bit 182: \Q0 [15] <-> \Q0 [15]
+  partition pi bit 183: \Q4 [15] <-> \Q4 [15]
+  partition pi bit 184: \I2 [15] <-> \I2 [15]
+  partition pi bit 185: \I6 [15] <-> \I6 [15]
+  partition pi bit 186: \I4 [15] <-> \I4 [15]
+  partition pi bit 187: \I0 [15] <-> \I0 [15]
+  partition pi bit 188: \I1 [15] <-> \I1 [15]
+  partition pi bit 189: \I5 [15] <-> \I5 [15]
+  partition pi bit 190: \I7 [15] <-> \I7 [15]
+  partition pi bit 191: \I3 [15] <-> \I3 [15]
+  partition pi bit 192: \valid <-> \valid
+  partition pi bit 193: \reset <-> \reset
+  partition pi bit 194: \clock <-> \clock
+  partition po bit 0: \inter0008_out [0] <-> \inter0008_out [0]
+  partition po bit 1: \inter0008_out [1] <-> \inter0008_out [1]
+  partition po bit 2: \inter0008_out [2] <-> \inter0008_out [2]
+  partition po bit 3: \inter0008_out [3] <-> \inter0008_out [3]
+  partition po bit 4: \inter0008_out [4] <-> \inter0008_out [4]
+  partition po bit 5: \inter0008_out [5] <-> \inter0008_out [5]
+  partition po bit 6: \inter0008_out [6] <-> \inter0008_out [6]
+  partition po bit 7: \inter0008_out [7] <-> \inter0008_out [7]
+  partition po bit 8: \inter0008_out [8] <-> \inter0008_out [8]
+  partition po bit 9: \inter0008_out [9] <-> \inter0008_out [9]
+  partition po bit 10: \inter0008_out [10] <-> \inter0008_out [10]
+  partition po bit 11: \inter0008_out [11] <-> \inter0008_out [11]
+
+3.1.9. Executing RTLIL backend.
+Output filename: partitions/test1.inter0008_out.il
+<suppressed ~5141 debug messages>
+
+3.1.10. Executing CHECK pass (checking for obvious problems).
+Checking module gate.test1.inter0008_out...
+Checking module gold.test1.inter0008_out...
+Found and reported 0 problems.
+
+Writing partition 3 as test1.inter0007_out.
+  partition pi bit 0: \valid <-> \valid
+  partition pi bit 1: \clock <-> \clock
+  partition pi bit 2: \reset <-> \reset
+  partition po bit 0: \inter0007_out <-> \inter0007_out
+
+3.1.11. Executing RTLIL backend.
+Output filename: partitions/test1.inter0007_out.il
+<suppressed ~228 debug messages>
+
+3.1.12. Executing CHECK pass (checking for obvious problems).
+Checking module gate.test1.inter0007_out...
+Checking module gold.test1.inter0007_out...
+Found and reported 0 problems.
+
+Writing partition 4 as test1.
+  partition pi bit 0: \I0 [0] <-> \I0 [0]
+  partition pi bit 1: \I0 [1] <-> \I0 [1]
+  partition pi bit 2: \I0 [2] <-> \I0 [2]
+  partition pi bit 3: \I0 [3] <-> \I0 [3]
+  partition pi bit 4: \I1 [0] <-> \I1 [0]
+  partition pi bit 5: \I1 [1] <-> \I1 [1]
+  partition pi bit 6: \I1 [2] <-> \I1 [2]
+  partition pi bit 7: \I1 [3] <-> \I1 [3]
+  partition pi bit 8: \I2 [0] <-> \I2 [0]
+  partition pi bit 9: \I2 [1] <-> \I2 [1]
+  partition pi bit 10: \I2 [2] <-> \I2 [2]
+  partition pi bit 11: \I2 [3] <-> \I2 [3]
+  partition pi bit 12: \I3 [0] <-> \I3 [0]
+  partition pi bit 13: \I3 [1] <-> \I3 [1]
+  partition pi bit 14: \I3 [2] <-> \I3 [2]
+  partition pi bit 15: \I3 [3] <-> \I3 [3]
+  partition pi bit 16: \I4 [0] <-> \I4 [0]
+  partition pi bit 17: \I4 [1] <-> \I4 [1]
+  partition pi bit 18: \I4 [2] <-> \I4 [2]
+  partition pi bit 19: \I4 [3] <-> \I4 [3]
+  partition pi bit 20: \I5 [0] <-> \I5 [0]
+  partition pi bit 21: \I5 [1] <-> \I5 [1]
+  partition pi bit 22: \I5 [2] <-> \I5 [2]
+  partition pi bit 23: \I5 [3] <-> \I5 [3]
+  partition pi bit 24: \I6 [0] <-> \I6 [0]
+  partition pi bit 25: \I6 [1] <-> \I6 [1]
+  partition pi bit 26: \I6 [2] <-> \I6 [2]
+  partition pi bit 27: \I6 [3] <-> \I6 [3]
+  partition pi bit 28: \I7 [0] <-> \I7 [0]
+  partition pi bit 29: \I7 [1] <-> \I7 [1]
+  partition pi bit 30: \I7 [2] <-> \I7 [2]
+  partition pi bit 31: \I7 [3] <-> \I7 [3]
+  partition pi bit 32: \Q0 [0] <-> \Q0 [0]
+  partition pi bit 33: \Q0 [1] <-> \Q0 [1]
+  partition pi bit 34: \Q0 [2] <-> \Q0 [2]
+  partition pi bit 35: \Q0 [3] <-> \Q0 [3]
+  partition pi bit 36: \Q1 [0] <-> \Q1 [0]
+  partition pi bit 37: \Q1 [1] <-> \Q1 [1]
+  partition pi bit 38: \Q1 [2] <-> \Q1 [2]
+  partition pi bit 39: \Q1 [3] <-> \Q1 [3]
+  partition pi bit 40: \Q2 [0] <-> \Q2 [0]
+  partition pi bit 41: \Q2 [1] <-> \Q2 [1]
+  partition pi bit 42: \Q2 [2] <-> \Q2 [2]
+  partition pi bit 43: \Q2 [3] <-> \Q2 [3]
+  partition pi bit 44: \Q3 [0] <-> \Q3 [0]
+  partition pi bit 45: \Q3 [1] <-> \Q3 [1]
+  partition pi bit 46: \Q3 [2] <-> \Q3 [2]
+  partition pi bit 47: \Q3 [3] <-> \Q3 [3]
+  partition pi bit 48: \Q4 [0] <-> \Q4 [0]
+  partition pi bit 49: \Q4 [1] <-> \Q4 [1]
+  partition pi bit 50: \Q4 [2] <-> \Q4 [2]
+  partition pi bit 51: \Q4 [3] <-> \Q4 [3]
+  partition pi bit 52: \Q5 [0] <-> \Q5 [0]
+  partition pi bit 53: \Q5 [1] <-> \Q5 [1]
+  partition pi bit 54: \Q5 [2] <-> \Q5 [2]
+  partition pi bit 55: \Q5 [3] <-> \Q5 [3]
+  partition pi bit 56: \Q6 [0] <-> \Q6 [0]
+  partition pi bit 57: \Q6 [1] <-> \Q6 [1]
+  partition pi bit 58: \Q6 [2] <-> \Q6 [2]
+  partition pi bit 59: \Q6 [3] <-> \Q6 [3]
+  partition pi bit 60: \Q7 [0] <-> \Q7 [0]
+  partition pi bit 61: \Q7 [1] <-> \Q7 [1]
+  partition pi bit 62: \Q7 [2] <-> \Q7 [2]
+  partition pi bit 63: \Q7 [3] <-> \Q7 [3]
+  partition pi bit 64: \Q0 [14] <-> \Q0 [14]
+  partition pi bit 65: \Q0 [13] <-> \Q0 [13]
+  partition pi bit 66: \Q0 [12] <-> \Q0 [12]
+  partition pi bit 67: \Q0 [11] <-> \Q0 [11]
+  partition pi bit 68: \Q0 [10] <-> \Q0 [10]
+  partition pi bit 69: \Q0 [9] <-> \Q0 [9]
+  partition pi bit 70: \Q0 [8] <-> \Q0 [8]
+  partition pi bit 71: \Q0 [7] <-> \Q0 [7]
+  partition pi bit 72: \Q0 [6] <-> \Q0 [6]
+  partition pi bit 73: \Q0 [5] <-> \Q0 [5]
+  partition pi bit 74: \Q0 [4] <-> \Q0 [4]
+  partition pi bit 75: \I0 [14] <-> \I0 [14]
+  partition pi bit 76: \I0 [13] <-> \I0 [13]
+  partition pi bit 77: \I0 [12] <-> \I0 [12]
+  partition pi bit 78: \I0 [11] <-> \I0 [11]
+  partition pi bit 79: \I0 [10] <-> \I0 [10]
+  partition pi bit 80: \I0 [9] <-> \I0 [9]
+  partition pi bit 81: \I0 [8] <-> \I0 [8]
+  partition pi bit 82: \I0 [7] <-> \I0 [7]
+  partition pi bit 83: \I0 [6] <-> \I0 [6]
+  partition pi bit 84: \I0 [5] <-> \I0 [5]
+  partition pi bit 85: \I0 [4] <-> \I0 [4]
+  partition pi bit 86: \Q1 [14] <-> \Q1 [14]
+  partition pi bit 87: \Q1 [13] <-> \Q1 [13]
+  partition pi bit 88: \Q1 [12] <-> \Q1 [12]
+  partition pi bit 89: \Q1 [11] <-> \Q1 [11]
+  partition pi bit 90: \Q1 [10] <-> \Q1 [10]
+  partition pi bit 91: \Q1 [9] <-> \Q1 [9]
+  partition pi bit 92: \Q1 [8] <-> \Q1 [8]
+  partition pi bit 93: \Q1 [7] <-> \Q1 [7]
+  partition pi bit 94: \Q1 [6] <-> \Q1 [6]
+  partition pi bit 95: \Q1 [5] <-> \Q1 [5]
+  partition pi bit 96: \Q1 [4] <-> \Q1 [4]
+  partition pi bit 97: \I1 [14] <-> \I1 [14]
+  partition pi bit 98: \I1 [13] <-> \I1 [13]
+  partition pi bit 99: \I1 [12] <-> \I1 [12]
+  partition pi bit 100: \I1 [11] <-> \I1 [11]
+  partition pi bit 101: \I1 [10] <-> \I1 [10]
+  partition pi bit 102: \I1 [9] <-> \I1 [9]
+  partition pi bit 103: \I1 [8] <-> \I1 [8]
+  partition pi bit 104: \I1 [7] <-> \I1 [7]
+  partition pi bit 105: \I1 [6] <-> \I1 [6]
+  partition pi bit 106: \I1 [5] <-> \I1 [5]
+  partition pi bit 107: \I1 [4] <-> \I1 [4]
+  partition pi bit 108: \Q2 [14] <-> \Q2 [14]
+  partition pi bit 109: \Q2 [13] <-> \Q2 [13]
+  partition pi bit 110: \Q2 [12] <-> \Q2 [12]
+  partition pi bit 111: \Q2 [11] <-> \Q2 [11]
+  partition pi bit 112: \Q2 [10] <-> \Q2 [10]
+  partition pi bit 113: \Q2 [9] <-> \Q2 [9]
+  partition pi bit 114: \Q2 [8] <-> \Q2 [8]
+  partition pi bit 115: \Q2 [7] <-> \Q2 [7]
+  partition pi bit 116: \Q2 [6] <-> \Q2 [6]
+  partition pi bit 117: \Q2 [5] <-> \Q2 [5]
+  partition pi bit 118: \Q2 [4] <-> \Q2 [4]
+  partition pi bit 119: \I2 [14] <-> \I2 [14]
+  partition pi bit 120: \I2 [13] <-> \I2 [13]
+  partition pi bit 121: \I2 [12] <-> \I2 [12]
+  partition pi bit 122: \I2 [11] <-> \I2 [11]
+  partition pi bit 123: \I2 [10] <-> \I2 [10]
+  partition pi bit 124: \I2 [9] <-> \I2 [9]
+  partition pi bit 125: \I2 [8] <-> \I2 [8]
+  partition pi bit 126: \I2 [7] <-> \I2 [7]
+  partition pi bit 127: \I2 [6] <-> \I2 [6]
+  partition pi bit 128: \I2 [5] <-> \I2 [5]
+  partition pi bit 129: \I2 [4] <-> \I2 [4]
+  partition pi bit 130: \Q3 [14] <-> \Q3 [14]
+  partition pi bit 131: \Q3 [13] <-> \Q3 [13]
+  partition pi bit 132: \Q3 [12] <-> \Q3 [12]
+  partition pi bit 133: \Q3 [11] <-> \Q3 [11]
+  partition pi bit 134: \Q3 [10] <-> \Q3 [10]
+  partition pi bit 135: \Q3 [9] <-> \Q3 [9]
+  partition pi bit 136: \Q3 [8] <-> \Q3 [8]
+  partition pi bit 137: \Q3 [7] <-> \Q3 [7]
+  partition pi bit 138: \Q3 [6] <-> \Q3 [6]
+  partition pi bit 139: \Q3 [5] <-> \Q3 [5]
+  partition pi bit 140: \Q3 [4] <-> \Q3 [4]
+  partition pi bit 141: \I3 [14] <-> \I3 [14]
+  partition pi bit 142: \I3 [13] <-> \I3 [13]
+  partition pi bit 143: \I3 [12] <-> \I3 [12]
+  partition pi bit 144: \I3 [11] <-> \I3 [11]
+  partition pi bit 145: \I3 [10] <-> \I3 [10]
+  partition pi bit 146: \I3 [9] <-> \I3 [9]
+  partition pi bit 147: \I3 [8] <-> \I3 [8]
+  partition pi bit 148: \I3 [7] <-> \I3 [7]
+  partition pi bit 149: \I3 [6] <-> \I3 [6]
+  partition pi bit 150: \I3 [5] <-> \I3 [5]
+  partition pi bit 151: \I3 [4] <-> \I3 [4]
+  partition pi bit 152: \Q4 [14] <-> \Q4 [14]
+  partition pi bit 153: \Q4 [13] <-> \Q4 [13]
+  partition pi bit 154: \Q4 [12] <-> \Q4 [12]
+  partition pi bit 155: \Q4 [11] <-> \Q4 [11]
+  partition pi bit 156: \Q4 [10] <-> \Q4 [10]
+  partition pi bit 157: \Q4 [9] <-> \Q4 [9]
+  partition pi bit 158: \Q4 [8] <-> \Q4 [8]
+  partition pi bit 159: \Q4 [7] <-> \Q4 [7]
+  partition pi bit 160: \Q4 [6] <-> \Q4 [6]
+  partition pi bit 161: \Q4 [5] <-> \Q4 [5]
+  partition pi bit 162: \Q4 [4] <-> \Q4 [4]
+  partition pi bit 163: \I4 [14] <-> \I4 [14]
+  partition pi bit 164: \I4 [13] <-> \I4 [13]
+  partition pi bit 165: \I4 [12] <-> \I4 [12]
+  partition pi bit 166: \I4 [11] <-> \I4 [11]
+  partition pi bit 167: \I4 [10] <-> \I4 [10]
+  partition pi bit 168: \I4 [9] <-> \I4 [9]
+  partition pi bit 169: \I4 [8] <-> \I4 [8]
+  partition pi bit 170: \I4 [7] <-> \I4 [7]
+  partition pi bit 171: \I4 [6] <-> \I4 [6]
+  partition pi bit 172: \I4 [5] <-> \I4 [5]
+  partition pi bit 173: \I4 [4] <-> \I4 [4]
+  partition pi bit 174: \Q5 [14] <-> \Q5 [14]
+  partition pi bit 175: \Q5 [13] <-> \Q5 [13]
+  partition pi bit 176: \Q5 [12] <-> \Q5 [12]
+  partition pi bit 177: \Q5 [11] <-> \Q5 [11]
+  partition pi bit 178: \Q5 [10] <-> \Q5 [10]
+  partition pi bit 179: \Q5 [9] <-> \Q5 [9]
+  partition pi bit 180: \Q5 [8] <-> \Q5 [8]
+  partition pi bit 181: \Q5 [7] <-> \Q5 [7]
+  partition pi bit 182: \Q5 [6] <-> \Q5 [6]
+  partition pi bit 183: \Q5 [5] <-> \Q5 [5]
+  partition pi bit 184: \Q5 [4] <-> \Q5 [4]
+  partition pi bit 185: \I5 [14] <-> \I5 [14]
+  partition pi bit 186: \I5 [13] <-> \I5 [13]
+  partition pi bit 187: \I5 [12] <-> \I5 [12]
+  partition pi bit 188: \I5 [11] <-> \I5 [11]
+  partition pi bit 189: \I5 [10] <-> \I5 [10]
+  partition pi bit 190: \I5 [9] <-> \I5 [9]
+  partition pi bit 191: \I5 [8] <-> \I5 [8]
+  partition pi bit 192: \I5 [7] <-> \I5 [7]
+  partition pi bit 193: \I5 [6] <-> \I5 [6]
+  partition pi bit 194: \I5 [5] <-> \I5 [5]
+  partition pi bit 195: \I5 [4] <-> \I5 [4]
+  partition pi bit 196: \Q6 [14] <-> \Q6 [14]
+  partition pi bit 197: \Q6 [13] <-> \Q6 [13]
+  partition pi bit 198: \Q6 [12] <-> \Q6 [12]
+  partition pi bit 199: \Q6 [11] <-> \Q6 [11]
+  partition pi bit 200: \Q6 [10] <-> \Q6 [10]
+  partition pi bit 201: \Q6 [9] <-> \Q6 [9]
+  partition pi bit 202: \Q6 [8] <-> \Q6 [8]
+  partition pi bit 203: \Q6 [7] <-> \Q6 [7]
+  partition pi bit 204: \Q6 [6] <-> \Q6 [6]
+  partition pi bit 205: \Q6 [5] <-> \Q6 [5]
+  partition pi bit 206: \Q6 [4] <-> \Q6 [4]
+  partition pi bit 207: \I6 [14] <-> \I6 [14]
+  partition pi bit 208: \I6 [13] <-> \I6 [13]
+  partition pi bit 209: \I6 [12] <-> \I6 [12]
+  partition pi bit 210: \I6 [11] <-> \I6 [11]
+  partition pi bit 211: \I6 [10] <-> \I6 [10]
+  partition pi bit 212: \I6 [9] <-> \I6 [9]
+  partition pi bit 213: \I6 [8] <-> \I6 [8]
+  partition pi bit 214: \I6 [7] <-> \I6 [7]
+  partition pi bit 215: \I6 [6] <-> \I6 [6]
+  partition pi bit 216: \I6 [5] <-> \I6 [5]
+  partition pi bit 217: \I6 [4] <-> \I6 [4]
+  partition pi bit 218: \Q7 [14] <-> \Q7 [14]
+  partition pi bit 219: \Q7 [13] <-> \Q7 [13]
+  partition pi bit 220: \Q7 [12] <-> \Q7 [12]
+  partition pi bit 221: \Q7 [11] <-> \Q7 [11]
+  partition pi bit 222: \Q7 [10] <-> \Q7 [10]
+  partition pi bit 223: \Q7 [9] <-> \Q7 [9]
+  partition pi bit 224: \Q7 [8] <-> \Q7 [8]
+  partition pi bit 225: \Q7 [7] <-> \Q7 [7]
+  partition pi bit 226: \Q7 [6] <-> \Q7 [6]
+  partition pi bit 227: \Q7 [5] <-> \Q7 [5]
+  partition pi bit 228: \Q7 [4] <-> \Q7 [4]
+  partition pi bit 229: \I7 [14] <-> \I7 [14]
+  partition pi bit 230: \I7 [13] <-> \I7 [13]
+  partition pi bit 231: \I7 [12] <-> \I7 [12]
+  partition pi bit 232: \I7 [11] <-> \I7 [11]
+  partition pi bit 233: \I7 [10] <-> \I7 [10]
+  partition pi bit 234: \I7 [9] <-> \I7 [9]
+  partition pi bit 235: \I7 [8] <-> \I7 [8]
+  partition pi bit 236: \I7 [7] <-> \I7 [7]
+  partition pi bit 237: \I7 [6] <-> \I7 [6]
+  partition pi bit 238: \I7 [5] <-> \I7 [5]
+  partition pi bit 239: \I7 [4] <-> \I7 [4]
+  partition pi bit 240: \I2 [15] <-> \I2 [15]
+  partition pi bit 241: \I6 [15] <-> \I6 [15]
+  partition pi bit 242: \I4 [15] <-> \I4 [15]
+  partition pi bit 243: \I0 [15] <-> \I0 [15]
+  partition pi bit 244: \Q1 [15] <-> \Q1 [15]
+  partition pi bit 245: \Q5 [15] <-> \Q5 [15]
+  partition pi bit 246: \Q7 [15] <-> \Q7 [15]
+  partition pi bit 247: \Q3 [15] <-> \Q3 [15]
+  partition pi bit 248: \Q2 [15] <-> \Q2 [15]
+  partition pi bit 249: \Q6 [15] <-> \Q6 [15]
+  partition pi bit 250: \Q4 [15] <-> \Q4 [15]
+  partition pi bit 251: \Q0 [15] <-> \Q0 [15]
+  partition pi bit 252: \I1 [15] <-> \I1 [15]
+  partition pi bit 253: \I5 [15] <-> \I5 [15]
+  partition pi bit 254: \I7 [15] <-> \I7 [15]
+  partition pi bit 255: \I3 [15] <-> \I3 [15]
+  partition pi bit 256: \clock <-> \clock
+  partition pi bit 257: \reset <-> \reset
+  partition pi bit 258: \valid <-> \valid
+  partition po bit 0: \inter0007_out <-> \inter0007_out
+  partition po bit 1: \inter0008_out [0] <-> \inter0008_out [0]
+  partition po bit 2: \inter0008_out [1] <-> \inter0008_out [1]
+  partition po bit 3: \inter0008_out [2] <-> \inter0008_out [2]
+  partition po bit 4: \inter0008_out [3] <-> \inter0008_out [3]
+  partition po bit 5: \inter0008_out [4] <-> \inter0008_out [4]
+  partition po bit 6: \inter0008_out [5] <-> \inter0008_out [5]
+  partition po bit 7: \inter0008_out [6] <-> \inter0008_out [6]
+  partition po bit 8: \inter0008_out [7] <-> \inter0008_out [7]
+  partition po bit 9: \inter0008_out [8] <-> \inter0008_out [8]
+  partition po bit 10: \inter0008_out [9] <-> \inter0008_out [9]
+  partition po bit 11: \inter0008_out [10] <-> \inter0008_out [10]
+  partition po bit 12: \inter0008_out [11] <-> \inter0008_out [11]
+  partition po bit 13: \inter0009_out [0] <-> \inter0009_out [0]
+  partition po bit 14: \inter0009_out [1] <-> \inter0009_out [1]
+  partition po bit 15: \inter0009_out [2] <-> \inter0009_out [2]
+  partition po bit 16: \inter0009_out [3] <-> \inter0009_out [3]
+  partition po bit 17: \inter0009_out [4] <-> \inter0009_out [4]
+  partition po bit 18: \inter0009_out [5] <-> \inter0009_out [5]
+  partition po bit 19: \inter0009_out [6] <-> \inter0009_out [6]
+  partition po bit 20: \inter0009_out [7] <-> \inter0009_out [7]
+  partition po bit 21: \inter0009_out [8] <-> \inter0009_out [8]
+  partition po bit 22: \inter0009_out [9] <-> \inter0009_out [9]
+  partition po bit 23: \inter0009_out [10] <-> \inter0009_out [10]
+  partition po bit 24: \inter0009_out [11] <-> \inter0009_out [11]
+  partition po bit 25: \por6_out <-> \por6_out
+
+3.1.13. Executing RTLIL backend.
+Output filename: modules/test1.il
+<suppressed ~6063 debug messages>
+
+End of script. Logfile hash: cdecd16794, time: 0.02s, user: 0.02s, system: 0.01s, MEM: 26.38 MB peak
+Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+Time spent: 55% 1x eqy_partition (0 sec), 16% 5x write_rtlil (0 sec), ...

@@ -1,0 +1,61 @@
+{
+  "partition": {
+    "index": 5,
+    "name": "test4",
+    "inbits": {
+      "clk": [
+        0
+      ],
+      "datain": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "ena": [
+        0
+      ],
+      "reset_n": [
+        0
+      ]
+    },
+    "outbits": {
+      "data_dn": [
+        0
+      ],
+      "data_dp": [
+        0
+      ],
+      "datain_5bis7": [
+        0
+      ],
+      "dataout": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "only_5b": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.test4",
+    "internal": {},
+    "unused": {},
+    "cellcount": 40,
+    "bitcount": 339
+  },
+  "gate_module": {
+    "name": "gold.test4",
+    "internal": {},
+    "unused": {},
+    "cellcount": 38,
+    "bitcount": 46
+  }
+}

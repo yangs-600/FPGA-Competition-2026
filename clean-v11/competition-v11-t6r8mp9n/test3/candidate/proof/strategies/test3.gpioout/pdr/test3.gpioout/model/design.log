@@ -1,0 +1,160 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: ../../../../../partitions/test3.gpioout.sv
+Parsing SystemVerilog input from `../../../../../partitions/test3.gpioout.sv' to AST representation.
+Generating RTLIL representation for module `\miter'.
+Generating RTLIL representation for module `\miter_cmp_prop'.
+Generating RTLIL representation for module `\miter_def_prop'.
+Generating RTLIL representation for module `\gold.test3.gpioout'.
+Generating RTLIL representation for module `\gate.test3.gpioout'.
+Successfully finished Verilog frontend.
+
+2. Executing RTLIL frontend.
+Input filename: ../../../../../partitions/test3.gpioout.il
+Replacing existing blackbox module \gold.test3.gpioout.
+Replacing existing blackbox module \gate.test3.gpioout.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     \miter_cmp_prop
+Used module:     \gate.test3.gpioout
+Used module:     \gold.test3.gpioout
+Parameter 1 (\WIDTH) = 8
+Parameter 2 (\TYPE) = 48'011000010111001101110011011001010111001001110100
+
+3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\miter_cmp_prop'.
+Parameter 1 (\WIDTH) = 8
+Parameter 2 (\TYPE) = 48'011000010111001101110011011001010111001001110100
+Generating RTLIL representation for module `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop'.
+
+3.3. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     $paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop
+Used module:     \gate.test3.gpioout
+Used module:     \gold.test3.gpioout
+
+3.4. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     $paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop
+Used module:     \gate.test3.gpioout
+Used module:     \gold.test3.gpioout
+Removing unused module `\miter_def_prop'.
+Removing unused module `\miter_cmp_prop'.
+Removed 2 unused modules.
+Module $paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop directly or indirectly contains formal properties -> setting "keep" attribute.
+Module miter directly or indirectly contains formal properties -> setting "keep" attribute.
+Mapping positional arguments of cell miter.__po_gpioout__assert ($paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop).
+
+4. Executing PROC pass (convert processes to netlists).
+
+4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 3 assignments to connections.
+
+4.4. Executing PROC_INIT pass (extract init attributes).
+
+4.5. Executing PROC_ARST pass (detect async resets in processes).
+
+4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.$proc$../../../../../partitions/test3.gpioout.sv:66$334'.
+Creating decoders for process `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.$proc$../../../../../partitions/test3.gpioout.sv:60$301'.
+
+4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.\i' from process `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.$proc$../../../../../partitions/test3.gpioout.sv:60$301'.
+No latch inferred for signal `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.\okay' from process `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.$proc$../../../../../partitions/test3.gpioout.sv:60$301'.
+
+4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.$proc$../../../../../partitions/test3.gpioout.sv:66$334'.
+Removing empty process `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.$proc$../../../../../partitions/test3.gpioout.sv:60$301'.
+Cleaned up 0 empty switches.
+
+4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gold.test3.gpioout.
+Optimizing module $paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.
+<suppressed ~1 debug messages>
+Optimizing module gate.test3.gpioout.
+Optimizing module miter.
+
+5. Executing ASYNC2SYNC pass.
+Replacing gate.test3.gpioout.$flatten\gpioout_dffeas_q_2.$procdff$34 ($adff): ARST=1'1, D=$flatten\gpioout_dffeas_q_2.$0\q[0:0], Q=\gpioout [5]
+Replacing gate.test3.gpioout.$flatten\sr_dffeas_q.$procdff$34 ($adff): ARST=1'1, D=$flatten\sr_dffeas_q.$0\q[0:0], Q=$auto$rename.cc:496:execute$178
+Replacing gate.test3.gpioout.$flatten\sr_dffeas_q_1.$procdff$34 ($adff): ARST=1'1, D=$flatten\sr_dffeas_q_1.$0\q[0:0], Q=$auto$rename.cc:496:execute$187
+Replacing gate.test3.gpioout.$flatten\sr_dffeas_q_2.$procdff$34 ($adff): ARST=1'1, D=$flatten\sr_dffeas_q_2.$0\q[0:0], Q=$auto$rename.cc:496:execute$196
+Replacing gate.test3.gpioout.$flatten\sr_dffeas_q_3.$procdff$34 ($adff): ARST=1'1, D=$flatten\sr_dffeas_q_3.$0\q[0:0], Q=$auto$rename.cc:496:execute$205
+Replacing gate.test3.gpioout.$flatten\sr_dffeas_q_4.$procdff$34 ($adff): ARST=1'1, D=$flatten\sr_dffeas_q_4.$0\q[0:0], Q=$auto$rename.cc:496:execute$214
+Replacing gate.test3.gpioout.$flatten\sr_dffeas_q_5.$procdff$34 ($adff): ARST=1'1, D=$flatten\sr_dffeas_q_5.$0\q[0:0], Q=$auto$rename.cc:496:execute$223
+Replacing gate.test3.gpioout.$flatten\sr_dffeas_q_6.$procdff$34 ($adff): ARST=1'1, D=$flatten\sr_dffeas_q_6.$0\q[0:0], Q=$auto$rename.cc:496:execute$232
+Replacing gate.test3.gpioout.$flatten\rw_dffeas_q.$procdff$34 ($adff): ARST=1'1, D=$flatten\rw_dffeas_q.$0\q[0:0], Q=$auto$rename.cc:496:execute$168
+Replacing gate.test3.gpioout.$flatten\gpioout_dffeas_q.$procdff$34 ($adff): ARST=1'1, D=$flatten\gpioout_dffeas_q.$0\q[0:0], Q=\gpioout [1]
+Replacing gate.test3.gpioout.$flatten\gpioout_dffeas_q_1.$procdff$34 ($adff): ARST=1'1, D=$flatten\gpioout_dffeas_q_1.$0\q[0:0], Q=\gpioout [0]
+
+6. Executing FORMALFF pass.
+
+7. Executing SETUNDEF pass (replace undef values with defined constants).
+
+8. Executing FLATTEN pass (flatten design).
+Deleting now unused module gold.test3.gpioout.
+Deleting now unused module $paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.
+Deleting now unused module gate.test3.gpioout.
+<suppressed ~3 debug messages>
+
+9. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+10. Executing OPT_EXPR pass (perform const folding).
+Optimizing module miter.
+<suppressed ~23 debug messages>
+
+11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \miter..
+Removed 1 unused cells and 29 unused wires.
+<suppressed ~8 debug messages>
+
+12. Executing XPROP pass.
+
+12.1. Executing BMUXMAP pass.
+
+12.2. Executing DEMUXMAP pass.
+<suppressed ~5 debug messages>
+
+13. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `miter'. Setting top module to miter.
+
+13.1. Analyzing design hierarchy..
+Top module:  \miter
+
+13.2. Analyzing design hierarchy..
+Top module:  \miter
+Removed 0 unused modules.
+Module miter directly or indirectly contains formal properties -> setting "keep" attribute.
+
+14. Executing jny backend.
+
+15. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: ad11a4ef81, time: 0.01s, user: 0.01s, system: 0.00s, MEM: 20.88 MB peak
+Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+Time spent: 18% 2x write_jny (0 sec), 17% 2x read_verilog (0 sec), ...

@@ -1,0 +1,26 @@
+{
+  "archive_sha256": "6a9a1fd060a4a48c7e65bd202b5267b3ac304963faabdbcddfa3c1eb92944743",
+  "copied_inputs": [
+    "build_069.py",
+    "build_eqy_069.py",
+    "run_competition_v11.py",
+    "run_current.py",
+    "test_shared_tree.py",
+    "measure_competition_v11_pss.py",
+    "formal_cycloneiv.v",
+    "pmux_competition_v11.cc",
+    "competition_abc_dch.abc",
+    "competition_inputs.json",
+    "activate_competition.sh",
+    "COMPETITION_V11.md",
+    "toolchains/yosys-0.69/source.tar.gz",
+    "toolchains/eqy-0.69/source.tar",
+    "toolchains/yosys-0.69/competition-v11/synth-intel-competition.patch",
+    "competition_case/test1/test1.v",
+    "competition_case/test2/test2.v",
+    "competition_case/test3/test3.v",
+    "competition_case/test4/test4.v"
+  ],
+  "old_objects_copied": 0,
+  "cmake": "/home/ubuntu/FPGA/toolchains/cmake-3.31.6/bin/cmake"
+}

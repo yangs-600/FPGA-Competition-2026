@@ -1,0 +1,47 @@
+{
+  "partition": {
+    "index": 2,
+    "name": "test3",
+    "inbits": {
+      "clk": [
+        0
+      ],
+      "cs": [
+        0
+      ],
+      "sr_in": [
+        0
+      ]
+    },
+    "outbits": {
+      "gpioout": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "sr_out": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.test3",
+    "internal": {},
+    "unused": {},
+    "cellcount": 19,
+    "bitcount": 57
+  },
+  "gate_module": {
+    "name": "gold.test3",
+    "internal": {},
+    "unused": {},
+    "cellcount": 41,
+    "bitcount": 44
+  }
+}

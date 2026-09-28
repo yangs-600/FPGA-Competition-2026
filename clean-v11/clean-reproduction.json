@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "root": "/home/ubuntu/FPGA/clean-v11",
+  "old_objects_copied": 0,
+  "all_counts_identical": true,
+  "average_gain_percent": 22.11038961038961,
+  "proofs": 8,
+  "fixtures": 6,
+  "note": "Fresh source and build directory on the same Ubuntu; existing system compiler/CMake/OSS dependency tools retained. Candidate uses only objects just built for this fresh baseline."
+}

@@ -1,0 +1,1161 @@
+{
+  "status": "PASS",
+  "harness_sha256": "56f98dc74611125c8754e89302da96bd7e9ef564e94c1db99e839519c940a891",
+  "formal_model_sha256": "3d96aa4532000389a4ac2998cef702b7a4ed46b23707b4e0dd4cb1688b4db2d2",
+  "manifest": {
+    "yosys_release": "0.69",
+    "yosys_commit": "9f75ca1f9834a39a863915b5dae0c7b1e33533bc",
+    "source_sha256": "086045e23253917b93c71fc2d9db495df3c153cdc5d212bac505df7c4ad62e2f",
+    "plugin_source": "/home/ubuntu/FPGA/pmux_competition_v11.cc",
+    "plugin_source_sha256": "8df09e299ce77a6e5d4552bc8472a91d1e49aa37484a5a06536af51654595971",
+    "baseline": "/home/ubuntu/FPGA/toolchains/yosys-0.69/build/yosys-original",
+    "baseline_sha256": "ee21b2d150695db417cb0326378f09f37a113b5abd6ec503089375ac11c6e663",
+    "baseline_version": "Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)",
+    "candidate": "/home/ubuntu/FPGA/toolchains/yosys-0.69/build/yosys-competition-b6740f4436747df7",
+    "candidate_sha256": "d882f65fd5c16ecffa76d8b2aa3a6e0bf9167b5721d2a73e042316dd889d0f2f",
+    "candidate_version": "Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)",
+    "abc": "/home/ubuntu/FPGA/toolchains/yosys-0.69/build/yosys-abc",
+    "abc_sha256": "ab0d311f761f100c2610c63cd1e79a41617e204082caccf0cd75ad45295f6241",
+    "build_config": [
+      "/home/ubuntu/FPGA/toolchains/cmake-3.31.6/bin/cmake",
+      "-S",
+      "/home/ubuntu/FPGA/toolchains/yosys-0.69/src",
+      "-B",
+      "/home/ubuntu/FPGA/toolchains/yosys-0.69/build",
+      "-G",
+      "Unix Makefiles",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_C_COMPILER=/usr/bin/gcc",
+      "-DCMAKE_CXX_COMPILER=/usr/bin/g++",
+      "-DYOSYS_WITHOUT_SLANG=ON",
+      "-DYOSYS_USE_BUNDLED_LIBS=ON",
+      "-DBUILD_SHARED_LIBS=OFF",
+      "-DYOSYS_WITH_PYTHON=OFF",
+      "-DPython3_EXECUTABLE=/home/ubuntu/oss-cad-suite/bin/tabbypy3"
+    ],
+    "patch": "/home/ubuntu/FPGA/toolchains/yosys-0.69/competition-v11/synth-intel-competition.patch",
+    "note": "v11 shared decoder trees and conditional constants + fixed ABC9 area script; no runtime portfolio",
+    "patch_sha256": "b6740f4436747df782c728ca98908923479b45e50f32296cdfb1c71aea54ee85",
+    "abc_script": "/home/ubuntu/FPGA/toolchains/yosys-0.69/build/share/intel/competition_abc_v11.abc",
+    "abc_script_sha256": "550e309f06dbb672b3400931b48eca94f52ee11099d079d28584cfcefda1b9fa",
+    "flow": "synth_intel -family cycloneiv -top <top>",
+    "eqy": {
+      "commit": "4a72eb94fc253062464afee4d0018359017bb846",
+      "version": "EQY v0.69",
+      "source_sha256": "dd1a4c5edcf83353c66e9765661cc332f4c7f6f122585c97da68290eab230291",
+      "files": {
+        "/home/ubuntu/FPGA/toolchains/eqy-0.69/install/bin/eqy": "4c4110be84a2c9b84d5cea9023f0e5bc31987d9d4ddc02276dc85b97f517f76e",
+        "/home/ubuntu/FPGA/toolchains/eqy-0.69/install/share/yosys/python3/eqy_job.py": "7ad8857fa170ba804a086e91bd200487545f01006a705cad22a861c757fddcc0",
+        "/home/ubuntu/FPGA/toolchains/yosys-0.69/proof-bin/sby": "a0996cffbcaf44701ce13cc36e9e45b0c6247408bb010163af4a789c95a6d599",
+        "/home/ubuntu/FPGA/toolchains/eqy-0.69/install/share/yosys/plugins/eqy_combine.so": "507064fa1611d6b3edb5d25546143a96ce8604f5f70f0ad96454d082fe3058cf",
+        "/home/ubuntu/FPGA/toolchains/eqy-0.69/install/share/yosys/plugins/eqy_partition.so": "725126370f254b5a37d9701c450decf943d6a26df2f97513670495d854922508",
+        "/home/ubuntu/FPGA/toolchains/eqy-0.69/install/share/yosys/plugins/eqy_recode.so": "8e34b28dc09ed88f40a911e9f00286cd91255c56187dcf42afe8dca2a17ca401"
+      },
+      "executable": "/home/ubuntu/FPGA/toolchains/eqy-0.69/install/bin/eqy"
+    }
+  },
+  "cases": [
+    {
+      "name": "test1",
+      "source_sha256": "2d2dba011b0e8799d0de3790b69b7f01c6eb6ac665c4321b57b0378a4972fd13",
+      "source": "/home/ubuntu/FPGA/competition_case/test1/test1.v",
+      "roles": {
+        "baseline": {
+          "logic_cells": 286,
+          "dff_cells": 222,
+          "standalone_not_cells": 2,
+          "by_type": {
+            "$not": 2,
+            "cycloneiv_lcell_comb": 286,
+            "dffeas": 222
+          },
+          "initial": {
+            "cpu_seconds": 0.1827,
+            "wall_seconds": 0.18259220999971149,
+            "peak_rss_kib": 30976
+          },
+          "proof": "PASS",
+          "path": "/home/ubuntu/FPGA/competition-v11-0uwy1zis/test1/baseline",
+          "samples": [
+            {
+              "cpu_seconds": 0.165271,
+              "wall_seconds": 0.16692272900036187,
+              "peak_rss_kib": 31232
+            },
+            {
+              "cpu_seconds": 0.173652,
+              "wall_seconds": 0.17455093300031876,
+              "peak_rss_kib": 31104
+            },
+            {
+              "cpu_seconds": 0.163431,
+              "wall_seconds": 0.16467871500026376,
+              "peak_rss_kib": 31360
+            },
+            {
+              "cpu_seconds": 0.16445500000000002,
+              "wall_seconds": 0.16473685999972076,
+              "peak_rss_kib": 31360
+            },
+            {
+              "cpu_seconds": 0.16083899999999998,
+              "wall_seconds": 0.16089048099911452,
+              "peak_rss_kib": 31360
+            },
+            {
+              "cpu_seconds": 0.166213,
+              "wall_seconds": 0.16731531799996446,
+              "peak_rss_kib": 30848
+            },
+            {
+              "cpu_seconds": 0.166019,
+              "wall_seconds": 0.16776648499944713,
+              "peak_rss_kib": 31360
+            },
+            {
+              "cpu_seconds": 0.160618,
+              "wall_seconds": 0.16250667199983582,
+              "peak_rss_kib": 31360
+            },
+            {
+              "cpu_seconds": 0.163929,
+              "wall_seconds": 0.16508010600045964,
+              "peak_rss_kib": 31488
+            },
+            {
+              "cpu_seconds": 0.163354,
+              "wall_seconds": 0.16426598700036266,
+              "peak_rss_kib": 30720
+            },
+            {
+              "cpu_seconds": 0.162287,
+              "wall_seconds": 0.1630892799994399,
+              "peak_rss_kib": 31360
+            },
+            {
+              "cpu_seconds": 0.160855,
+              "wall_seconds": 0.16084062099980656,
+              "peak_rss_kib": 31360
+            },
+            {
+              "cpu_seconds": 0.16150399999999998,
+              "wall_seconds": 0.16177716299989697,
+              "peak_rss_kib": 31360
+            },
+            {
+              "cpu_seconds": 0.17008399999999999,
+              "wall_seconds": 0.17148872599955212,
+              "peak_rss_kib": 31488
+            },
+            {
+              "cpu_seconds": 0.160168,
+              "wall_seconds": 0.1623740880004334,
+              "peak_rss_kib": 30848
+            },
+            {
+              "cpu_seconds": 0.16145099999999998,
+              "wall_seconds": 0.1628040460000193,
+              "peak_rss_kib": 31360
+            },
+            {
+              "cpu_seconds": 0.161513,
+              "wall_seconds": 0.16308119099994656,
+              "peak_rss_kib": 31616
+            },
+            {
+              "cpu_seconds": 0.16157999999999997,
+              "wall_seconds": 0.16174346800016792,
+              "peak_rss_kib": 31232
+            },
+            {
+              "cpu_seconds": 0.16238799999999998,
+              "wall_seconds": 0.16301968400057376,
+              "peak_rss_kib": 31232
+            },
+            {
+              "cpu_seconds": 0.164619,
+              "wall_seconds": 0.164657041999817,
+              "peak_rss_kib": 31232
+            },
+            {
+              "cpu_seconds": 0.16291099999999997,
+              "wall_seconds": 0.16346789700037334,
+              "peak_rss_kib": 31360
+            }
+          ],
+          "median_cpu_seconds": 0.16291099999999997,
+          "median_peak_rss_kib": 31360,
+          "max_peak_rss_kib": 31616,
+          "cpu_range_seconds": [
+            0.160168,
+            0.173652
+          ]
+        },
+        "candidate": {
+          "logic_cells": 221,
+          "dff_cells": 222,
+          "standalone_not_cells": 2,
+          "by_type": {
+            "$not": 2,
+            "cycloneiv_lcell_comb": 221,
+            "dffeas": 222
+          },
+          "initial": {
+            "cpu_seconds": 0.15288,
+            "wall_seconds": 0.15327217799949722,
+            "peak_rss_kib": 30592
+          },
+          "proof": "PASS",
+          "path": "/home/ubuntu/FPGA/competition-v11-0uwy1zis/test1/candidate",
+          "samples": [
+            {
+              "cpu_seconds": 0.145557,
+              "wall_seconds": 0.14762132100076997,
+              "peak_rss_kib": 30592
+            },
+            {
+              "cpu_seconds": 0.146296,
+              "wall_seconds": 0.1479650790006417,
+              "peak_rss_kib": 30464
+            },
+            {
+              "cpu_seconds": 0.147011,
+              "wall_seconds": 0.14776854499996261,
+              "peak_rss_kib": 30464
+            },
+            {
+              "cpu_seconds": 0.145871,
+              "wall_seconds": 0.14688622500034398,
+              "peak_rss_kib": 30464
+            },
+            {
+              "cpu_seconds": 0.153918,
+              "wall_seconds": 0.15615945300032763,
+              "peak_rss_kib": 30464
+            },
+            {
+              "cpu_seconds": 0.147422,
+              "wall_seconds": 0.14821467099955044,
+              "peak_rss_kib": 30336
+            },
+            {
+              "cpu_seconds": 0.148283,
+              "wall_seconds": 0.15026194600068266,
+              "peak_rss_kib": 30464
+            },
+            {
+              "cpu_seconds": 0.146043,
+              "wall_seconds": 0.1472942159998638,
+              "peak_rss_kib": 30464
+            },
+            {
+              "cpu_seconds": 0.147191,
+              "wall_seconds": 0.14731104400016193,
+              "peak_rss_kib": 30464
+            },
+            {
+              "cpu_seconds": 0.146156,
+              "wall_seconds": 0.147298877999674,
+              "peak_rss_kib": 30592
+            },
+            {
+              "cpu_seconds": 0.146675,
+              "wall_seconds": 0.1486936080000305,
+              "peak_rss_kib": 30592
+            },
+            {
+              "cpu_seconds": 0.148748,
+              "wall_seconds": 0.15070179800022743,
+              "peak_rss_kib": 30720
+            },
+            {
+              "cpu_seconds": 0.147376,
+              "wall_seconds": 0.14937267300047097,
+              "peak_rss_kib": 30464
+            },
+            {
+              "cpu_seconds": 0.149084,
+              "wall_seconds": 0.14967194099972403,
+              "peak_rss_kib": 30464
+            },
+            {
+              "cpu_seconds": 0.14715799999999998,
+              "wall_seconds": 0.1483945820000372,
+              "peak_rss_kib": 30336
+            },
+            {
+              "cpu_seconds": 0.146602,
+              "wall_seconds": 0.14853036999920732,
+              "peak_rss_kib": 30592
+            },
+            {
+              "cpu_seconds": 0.148169,
+              "wall_seconds": 0.15076683700044669,
+              "peak_rss_kib": 30592
+            },
+            {
+              "cpu_seconds": 0.145792,
+              "wall_seconds": 0.146907695999289,
+              "peak_rss_kib": 30592
+            },
+            {
+              "cpu_seconds": 0.148389,
+              "wall_seconds": 0.1493721729993922,
+              "peak_rss_kib": 30592
+            },
+            {
+              "cpu_seconds": 0.146303,
+              "wall_seconds": 0.14783737500056304,
+              "peak_rss_kib": 30464
+            },
+            {
+              "cpu_seconds": 0.148688,
+              "wall_seconds": 0.1495446010003434,
+              "peak_rss_kib": 30464
+            }
+          ],
+          "median_cpu_seconds": 0.14715799999999998,
+          "median_peak_rss_kib": 30464,
+          "max_peak_rss_kib": 30720,
+          "cpu_range_seconds": [
+            0.145557,
+            0.153918
+          ]
+        }
+      },
+      "gain_percent": 22.727272727272727,
+      "dff_nonincrease": true,
+      "cpu_overhead_percent": -9.669696951095997,
+      "rss_overhead_percent": -2.8340080971659964,
+      "measured_5pct_pass": true
+    },
+    {
+      "name": "test2",
+      "source_sha256": "e43c9b437071488551caf3121e227e86f4fe3190751f245beac3b7ecc3fdb146",
+      "source": "/home/ubuntu/FPGA/competition_case/test2/test2.v",
+      "roles": {
+        "baseline": {
+          "logic_cells": 25,
+          "dff_cells": 0,
+          "standalone_not_cells": 0,
+          "by_type": {
+            "cycloneiv_lcell_comb": 25
+          },
+          "initial": {
+            "cpu_seconds": 0.055811,
+            "wall_seconds": 0.05823631299972476,
+            "peak_rss_kib": 26112
+          },
+          "proof": "PASS",
+          "path": "/home/ubuntu/FPGA/competition-v11-0uwy1zis/test2/baseline",
+          "samples": [
+            {
+              "cpu_seconds": 0.056294,
+              "wall_seconds": 0.059081772999888926,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.056699,
+              "wall_seconds": 0.05720011599987629,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.055638999999999994,
+              "wall_seconds": 0.058120887999393744,
+              "peak_rss_kib": 26240
+            },
+            {
+              "cpu_seconds": 0.056258999999999997,
+              "wall_seconds": 0.05847971999992296,
+              "peak_rss_kib": 26240
+            },
+            {
+              "cpu_seconds": 0.055539,
+              "wall_seconds": 0.05641893299980438,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.054611999999999994,
+              "wall_seconds": 0.05641461499999423,
+              "peak_rss_kib": 26240
+            },
+            {
+              "cpu_seconds": 0.056159,
+              "wall_seconds": 0.057454316999610455,
+              "peak_rss_kib": 25984
+            },
+            {
+              "cpu_seconds": 0.058679999999999996,
+              "wall_seconds": 0.060250925999753235,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.05572,
+              "wall_seconds": 0.05781128800026636,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.055191,
+              "wall_seconds": 0.05599983400043129,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.055279999999999996,
+              "wall_seconds": 0.05612192399985361,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.055027999999999994,
+              "wall_seconds": 0.05713508699955128,
+              "peak_rss_kib": 26112
+            },
+            {
+              "cpu_seconds": 0.055439999999999996,
+              "wall_seconds": 0.0570315169998139,
+              "peak_rss_kib": 26240
+            },
+            {
+              "cpu_seconds": 0.05563799999999999,
+              "wall_seconds": 0.05807669500063639,
+              "peak_rss_kib": 25984
+            },
+            {
+              "cpu_seconds": 0.055723999999999996,
+              "wall_seconds": 0.057150223000462574,
+              "peak_rss_kib": 25856
+            },
+            {
+              "cpu_seconds": 0.056001999999999996,
+              "wall_seconds": 0.058374128999275854,
+              "peak_rss_kib": 26112
+            },
+            {
+              "cpu_seconds": 0.055618,
+              "wall_seconds": 0.057066099999246944,
+              "peak_rss_kib": 26240
+            },
+            {
+              "cpu_seconds": 0.05726099999999999,
+              "wall_seconds": 0.05893431399999827,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.059112,
+              "wall_seconds": 0.06153989299946261,
+              "peak_rss_kib": 25856
+            },
+            {
+              "cpu_seconds": 0.056614,
+              "wall_seconds": 0.05674608199933573,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.057837,
+              "wall_seconds": 0.05837290099952952,
+              "peak_rss_kib": 25856
+            }
+          ],
+          "median_cpu_seconds": 0.055723999999999996,
+          "median_peak_rss_kib": 26240,
+          "max_peak_rss_kib": 26496,
+          "cpu_range_seconds": [
+            0.054611999999999994,
+            0.059112
+          ]
+        },
+        "candidate": {
+          "logic_cells": 15,
+          "dff_cells": 0,
+          "standalone_not_cells": 0,
+          "by_type": {
+            "cycloneiv_lcell_comb": 15
+          },
+          "initial": {
+            "cpu_seconds": 0.056873999999999994,
+            "wall_seconds": 0.05873707899991132,
+            "peak_rss_kib": 26240
+          },
+          "proof": "PASS",
+          "path": "/home/ubuntu/FPGA/competition-v11-0uwy1zis/test2/candidate",
+          "samples": [
+            {
+              "cpu_seconds": 0.055552,
+              "wall_seconds": 0.05698415200004092,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.053801,
+              "wall_seconds": 0.05461942700003419,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.05456799999999999,
+              "wall_seconds": 0.054901737999898614,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.05458199999999999,
+              "wall_seconds": 0.05565685900000972,
+              "peak_rss_kib": 26240
+            },
+            {
+              "cpu_seconds": 0.053353,
+              "wall_seconds": 0.054544371000702085,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.05423,
+              "wall_seconds": 0.05594080599985318,
+              "peak_rss_kib": 26240
+            },
+            {
+              "cpu_seconds": 0.054938,
+              "wall_seconds": 0.05623713300064992,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.055152999999999994,
+              "wall_seconds": 0.05545744899973215,
+              "peak_rss_kib": 26240
+            },
+            {
+              "cpu_seconds": 0.056094,
+              "wall_seconds": 0.056609937999382964,
+              "peak_rss_kib": 26240
+            },
+            {
+              "cpu_seconds": 0.057024,
+              "wall_seconds": 0.05828923500030214,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.054361999999999994,
+              "wall_seconds": 0.05632937700011098,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.055215999999999994,
+              "wall_seconds": 0.0571804000001066,
+              "peak_rss_kib": 26240
+            },
+            {
+              "cpu_seconds": 0.054914000000000004,
+              "wall_seconds": 0.0573582790002547,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.054688999999999995,
+              "wall_seconds": 0.05496950900032971,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.056241,
+              "wall_seconds": 0.056562612000561785,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.054164000000000004,
+              "wall_seconds": 0.055038684000464855,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.056277999999999995,
+              "wall_seconds": 0.056511613999646215,
+              "peak_rss_kib": 26240
+            },
+            {
+              "cpu_seconds": 0.055757,
+              "wall_seconds": 0.05688651499986008,
+              "peak_rss_kib": 26240
+            },
+            {
+              "cpu_seconds": 0.055179,
+              "wall_seconds": 0.05569867900067038,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.053551999999999995,
+              "wall_seconds": 0.0557747439997911,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.055928,
+              "wall_seconds": 0.058146680000390916,
+              "peak_rss_kib": 26368
+            }
+          ],
+          "median_cpu_seconds": 0.054938,
+          "median_peak_rss_kib": 26368,
+          "max_peak_rss_kib": 26752,
+          "cpu_range_seconds": [
+            0.053353,
+            0.057024
+          ]
+        }
+      },
+      "gain_percent": 40.0,
+      "dff_nonincrease": true,
+      "cpu_overhead_percent": -1.4105232933744771,
+      "rss_overhead_percent": 0.9661835748792313,
+      "measured_5pct_pass": true
+    },
+    {
+      "name": "test3",
+      "source_sha256": "1551b9212622ccef6019d6e77de2c43dc8c80d267957b55a42121f34a08780e9",
+      "source": "/home/ubuntu/FPGA/competition_case/test3/test3.v",
+      "roles": {
+        "baseline": {
+          "logic_cells": 12,
+          "dff_cells": 17,
+          "standalone_not_cells": 1,
+          "by_type": {
+            "$not": 1,
+            "dffeas": 17,
+            "cycloneiv_lcell_comb": 12
+          },
+          "initial": {
+            "cpu_seconds": 0.064134,
+            "wall_seconds": 0.06567692499993427,
+            "peak_rss_kib": 26496
+          },
+          "proof": "PASS",
+          "path": "/home/ubuntu/FPGA/competition-v11-0uwy1zis/test3/baseline",
+          "samples": [
+            {
+              "cpu_seconds": 0.061620999999999995,
+              "wall_seconds": 0.06437793799977953,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.063388,
+              "wall_seconds": 0.06351496699971904,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.064189,
+              "wall_seconds": 0.06566899500012369,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.06233899999999999,
+              "wall_seconds": 0.06361228999958257,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.061912999999999996,
+              "wall_seconds": 0.06301718400027312,
+              "peak_rss_kib": 26240
+            },
+            {
+              "cpu_seconds": 0.060773999999999995,
+              "wall_seconds": 0.06269759200040426,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.062189999999999995,
+              "wall_seconds": 0.06430078799985495,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.061775,
+              "wall_seconds": 0.06304700900000171,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.061846,
+              "wall_seconds": 0.06396593499994196,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.061948,
+              "wall_seconds": 0.06266754499938543,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.066866,
+              "wall_seconds": 0.06734167400009028,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.063659,
+              "wall_seconds": 0.06473274600011791,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.069786,
+              "wall_seconds": 0.07121836500027712,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.062165,
+              "wall_seconds": 0.06456924699978117,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.063874,
+              "wall_seconds": 0.06615879900073196,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.062243,
+              "wall_seconds": 0.06278513699999166,
+              "peak_rss_kib": 26240
+            },
+            {
+              "cpu_seconds": 0.06129799999999999,
+              "wall_seconds": 0.0628734270003406,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.06112499999999999,
+              "wall_seconds": 0.06221077400005015,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.06335199999999999,
+              "wall_seconds": 0.06544367599963152,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.061334999999999994,
+              "wall_seconds": 0.06154873600007704,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.062041,
+              "wall_seconds": 0.0633269649997601,
+              "peak_rss_kib": 26752
+            }
+          ],
+          "median_cpu_seconds": 0.062165,
+          "median_peak_rss_kib": 26880,
+          "max_peak_rss_kib": 27008,
+          "cpu_range_seconds": [
+            0.060773999999999995,
+            0.069786
+          ]
+        },
+        "candidate": {
+          "logic_cells": 12,
+          "dff_cells": 12,
+          "standalone_not_cells": 1,
+          "by_type": {
+            "$not": 1,
+            "dffeas": 12,
+            "cycloneiv_lcell_comb": 12
+          },
+          "initial": {
+            "cpu_seconds": 0.063838,
+            "wall_seconds": 0.06653051699959178,
+            "peak_rss_kib": 26624
+          },
+          "proof": "PASS",
+          "path": "/home/ubuntu/FPGA/competition-v11-0uwy1zis/test3/candidate",
+          "samples": [
+            {
+              "cpu_seconds": 0.060315999999999995,
+              "wall_seconds": 0.06165610399966681,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.061355999999999994,
+              "wall_seconds": 0.06151267899986124,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.061727000000000004,
+              "wall_seconds": 0.06201179000072443,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.05798,
+              "wall_seconds": 0.06010176699965086,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.065993,
+              "wall_seconds": 0.06850824599951011,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.05912799999999999,
+              "wall_seconds": 0.061707859999842185,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.060525999999999996,
+              "wall_seconds": 0.06087454499993328,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.061561,
+              "wall_seconds": 0.06355437500042171,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.061621999999999996,
+              "wall_seconds": 0.06267601800027478,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.059702,
+              "wall_seconds": 0.06164332000025752,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.061508999999999994,
+              "wall_seconds": 0.06455551399994874,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.060602,
+              "wall_seconds": 0.06155312800001411,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.061030999999999995,
+              "wall_seconds": 0.06330371999956697,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.06208799999999999,
+              "wall_seconds": 0.06463241600067704,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.061557,
+              "wall_seconds": 0.06430334000015137,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.061814999999999995,
+              "wall_seconds": 0.062244488000033016,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.062183999999999996,
+              "wall_seconds": 0.06465099700017163,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.062301999999999996,
+              "wall_seconds": 0.06272467199960374,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.06254699999999999,
+              "wall_seconds": 0.06346173599922622,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.061304,
+              "wall_seconds": 0.06151755999962916,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.060818,
+              "wall_seconds": 0.061211146999994526,
+              "peak_rss_kib": 26496
+            }
+          ],
+          "median_cpu_seconds": 0.061508999999999994,
+          "median_peak_rss_kib": 26496,
+          "max_peak_rss_kib": 26752,
+          "cpu_range_seconds": [
+            0.05798,
+            0.065993
+          ]
+        }
+      },
+      "gain_percent": 0.0,
+      "dff_nonincrease": true,
+      "cpu_overhead_percent": -1.0552561730877597,
+      "rss_overhead_percent": -0.9478672985781977,
+      "measured_5pct_pass": true
+    },
+    {
+      "name": "test4",
+      "source_sha256": "c0c5042928bd6bf568e2b7fb2193f2b6db9c4193ba3a5378fc50a331d43422d7",
+      "source": "/home/ubuntu/FPGA/competition_case/test4/test4.v",
+      "roles": {
+        "baseline": {
+          "logic_cells": 35,
+          "dff_cells": 10,
+          "standalone_not_cells": 1,
+          "by_type": {
+            "$not": 1,
+            "dffeas": 10,
+            "cycloneiv_lcell_comb": 35
+          },
+          "initial": {
+            "cpu_seconds": 0.07633,
+            "wall_seconds": 0.07863794400054758,
+            "peak_rss_kib": 27008
+          },
+          "proof": "PASS",
+          "path": "/home/ubuntu/FPGA/competition-v11-0uwy1zis/test4/baseline",
+          "samples": [
+            {
+              "cpu_seconds": 0.070878,
+              "wall_seconds": 0.07210845200006588,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.07666999999999999,
+              "wall_seconds": 0.07875108200005343,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.074428,
+              "wall_seconds": 0.0752115169998433,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.074834,
+              "wall_seconds": 0.07707687899983284,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.07341,
+              "wall_seconds": 0.07461901999977272,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.074105,
+              "wall_seconds": 0.07424025900036213,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.074598,
+              "wall_seconds": 0.07479010700080835,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.071918,
+              "wall_seconds": 0.07267011100066156,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.073221,
+              "wall_seconds": 0.07385694500044337,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.072406,
+              "wall_seconds": 0.07253417099946091,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.07317,
+              "wall_seconds": 0.07472206799957348,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.072809,
+              "wall_seconds": 0.07306326500020077,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.074054,
+              "wall_seconds": 0.07410547499966924,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.07313399999999999,
+              "wall_seconds": 0.07354087400017306,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.07422,
+              "wall_seconds": 0.07472530599989113,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.07195,
+              "wall_seconds": 0.07412669299992558,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.07231,
+              "wall_seconds": 0.07268311799998628,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.072103,
+              "wall_seconds": 0.07409908099998574,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.07169099999999999,
+              "wall_seconds": 0.07361355200009712,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.07198099999999999,
+              "wall_seconds": 0.0730928490002043,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.072671,
+              "wall_seconds": 0.07368036700063385,
+              "peak_rss_kib": 26880
+            }
+          ],
+          "median_cpu_seconds": 0.07313399999999999,
+          "median_peak_rss_kib": 26752,
+          "max_peak_rss_kib": 27008,
+          "cpu_range_seconds": [
+            0.070878,
+            0.07666999999999999
+          ]
+        },
+        "candidate": {
+          "logic_cells": 26,
+          "dff_cells": 10,
+          "standalone_not_cells": 1,
+          "by_type": {
+            "$not": 1,
+            "dffeas": 10,
+            "cycloneiv_lcell_comb": 26
+          },
+          "initial": {
+            "cpu_seconds": 0.072299,
+            "wall_seconds": 0.07404685600067751,
+            "peak_rss_kib": 26880
+          },
+          "proof": "PASS",
+          "path": "/home/ubuntu/FPGA/competition-v11-0uwy1zis/test4/candidate",
+          "samples": [
+            {
+              "cpu_seconds": 0.069471,
+              "wall_seconds": 0.07044507599948702,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.07100699999999999,
+              "wall_seconds": 0.07249558600051387,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.071211,
+              "wall_seconds": 0.07219229999918753,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.07003,
+              "wall_seconds": 0.0728095510003186,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.07266299999999999,
+              "wall_seconds": 0.07416404700052226,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.06828999999999999,
+              "wall_seconds": 0.06936657799997192,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.072765,
+              "wall_seconds": 0.07294186999934027,
+              "peak_rss_kib": 27136
+            },
+            {
+              "cpu_seconds": 0.07031,
+              "wall_seconds": 0.0711201459998847,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.068961,
+              "wall_seconds": 0.07179329800055712,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.068577,
+              "wall_seconds": 0.07089120799992088,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.07056599999999999,
+              "wall_seconds": 0.07272663099956844,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.071127,
+              "wall_seconds": 0.07150381200062839,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.070668,
+              "wall_seconds": 0.07108884600074816,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.070448,
+              "wall_seconds": 0.07146122199992533,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.06955399999999999,
+              "wall_seconds": 0.07085068099968339,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.06972199999999999,
+              "wall_seconds": 0.07070461599960254,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.072132,
+              "wall_seconds": 0.07233864499994525,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.069205,
+              "wall_seconds": 0.07018519300072512,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.069186,
+              "wall_seconds": 0.0714390060002188,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.07032,
+              "wall_seconds": 0.07148484499975893,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.069226,
+              "wall_seconds": 0.07101119500021014,
+              "peak_rss_kib": 26752
+            }
+          ],
+          "median_cpu_seconds": 0.07031,
+          "median_peak_rss_kib": 26880,
+          "max_peak_rss_kib": 27136,
+          "cpu_range_seconds": [
+            0.06828999999999999,
+            0.072765
+          ]
+        }
+      },
+      "gain_percent": 25.714285714285715,
+      "dff_nonincrease": true,
+      "cpu_overhead_percent": -3.8614050920228515,
+      "rss_overhead_percent": 0.4739336492890933,
+      "measured_5pct_pass": true
+    }
+  ],
+  "report_dir": "/home/ubuntu/FPGA/competition-v11-0uwy1zis",
+  "repeats": 21,
+  "metric": "cycloneiv_lcell_comb count; dffeas excluded and constrained not to increase; NOT routed physical LE occupancy",
+  "timing": "Linux wait4 user+system CPU, including waited ABC descendants; full read/synth/write process",
+  "memory": "Linux wait4 ru_maxrss: maximum resident high-water mark, not simultaneous sum of process-tree RSS",
+  "proof_model": "Restricted inverse models of emitted Cyclone IV LUT and DFFE mapping, not vendor timing models",
+  "negative_control": "EXPECTED_COUNTEREXAMPLE",
+  "average_gain_percent": 22.11038961038961,
+  "all_dff_nonincrease": true,
+  "all_measured_5pct_pass": true
+}

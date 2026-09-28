@@ -1,0 +1,15 @@
+['/home/ubuntu/oss-cad-suite/bin/tabbypy3', '/home/ubuntu/FPGA/clean-v11/build_eqy_069.py']
+{
+  "commit": "4a72eb94fc253062464afee4d0018359017bb846",
+  "version": "EQY v0.69",
+  "source_sha256": "dd1a4c5edcf83353c66e9765661cc332f4c7f6f122585c97da68290eab230291",
+  "files": {
+    "/home/ubuntu/FPGA/clean-v11/toolchains/eqy-0.69/install/bin/eqy": "4c4110be84a2c9b84d5cea9023f0e5bc31987d9d4ddc02276dc85b97f517f76e",
+    "/home/ubuntu/FPGA/clean-v11/toolchains/eqy-0.69/install/share/yosys/python3/eqy_job.py": "7ad8857fa170ba804a086e91bd200487545f01006a705cad22a861c757fddcc0",
+    "/home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/proof-bin/sby": "9a4581bdfa7a85d14913a95b0b14b8d0dc0f7475c725ee0ff2ba1828e4b2ee71",
+    "/home/ubuntu/FPGA/clean-v11/toolchains/eqy-0.69/install/share/yosys/plugins/eqy_combine.so": "1b595c9ca7aa98947eebd418b0f2ec13d528dbd74dca36270e91218134de19b5",
+    "/home/ubuntu/FPGA/clean-v11/toolchains/eqy-0.69/install/share/yosys/plugins/eqy_partition.so": "0a35ec35fbe97a95a5daeb3d0e7bcf1fe5ad926aea22aad6b1b6359ff50c1fa4",
+    "/home/ubuntu/FPGA/clean-v11/toolchains/eqy-0.69/install/share/yosys/plugins/eqy_recode.so": "01619a6f91cc3169267adb1dedd8dd6667d2960fca597a579fecd20791f0f36c"
+  },
+  "executable": "/home/ubuntu/FPGA/clean-v11/toolchains/eqy-0.69/install/bin/eqy"
+}

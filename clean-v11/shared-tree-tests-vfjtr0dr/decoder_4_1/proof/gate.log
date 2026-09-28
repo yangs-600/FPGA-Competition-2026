@@ -1,0 +1,908 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+
+-- Executing script file `/home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr/decoder_4_1/proof/gate.ys' --
+
+1. Executing Verilog-2005 frontend: /home/ubuntu/FPGA/clean-v11/formal_cycloneiv.v
+Parsing Verilog input from `/home/ubuntu/FPGA/clean-v11/formal_cycloneiv.v' to AST representation.
+Generating RTLIL representation for module `\cycloneiv_lcell_comb'.
+Generating RTLIL representation for module `\dffeas'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr/decoder_4_1/netlist.v
+Parsing Verilog input from `/home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr/decoder_4_1/netlist.v' to AST representation.
+Generating RTLIL representation for module `\decoder_4_1'.
+Successfully finished Verilog frontend.
+
+3. Executing PREP pass.
+
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1.1. Analyzing design hierarchy..
+Top module:  \decoder_4_1
+Used module:     \cycloneiv_lcell_comb
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.2. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001100000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.3. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001100000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$5f07abb9541433c40d721946eef97786620411ed\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.4. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.5. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.6. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111111111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.7. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111111111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001100000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$5f07abb9541433c40d721946eef97786620411ed\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111111111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000100010001000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.8. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000100010001000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$650108b51605e6a14905dd298ebe46eb7ee30477\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.9. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$85604c28f3ea049e257544387fe29ad1e4294914\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1011111110111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.10. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1011111110111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$5664d0716917573982471957211e9ebc1406c7af\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000000001000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.11. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000000001000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$c153d52eb4662643680e0564ac46c6d61bcdb61c\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111111111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.12. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$eccd1de472cd6ee75fc3dfda61c3b38506db1989\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111111111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001100000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$5f07abb9541433c40d721946eef97786620411ed\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000100000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.13. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000100000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$847a268664e742ca19940caf543922e97fa95224\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0100000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.14. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0100000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$e7c8c0b59a056bfabe929e3436235b37dad49561\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000010000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.15. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000010000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$5aca47d97e9ea19bcfb58dfd39c28855392f0ffe\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111111111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111111111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111111111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001100000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$5f07abb9541433c40d721946eef97786620411ed\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111111111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111111111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000010000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.16. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000010000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$68f41ed638eef638ed28a1f240a5704d3e08b7e4\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000000000100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.17. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000000000100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$4a6291f30bd35074825dc249db52fa6573b53a9f\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000000000010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.18. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000000000010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$b4da3b25bd285cda4ed3d9cd4811623b30d6eb6b\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000001000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.19. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000001000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$48939842199ef8d02c2dc66a7fedfe95826019a1\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000000000001
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.20. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000000000001
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$a9c84c6919dcc54263bd080d5ce91aa2740e76af\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111111111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000100010001000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$650108b51605e6a14905dd298ebe46eb7ee30477\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$85604c28f3ea049e257544387fe29ad1e4294914\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1011111110111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$5664d0716917573982471957211e9ebc1406c7af\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000000010000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.21. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000000010000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$13945ea1044842c22695fc69f916ca973bbfd1f3\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$85604c28f3ea049e257544387fe29ad1e4294914\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.22. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$acd1c25629036e8102aac176d724a0615a1943d8\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000000100000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.23. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000000100000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$a4dc0cc25b67a3e43e37cb117aeb679a49791df7\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000001000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.24. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000001000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$692b6041f6bc7b30a3d2beaac70163063ce88bde\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001100000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$5f07abb9541433c40d721946eef97786620411ed\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111111111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111111111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001100000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$5f07abb9541433c40d721946eef97786620411ed\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1000000000000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001001101011111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001010100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111111111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111111111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb'.
+
+3.1.25. Analyzing design hierarchy..
+Top module:  \decoder_4_1
+Used module:     $paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb
+Used module:     $paramod$5f07abb9541433c40d721946eef97786620411ed\cycloneiv_lcell_comb
+Used module:     $paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb
+Used module:     $paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb
+Used module:     $paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb
+Used module:     $paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb
+Used module:     $paramod$650108b51605e6a14905dd298ebe46eb7ee30477\cycloneiv_lcell_comb
+Used module:     $paramod$85604c28f3ea049e257544387fe29ad1e4294914\cycloneiv_lcell_comb
+Used module:     $paramod$5664d0716917573982471957211e9ebc1406c7af\cycloneiv_lcell_comb
+Used module:     $paramod$c153d52eb4662643680e0564ac46c6d61bcdb61c\cycloneiv_lcell_comb
+Used module:     $paramod$eccd1de472cd6ee75fc3dfda61c3b38506db1989\cycloneiv_lcell_comb
+Used module:     $paramod$847a268664e742ca19940caf543922e97fa95224\cycloneiv_lcell_comb
+Used module:     $paramod$e7c8c0b59a056bfabe929e3436235b37dad49561\cycloneiv_lcell_comb
+Used module:     $paramod$5aca47d97e9ea19bcfb58dfd39c28855392f0ffe\cycloneiv_lcell_comb
+Used module:     $paramod$68f41ed638eef638ed28a1f240a5704d3e08b7e4\cycloneiv_lcell_comb
+Used module:     $paramod$4a6291f30bd35074825dc249db52fa6573b53a9f\cycloneiv_lcell_comb
+Used module:     $paramod$b4da3b25bd285cda4ed3d9cd4811623b30d6eb6b\cycloneiv_lcell_comb
+Used module:     $paramod$48939842199ef8d02c2dc66a7fedfe95826019a1\cycloneiv_lcell_comb
+Used module:     $paramod$a9c84c6919dcc54263bd080d5ce91aa2740e76af\cycloneiv_lcell_comb
+Used module:     $paramod$13945ea1044842c22695fc69f916ca973bbfd1f3\cycloneiv_lcell_comb
+Used module:     $paramod$acd1c25629036e8102aac176d724a0615a1943d8\cycloneiv_lcell_comb
+Used module:     $paramod$a4dc0cc25b67a3e43e37cb117aeb679a49791df7\cycloneiv_lcell_comb
+Used module:     $paramod$692b6041f6bc7b30a3d2beaac70163063ce88bde\cycloneiv_lcell_comb
+
+3.1.26. Analyzing design hierarchy..
+Top module:  \decoder_4_1
+Used module:     $paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb
+Used module:     $paramod$5f07abb9541433c40d721946eef97786620411ed\cycloneiv_lcell_comb
+Used module:     $paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb
+Used module:     $paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb
+Used module:     $paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb
+Used module:     $paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb
+Used module:     $paramod$650108b51605e6a14905dd298ebe46eb7ee30477\cycloneiv_lcell_comb
+Used module:     $paramod$85604c28f3ea049e257544387fe29ad1e4294914\cycloneiv_lcell_comb
+Used module:     $paramod$5664d0716917573982471957211e9ebc1406c7af\cycloneiv_lcell_comb
+Used module:     $paramod$c153d52eb4662643680e0564ac46c6d61bcdb61c\cycloneiv_lcell_comb
+Used module:     $paramod$eccd1de472cd6ee75fc3dfda61c3b38506db1989\cycloneiv_lcell_comb
+Used module:     $paramod$847a268664e742ca19940caf543922e97fa95224\cycloneiv_lcell_comb
+Used module:     $paramod$e7c8c0b59a056bfabe929e3436235b37dad49561\cycloneiv_lcell_comb
+Used module:     $paramod$5aca47d97e9ea19bcfb58dfd39c28855392f0ffe\cycloneiv_lcell_comb
+Used module:     $paramod$68f41ed638eef638ed28a1f240a5704d3e08b7e4\cycloneiv_lcell_comb
+Used module:     $paramod$4a6291f30bd35074825dc249db52fa6573b53a9f\cycloneiv_lcell_comb
+Used module:     $paramod$b4da3b25bd285cda4ed3d9cd4811623b30d6eb6b\cycloneiv_lcell_comb
+Used module:     $paramod$48939842199ef8d02c2dc66a7fedfe95826019a1\cycloneiv_lcell_comb
+Used module:     $paramod$a9c84c6919dcc54263bd080d5ce91aa2740e76af\cycloneiv_lcell_comb
+Used module:     $paramod$13945ea1044842c22695fc69f916ca973bbfd1f3\cycloneiv_lcell_comb
+Used module:     $paramod$acd1c25629036e8102aac176d724a0615a1943d8\cycloneiv_lcell_comb
+Used module:     $paramod$a4dc0cc25b67a3e43e37cb117aeb679a49791df7\cycloneiv_lcell_comb
+Used module:     $paramod$692b6041f6bc7b30a3d2beaac70163063ce88bde\cycloneiv_lcell_comb
+Removing unused module `\dffeas'.
+Removing unused module `\cycloneiv_lcell_comb'.
+Removed 2 unused modules.
+
+3.2. Executing PROC pass (convert processes to netlists).
+
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+3.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.2.4. Executing PROC_INIT pass (extract init attributes).
+
+3.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+3.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+3.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$acd1c25629036e8102aac176d724a0615a1943d8\cycloneiv_lcell_comb.
+Optimizing module $paramod$13945ea1044842c22695fc69f916ca973bbfd1f3\cycloneiv_lcell_comb.
+Optimizing module $paramod$a9c84c6919dcc54263bd080d5ce91aa2740e76af\cycloneiv_lcell_comb.
+Optimizing module $paramod$48939842199ef8d02c2dc66a7fedfe95826019a1\cycloneiv_lcell_comb.
+Optimizing module $paramod$b4da3b25bd285cda4ed3d9cd4811623b30d6eb6b\cycloneiv_lcell_comb.
+Optimizing module $paramod$4a6291f30bd35074825dc249db52fa6573b53a9f\cycloneiv_lcell_comb.
+Optimizing module $paramod$68f41ed638eef638ed28a1f240a5704d3e08b7e4\cycloneiv_lcell_comb.
+Optimizing module $paramod$5aca47d97e9ea19bcfb58dfd39c28855392f0ffe\cycloneiv_lcell_comb.
+Optimizing module $paramod$e7c8c0b59a056bfabe929e3436235b37dad49561\cycloneiv_lcell_comb.
+Optimizing module $paramod$847a268664e742ca19940caf543922e97fa95224\cycloneiv_lcell_comb.
+Optimizing module $paramod$eccd1de472cd6ee75fc3dfda61c3b38506db1989\cycloneiv_lcell_comb.
+Optimizing module $paramod$c153d52eb4662643680e0564ac46c6d61bcdb61c\cycloneiv_lcell_comb.
+Optimizing module $paramod$5664d0716917573982471957211e9ebc1406c7af\cycloneiv_lcell_comb.
+Optimizing module $paramod$85604c28f3ea049e257544387fe29ad1e4294914\cycloneiv_lcell_comb.
+Optimizing module $paramod$650108b51605e6a14905dd298ebe46eb7ee30477\cycloneiv_lcell_comb.
+Optimizing module $paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb.
+Optimizing module $paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb.
+Optimizing module $paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb.
+Optimizing module $paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb.
+Optimizing module $paramod$5f07abb9541433c40d721946eef97786620411ed\cycloneiv_lcell_comb.
+Optimizing module $paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb.
+Optimizing module decoder_4_1.
+Optimizing module $paramod$692b6041f6bc7b30a3d2beaac70163063ce88bde\cycloneiv_lcell_comb.
+Optimizing module $paramod$a4dc0cc25b67a3e43e37cb117aeb679a49791df7\cycloneiv_lcell_comb.
+
+3.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod$acd1c25629036e8102aac176d724a0615a1943d8\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$13945ea1044842c22695fc69f916ca973bbfd1f3\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$a9c84c6919dcc54263bd080d5ce91aa2740e76af\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$48939842199ef8d02c2dc66a7fedfe95826019a1\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$b4da3b25bd285cda4ed3d9cd4811623b30d6eb6b\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$4a6291f30bd35074825dc249db52fa6573b53a9f\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$68f41ed638eef638ed28a1f240a5704d3e08b7e4\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$5aca47d97e9ea19bcfb58dfd39c28855392f0ffe\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$e7c8c0b59a056bfabe929e3436235b37dad49561\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$847a268664e742ca19940caf543922e97fa95224\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$eccd1de472cd6ee75fc3dfda61c3b38506db1989\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$c153d52eb4662643680e0564ac46c6d61bcdb61c\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$5664d0716917573982471957211e9ebc1406c7af\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$85604c28f3ea049e257544387fe29ad1e4294914\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$650108b51605e6a14905dd298ebe46eb7ee30477\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$e04383bf7e33fbdad76656425489e6afe1638ae7\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$6cc4e14ffea4eb080f35a09093d883ac4d62ca81\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$d1f257d6fee555bd191ced82b823233ae29ea248\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$5f07abb9541433c40d721946eef97786620411ed\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$2eb8cd74164eee7e8b2a3736440a76dcb818a11a\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$692b6041f6bc7b30a3d2beaac70163063ce88bde\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$a4dc0cc25b67a3e43e37cb117aeb679a49791df7\cycloneiv_lcell_comb.
+<suppressed ~178 debug messages>
+
+3.4. Executing FUTURE pass.
+
+3.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module decoder_4_1.
+
+3.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \decoder_4_1..
+Removed 178 unused cells and 712 unused wires.
+<suppressed ~535 debug messages>
+
+3.7. Executing CHECK pass (checking for obvious problems).
+Checking module decoder_4_1...
+Found and reported 0 problems.
+
+3.8. Executing OPT pass (performing simple optimizations).
+
+3.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module decoder_4_1.
+
+3.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\decoder_4_1'.
+Computing hashes of 356 cells of `\decoder_4_1'.
+Finding duplicate cells in `\decoder_4_1'.
+Removed a total of 0 cells.
+
+3.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \decoder_4_1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+3.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \decoder_4_1.
+Performed a total of 0 changes.
+
+3.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\decoder_4_1'.
+Computing hashes of 356 cells of `\decoder_4_1'.
+Finding duplicate cells in `\decoder_4_1'.
+Removed a total of 0 cells.
+
+3.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \decoder_4_1..
+
+3.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module decoder_4_1.
+
+3.8.8. Finished fast OPT passes. (There is nothing left to do.)
+
+3.9. Executing WREDUCE pass (reducing word size of cells).
+
+3.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \decoder_4_1..
+
+3.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+3.12. Executing OPT pass (performing simple optimizations).
+
+3.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module decoder_4_1.
+
+3.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\decoder_4_1'.
+Computing hashes of 356 cells of `\decoder_4_1'.
+Finding duplicate cells in `\decoder_4_1'.
+Removed a total of 0 cells.
+
+3.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \decoder_4_1..
+
+3.12.4. Finished fast OPT passes.
+
+3.13. Executing SORT pass.
+
+3.14. Printing statistics.
+
+=== decoder_4_1 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     1056 wires
+     1200 wire bits
+     1056 public wires
+     1200 public wire bits
+        4 ports
+      148 port bits
+      356 cells
+      178   $scopeinfo
+      178   $shiftx
+
+3.15. Executing CHECK pass (checking for obvious problems).
+Checking module decoder_4_1...
+Found and reported 0 problems.
+
+4. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \decoder_4_1..
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \decoder_4_1..
+Removed 0 unused cells and 890 unused wires.
+<suppressed ~1 debug messages>
+
+7. Executing CHECK pass (checking for obvious problems).
+Checking module decoder_4_1...
+Found and reported 0 problems.
+
+8. Executing SETUNDEF pass (replace undef values with defined constants).
+
+9. Executing RTLIL backend.
+Output filename: /home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr/decoder_4_1/proof/gate.il
+
+End of script. Logfile hash: 6d4174ef3f, time: 0.03s, user: 0.01s, system: 0.02s, MEM: 25.00 MB peak
+Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+Time spent: 31% 4x read_verilog (0 sec), 19% 6x opt_clean (0 sec), ...

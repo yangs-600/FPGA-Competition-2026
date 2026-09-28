@@ -1,0 +1,11 @@
+test2 . A:src="/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test2/baseline/netlist.v:3.1-294.10" A:top=1
+test2 a w=0:0 A:src="/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test2/baseline/netlist.v:6.9-6.10" P=I
+test2 b w=0:0 A:src="/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test2/baseline/netlist.v:8.9-8.10" P=I
+test2 c w=0:0 A:src="/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test2/baseline/netlist.v:10.9-10.10" P=I
+test2 clk w=0:0 A:src="/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test2/baseline/netlist.v:4.9-4.12" P=I
+test2 d w=0:0 A:src="/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test2/baseline/netlist.v:12.9-12.10" P=I
+test2 dataa w=4:0 A:src="/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test2/baseline/netlist.v:14.15-14.20" P=I
+test2 datab w=4:0 A:src="/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test2/baseline/netlist.v:16.15-16.20" P=I
+test2 datac w=4:0 A:src="/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test2/baseline/netlist.v:18.15-18.20" P=I
+test2 datad w=4:0 A:src="/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test2/baseline/netlist.v:20.15-20.20" P=I
+test2 out w=4:0 A:src="/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test2/baseline/netlist.v:22.16-22.19" P=O

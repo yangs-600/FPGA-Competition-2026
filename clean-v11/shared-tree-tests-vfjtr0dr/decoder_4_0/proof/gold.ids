@@ -1,0 +1,5 @@
+decoder_4_0 . A:src="/home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr/decoder_4_0/input.v:1.1-23.10" A:top=1
+decoder_4_0 z w=7:0 A:src="/home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr/decoder_4_0/input.v:1.74-1.75" P=O
+decoder_4_0 y w=7:0 A:src="/home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr/decoder_4_0/input.v:1.72-1.73" P=O
+decoder_4_0 sel w=3:0 A:src="/home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr/decoder_4_0/input.v:1.32-1.35" P=I
+decoder_4_0 data w=127:0 A:src="/home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr/decoder_4_0/input.v:1.50-1.54" P=I

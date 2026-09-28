@@ -1,0 +1,48 @@
+SBY 22:27:25 [test3.sr_out] Removing directory '/home/ubuntu/FPGA/clean-v11/competition-v11-t6r8mp9n/test3/baseline/proof/strategies/test3.sr_out/pdr/test3.sr_out'.
+SBY 22:27:25 [test3.sr_out] engine_0: abc pdr
+SBY 22:27:25 [test3.sr_out] base: starting process "cd test3.sr_out/src; /home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/build/yosys-original -ql ../model/design.log ../model/design.ys"
+SBY 22:27:25 [test3.sr_out] base: finished (returncode=0)
+SBY 22:27:25 [test3.sr_out] prep: starting process "cd test3.sr_out/model; /home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/build/yosys-original -ql design_prep.log design_prep.ys"
+SBY 22:27:25 [test3.sr_out] prep: finished (returncode=0)
+SBY 22:27:25 [test3.sr_out] aig: starting process "cd test3.sr_out/model; /home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/build/yosys-original -ql design_aiger.log design_aiger.ys"
+SBY 22:27:25 [test3.sr_out] aig: Warning: Treating undriven bit miter.\__pi_sr_in like $anyseq.
+SBY 22:27:25 [test3.sr_out] aig: Warning: Treating undriven bit miter.\__pi_cs like $anyseq.
+SBY 22:27:25 [test3.sr_out] aig: Warning: Treating undriven bit miter.\__pi_clk like $anyseq.
+SBY 22:27:25 [test3.sr_out] aig: Warning: Treating a total of 3 undriven bits in miter like $anyseq.
+SBY 22:27:25 [test3.sr_out] aig: finished (returncode=0)
+SBY 22:27:25 [test3.sr_out] engine_0: starting process "cd test3.sr_out; /home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/build/yosys-abc -c 'read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw'"
+SBY 22:27:25 [test3.sr_out] engine_0: ======== ABC command line "read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw"
+SBY 22:27:25 [test3.sr_out] engine_0: Warning: The last 2 outputs are interpreted as constraints.
+SBY 22:27:25 [test3.sr_out] engine_0: VarMax = 300. FrameMax = 10000. QueMax = 0. TimeMax = 119. MonoCNF = no. SkipGen = no. SolveAll = no.
+SBY 22:27:25 [test3.sr_out] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 22:27:25 [test3.sr_out] engine_0: 1 : 0 2                                                                 1     2      0.00 sec  T/O =  0  PRV =  0
+SBY 22:27:25 [test3.sr_out] engine_0: 2 : 0 17 18                                                             9    20      0.00 sec  T/O =  0  PRV =  0
+SBY 22:27:25 [test3.sr_out] engine_0: 3 : 0 3 2 12 ~4                                                          0    20      0.01 sec  T/O =  0  PRV =  0
+SBY 22:27:25 [test3.sr_out] engine_0: 4 : 0 3 2 2 10 ~4                                                        0    20      0.01 sec  T/O =  0  PRV =  0
+SBY 22:27:25 [test3.sr_out] engine_0: 5 : 0 3 2 2 2 8 ~4                                                       0    20      0.01 sec  T/O =  0  PRV =  0
+SBY 22:27:25 [test3.sr_out] engine_0: 6 : 0 3 2 2 2 2 6 ~4                                                     0    20      0.01 sec  T/O =  0  PRV =  0
+SBY 22:27:25 [test3.sr_out] engine_0: 7 : 0 3 2 2 2 2 2 4 ~4                                                   0    20      0.01 sec  T/O =  0  PRV =  0
+SBY 22:27:25 [test3.sr_out] engine_0: 8 : 0 3 2 2 2 2 2 2 2 ~4                                                 0    20      0.01 sec  T/O =  0  PRV =  0
+SBY 22:27:25 [test3.sr_out] engine_0: 9 : 0 3 2 2 2 2 2 2 2 14 ~4                                              7    27      0.01 sec  T/O =  0  PRV =  0
+SBY 22:27:25 [test3.sr_out] engine_0: Proved output 0 in frame 9.
+SBY 22:27:25 [test3.sr_out] engine_0: 10 : 0 3 2 2 2 2 2 2 2 0 0 ~18                                            0    27      0.01 sec  T/O =  0  PRV =  1
+SBY 22:27:25 [test3.sr_out] engine_0: Block =    6  Oblig =    77  Clause =    49  Call =   342 (sat=53.5%)  Cex =   0  Start =   0
+SBY 22:27:25 [test3.sr_out] engine_0: SAT solving =     0.00 sec ( 15.64 %)
+SBY 22:27:25 [test3.sr_out] engine_0: unsat     =     0.00 sec (  0.64 %)
+SBY 22:27:25 [test3.sr_out] engine_0: sat       =     0.00 sec ( 15.00 %)
+SBY 22:27:25 [test3.sr_out] engine_0: Generalize  =     0.00 sec (  5.11 %)
+SBY 22:27:25 [test3.sr_out] engine_0: Push clause =     0.00 sec (  8.95 %)
+SBY 22:27:25 [test3.sr_out] engine_0: Ternary sim =     0.00 sec (  0.39 %)
+SBY 22:27:25 [test3.sr_out] engine_0: Containment =     0.00 sec (  0.02 %)
+SBY 22:27:25 [test3.sr_out] engine_0: CNF compute =     0.00 sec (  1.20 %)
+SBY 22:27:25 [test3.sr_out] engine_0: Refinement  =     0.00 sec (  0.00 %)
+SBY 22:27:25 [test3.sr_out] engine_0: TOTAL       =     0.01 sec (100.00 %)
+SBY 22:27:25 [test3.sr_out] engine_0: Property proved.  Time =     0.02 sec
+SBY 22:27:25 [test3.sr_out] engine_0: Counter-example is not available.
+SBY 22:27:25 [test3.sr_out] engine_0: finished (returncode=0)
+SBY 22:27:25 [test3.sr_out] engine_0: Status returned by engine: PASS
+SBY 22:27:25 [test3.sr_out] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 22:27:25 [test3.sr_out] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 22:27:25 [test3.sr_out] summary: engine_0 (abc pdr) returned PASS
+SBY 22:27:25 [test3.sr_out] summary: engine_0 did not produce any traces
+SBY 22:27:25 [test3.sr_out] DONE (PASS, rc=0)

@@ -1,0 +1,4 @@
+plugin -i /home/ubuntu/FPGA/clean-v11/toolchains/eqy-0.69/install/bin/../share/yosys/plugins/eqy_partition.so
+read_rtlil combined.il
+insbuf -chain
+eqy_partition -matched_ids matched.ids -partition_ids partition.ids

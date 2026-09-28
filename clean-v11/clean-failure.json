@@ -1,0 +1,1 @@
+{"error": "Command '['git', 'apply', '--check', '/home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/competition-v11/synth-intel-competition.patch']' returned non-zero exit status 1."}

@@ -1,0 +1,22 @@
+[options]
+mode prove
+depth 5
+expect pass,fail,unknown,timeout
+
+timeout 60
+
+[engines]
+abc pdr
+
+[script]
+verilog_defaults -add -D CHECK_OUTPUTS
+read_verilog -sv ../../../../../partitions/decoder_4_1.y.sv
+read_rtlil ../../../../../partitions/decoder_4_1.y.il
+hierarchy -top miter; proc
+
+async2sync
+formalff -clk2ff -ff2anyinit gate.decoder_4_1.y
+setundef -anyseq gate.decoder_4_1.y
+flatten -wb; dffunmap; opt_expr -keepdc -undriven; opt_clean
+xprop -formal -split-ports -assume-def-inputs miter
+

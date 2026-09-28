@@ -1,0 +1,23 @@
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] read_gold: starting process "/home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/build/yosys-original -ql /home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof/gold.log /home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof/gold.ys"
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] read_gold: finished (returncode=0)
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] read_gate: starting process "/home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/build/yosys-original -ql /home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof/gate.log /home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof/gate.ys"
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] read_gate: finished (returncode=0)
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] combine: starting process "/home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/build/yosys-original -ql /home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof/combine.log /home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof/combine.ys"
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] combine: finished (returncode=0)
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] partition: starting process "cd /home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof; /home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/build/yosys-original -ql partition.log partition.ys"
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] partition: finished (returncode=0)
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] Warning: Partition test2.out contains 8 unused gate inputs.
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] run: starting process "make -C /home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof -f strategies.mk"
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] run: make: 进入目录“/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof”
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] run: Running strategy 'simple' on 'test2.out'..
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] run: Could not prove equivalence of partition 'test2.out' using strategy 'simple': partitions not equivalent
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] run: make -f strategies.mk summary
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] run: make[1]: 进入目录“/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof”
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] run: make[1]: 离开目录“/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof”
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] run: make: 离开目录“/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof”
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] run: finished (returncode=0)
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] Warning: Failed to prove equivalence for 1/1 partitions:
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] Failed to prove equivalence of partition test2.out
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+EQY 22:48:31 [/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/negative/proof] DONE (FAIL, rc=2)

@@ -1,0 +1,37 @@
+{
+  "partition": {
+    "index": 0,
+    "name": "test3.sr_out",
+    "inbits": {
+      "clk": [
+        0
+      ],
+      "cs": [
+        0
+      ],
+      "sr_in": [
+        0
+      ]
+    },
+    "outbits": {
+      "sr_out": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.test3.sr_out",
+    "internal": {},
+    "unused": {},
+    "cellcount": 6,
+    "bitcount": 22
+  },
+  "gate_module": {
+    "name": "gold.test3.sr_out",
+    "internal": {},
+    "unused": {},
+    "cellcount": 18,
+    "bitcount": 21
+  }
+}

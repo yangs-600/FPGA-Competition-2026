@@ -1,0 +1,1805 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+
+-- Executing script file `/home/ubuntu/FPGA/clean-v11/competition-v11-t6r8mp9n/test1/candidate/proof/gate.ys' --
+
+1. Executing Verilog-2005 frontend: /home/ubuntu/FPGA/clean-v11/formal_cycloneiv.v
+Parsing Verilog input from `/home/ubuntu/FPGA/clean-v11/formal_cycloneiv.v' to AST representation.
+Generating RTLIL representation for module `\cycloneiv_lcell_comb'.
+Generating RTLIL representation for module `\dffeas'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /home/ubuntu/FPGA/clean-v11/competition-v11-t6r8mp9n/test1/candidate/netlist.v
+Parsing Verilog input from `/home/ubuntu/FPGA/clean-v11/competition-v11-t6r8mp9n/test1/candidate/netlist.v' to AST representation.
+Generating RTLIL representation for module `\test1'.
+Successfully finished Verilog frontend.
+
+3. Executing PREP pass.
+
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1.1. Analyzing design hierarchy..
+Top module:  \test1
+Used module:     \cycloneiv_lcell_comb
+Used module:     \dffeas
+Parameter \lut_mask = 16'0110101001101010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.2. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0110101001101010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$7942f2c4039457568791cd778b6a78b7bc0fa750\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0110011001100110
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.3. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0110011001100110
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$fe14ccbeda88a31fc1e3e40b601cc844d9df8203\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0110101010101010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.4. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0110101010101010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$a709f5163786c2898a58c365842294d00af7ff2f\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000111000001111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.5. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000111000001111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$1ecfca1729f0aeb38e8d703e843853f285be1ee0\cycloneiv_lcell_comb'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+
+3.1.6. Executing AST frontend in derive mode using pre-parsed AST for module `\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Generating RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \lut_mask = 16'0001000000010000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.7. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001000000010000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$c70d709958122122ff6d88a62301f6a6fc73fb62\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0100010001000100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.8. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0100010001000100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$395806bfca5813f5244a8607c7a609eb9aea9d3a\cycloneiv_lcell_comb'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.9. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.10. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.11. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.12. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.13. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.14. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.15. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.16. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.17. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$a83303c05f07a7d004be52ffb9208fc23ca7b9f3\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111111100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.18. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111111100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$77fc2227611dbad55eee42d93be1a6e5a2dbe957\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000011101010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.19. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000011101010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$03fcc4fffaee7df7f00d07974ed26581b3966f28\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010111110001101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.20. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010111110001101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$63e72e2013f4ebd4a9a3052ec80041a5d377c48a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001101100011011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.21. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001101100011011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$dce9a706105f694f180af276a255f0b96bf4f3fb\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010011100100111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.22. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010011100100111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$ffa4238e785f70f49e47bd5abb3d14ea27b67fe6\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001101100011011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$dce9a706105f694f180af276a255f0b96bf4f3fb\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1101111100010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.23. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1101111100010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$ebe62a4dd4ab3ca41895d1a11ea5af09778c4992\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0100000001010101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.24. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0100000001010101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$c0ddb4d5390f04db19d2f342c91d2794cc5a8834\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010011100100111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$ffa4238e785f70f49e47bd5abb3d14ea27b67fe6\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010011100100111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$ffa4238e785f70f49e47bd5abb3d14ea27b67fe6\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001101100011011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$dce9a706105f694f180af276a255f0b96bf4f3fb\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1101111100010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$ebe62a4dd4ab3ca41895d1a11ea5af09778c4992\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001101100011011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$dce9a706105f694f180af276a255f0b96bf4f3fb\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010011100100111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$ffa4238e785f70f49e47bd5abb3d14ea27b67fe6\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001101100011011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$dce9a706105f694f180af276a255f0b96bf4f3fb\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001101100011011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$dce9a706105f694f180af276a255f0b96bf4f3fb\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001101100011011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$dce9a706105f694f180af276a255f0b96bf4f3fb\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1101111100010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$ebe62a4dd4ab3ca41895d1a11ea5af09778c4992\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010011100100111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$ffa4238e785f70f49e47bd5abb3d14ea27b67fe6\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1101111100010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$ebe62a4dd4ab3ca41895d1a11ea5af09778c4992\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010011100100111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$ffa4238e785f70f49e47bd5abb3d14ea27b67fe6\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010011100100111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$ffa4238e785f70f49e47bd5abb3d14ea27b67fe6\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010011100100111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$ffa4238e785f70f49e47bd5abb3d14ea27b67fe6\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001101100011011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$dce9a706105f694f180af276a255f0b96bf4f3fb\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010011100100111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$ffa4238e785f70f49e47bd5abb3d14ea27b67fe6\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010011100100111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$ffa4238e785f70f49e47bd5abb3d14ea27b67fe6\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0100011101000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.25. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0100011101000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$5593d0c2360196a360a4792a1c5170455c16942a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001110100011101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.26. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001110100011101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$1a603c1af4b1a32c50b86ce1749ecac585f09f8e\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1101110100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.27. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1101110100111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$c316239bde6105bf736041cbe77b95604f5af817\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111111100000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.28. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111111100000000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$3eba45dc98427fa49d2e92727efa897f4b5e542e\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001101100011011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$dce9a706105f694f180af276a255f0b96bf4f3fb\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001110111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.29. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001110111111111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$00d86d2bfed6cc6fff06da45dff6b6d7a2248eed\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111111100011101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.30. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111111100011101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$b2ae7aedf1fbddebece333caf271e942846aac13\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000011101010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$03fcc4fffaee7df7f00d07974ed26581b3966f28\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010111110001101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$63e72e2013f4ebd4a9a3052ec80041a5d377c48a\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000100001001100
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101001101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001000100010001
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.31. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0001000100010001
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$ae2d2367753a0ba5a80c88222dde0357913490e3\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011010100110101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111011100000111
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111111101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.32. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111111101010011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$dce790455aa5bf6b2dcaced1d12f3bfa0cce231d\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000011101010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$03fcc4fffaee7df7f00d07974ed26581b3966f28\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101010011111110
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.33. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101010011111110
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$8b5d0f4e9c854d7d6bcf0711597997a840fd89de\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0100000001010101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$c0ddb4d5390f04db19d2f342c91d2794cc5a8834\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111111100011011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+
+3.1.34. Executing AST frontend in derive mode using pre-parsed AST for module `\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1111111100011011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Generating RTLIL representation for module `$paramod$c1ac6218318b678bc68d4aa3d1b5e83029ed30ba\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0000000011101010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$03fcc4fffaee7df7f00d07974ed26581b3966f28\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0101010011111110
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$8b5d0f4e9c854d7d6bcf0711597997a840fd89de\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'1010100011111101
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0011001000110010
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0111000001110000
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb'.
+Parameter \lut_mask = 16'0010000000110011
+Parameter \sum_lutc_input = 40'0110010001100001011101000110000101100011
+Found cached RTLIL representation for module `$paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb'.
+
+3.1.35. Analyzing design hierarchy..
+Top module:  \test1
+Used module:     $paramod$7942f2c4039457568791cd778b6a78b7bc0fa750\cycloneiv_lcell_comb
+Used module:     $paramod$fe14ccbeda88a31fc1e3e40b601cc844d9df8203\cycloneiv_lcell_comb
+Used module:     $paramod$a709f5163786c2898a58c365842294d00af7ff2f\cycloneiv_lcell_comb
+Used module:     $paramod$1ecfca1729f0aeb38e8d703e843853f285be1ee0\cycloneiv_lcell_comb
+Used module:     $paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas
+Used module:     $paramod$c70d709958122122ff6d88a62301f6a6fc73fb62\cycloneiv_lcell_comb
+Used module:     $paramod$395806bfca5813f5244a8607c7a609eb9aea9d3a\cycloneiv_lcell_comb
+Used module:     $paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb
+Used module:     $paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb
+Used module:     $paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb
+Used module:     $paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb
+Used module:     $paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb
+Used module:     $paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb
+Used module:     $paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb
+Used module:     $paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb
+Used module:     $paramod$a83303c05f07a7d004be52ffb9208fc23ca7b9f3\cycloneiv_lcell_comb
+Used module:     $paramod$77fc2227611dbad55eee42d93be1a6e5a2dbe957\cycloneiv_lcell_comb
+Used module:     $paramod$03fcc4fffaee7df7f00d07974ed26581b3966f28\cycloneiv_lcell_comb
+Used module:     $paramod$63e72e2013f4ebd4a9a3052ec80041a5d377c48a\cycloneiv_lcell_comb
+Used module:     $paramod$dce9a706105f694f180af276a255f0b96bf4f3fb\cycloneiv_lcell_comb
+Used module:     $paramod$ffa4238e785f70f49e47bd5abb3d14ea27b67fe6\cycloneiv_lcell_comb
+Used module:     $paramod$ebe62a4dd4ab3ca41895d1a11ea5af09778c4992\cycloneiv_lcell_comb
+Used module:     $paramod$c0ddb4d5390f04db19d2f342c91d2794cc5a8834\cycloneiv_lcell_comb
+Used module:     $paramod$5593d0c2360196a360a4792a1c5170455c16942a\cycloneiv_lcell_comb
+Used module:     $paramod$1a603c1af4b1a32c50b86ce1749ecac585f09f8e\cycloneiv_lcell_comb
+Used module:     $paramod$c316239bde6105bf736041cbe77b95604f5af817\cycloneiv_lcell_comb
+Used module:     $paramod$3eba45dc98427fa49d2e92727efa897f4b5e542e\cycloneiv_lcell_comb
+Used module:     $paramod$00d86d2bfed6cc6fff06da45dff6b6d7a2248eed\cycloneiv_lcell_comb
+Used module:     $paramod$b2ae7aedf1fbddebece333caf271e942846aac13\cycloneiv_lcell_comb
+Used module:     $paramod$ae2d2367753a0ba5a80c88222dde0357913490e3\cycloneiv_lcell_comb
+Used module:     $paramod$dce790455aa5bf6b2dcaced1d12f3bfa0cce231d\cycloneiv_lcell_comb
+Used module:     $paramod$8b5d0f4e9c854d7d6bcf0711597997a840fd89de\cycloneiv_lcell_comb
+Used module:     $paramod$c1ac6218318b678bc68d4aa3d1b5e83029ed30ba\cycloneiv_lcell_comb
+
+3.1.36. Analyzing design hierarchy..
+Top module:  \test1
+Used module:     $paramod$7942f2c4039457568791cd778b6a78b7bc0fa750\cycloneiv_lcell_comb
+Used module:     $paramod$fe14ccbeda88a31fc1e3e40b601cc844d9df8203\cycloneiv_lcell_comb
+Used module:     $paramod$a709f5163786c2898a58c365842294d00af7ff2f\cycloneiv_lcell_comb
+Used module:     $paramod$1ecfca1729f0aeb38e8d703e843853f285be1ee0\cycloneiv_lcell_comb
+Used module:     $paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas
+Used module:     $paramod$c70d709958122122ff6d88a62301f6a6fc73fb62\cycloneiv_lcell_comb
+Used module:     $paramod$395806bfca5813f5244a8607c7a609eb9aea9d3a\cycloneiv_lcell_comb
+Used module:     $paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb
+Used module:     $paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb
+Used module:     $paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb
+Used module:     $paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb
+Used module:     $paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb
+Used module:     $paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb
+Used module:     $paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb
+Used module:     $paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb
+Used module:     $paramod$a83303c05f07a7d004be52ffb9208fc23ca7b9f3\cycloneiv_lcell_comb
+Used module:     $paramod$77fc2227611dbad55eee42d93be1a6e5a2dbe957\cycloneiv_lcell_comb
+Used module:     $paramod$03fcc4fffaee7df7f00d07974ed26581b3966f28\cycloneiv_lcell_comb
+Used module:     $paramod$63e72e2013f4ebd4a9a3052ec80041a5d377c48a\cycloneiv_lcell_comb
+Used module:     $paramod$dce9a706105f694f180af276a255f0b96bf4f3fb\cycloneiv_lcell_comb
+Used module:     $paramod$ffa4238e785f70f49e47bd5abb3d14ea27b67fe6\cycloneiv_lcell_comb
+Used module:     $paramod$ebe62a4dd4ab3ca41895d1a11ea5af09778c4992\cycloneiv_lcell_comb
+Used module:     $paramod$c0ddb4d5390f04db19d2f342c91d2794cc5a8834\cycloneiv_lcell_comb
+Used module:     $paramod$5593d0c2360196a360a4792a1c5170455c16942a\cycloneiv_lcell_comb
+Used module:     $paramod$1a603c1af4b1a32c50b86ce1749ecac585f09f8e\cycloneiv_lcell_comb
+Used module:     $paramod$c316239bde6105bf736041cbe77b95604f5af817\cycloneiv_lcell_comb
+Used module:     $paramod$3eba45dc98427fa49d2e92727efa897f4b5e542e\cycloneiv_lcell_comb
+Used module:     $paramod$00d86d2bfed6cc6fff06da45dff6b6d7a2248eed\cycloneiv_lcell_comb
+Used module:     $paramod$b2ae7aedf1fbddebece333caf271e942846aac13\cycloneiv_lcell_comb
+Used module:     $paramod$ae2d2367753a0ba5a80c88222dde0357913490e3\cycloneiv_lcell_comb
+Used module:     $paramod$dce790455aa5bf6b2dcaced1d12f3bfa0cce231d\cycloneiv_lcell_comb
+Used module:     $paramod$8b5d0f4e9c854d7d6bcf0711597997a840fd89de\cycloneiv_lcell_comb
+Used module:     $paramod$c1ac6218318b678bc68d4aa3d1b5e83029ed30ba\cycloneiv_lcell_comb
+Removing unused module `\dffeas'.
+Removing unused module `\cycloneiv_lcell_comb'.
+Removed 2 unused modules.
+
+3.2. Executing PROC pass (convert processes to netlists).
+
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/ubuntu/FPGA/clean-v11/formal_cycloneiv.v:14$18'.
+Cleaned up 2 empty switches.
+
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/home/ubuntu/FPGA/clean-v11/formal_cycloneiv.v:18$16 in module $paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.
+Removed a total of 0 dead cases.
+
+3.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 3 assignments to connections.
+
+3.2.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/ubuntu/FPGA/clean-v11/formal_cycloneiv.v:14$18'.
+  Set init value: \q = 1'0
+
+3.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \clrn in `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/ubuntu/FPGA/clean-v11/formal_cycloneiv.v:18$16'.
+
+3.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+3.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/ubuntu/FPGA/clean-v11/formal_cycloneiv.v:14$18'.
+Creating decoders for process `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/ubuntu/FPGA/clean-v11/formal_cycloneiv.v:18$16'.
+     1/1: $0\q[0:0]
+
+3.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.\q' using process `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/ubuntu/FPGA/clean-v11/formal_cycloneiv.v:18$16'.
+  created $adff cell `$procdff$81' with positive edge clock and positive level reset.
+
+3.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/ubuntu/FPGA/clean-v11/formal_cycloneiv.v:14$18'.
+Found and cleaned up 1 empty switch in `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/ubuntu/FPGA/clean-v11/formal_cycloneiv.v:18$16'.
+Removing empty process `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/ubuntu/FPGA/clean-v11/formal_cycloneiv.v:18$16'.
+Cleaned up 1 empty switch.
+
+3.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$dce790455aa5bf6b2dcaced1d12f3bfa0cce231d\cycloneiv_lcell_comb.
+Optimizing module $paramod$ae2d2367753a0ba5a80c88222dde0357913490e3\cycloneiv_lcell_comb.
+Optimizing module $paramod$b2ae7aedf1fbddebece333caf271e942846aac13\cycloneiv_lcell_comb.
+Optimizing module $paramod$00d86d2bfed6cc6fff06da45dff6b6d7a2248eed\cycloneiv_lcell_comb.
+Optimizing module $paramod$3eba45dc98427fa49d2e92727efa897f4b5e542e\cycloneiv_lcell_comb.
+Optimizing module $paramod$c316239bde6105bf736041cbe77b95604f5af817\cycloneiv_lcell_comb.
+Optimizing module $paramod$1a603c1af4b1a32c50b86ce1749ecac585f09f8e\cycloneiv_lcell_comb.
+Optimizing module $paramod$5593d0c2360196a360a4792a1c5170455c16942a\cycloneiv_lcell_comb.
+Optimizing module $paramod$c0ddb4d5390f04db19d2f342c91d2794cc5a8834\cycloneiv_lcell_comb.
+Optimizing module $paramod$ebe62a4dd4ab3ca41895d1a11ea5af09778c4992\cycloneiv_lcell_comb.
+Optimizing module $paramod$ffa4238e785f70f49e47bd5abb3d14ea27b67fe6\cycloneiv_lcell_comb.
+Optimizing module $paramod$dce9a706105f694f180af276a255f0b96bf4f3fb\cycloneiv_lcell_comb.
+Optimizing module $paramod$63e72e2013f4ebd4a9a3052ec80041a5d377c48a\cycloneiv_lcell_comb.
+Optimizing module $paramod$03fcc4fffaee7df7f00d07974ed26581b3966f28\cycloneiv_lcell_comb.
+Optimizing module $paramod$77fc2227611dbad55eee42d93be1a6e5a2dbe957\cycloneiv_lcell_comb.
+Optimizing module $paramod$a83303c05f07a7d004be52ffb9208fc23ca7b9f3\cycloneiv_lcell_comb.
+Optimizing module $paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb.
+Optimizing module $paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb.
+Optimizing module $paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb.
+Optimizing module $paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb.
+Optimizing module $paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb.
+Optimizing module $paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb.
+Optimizing module $paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb.
+Optimizing module $paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb.
+Optimizing module $paramod$395806bfca5813f5244a8607c7a609eb9aea9d3a\cycloneiv_lcell_comb.
+Optimizing module $paramod$c70d709958122122ff6d88a62301f6a6fc73fb62\cycloneiv_lcell_comb.
+Optimizing module $paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$1ecfca1729f0aeb38e8d703e843853f285be1ee0\cycloneiv_lcell_comb.
+Optimizing module $paramod$a709f5163786c2898a58c365842294d00af7ff2f\cycloneiv_lcell_comb.
+Optimizing module $paramod$fe14ccbeda88a31fc1e3e40b601cc844d9df8203\cycloneiv_lcell_comb.
+Optimizing module $paramod$7942f2c4039457568791cd778b6a78b7bc0fa750\cycloneiv_lcell_comb.
+Optimizing module test1.
+Optimizing module $paramod$c1ac6218318b678bc68d4aa3d1b5e83029ed30ba\cycloneiv_lcell_comb.
+Optimizing module $paramod$8b5d0f4e9c854d7d6bcf0711597997a840fd89de\cycloneiv_lcell_comb.
+
+3.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod$dce790455aa5bf6b2dcaced1d12f3bfa0cce231d\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$ae2d2367753a0ba5a80c88222dde0357913490e3\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$b2ae7aedf1fbddebece333caf271e942846aac13\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$00d86d2bfed6cc6fff06da45dff6b6d7a2248eed\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$3eba45dc98427fa49d2e92727efa897f4b5e542e\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$c316239bde6105bf736041cbe77b95604f5af817\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$1a603c1af4b1a32c50b86ce1749ecac585f09f8e\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$5593d0c2360196a360a4792a1c5170455c16942a\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$c0ddb4d5390f04db19d2f342c91d2794cc5a8834\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$ebe62a4dd4ab3ca41895d1a11ea5af09778c4992\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$ffa4238e785f70f49e47bd5abb3d14ea27b67fe6\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$dce9a706105f694f180af276a255f0b96bf4f3fb\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$63e72e2013f4ebd4a9a3052ec80041a5d377c48a\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$03fcc4fffaee7df7f00d07974ed26581b3966f28\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$77fc2227611dbad55eee42d93be1a6e5a2dbe957\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$a83303c05f07a7d004be52ffb9208fc23ca7b9f3\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$68a4b45f19a132748d87714d3a709766838df948\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$405aab6dd783fb36eab693d69fe29db9d4a4dd94\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$228b789432726544eefe585646f8ec320acc3908\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$3be37c7eea7649430980c5d2ee29fed6a5135888\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$44c297f939055fe988979bc9719efb79564350aa\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$e42e08be9bae4ce4e4d72e666a5f1922a62039ea\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$54deb16c8ae54b8909e297a8ec0c5ff1345e5b21\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$60983b2fddf3d174490d5d1496f8ebcb4dec5a33\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$395806bfca5813f5244a8607c7a609eb9aea9d3a\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$c70d709958122122ff6d88a62301f6a6fc73fb62\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.
+Deleting now unused module $paramod$1ecfca1729f0aeb38e8d703e843853f285be1ee0\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$a709f5163786c2898a58c365842294d00af7ff2f\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$fe14ccbeda88a31fc1e3e40b601cc844d9df8203\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$7942f2c4039457568791cd778b6a78b7bc0fa750\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$c1ac6218318b678bc68d4aa3d1b5e83029ed30ba\cycloneiv_lcell_comb.
+Deleting now unused module $paramod$8b5d0f4e9c854d7d6bcf0711597997a840fd89de\cycloneiv_lcell_comb.
+<suppressed ~443 debug messages>
+
+3.4. Executing FUTURE pass.
+
+3.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+<suppressed ~479 debug messages>
+
+3.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+Removed 222 unused cells and 2698 unused wires.
+<suppressed ~696 debug messages>
+
+3.7. Executing CHECK pass (checking for obvious problems).
+Checking module test1...
+Found and reported 0 problems.
+
+3.8. Executing OPT pass (performing simple optimizations).
+
+3.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+3.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 1104 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+3.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \test1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~434 debug messages>
+
+3.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \test1.
+Performed a total of 0 changes.
+
+3.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 1104 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+3.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+
+3.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+3.8.8. Finished fast OPT passes. (There is nothing left to do.)
+
+3.9. Executing WREDUCE pass (reducing word size of cells).
+
+3.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+
+3.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+3.12. Executing OPT pass (performing simple optimizations).
+
+3.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+3.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 1104 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+3.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+
+3.12.4. Finished fast OPT passes.
+
+3.13. Executing SORT pass.
+
+3.14. Printing statistics.
+
+=== test1 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     3749 wires
+     4215 wire bits
+     3532 public wires
+     3998 public wire bits
+       23 ports
+      285 port bits
+     1104 cells
+      222   $adff
+      217   $mux
+        1   $not
+      443   $scopeinfo
+      221   $shiftx
+
+3.15. Executing CHECK pass (checking for obvious problems).
+Checking module test1...
+Found and reported 0 problems.
+
+4. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+Removed 0 unused cells and 3091 unused wires.
+<suppressed ~1 debug messages>
+
+7. Executing CHECK pass (checking for obvious problems).
+Checking module test1...
+Found and reported 0 problems.
+
+8. Executing SETUNDEF pass (replace undef values with defined constants).
+
+9. Executing RTLIL backend.
+Output filename: /home/ubuntu/FPGA/clean-v11/competition-v11-t6r8mp9n/test1/candidate/proof/gate.il
+
+End of script. Logfile hash: d3ef004c90, time: 0.09s, user: 0.06s, system: 0.04s, MEM: 32.62 MB peak
+Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+Time spent: 29% 4x read_verilog (0 sec), 26% 6x opt_clean (0 sec), ...

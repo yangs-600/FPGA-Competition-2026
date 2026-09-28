@@ -1,0 +1,2 @@
+decoder_4_0 decoder_4_0.z xbits : z[7:0]
+decoder_4_0 decoder_4_0.y xbits : y[7:0]

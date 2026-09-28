@@ -1,0 +1,4 @@
+read_verilog /home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr/decoder_4_0/input.v
+synth_intel -family cycloneiv -top decoder_4_0
+write_json /home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr/decoder_4_0/netlist.json
+write_verilog -noattr -norename /home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr/decoder_4_0/netlist.v

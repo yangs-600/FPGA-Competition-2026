@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "directory": "/home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr",
+  "cases": [
+    {
+      "name": "decoder_3_0",
+      "proof": "PASS",
+      "tree_triggered": true,
+      "counts": {
+        "logic_cells": 64,
+        "dff_cells": 0,
+        "standalone_not_cells": 0,
+        "by_type": {
+          "cycloneiv_lcell_comb": 64
+        }
+      }
+    },
+    {
+      "name": "decoder_4_0",
+      "proof": "PASS",
+      "tree_triggered": true,
+      "counts": {
+        "logic_cells": 112,
+        "dff_cells": 0,
+        "standalone_not_cells": 0,
+        "by_type": {
+          "cycloneiv_lcell_comb": 112
+        }
+      }
+    },
+    {
+      "name": "decoder_5_0",
+      "proof": "PASS",
+      "tree_triggered": true,
+      "counts": {
+        "logic_cells": 224,
+        "dff_cells": 0,
+        "standalone_not_cells": 0,
+        "by_type": {
+          "cycloneiv_lcell_comb": 224
+        }
+      }
+    },
+    {
+      "name": "decoder_3_1",
+      "proof": "PASS",
+      "tree_triggered": false,
+      "counts": {
+        "logic_cells": 94,
+        "dff_cells": 0,
+        "standalone_not_cells": 0,
+        "by_type": {
+          "cycloneiv_lcell_comb": 94
+        }
+      }
+    },
+    {
+      "name": "decoder_4_1",
+      "proof": "PASS",
+      "tree_triggered": false,
+      "counts": {
+        "logic_cells": 178,
+        "dff_cells": 0,
+        "standalone_not_cells": 0,
+        "by_type": {
+          "cycloneiv_lcell_comb": 178
+        }
+      }
+    },
+    {
+      "name": "decoder_5_1",
+      "proof": "PASS",
+      "tree_triggered": false,
+      "counts": {
+        "logic_cells": 382,
+        "dff_cells": 0,
+        "standalone_not_cells": 0,
+        "by_type": {
+          "cycloneiv_lcell_comb": 382
+        }
+      }
+    }
+  ]
+}
