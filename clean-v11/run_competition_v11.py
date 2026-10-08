@@ -5,12 +5,64 @@ from pathlib import Path
 from build_069 import ROOT,WORK,COMMIT,sha
 
 def environment():
-    m=json.loads((WORK/'competition-v11/manifest.json').read_text())
-    assert m['yosys_commit']==COMMIT and m['yosys_release']=='0.69'
-    for role in ('baseline','candidate','abc','abc_script','plugin_source','patch'):
-        if sha(m[role])!=m[role+'_sha256']: raise RuntimeError('Changed '+role)
-    env=dict(os.environ,PATH=str(WORK/'proof-bin')+os.pathsep+os.environ['PATH'])
-    eqy=json.loads((ROOT/'toolchains/eqy-0.69/manifest.json').read_text())
+    manifest_path=WORK/'competition-v11/manifest.json'
+    if manifest_path.exists():
+        m=json.loads(manifest_path.read_text())
+        assert m['yosys_commit']==COMMIT and m['yosys_release']=='0.69'
+        for role in ('baseline','candidate','abc','abc_script','plugin_source','patch'):
+            if sha(m[role])!=m[role+'_sha256']: raise RuntimeError('Changed '+role)
+    else:
+        # A reconstructed build is valid only when the complete toolchain is
+        # present and independently identifies itself as the pinned release.
+        # This fallback does not fabricate the missing manifest.
+        build=WORK/'build-repro'; source=WORK/'src'
+        paths=dict(
+            baseline=build/'yosys-original',
+            candidate=build/'yosys-competition-reconstructed',
+            abc=build/'yosys-abc',
+            abc_script=ROOT/'competition_abc_dch.abc',
+            plugin_source=ROOT/'pmux_competition_v11.cc',
+            patch=WORK/'competition-v11/synth-intel-competition.patch')
+        missing=[str(path) for path in paths.values() if not path.is_file()]
+        if missing:
+            raise RuntimeError('No manifest and reconstructed toolchain is incomplete: '+', '.join(missing))
+        if not source.is_dir():
+            raise RuntimeError('No manifest and reconstructed Yosys source tree is missing')
+        commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=source,text=True).strip()
+        if commit!=COMMIT: raise RuntimeError('Wrong reconstructed Yosys commit: '+commit)
+        integrated_source=source/'passes/opt/pmux_competition_opt.cc'
+        if not integrated_source.is_file() or sha(integrated_source)!=sha(paths['plugin_source']):
+            raise RuntimeError('Reconstructed PMUX source does not match the project source')
+        patch_check=subprocess.run(['git','apply','--check','--reverse',str(paths['patch'])],cwd=source,
+                                   stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True)
+        if patch_check.returncode:
+            raise RuntimeError('Reconstructed source does not match the integration patch: '+patch_check.stdout)
+        versions={role:subprocess.check_output([str(paths[role]),'-V'],text=True).strip()
+                  for role in ('baseline','candidate')}
+        if any(not value.startswith('Yosys 0.69 (') for value in versions.values()):
+            raise RuntimeError('Expected exact reconstructed Yosys 0.69: '+repr(versions))
+        help_text=subprocess.check_output([str(paths['candidate']),'-Q','-T','-p','help pmux_competition_opt'],text=True)
+        if 'safely completes default codes' not in help_text:
+            raise RuntimeError('Reconstructed candidate does not contain the v14 PMUX pass')
+        rejected=subprocess.run([str(paths['baseline']),'-Q','-T','-p','pmux_competition_opt'],
+                                stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True)
+        if rejected.returncode==0: raise RuntimeError('Reconstructed baseline contains the candidate pass')
+        m=dict(yosys_release='0.69',yosys_commit=COMMIT,reconstructed_environment=True,
+               baseline_version=versions['baseline'],candidate_version=versions['candidate'])
+        for role,path in paths.items():
+            m[role]=str(path);m[role+'_sha256']=sha(path)
+    proof_paths=[ROOT/'proof-bin',WORK/'proof-bin']
+    env=dict(os.environ,PATH=os.pathsep.join(str(path) for path in proof_paths)+os.pathsep+os.environ['PATH'])
+    eqy_manifest=ROOT/'toolchains/eqy-0.69/manifest.json'
+    if eqy_manifest.exists():
+        eqy=json.loads(eqy_manifest.read_text())
+    else:
+        executable=ROOT/'toolchains/eqy-0.69/install-repro/bin/eqy'
+        if not executable.is_file(): raise RuntimeError('EQY manifest and reconstructed executable are missing')
+        version=subprocess.check_output(['/usr/bin/python3','-E',str(executable),'--version'],text=True).strip()
+        if version!='EQY v0.69': raise RuntimeError('Expected exact reconstructed EQY v0.69: '+version)
+        eqy=dict(executable=str(executable),version=version,files={str(executable):sha(executable)},
+                 reconstructed_environment=True)
     for path,digest in eqy['files'].items():
         if sha(path)!=digest: raise RuntimeError('EQY tool changed '+path)
     m['eqy']=eqy

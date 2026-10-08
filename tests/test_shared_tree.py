@@ -24,6 +24,20 @@ assert ok,name
 rows.append(dict(name=name,proof='PASS',tree_triggered=True,selector_order=match.group(1),counts=counts(p/'netlist.json',name)))
 print(name,'PASS',match.group(1),flush=True)
 
+# Four explicit codes share b and the other twelve codes use PMUX default a.
+# Completing every missing code exposes the compact sel[3:2] == 0 structure.
+name='sparse_default_4';p=out/name;p.mkdir()
+code=f'module {name}(input [3:0] sel,input [7:0] a,b,output reg [7:0] y);\nalways @* begin\ny=a;\ncase(sel)\n'
+for i in [2,0,3,1]: code+=f"4'd{i}: y=b;\n"
+code+='endcase\nend\nendmodule\n';src=p/'input.v';src.write_text(code)
+flow=p/'flow.ys';flow.write_text(f'read_verilog {src}\nsynth_intel -family cycloneiv -top {name}\nwrite_json {p}/netlist.json\nwrite_verilog -noattr -norename {p}/netlist.v\n')
+measure([m['candidate'],'-Q','-T','-s',str(flow)],p/'synthesis.log',env)
+ok=prove(src,name,p/'netlist.v',p/'proof',env);log=(p/'synthesis.log').read_text()
+trigger='PMUX_SHARED_TREE cells=' in log
+assert trigger and ok,name
+rows.append(dict(name=name,proof='PASS',tree_triggered=True,missing_codes=12,counts=counts(p/'netlist.json',name)))
+print(name,'PASS',trigger,flush=True)
+
 for bits,missing in [(3,0),(4,0),(5,0),(3,1),(4,1),(5,1),(3,2),(4,2),(5,2)]:
     name=f'decoder_{bits}_missing_{missing}';p=out/name;p.mkdir();arms=1<<bits;width=8
     order=list(range(arms-missing));random.Random(710+bits+missing).shuffle(order)
@@ -35,8 +49,9 @@ for bits,missing in [(3,0),(4,0),(5,0),(3,1),(4,1),(5,1),(3,2),(4,2),(5,2)]:
     measure([m['candidate'],'-Q','-T','-s',str(flow)],p/'synthesis.log',env)
     ok=prove(src,name,p/'netlist.v',p/'proof',env)
     log=(p/'synthesis.log').read_text();trigger='PMUX_SHARED_TREE cells=' in log
-    # One omitted code is supplied by the PMUX default; two omissions stay untouched.
-    assert trigger == (missing <= 1),(name,trigger)
+    # Complete tables must trigger. Sparse random tables may be rejected when
+    # completing their defaults would exceed the real explicit-arm cost.
+    if missing == 0: assert trigger,(name,trigger)
     assert ok,name
     rows.append(dict(name=name,proof='PASS',tree_triggered=trigger,counts=counts(p/'netlist.json',name)))
     print(name,'PASS',trigger,flush=True)

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
-    echo 'Use: source /home/ubuntu/FPGA/activate_competition.sh' >&2
+    echo "Use: source ${BASH_SOURCE[0]}" >&2
     exit 1
 fi
 _competition_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"

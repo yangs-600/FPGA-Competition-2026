@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "date": "2026-10-08",
+  "yosys_version": "0.69",
+  "yosys_base_commit": "9f75ca1f9834a39a863915b5dae0c7b1e33533bc",
+  "target": "synth_intel -family cycloneiv",
+  "mapper": "built-in abc9",
+  "algorithm": "selector-order search plus safe arbitrary PMUX default-code completion with explicit-arm cost gating",
+  "cases": [
+    {"name": "test1", "baseline_lut": 286, "candidate_lut": 221, "baseline_not": 2, "candidate_not": 2, "baseline_dff": 222, "candidate_dff": 222, "baseline_proof": "PASS", "candidate_proof": "PASS", "median_cpu_overhead_percent": -1.9615741233337314},
+    {"name": "test2", "baseline_lut": 25, "candidate_lut": 15, "baseline_not": 0, "candidate_not": 0, "baseline_dff": 0, "candidate_dff": 0, "baseline_proof": "PASS", "candidate_proof": "PASS", "median_cpu_overhead_percent": -1.3585746102442786},
+    {"name": "test3", "baseline_lut": 12, "candidate_lut": 12, "baseline_not": 1, "candidate_not": 1, "baseline_dff": 17, "candidate_dff": 12, "baseline_proof": "PASS", "candidate_proof": "PASS", "median_cpu_overhead_percent": -1.8678372024701018},
+    {"name": "test4", "baseline_lut": 35, "candidate_lut": 26, "baseline_not": 1, "candidate_not": 1, "baseline_dff": 10, "candidate_dff": 10, "baseline_proof": "PASS", "candidate_proof": "PASS", "median_cpu_overhead_percent": -4.9034718978658525}
+  ],
+  "average_lut_reduction_percent": 22.11038961038961,
+  "all_dff_nonincrease": true,
+  "all_other_observed_cell_types_nonincrease": true,
+  "formal_proofs_passed": 8,
+  "fixture_proofs_passed": 11,
+  "reconstructed_environment_without_fake_manifest": "PASS",
+  "boundary_fixtures": {"passed": 9, "tree_triggered": 6, "cost_guard_skipped": 3},
+  "sparse_default_fixture": {"proof": "PASS", "explicit_arms": 4, "default_codes": 12, "tree_triggered": true},
+  "selector_order_fixture": {"proof": "PASS", "selected_order": "201", "mux_nodes": 24, "estimate_before": 48},
+  "patch_sha256": "dc6cf742985d96844f16f01e4edf8b41260e496352b105aa0ce5c2f72e9631b3",
+  "runtime_policy": "21 interleaved Linux child-CPU runs after one warm-up; median; includes waited ABC",
+  "source_references": [
+    "https://github.com/YosysHQ/yosys/blob/main/docs/source/cell/word_mux.rst?plain=true",
+    "https://yosyshq.readthedocs.io/projects/yosys/en/stable/using_yosys/synthesis/opt.html",
+    "https://github.com/plex1/aig-opt"
+  ],
+  "limitations": "Official evaluation is Windows; Linux runtime and Cyclone IV inverse-model proofs are cross-checks, not a replacement for final Windows packaging and post-ABC $lut ILANG validation."
+}

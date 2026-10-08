@@ -14,8 +14,8 @@ index f21900b2e..7ce7e8558 100644
  	peepopt_shiftmul_right.pmg
  	peepopt_shiftmul_left.pmg
 diff --git a/passes/opt/pmux_competition_opt.cc b/passes/opt/pmux_competition_opt.cc
-new file mode 100644
-index 000000000..2a2f2eb4c
+new file mode 100755
+index 000000000..7dd679e4f
 --- /dev/null
 +++ b/passes/opt/pmux_competition_opt.cc
 @@ -0,0 +1,203 @@
@@ -35,12 +35,12 @@ index 000000000..2a2f2eb4c
 +    void help() override {
 +        log("    pmux_competition_opt\n");
 +        log("Replace data bits implied by a true equality decoder in mux/pmux arms.\n");
-+        log("Shares equality-decoded PMUX trees, including one safe default arm, and searches selector order.\n");
++        log("Shares equality-decoded PMUX trees, safely completes default codes, and searches selector order.\n");
 +        log("Preserves priority muxes and sequential cells. No synthesis probes.\n");
 +    }
 +    void execute(std::vector<std::string> args, RTLIL::Design *design) override {
 +        extra_args(args, 1, design);
-+        log_header(design, "Executing PMUX_COMPETITION_OPT v13.\n");
++        log_header(design, "Executing PMUX_COMPETITION_OPT v14.\n");
 +        int replaced = 0;
 +        for (auto module : design->selected_modules()) {
 +            if (module->get_bool_attribute(ID::blackbox)) continue;
@@ -89,13 +89,15 @@ index 000000000..2a2f2eb4c
 +                }
 +                if (changed) c->setPort(ID::B, b);
 +            }
-+            // Collect provably complete tables. A PMUX with exactly one absent
-+            // equality code is also complete because its A input supplies that code.
++            // Collect provably complete tables. Equality decoders on the same
++            // control vector are mutually exclusive, so every unlisted code
++            // selects the PMUX default input A.
 +            struct TableTarget {
 +                Cell *cell;
 +                SigSpec ctrl;
 +                int width;
 +                int codes;
++                int explicit_arms;
 +                std::vector<SigSpec> table;
 +            };
 +            std::vector<TableTarget> all_targets;
@@ -104,9 +106,7 @@ index 000000000..2a2f2eb4c
 +                auto ss=sigmap(c->getPort(ID::S));int arms=GetSize(ss),width=GetSize(c->getPort(ID::Y));
 +                if(width<8 || arms==0 || !decode.count(ss[0])) continue;
 +                auto ctrl=decode.at(ss[0]).first; int bits=GetSize(ctrl),codes=1<<bits;
-+                // A single absent equality arm is represented by the PMUX default input.
-+                // More than one absent code remains intentionally untouched.
-+                if(arms!=codes && arms!=codes-1) continue;
++                if(arms>codes) continue;
 +                std::vector<SigSpec> table(codes); std::vector<bool> seen(codes,false);bool valid=true;
 +                auto data=sigmap(c->getPort(ID::B));
 +                for(int i=0;i<arms;i++) {
@@ -115,17 +115,15 @@ index 000000000..2a2f2eb4c
 +                    if(code<0 || code>=codes || seen[code]) {valid=false;break;}
 +                    seen[code]=true;table[code]=data.extract(i*width,width);
 +                }
-+                if(valid && arms==codes-1) {
-+                    int missing=-1;
-+                    for(int code=0;code<codes;code++) if(!seen[code]) {
-+                        if(missing>=0) {valid=false;break;}
-+                        missing=code;
++                if(valid && arms<codes) {
++                    if(GetSize(c->getPort(ID::A))!=width) valid=false;
++                    else {
++                        auto fallback=sigmap(c->getPort(ID::A));
++                        for(int code=0;code<codes;code++) if(!seen[code]) table[code]=fallback;
 +                    }
-+                    if(missing<0 || GetSize(c->getPort(ID::A))!=width) valid=false;
-+                    else table[missing]=sigmap(c->getPort(ID::A));
 +                }
 +                if(!valid) continue;
-+                all_targets.push_back({c,ctrl,width,codes,table});
++                all_targets.push_back({c,ctrl,width,codes,arms,table});
 +            }
 +            std::vector<std::vector<int>> groups;
 +            for (int i=0;i<GetSize(all_targets);i++) {
@@ -193,7 +191,9 @@ index 000000000..2a2f2eb4c
 +                int estimated_luts=0;
 +                for(auto target_index:group) {
 +                    auto &target=all_targets.at(target_index);
-+                    estimated_luts+=target.width*((target.codes+1)/2+(target.codes/2+2)/3);
++                    // Compare against the PMUX structure actually being replaced,
++                    // not the larger completed truth-table space.
++                    estimated_luts+=target.width*((target.explicit_arms+1)/2+(target.explicit_arms/2+2)/3);
 +                }
 +                total_cells+=GetSize(group);total_nodes+=GetSize(best_nodes);total_estimated+=estimated_luts;
 +                if(have_best && GetSize(best_nodes)<=estimated_luts) {
