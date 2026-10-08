@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "date": "2026-10-08",
+  "yosys_version": "0.69",
+  "yosys_base_commit": "9f75ca1f9834a39a863915b5dae0c7b1e33533bc",
+  "target": "synth_intel -family cycloneiv",
+  "mapper": "built-in abc9",
+  "algorithm": "selector-order search plus one safe PMUX default-arm completion",
+  "cases": [
+    {"name": "test1", "baseline_lut": 286, "candidate_lut": 221, "baseline_not": 2, "candidate_not": 2, "baseline_dff": 222, "candidate_dff": 222, "baseline_proof": "PASS", "candidate_proof": "PASS", "median_cpu_overhead_percent": -2.0386279243615246},
+    {"name": "test2", "baseline_lut": 25, "candidate_lut": 15, "baseline_not": 0, "candidate_not": 0, "baseline_dff": 0, "candidate_dff": 0, "baseline_proof": "PASS", "candidate_proof": "PASS", "median_cpu_overhead_percent": -1.5842767397179935},
+    {"name": "test3", "baseline_lut": 12, "candidate_lut": 12, "baseline_not": 1, "candidate_not": 1, "baseline_dff": 17, "candidate_dff": 12, "baseline_proof": "PASS", "candidate_proof": "PASS", "median_cpu_overhead_percent": -3.523853555640144},
+    {"name": "test4", "baseline_lut": 35, "candidate_lut": 26, "baseline_not": 1, "candidate_not": 1, "baseline_dff": 10, "candidate_dff": 10, "baseline_proof": "PASS", "candidate_proof": "PASS", "median_cpu_overhead_percent": -2.7567919147455267}
+  ],
+  "average_lut_reduction_percent": 22.11038961038961,
+  "all_dff_nonincrease": true,
+  "all_other_observed_cell_types_nonincrease": true,
+  "formal_proofs_passed": 8,
+  "boundary_fixtures": {"passed": 9, "complete_triggered": 3, "one_missing_triggered": 3, "two_missing_skipped": 3},
+  "selector_order_fixture": {"proof": "PASS", "selected_order": "201", "mux_nodes": 24, "estimate_before": 48},
+  "runtime_policy": "21 interleaved Linux child-CPU runs after one warm-up; median; includes waited ABC",
+  "limitations": "Official evaluation is Windows; Linux runtime and Cyclone IV inverse-model proofs are cross-checks, not a replacement for final Windows packaging and post-ABC $lut ILANG validation."
+}

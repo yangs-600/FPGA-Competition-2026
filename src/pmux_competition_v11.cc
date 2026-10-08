@@ -2,6 +2,7 @@
 // No testcase names, source paths, probe synthesis, or register changes.
 #include "kernel/yosys.h"
 #include "kernel/sigtools.h"
+#include <algorithm>
 #include <functional>
 #include <map>
 #include <tuple>
@@ -13,11 +14,12 @@ struct PmuxCompetitionOpt : public Pass {
     void help() override {
         log("    pmux_competition_opt\n");
         log("Replace data bits implied by a true equality decoder in mux/pmux arms.\n");
-        log("Shares complete equality-decoded PMUX trees; preserves priority muxes and sequential cells. No synthesis probes.\n");
+        log("Shares equality-decoded PMUX trees, including one safe default arm, and searches selector order.\n");
+        log("Preserves priority muxes and sequential cells. No synthesis probes.\n");
     }
     void execute(std::vector<std::string> args, RTLIL::Design *design) override {
         extra_args(args, 1, design);
-        log_header(design, "Executing PMUX_COMPETITION_OPT v11.\n");
+        log_header(design, "Executing PMUX_COMPETITION_OPT v13.\n");
         int replaced = 0;
         for (auto module : design->selected_modules()) {
             if (module->get_bool_attribute(ID::blackbox)) continue;
@@ -66,71 +68,134 @@ struct PmuxCompetitionOpt : public Pass {
                 }
                 if (changed) c->setPort(ID::B, b);
             }
-            // Build a shared bit-level Shannon DAG, low selector bit outermost.
-            // Commit only when the mux-node estimate is no greater than the AND/OR LUT estimate.
-            dict<SigBit,int> leaves;
-            std::vector<SigBit> wires;
-            std::vector<std::tuple<int,int,int>> nodes;
-            std::map<std::tuple<int,int,int>,int> memo;
-            auto leaf = [&](SigBit bit) {
-                bit=sigmap(bit);
-                if (!leaves.count(bit)) { leaves[bit]=GetSize(wires); wires.push_back(bit); }
-                return leaves.at(bit);
+            // Collect provably complete tables. A PMUX with exactly one absent
+            // equality code is also complete because its A input supplies that code.
+            struct TableTarget {
+                Cell *cell;
+                SigSpec ctrl;
+                int width;
+                int codes;
+                std::vector<SigSpec> table;
             };
-            // Negative IDs are internal nodes, nonnegative IDs are original bits.
-            std::function<int(const std::vector<int>&,const std::vector<int>&,int)> build;
-            build = [&](const std::vector<int>& data,const std::vector<int>& sel,int depth) -> int {
-                if (GetSize(data)==1) return data[0];
-                std::vector<int> lo,hi;
-                for (int i=0;i<GetSize(data);i++) (i&1 ? hi:lo).push_back(data[i]);
-                int a=build(lo,sel,depth+1), b=build(hi,sel,depth+1);
-                if (a==b) return a;
-                auto key=std::make_tuple(sel[depth],a,b);
-                auto it=memo.find(key); if(it!=memo.end()) return it->second;
-                int id=-1-GetSize(nodes);nodes.push_back(key);memo[key]=id;return id;
-            };
-            std::vector<std::pair<Cell*,std::vector<int>>> targets;
-            int estimated_luts=0;
+            std::vector<TableTarget> all_targets;
             for (auto c:module->selected_cells()) {
                 if(c->type!=ID($pmux) || c->get_bool_attribute(ID::keep)) continue;
                 auto ss=sigmap(c->getPort(ID::S));int arms=GetSize(ss),width=GetSize(c->getPort(ID::Y));
-                if(width<8 || arms<8 || !decode.count(ss[0])) continue;
-                auto ctrl=decode.at(ss[0]).first; int bits=GetSize(ctrl);
-                if(arms!=(1<<bits)) continue;
-                std::vector<SigSpec> table(arms); std::vector<bool> seen(arms,false);bool valid=true;
+                if(width<8 || arms==0 || !decode.count(ss[0])) continue;
+                auto ctrl=decode.at(ss[0]).first; int bits=GetSize(ctrl),codes=1<<bits;
+                // A single absent equality arm is represented by the PMUX default input.
+                // More than one absent code remains intentionally untouched.
+                if(arms!=codes && arms!=codes-1) continue;
+                std::vector<SigSpec> table(codes); std::vector<bool> seen(codes,false);bool valid=true;
                 auto data=sigmap(c->getPort(ID::B));
                 for(int i=0;i<arms;i++) {
                     if(!decode.count(ss[i]) || decode.at(ss[i]).first!=ctrl) {valid=false;break;}
                     int code=decode.at(ss[i]).second;
-                    if(code<0 || code>=arms || seen[code]) {valid=false;break;}
+                    if(code<0 || code>=codes || seen[code]) {valid=false;break;}
                     seen[code]=true;table[code]=data.extract(i*width,width);
                 }
+                if(valid && arms==codes-1) {
+                    int missing=-1;
+                    for(int code=0;code<codes;code++) if(!seen[code]) {
+                        if(missing>=0) {valid=false;break;}
+                        missing=code;
+                    }
+                    if(missing<0 || GetSize(c->getPort(ID::A))!=width) valid=false;
+                    else table[missing]=sigmap(c->getPort(ID::A));
+                }
                 if(!valid) continue;
-                std::vector<int> sel,outputs;
-                for(auto bit:ctrl) sel.push_back(leaf(bit));
-                for(int bit=0;bit<width;bit++) {
-                    std::vector<int> column;
-                    for(auto &arm:table) column.push_back(leaf(arm[bit]));
-                    outputs.push_back(build(column,sel,0));
-                }
-                targets.push_back({c,outputs});
-                estimated_luts+=width*((arms+1)/2+(arms/2+2)/3);
+                all_targets.push_back({c,ctrl,width,codes,table});
             }
-            log("PMUX_TREE_ESTIMATE cells=%d nodes=%d before=%d\n",GetSize(targets),GetSize(nodes),estimated_luts);
-            if(!targets.empty() && GetSize(nodes)<=estimated_luts) {
-                std::vector<SigBit> mapped;
-                auto resolve=[&](int id)->SigBit {return id>=0?wires.at(id):mapped.at(-1-id);};
-                for(auto node:nodes) {
-                    SigBit out=module->addWire(NEW_ID);
-                    module->addMux(NEW_ID,resolve(std::get<1>(node)),resolve(std::get<2>(node)),resolve(std::get<0>(node)),out);
-                    mapped.push_back(out);
-                }
-                for(auto &target:targets) {
-                    SigSpec result;for(int id:target.second) result.append(resolve(id));
-                    module->connect(target.first->getPort(ID::Y),result);module->remove(target.first);
-                }
-                log("PMUX_SHARED_TREE cells=%d mux_nodes=%d estimate_before=%d\n",GetSize(targets),GetSize(nodes),estimated_luts);
+            std::vector<std::vector<int>> groups;
+            for (int i=0;i<GetSize(all_targets);i++) {
+                int group=-1;
+                for (int g=0;g<GetSize(groups);g++)
+                    if(all_targets.at(groups.at(g).at(0)).ctrl==all_targets.at(i).ctrl) {group=g;break;}
+                if(group<0) groups.push_back({i}); else groups.at(group).push_back(i);
             }
+            int total_cells=0,total_nodes=0,total_estimated=0;
+            for(auto &group:groups) {
+                auto &first=all_targets.at(group.at(0));
+                int bits=GetSize(first.ctrl),codes=first.codes;
+                dict<SigBit,int> leaves;
+                std::vector<SigBit> wires;
+                auto leaf=[&](SigBit bit) {
+                    bit=sigmap(bit);
+                    if(!leaves.count(bit)) {leaves[bit]=GetSize(wires);wires.push_back(bit);}
+                    return leaves.at(bit);
+                };
+                std::vector<int> selectors;
+                for(auto bit:first.ctrl) selectors.push_back(leaf(bit));
+                std::vector<int> order(bits),best_order;
+                for(int i=0;i<bits;i++) order.at(i)=i;
+                std::vector<std::tuple<int,int,int>> best_nodes;
+                std::vector<std::vector<int>> best_outputs;
+                bool have_best=false;
+                auto make_graph=[&](const std::vector<int> &candidate_order,
+                                    std::vector<std::tuple<int,int,int>> &graph_nodes,
+                                    std::vector<std::vector<int>> &graph_outputs) {
+                    std::map<std::tuple<int,int,int>,int> memo;
+                    std::function<int(const std::vector<int>&,const std::vector<int>&,int)> build;
+                    build=[&](const std::vector<int> &column,const std::vector<int> &active_codes,int depth)->int {
+                        if(GetSize(active_codes)==1) return column.at(active_codes.at(0));
+                        std::vector<int> lo,hi;
+                        for(auto code:active_codes) ((code>>candidate_order.at(depth))&1?hi:lo).push_back(code);
+                        int a=build(column,lo,depth+1),b=build(column,hi,depth+1);
+                        if(a==b) return a;
+                        auto key=std::make_tuple(selectors.at(candidate_order.at(depth)),a,b);
+                        auto it=memo.find(key);if(it!=memo.end()) return it->second;
+                        int id=-1-GetSize(graph_nodes);graph_nodes.push_back(key);memo[key]=id;return id;
+                    };
+                    std::vector<int> active_codes(codes);
+                    for(int code=0;code<codes;code++) active_codes.at(code)=code;
+                    graph_outputs.clear();
+                    for(auto target_index:group) {
+                        auto &target=all_targets.at(target_index);
+                        std::vector<int> outputs;
+                        for(int bit=0;bit<target.width;bit++) {
+                            std::vector<int> column(codes);
+                            for(int code=0;code<codes;code++) column.at(code)=leaf(target.table.at(code)[bit]);
+                            outputs.push_back(build(column,active_codes,0));
+                        }
+                        graph_outputs.push_back(outputs);
+                    }
+                };
+                std::sort(order.begin(),order.end());
+                do {
+                    std::vector<std::tuple<int,int,int>> trial_nodes;
+                    std::vector<std::vector<int>> trial_outputs;
+                    make_graph(order,trial_nodes,trial_outputs);
+                    if(!have_best || GetSize(trial_nodes)<GetSize(best_nodes)) {
+                        best_order=order;best_nodes.swap(trial_nodes);best_outputs.swap(trial_outputs);have_best=true;
+                    }
+                } while(std::next_permutation(order.begin(),order.end()));
+                int estimated_luts=0;
+                for(auto target_index:group) {
+                    auto &target=all_targets.at(target_index);
+                    estimated_luts+=target.width*((target.codes+1)/2+(target.codes/2+2)/3);
+                }
+                total_cells+=GetSize(group);total_nodes+=GetSize(best_nodes);total_estimated+=estimated_luts;
+                if(have_best && GetSize(best_nodes)<=estimated_luts) {
+                    std::vector<SigBit> mapped;
+                    auto resolve=[&](int id)->SigBit {return id>=0?wires.at(id):mapped.at(-1-id);};
+                    for(auto node:best_nodes) {
+                        SigBit out=module->addWire(NEW_ID);
+                        module->addMux(NEW_ID,resolve(std::get<1>(node)),resolve(std::get<2>(node)),resolve(std::get<0>(node)),out);
+                        mapped.push_back(out);
+                    }
+                    int target_number=0;
+                    for(auto target_index:group) {
+                        SigSpec result;
+                        for(int id:best_outputs.at(target_number++)) result.append(resolve(id));
+                        module->connect(all_targets.at(target_index).cell->getPort(ID::Y),result);
+                        module->remove(all_targets.at(target_index).cell);
+                    }
+                    log("PMUX_SHARED_TREE cells=%d mux_nodes=%d estimate_before=%d order=",GetSize(group),GetSize(best_nodes),estimated_luts);
+                    for(auto bit:best_order) log("%d",bit);
+                    log("\n");
+                }
+            }
+            log("PMUX_TREE_ESTIMATE cells=%d nodes=%d before=%d\n",total_cells,total_nodes,total_estimated);
         }
         log("PMUX_COMPETITION_OPT substituted_bits=%d\n", replaced);
     }
