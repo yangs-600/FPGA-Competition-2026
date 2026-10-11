@@ -14,11 +14,11 @@ index f21900b2e..7ce7e8558 100644
  	peepopt_shiftmul_right.pmg
  	peepopt_shiftmul_left.pmg
 diff --git a/passes/opt/pmux_competition_opt.cc b/passes/opt/pmux_competition_opt.cc
-new file mode 100755
-index 000000000..7dd679e4f
+new file mode 100644
+index 000000000..0abeabcec
 --- /dev/null
 +++ b/passes/opt/pmux_competition_opt.cc
-@@ -0,0 +1,203 @@
+@@ -0,0 +1,229 @@
 +// Conditional constant propagation for mux data selected by equality decoders.
 +// No testcase names, source paths, probe synthesis, or register changes.
 +#include "kernel/yosys.h"
@@ -35,13 +35,13 @@ index 000000000..7dd679e4f
 +    void help() override {
 +        log("    pmux_competition_opt\n");
 +        log("Replace data bits implied by a true equality decoder in mux/pmux arms.\n");
-+        log("Shares equality-decoded PMUX trees, safely completes default codes, and searches selector order.\n");
++        log("Shares equality-decoded PMUX trees at any data width, specializes defaults, and searches selector order.\n");
 +        log("Preserves priority muxes and sequential cells. No synthesis probes.\n");
 +    }
 +    void execute(std::vector<std::string> args, RTLIL::Design *design) override {
 +        extra_args(args, 1, design);
-+        log_header(design, "Executing PMUX_COMPETITION_OPT v14.\n");
-+        int replaced = 0;
++        log_header(design, "Executing PMUX_COMPETITION_OPT v15.\n");
++        int replaced = 0, specialized_defaults = 0;
 +        for (auto module : design->selected_modules()) {
 +            if (module->get_bool_attribute(ID::blackbox)) continue;
 +            SigMap sigmap(module);
@@ -98,14 +98,19 @@ index 000000000..7dd679e4f
 +                int width;
 +                int codes;
 +                int explicit_arms;
++                int specialized_default_bits;
 +                std::vector<SigSpec> table;
 +            };
 +            std::vector<TableTarget> all_targets;
 +            for (auto c:module->selected_cells()) {
 +                if(c->type!=ID($pmux) || c->get_bool_attribute(ID::keep)) continue;
 +                auto ss=sigmap(c->getPort(ID::S));int arms=GetSize(ss),width=GetSize(c->getPort(ID::Y));
-+                if(width<8 || arms==0 || !decode.count(ss[0])) continue;
++                if(width==0 || arms==0 || !decode.count(ss[0])) continue;
 +                auto ctrl=decode.at(ss[0]).first; int bits=GetSize(ctrl),codes=1<<bits;
++                // A three-bit selector plus one data input fits one Cyclone IV
++                // 4-LUT. Wider narrow-output tables are left to ABC9 because its
++                // cross-bit packing is more accurate than this mux-node estimate.
++                if(width<8 && bits>3) continue;
 +                if(arms>codes) continue;
 +                std::vector<SigSpec> table(codes); std::vector<bool> seen(codes,false);bool valid=true;
 +                auto data=sigmap(c->getPort(ID::B));
@@ -115,21 +120,36 @@ index 000000000..7dd679e4f
 +                    if(code<0 || code>=codes || seen[code]) {valid=false;break;}
 +                    seen[code]=true;table[code]=data.extract(i*width,width);
 +                }
++                int target_specialized_defaults=0;
 +                if(valid && arms<codes) {
 +                    if(GetSize(c->getPort(ID::A))!=width) valid=false;
 +                    else {
 +                        auto fallback=sigmap(c->getPort(ID::A));
-+                        for(int code=0;code<codes;code++) if(!seen[code]) table[code]=fallback;
++                        for(int code=0;code<codes;code++) if(!seen[code]) {
++                            auto value=fallback;
++                            // This table entry is only reachable when ctrl==code.
++                            // Cofactor direct control-bit data into constants before
++                            // constructing the shared decision DAG.
++                            for(int bit=0;bit<GetSize(value);bit++)
++                                for(int selector=0;selector<bits;selector++)
++                                    if(value[bit]==ctrl[selector]) {
++                                        value[bit]=((code>>selector)&1)?State::S1:State::S0;
++                                        target_specialized_defaults++;
++                                        break;
++                                    }
++                            table[code]=value;
++                        }
 +                    }
 +                }
 +                if(!valid) continue;
-+                all_targets.push_back({c,ctrl,width,codes,arms,table});
++                all_targets.push_back({c,ctrl,width,codes,arms,target_specialized_defaults,table});
 +            }
 +            std::vector<std::vector<int>> groups;
 +            for (int i=0;i<GetSize(all_targets);i++) {
 +                int group=-1;
 +                for (int g=0;g<GetSize(groups);g++)
-+                    if(all_targets.at(groups.at(g).at(0)).ctrl==all_targets.at(i).ctrl) {group=g;break;}
++                    if(all_targets.at(groups.at(g).at(0)).ctrl==all_targets.at(i).ctrl &&
++                       (all_targets.at(groups.at(g).at(0)).width<8)==(all_targets.at(i).width<8)) {group=g;break;}
 +                if(group<0) groups.push_back({i}); else groups.at(group).push_back(i);
 +            }
 +            int total_cells=0,total_nodes=0,total_estimated=0;
@@ -196,7 +216,12 @@ index 000000000..7dd679e4f
 +                    estimated_luts+=target.width*((target.explicit_arms+1)/2+(target.explicit_arms/2+2)/3);
 +                }
 +                total_cells+=GetSize(group);total_nodes+=GetSize(best_nodes);total_estimated+=estimated_luts;
-+                if(have_best && GetSize(best_nodes)<=estimated_luts) {
++                // Narrow PMUX estimates have less room to absorb mapper overhead,
++                // so require a 25% safety margin and keep them isolated from the
++                // previously validated wide-output selector order.
++                bool cost_ok=first.width<8 ? 4*GetSize(best_nodes)<=3*estimated_luts
++                                           : GetSize(best_nodes)<=estimated_luts;
++                if(have_best && cost_ok) {
 +                    std::vector<SigBit> mapped;
 +                    auto resolve=[&](int id)->SigBit {return id>=0?wires.at(id):mapped.at(-1-id);};
 +                    for(auto node:best_nodes) {
@@ -208,6 +233,7 @@ index 000000000..7dd679e4f
 +                    for(auto target_index:group) {
 +                        SigSpec result;
 +                        for(int id:best_outputs.at(target_number++)) result.append(resolve(id));
++                        specialized_defaults+=all_targets.at(target_index).specialized_default_bits;
 +                        module->connect(all_targets.at(target_index).cell->getPort(ID::Y),result);
 +                        module->remove(all_targets.at(target_index).cell);
 +                    }
@@ -218,7 +244,7 @@ index 000000000..7dd679e4f
 +            }
 +            log("PMUX_TREE_ESTIMATE cells=%d nodes=%d before=%d\n",total_cells,total_nodes,total_estimated);
 +        }
-+        log("PMUX_COMPETITION_OPT substituted_bits=%d\n", replaced);
++        log("PMUX_COMPETITION_OPT substituted_bits=%d specialized_default_bits=%d\n", replaced, specialized_defaults);
 +    }
 +} PmuxCompetitionOpt;
 +PRIVATE_NAMESPACE_END

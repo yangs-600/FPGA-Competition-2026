@@ -38,6 +38,40 @@ assert trigger and ok,name
 rows.append(dict(name=name,proof='PASS',tree_triggered=True,missing_codes=12,counts=counts(p/'netlist.json',name)))
 print(name,'PASS',trigger,flush=True)
 
+# The default arm directly references a selector bit. Under each missing code
+# that bit has a known value and should be cofactored before DAG construction.
+name='default_ctrl_specialization';p=out/name;p.mkdir()
+code=f'module {name}(input [3:0] sel,input [7:0] b,output reg [7:0] y);\nalways @* begin\ny={{8{{sel[3]}}}};\ncase(sel)\n'
+for i in [2,0,3,1]: code+=f"4'd{i}: y=b;\n"
+code+='endcase\nend\nendmodule\n';src=p/'input.v';src.write_text(code)
+flow=p/'flow.ys';flow.write_text(f'read_verilog {src}\nsynth_intel -family cycloneiv -top {name}\nwrite_json {p}/netlist.json\nwrite_verilog -noattr -norename {p}/netlist.v\n')
+measure([m['candidate'],'-Q','-T','-s',str(flow)],p/'synthesis.log',env)
+ok=prove(src,name,p/'netlist.v',p/'proof',env);log=(p/'synthesis.log').read_text()
+match=re.search(r'specialized_default_bits=(\d+)',log);trigger='PMUX_SHARED_TREE cells=' in log
+assert trigger and match and int(match.group(1))>0 and ok,name
+rows.append(dict(name=name,proof='PASS',tree_triggered=True,specialized_default_bits=int(match.group(1)),counts=counts(p/'netlist.json',name)))
+print(name,'PASS',match.group(1),flush=True)
+
+# Two four-bit PMUX outputs share the same decoder and permuted data leaves.
+# v14 skipped widths below eight; v15 must optimize them when the cost gate wins.
+name='narrow_shared_4';p=out/name;p.mkdir();bits=3;width=4;arms=1<<bits
+code=f'module {name}(input [2:0] sel,input [31:0] data,output reg [3:0] y,z);\nalways @* begin\ny=0;z=0;\ncase(sel)\n'
+for i in range(arms):
+    base=i*width
+    other=(i^1)*width
+    code+=f"3'd{i}: begin y=data[{base} +: 4]; z=data[{other} +: 4]; end\n"
+code+='endcase\nend\nendmodule\n';src=p/'input.v';src.write_text(code)
+candidate_flow=p/'candidate.ys';candidate_flow.write_text(f'read_verilog {src}\nsynth_intel -family cycloneiv -top {name}\nwrite_json {p}/candidate.json\nwrite_verilog -noattr -norename {p}/candidate.v\n')
+baseline_flow=p/'baseline.ys';baseline_flow.write_text(f'read_verilog {src}\nsynth_intel -family cycloneiv -top {name}\nwrite_json {p}/baseline.json\n')
+measure([m['candidate'],'-Q','-T','-s',str(candidate_flow)],p/'candidate.log',env)
+measure([m['baseline'],'-Q','-T','-s',str(baseline_flow)],p/'baseline.log',env)
+ok=prove(src,name,p/'candidate.v',p/'proof',env);log=(p/'candidate.log').read_text()
+candidate_counts=counts(p/'candidate.json',name);baseline_counts=counts(p/'baseline.json',name)
+trigger='PMUX_SHARED_TREE cells=' in log
+assert trigger and ok and candidate_counts['logic_cells']<baseline_counts['logic_cells'],name
+rows.append(dict(name=name,proof='PASS',tree_triggered=True,baseline_counts=baseline_counts,candidate_counts=candidate_counts))
+print(name,'PASS',baseline_counts['logic_cells'],candidate_counts['logic_cells'],flush=True)
+
 for bits,missing in [(3,0),(4,0),(5,0),(3,1),(4,1),(5,1),(3,2),(4,2),(5,2)]:
     name=f'decoder_{bits}_missing_{missing}';p=out/name;p.mkdir();arms=1<<bits;width=8
     order=list(range(arms-missing));random.Random(710+bits+missing).shuffle(order)
