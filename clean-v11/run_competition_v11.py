@@ -42,8 +42,8 @@ def environment():
         if any(not value.startswith('Yosys 0.69 (') for value in versions.values()):
             raise RuntimeError('Expected exact reconstructed Yosys 0.69: '+repr(versions))
         help_text=subprocess.check_output([str(paths['candidate']),'-Q','-T','-p','help pmux_competition_opt'],text=True)
-        if 'at any data width' not in help_text:
-            raise RuntimeError('Reconstructed candidate does not contain the v15 PMUX pass')
+        if 'Canonicalizes and shares' not in help_text:
+            raise RuntimeError('Reconstructed candidate does not contain the v16 PMUX pass')
         rejected=subprocess.run([str(paths['baseline']),'-Q','-T','-p','pmux_competition_opt'],
                                 stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True)
         if rejected.returncode==0: raise RuntimeError('Reconstructed baseline contains the candidate pass')

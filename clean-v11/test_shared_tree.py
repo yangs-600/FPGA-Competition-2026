@@ -72,6 +72,28 @@ assert trigger and ok and candidate_counts['logic_cells']<baseline_counts['logic
 rows.append(dict(name=name,proof='PASS',tree_triggered=True,baseline_counts=baseline_counts,candidate_counts=candidate_counts))
 print(name,'PASS',baseline_counts['logic_cells'],candidate_counts['logic_cells'],flush=True)
 
+# Two narrow PMUX outputs use the same logical selector, but the second equality
+# decoder presents its bits as {sel[1],sel[2],sel[0]}. v16 canonicalizes the
+# control vector and remaps each comparison constant before grouping the tables.
+name='permuted_decoder_sharing';p=out/name;p.mkdir();src=p/'input.v'
+code=f'module {name}(input [2:0] sel,input [31:0] data,output reg [3:0] y,z);\nalways @* begin\ny=0;\ncase(sel)\n'
+for i in range(8): code+=f"3'd{i}: y=data[{i*4} +: 4];\n"
+code+='endcase\nend\nalways @* begin\nz=0;\ncase({sel[1],sel[2],sel[0]})\n'
+for i in range(8):
+    permuted=((i>>1)&1)*4+((i>>2)&1)*2+(i&1)
+    code+=f"3'd{permuted}: z=data[{(i^1)*4} +: 4];\n"
+code+='endcase\nend\nendmodule\n';src.write_text(code)
+candidate_flow=p/'candidate.ys';candidate_flow.write_text(f'read_verilog {src}\nsynth_intel -family cycloneiv -top {name}\nwrite_json {p}/candidate.json\nwrite_verilog -noattr -norename {p}/candidate.v\n')
+baseline_flow=p/'baseline.ys';baseline_flow.write_text(f'read_verilog {src}\nsynth_intel -family cycloneiv -top {name}\nwrite_json {p}/baseline.json\n')
+measure([m['candidate'],'-Q','-T','-s',str(candidate_flow)],p/'candidate.log',env)
+measure([m['baseline'],'-Q','-T','-s',str(baseline_flow)],p/'baseline.log',env)
+ok=prove(src,name,p/'candidate.v',p/'proof',env);log=(p/'candidate.log').read_text()
+candidate_counts=counts(p/'candidate.json',name);baseline_counts=counts(p/'baseline.json',name)
+trigger='PMUX_SHARED_TREE cells=2' in log
+assert trigger and ok and candidate_counts['logic_cells']<baseline_counts['logic_cells'],name
+rows.append(dict(name=name,proof='PASS',tree_triggered=True,baseline_counts=baseline_counts,candidate_counts=candidate_counts))
+print(name,'PASS',baseline_counts['logic_cells'],candidate_counts['logic_cells'],flush=True)
+
 for bits,missing in [(3,0),(4,0),(5,0),(3,1),(4,1),(5,1),(3,2),(4,2),(5,2)]:
     name=f'decoder_{bits}_missing_{missing}';p=out/name;p.mkdir();arms=1<<bits;width=8
     order=list(range(arms-missing));random.Random(710+bits+missing).shuffle(order)

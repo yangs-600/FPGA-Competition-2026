@@ -14,12 +14,12 @@ struct PmuxCompetitionOpt : public Pass {
     void help() override {
         log("    pmux_competition_opt\n");
         log("Replace data bits implied by a true equality decoder in mux/pmux arms.\n");
-        log("Shares equality-decoded PMUX trees at any data width, specializes defaults, and searches selector order.\n");
+        log("Canonicalizes and shares equality-decoded PMUX trees, specializes defaults, and searches selector order.\n");
         log("Preserves priority muxes and sequential cells. No synthesis probes.\n");
     }
     void execute(std::vector<std::string> args, RTLIL::Design *design) override {
         extra_args(args, 1, design);
-        log_header(design, "Executing PMUX_COMPETITION_OPT v15.\n");
+        log_header(design, "Executing PMUX_COMPETITION_OPT v16.\n");
         int replaced = 0, specialized_defaults = 0;
         for (auto module : design->selected_modules()) {
             if (module->get_bool_attribute(ID::blackbox)) continue;
@@ -44,7 +44,31 @@ struct PmuxCompetitionOpt : public Pass {
                     if (f.count(a[i]) && f.at(a[i]) != b[i]) consistent = false;
                     f[a[i]] = b[i];
                 }
-                if (consistent) { facts[y[0]] = f; if (GetSize(a) >= 3 && GetSize(a) <= 6 && GetSize(f)==GetSize(a)) decode[y[0]] = {a,b.as_int()}; }
+                if (consistent) {
+                    facts[y[0]] = f;
+                    if (GetSize(a) >= 3 && GetSize(a) <= 6 && GetSize(f)==GetSize(a)) {
+                        // Equality decoders may spell the same control vector in
+                        // different concatenation orders. Sort it by stable signal
+                        // identity and move the constant bits with it, so equivalent
+                        // decoder tables can share one decision DAG.
+                        std::vector<std::pair<SigBit, int>> ordered;
+                        for (int i = 0; i < GetSize(a); i++) ordered.push_back({a[i], i});
+                        std::sort(ordered.begin(), ordered.end(), [](const auto &lhs, const auto &rhs) {
+                            if (lhs.first.wire->name != rhs.first.wire->name)
+                                return lhs.first.wire->name < rhs.first.wire->name;
+                            if (lhs.first.offset != rhs.first.offset)
+                                return lhs.first.offset < rhs.first.offset;
+                            return lhs.second < rhs.second;
+                        });
+                        SigSpec canonical_ctrl;
+                        int canonical_code = 0;
+                        for (int i = 0; i < GetSize(ordered); i++) {
+                            canonical_ctrl.append(ordered[i].first);
+                            if (b[ordered[i].second] == State::S1) canonical_code |= 1 << i;
+                        }
+                        decode[y[0]] = {canonical_ctrl, canonical_code};
+                    }
+                }
             }
             for (auto c : module->selected_cells()) {
                 if (!c->type.in(ID($mux), ID($pmux)) || c->get_bool_attribute(ID::keep)) continue;
