@@ -1,2 +1,10 @@
 __pycache__/
 *.py[cod]
+
+# Local rebuilt tools and temporary validation runs.
+/clean-v11/toolchains/
+/clean-v11/competition-v11-*/
+/clean-v11/shared-tree-tests-*/
+/clean-v11/local-build-v14*
+/clean-v11/scale-1000-*
+/clean-v11/postabc-*

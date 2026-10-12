@@ -39,3 +39,7 @@
 一次预热后，原版/候选版交错运行 21 次并取 Linux 子进程 CPU 中位数，候选相对原版的变化依次为 test1 `-1.96%`、test2 `-1.36%`、test3 `-1.87%`、test4 `-4.90%`。这只是当前虚拟机交叉检查，最终仍以官方 Windows 运行与计时为准。
 
 可重放补丁位于 `clean-v11/toolchains/yosys-0.69/competition-v11/synth-intel-competition.patch`，基于 Yosys 提交 `9f75ca1f9834a39a863915b5dae0c7b1e33533bc`，仓库规范化内容的 SHA-256 为 `dc6cf742985d96844f16f01e4edf8b41260e496352b105aa0ce5c2f72e9631b3`，并已通过反向 `git apply --check`。
+
+## 2026-10-12 官方口径和 Windows 验收
+
+按照问题汇总 C25/C67，应计入独立 NOT 后对四例减少率取算术平均：正式平均为 21.89236111%，LUT 单项 22.11038961% 仅作辅助。四例 Windows 每例 21 轮 CPU/主进程峰值工作集增量均不超过 5%，实际输出的 ABC9 后原生 LUT ILANG 八次 EQY 均 PASS，负对照检出明确反例。完整证据和复测方法见 [Windows 验收记录](WINDOWS_V14_VALIDATION.md)。

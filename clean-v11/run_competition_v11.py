@@ -124,7 +124,7 @@ def main():
     if args.repeats<3: ap.error('At least 3 paired repeats required')
     env,m=environment();out=Path(tempfile.mkdtemp(prefix='competition-v11-',dir=ROOT))
     report=dict(status='RUNNING',harness_sha256=sha(Path(__file__)),formal_model_sha256=sha(ROOT/'formal_cycloneiv.v'),manifest=m,cases=[],report_dir=str(out),repeats=args.repeats,
-                metric='primary LUT count plus explicit $not audit; every non-LUT cell type is constrained not to increase',
+                metric='official per-case mean: LUT plus standalone NOT; DFF and all other cell types must not increase',
                 timing='Linux wait4 user+system CPU, including waited ABC descendants; full read/synth/write process',
                 memory='Linux wait4 ru_maxrss: maximum resident high-water mark, not simultaneous sum of process-tree RSS',
                 proof_model='Restricted inverse models of emitted Cyclone IV LUT and DFFE mapping, not vendor timing models')
@@ -149,8 +149,9 @@ def main():
                 save()
                 if not proof: raise RuntimeError('RTL equivalence failed '+top+' '+role)
             base=row['roles']['baseline'];cand=row['roles']['candidate']
-            row['gain_percent']=100*(base['logic_cells']-cand['logic_cells'])/base['logic_cells']
+            row['lut_gain_percent']=100*(base['logic_cells']-cand['logic_cells'])/base['logic_cells']
             row['scored_logic_gain_percent']=100*(base['scored_logic_cells']-cand['scored_logic_cells'])/base['scored_logic_cells']
+            row['gain_percent']=row['scored_logic_gain_percent']
             row['dff_nonincrease']=cand['dff_cells']<=base['dff_cells']
             checked_types=(set(base['by_type'])|set(cand['by_type']))-{'cycloneiv_lcell_comb','$scopeinfo'}
             row['other_cell_types_nonincrease']=all(cand['by_type'].get(t,0)<=base['by_type'].get(t,0) for t in checked_types)
@@ -185,6 +186,7 @@ def main():
             raise RuntimeError('Negative control needs a definite counterexample; inspect log')
         report['negative_control']='EXPECTED_COUNTEREXAMPLE'
         report['average_gain_percent']=statistics.mean(r['gain_percent'] for r in report['cases'])
+        report['average_lut_gain_percent']=statistics.mean(r['lut_gain_percent'] for r in report['cases'])
         report['all_dff_nonincrease']=all(r['dff_nonincrease'] for r in report['cases'])
         report['all_other_cell_types_nonincrease']=all(r['other_cell_types_nonincrease'] for r in report['cases'])
         report['all_measured_5pct_pass']=all(r['measured_5pct_pass'] for r in report['cases'])

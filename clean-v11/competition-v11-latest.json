@@ -1,17 +1,26 @@
 {
   "status": "PASS",
-  "harness_sha256": "56f98dc74611125c8754e89302da96bd7e9ef564e94c1db99e839519c940a891",
+  "harness_sha256": "26d367c8cdc3831ead306dedf42ffbdae3709cf72a38754f02fcec72d3502a9f",
   "formal_model_sha256": "3d96aa4532000389a4ac2998cef702b7a4ed46b23707b4e0dd4cb1688b4db2d2",
   "manifest": {
     "yosys_release": "0.69",
     "yosys_commit": "9f75ca1f9834a39a863915b5dae0c7b1e33533bc",
     "source_sha256": "086045e23253917b93c71fc2d9db495df3c153cdc5d212bac505df7c4ad62e2f",
+    "repository_commit": "c9b5d9c8ec95605c672dd79185b8c5545ca3da83",
+    "baseline": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/build-repro/yosys-original",
+    "candidate": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/build-repro/yosys-competition-reconstructed",
+    "abc": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/build-repro/yosys-abc",
+    "patch": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-v11/synth-intel-competition.patch",
+    "plugin_source": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/pmux_competition_v11.cc",
+    "abc_script": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/build-repro/share/intel/competition_abc_v11.abc",
+    "integrated_source": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/src/passes/opt/pmux_competition_opt.cc",
+    "integrated_source_sha256": "c2051645de66be52e0f8918651839258f2278f840a30eed5652ac47767f99250",
     "build_config": [
       "/home/ubuntu/FPGA/toolchains/cmake-3.31.6/bin/cmake",
       "-S",
-      "/home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/src",
+      "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/src",
       "-B",
-      "/home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/build",
+      "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/build-repro",
       "-G",
       "Unix Makefiles",
       "-DCMAKE_BUILD_TYPE=Release",
@@ -25,1137 +34,1155 @@
       "-DCMAKE_C_COMPILER_LAUNCHER=",
       "-DCMAKE_CXX_COMPILER_LAUNCHER="
     ],
-    "baseline": "/home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/build/yosys-original",
-    "candidate": "/home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/build/yosys-competition-b6740f4436747df7",
-    "abc": "/home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/build/yosys-abc",
-    "patch": "/home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/competition-v11/synth-intel-competition.patch",
-    "plugin_source": "/home/ubuntu/FPGA/clean-v11/pmux_competition_v11.cc",
-    "abc_script": "/home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/build/share/intel/competition_abc_v11.abc",
-    "baseline_sha256": "4772e4ab5f3f2723c67e0b3b0caeede03b1967cd96df655beb6cf9388b17063f",
-    "candidate_sha256": "0f56ec0301908813e1fedb20399252a5b342f757e88f080512fd78f5657088dc",
-    "abc_sha256": "8a18926b850560d45d46fe16a04eadfcc9f18e14542a67149edb189ecd12e28f",
-    "patch_sha256": "b6740f4436747df782c728ca98908923479b45e50f32296cdfb1c71aea54ee85",
-    "plugin_source_sha256": "8df09e299ce77a6e5d4552bc8472a91d1e49aa37484a5a06536af51654595971",
-    "abc_script_sha256": "550e309f06dbb672b3400931b48eca94f52ee11099d079d28584cfcefda1b9fa",
+    "external_objects_copied": 0,
     "baseline_version": "Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)",
     "candidate_version": "Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)",
+    "baseline_sha256": "5ac190d5096b14967864d093212858bdd457155a1b5e7d2945f314e070d5c2ef",
+    "candidate_sha256": "309d697d4682d5e11aa75734b38f01efc83087c90f239c853b86546c89ee2c5b",
+    "abc_sha256": "4c44e7c12e3f060861cec186cb64718e195fc5b12d7cb6c3046f4aa6b022f32b",
+    "patch_sha256": "dc6cf742985d96844f16f01e4edf8b41260e496352b105aa0ce5c2f72e9631b3",
+    "plugin_source_sha256": "e4cc16ab540433d2ade0781d8053b972bc5cc225b188796663540dc7cd337a8c",
+    "abc_script_sha256": "550e309f06dbb672b3400931b48eca94f52ee11099d079d28584cfcefda1b9fa",
     "eqy": {
       "commit": "4a72eb94fc253062464afee4d0018359017bb846",
       "version": "EQY v0.69",
       "source_sha256": "dd1a4c5edcf83353c66e9765661cc332f4c7f6f122585c97da68290eab230291",
+      "executable": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/eqy-0.69/install-repro/bin/eqy",
       "files": {
-        "/home/ubuntu/FPGA/clean-v11/toolchains/eqy-0.69/install/bin/eqy": "4c4110be84a2c9b84d5cea9023f0e5bc31987d9d4ddc02276dc85b97f517f76e",
-        "/home/ubuntu/FPGA/clean-v11/toolchains/eqy-0.69/install/share/yosys/python3/eqy_job.py": "7ad8857fa170ba804a086e91bd200487545f01006a705cad22a861c757fddcc0",
-        "/home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/proof-bin/sby": "9a4581bdfa7a85d14913a95b0b14b8d0dc0f7475c725ee0ff2ba1828e4b2ee71",
-        "/home/ubuntu/FPGA/clean-v11/toolchains/eqy-0.69/install/share/yosys/plugins/eqy_combine.so": "1b595c9ca7aa98947eebd418b0f2ec13d528dbd74dca36270e91218134de19b5",
-        "/home/ubuntu/FPGA/clean-v11/toolchains/eqy-0.69/install/share/yosys/plugins/eqy_partition.so": "0a35ec35fbe97a95a5daeb3d0e7bcf1fe5ad926aea22aad6b1b6359ff50c1fa4",
-        "/home/ubuntu/FPGA/clean-v11/toolchains/eqy-0.69/install/share/yosys/plugins/eqy_recode.so": "01619a6f91cc3169267adb1dedd8dd6667d2960fca597a579fecd20791f0f36c"
-      },
-      "executable": "/home/ubuntu/FPGA/clean-v11/toolchains/eqy-0.69/install/bin/eqy"
+        "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/eqy-0.69/install-repro/bin/eqy": "4c4110be84a2c9b84d5cea9023f0e5bc31987d9d4ddc02276dc85b97f517f76e",
+        "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/eqy-0.69/install-repro/share/yosys/plugins/eqy_combine.so": "362a2f25e9cbfcb337d5a0ff758ccd3de3f6006d9fe2092b23addaa145948f6d",
+        "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/eqy-0.69/install-repro/share/yosys/plugins/eqy_partition.so": "84914bd6d0a765e06a89787d0113a8dbc37ff70d2a4a40ec8b8d10b141c91bcb",
+        "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/eqy-0.69/install-repro/share/yosys/plugins/eqy_recode.so": "996747e24c52e9caeaef889dbce4868dabaa342fa7caf88ca14b23ade9165092",
+        "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/eqy-0.69/install-repro/share/yosys/python3/__pycache__/eqy_job.cpython-310.pyc": "4ac8859625e1f0a35b6c899b7768c9c211635a66be187dbfbc987a21d0b5d5c0",
+        "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/eqy-0.69/install-repro/share/yosys/python3/eqy_job.py": "7ad8857fa170ba804a086e91bd200487545f01006a705cad22a861c757fddcc0",
+        "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/proof-bin/sby": "d4d17aadf9031f5b476243bbf8a424c5d29331c86e30c745e5376a59c2380f20"
+      }
     }
   },
   "cases": [
     {
       "name": "test1",
       "source_sha256": "2d2dba011b0e8799d0de3790b69b7f01c6eb6ac665c4321b57b0378a4972fd13",
-      "source": "/home/ubuntu/FPGA/clean-v11/competition_case/test1/test1.v",
+      "source": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/competition_case/test1/test1.v",
       "roles": {
         "baseline": {
           "logic_cells": 286,
           "dff_cells": 222,
           "standalone_not_cells": 2,
+          "scored_logic_cells": 288,
           "by_type": {
             "$not": 2,
             "cycloneiv_lcell_comb": 286,
             "dffeas": 222
           },
           "initial": {
-            "cpu_seconds": 0.18168499999999999,
-            "wall_seconds": 0.19456286300010106,
-            "peak_rss_kib": 31616
+            "cpu_seconds": 0.273053,
+            "wall_seconds": 0.27304922000030274,
+            "peak_rss_kib": 30976
           },
           "proof": "PASS",
-          "path": "/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test1/baseline",
+          "path": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/competition-v11-jz3bf3a8/test1/baseline",
           "samples": [
             {
-              "cpu_seconds": 0.161364,
-              "wall_seconds": 0.16273673500108998,
-              "peak_rss_kib": 31232
+              "cpu_seconds": 0.290224,
+              "wall_seconds": 0.29054103299995404,
+              "peak_rss_kib": 31104
             },
             {
-              "cpu_seconds": 0.164682,
-              "wall_seconds": 0.16639883400057442,
-              "peak_rss_kib": 31232
+              "cpu_seconds": 0.260952,
+              "wall_seconds": 0.26059009499977037,
+              "peak_rss_kib": 31104
             },
             {
-              "cpu_seconds": 0.161335,
-              "wall_seconds": 0.1626343040006759,
-              "peak_rss_kib": 30976
-            },
-            {
-              "cpu_seconds": 0.156764,
-              "wall_seconds": 0.15911664799932623,
-              "peak_rss_kib": 31360
-            },
-            {
-              "cpu_seconds": 0.16204,
-              "wall_seconds": 0.16269959100100095,
-              "peak_rss_kib": 31360
-            },
-            {
-              "cpu_seconds": 0.158022,
-              "wall_seconds": 0.158863647000544,
-              "peak_rss_kib": 31360
-            },
-            {
-              "cpu_seconds": 0.1574,
-              "wall_seconds": 0.15901532099996984,
-              "peak_rss_kib": 31232
-            },
-            {
-              "cpu_seconds": 0.158588,
-              "wall_seconds": 0.16018235299998196,
-              "peak_rss_kib": 30848
-            },
-            {
-              "cpu_seconds": 0.15544699999999997,
-              "wall_seconds": 0.15725653900153702,
-              "peak_rss_kib": 31232
-            },
-            {
-              "cpu_seconds": 0.16096799999999997,
-              "wall_seconds": 0.1620292919997155,
-              "peak_rss_kib": 31360
-            },
-            {
-              "cpu_seconds": 0.16357599999999997,
-              "wall_seconds": 0.16508571899976232,
-              "peak_rss_kib": 30848
-            },
-            {
-              "cpu_seconds": 0.16154000000000002,
-              "wall_seconds": 0.16327731199999107,
-              "peak_rss_kib": 31360
-            },
-            {
-              "cpu_seconds": 0.16164699999999999,
-              "wall_seconds": 0.16352583600018988,
-              "peak_rss_kib": 31232
-            },
-            {
-              "cpu_seconds": 0.15863,
-              "wall_seconds": 0.1590755649995117,
+              "cpu_seconds": 0.27331099999999997,
+              "wall_seconds": 0.27429112099980557,
               "peak_rss_kib": 31488
             },
             {
-              "cpu_seconds": 0.16161199999999998,
-              "wall_seconds": 0.1633023479989788,
-              "peak_rss_kib": 30976
+              "cpu_seconds": 0.267615,
+              "wall_seconds": 0.26792422900007296,
+              "peak_rss_kib": 31232
             },
             {
-              "cpu_seconds": 0.16200799999999999,
-              "wall_seconds": 0.16283730499890225,
-              "peak_rss_kib": 30848
-            },
-            {
-              "cpu_seconds": 0.16863899999999998,
-              "wall_seconds": 0.1700382790004369,
+              "cpu_seconds": 0.276768,
+              "wall_seconds": 0.2763974530002997,
               "peak_rss_kib": 31360
             },
             {
-              "cpu_seconds": 0.159837,
-              "wall_seconds": 0.16090455199991993,
+              "cpu_seconds": 0.270303,
+              "wall_seconds": 0.2716543710002952,
+              "peak_rss_kib": 31232
+            },
+            {
+              "cpu_seconds": 0.264986,
+              "wall_seconds": 0.2652773419999903,
               "peak_rss_kib": 31360
             },
             {
-              "cpu_seconds": 0.159737,
-              "wall_seconds": 0.16146943899912003,
-              "peak_rss_kib": 30976
+              "cpu_seconds": 0.268702,
+              "wall_seconds": 0.2698331470000994,
+              "peak_rss_kib": 31616
             },
             {
-              "cpu_seconds": 0.159456,
-              "wall_seconds": 0.16031886200107692,
-              "peak_rss_kib": 30976
+              "cpu_seconds": 0.26433,
+              "wall_seconds": 0.26571965899984207,
+              "peak_rss_kib": 31488
             },
             {
-              "cpu_seconds": 0.159558,
-              "wall_seconds": 0.15980758400110062,
-              "peak_rss_kib": 31360
+              "cpu_seconds": 0.266588,
+              "wall_seconds": 0.2678800329999831,
+              "peak_rss_kib": 31104
+            },
+            {
+              "cpu_seconds": 0.260969,
+              "wall_seconds": 0.2617392160000236,
+              "peak_rss_kib": 31488
+            },
+            {
+              "cpu_seconds": 0.281868,
+              "wall_seconds": 0.281457785999919,
+              "peak_rss_kib": 31488
+            },
+            {
+              "cpu_seconds": 0.238786,
+              "wall_seconds": 0.23918029700007537,
+              "peak_rss_kib": 31872
+            },
+            {
+              "cpu_seconds": 0.249982,
+              "wall_seconds": 0.2504128270002184,
+              "peak_rss_kib": 31616
+            },
+            {
+              "cpu_seconds": 0.271397,
+              "wall_seconds": 0.27181818700000804,
+              "peak_rss_kib": 31616
+            },
+            {
+              "cpu_seconds": 0.249385,
+              "wall_seconds": 0.24988938599972244,
+              "peak_rss_kib": 31872
+            },
+            {
+              "cpu_seconds": 0.24737699999999999,
+              "wall_seconds": 0.2466195299998617,
+              "peak_rss_kib": 31744
+            },
+            {
+              "cpu_seconds": 0.241188,
+              "wall_seconds": 0.24230069599980197,
+              "peak_rss_kib": 31488
+            },
+            {
+              "cpu_seconds": 0.23468299999999997,
+              "wall_seconds": 0.23590849399988656,
+              "peak_rss_kib": 31104
+            },
+            {
+              "cpu_seconds": 0.240253,
+              "wall_seconds": 0.2397104550000222,
+              "peak_rss_kib": 31232
+            },
+            {
+              "cpu_seconds": 0.249154,
+              "wall_seconds": 0.24855566499991255,
+              "peak_rss_kib": 31488
             }
           ],
-          "median_cpu_seconds": 0.16096799999999997,
-          "median_peak_rss_kib": 31232,
-          "max_peak_rss_kib": 31488,
+          "median_cpu_seconds": 0.26433,
+          "median_peak_rss_kib": 31488,
+          "max_peak_rss_kib": 31872,
           "cpu_range_seconds": [
-            0.15544699999999997,
-            0.16863899999999998
+            0.23468299999999997,
+            0.290224
           ]
         },
         "candidate": {
           "logic_cells": 221,
           "dff_cells": 222,
           "standalone_not_cells": 2,
+          "scored_logic_cells": 223,
           "by_type": {
             "$not": 2,
-            "cycloneiv_lcell_comb": 221,
-            "dffeas": 222
+            "dffeas": 222,
+            "cycloneiv_lcell_comb": 221
           },
           "initial": {
-            "cpu_seconds": 0.143214,
-            "wall_seconds": 0.14534400699994876,
-            "peak_rss_kib": 30208
+            "cpu_seconds": 0.240116,
+            "wall_seconds": 0.24023915899988424,
+            "peak_rss_kib": 30592
           },
           "proof": "PASS",
-          "path": "/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test1/candidate",
+          "path": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/competition-v11-jz3bf3a8/test1/candidate",
           "samples": [
             {
-              "cpu_seconds": 0.15023799999999998,
-              "wall_seconds": 0.15046493299996655,
+              "cpu_seconds": 0.26534199999999997,
+              "wall_seconds": 0.26468344599970806,
               "peak_rss_kib": 30592
             },
             {
-              "cpu_seconds": 0.154718,
-              "wall_seconds": 0.15623847000097157,
-              "peak_rss_kib": 30336
-            },
-            {
-              "cpu_seconds": 0.142596,
-              "wall_seconds": 0.14300568499857036,
-              "peak_rss_kib": 30848
-            },
-            {
-              "cpu_seconds": 0.14627099999999998,
-              "wall_seconds": 0.14614225900004385,
-              "peak_rss_kib": 30464
-            },
-            {
-              "cpu_seconds": 0.145008,
-              "wall_seconds": 0.14696261499921093,
-              "peak_rss_kib": 30592
-            },
-            {
-              "cpu_seconds": 0.147083,
-              "wall_seconds": 0.14766451100149425,
-              "peak_rss_kib": 30464
-            },
-            {
-              "cpu_seconds": 0.145122,
-              "wall_seconds": 0.14514527699975588,
-              "peak_rss_kib": 30464
-            },
-            {
-              "cpu_seconds": 0.145867,
-              "wall_seconds": 0.1481161690007866,
-              "peak_rss_kib": 30464
-            },
-            {
-              "cpu_seconds": 0.144389,
-              "wall_seconds": 0.14510856999913813,
-              "peak_rss_kib": 30592
-            },
-            {
-              "cpu_seconds": 0.146719,
-              "wall_seconds": 0.14758157600044797,
-              "peak_rss_kib": 30592
-            },
-            {
-              "cpu_seconds": 0.146443,
-              "wall_seconds": 0.14671567200093705,
-              "peak_rss_kib": 30592
-            },
-            {
-              "cpu_seconds": 0.143921,
-              "wall_seconds": 0.1457870800004457,
-              "peak_rss_kib": 30336
-            },
-            {
-              "cpu_seconds": 0.149726,
-              "wall_seconds": 0.15030301100159704,
-              "peak_rss_kib": 30592
-            },
-            {
-              "cpu_seconds": 0.145284,
-              "wall_seconds": 0.14566668700172158,
-              "peak_rss_kib": 30464
-            },
-            {
-              "cpu_seconds": 0.148786,
-              "wall_seconds": 0.1487756709993846,
-              "peak_rss_kib": 30592
-            },
-            {
-              "cpu_seconds": 0.14585,
-              "wall_seconds": 0.14658512499954668,
-              "peak_rss_kib": 30464
-            },
-            {
-              "cpu_seconds": 0.14771299999999998,
-              "wall_seconds": 0.14802457000041613,
-              "peak_rss_kib": 30464
-            },
-            {
-              "cpu_seconds": 0.151399,
-              "wall_seconds": 0.15260599399880448,
-              "peak_rss_kib": 30592
-            },
-            {
-              "cpu_seconds": 0.142402,
-              "wall_seconds": 0.14394850000098813,
-              "peak_rss_kib": 30592
-            },
-            {
-              "cpu_seconds": 0.146432,
-              "wall_seconds": 0.14707751999958418,
+              "cpu_seconds": 0.247298,
+              "wall_seconds": 0.2476441500002693,
               "peak_rss_kib": 30720
             },
             {
-              "cpu_seconds": 0.14315699999999998,
-              "wall_seconds": 0.14501216099961312,
+              "cpu_seconds": 0.27233799999999997,
+              "wall_seconds": 0.27191243100014617,
+              "peak_rss_kib": 30720
+            },
+            {
+              "cpu_seconds": 0.254758,
+              "wall_seconds": 0.25554606899959253,
+              "peak_rss_kib": 30464
+            },
+            {
+              "cpu_seconds": 0.257953,
+              "wall_seconds": 0.2594375180001407,
+              "peak_rss_kib": 30208
+            },
+            {
+              "cpu_seconds": 0.25515899999999997,
+              "wall_seconds": 0.2558790179996322,
               "peak_rss_kib": 30592
+            },
+            {
+              "cpu_seconds": 0.260743,
+              "wall_seconds": 0.26090442100030486,
+              "peak_rss_kib": 30592
+            },
+            {
+              "cpu_seconds": 0.242339,
+              "wall_seconds": 0.24364739699967686,
+              "peak_rss_kib": 30464
+            },
+            {
+              "cpu_seconds": 0.25856199999999996,
+              "wall_seconds": 0.25855063000017253,
+              "peak_rss_kib": 30592
+            },
+            {
+              "cpu_seconds": 0.24218299999999998,
+              "wall_seconds": 0.2432412870002736,
+              "peak_rss_kib": 30464
+            },
+            {
+              "cpu_seconds": 0.256337,
+              "wall_seconds": 0.25729073000002245,
+              "peak_rss_kib": 30592
+            },
+            {
+              "cpu_seconds": 0.251821,
+              "wall_seconds": 0.2533050830002139,
+              "peak_rss_kib": 30720
+            },
+            {
+              "cpu_seconds": 0.23897599999999997,
+              "wall_seconds": 0.23982833300033235,
+              "peak_rss_kib": 30848
+            },
+            {
+              "cpu_seconds": 0.254398,
+              "wall_seconds": 0.2544174589997965,
+              "peak_rss_kib": 30592
+            },
+            {
+              "cpu_seconds": 0.239225,
+              "wall_seconds": 0.24085291299979872,
+              "peak_rss_kib": 30592
+            },
+            {
+              "cpu_seconds": 0.23761100000000002,
+              "wall_seconds": 0.23797284299962485,
+              "peak_rss_kib": 30336
+            },
+            {
+              "cpu_seconds": 0.25117199999999995,
+              "wall_seconds": 0.25174460200014437,
+              "peak_rss_kib": 30720
+            },
+            {
+              "cpu_seconds": 0.24604299999999998,
+              "wall_seconds": 0.24616508000008253,
+              "peak_rss_kib": 30848
+            },
+            {
+              "cpu_seconds": 0.238445,
+              "wall_seconds": 0.2400689500000226,
+              "peak_rss_kib": 30592
+            },
+            {
+              "cpu_seconds": 0.239274,
+              "wall_seconds": 0.23950317200024074,
+              "peak_rss_kib": 30720
+            },
+            {
+              "cpu_seconds": 0.230201,
+              "wall_seconds": 0.23138725900025747,
+              "peak_rss_kib": 30848
             }
           ],
-          "median_cpu_seconds": 0.14627099999999998,
+          "median_cpu_seconds": 0.25117199999999995,
           "median_peak_rss_kib": 30592,
           "max_peak_rss_kib": 30848,
           "cpu_range_seconds": [
-            0.142402,
-            0.154718
+            0.230201,
+            0.27233799999999997
           ]
         }
       },
-      "gain_percent": 22.727272727272727,
+      "lut_gain_percent": 22.727272727272727,
+      "scored_logic_gain_percent": 22.569444444444443,
+      "gain_percent": 22.569444444444443,
       "dff_nonincrease": true,
-      "cpu_overhead_percent": -9.130386163709547,
-      "rss_overhead_percent": -2.0325203252032575,
+      "other_cell_types_nonincrease": true,
+      "cpu_overhead_percent": -4.977868573374211,
+      "rss_overhead_percent": -3.2128514056224855,
       "measured_5pct_pass": true
     },
     {
       "name": "test2",
       "source_sha256": "e43c9b437071488551caf3121e227e86f4fe3190751f245beac3b7ecc3fdb146",
-      "source": "/home/ubuntu/FPGA/clean-v11/competition_case/test2/test2.v",
+      "source": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/competition_case/test2/test2.v",
       "roles": {
         "baseline": {
           "logic_cells": 25,
           "dff_cells": 0,
           "standalone_not_cells": 0,
+          "scored_logic_cells": 25,
           "by_type": {
             "cycloneiv_lcell_comb": 25
           },
           "initial": {
-            "cpu_seconds": 0.058492,
-            "wall_seconds": 0.058978873001251486,
-            "peak_rss_kib": 26752
+            "cpu_seconds": 0.08901299999999998,
+            "wall_seconds": 0.08972247000019706,
+            "peak_rss_kib": 26240
           },
           "proof": "PASS",
-          "path": "/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test2/baseline",
+          "path": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/competition-v11-jz3bf3a8/test2/baseline",
           "samples": [
             {
-              "cpu_seconds": 0.05546899999999999,
-              "wall_seconds": 0.05673129699971469,
+              "cpu_seconds": 0.0854,
+              "wall_seconds": 0.0873802210003305,
               "peak_rss_kib": 26496
             },
             {
-              "cpu_seconds": 0.055096,
-              "wall_seconds": 0.05747377300031076,
-              "peak_rss_kib": 25984
-            },
-            {
-              "cpu_seconds": 0.056558,
-              "wall_seconds": 0.057083755998974084,
-              "peak_rss_kib": 26624
-            },
-            {
-              "cpu_seconds": 0.056507,
-              "wall_seconds": 0.056536552001489326,
-              "peak_rss_kib": 25984
-            },
-            {
-              "cpu_seconds": 0.061329999999999996,
-              "wall_seconds": 0.06311942799948156,
+              "cpu_seconds": 0.08874,
+              "wall_seconds": 0.08948610400011603,
               "peak_rss_kib": 26496
             },
             {
-              "cpu_seconds": 0.05946099999999999,
-              "wall_seconds": 0.06230828799925803,
+              "cpu_seconds": 0.089658,
+              "wall_seconds": 0.0917497089999415,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.09485999999999999,
+              "wall_seconds": 0.09688567200009857,
               "peak_rss_kib": 25984
             },
             {
-              "cpu_seconds": 0.058075,
-              "wall_seconds": 0.06056269799955771,
+              "cpu_seconds": 0.09305,
+              "wall_seconds": 0.09466774500015163,
               "peak_rss_kib": 25984
             },
             {
-              "cpu_seconds": 0.056118999999999995,
-              "wall_seconds": 0.058340314999441034,
-              "peak_rss_kib": 25856
-            },
-            {
-              "cpu_seconds": 0.058861,
-              "wall_seconds": 0.06073412300065684,
-              "peak_rss_kib": 26496
-            },
-            {
-              "cpu_seconds": 0.056613,
-              "wall_seconds": 0.05765961299948685,
+              "cpu_seconds": 0.09176899999999999,
+              "wall_seconds": 0.0921611609996944,
               "peak_rss_kib": 25984
             },
             {
-              "cpu_seconds": 0.055458999999999994,
-              "wall_seconds": 0.05698867099999916,
+              "cpu_seconds": 0.09014099999999999,
+              "wall_seconds": 0.09205068300025232,
               "peak_rss_kib": 26240
             },
             {
-              "cpu_seconds": 0.055264999999999995,
-              "wall_seconds": 0.055769669999790494,
+              "cpu_seconds": 0.091419,
+              "wall_seconds": 0.09205796200012628,
               "peak_rss_kib": 25984
             },
             {
-              "cpu_seconds": 0.055394,
-              "wall_seconds": 0.05593397600023309,
+              "cpu_seconds": 0.090475,
+              "wall_seconds": 0.09036256199988202,
               "peak_rss_kib": 26496
             },
             {
-              "cpu_seconds": 0.054976,
-              "wall_seconds": 0.05497725099849049,
+              "cpu_seconds": 0.095414,
+              "wall_seconds": 0.0951144480000039,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.098296,
+              "wall_seconds": 0.09915735200002018,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.090276,
+              "wall_seconds": 0.09190451199992822,
               "peak_rss_kib": 26624
             },
             {
-              "cpu_seconds": 0.055445999999999995,
-              "wall_seconds": 0.05745646899958956,
-              "peak_rss_kib": 26496
+              "cpu_seconds": 0.090589,
+              "wall_seconds": 0.09227043700002469,
+              "peak_rss_kib": 26368
             },
             {
-              "cpu_seconds": 0.05583199999999999,
-              "wall_seconds": 0.05824054400000023,
+              "cpu_seconds": 0.09168399999999999,
+              "wall_seconds": 0.09166692899998452,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.08907499999999999,
+              "wall_seconds": 0.09025351800028147,
               "peak_rss_kib": 26240
             },
             {
-              "cpu_seconds": 0.060972,
-              "wall_seconds": 0.061320404998696176,
-              "peak_rss_kib": 25856
-            },
-            {
-              "cpu_seconds": 0.055575,
-              "wall_seconds": 0.056050045999654685,
+              "cpu_seconds": 0.08355,
+              "wall_seconds": 0.08403079699974114,
               "peak_rss_kib": 26496
             },
             {
-              "cpu_seconds": 0.055811999999999994,
-              "wall_seconds": 0.05727321700032917,
+              "cpu_seconds": 0.086508,
+              "wall_seconds": 0.08635128400010217,
+              "peak_rss_kib": 26240
+            },
+            {
+              "cpu_seconds": 0.08528,
+              "wall_seconds": 0.0865012930003104,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.081719,
+              "wall_seconds": 0.0828949219999231,
               "peak_rss_kib": 25984
             },
             {
-              "cpu_seconds": 0.055264,
-              "wall_seconds": 0.05618130100083363,
+              "cpu_seconds": 0.081136,
+              "wall_seconds": 0.08189398500007883,
               "peak_rss_kib": 26496
             },
             {
-              "cpu_seconds": 0.055627,
-              "wall_seconds": 0.05707201999939571,
-              "peak_rss_kib": 25856
+              "cpu_seconds": 0.081733,
+              "wall_seconds": 0.08268100900022546,
+              "peak_rss_kib": 26624
             }
           ],
-          "median_cpu_seconds": 0.055811999999999994,
-          "median_peak_rss_kib": 26240,
-          "max_peak_rss_kib": 26624,
+          "median_cpu_seconds": 0.09014099999999999,
+          "median_peak_rss_kib": 26496,
+          "max_peak_rss_kib": 26752,
           "cpu_range_seconds": [
-            0.054976,
-            0.061329999999999996
+            0.081136,
+            0.098296
           ]
         },
         "candidate": {
           "logic_cells": 15,
           "dff_cells": 0,
           "standalone_not_cells": 0,
+          "scored_logic_cells": 15,
           "by_type": {
             "cycloneiv_lcell_comb": 15
           },
           "initial": {
-            "cpu_seconds": 0.053471000000000005,
-            "wall_seconds": 0.0545884869989095,
-            "peak_rss_kib": 26240
+            "cpu_seconds": 0.09406199999999999,
+            "wall_seconds": 0.09432049200040638,
+            "peak_rss_kib": 26368
           },
           "proof": "PASS",
-          "path": "/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test2/candidate",
+          "path": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/competition-v11-jz3bf3a8/test2/candidate",
           "samples": [
             {
-              "cpu_seconds": 0.05951,
-              "wall_seconds": 0.059536689001106424,
-              "peak_rss_kib": 26240
-            },
-            {
-              "cpu_seconds": 0.054396,
-              "wall_seconds": 0.0551941829999123,
+              "cpu_seconds": 0.088045,
+              "wall_seconds": 0.08985359899998002,
               "peak_rss_kib": 26368
             },
             {
-              "cpu_seconds": 0.05746,
-              "wall_seconds": 0.05997846200079948,
+              "cpu_seconds": 0.089256,
+              "wall_seconds": 0.09012290500004383,
               "peak_rss_kib": 26368
             },
             {
-              "cpu_seconds": 0.054887,
-              "wall_seconds": 0.05571879499984789,
-              "peak_rss_kib": 26240
-            },
-            {
-              "cpu_seconds": 0.055161999999999996,
-              "wall_seconds": 0.0570461580009578,
-              "peak_rss_kib": 26368
-            },
-            {
-              "cpu_seconds": 0.05755099999999999,
-              "wall_seconds": 0.05895522500031802,
-              "peak_rss_kib": 26368
-            },
-            {
-              "cpu_seconds": 0.055035999999999995,
-              "wall_seconds": 0.05702503900101874,
-              "peak_rss_kib": 26240
-            },
-            {
-              "cpu_seconds": 0.054647999999999995,
-              "wall_seconds": 0.05583278300036909,
-              "peak_rss_kib": 26240
-            },
-            {
-              "cpu_seconds": 0.05422299999999999,
-              "wall_seconds": 0.05652834699867526,
-              "peak_rss_kib": 26368
-            },
-            {
-              "cpu_seconds": 0.053425999999999994,
-              "wall_seconds": 0.054656685000736616,
-              "peak_rss_kib": 26240
-            },
-            {
-              "cpu_seconds": 0.05626,
-              "wall_seconds": 0.05717781600105809,
-              "peak_rss_kib": 26368
-            },
-            {
-              "cpu_seconds": 0.056139999999999995,
-              "wall_seconds": 0.057229296000514296,
-              "peak_rss_kib": 26240
-            },
-            {
-              "cpu_seconds": 0.056204,
-              "wall_seconds": 0.05640342900005635,
-              "peak_rss_kib": 26752
-            },
-            {
-              "cpu_seconds": 0.054311,
-              "wall_seconds": 0.05451783299940871,
+              "cpu_seconds": 0.085917,
+              "wall_seconds": 0.08824401199990461,
               "peak_rss_kib": 26496
             },
             {
-              "cpu_seconds": 0.053737999999999994,
-              "wall_seconds": 0.05553744900134916,
+              "cpu_seconds": 0.08800699999999999,
+              "wall_seconds": 0.08979755400014255,
               "peak_rss_kib": 26368
             },
             {
-              "cpu_seconds": 0.054599999999999996,
-              "wall_seconds": 0.055410544000551454,
-              "peak_rss_kib": 26752
-            },
-            {
-              "cpu_seconds": 0.05415299999999999,
-              "wall_seconds": 0.055237407999811694,
+              "cpu_seconds": 0.097862,
+              "wall_seconds": 0.09941295199996603,
               "peak_rss_kib": 26368
             },
             {
-              "cpu_seconds": 0.0542,
-              "wall_seconds": 0.05466053200143506,
+              "cpu_seconds": 0.092721,
+              "wall_seconds": 0.0944562939998832,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.090871,
+              "wall_seconds": 0.09201978800001598,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.089703,
+              "wall_seconds": 0.09145222200004355,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.086694,
+              "wall_seconds": 0.08838514999979452,
               "peak_rss_kib": 26240
             },
             {
-              "cpu_seconds": 0.054133,
-              "wall_seconds": 0.05457745000057912,
-              "peak_rss_kib": 26240
-            },
-            {
-              "cpu_seconds": 0.053716,
-              "wall_seconds": 0.05412202600018645,
+              "cpu_seconds": 0.09193799999999999,
+              "wall_seconds": 0.09265212499985864,
               "peak_rss_kib": 26368
             },
             {
-              "cpu_seconds": 0.052829999999999995,
-              "wall_seconds": 0.054427384999144124,
+              "cpu_seconds": 0.093833,
+              "wall_seconds": 0.09451623099994322,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.09439700000000001,
+              "wall_seconds": 0.09489648199996736,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.09075799999999999,
+              "wall_seconds": 0.09249123099971257,
+              "peak_rss_kib": 26240
+            },
+            {
+              "cpu_seconds": 0.08323799999999999,
+              "wall_seconds": 0.0833629909998308,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.081706,
+              "wall_seconds": 0.08254830199985008,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.082351,
+              "wall_seconds": 0.08329800199999227,
+              "peak_rss_kib": 26240
+            },
+            {
+              "cpu_seconds": 0.080342,
+              "wall_seconds": 0.0816243320000467,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.08721199999999998,
+              "wall_seconds": 0.08846428700007891,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.090386,
+              "wall_seconds": 0.09205152000004091,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.07744999999999999,
+              "wall_seconds": 0.07902301400008582,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.079358,
+              "wall_seconds": 0.08196662800037302,
               "peak_rss_kib": 26368
             }
           ],
-          "median_cpu_seconds": 0.054599999999999996,
+          "median_cpu_seconds": 0.088045,
           "median_peak_rss_kib": 26368,
-          "max_peak_rss_kib": 26752,
+          "max_peak_rss_kib": 26496,
           "cpu_range_seconds": [
-            0.052829999999999995,
-            0.05951
+            0.07744999999999999,
+            0.097862
           ]
         }
       },
+      "lut_gain_percent": 40.0,
+      "scored_logic_gain_percent": 40.0,
       "gain_percent": 40.0,
       "dff_nonincrease": true,
-      "cpu_overhead_percent": -2.1715760051601807,
-      "rss_overhead_percent": 0.48076923076922906,
+      "other_cell_types_nonincrease": true,
+      "cpu_overhead_percent": -2.3252460034834166,
+      "rss_overhead_percent": -0.9569377990430672,
       "measured_5pct_pass": true
     },
     {
       "name": "test3",
       "source_sha256": "1551b9212622ccef6019d6e77de2c43dc8c80d267957b55a42121f34a08780e9",
-      "source": "/home/ubuntu/FPGA/clean-v11/competition_case/test3/test3.v",
+      "source": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/competition_case/test3/test3.v",
       "roles": {
         "baseline": {
           "logic_cells": 12,
           "dff_cells": 17,
           "standalone_not_cells": 1,
+          "scored_logic_cells": 13,
           "by_type": {
             "$not": 1,
             "dffeas": 17,
             "cycloneiv_lcell_comb": 12
           },
           "initial": {
-            "cpu_seconds": 0.060819,
-            "wall_seconds": 0.06250959199860517,
-            "peak_rss_kib": 26880
+            "cpu_seconds": 0.108676,
+            "wall_seconds": 0.10974702800012892,
+            "peak_rss_kib": 26368
           },
           "proof": "PASS",
-          "path": "/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test3/baseline",
+          "path": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/competition-v11-jz3bf3a8/test3/baseline",
           "samples": [
             {
-              "cpu_seconds": 0.061325,
-              "wall_seconds": 0.06341589799922076,
-              "peak_rss_kib": 26112
+              "cpu_seconds": 0.094632,
+              "wall_seconds": 0.0954114269998172,
+              "peak_rss_kib": 26752
             },
             {
-              "cpu_seconds": 0.060843,
-              "wall_seconds": 0.061984649999430985,
-              "peak_rss_kib": 26368
-            },
-            {
-              "cpu_seconds": 0.062269,
-              "wall_seconds": 0.06457968399990932,
-              "peak_rss_kib": 26624
-            },
-            {
-              "cpu_seconds": 0.061176999999999995,
-              "wall_seconds": 0.06203357300000789,
+              "cpu_seconds": 0.089089,
+              "wall_seconds": 0.09103766399994129,
               "peak_rss_kib": 26880
             },
             {
-              "cpu_seconds": 0.061243,
-              "wall_seconds": 0.06177445899993472,
-              "peak_rss_kib": 26368
+              "cpu_seconds": 0.09253299999999999,
+              "wall_seconds": 0.09358939599997029,
+              "peak_rss_kib": 26496
             },
             {
-              "cpu_seconds": 0.061423,
-              "wall_seconds": 0.06299641800069367,
+              "cpu_seconds": 0.095147,
+              "wall_seconds": 0.0964711889996579,
               "peak_rss_kib": 26752
             },
             {
-              "cpu_seconds": 0.061114999999999996,
-              "wall_seconds": 0.0632615539998369,
+              "cpu_seconds": 0.103659,
+              "wall_seconds": 0.10521155800006454,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.09485299999999999,
+              "wall_seconds": 0.09467242799973974,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.091695,
+              "wall_seconds": 0.09231882099993527,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.092429,
+              "wall_seconds": 0.09435508400019899,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.090123,
+              "wall_seconds": 0.09052141399979519,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.09568099999999999,
+              "wall_seconds": 0.09634880600015094,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.10026099999999999,
+              "wall_seconds": 0.1022277940001004,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.09254599999999999,
+              "wall_seconds": 0.09459971699970993,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.098723,
+              "wall_seconds": 0.09857197000019369,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.09311599999999999,
+              "wall_seconds": 0.094293075999758,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.095941,
+              "wall_seconds": 0.09656780399973286,
               "peak_rss_kib": 26880
             },
             {
-              "cpu_seconds": 0.06275700000000001,
-              "wall_seconds": 0.06493238499933796,
-              "peak_rss_kib": 26752
-            },
-            {
-              "cpu_seconds": 0.062564,
-              "wall_seconds": 0.06375317800120683,
-              "peak_rss_kib": 26752
-            },
-            {
-              "cpu_seconds": 0.061794,
-              "wall_seconds": 0.06303676599964092,
+              "cpu_seconds": 0.094365,
+              "wall_seconds": 0.09627543599981436,
               "peak_rss_kib": 26496
             },
             {
-              "cpu_seconds": 0.061403,
-              "wall_seconds": 0.06352768499891681,
-              "peak_rss_kib": 26368
+              "cpu_seconds": 0.09238199999999999,
+              "wall_seconds": 0.09269112799984214,
+              "peak_rss_kib": 26880
             },
             {
-              "cpu_seconds": 0.063915,
-              "wall_seconds": 0.06503938200148696,
+              "cpu_seconds": 0.096963,
+              "wall_seconds": 0.09875897399979294,
               "peak_rss_kib": 26496
             },
             {
-              "cpu_seconds": 0.063706,
-              "wall_seconds": 0.06442647699986992,
-              "peak_rss_kib": 26624
-            },
-            {
-              "cpu_seconds": 0.06393599999999999,
-              "wall_seconds": 0.06510189999971772,
-              "peak_rss_kib": 26240
-            },
-            {
-              "cpu_seconds": 0.06753799999999999,
-              "wall_seconds": 0.06969204300003184,
+              "cpu_seconds": 0.091635,
+              "wall_seconds": 0.09184643000025972,
               "peak_rss_kib": 26752
             },
             {
-              "cpu_seconds": 0.062249,
-              "wall_seconds": 0.0626935960008268,
+              "cpu_seconds": 0.10472699999999999,
+              "wall_seconds": 0.10506084899998314,
               "peak_rss_kib": 26752
             },
             {
-              "cpu_seconds": 0.07192,
-              "wall_seconds": 0.07188557600056811,
-              "peak_rss_kib": 26368
-            },
-            {
-              "cpu_seconds": 0.06384799999999999,
-              "wall_seconds": 0.06612854700142634,
-              "peak_rss_kib": 26496
-            },
-            {
-              "cpu_seconds": 0.06163,
-              "wall_seconds": 0.06264639999972133,
-              "peak_rss_kib": 26624
-            },
-            {
-              "cpu_seconds": 0.065974,
-              "wall_seconds": 0.06636296899887384,
-              "peak_rss_kib": 26624
-            },
-            {
-              "cpu_seconds": 0.06800899999999999,
-              "wall_seconds": 0.07031982500120648,
-              "peak_rss_kib": 26624
+              "cpu_seconds": 0.096932,
+              "wall_seconds": 0.09887597299984918,
+              "peak_rss_kib": 26752
             }
           ],
-          "median_cpu_seconds": 0.062269,
-          "median_peak_rss_kib": 26624,
+          "median_cpu_seconds": 0.094632,
+          "median_peak_rss_kib": 26752,
           "max_peak_rss_kib": 26880,
           "cpu_range_seconds": [
-            0.060843,
-            0.07192
+            0.089089,
+            0.10472699999999999
           ]
         },
         "candidate": {
           "logic_cells": 12,
           "dff_cells": 12,
           "standalone_not_cells": 1,
+          "scored_logic_cells": 13,
           "by_type": {
             "$not": 1,
             "dffeas": 12,
             "cycloneiv_lcell_comb": 12
           },
           "initial": {
-            "cpu_seconds": 0.058642,
-            "wall_seconds": 0.06097569200028374,
-            "peak_rss_kib": 26496
+            "cpu_seconds": 0.095482,
+            "wall_seconds": 0.09722187700026552,
+            "peak_rss_kib": 26624
           },
           "proof": "PASS",
-          "path": "/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test3/candidate",
+          "path": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/competition-v11-jz3bf3a8/test3/candidate",
           "samples": [
             {
-              "cpu_seconds": 0.060024999999999995,
-              "wall_seconds": 0.060766623999370495,
-              "peak_rss_kib": 26240
-            },
-            {
-              "cpu_seconds": 0.058433,
-              "wall_seconds": 0.05907434700020531,
+              "cpu_seconds": 0.087655,
+              "wall_seconds": 0.08978011800036256,
               "peak_rss_kib": 26368
             },
             {
-              "cpu_seconds": 0.059708,
-              "wall_seconds": 0.06150010500095959,
-              "peak_rss_kib": 26368
-            },
-            {
-              "cpu_seconds": 0.062141,
-              "wall_seconds": 0.0642974830007006,
-              "peak_rss_kib": 26240
-            },
-            {
-              "cpu_seconds": 0.059862,
-              "wall_seconds": 0.06012188299973786,
-              "peak_rss_kib": 26496
-            },
-            {
-              "cpu_seconds": 0.05853,
-              "wall_seconds": 0.06069643199953134,
-              "peak_rss_kib": 26368
-            },
-            {
-              "cpu_seconds": 0.059691,
-              "wall_seconds": 0.06167708100110758,
-              "peak_rss_kib": 26240
-            },
-            {
-              "cpu_seconds": 0.06078,
-              "wall_seconds": 0.06202821300030337,
-              "peak_rss_kib": 26368
-            },
-            {
-              "cpu_seconds": 0.059405,
-              "wall_seconds": 0.060203463001016644,
+              "cpu_seconds": 0.08495,
+              "wall_seconds": 0.08502326400002858,
               "peak_rss_kib": 26624
             },
             {
-              "cpu_seconds": 0.060155,
-              "wall_seconds": 0.0611400389989285,
+              "cpu_seconds": 0.10064000000000001,
+              "wall_seconds": 0.1018245739996928,
               "peak_rss_kib": 26496
             },
             {
-              "cpu_seconds": 0.061194,
-              "wall_seconds": 0.06284161499934271,
-              "peak_rss_kib": 26752
+              "cpu_seconds": 0.096491,
+              "wall_seconds": 0.09688151999989714,
+              "peak_rss_kib": 26624
             },
             {
-              "cpu_seconds": 0.059567999999999996,
-              "wall_seconds": 0.06038711200017133,
-              "peak_rss_kib": 26496
+              "cpu_seconds": 0.096798,
+              "wall_seconds": 0.09709672700000738,
+              "peak_rss_kib": 26624
             },
             {
-              "cpu_seconds": 0.059687,
-              "wall_seconds": 0.062255028999061324,
-              "peak_rss_kib": 26752
+              "cpu_seconds": 0.099785,
+              "wall_seconds": 0.10169019800014212,
+              "peak_rss_kib": 26624
             },
             {
-              "cpu_seconds": 0.061318,
-              "wall_seconds": 0.06343673400078842,
+              "cpu_seconds": 0.08979899999999999,
+              "wall_seconds": 0.09047212400037097,
               "peak_rss_kib": 26368
             },
             {
-              "cpu_seconds": 0.058751,
-              "wall_seconds": 0.059884416001295904,
+              "cpu_seconds": 0.08931499999999999,
+              "wall_seconds": 0.08968450600013966,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.087523,
+              "wall_seconds": 0.08778765299985025,
               "peak_rss_kib": 26496
             },
             {
-              "cpu_seconds": 0.05975799999999999,
-              "wall_seconds": 0.060470230999271735,
-              "peak_rss_kib": 26368
-            },
-            {
-              "cpu_seconds": 0.062014,
-              "wall_seconds": 0.06233144399993762,
-              "peak_rss_kib": 26368
-            },
-            {
-              "cpu_seconds": 0.06461,
-              "wall_seconds": 0.06506629599971347,
+              "cpu_seconds": 0.086145,
+              "wall_seconds": 0.0875386730003811,
               "peak_rss_kib": 26496
             },
             {
-              "cpu_seconds": 0.062111999999999994,
-              "wall_seconds": 0.06230734900054813,
+              "cpu_seconds": 0.083667,
+              "wall_seconds": 0.08547563999991326,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.08817799999999999,
+              "wall_seconds": 0.08962004800014256,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.093357,
+              "wall_seconds": 0.09394814699999188,
               "peak_rss_kib": 26496
             },
             {
-              "cpu_seconds": 0.060081999999999997,
-              "wall_seconds": 0.06159432799904607,
+              "cpu_seconds": 0.09406,
+              "wall_seconds": 0.09423313200022676,
               "peak_rss_kib": 26752
             },
             {
-              "cpu_seconds": 0.061877,
-              "wall_seconds": 0.06282501500027138,
+              "cpu_seconds": 0.08915299999999998,
+              "wall_seconds": 0.08952566199968714,
+              "peak_rss_kib": 26368
+            },
+            {
+              "cpu_seconds": 0.089571,
+              "wall_seconds": 0.09007313699976294,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.089796,
+              "wall_seconds": 0.09089948199971332,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.088637,
+              "wall_seconds": 0.08977847699998165,
               "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.09726299999999999,
+              "wall_seconds": 0.0983085010002469,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.09131199999999999,
+              "wall_seconds": 0.09206161000020074,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.088056,
+              "wall_seconds": 0.09014303100002508,
+              "peak_rss_kib": 26624
             }
           ],
-          "median_cpu_seconds": 0.060024999999999995,
-          "median_peak_rss_kib": 26496,
+          "median_cpu_seconds": 0.089571,
+          "median_peak_rss_kib": 26624,
           "max_peak_rss_kib": 26752,
           "cpu_range_seconds": [
-            0.058433,
-            0.06461
+            0.083667,
+            0.10064000000000001
           ]
         }
       },
+      "lut_gain_percent": 0.0,
+      "scored_logic_gain_percent": 0.0,
       "gain_percent": 0.0,
       "dff_nonincrease": true,
-      "cpu_overhead_percent": -3.603719346705425,
+      "other_cell_types_nonincrease": true,
+      "cpu_overhead_percent": -5.348085214303822,
       "rss_overhead_percent": -0.4761904761904745,
       "measured_5pct_pass": true
     },
     {
       "name": "test4",
       "source_sha256": "c0c5042928bd6bf568e2b7fb2193f2b6db9c4193ba3a5378fc50a331d43422d7",
-      "source": "/home/ubuntu/FPGA/clean-v11/competition_case/test4/test4.v",
+      "source": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/competition_case/test4/test4.v",
       "roles": {
         "baseline": {
           "logic_cells": 35,
           "dff_cells": 10,
           "standalone_not_cells": 1,
+          "scored_logic_cells": 36,
           "by_type": {
             "$not": 1,
             "dffeas": 10,
             "cycloneiv_lcell_comb": 35
           },
           "initial": {
-            "cpu_seconds": 0.078334,
-            "wall_seconds": 0.0798235130005196,
-            "peak_rss_kib": 27008
+            "cpu_seconds": 0.113258,
+            "wall_seconds": 0.11504769100019985,
+            "peak_rss_kib": 27136
           },
           "proof": "PASS",
-          "path": "/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test4/baseline",
+          "path": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/competition-v11-jz3bf3a8/test4/baseline",
           "samples": [
             {
-              "cpu_seconds": 0.07345499999999999,
-              "wall_seconds": 0.07546025200099393,
+              "cpu_seconds": 0.106499,
+              "wall_seconds": 0.10748007099982715,
               "peak_rss_kib": 27008
             },
             {
-              "cpu_seconds": 0.078904,
-              "wall_seconds": 0.08057892299984815,
+              "cpu_seconds": 0.110653,
+              "wall_seconds": 0.1144872969998687,
+              "peak_rss_kib": 27136
+            },
+            {
+              "cpu_seconds": 0.11295,
+              "wall_seconds": 0.11486372199988182,
               "peak_rss_kib": 27008
             },
             {
-              "cpu_seconds": 0.071829,
-              "wall_seconds": 0.07259649600018747,
+              "cpu_seconds": 0.10260799999999999,
+              "wall_seconds": 0.10288825400039059,
               "peak_rss_kib": 27008
             },
             {
-              "cpu_seconds": 0.073488,
-              "wall_seconds": 0.07486018199961109,
-              "peak_rss_kib": 26752
-            },
-            {
-              "cpu_seconds": 0.072944,
-              "wall_seconds": 0.07546231899868872,
+              "cpu_seconds": 0.103055,
+              "wall_seconds": 0.10378089499999987,
               "peak_rss_kib": 27008
             },
             {
-              "cpu_seconds": 0.07653599999999999,
-              "wall_seconds": 0.07692927599964605,
-              "peak_rss_kib": 26496
-            },
-            {
-              "cpu_seconds": 0.07119400000000001,
-              "wall_seconds": 0.07182631199975731,
-              "peak_rss_kib": 26624
-            },
-            {
-              "cpu_seconds": 0.086647,
-              "wall_seconds": 0.08769939800004067,
-              "peak_rss_kib": 27008
-            },
-            {
-              "cpu_seconds": 0.078789,
-              "wall_seconds": 0.08102272799987986,
-              "peak_rss_kib": 27008
-            },
-            {
-              "cpu_seconds": 0.078735,
-              "wall_seconds": 0.08004653999887523,
-              "peak_rss_kib": 27008
-            },
-            {
-              "cpu_seconds": 0.07356199999999999,
-              "wall_seconds": 0.07383979599944723,
-              "peak_rss_kib": 26752
-            },
-            {
-              "cpu_seconds": 0.073359,
-              "wall_seconds": 0.07471724999959406,
-              "peak_rss_kib": 26368
-            },
-            {
-              "cpu_seconds": 0.07192,
-              "wall_seconds": 0.07314587499968184,
-              "peak_rss_kib": 26624
-            },
-            {
-              "cpu_seconds": 0.071098,
-              "wall_seconds": 0.07352314700074203,
-              "peak_rss_kib": 27008
-            },
-            {
-              "cpu_seconds": 0.07298199999999999,
-              "wall_seconds": 0.07457149199944979,
-              "peak_rss_kib": 27008
-            },
-            {
-              "cpu_seconds": 0.075437,
-              "wall_seconds": 0.07562458499887725,
-              "peak_rss_kib": 26624
-            },
-            {
-              "cpu_seconds": 0.072887,
-              "wall_seconds": 0.07357706000038888,
-              "peak_rss_kib": 27264
-            },
-            {
-              "cpu_seconds": 0.07123299999999999,
-              "wall_seconds": 0.0740133440012869,
-              "peak_rss_kib": 26624
-            },
-            {
-              "cpu_seconds": 0.07292499999999999,
-              "wall_seconds": 0.07403950899970368,
-              "peak_rss_kib": 27008
-            },
-            {
-              "cpu_seconds": 0.074677,
-              "wall_seconds": 0.0750229989989748,
-              "peak_rss_kib": 26496
-            },
-            {
-              "cpu_seconds": 0.07303799999999999,
-              "wall_seconds": 0.0736012990000745,
+              "cpu_seconds": 0.103763,
+              "wall_seconds": 0.1051445309999508,
               "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.11640299999999999,
+              "wall_seconds": 0.11741449600003762,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.099507,
+              "wall_seconds": 0.10017845700031103,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.100489,
+              "wall_seconds": 0.10124709299998358,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.11063100000000001,
+              "wall_seconds": 0.11255430500023067,
+              "peak_rss_kib": 27136
+            },
+            {
+              "cpu_seconds": 0.10475899999999999,
+              "wall_seconds": 0.10555874300007417,
+              "peak_rss_kib": 27136
+            },
+            {
+              "cpu_seconds": 0.100433,
+              "wall_seconds": 0.10207524599991302,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.102158,
+              "wall_seconds": 0.10315032799962864,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.10217699999999999,
+              "wall_seconds": 0.1038732130000426,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.103448,
+              "wall_seconds": 0.10419883299982757,
+              "peak_rss_kib": 27136
+            },
+            {
+              "cpu_seconds": 0.10547999999999999,
+              "wall_seconds": 0.10695216599970081,
+              "peak_rss_kib": 26496
+            },
+            {
+              "cpu_seconds": 0.10953099999999999,
+              "wall_seconds": 0.11141818699979922,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.11182099999999999,
+              "wall_seconds": 0.11213207400032843,
+              "peak_rss_kib": 26752
+            },
+            {
+              "cpu_seconds": 0.108249,
+              "wall_seconds": 0.10906278599986763,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.107479,
+              "wall_seconds": 0.10907850100011274,
+              "peak_rss_kib": 26624
+            },
+            {
+              "cpu_seconds": 0.104228,
+              "wall_seconds": 0.10494799800017063,
+              "peak_rss_kib": 27136
             }
           ],
-          "median_cpu_seconds": 0.073359,
+          "median_cpu_seconds": 0.10475899999999999,
           "median_peak_rss_kib": 27008,
-          "max_peak_rss_kib": 27264,
+          "max_peak_rss_kib": 27136,
           "cpu_range_seconds": [
-            0.071098,
-            0.086647
+            0.099507,
+            0.11640299999999999
           ]
         },
         "candidate": {
           "logic_cells": 26,
           "dff_cells": 10,
           "standalone_not_cells": 1,
+          "scored_logic_cells": 27,
           "by_type": {
             "$not": 1,
             "dffeas": 10,
             "cycloneiv_lcell_comb": 26
           },
           "initial": {
-            "cpu_seconds": 0.06869,
-            "wall_seconds": 0.06972585299990897,
-            "peak_rss_kib": 26880
+            "cpu_seconds": 0.12231299999999999,
+            "wall_seconds": 0.12426392799989117,
+            "peak_rss_kib": 27008
           },
           "proof": "PASS",
-          "path": "/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test4/candidate",
+          "path": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/competition-v11-jz3bf3a8/test4/candidate",
           "samples": [
             {
-              "cpu_seconds": 0.071303,
-              "wall_seconds": 0.07145830000081332,
-              "peak_rss_kib": 26880
-            },
-            {
-              "cpu_seconds": 0.06989899999999999,
-              "wall_seconds": 0.0705332069992437,
-              "peak_rss_kib": 26880
-            },
-            {
-              "cpu_seconds": 0.069105,
-              "wall_seconds": 0.07001837900133978,
-              "peak_rss_kib": 26752
-            },
-            {
-              "cpu_seconds": 0.068676,
-              "wall_seconds": 0.07082307800010312,
-              "peak_rss_kib": 26880
-            },
-            {
-              "cpu_seconds": 0.069475,
-              "wall_seconds": 0.07083847300054913,
-              "peak_rss_kib": 26880
-            },
-            {
-              "cpu_seconds": 0.068856,
-              "wall_seconds": 0.07064575299955322,
+              "cpu_seconds": 0.121027,
+              "wall_seconds": 0.12156672099990828,
               "peak_rss_kib": 27008
             },
             {
-              "cpu_seconds": 0.072182,
-              "wall_seconds": 0.07383063800079981,
-              "peak_rss_kib": 27008
-            },
-            {
-              "cpu_seconds": 0.069231,
-              "wall_seconds": 0.07131407000088075,
-              "peak_rss_kib": 27008
-            },
-            {
-              "cpu_seconds": 0.072156,
-              "wall_seconds": 0.07450957000037306,
-              "peak_rss_kib": 26880
-            },
-            {
-              "cpu_seconds": 0.069646,
-              "wall_seconds": 0.0716248219996487,
-              "peak_rss_kib": 26880
-            },
-            {
-              "cpu_seconds": 0.069865,
-              "wall_seconds": 0.07213236800089362,
-              "peak_rss_kib": 26880
-            },
-            {
-              "cpu_seconds": 0.069815,
-              "wall_seconds": 0.07026549100010016,
-              "peak_rss_kib": 26752
-            },
-            {
-              "cpu_seconds": 0.072336,
-              "wall_seconds": 0.07413719099895388,
-              "peak_rss_kib": 27008
-            },
-            {
-              "cpu_seconds": 0.069108,
-              "wall_seconds": 0.07034190299964393,
-              "peak_rss_kib": 27008
-            },
-            {
-              "cpu_seconds": 0.06856799999999999,
-              "wall_seconds": 0.06952423300026567,
-              "peak_rss_kib": 26880
-            },
-            {
-              "cpu_seconds": 0.070334,
-              "wall_seconds": 0.07195724799930758,
-              "peak_rss_kib": 26880
-            },
-            {
-              "cpu_seconds": 0.07015099999999999,
-              "wall_seconds": 0.0724717690009129,
-              "peak_rss_kib": 26752
-            },
-            {
-              "cpu_seconds": 0.069273,
-              "wall_seconds": 0.06929684600072505,
-              "peak_rss_kib": 26752
-            },
-            {
-              "cpu_seconds": 0.06884699999999999,
-              "wall_seconds": 0.06893735400080914,
-              "peak_rss_kib": 26752
-            },
-            {
-              "cpu_seconds": 0.070645,
-              "wall_seconds": 0.07306596499984153,
-              "peak_rss_kib": 26880
-            },
-            {
-              "cpu_seconds": 0.068693,
-              "wall_seconds": 0.06871887600027549,
+              "cpu_seconds": 0.103017,
+              "wall_seconds": 0.10510215700014669,
               "peak_rss_kib": 27136
+            },
+            {
+              "cpu_seconds": 0.100383,
+              "wall_seconds": 0.10092627699987133,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.096011,
+              "wall_seconds": 0.09798739999996542,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.099559,
+              "wall_seconds": 0.10121284099977856,
+              "peak_rss_kib": 27264
+            },
+            {
+              "cpu_seconds": 0.09855399999999999,
+              "wall_seconds": 0.09849881899981483,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.096191,
+              "wall_seconds": 0.0981158750000759,
+              "peak_rss_kib": 26880
+            },
+            {
+              "cpu_seconds": 0.096241,
+              "wall_seconds": 0.09756963199970414,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.096241,
+              "wall_seconds": 0.09766728399972635,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.105126,
+              "wall_seconds": 0.10581713100009438,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.09708199999999999,
+              "wall_seconds": 0.09867135799959215,
+              "peak_rss_kib": 27136
+            },
+            {
+              "cpu_seconds": 0.098131,
+              "wall_seconds": 0.09850176800000554,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.095608,
+              "wall_seconds": 0.09718518899990158,
+              "peak_rss_kib": 27136
+            },
+            {
+              "cpu_seconds": 0.096694,
+              "wall_seconds": 0.09799861700003021,
+              "peak_rss_kib": 27264
+            },
+            {
+              "cpu_seconds": 0.10225799999999999,
+              "wall_seconds": 0.10363916200003587,
+              "peak_rss_kib": 27136
+            },
+            {
+              "cpu_seconds": 0.100697,
+              "wall_seconds": 0.10272460900023361,
+              "peak_rss_kib": 27136
+            },
+            {
+              "cpu_seconds": 0.101779,
+              "wall_seconds": 0.10175870599960035,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.100489,
+              "wall_seconds": 0.10209736099977818,
+              "peak_rss_kib": 27136
+            },
+            {
+              "cpu_seconds": 0.10142899999999999,
+              "wall_seconds": 0.10276783599965711,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.104008,
+              "wall_seconds": 0.10552977600036684,
+              "peak_rss_kib": 27008
+            },
+            {
+              "cpu_seconds": 0.109436,
+              "wall_seconds": 0.11106711399997948,
+              "peak_rss_kib": 27008
             }
           ],
-          "median_cpu_seconds": 0.069646,
-          "median_peak_rss_kib": 26880,
-          "max_peak_rss_kib": 27136,
+          "median_cpu_seconds": 0.100383,
+          "median_peak_rss_kib": 27008,
+          "max_peak_rss_kib": 27264,
           "cpu_range_seconds": [
-            0.06856799999999999,
-            0.072336
+            0.095608,
+            0.121027
           ]
         }
       },
-      "gain_percent": 25.714285714285715,
+      "lut_gain_percent": 25.714285714285715,
+      "scored_logic_gain_percent": 25.0,
+      "gain_percent": 25.0,
       "dff_nonincrease": true,
-      "cpu_overhead_percent": -5.061410324568216,
-      "rss_overhead_percent": -0.46948356807511304,
+      "other_cell_types_nonincrease": true,
+      "cpu_overhead_percent": -4.177206731641192,
+      "rss_overhead_percent": 0.4716981132075526,
       "measured_5pct_pass": true
     }
   ],
-  "report_dir": "/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr",
+  "report_dir": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/competition-v11-jz3bf3a8",
   "repeats": 21,
-  "metric": "cycloneiv_lcell_comb count; dffeas excluded and constrained not to increase; NOT routed physical LE occupancy",
+  "metric": "official per-case mean: LUT plus standalone NOT; DFF and all other cell types must not increase",
   "timing": "Linux wait4 user+system CPU, including waited ABC descendants; full read/synth/write process",
   "memory": "Linux wait4 ru_maxrss: maximum resident high-water mark, not simultaneous sum of process-tree RSS",
   "proof_model": "Restricted inverse models of emitted Cyclone IV LUT and DFFE mapping, not vendor timing models",
   "negative_control": "EXPECTED_COUNTEREXAMPLE",
-  "average_gain_percent": 22.11038961038961,
+  "average_gain_percent": 21.89236111111111,
+  "average_lut_gain_percent": 22.11038961038961,
   "all_dff_nonincrease": true,
+  "all_other_cell_types_nonincrease": true,
   "all_measured_5pct_pass": true
 }

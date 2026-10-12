@@ -1,0 +1,153 @@
+{
+  "status": "PASS",
+  "scope": "Four official cases, Windows Yosys 0.69 v14",
+  "measurement_report": "validation-0mk8taqw/report.json",
+  "formal_report": "formal-windows/report.json",
+  "average_logic_gain_percent": 21.89236111111111,
+  "all_dff_and_other_types_nonincrease": true,
+  "all_efficiency_5pct_pass": true,
+  "all_absolute_limits_pass": true,
+  "windows_output_proofs": 8,
+  "negative_control": "EXPECTED_COUNTEREXAMPLE",
+  "max_candidate_wall_seconds": 0.35663599999952567,
+  "max_candidate_working_set_bytes": 22794240,
+  "measurement_report_sha256": "aca2f85f4d4462850607c40e24835ef024e162bb7563895270d25ce9b34a85d1",
+  "formal_report_sha256": "0a2c2de8949f7974b7893e70813d1dd0713a0907b2e9fcf649e9af9a1bd3f611",
+  "manifest_sha256": "ca0c60851bc9c2988d5d052a94592e563fa22e82bf8dead49d8c19ac5ab7c72c",
+  "evidence_zip_sha256": "9e04bada7c43b8be5ab41d24554965bdafd9c6c1b0aa53e6f7d1740f18f0e13d",
+  "cases": [
+    {
+      "name": "test1",
+      "logic_gain_percent": 22.569444444444443,
+      "cpu_overhead_percent": 0,
+      "memory_overhead_percent": 0.16198704103671524,
+      "roles": {
+        "baseline": {
+          "by_type": {
+            "$not": 2,
+            "cycloneiv_lcell_comb": 286,
+            "dffeas": 222
+          },
+          "median_cpu_seconds": 0.28125,
+          "max_working_set_bytes": 22757376,
+          "max_wall_seconds": 0.35409139999956096,
+          "executable_sha256": "2530e581996e1c088d5a35b85c9430efcbaef30d8ce420ed660427a38e0e584f",
+          "ilang_sha256": "251f7d9b7b73355651ef41e764a6ce059839ad00390d20b813985527c3762dd3"
+        },
+        "candidate": {
+          "by_type": {
+            "$not": 2,
+            "dffeas": 222,
+            "cycloneiv_lcell_comb": 221
+          },
+          "median_cpu_seconds": 0.28125,
+          "max_working_set_bytes": 22794240,
+          "max_wall_seconds": 0.35663599999952567,
+          "executable_sha256": "6593f691ab4c62b32743fe30331b62d2acb88fc00e671e07e1fc750da1b24cfd",
+          "ilang_sha256": "0272188df061b30079c0a5cdd7c9d404dd2b9c3dd1d869a83076059bacf87e45"
+        }
+      }
+    },
+    {
+      "name": "test2",
+      "logic_gain_percent": 40,
+      "cpu_overhead_percent": -9.999999999999998,
+      "memory_overhead_percent": -0.05100739607243332,
+      "roles": {
+        "baseline": {
+          "by_type": {
+            "cycloneiv_lcell_comb": 25
+          },
+          "median_cpu_seconds": 0.15625,
+          "max_working_set_bytes": 16060416,
+          "max_wall_seconds": 0.2131915999998455,
+          "executable_sha256": "2530e581996e1c088d5a35b85c9430efcbaef30d8ce420ed660427a38e0e584f",
+          "ilang_sha256": "afaf21d508fd361288d9733200aaaeafbcdd6203253bcba23c9fc10fdad1eea2"
+        },
+        "candidate": {
+          "by_type": {
+            "cycloneiv_lcell_comb": 15
+          },
+          "median_cpu_seconds": 0.140625,
+          "max_working_set_bytes": 16052224,
+          "max_wall_seconds": 0.20364840000002005,
+          "executable_sha256": "6593f691ab4c62b32743fe30331b62d2acb88fc00e671e07e1fc750da1b24cfd",
+          "ilang_sha256": "2fd94d67812b9bd102cac9d3306d99dbd3316bbb7bf08ad44f4931a1319c8375"
+        }
+      }
+    },
+    {
+      "name": "test3",
+      "logic_gain_percent": 0,
+      "cpu_overhead_percent": -9.090909090909093,
+      "memory_overhead_percent": -1.1154219204655647,
+      "roles": {
+        "baseline": {
+          "by_type": {
+            "$not": 1,
+            "dffeas": 17,
+            "cycloneiv_lcell_comb": 12
+          },
+          "median_cpu_seconds": 0.171875,
+          "max_working_set_bytes": 16891904,
+          "max_wall_seconds": 0.22018539999953646,
+          "executable_sha256": "2530e581996e1c088d5a35b85c9430efcbaef30d8ce420ed660427a38e0e584f",
+          "ilang_sha256": "f5ae39808a0fcb8e9d68a014bce7b9f01fae60f1ae5e53ec0e587dc2158b6d9d"
+        },
+        "candidate": {
+          "by_type": {
+            "$not": 1,
+            "dffeas": 12,
+            "cycloneiv_lcell_comb": 12
+          },
+          "median_cpu_seconds": 0.15625,
+          "max_working_set_bytes": 16703488,
+          "max_wall_seconds": 0.215242300000682,
+          "executable_sha256": "6593f691ab4c62b32743fe30331b62d2acb88fc00e671e07e1fc750da1b24cfd",
+          "ilang_sha256": "13bd800496b534801721c64f73fedf0f7014eceb2014099481bd3b41d2426008"
+        }
+      }
+    },
+    {
+      "name": "test4",
+      "logic_gain_percent": 25,
+      "cpu_overhead_percent": -8.333333333333337,
+      "memory_overhead_percent": -1.8431108114182915,
+      "roles": {
+        "baseline": {
+          "by_type": {
+            "$not": 1,
+            "dffeas": 10,
+            "cycloneiv_lcell_comb": 35
+          },
+          "median_cpu_seconds": 0.1875,
+          "max_working_set_bytes": 18223104,
+          "max_wall_seconds": 0.23769759999959206,
+          "executable_sha256": "2530e581996e1c088d5a35b85c9430efcbaef30d8ce420ed660427a38e0e584f",
+          "ilang_sha256": "64fbfce59e9dd2e92472bcd4c683776312d574b215d5802cab7b31988e166e5f"
+        },
+        "candidate": {
+          "by_type": {
+            "$not": 1,
+            "dffeas": 10,
+            "cycloneiv_lcell_comb": 26
+          },
+          "median_cpu_seconds": 0.171875,
+          "max_working_set_bytes": 17887232,
+          "max_wall_seconds": 0.22583980000035808,
+          "executable_sha256": "6593f691ab4c62b32743fe30331b62d2acb88fc00e671e07e1fc750da1b24cfd",
+          "ilang_sha256": "1749d70dc33e6c06f247ebf363b578943322befae24b60c2622241a6ccc13b16"
+        }
+      }
+    }
+  ],
+  "formal_remote_directory": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/postabc-windows-7gx0wryj",
+  "package_archive": "FPGA-topic2-v14-Windows-0.69-20261012.zip",
+  "archive_sha256": "cdcb76388fc93e2120a0ead203e06645dfc4f315b550e3de8fc9d1231f626e27",
+  "archive_bytes": 71786855,
+  "portable_full_flow_checks": 8,
+  "portable_smoke_status": "PASS",
+  "package_resource_fingerprints_checked": 647,
+  "initial_candidate_max_wall_seconds": 0.7275454000000536,
+  "initial_candidate_max_working_set_bytes": 22880256
+}

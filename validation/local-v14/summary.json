@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-10",
+  "status": "PASS",
+  "repository_commit": "c9b5d9c8ec95605c672dd79185b8c5545ca3da83",
+  "average_lut_gain_percent": 22.11038961038961,
+  "cases": [
+    {
+      "name": "test1",
+      "baseline_lut": 286,
+      "candidate_lut": 221,
+      "baseline_dff": 222,
+      "candidate_dff": 222,
+      "cpu_percent": -2.7007421460855885,
+      "rss_percent": -3.2128514056224855,
+      "pss_percent": -0.43525062011513516
+    },
+    {
+      "name": "test2",
+      "baseline_lut": 25,
+      "candidate_lut": 15,
+      "baseline_dff": 0,
+      "candidate_dff": 0,
+      "cpu_percent": -2.722236325354288,
+      "rss_percent": -0.4784688995215336,
+      "pss_percent": 0.17811635108102575
+    },
+    {
+      "name": "test3",
+      "baseline_lut": 12,
+      "candidate_lut": 12,
+      "baseline_dff": 17,
+      "candidate_dff": 12,
+      "cpu_percent": -4.6032253135721675,
+      "rss_percent": -0.9478672985781977,
+      "pss_percent": -0.4624028819528503
+    },
+    {
+      "name": "test4",
+      "baseline_lut": 35,
+      "candidate_lut": 26,
+      "baseline_dff": 10,
+      "candidate_dff": 10,
+      "cpu_percent": -5.306605196780067,
+      "rss_percent": -0.4672897196261627,
+      "pss_percent": -0.6354417644099608
+    }
+  ],
+  "formal_proofs": 8,
+  "negative_control": "EXPECTED_COUNTEREXAMPLE",
+  "fixture_proofs": 11,
+  "repeats": 21,
+  "activation": "PASS_V14",
+  "external_objects_copied": 0,
+  "original_environment_unchanged": true,
+  "source_input_sha256": {
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/pmux_competition_v11.cc": "e4cc16ab540433d2ade0781d8053b972bc5cc225b188796663540dc7cd337a8c",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-v11/synth-intel-competition.patch": "dc6cf742985d96844f16f01e4edf8b41260e496352b105aa0ce5c2f72e9631b3",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/run_competition_v11.py": "1500e09ba84e5e46e31f0ddb5402472bfac1a7bf809dadd6f4e654aebdfbbedc",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/test_shared_tree.py": "e882095dbf4fb976bfe71b8d2f82cf519541db8b5b85333d97b5ef32c62336f2"
+  },
+  "manifest_sha256": "4872e50ca0d337d460cb3269b193727fa7df99e396db51ae9408dad68f934b60",
+  "report_dir": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/competition-v11-spccgtbh",
+  "fixtures_dir": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/shared-tree-tests-rtrdalr_",
+  "limits": "Ubuntu cross-check; official Windows validation remains outside this run"
+}
