@@ -1,0 +1,24 @@
+{
+  "format": 1,
+  "project_commit": "2791affaa80b9bdf637cae5f60511056aec6d8ab",
+  "target": "Ubuntu 22.04 x86_64; GCC 11.4; Python 3.10",
+  "original_local_root": "/home/jumptiger/Documents/Codex/2026-10-02/FPGA-Competition-2026-repro-v14",
+  "notes": "Original measurements are archived; regenerated manifests preserve executable hashes and relocate only paths.",
+  "sha256": {
+    ".gitignore": "8fae3c4a5f6a11dc942b9a760e10a1bc4d7a3182a319786550e4eac93c54dde7",
+    "README.md": "13b1fa56554d1f7a9378c34a64a59b22406d1e533c1b9416fa2d456008802d70",
+    "assets/build-tools-linux-x86_64.tar.gz": "b70b8c5ef582490363c94af0054c10d4b66c681385db1a66b2f368ede39b4adb",
+    "assets/evidence.tar.gz": "533870cbb0c079cf6d08c1ff5c94326ca4dce85d67f2119c03ad1cd6fee50b23",
+    "assets/project-v14.bundle": "c8ca17114ef04ec833282ac95e88d371348c63cba6de474e9c7dc34d9d6b8c5d",
+    "assets/runtime-linux-x86_64.tar.gz": "f941028da25e0bb3d95ec1a1c331b2dae01734aee870927da0de917614b8794f",
+    "assets/toolchain-source.tar.gz": "2b49cc12ce16951ce984aa76527b6219e483192e3cb71467f218a220cba27ac1",
+    "prepare.py": "5f60d879a419ba24a37a79a33a81efe9e50da033f59940e843add27ccc8c93ed",
+    "reports/baseline.json": "823be464b50c3c40305b519d2c5d74d4caa1a3b8806e84641afc11ce7149e457",
+    "reports/relocation-smoke.json": "8d083ab73f22c3d4ae517bccd0ada72752fd66cbeea7399dd3d8689ebfc2df73",
+    "reports/result.json": "0a2a4c209b64b2c9a469ae8b8f63804b9db85e5e4672fbbd7633f0700fe4172e",
+    "reports/复现报告.md": "4de0df854d2de20ff1ba2e4fcc5718721d1afba3183c111a4271c50d15c652ad",
+    "scripts/build.py": "762599ca97d7593acc8b44e69f9344c3fec7202788a9f81b99abf9be1d454c20",
+    "scripts/update_package_manifest.py": "0d57b1f8969538e41d0c3c64b3f0ea012fa9bd4a78f7b5f107623cb9365f1259",
+    "scripts/validate.py": "54ba08e4d2ab89f1a2eb1ca683951988d7e5031458e33d90403ba9acfa777cbd"
+  }
+}

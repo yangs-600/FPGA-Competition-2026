@@ -1,0 +1,42 @@
+{
+  "baseline": "422033ee4c36d18901c24b00a8802152b6a33ef2e7fbc9b0057a0f6596c46b98",
+  "abc": "187aa612b710095ab6f6d9dfe79e52240428a798d95f8b4db4ff0ba0650242ee",
+  "source_commit": "9f75ca1f9834a39a863915b5dae0c7b1e33533bc",
+  "submodules": {
+    "abc": "a51bf4a7bb38ce06ea3a544b1463b40832213917",
+    "frontends/slang/lib": "b4fd362f4c53dc8ffab6946b9f866a6ea89e366d",
+    "libs/boost_regex": "2b3ac0834f31086c6e3c0e0ceb8516e427d5c39d",
+    "libs/cxxopts": "4bf61f08697b110d9e3991864650a405b3dd515d",
+    "libs/fmt": "a00f82c6b66dcae15503ba19c1598b2733057dea",
+    "libs/slang": "e222e7dc0250231312f14c37d47404a49df00fe2",
+    "libs/symfpu": "5d5e50867437fe5cabd6ab5aad3b3808ec86701f",
+    "libs/tomlplusplus": "a43ad3787293f4a46b1d70c0924b5a25d10e79fc"
+  },
+  "config": [
+    "/home/jumptiger/Documents/Codex/2026-10-02/FPGA-Competition-2026-repro-v14/local-repro/dependencies/cmake-3.31.6/bin/cmake",
+    "-S",
+    "/home/jumptiger/Documents/Codex/2026-10-02/FPGA-Competition-2026-repro-v14/clean-v11/toolchains/yosys-0.69/src",
+    "-B",
+    "/home/jumptiger/Documents/Codex/2026-10-02/FPGA-Competition-2026-repro-v14/clean-v11/toolchains/yosys-0.69/build-repro",
+    "-G",
+    "Unix Makefiles",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DCMAKE_C_COMPILER=/usr/bin/gcc",
+    "-DCMAKE_CXX_COMPILER=/usr/bin/g++",
+    "-DYOSYS_WITHOUT_SLANG=ON",
+    "-DYOSYS_USE_BUNDLED_LIBS=ON",
+    "-DBUILD_SHARED_LIBS=OFF",
+    "-DYOSYS_WITH_PYTHON=OFF",
+    "-DYOSYS_WITHOUT_LIBFFI=ON",
+    "-DYOSYS_WITHOUT_READLINE=ON",
+    "-DYOSYS_WITHOUT_TCL=ON",
+    "-DYOSYS_ENABLE_UNIT_TESTS=OFF",
+    "-DYOSYS_ENABLE_FUNCTIONAL_TESTS=OFF",
+    "-DYOSYS_WITHOUT_ABC=OFF",
+    "-DPython3_EXECUTABLE=/usr/bin/python3",
+    "-DYOSYS_COMPILER_LAUNCHER=",
+    "-DCMAKE_C_COMPILER_LAUNCHER=",
+    "-DCMAKE_CXX_COMPILER_LAUNCHER="
+  ],
+  "external_objects_copied": 0
+}
