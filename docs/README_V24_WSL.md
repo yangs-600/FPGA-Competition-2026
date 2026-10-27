@@ -13,8 +13,8 @@ Yosys 0.69 的 v24 算法已冻结。本轮从已交付归档的离线配方进�
 | 按实际步骤解包、现场编译、测量、证明 | [ONSITE_RUNBOOK.md](ONSITE_RUNBOOK.md) |
 | 看九例面积、两次独立性能与证据边界 | [RESULTS_V24_WSL.md](RESULTS_V24_WSL.md) |
 | 核对需要交给队友、GitHub 和比赛的文件 | [DELIVERY_CHECKLIST.md](DELIVERY_CHECKLIST.md) |
-| 准备新构建的测量目录；显式 `--run` 才测量 | [stage_rebuilt_measurement.py](../measurement/stage_rebuilt_measurement.py) |
-| 新角色综合和 EQY | [证明入口说明](../proof/README.md) |
+| 准备新构建的测量目录；显式 `--run` 才测量 | [stage_rebuilt_measurement.py](../scripts/wsl/stage_rebuilt_measurement.py) |
+| 新角色综合和 EQY | [现场证明步骤](ONSITE_RUNBOOK.md) |
 
 FAQ `Sheet1!C116/C117` 允许 WSL 路线，要求现场编译执行并自备时间/内存方法。本轮已演练这条链，仍须在正式评测环境按组织方规则验收；结果表没有写官方“全部通过”。
 
