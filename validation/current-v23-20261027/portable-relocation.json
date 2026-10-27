@@ -1,0 +1,23 @@
+{
+  "status": "RELOCATED_18_EQY_AND_NEGATIVE_PASS",
+  "default_candidate_unchanged": true,
+  "overall_submission_acceptance": false,
+  "archive": "/tmp/fpga-review-20261027-rhsdoh46/FPGA-topic2-v23-EQY-Linux-0.69-20261027-r1.tar.gz",
+  "archive_sha256": "35a75c08bb0f32b6727203341c8162b4a0ce7c8b5a5b787d114bd2b8e7f9ba46",
+  "archive_bytes": 43472415,
+  "relocated_root": "/tmp/fpga-v23-proof-relocated-20261027-r1/FPGA-topic2-v23-EQY-Linux-0.69-20261027",
+  "portable_index_sha256": "ac50f798b70f4a105f8ad42e12ed16b03bb9ed87ce2ff2ad0194cdf66c4c6cd9",
+  "positive_proof_counts": {
+    "PASS": 18
+  },
+  "negative_control": "EXPECTED_COUNTEREXAMPLE",
+  "active_fingerprints_all_inside_kit": true,
+  "formal_report": "/tmp/fpga-v23-proof-relocated-20261027-r1/FPGA-topic2-v23-EQY-Linux-0.69-20261027/results/replay-20261027-095011-507346/formal/report.json",
+  "formal_report_sha256": "38944d8f41c81c2e3041f04933e4705684cc49b67f675f77cfb560c45c012a2f",
+  "replay_receipt": "/tmp/fpga-v23-proof-relocated-20261027-r1/FPGA-topic2-v23-EQY-Linux-0.69-20261027/results/replay-20261027-095011-507346/portable-replay-receipt.json",
+  "replay_receipt_sha256": "dc995fa9f255f1504187625e0294716c379a7016205d459f72209555bddb7c7b",
+  "evidence_archive": "/tmp/fpga-review-20261027-rhsdoh46/portable-v23-relocated-proof-evidence-20261027-r1.tar.gz",
+  "evidence_archive_sha256": "971d682a3377a920a89960e785ba8b9326a98a4557df08d5b6f3a93ee6bffe5c",
+  "evidence_archive_bytes": 4141207,
+  "platform": "Linux x86_64 / compatible WSL2, /bin/sh, /proc, /dev/null; not native Windows EQY"
+}

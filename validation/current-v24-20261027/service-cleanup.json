@@ -1,0 +1,12 @@
+{
+  "status": "V24_COMPLETE_HELPER_STOPPED",
+  "owned_pid": 305717,
+  "round": 5,
+  "closed_utc": "2026-10-27T11:00:59.141402+00:00",
+  "active_version": "v24-bounded-search",
+  "stable_manifest_sha256": "74e0d60962c6e94b502e4055cab057d23f4bd4220823bd5dd2d86229152b310b",
+  "github_pushed": false,
+  "overall_submission_acceptance": false,
+  "strict_efficiency_passed": false,
+  "delivery_index_sha256": "5765792c1a14c2101a4584729acb6954a917beb680cb25084cb2d75f02e32b1d"
+}

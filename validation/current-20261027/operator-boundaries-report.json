@@ -1,0 +1,1608 @@
+{
+  "status": "PASS",
+  "directory": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/operator-boundaries-v19-20261027",
+  "harness_sha256": "da5ed44c602bc3db0bd50d414d535562e0d183d309e13a7cf4ccfbc54f9067e5",
+  "cases": [
+    {
+      "name": "xor_real_default",
+      "minimum": 1,
+      "maximum": 1,
+      "operation": "$xor",
+      "source_sha256": "e1937731ee8f3ce6e58aa5a8a330f09e2daf77a024b05d83ebfc139dd96eaf9a",
+      "flow_sha256": "81b526ce8a08cf7c864c7b49c72d5f0ebf8a8158bb7e8eca02df51a421080802",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$xor",
+          "width": 8,
+          "removed": 4,
+          "default_x": false
+        }
+      ],
+      "log_sha256": "c86b4ebe5f06db0d47b6cdadbf0eccb58705b67655e7092013bdc3c03804afd3",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$xor": 4
+      },
+      "after": {
+        "$xor": 1,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "xor_swapped_operands",
+      "minimum": 1,
+      "maximum": 1,
+      "operation": "$xor",
+      "source_sha256": "8f40bc1f4a88a6d320aa6922acc23625bbb485aca444bf209fc7c18836b9ce55",
+      "flow_sha256": "6758d3e2c23be395eecfe13dbd4f2fc90af3c8a55e121287a188a5bfdfae0c40",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$xor",
+          "width": 8,
+          "removed": 4,
+          "default_x": false
+        }
+      ],
+      "log_sha256": "d1a69150e33d75f000b0b20074159fafbbe7dfd245000ea23b8a0df3c2c70b3a",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$xor": 4
+      },
+      "after": {
+        "$xor": 1,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "and_real_default",
+      "minimum": 1,
+      "maximum": 1,
+      "operation": "$and",
+      "source_sha256": "2589b7d7674547dd21e1e8d392bce2b75923923005619727d1a5205e7123fe4d",
+      "flow_sha256": "fc85266eb32739d49ce2642f89a02c54743f8b58a785e3b2a63fe7ed822e0d89",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$and",
+          "width": 8,
+          "removed": 4,
+          "default_x": false
+        }
+      ],
+      "log_sha256": "aa300609b96653d0156730c9adfc8db15e2fc8e4b16c565d6d12b3e55fdc3a0d",
+      "before": {
+        "$and": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$and": 1,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "or_real_default",
+      "minimum": 1,
+      "maximum": 1,
+      "operation": "$or",
+      "source_sha256": "ff6e0b4b9c2a106aed698705c9947b5d23f3e24f4d9031f965cd63d6d0679b1d",
+      "flow_sha256": "1c331db28154b9d0a83594e937b1cbfd317263a6e44e790170d12865a7e8d95f",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$or",
+          "width": 8,
+          "removed": 4,
+          "default_x": false
+        }
+      ],
+      "log_sha256": "06ac917b74fefa5fbdffa8e6c2572d0dc83b54f76b618e90147fb3c9fc3bccbe",
+      "before": {
+        "$or": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$or": 1,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "xor_x_default",
+      "minimum": 1,
+      "maximum": 1,
+      "operation": "$xor",
+      "source_sha256": "596fb90922428dabf1a9f87b1d5573f8d35e86b341c0762524f8be8f845ed69c",
+      "flow_sha256": "775587d89358747703aedad7b453e74c6e125fb3cca2d6cb988df9a76eb858f6",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$xor",
+          "width": 8,
+          "removed": 3,
+          "default_x": true
+        }
+      ],
+      "log_sha256": "ca432d920f029871f3ce06b755389f56245c8f2a86049c5cb52a5a083fcdff15",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$xor": 3
+      },
+      "after": {
+        "$xor": 1,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "and_x_default_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "source_sha256": "bdc33934f9ebc520d3a85df55062216f2073eca77529f8aed88dc7453b8ba655",
+      "flow_sha256": "d6b974be0c4891112e722b187874b8f11e6723063e8e10f828ad44ac14b967ba",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "e84f6824d2c4493fcc99923f28f8c417104d2485df84e287d4f0178d8083b39b",
+      "before": {
+        "$and": 3,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$and": 3,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "or_x_default_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "source_sha256": "a3d8ae79875de56cbe6d1923d99e6bd860adfe040ce40f5aef706bcd526a23ae",
+      "flow_sha256": "48d83f358938887ddf6524c9ecff5705982e4d00b0bd5844d7903e4e51eae759",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "d9cea257388a63b3b952ddf2ed152d21e911844ae62c496ce1e5120474e9cc8d",
+      "before": {
+        "$or": 3,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$mux": 24,
+        "$or": 3
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "external_user_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "source_sha256": "e813a475f70cc7f78b55cdf7634332901a598cf17f70effa5fde1de2c773df3c",
+      "flow_sha256": "29773544d30701a5e5b8ba035b270145084cdb374bed2589e2e9d6e5b414b1e4",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "5ffca9e6c065347ceb4f041b4eeeabfc45a9cbce91387139ce16ddcbd9fb4431",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$xor": 4
+      },
+      "after": {
+        "$mux": 24,
+        "$xor": 4
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "kept_wire_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "source_sha256": "de6cb1d9daf0c40f95cdb1cdac86d4bfb4fe4aff6be5aece1299e47974b82e9b",
+      "flow_sha256": "5623fa41b20d63e6f538de1351f84fdee28d4ce70517587935f2cc07822dcf52",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "76859b81233a674729188fc8c36c3d4849423a72f41e08c3e67677c28643d9ee",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$xor": 4
+      },
+      "after": {
+        "$mux": 24,
+        "$xor": 4
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "kept_operator_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "source_sha256": "e1937731ee8f3ce6e58aa5a8a330f09e2daf77a024b05d83ebfc139dd96eaf9a",
+      "flow_sha256": "21865280ba01cce139cc3fc2a636ddafd64b8faacdb45b6329c8eb841e0ce1c6",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "8b39e156d0dbde2cc425de67a3a4410f647940c4325fceab1860c856dfec8f3f",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$xor": 4
+      },
+      "after": {
+        "$mux": 24,
+        "$xor": 4
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "kept_pmux_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "source_sha256": "e1937731ee8f3ce6e58aa5a8a330f09e2daf77a024b05d83ebfc139dd96eaf9a",
+      "flow_sha256": "0cf3baa973606f2ee858b6f7eae2f40ef41a80f8ee4ee44bfa399165fc2f9c59",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "10e6e9b7317d4dedb131e8d3c1dffeee628660e3ebf7fb5c8543875dc8413fe8",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$xor": 4
+      },
+      "after": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$xor": 4
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "mixed_operations_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "source_sha256": "dcf98c80e5b9b5badb07f93a6ee5bb209775fd9fa25b4af4c5e7063a9986d17c",
+      "flow_sha256": "1d525e8475e0f64f5888a9b8c7b74e8c1edfd23b54ecd124a7bd166dfa247e30",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "ec550e2a95c5d92f3198939c8642427632333f863c8afa8fda1f6edcd369ab60",
+      "before": {
+        "$or": 1,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$xor": 3
+      },
+      "after": {
+        "$mux": 24,
+        "$or": 1,
+        "$xor": 3
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "producer_width_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "source_sha256": "b8093f5d276e06427d9f0b47f1eb7ea787b8d3c8defc04f8fd3516ee85718c08",
+      "flow_sha256": "24d23d8eb1ab482c9d23bcd2ef814fd97b4cdea934494312cf5ea56f84bbacb4",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "97adbbcec123ca3a21b24a3bfc741837057d74d6d422fb8da5dbcb3c61c5dba9",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$xor": 4
+      },
+      "after": {
+        "$mux": 24,
+        "$xor": 4
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "no_common_operand_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "source_sha256": "4525cd1f432272bdfca3d1c53693cfe192f2d85593162b5f12c0d21c610ac533",
+      "flow_sha256": "d2a2e37cdc69519809a94b5a4b4f947f8a1bf9ae1e2134d4528ac647b8a49c86",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "cf81d39aa60ffb69d3c1d32294f96862aabe3ce30bb5cb93e1770caa03ba3ecd",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$xor": 4
+      },
+      "after": {
+        "$mux": 24,
+        "$xor": 4
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "nested_bottom_up_xor",
+      "minimum": 2,
+      "maximum": 2,
+      "operation": "$xor",
+      "source_sha256": "18e3fc843b256664e2529f9dc02d32fd1b7db5d1785b36cbeae02f79e9d8ee00",
+      "flow_sha256": "36875bd6641ff43647052596b74038a64f4a058116e3689783d6be7d7ab05cb5",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$xor",
+          "width": 8,
+          "removed": 4,
+          "default_x": false
+        },
+        {
+          "operation": "$xor",
+          "width": 8,
+          "removed": 4,
+          "default_x": false
+        }
+      ],
+      "log_sha256": "4121bc13fd8ffad7374858e0ff0b74366d5d7870fec7a44b075bfc5b1446b78c",
+      "before": {
+        "$pmux": 2,
+        "$eq": 4,
+        "$logic_not": 2,
+        "$xor": 7
+      },
+      "after": {
+        "$xor": 1,
+        "$mux": 48
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_common_A",
+      "minimum": 1,
+      "maximum": 1,
+      "operation": "$add",
+      "input_muxes": 1,
+      "independent": 4,
+      "estimate_gain": 33,
+      "kind": "arithmetic",
+      "source_sha256": "783dcb71275c285605d1576b5c9dce151e3cb71e52de08da3dd7cdc3b196d86e",
+      "flow_sha256": "7b2592970b532debc970eba9bb9419181cc5f8ab9ad5a6648e647306921573be",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$add",
+          "width": 8,
+          "removed": 4,
+          "independent": 4,
+          "input_muxes": 1,
+          "estimate_gain": 33,
+          "default_x": false
+        }
+      ],
+      "log_sha256": "e93e3a36887c0c834ec51a6a9b62e9b34766e117d7add4a8da2f752c24943959",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 1,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_common_B",
+      "minimum": 1,
+      "maximum": 1,
+      "operation": "$add",
+      "input_muxes": 1,
+      "independent": 4,
+      "estimate_gain": 33,
+      "kind": "arithmetic",
+      "source_sha256": "e5479ec16dd2a4c20a5bb8d4696bec4a418364e73cd21ccae39bdf3f7cdd80ef",
+      "flow_sha256": "be5a705fc5515896ce5f4824c90c05f874f6d446c87fb624c753722c22359e1d",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$add",
+          "width": 8,
+          "removed": 4,
+          "independent": 4,
+          "input_muxes": 1,
+          "estimate_gain": 33,
+          "default_x": false
+        }
+      ],
+      "log_sha256": "2d1ac261d75f1d10266a038c1971747af79f0ce9502b60e31b7b6388985f2fcf",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 1,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_general_pairs",
+      "minimum": 1,
+      "maximum": 1,
+      "operation": "$add",
+      "input_muxes": 2,
+      "independent": 4,
+      "estimate_gain": 9,
+      "kind": "arithmetic",
+      "source_sha256": "1cd4c71b14abb7f07e6ed056406b597935d3e7702aa5bb3e4073af1af807c212",
+      "flow_sha256": "2be64ac0d5631cc4477533d81512d83af5246ddc79b9a3735c5241b821b1ab45",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$add",
+          "width": 8,
+          "removed": 4,
+          "independent": 4,
+          "input_muxes": 2,
+          "estimate_gain": 9,
+          "default_x": false
+        }
+      ],
+      "log_sha256": "5d354676b2c459129a0963ebb68e9595b40e4666ec92dca42aa69fcdf0c99f9f",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 1,
+        "$mux": 48
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_signed",
+      "minimum": 1,
+      "maximum": 1,
+      "operation": "$add",
+      "input_muxes": 2,
+      "independent": 4,
+      "estimate_gain": 9,
+      "kind": "arithmetic",
+      "source_sha256": "3a52522ceea0e60fa43bb7400a6192918719c592b1cef8cf5a24e05840cce381",
+      "flow_sha256": "a8930358580bde66f1fa071a2614debb33bd59d7e249a29a87f3a2b94c1e2dac",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$add",
+          "width": 8,
+          "removed": 4,
+          "independent": 4,
+          "input_muxes": 2,
+          "estimate_gain": 9,
+          "default_x": false
+        }
+      ],
+      "log_sha256": "57d7693cb04437bb7aedfe6890d200dcf7852a92979fa2110ac9a38d40728448",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 1,
+        "$mux": 48
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_full_x",
+      "minimum": 1,
+      "maximum": 1,
+      "operation": "$add",
+      "input_muxes": 2,
+      "independent": 4,
+      "estimate_gain": 9,
+      "kind": "arithmetic",
+      "source_sha256": "bb9c42c906e5f8cc02888d4a59c37da65ee364c148dcb12647b4e3f05b286902",
+      "flow_sha256": "cc017845fcf7f59fde9f1f21551fb55116d05b31cc19a5bae821bb6215d730ce",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$add",
+          "width": 8,
+          "removed": 4,
+          "independent": 4,
+          "input_muxes": 2,
+          "estimate_gain": 9,
+          "default_x": true
+        }
+      ],
+      "log_sha256": "a7cb591cdec1a8c6a7c6440a5d6c90f8ed49069330f4910cc616844790ece0eb",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 3
+      },
+      "after": {
+        "$add": 1,
+        "$mux": 48
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_partial_x_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "c003c5432f63f58ab1d54718e381dadbe806371a17be6622e015d546ad302600",
+      "flow_sha256": "3c736e99387e41c3c617f32c231b67684adfc8c917ff0dbd57c8f2ba4c63b61c",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "da72d9af1a3756879ac4faaa9fb01233d42e86c615c2f201c4fe66d8796c70fc",
+      "before": {
+        "$add": 3,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 3,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_mixed_x_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "a73762083b8b9d42ee0e062fbe54a2fbe72c7fa5b66aef3f6b0af8b5cd8cf00d",
+      "flow_sha256": "10be339549685cb68f9953b852f00b6b5004be68cdcdf951f256ee9f59d8e731",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "c43a1f8682ca235f4c33371f9b2a3b57d1abb45276e7e8a60160c8a29f565de1",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 4,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_signed_mismatch_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "c1d14227b417fa0689c092f5ca4d6cfef2beb0077cab288b0fe9cb4b22dd2f77",
+      "flow_sha256": "87a67dc11891c31ff5a9624cf8ba195b3de8741c4f491c5f2200805f1f0fd90e",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "1ff497e70a63d55f4e5bef5f2271ba38274547145e0ce61aa1ed199489233600",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 4,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_width_mismatch_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "e5f632ad19f3787101249adf896240b26145fb6634d4b6c57278d0d3863ea47c",
+      "flow_sha256": "6e09643ae2a109e3098bc870ed66683d10a92dc807d31f4603a80702472b64dc",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "12a10079fcae8a7e2bacbb0313435c71d884e686580fc602c8a804ddd3dc6646",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 4,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_external_user_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "3a32ba2a81643fcde92e89e82cc1ddf947b912497336af79d5b9038dcf9bd9bf",
+      "flow_sha256": "c33c2f64811ae01312fb557447311fa9c02d2912153641bbf771abd35ced8e04",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "51d227daee0d3da508e6b9a7d5164518bd0d0e9f408eb2d40b6b158f4fc26f9b",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 4,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_kept_wire_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "0c9b6a7836a551128978e76e5ae7637ef2f5edf238f40e6b53038d550582f5b5",
+      "flow_sha256": "51f964970b5d39530b78bdcb60849ec24c400cd9a2c1b2eb3079e3f29c81f35e",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "8629dbe1a20a8cfe39b1563574cef89f65528794f08da1e09a667c041268c72c",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 4,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_constant_operand_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "608d1a8e3783e260040c011d2057769e60d73ffb27e58aa63bd72b2368bfac86",
+      "flow_sha256": "12921cccc3c64b547523d6b7e3e850450b2e0dc604fc000f4d57d07f2e53484d",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "42f7976d92566eab41ba43ac3cb2b067dacc6afa0cc95608d4b6f214250eae80",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 4,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_repeated_operand_bits_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "34654e9a4c0cb7be41bbe438ecbd28ab14b90804159ac8f5219619a114314694",
+      "flow_sha256": "ce8ac12f932bc1f053de32b7ad6ea216b116c1a5bb1ae0b8b898dd0e846bcc01",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "df0e400e8bece37c51b6b8a675ca6fdd73c8376cfc8ebb29a78ed0d817911811",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 4,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_unprofitable_pairs_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "static_guard": {
+        "width": 8,
+        "arms": 3,
+        "independent": 2,
+        "input_muxes": 2,
+        "estimate_gain": -13,
+        "threshold": 4
+      },
+      "kind": "arithmetic",
+      "source_sha256": "2ab8a6e5c917249af214ba5371bc407a70419ffe82ec895ac9d7b2386535a731",
+      "flow_sha256": "10816d0fc50d0a6c9d4a6d95d9e91b1de7dc93e261b20b08d9984da3aa11d71a",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "f2392703a70040ca4e2b62ac7fcaa7995125f43fbc189e8a25a632c831eeddda",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 4,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "sub_common_A",
+      "minimum": 1,
+      "maximum": 1,
+      "operation": "$sub",
+      "input_muxes": 1,
+      "independent": 4,
+      "estimate_gain": 33,
+      "kind": "arithmetic",
+      "source_sha256": "85b27bb2ef6a5fd134b7d5fc155a20b453001ac2b5016048e00c1eedc53de8c3",
+      "flow_sha256": "f9aa669460f080b311893d14269036670320fb5853d3ad677010201ad9963e3f",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$sub",
+          "width": 8,
+          "removed": 4,
+          "independent": 4,
+          "input_muxes": 1,
+          "estimate_gain": 33,
+          "default_x": false
+        }
+      ],
+      "log_sha256": "c7cbacf2ef466bd9f91e0909377e0c686c8bfc73c7147a0918cefa155b7c6a9e",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$sub": 4
+      },
+      "after": {
+        "$sub": 1,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "sub_common_B",
+      "minimum": 1,
+      "maximum": 1,
+      "operation": "$sub",
+      "input_muxes": 1,
+      "independent": 4,
+      "estimate_gain": 33,
+      "kind": "arithmetic",
+      "source_sha256": "7ea656dd395b1b89a085f290ee49e660fca25f933f05914bb8babc7044c3e71e",
+      "flow_sha256": "8f06c74da8d21181cc1b5e5cf481eba51c87c071233245aff427802b3a10d0d1",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$sub",
+          "width": 8,
+          "removed": 4,
+          "independent": 4,
+          "input_muxes": 1,
+          "estimate_gain": 33,
+          "default_x": false
+        }
+      ],
+      "log_sha256": "dbceea52debb4dfaa2170825e624e1c16d2ea1bb956b252c8eac65d3abe3ca3d",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$sub": 4
+      },
+      "after": {
+        "$sub": 1,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "sub_general_pairs",
+      "minimum": 1,
+      "maximum": 1,
+      "operation": "$sub",
+      "input_muxes": 2,
+      "independent": 4,
+      "estimate_gain": 9,
+      "kind": "arithmetic",
+      "source_sha256": "168e94651a2ffc1679df8b59bde8631afbb8feb059249a9836ca6f61d5855e73",
+      "flow_sha256": "4dc75b185c15bc811a787fefd25a70365ca8de01c613caca54776a2b6f4b37a8",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$sub",
+          "width": 8,
+          "removed": 4,
+          "independent": 4,
+          "input_muxes": 2,
+          "estimate_gain": 9,
+          "default_x": false
+        }
+      ],
+      "log_sha256": "5f8c65a6a736ae9816f9df4d1a4cddf3deb9ebe487fdc9560de83054eec154c9",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$sub": 4
+      },
+      "after": {
+        "$sub": 1,
+        "$mux": 48
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "sub_signed",
+      "minimum": 1,
+      "maximum": 1,
+      "operation": "$sub",
+      "input_muxes": 2,
+      "independent": 4,
+      "estimate_gain": 9,
+      "kind": "arithmetic",
+      "source_sha256": "2154cfd7f4e72630b04831d8e0526e5a97163257f2717e3cef5a40794d061062",
+      "flow_sha256": "22ed1e74016e31b7971366972972267e80f9e298bee1a99e1fc92d5effb38995",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$sub",
+          "width": 8,
+          "removed": 4,
+          "independent": 4,
+          "input_muxes": 2,
+          "estimate_gain": 9,
+          "default_x": false
+        }
+      ],
+      "log_sha256": "144deb7bf8400816a39df86a14b4c3b0cbdf35f1f8a53bdd2fe94f27df2bd707",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$sub": 4
+      },
+      "after": {
+        "$sub": 1,
+        "$mux": 48
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "sub_full_x",
+      "minimum": 1,
+      "maximum": 1,
+      "operation": "$sub",
+      "input_muxes": 2,
+      "independent": 4,
+      "estimate_gain": 9,
+      "kind": "arithmetic",
+      "source_sha256": "b2b4a8c5dd063507ad1060fe152ff33a67583604563fa2f50ffa652a823515fe",
+      "flow_sha256": "db16d0f3cf190787e5919a0f947b7078adf8a820c436e9359a2f764aa682ccd4",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$sub",
+          "width": 8,
+          "removed": 4,
+          "independent": 4,
+          "input_muxes": 2,
+          "estimate_gain": 9,
+          "default_x": true
+        }
+      ],
+      "log_sha256": "1845d527093c6e7d6f8c809045d704d9673def05e4048919caba93c1f69d2199",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 3,
+        "$sub": 4
+      },
+      "after": {
+        "$sub": 1,
+        "$mux": 48
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "sub_partial_x_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "aff18d8beb6778ef804d6d293199147da563b257b3499f27230bd9015c397b19",
+      "flow_sha256": "835c2072a880753f34b2351fb0f026ec89e90829570c70f2ff9436bc4defd3e3",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "e0173a639ff9d54a4149db4a65aafa792ec7f259c90e2fba0d05799f82850335",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$sub": 3
+      },
+      "after": {
+        "$mux": 24,
+        "$sub": 3
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "sub_mixed_x_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "9912bf76d5298b04fc88145fb54e6a6aaff531da9080c75c1da4082946e9d82d",
+      "flow_sha256": "6f9f665c27b954f2c23911201cebd2fb3c132d44a16c519a1e5e5550145af5b2",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "2c44e5c02fe6a4ce2940055c1100c31040931b414ff741d170fe212ef43b8da1",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$sub": 4
+      },
+      "after": {
+        "$mux": 24,
+        "$sub": 4
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "sub_signed_mismatch_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "383cda4a87b8578b708b204e53f29d8181aece18be19425e9a95728b7bfb0988",
+      "flow_sha256": "3bfe549be2ae23f4e4259ede9adf23dbcd8ac8ee0e4ac37eb4d8a46fbe28ac0c",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "a49026865a64b4581e3d06daf3777b674cd6db9385c85b17a5f317a68ff26d3f",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$sub": 4
+      },
+      "after": {
+        "$mux": 24,
+        "$sub": 4
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "sub_width_mismatch_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "5bcf30473feb6c21a18479203ff2c16725f2879ce2e1dc8268121c0a2ea846c8",
+      "flow_sha256": "d703619e56a6d803bf7380f39b1b4193acc543b4db03c05905fcd28b41ea15ab",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "d9e5b8787e7aa26177b4e7cf49ee715ef99ded951c409d144958be003cc8953c",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$sub": 4
+      },
+      "after": {
+        "$mux": 24,
+        "$sub": 4
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "sub_external_user_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "48c035d1237b2777af6a78e0af570b6ca53d20cd08347bd6079ef2395eb1402c",
+      "flow_sha256": "c21bc0c145f3f17a4bad92eb8b120ac9215e447a4be40b3817830c65235fd551",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "a92bec571ce6595f4e38390710a64cc14a4a7f4f95f0b28e87f2a554cebb81f7",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$sub": 4
+      },
+      "after": {
+        "$mux": 24,
+        "$sub": 4
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "sub_kept_wire_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "dbc5bd721a9c21ffa8504e8369e9db137a0df4688ba17bb95045492e1dad42b4",
+      "flow_sha256": "9f6127346df92203ee2b74905897bec79279317cd39860e243ebed4502739cd5",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "0484d6856e4aee5254a641d9d196a1aa6f1cd5e9d66c636805f637eebcede2d9",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$sub": 4
+      },
+      "after": {
+        "$mux": 24,
+        "$sub": 4
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "sub_constant_operand_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "1fce7d86a88f40fb9c2ba9ac599f281bf4929027b6e63df9aa568ac8b92918f1",
+      "flow_sha256": "00c0b41e25104e9cea6ee6a0161077fd7db13bc00e1c14c229d1e4273e77f2b6",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "ce413ba397ffb5c3971e5b88477b6881dbc58926a1468361901f8c27eee0ed8d",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$sub": 4
+      },
+      "after": {
+        "$mux": 24,
+        "$sub": 4
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "sub_repeated_operand_bits_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "05f56883e00ca76b82593647bcef68270987928468b57ac61a0c5285ec3af908",
+      "flow_sha256": "1faac94dd13a2a0a922f0780b6672e5e0ea645a268dde9af545d97cd7861750b",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "427a9462fbb4763991efbd4ad1e0cc6c42e5373956feebb281da1cd114af1cfc",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$sub": 4
+      },
+      "after": {
+        "$mux": 24,
+        "$sub": 4
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "sub_unprofitable_pairs_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "static_guard": {
+        "width": 8,
+        "arms": 3,
+        "independent": 2,
+        "input_muxes": 2,
+        "estimate_gain": -13,
+        "threshold": 4
+      },
+      "kind": "arithmetic",
+      "source_sha256": "f89a7f507b8cb2eb2ea2e8ff9d82f0b7f05a84c861f0aa958c9186557ad860de",
+      "flow_sha256": "f35a279dc528bce6d8520c818b0b0add7c3750d0290f82a9aade0dc08c3093d9",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "f09dd7c6e52b5a9fe6189d42e572cf1e3c9c6c8696c80d7ad3df97db1a586a84",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$sub": 4
+      },
+      "after": {
+        "$mux": 24,
+        "$sub": 4
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "sub_mixed_operand_positions",
+      "minimum": 1,
+      "maximum": 1,
+      "operation": "$sub",
+      "input_muxes": 2,
+      "independent": 4,
+      "estimate_gain": 9,
+      "kind": "arithmetic",
+      "source_sha256": "4feb3dbbb35c881db0e28c3897796ad56187d5b31a9d034da59eabdff3f7c0d5",
+      "flow_sha256": "4d9a71e354a3b24113a19d6d8966b47f726be94ab879a503741967081c7ca41a",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$sub",
+          "width": 8,
+          "removed": 4,
+          "independent": 4,
+          "input_muxes": 2,
+          "estimate_gain": 9,
+          "default_x": false
+        }
+      ],
+      "log_sha256": "e20b10a046755a962e1aeb64da1bb75438e2cd4582069254a2904d8f2c05d667",
+      "before": {
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2,
+        "$sub": 4
+      },
+      "after": {
+        "$sub": 1,
+        "$mux": 32
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_width4_cost_boundary",
+      "minimum": 1,
+      "maximum": 1,
+      "operation": "$add",
+      "input_muxes": 2,
+      "independent": 4,
+      "estimate_gain": 3,
+      "kind": "arithmetic",
+      "source_sha256": "daa55df42ccf3741495b4d592c5ac4b592eea340a0b1962ebf9b215c3b8ee083",
+      "flow_sha256": "b43dbdc640e4d1f8dba60c43a6de7237474ea1296aa10a1a18144c6884ae3234",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [
+        {
+          "operation": "$add",
+          "width": 4,
+          "removed": 4,
+          "independent": 4,
+          "input_muxes": 2,
+          "estimate_gain": 3,
+          "default_x": false
+        }
+      ],
+      "log_sha256": "3d1eade2a12ba1395a5138817beb76203c5a057fbc10a21e1ef13c6e3f7970bc",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 1,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_width3_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "765f1fa324a8010ceebdd0cb3e72560932601b5ee141c0cfa133a505a9f00300",
+      "flow_sha256": "c3e95548986b086806244744720ba5bdbdeadd6a530be4ca8b5e87a5af937a9e",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "fdbbf939b9023f9488ff7476418d2e8a050cdd6ee1e66a3d0bedead70cee09bf",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 4,
+        "$mux": 9
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_nonoperator_default_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "fc075fb54d7e29abfd7382075e7356fa1f950bf60942ffa95d3e52c5201485e3",
+      "flow_sha256": "7e36b9cdaf11fd2c040585df1f6a6ee4948d65aa758a45cd8ce2027007066075",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "ddf50a3991cae36774baef434318c365fb1a5b22bdd9e55c86a0062009edba55",
+      "before": {
+        "$add": 3,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 3,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_kept_operator_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "1cd4c71b14abb7f07e6ed056406b597935d3e7702aa5bb3e4073af1af807c212",
+      "flow_sha256": "98fe50f58cbbfa499e93d17eb284ccf4b7b990f102c9f9e8321493f13e2a4b02",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "13862495450a36a63270ee284a9e309c81f65b225f184c3e093d7af68e9c9bb1",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 4,
+        "$mux": 24
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_kept_pmux_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "1cd4c71b14abb7f07e6ed056406b597935d3e7702aa5bb3e4073af1af807c212",
+      "flow_sha256": "a8cff88cfcf0b037f6fcd6128aea81960a1f9cf9f07c3e50c063e47044d131a7",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "b1fc8bce8155d228968039e0f0cea894467c8c49e0cca4d8b7e08d301ec2f502",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "after": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$pmux": 1,
+        "$eq": 2
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_mixed_ctrl_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "98a95aa58a918346aad113654a2403b0f9050351c83d223a58fa948b31e45034",
+      "flow_sha256": "2bd77f4de4ffe916c5da447e40562c5d876ec2f6ac13c441d37de2dee177c98c",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "1d7e9abf71429cbae6db6fd5004d42fa9f1fde5de85aa9cc5ab44276810cf7e2",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$eq": 2,
+        "$pmux": 1
+      },
+      "after": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$eq": 2,
+        "$pmux": 1
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_raw_select_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "d2a6e9c6acc7a0abea66587185361b7893a9d4fb9849e80608e854c5db070b0b",
+      "flow_sha256": "333ddaf9045b8630a04421c174d5c2d567aed0d61cb9dfb429a82b8b613e4752",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "825a3f2cd31520b61eb1a6397eb58cd6fe8798c57a582209975b3079cc70a739",
+      "before": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$eq": 1,
+        "$pmux": 1
+      },
+      "after": {
+        "$add": 4,
+        "$logic_not": 1,
+        "$eq": 1,
+        "$pmux": 1
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    },
+    {
+      "name": "add_duplicate_code_skip",
+      "minimum": 0,
+      "maximum": 0,
+      "kind": "arithmetic",
+      "source_sha256": "6f940dee481ae204e1d70d97cda8644c58f4b9b47ae7fd0d045cc171d6d82180",
+      "flow_sha256": "c0132363cc052588edcc768263376bfacc6d041ad7f5122b62507151ac42fc20",
+      "status": "PASS",
+      "exit_code": 0,
+      "timed_out": false,
+      "factoring_events": [],
+      "log_sha256": "d490e4de7ed13ba10c05aca287e91f13e2a66a9bb3da6c855843daef38cee24e",
+      "before": {
+        "$add": 4,
+        "$logic_not": 2,
+        "$eq": 1,
+        "$pmux": 1
+      },
+      "after": {
+        "$add": 4,
+        "$logic_not": 2,
+        "$eq": 1,
+        "$pmux": 1
+      },
+      "frontend_pmux_shape_present": true,
+      "expected_factoring_guard_met": true,
+      "sat_status": "PASS"
+    }
+  ],
+  "scope": "Focused PMUX pass SAT/guard regression; no official performance or area acceptance",
+  "inputs_defined": true,
+  "gold_literal_x_defaults_are_dont_cares": true,
+  "candidate": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v19-mfs2/yosys",
+  "candidate_sha256": "01c5edab947ecd2b0b14cb55e00f375fe895708bb52d639a293a010b86140ff5",
+  "candidate_version": "Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)",
+  "negative_control": {
+    "status": "EXPECTED_COUNTEREXAMPLE",
+    "wrong_source_sha256": "c6c4d6ca69dfc8e4b0f5590d0df7fc9b8d35e681abe03079e16b6d01179f7c31",
+    "flow_sha256": "fd0e373180a3405a46fc0045751a9be764b001caf59d2c4d404dd724bf861749",
+    "exit_code": 1,
+    "timed_out": false,
+    "log_sha256": "349d871ec84e19e2acb2f8a490438bfe699b3af1ed694c11a9791142d86a1ba7"
+  }
+}

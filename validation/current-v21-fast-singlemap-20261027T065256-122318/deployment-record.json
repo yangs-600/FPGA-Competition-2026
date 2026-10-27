@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "revision": "v21-fast-singlemap",
+  "mode": "APPLY",
+  "repo": "/home/ubuntu/FPGA/FPGA-Competition-2026",
+  "previous_current_manifest_sha256": "fd2fdbb33ac1125c5f453d009120260aadcc0fe9ff2328df561b6190efb438dc",
+  "candidate_manifest": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v21-fast/manifest.json",
+  "candidate_manifest_sha256": "94d464deada9af25069580944382dd28593bea473ccf4a1d3f9d997db494f958",
+  "files": {
+    "src/pmux_competition_v11.cc": {
+      "before_sha256": "3ac72f9a6535a2e3b116eb9dbce3bcc3fc537a680571386002f91c43ba3b6854",
+      "sha256": "0231002c240a080e7eebe1734b9dab49f2db78159c38a68769c885599eb43678"
+    },
+    "clean-v11/pmux_competition_v11.cc": {
+      "before_sha256": "3ac72f9a6535a2e3b116eb9dbce3bcc3fc537a680571386002f91c43ba3b6854",
+      "sha256": "0231002c240a080e7eebe1734b9dab49f2db78159c38a68769c885599eb43678"
+    },
+    "abc/competition_abc_dch.abc": {
+      "before_sha256": "7907e80ee90f8199e583faedd722abe96d18acfbce47945b65f878a6b65abf3c",
+      "sha256": "bb92697ba7adcd8f97827885daaf8ef501d49d79428b54e51122fbffc45c5fa7"
+    },
+    "clean-v11/competition_abc_dch.abc": {
+      "before_sha256": "7907e80ee90f8199e583faedd722abe96d18acfbce47945b65f878a6b65abf3c",
+      "sha256": "bb92697ba7adcd8f97827885daaf8ef501d49d79428b54e51122fbffc45c5fa7"
+    },
+    "clean-v11/toolchains/yosys-0.69/competition-v11/synth-intel-competition.patch": {
+      "before_sha256": "38055f3ae6b5c967fca59c1f20e506883968fb1c5867e3597374915502da3624",
+      "sha256": "fa6123b1ef9ea137576cd8e24333d6ae842642d7252a01aa603ace4429836ee8"
+    },
+    "README.md": {
+      "before_sha256": "7e81891233e6abf049460439d168fb9f8ea418d1a94a53c6eea694644d045995",
+      "sha256": "cd62b330cc8012336f8b5a20daf19e1f966044f0fc8e33c5124349325f7a18e6"
+    },
+    "docs/OPTIMIZATION_V21_20261027.md": {
+      "before_sha256": null,
+      "sha256": "9f0df7cf76e35ebb143fc17e625993821afd732db92a622a644ba67ddb2a3b4a"
+    },
+    "scripts/test_pmux_fastpaths.py": {
+      "before_sha256": null,
+      "sha256": "74c52464b798d9aa11ddd29151cca8dd65dfbf1ef4f6ea7c1842c178f1c808d2"
+    }
+  },
+  "evidence": {
+    "linux_formal": {
+      "path": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/current-formal-v21-20261027/report.json",
+      "sha256": "de6a71f40fdb97b0288c667850d572fa86cb75d58dc8e4c20a39044e5a9618d6"
+    },
+    "operators": {
+      "path": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/operator-boundaries-v21-20261027/report.json",
+      "sha256": "1a6d7c569f0e9d49198f50038f80ecd8fcae194d344385fb5125fc579b7a9c10"
+    },
+    "fastpaths": {
+      "path": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/operator-boundaries-fastpaths-v21-20261027/report.json",
+      "sha256": "03250b0d2ca5c46eaf2069b80822d12f8da3169c078d64e98ac7f5dfbc9f9271"
+    },
+    "windows_actual": {
+      "path": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/windows-current-formal-v21-20261027/report.json",
+      "sha256": "f7fd0e3aab8d5f45b5458802e5957ab847018cf6bdc5f924a488852886038dde"
+    },
+    "windows_measurement": {
+      "path": "/tmp/fpga-review-20261027-rhsdoh46/windows-v21-raw-report.json",
+      "sha256": "a2d12cfe60767e44bbbb8d025bea74a1b14f7811e6e45d4ff085874b8a31f7c8"
+    },
+    "independent_measurement_audit": {
+      "path": "/tmp/fpga-review-20261027-rhsdoh46/v21-independent-measurement-audit.json",
+      "sha256": "4a3a25a1d0d5a2d5dbf9367e816e228c0b2e4f50e33223a72ba3e1d0caee3374"
+    }
+  },
+  "preserved_file_sha256": {
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v19-mfs2/manifest.json": "0ebcd75f0f2f8e2058a23c61cee7dd688335e658725517444978c7daa13cbf7c",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/build-repro/yosys-original": "5ac190d5096b14967864d093212858bdd457155a1b5e7d2945f314e070d5c2ef",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v19-mfs2/yosys": "01c5edab947ecd2b0b14cb55e00f375fe895708bb52d639a293a010b86140ff5",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v19-mfs2/yosys-abc": "4c44e7c12e3f060861cec186cb64718e195fc5b12d7cb6c3046f4aa6b022f32b",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v19-mfs2/pmux_competition_opt.cc": "552647965457a770e841b33285197996de65c96e14df3183dcc6b40012a394a4",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v19-mfs2/share/intel/competition_abc_v11.abc": "7907e80ee90f8199e583faedd722abe96d18acfbce47945b65f878a6b65abf3c",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v20-fast/manifest.json": "55fa1b34a82e86e6406de14d31b8f12d835da02a3e4a620705e8730eeba51f66",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v20-fast/yosys": "26938ad8bf886dc2302f6bef6778ca767eb00593dbfae94204fa0d2be3f5879f",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v20-fast/yosys-abc": "4c44e7c12e3f060861cec186cb64718e195fc5b12d7cb6c3046f4aa6b022f32b",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v20-fast/pmux_competition_opt.cc": "f416c0e373125c2e59eab5fb304768877f5fca97702b300a5b48abd71edcbe88",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v20-fast/synth-intel-competition.patch": "b876428d015c505cf9a73a033c19bd0182b892974bf20b011ab33081246dd6f3",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v20-fast/share/intel/competition_abc_v11.abc": "bb92697ba7adcd8f97827885daaf8ef501d49d79428b54e51122fbffc45c5fa7",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/src/pmux_competition_v11.cc": "3ac72f9a6535a2e3b116eb9dbce3bcc3fc537a680571386002f91c43ba3b6854",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v19-mfs2/compiled-source-normalized.cc": "3ac72f9a6535a2e3b116eb9dbce3bcc3fc537a680571386002f91c43ba3b6854",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-v11/synth-intel-competition.patch": "38055f3ae6b5c967fca59c1f20e506883968fb1c5867e3597374915502da3624",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v21-fast/yosys": "011e1142ef3bb909d2ece4ce66e4b32e934016e541ad1d7543b36053a6eac0ea",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v21-fast/yosys-abc": "4c44e7c12e3f060861cec186cb64718e195fc5b12d7cb6c3046f4aa6b022f32b",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v21-fast/pmux_competition_opt.cc": "0231002c240a080e7eebe1734b9dab49f2db78159c38a68769c885599eb43678",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v21-fast/synth-intel-competition.patch": "fa6123b1ef9ea137576cd8e24333d6ae842642d7252a01aa603ace4429836ee8",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v21-fast/share/intel/competition_abc_v11.abc": "bb92697ba7adcd8f97827885daaf8ef501d49d79428b54e51122fbffc45c5fa7",
+    "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v21-fast/manifest.json": "94d464deada9af25069580944382dd28593bea473ccf4a1d3f9d997db494f958"
+  },
+  "case_registry_sha256": "4f53a36bba9cf513d4bef12997524360bff786a5f44371e1b84b023fc0e33836",
+  "linux_formal_ready": true,
+  "boundary_ready": true,
+  "ready_to_switch": true,
+  "windows_evidence_provided": true,
+  "windows_performance_acceptance": "NOT_INFERRED_BY_THIS_DEPLOYER",
+  "github_pushed": false,
+  "local_revisions_committed": false,
+  "status": "DEPLOYED_LINUX_VALIDATED_EXTERNAL_WINDOWS_REVIEW",
+  "backup": "/home/ubuntu/FPGA/FPGA-Competition-2026/.git/before-current-v21-fast-singlemap-20261027T065256-122318",
+  "stable_manifest": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current/manifest.json",
+  "stable_manifest_sha256": "a860f38c7ea502e7850257b626b357e6f7f2b435f7079aa02442c643b1e14dae",
+  "deployed_evidence": "/home/ubuntu/FPGA/FPGA-Competition-2026/validation/current-v21-fast-singlemap-20261027T065256-122318",
+  "completed_utc": "2026-10-27T06:52:56.157093+00:00",
+  "validation_note": "Private-manifest proofs preserved; rerun default entry to prove deployed manifest binding"
+}

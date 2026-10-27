@@ -1,72 +1,44 @@
-# 在当前 Ubuntu 上构建仓库中的 v14
+# 当前九用例本地构建与验证
 
-本机仓库位置为 `/home/ubuntu/FPGA/FPGA-Competition-2026`。仓库中的 `clean-v11` 文件名和目录名兼容历史入口，当前算法来自提交 `c9b5d9c` 的 v14。
+本机仓库为 `/home/ubuntu/FPGA/FPGA-Competition-2026`。运行时从入口文件和仓库根目录定位，不再将仓库外 `clean-v11` 当作当前源码目录。
 
-## 构建与完整验证
-
-```bash
-cd /home/ubuntu/FPGA/FPGA-Competition-2026
-/usr/bin/python3 -E -u scripts/build_current.py --dependencies /home/ubuntu/FPGA --jobs 1
-```
-
-脚本使用仓库中的当前源码和补丁，创建 `clean-v11/toolchains/yosys-0.69/src` 与 `build-repro`，从源码构建原版基线，然后使用本次新编译的对象构建 v14。不会复制旧环境的二进制或编译缓存。2026-10-10 本轮原版构建中途将并行度从 1 调整为 2，保留本轮已经编译的对象继续；对应的主动终止与继续记录保留在日志中。
-
-随后编译匹配 Yosys 0.69 的 EQY 插件，生成真实工具清单，执行四个用例的 8 路等价证明、实际错误输出的反例测试、21 次交错 CPU/RSS 测量、11 个 v14 夹具，以及补充的进程树 PSS 测量。
-
-原始依赖保留在仓库之外：
-
-- `/home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/source.tar.gz`
-- `/home/ubuntu/FPGA/clean-v11/toolchains/eqy-0.69/source.tar`
-- `/home/ubuntu/FPGA/toolchains/cmake-3.31.6/`
-- `/home/ubuntu/oss-cad-suite/`
-- 系统 GCC/G++、Make、Git、Bison、Flex、pkg-config 和 Tcl/readline/libffi/zlib 开发依赖。
-
-两个源码包在复制及解压前验证 SHA-256：
-
-```text
-Yosys: 086045e23253917b93c71fc2d9db495df3c153cdc5d212bac505df7c4ad62e2f
-EQY:   dd1a4c5edcf83353c66e9765661cc332f4c7f6f122585c97da68290eab230291
-```
-
-这是利用本机保留依赖的构建入口；队友机器若没有这些依赖，仍须按相同版本准备。脚本不是自动下载安装器。
-
-## 构建完成后运行
-
-快速检查：
+## 使用本机已经验证的工具
 
 ```bash
 cd /home/ubuntu/FPGA/FPGA-Competition-2026
-/usr/bin/python3 -E -u scripts/run_current.py --repeats 3
-```
-
-完整 CPU/RSS 回归：
-
-```bash
-/usr/bin/python3 -E -u scripts/run_current.py --repeats 21
-```
-
-补充夹具：
-
-```bash
-/usr/bin/python3 -E -u clean-v11/test_shared_tree.py
-```
-
-需要在终端直接调用本仓库的优化版 Yosys 时，使用：
-
-```bash
+/usr/bin/python3 -E -B -u scripts/run_current.py
 source scripts/activate_competition.sh
-yosys -V
-yosys -Q -T -p 'pmux_competition_opt'
 ```
 
-最后一条应显示 `Executing PMUX_COMPETITION_OPT v14.`。仅检查 `yosys -V` 只能确认 Yosys 基础版本，不能区分 PMUX 算法版本。
+入口默认检查显式登记的九例、原版/候选 18 项 ABC 后原生 LUT ILANG EQY 和恒零输出负对照，并单独给出面积结论。`--case test2` 只作局部诊断，状态为 `SUBSET_PASS`，不能替代全量验收。Linux 入口不生成 Windows 性能结论。
 
-## 证据和边界
+## 独立目录重建
 
-构建状态和结果：`clean-v11/local-build-v14-status.json`、`local-build-v14-receipt.json`。详细编译与验证日志：`clean-v11/toolchains/yosys-0.69/rebuild-logs/`。本轮验证摘要位于 `validation/local-v14/summary.json`。
+`scripts/build_current.py` 从保留的 Yosys 0.69 归档建立全新源码树和编译目录，先编译原版，再应用与工作区源码一致的补丁编译候选。默认目录为 `clean-v11/toolchains/yosys-0.69-current`；已有构建计划的输入发生变化时，必须另用 `--work` 新目录，不能混用缓存。原有工具、OSSCAD Suite 和原版 ABC 均保留。
 
-本轮验收结果：四个公开用例的 8 路证明、真实错误输出反例、11 个独立夹具和 v14 激活入口均通过。LUT 降幅算术平均值为 22.11038961038961%；DFF 和其他已出现的非 LUT 单元均未增加。21 次测量中，各例 CPU 变化约为 -2.70%、-2.72%、-4.60%、-5.31%；补充进程树 PSS 最大增幅出现在 test2，约 +0.18%，其余三个用例均下降。详细数据以验证摘要和原始报告为准。
+```bash
+/usr/bin/python3 -E -B -u scripts/build_current.py --jobs 2
+```
 
-仓库内的新清单固定源码、补丁、程序及 ABC 脚本的哈希。修改算法源码后需要重新编译并更新真实清单；不应继续用旧程序验证新代码。构建入口遇到输入改变会停止，避免复用错误基线。
+需要系统 Python 3.10+、click、Git、Make、GCC/G++、Bison、Flex、pkg-config 及 Tcl/readline/libffi/zlib 开发库。默认保留依赖根为仓库父目录，可用 `--dependencies` 指定；需要的本机归档/工具为：
 
-Linux CPU/RSS 和 PSS 数据用于本机交叉检查。功能 PASS 不等于性能限制已经通过，应同时检查回执中的两个性能布尔字段。这次 Linux 复现也不代替比赛最终 Windows 环境和官方资源统计方式的验收。
+- `clean-v11/toolchains/yosys-0.69/source.tar.gz` 和对应原版工具 manifest；源码提交 `9f75ca1f9834a39a863915b5dae0c7b1e33533bc`。
+- `clean-v11/toolchains/eqy-0.69/source.tar`；EQY v0.69。
+- `toolchains/cmake-3.31.6/bin/cmake`，也可通过 `--cmake` 指定。
+- OSSCAD Suite 的 SBY 与 `tabbypy3`，默认 `~/oss-cad-suite`，也可通过 `--oss-suite` 指定。
+
+上述保留依赖未纳入 Git。脚本逐一校验归档和保留工具 SHA，缺失时直接报出缺项，不会下载未知版本或删除旧工具。它支持 Python 3.10 的安全解包路径，并使用独立、带哈希的 proof-bin 避免旧 SBY 包装器抢先。当前工作区输入由实际 SHA 绑定；Git HEAD 仅为上下文，不把尚未提交的改动误称已发布。
+
+重建脚本完成后保存新的 `competition-current/manifest.json`、构建日志、18 项形式证明及 `local-build-current-receipt.json`。本轮现用二进制由相同固定 0.69 源码树增量编译；新的独立重建入口已静态检查，未把它宣称为本轮已经完成的全新重编译。
+
+## 运算边界回归
+
+```bash
+/usr/bin/python3 -E -B -u scripts/test_pmux_operators.py \
+  --candidate clean-v11/toolchains/yosys-0.69/competition-current-v19-mfs2/yosys \
+  --arithmetic
+```
+
+52 项覆盖 XOR/AND/OR、add/sub 共享操作数、双输入 PMUX、signed、X/default、keep、外部用户、宽度与成本保护；通过 SAT、变换次数和错误输出负对照核验。它们是算法边界回归，不加入官方九例的面积平均值，也不当作性能验收。
+
+Windows 实际网表复证使用 `scripts/verify_windows_current.py --bundle <证据目录>`，保留原始 Windows 字节和 SHA。完整交付包自带运行依赖；Windows 性能测量与 Linux EQY 证据分开保存，当前耗时相对 5% 指标仍有未达标用例。

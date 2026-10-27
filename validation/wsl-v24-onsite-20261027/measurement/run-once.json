@@ -1,0 +1,36 @@
+{
+  "status": "FIXED_PROTOCOL_PROCESS_FINISHED",
+  "started_utc": "2026-10-27T12:30:34.796737+00:00",
+  "command": [
+    "/usr/bin/python3",
+    "-E",
+    "-B",
+    "-u",
+    "/home/yangsenyu/fpga-v24-onsite-measurement-20261027/run_current_cases.py",
+    "--package",
+    "/home/yangsenyu/fpga-v24-onsite-measurement-20261027"
+  ],
+  "stage_receipt_sha256": "90b9240a2aa27d1d3f7e1393a1d1049fff6bd0838868907242e464002fab4356",
+  "manifest_sha256": "bdcb278bd23405cfafbfc5028a5325605a0e4c5394daf8685ff47d63ec723fa7",
+  "protocol": "Frozen a738 runner: 10 baseline warmups per case, baseline then candidate; only prescribed five-pair reviews",
+  "historical_pass_inherited": false,
+  "overall_submission_acceptance": false,
+  "runner_exit_code": 0,
+  "process_log_sha256": "793292f759dcaba5adcdf83628e67a59dc771f3d3005499b73312b9b88d98429",
+  "raw_report_sha256": "264ee1d6975d08b55dcee070113d97933a574702b4ed4e629802b95ae5804bc6",
+  "raw_status": "RAW_MEASUREMENTS_COMPLETE_REVIEW_AND_FORMAL_REQUIRED",
+  "review_exit_code": 0,
+  "review_command": [
+    "/usr/bin/python3",
+    "-E",
+    "-B",
+    "/home/yangsenyu/fpga-v24-onsite-measurement-20261027/review_efficiency_v2.py",
+    "--report",
+    "/home/yangsenyu/fpga-v24-onsite-measurement-20261027/latest-current.json",
+    "--output",
+    "/home/yangsenyu/fpga-v24-onsite-measurement-20261027/efficiency-interpretation-view-v2.json"
+  ],
+  "offline_view_sha256": "d61c067b192efd5d9a3b8a26c6586ccdc5583271094cb2dc732759dbd31e83bc",
+  "input_tools_unchanged": true,
+  "completed_utc": "2026-10-27T12:30:57.275612+00:00"
+}

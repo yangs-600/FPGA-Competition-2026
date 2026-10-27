@@ -1,0 +1,41 @@
+{
+  "status": "PORTABLE_V23_TAR_AND_RELOCATED_PROOF_INDEPENDENT_AUDIT_PASS",
+  "archive": "D:\\\u6768\u68ee\u5b87\\FPGA\\FPGA-topic2-v23-EQY-Linux-0.69-20261027.tar.gz",
+  "archive_sha256": "35a75c08bb0f32b6727203341c8162b4a0ce7c8b5a5b787d114bd2b8e7f9ba46",
+  "archive_bytes": 43472415,
+  "root": "FPGA-topic2-v23-EQY-Linux-0.69-20261027",
+  "payload_files": 1442,
+  "archive_files": 1443,
+  "member_path_traversal": false,
+  "symlinks_or_hardlinks": false,
+  "special_members": false,
+  "setuid_or_setgid": false,
+  "portable_index_sha256": "ac50f798b70f4a105f8ad42e12ed16b03bb9ed87ce2ff2ad0194cdf66c4c6cd9",
+  "exact_payload_membership": true,
+  "all_indexed_sha256_verified": true,
+  "executable_entries_checked": 60,
+  "launchers_without_old_paths": 32,
+  "frozen_helpers_unchanged": true,
+  "active_fingerprint_count": 85,
+  "active_fingerprints_all_inside_relocated_kit": true,
+  "generated_active_manifests_verified": [
+    "results/replay-20261027-095011-507346/proof-tool-manifest.json"
+  ],
+  "generated_active_scripts_without_old_dependencies": 425,
+  "formal_report_sha256": "38944d8f41c81c2e3041f04933e4705684cc49b67f675f77cfb560c45c012a2f",
+  "replay_receipt_sha256": "dc995fa9f255f1504187625e0294716c379a7016205d459f72209555bddb7c7b",
+  "positive_proof_counts": {
+    "PASS": 18
+  },
+  "negative_control_status": "EXPECTED_COUNTEREXAMPLE",
+  "windows_report_sha256": "46d8b894ecd2220300767003ef2bdce2bad375a0e3f67e7f115de160ea23294d",
+  "windows_manifest_sha256": "fcaef62a015a020bd17413c3c69f256faf39ca8e8825fa1ee1b10c71fb0f3e6c",
+  "all_original_18_ilang_sha256_bound": true,
+  "evidence_archive": "D:\\\u6768\u68ee\u5b87\\FPGA\\FPGA-topic2-v23-EQY-relocation-evidence-20261027.tar.gz",
+  "evidence_archive_sha256": "971d682a3377a920a89960e785ba8b9326a98a4557df08d5b6f3a93ee6bffe5c",
+  "evidence_archive_bytes": 4141207,
+  "python_private_runtime": true,
+  "native_windows_eqy_claim": false,
+  "platform": "Linux x86_64 / compatible WSL2, /bin/sh, /proc, /dev/null; not native Windows EQY",
+  "statistics_or_tests_rerun": false
+}

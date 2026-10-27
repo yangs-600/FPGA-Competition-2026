@@ -1,0 +1,7 @@
+{
+  "status": "OWNED_TEMPORARY_SERVER_STOP_REQUESTED",
+  "pid": 85235,
+  "command_sha256": "082277e842c483c7ed3a0a2ec1b0f6aaacb331b330038cc6ae132677e1a6e339",
+  "stopped_utc": "2026-10-27T07:04:47.337705+00:00",
+  "delivery_receipt_sha256": "5c7bd3125bbd671b78aa48f61f61abec4374972e4d5bbdc9ac06510500505c16"
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "fpga-v21-portable-actual-windows-eqy-v1",
+  "status": "PASS",
+  "bundle_root": "/tmp/fpga-v21-proof-relocated-20261027-r4/FPGA-topic2-v21-EQY-Linux-0.69-20261027",
+  "portable_index_sha256": "b9ff9fdc784526dafc51d4798b8b1d22c37399e5fbd9b4d3c1553dc357190650",
+  "payload_files_checked": 1442,
+  "windows_report_sha256": "a2d12cfe60767e44bbbb8d025bea74a1b14f7811e6e45d4ff085874b8a31f7c8",
+  "windows_manifest_sha256": "70e06917b35a15e183d6c4ba13c53e5b2cfef10d02933e2c60c8329ebc06e120",
+  "proof_manifest_sha256": "26d1718f7fbfdbc5a5ce086701ccd0849ee35ab8747ebc4cc76dab6e725a2681",
+  "versions": {
+    "baseline": "Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)",
+    "candidate": "Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)",
+    "eqy": "EQY v0.69",
+    "sby": "SBY v0.68"
+  },
+  "python": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+  "python_executable": "/tmp/fpga-v21-proof-relocated-20261027-r4/FPGA-topic2-v21-EQY-Linux-0.69-20261027/runtime/bin/python3",
+  "machine": "x86_64",
+  "scope": "Formal replay only; original Windows resource/time evidence remains unchanged",
+  "native_windows_eqy_claim": false,
+  "prior_repository_required": false,
+  "completed_utc": "2026-10-27T07:59:12.044497+00:00",
+  "formal_exit_code": 0,
+  "formal_report": "/tmp/fpga-v21-proof-relocated-20261027-r4/FPGA-topic2-v21-EQY-Linux-0.69-20261027/results/replay-20261027-075836-127138/formal/report.json",
+  "formal_report_sha256": "a2e05c107f855e47463977aaaf39c0a854ce034f10d2757f3bcfa8fccc9f53d4",
+  "positive_proof_counts": {
+    "PASS": 18
+  },
+  "negative_control_status": "EXPECTED_COUNTEREXAMPLE"
+}

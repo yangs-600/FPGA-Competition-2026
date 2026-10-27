@@ -3,29 +3,21 @@ if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
     echo "Use: source ${BASH_SOURCE[0]}" >&2
     exit 1
 fi
-_competition_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-if ! python3 - "$_competition_root" <<'PY'
+_competition_repo="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+if ! _competition_candidate="$(/usr/bin/python3 -E -B - "$_competition_repo" <<'PY'
 import sys
 from pathlib import Path
-sys.path.insert(0,sys.argv[1])
-from run_competition_v11 import environment
-_,manifest=environment()
-folder=Path(sys.argv[1])/'toolchains/yosys-0.69/competition-v11/bin'
-folder.mkdir(exist_ok=True)
-target=folder/'yosys'
-if target.is_symlink():
-    if target.resolve()!=Path(manifest['candidate']).resolve():
-        target.unlink()
-        target.symlink_to(manifest['candidate'])
-elif target.exists():
-    raise RuntimeError('Unexpected existing executable in competition-v11/bin')
-else:
-    target.symlink_to(manifest['candidate'])
-print(manifest['candidate_version'])
+repo = Path(sys.argv[1])
+sys.path.insert(0, str(repo / 'scripts'))
+from verify_current_cases import load_environment, DEFAULT_MANIFEST
+_, manifest, _, _ = load_environment(repo, repo / DEFAULT_MANIFEST)
+print(manifest['candidate'])
 PY
-then
-    unset _competition_root
+)"; then
+    unset _competition_repo _competition_candidate
     return 1
 fi
-export PATH="$_competition_root/toolchains/yosys-0.69/competition-v11/bin:$PATH"
-unset _competition_root
+export PATH="$(dirname -- "$_competition_candidate"):$PATH"
+unset ABC YOSYS_DATDIR
+"$_competition_candidate" -V
+unset _competition_repo _competition_candidate

@@ -1,0 +1,1314 @@
+{
+  "status": "MEASUREMENTS_PASS_FORMAL_PENDING",
+  "formal_status": "PENDING",
+  "raw_report": "D:\\fpga-current-optimization-20261027\\windows-v22-memo\\latest-current.json",
+  "raw_report_sha256": "2fe220f8a3813a4b34aa9f6660fc179203101556425a5fad7575ce0ef2fc4a93",
+  "manifest_sha256": "c68d61c03f98bdd8d080fa117682eb8fc1b9866d37e1f12220a44e7d03ce1b5e",
+  "candidate_sha256": "4d1755744fc05af98cd8dd45a1d0863c70367380b67ae1e21867c1920d7311c4",
+  "source_sha256": "1cb8edf3523734e26c4d98c9420c981c9e2fb21f2d6bd0388ff80b877f047604",
+  "abc_script_sha256": "bb92697ba7adcd8f97827885daaf8ef501d49d79428b54e51122fbffc45c5fa7",
+  "first_run_only_invocation": "D:\\fpga-current-optimization-20261027\\v22-memo-official-invocation.json",
+  "cases": [
+    {
+      "name": "test1",
+      "review_triggered": true,
+      "selection": "five_additional_review_pairs_mean",
+      "source_sha256": "2d2dba011b0e8799d0de3790b69b7f01c6eb6ac665c4321b57b0378a4972fd13",
+      "baseline_logic": 288,
+      "candidate_logic": 227,
+      "gain_percent": 21.180555555555557,
+      "official_selected": {
+        "roles": {
+          "baseline": {
+            "sample_count": 5,
+            "wall_seconds": 0.3108663600003638,
+            "job_cpu_seconds": 0.2625,
+            "root_cpu_seconds": 0.171875,
+            "descendant_cpu_seconds": 0.090625,
+            "peak_working_set_bytes": 22684467.2
+          },
+          "candidate": {
+            "sample_count": 5,
+            "wall_seconds": 0.3087726600002497,
+            "job_cpu_seconds": 0.2625,
+            "root_cpu_seconds": 0.18125,
+            "descendant_cpu_seconds": 0.08125,
+            "peak_working_set_bytes": 22337126.4
+          }
+        },
+        "wall_seconds_overhead_percent": -0.6735048462984561,
+        "job_cpu_seconds_overhead_percent": 0.0,
+        "root_cpu_seconds_overhead_percent": 5.454545454545445,
+        "descendant_cpu_seconds_overhead_percent": -10.344827586206895,
+        "peak_working_set_bytes_overhead_percent": -1.531183416994697,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_pair_only": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.32429059999958554,
+            "job_cpu_seconds": 0.265625,
+            "root_cpu_seconds": 0.140625,
+            "descendant_cpu_seconds": 0.125,
+            "peak_working_set_bytes": 22671360
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.7049716000001354,
+            "job_cpu_seconds": 0.296875,
+            "root_cpu_seconds": 0.1875,
+            "descendant_cpu_seconds": 0.109375,
+            "peak_working_set_bytes": 22392832
+          }
+        },
+        "wall_seconds_overhead_percent": 117.38884815071309,
+        "job_cpu_seconds_overhead_percent": 11.764705882352944,
+        "root_cpu_seconds_overhead_percent": 33.33333333333333,
+        "descendant_cpu_seconds_overhead_percent": -12.5,
+        "peak_working_set_bytes_overhead_percent": -1.2285456187895227,
+        "efficiency_5pct_pass": false,
+        "efficiency_over_15pct": true
+      },
+      "all_measured_including_first_ratio_of_means": {
+        "roles": {
+          "baseline": {
+            "sample_count": 6,
+            "wall_seconds": 0.3131037333335674,
+            "job_cpu_seconds": 0.2630208333333333,
+            "root_cpu_seconds": 0.16666666666666666,
+            "descendant_cpu_seconds": 0.09635416666666667,
+            "peak_working_set_bytes": 22682282.666666668
+          },
+          "candidate": {
+            "sample_count": 6,
+            "wall_seconds": 0.37480581666689733,
+            "job_cpu_seconds": 0.2682291666666667,
+            "root_cpu_seconds": 0.18229166666666666,
+            "descendant_cpu_seconds": 0.0859375,
+            "peak_working_set_bytes": 22346410.666666668
+          }
+        },
+        "wall_seconds_overhead_percent": 19.706594576946546,
+        "job_cpu_seconds_overhead_percent": 1.9801980198020042,
+        "root_cpu_seconds_overhead_percent": 9.375,
+        "descendant_cpu_seconds_overhead_percent": -10.81081081081081,
+        "peak_working_set_bytes_overhead_percent": -1.480768073195693,
+        "efficiency_5pct_pass": false,
+        "efficiency_over_15pct": true
+      },
+      "all_measured_including_first_mean_of_pair_ratios": {
+        "wall_seconds_overhead_percent": 19.1077958680625,
+        "peak_working_set_bytes_overhead_percent": -1.479336907572994,
+        "efficiency_5pct_pass": false,
+        "efficiency_over_15pct": true
+      },
+      "all_measured_including_first_median_of_roles": {
+        "roles": {
+          "baseline": {
+            "sample_count": 6,
+            "wall_seconds": 0.3129498500002228,
+            "job_cpu_seconds": 0.265625,
+            "root_cpu_seconds": 0.171875,
+            "descendant_cpu_seconds": 0.09375,
+            "peak_working_set_bytes": 22691840.0
+          },
+          "candidate": {
+            "sample_count": 6,
+            "wall_seconds": 0.31102050000026793,
+            "job_cpu_seconds": 0.265625,
+            "root_cpu_seconds": 0.1796875,
+            "descendant_cpu_seconds": 0.0859375,
+            "peak_working_set_bytes": 22384640.0
+          }
+        },
+        "wall_seconds_overhead_percent": -0.6165045293849758,
+        "job_cpu_seconds_overhead_percent": 0.0,
+        "root_cpu_seconds_overhead_percent": 4.545454545454541,
+        "descendant_cpu_seconds_overhead_percent": -8.333333333333337,
+        "peak_working_set_bytes_overhead_percent": -1.3537906137184086,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_baseline_warmup": {
+        "sample_count": 1,
+        "wall_seconds": 0.7199258999989979,
+        "job_cpu_seconds": 0.296875,
+        "root_cpu_seconds": 0.140625,
+        "descendant_cpu_seconds": 0.15625,
+        "peak_working_set_bytes": 22913024
+      },
+      "baseline_warmups_02_to_10": {
+        "sample_count": 9,
+        "wall_seconds": 0.3158965999997842,
+        "job_cpu_seconds": 0.25,
+        "root_cpu_seconds": 0.1579861111111111,
+        "descendant_cpu_seconds": 0.0920138888888889,
+        "peak_working_set_bytes": 22773304.888888888
+      }
+    },
+    {
+      "name": "test2",
+      "review_triggered": false,
+      "selection": "first_pair",
+      "source_sha256": "e43c9b437071488551caf3121e227e86f4fe3190751f245beac3b7ecc3fdb146",
+      "baseline_logic": 25,
+      "candidate_logic": 15,
+      "gain_percent": 40.0,
+      "official_selected": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.1919436999996833,
+            "job_cpu_seconds": 0.140625,
+            "root_cpu_seconds": 0.0625,
+            "descendant_cpu_seconds": 0.078125,
+            "peak_working_set_bytes": 16084992
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.16718089999994845,
+            "job_cpu_seconds": 0.109375,
+            "root_cpu_seconds": 0.03125,
+            "descendant_cpu_seconds": 0.078125,
+            "peak_working_set_bytes": 16064512
+          }
+        },
+        "wall_seconds_overhead_percent": -12.901074637915034,
+        "job_cpu_seconds_overhead_percent": -22.22222222222222,
+        "root_cpu_seconds_overhead_percent": -50.0,
+        "descendant_cpu_seconds_overhead_percent": 0.0,
+        "peak_working_set_bytes_overhead_percent": -0.127323656735423,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_pair_only": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.1919436999996833,
+            "job_cpu_seconds": 0.140625,
+            "root_cpu_seconds": 0.0625,
+            "descendant_cpu_seconds": 0.078125,
+            "peak_working_set_bytes": 16084992
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.16718089999994845,
+            "job_cpu_seconds": 0.109375,
+            "root_cpu_seconds": 0.03125,
+            "descendant_cpu_seconds": 0.078125,
+            "peak_working_set_bytes": 16064512
+          }
+        },
+        "wall_seconds_overhead_percent": -12.901074637915034,
+        "job_cpu_seconds_overhead_percent": -22.22222222222222,
+        "root_cpu_seconds_overhead_percent": -50.0,
+        "descendant_cpu_seconds_overhead_percent": 0.0,
+        "peak_working_set_bytes_overhead_percent": -0.127323656735423,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_ratio_of_means": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.1919436999996833,
+            "job_cpu_seconds": 0.140625,
+            "root_cpu_seconds": 0.0625,
+            "descendant_cpu_seconds": 0.078125,
+            "peak_working_set_bytes": 16084992
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.16718089999994845,
+            "job_cpu_seconds": 0.109375,
+            "root_cpu_seconds": 0.03125,
+            "descendant_cpu_seconds": 0.078125,
+            "peak_working_set_bytes": 16064512
+          }
+        },
+        "wall_seconds_overhead_percent": -12.901074637915034,
+        "job_cpu_seconds_overhead_percent": -22.22222222222222,
+        "root_cpu_seconds_overhead_percent": -50.0,
+        "descendant_cpu_seconds_overhead_percent": 0.0,
+        "peak_working_set_bytes_overhead_percent": -0.127323656735423,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_mean_of_pair_ratios": {
+        "wall_seconds_overhead_percent": -12.901074637915034,
+        "peak_working_set_bytes_overhead_percent": -0.127323656735423,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_median_of_roles": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.1919436999996833,
+            "job_cpu_seconds": 0.140625,
+            "root_cpu_seconds": 0.0625,
+            "descendant_cpu_seconds": 0.078125,
+            "peak_working_set_bytes": 16084992
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.16718089999994845,
+            "job_cpu_seconds": 0.109375,
+            "root_cpu_seconds": 0.03125,
+            "descendant_cpu_seconds": 0.078125,
+            "peak_working_set_bytes": 16064512
+          }
+        },
+        "wall_seconds_overhead_percent": -12.901074637915034,
+        "job_cpu_seconds_overhead_percent": -22.22222222222222,
+        "root_cpu_seconds_overhead_percent": -50.0,
+        "descendant_cpu_seconds_overhead_percent": 0.0,
+        "peak_working_set_bytes_overhead_percent": -0.127323656735423,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_baseline_warmup": {
+        "sample_count": 1,
+        "wall_seconds": 0.17964110000139044,
+        "job_cpu_seconds": 0.140625,
+        "root_cpu_seconds": 0.0625,
+        "descendant_cpu_seconds": 0.078125,
+        "peak_working_set_bytes": 16056320
+      },
+      "baseline_warmups_02_to_10": {
+        "sample_count": 9,
+        "wall_seconds": 0.1754208444441853,
+        "job_cpu_seconds": 0.12152777777777778,
+        "root_cpu_seconds": 0.057291666666666664,
+        "descendant_cpu_seconds": 0.0642361111111111,
+        "peak_working_set_bytes": 16085902.222222222
+      }
+    },
+    {
+      "name": "test3",
+      "review_triggered": false,
+      "selection": "first_pair",
+      "source_sha256": "1551b9212622ccef6019d6e77de2c43dc8c80d267957b55a42121f34a08780e9",
+      "baseline_logic": 13,
+      "candidate_logic": 13,
+      "gain_percent": 0.0,
+      "official_selected": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.18774299999859068,
+            "job_cpu_seconds": 0.125,
+            "root_cpu_seconds": 0.078125,
+            "descendant_cpu_seconds": 0.046875,
+            "peak_working_set_bytes": 16883712
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.1803381999998237,
+            "job_cpu_seconds": 0.15625,
+            "root_cpu_seconds": 0.078125,
+            "descendant_cpu_seconds": 0.078125,
+            "peak_working_set_bytes": 16715776
+          }
+        },
+        "wall_seconds_overhead_percent": -3.944115092878331,
+        "job_cpu_seconds_overhead_percent": 25.0,
+        "root_cpu_seconds_overhead_percent": 0.0,
+        "descendant_cpu_seconds_overhead_percent": 66.66666666666667,
+        "peak_working_set_bytes_overhead_percent": -0.9946627850557999,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_pair_only": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.18774299999859068,
+            "job_cpu_seconds": 0.125,
+            "root_cpu_seconds": 0.078125,
+            "descendant_cpu_seconds": 0.046875,
+            "peak_working_set_bytes": 16883712
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.1803381999998237,
+            "job_cpu_seconds": 0.15625,
+            "root_cpu_seconds": 0.078125,
+            "descendant_cpu_seconds": 0.078125,
+            "peak_working_set_bytes": 16715776
+          }
+        },
+        "wall_seconds_overhead_percent": -3.944115092878331,
+        "job_cpu_seconds_overhead_percent": 25.0,
+        "root_cpu_seconds_overhead_percent": 0.0,
+        "descendant_cpu_seconds_overhead_percent": 66.66666666666667,
+        "peak_working_set_bytes_overhead_percent": -0.9946627850557999,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_ratio_of_means": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.18774299999859068,
+            "job_cpu_seconds": 0.125,
+            "root_cpu_seconds": 0.078125,
+            "descendant_cpu_seconds": 0.046875,
+            "peak_working_set_bytes": 16883712
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.1803381999998237,
+            "job_cpu_seconds": 0.15625,
+            "root_cpu_seconds": 0.078125,
+            "descendant_cpu_seconds": 0.078125,
+            "peak_working_set_bytes": 16715776
+          }
+        },
+        "wall_seconds_overhead_percent": -3.944115092878331,
+        "job_cpu_seconds_overhead_percent": 25.0,
+        "root_cpu_seconds_overhead_percent": 0.0,
+        "descendant_cpu_seconds_overhead_percent": 66.66666666666667,
+        "peak_working_set_bytes_overhead_percent": -0.9946627850557999,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_mean_of_pair_ratios": {
+        "wall_seconds_overhead_percent": -3.944115092878331,
+        "peak_working_set_bytes_overhead_percent": -0.9946627850557999,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_median_of_roles": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.18774299999859068,
+            "job_cpu_seconds": 0.125,
+            "root_cpu_seconds": 0.078125,
+            "descendant_cpu_seconds": 0.046875,
+            "peak_working_set_bytes": 16883712
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.1803381999998237,
+            "job_cpu_seconds": 0.15625,
+            "root_cpu_seconds": 0.078125,
+            "descendant_cpu_seconds": 0.078125,
+            "peak_working_set_bytes": 16715776
+          }
+        },
+        "wall_seconds_overhead_percent": -3.944115092878331,
+        "job_cpu_seconds_overhead_percent": 25.0,
+        "root_cpu_seconds_overhead_percent": 0.0,
+        "descendant_cpu_seconds_overhead_percent": 66.66666666666667,
+        "peak_working_set_bytes_overhead_percent": -0.9946627850557999,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_baseline_warmup": {
+        "sample_count": 1,
+        "wall_seconds": 0.17236739999862039,
+        "job_cpu_seconds": 0.140625,
+        "root_cpu_seconds": 0.046875,
+        "descendant_cpu_seconds": 0.09375,
+        "peak_working_set_bytes": 16842752
+      },
+      "baseline_warmups_02_to_10": {
+        "sample_count": 9,
+        "wall_seconds": 0.1861509999996795,
+        "job_cpu_seconds": 0.13541666666666666,
+        "root_cpu_seconds": 0.059027777777777776,
+        "descendant_cpu_seconds": 0.0763888888888889,
+        "peak_working_set_bytes": 16863687.111111112
+      }
+    },
+    {
+      "name": "test4",
+      "review_triggered": false,
+      "selection": "first_pair",
+      "source_sha256": "c0c5042928bd6bf568e2b7fb2193f2b6db9c4193ba3a5378fc50a331d43422d7",
+      "baseline_logic": 36,
+      "candidate_logic": 27,
+      "gain_percent": 25.0,
+      "official_selected": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.19748669999898993,
+            "job_cpu_seconds": 0.125,
+            "root_cpu_seconds": 0.078125,
+            "descendant_cpu_seconds": 0.046875,
+            "peak_working_set_bytes": 18046976
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.1989798000013252,
+            "job_cpu_seconds": 0.171875,
+            "root_cpu_seconds": 0.09375,
+            "descendant_cpu_seconds": 0.078125,
+            "peak_working_set_bytes": 17928192
+          }
+        },
+        "wall_seconds_overhead_percent": 0.7560509149947325,
+        "job_cpu_seconds_overhead_percent": 37.5,
+        "root_cpu_seconds_overhead_percent": 19.999999999999996,
+        "descendant_cpu_seconds_overhead_percent": 66.66666666666667,
+        "peak_working_set_bytes_overhead_percent": -0.6581933726736322,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_pair_only": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.19748669999898993,
+            "job_cpu_seconds": 0.125,
+            "root_cpu_seconds": 0.078125,
+            "descendant_cpu_seconds": 0.046875,
+            "peak_working_set_bytes": 18046976
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.1989798000013252,
+            "job_cpu_seconds": 0.171875,
+            "root_cpu_seconds": 0.09375,
+            "descendant_cpu_seconds": 0.078125,
+            "peak_working_set_bytes": 17928192
+          }
+        },
+        "wall_seconds_overhead_percent": 0.7560509149947325,
+        "job_cpu_seconds_overhead_percent": 37.5,
+        "root_cpu_seconds_overhead_percent": 19.999999999999996,
+        "descendant_cpu_seconds_overhead_percent": 66.66666666666667,
+        "peak_working_set_bytes_overhead_percent": -0.6581933726736322,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_ratio_of_means": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.19748669999898993,
+            "job_cpu_seconds": 0.125,
+            "root_cpu_seconds": 0.078125,
+            "descendant_cpu_seconds": 0.046875,
+            "peak_working_set_bytes": 18046976
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.1989798000013252,
+            "job_cpu_seconds": 0.171875,
+            "root_cpu_seconds": 0.09375,
+            "descendant_cpu_seconds": 0.078125,
+            "peak_working_set_bytes": 17928192
+          }
+        },
+        "wall_seconds_overhead_percent": 0.7560509149947325,
+        "job_cpu_seconds_overhead_percent": 37.5,
+        "root_cpu_seconds_overhead_percent": 19.999999999999996,
+        "descendant_cpu_seconds_overhead_percent": 66.66666666666667,
+        "peak_working_set_bytes_overhead_percent": -0.6581933726736322,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_mean_of_pair_ratios": {
+        "wall_seconds_overhead_percent": 0.7560509149947325,
+        "peak_working_set_bytes_overhead_percent": -0.6581933726736322,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_median_of_roles": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.19748669999898993,
+            "job_cpu_seconds": 0.125,
+            "root_cpu_seconds": 0.078125,
+            "descendant_cpu_seconds": 0.046875,
+            "peak_working_set_bytes": 18046976
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.1989798000013252,
+            "job_cpu_seconds": 0.171875,
+            "root_cpu_seconds": 0.09375,
+            "descendant_cpu_seconds": 0.078125,
+            "peak_working_set_bytes": 17928192
+          }
+        },
+        "wall_seconds_overhead_percent": 0.7560509149947325,
+        "job_cpu_seconds_overhead_percent": 37.5,
+        "root_cpu_seconds_overhead_percent": 19.999999999999996,
+        "descendant_cpu_seconds_overhead_percent": 66.66666666666667,
+        "peak_working_set_bytes_overhead_percent": -0.6581933726736322,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_baseline_warmup": {
+        "sample_count": 1,
+        "wall_seconds": 0.1893196999990323,
+        "job_cpu_seconds": 0.15625,
+        "root_cpu_seconds": 0.09375,
+        "descendant_cpu_seconds": 0.0625,
+        "peak_working_set_bytes": 18313216
+      },
+      "baseline_warmups_02_to_10": {
+        "sample_count": 9,
+        "wall_seconds": 0.19640878888902888,
+        "job_cpu_seconds": 0.14583333333333334,
+        "root_cpu_seconds": 0.0763888888888889,
+        "descendant_cpu_seconds": 0.06944444444444445,
+        "peak_working_set_bytes": 18243128.888888888
+      }
+    },
+    {
+      "name": "pmux_case01_balanced",
+      "review_triggered": false,
+      "selection": "first_pair",
+      "source_sha256": "463263f4b265cbad3b634d69d316cd29e7ea0a62f91ee396dbeeecf7df5c7343",
+      "baseline_logic": 426,
+      "candidate_logic": 356,
+      "gain_percent": 16.431924882629108,
+      "official_selected": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.34408170000097016,
+            "job_cpu_seconds": 0.3125,
+            "root_cpu_seconds": 0.1875,
+            "descendant_cpu_seconds": 0.125,
+            "peak_working_set_bytes": 25645056
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.34943270000076154,
+            "job_cpu_seconds": 0.296875,
+            "root_cpu_seconds": 0.203125,
+            "descendant_cpu_seconds": 0.09375,
+            "peak_working_set_bytes": 24780800
+          }
+        },
+        "wall_seconds_overhead_percent": 1.555153906696094,
+        "job_cpu_seconds_overhead_percent": -5.000000000000004,
+        "root_cpu_seconds_overhead_percent": 8.333333333333325,
+        "descendant_cpu_seconds_overhead_percent": -25.0,
+        "peak_working_set_bytes_overhead_percent": -3.370068679124738,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_pair_only": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.34408170000097016,
+            "job_cpu_seconds": 0.3125,
+            "root_cpu_seconds": 0.1875,
+            "descendant_cpu_seconds": 0.125,
+            "peak_working_set_bytes": 25645056
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.34943270000076154,
+            "job_cpu_seconds": 0.296875,
+            "root_cpu_seconds": 0.203125,
+            "descendant_cpu_seconds": 0.09375,
+            "peak_working_set_bytes": 24780800
+          }
+        },
+        "wall_seconds_overhead_percent": 1.555153906696094,
+        "job_cpu_seconds_overhead_percent": -5.000000000000004,
+        "root_cpu_seconds_overhead_percent": 8.333333333333325,
+        "descendant_cpu_seconds_overhead_percent": -25.0,
+        "peak_working_set_bytes_overhead_percent": -3.370068679124738,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_ratio_of_means": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.34408170000097016,
+            "job_cpu_seconds": 0.3125,
+            "root_cpu_seconds": 0.1875,
+            "descendant_cpu_seconds": 0.125,
+            "peak_working_set_bytes": 25645056
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.34943270000076154,
+            "job_cpu_seconds": 0.296875,
+            "root_cpu_seconds": 0.203125,
+            "descendant_cpu_seconds": 0.09375,
+            "peak_working_set_bytes": 24780800
+          }
+        },
+        "wall_seconds_overhead_percent": 1.555153906696094,
+        "job_cpu_seconds_overhead_percent": -5.000000000000004,
+        "root_cpu_seconds_overhead_percent": 8.333333333333325,
+        "descendant_cpu_seconds_overhead_percent": -25.0,
+        "peak_working_set_bytes_overhead_percent": -3.370068679124738,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_mean_of_pair_ratios": {
+        "wall_seconds_overhead_percent": 1.555153906696094,
+        "peak_working_set_bytes_overhead_percent": -3.370068679124738,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_median_of_roles": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.34408170000097016,
+            "job_cpu_seconds": 0.3125,
+            "root_cpu_seconds": 0.1875,
+            "descendant_cpu_seconds": 0.125,
+            "peak_working_set_bytes": 25645056
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.34943270000076154,
+            "job_cpu_seconds": 0.296875,
+            "root_cpu_seconds": 0.203125,
+            "descendant_cpu_seconds": 0.09375,
+            "peak_working_set_bytes": 24780800
+          }
+        },
+        "wall_seconds_overhead_percent": 1.555153906696094,
+        "job_cpu_seconds_overhead_percent": -5.000000000000004,
+        "root_cpu_seconds_overhead_percent": 8.333333333333325,
+        "descendant_cpu_seconds_overhead_percent": -25.0,
+        "peak_working_set_bytes_overhead_percent": -3.370068679124738,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_baseline_warmup": {
+        "sample_count": 1,
+        "wall_seconds": 0.362480300000243,
+        "job_cpu_seconds": 0.296875,
+        "root_cpu_seconds": 0.1875,
+        "descendant_cpu_seconds": 0.109375,
+        "peak_working_set_bytes": 25399296
+      },
+      "baseline_warmups_02_to_10": {
+        "sample_count": 9,
+        "wall_seconds": 0.3591973444444092,
+        "job_cpu_seconds": 0.3229166666666667,
+        "root_cpu_seconds": 0.17708333333333334,
+        "descendant_cpu_seconds": 0.14583333333333334,
+        "peak_working_set_bytes": 25730616.888888888
+      }
+    },
+    {
+      "name": "pmux_case02_pipeline",
+      "review_triggered": false,
+      "selection": "first_pair",
+      "source_sha256": "8639081b2fb7c446edef52a514d63b49333e444ce21638f03bdee97dc954e0ea",
+      "baseline_logic": 450,
+      "candidate_logic": 348,
+      "gain_percent": 22.666666666666668,
+      "official_selected": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.38452890000007756,
+            "job_cpu_seconds": 0.328125,
+            "root_cpu_seconds": 0.1875,
+            "descendant_cpu_seconds": 0.140625,
+            "peak_working_set_bytes": 25161728
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.3412996999995812,
+            "job_cpu_seconds": 0.3125,
+            "root_cpu_seconds": 0.1875,
+            "descendant_cpu_seconds": 0.125,
+            "peak_working_set_bytes": 24485888
+          }
+        },
+        "wall_seconds_overhead_percent": -11.242119903208215,
+        "job_cpu_seconds_overhead_percent": -4.761904761904767,
+        "root_cpu_seconds_overhead_percent": 0.0,
+        "descendant_cpu_seconds_overhead_percent": -11.111111111111116,
+        "peak_working_set_bytes_overhead_percent": -2.685984046882628,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_pair_only": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.38452890000007756,
+            "job_cpu_seconds": 0.328125,
+            "root_cpu_seconds": 0.1875,
+            "descendant_cpu_seconds": 0.140625,
+            "peak_working_set_bytes": 25161728
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.3412996999995812,
+            "job_cpu_seconds": 0.3125,
+            "root_cpu_seconds": 0.1875,
+            "descendant_cpu_seconds": 0.125,
+            "peak_working_set_bytes": 24485888
+          }
+        },
+        "wall_seconds_overhead_percent": -11.242119903208215,
+        "job_cpu_seconds_overhead_percent": -4.761904761904767,
+        "root_cpu_seconds_overhead_percent": 0.0,
+        "descendant_cpu_seconds_overhead_percent": -11.111111111111116,
+        "peak_working_set_bytes_overhead_percent": -2.685984046882628,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_ratio_of_means": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.38452890000007756,
+            "job_cpu_seconds": 0.328125,
+            "root_cpu_seconds": 0.1875,
+            "descendant_cpu_seconds": 0.140625,
+            "peak_working_set_bytes": 25161728
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.3412996999995812,
+            "job_cpu_seconds": 0.3125,
+            "root_cpu_seconds": 0.1875,
+            "descendant_cpu_seconds": 0.125,
+            "peak_working_set_bytes": 24485888
+          }
+        },
+        "wall_seconds_overhead_percent": -11.242119903208215,
+        "job_cpu_seconds_overhead_percent": -4.761904761904767,
+        "root_cpu_seconds_overhead_percent": 0.0,
+        "descendant_cpu_seconds_overhead_percent": -11.111111111111116,
+        "peak_working_set_bytes_overhead_percent": -2.685984046882628,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_mean_of_pair_ratios": {
+        "wall_seconds_overhead_percent": -11.242119903208215,
+        "peak_working_set_bytes_overhead_percent": -2.685984046882628,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_median_of_roles": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.38452890000007756,
+            "job_cpu_seconds": 0.328125,
+            "root_cpu_seconds": 0.1875,
+            "descendant_cpu_seconds": 0.140625,
+            "peak_working_set_bytes": 25161728
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.3412996999995812,
+            "job_cpu_seconds": 0.3125,
+            "root_cpu_seconds": 0.1875,
+            "descendant_cpu_seconds": 0.125,
+            "peak_working_set_bytes": 24485888
+          }
+        },
+        "wall_seconds_overhead_percent": -11.242119903208215,
+        "job_cpu_seconds_overhead_percent": -4.761904761904767,
+        "root_cpu_seconds_overhead_percent": 0.0,
+        "descendant_cpu_seconds_overhead_percent": -11.111111111111116,
+        "peak_working_set_bytes_overhead_percent": -2.685984046882628,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_baseline_warmup": {
+        "sample_count": 1,
+        "wall_seconds": 0.4027833999989525,
+        "job_cpu_seconds": 0.375,
+        "root_cpu_seconds": 0.234375,
+        "descendant_cpu_seconds": 0.140625,
+        "peak_working_set_bytes": 25174016
+      },
+      "baseline_warmups_02_to_10": {
+        "sample_count": 9,
+        "wall_seconds": 0.39060126666703987,
+        "job_cpu_seconds": 0.3402777777777778,
+        "root_cpu_seconds": 0.2065972222222222,
+        "descendant_cpu_seconds": 0.13368055555555555,
+        "peak_working_set_bytes": 25318741.333333332
+      }
+    },
+    {
+      "name": "pmux_case03_crossbar",
+      "review_triggered": false,
+      "selection": "first_pair",
+      "source_sha256": "bf1fc3bf6383beb007a69587d77a29ea74fb1fbdf7429fb401c0855a31c05932",
+      "baseline_logic": 408,
+      "candidate_logic": 285,
+      "gain_percent": 30.147058823529413,
+      "official_selected": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.39796060000116995,
+            "job_cpu_seconds": 0.296875,
+            "root_cpu_seconds": 0.1875,
+            "descendant_cpu_seconds": 0.109375,
+            "peak_working_set_bytes": 24596480
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.3056660999991436,
+            "job_cpu_seconds": 0.28125,
+            "root_cpu_seconds": 0.15625,
+            "descendant_cpu_seconds": 0.125,
+            "peak_working_set_bytes": 22118400
+          }
+        },
+        "wall_seconds_overhead_percent": -23.191868743226085,
+        "job_cpu_seconds_overhead_percent": -5.263157894736848,
+        "root_cpu_seconds_overhead_percent": -16.666666666666664,
+        "descendant_cpu_seconds_overhead_percent": 14.28571428571428,
+        "peak_working_set_bytes_overhead_percent": -10.074937552039964,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_pair_only": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.39796060000116995,
+            "job_cpu_seconds": 0.296875,
+            "root_cpu_seconds": 0.1875,
+            "descendant_cpu_seconds": 0.109375,
+            "peak_working_set_bytes": 24596480
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.3056660999991436,
+            "job_cpu_seconds": 0.28125,
+            "root_cpu_seconds": 0.15625,
+            "descendant_cpu_seconds": 0.125,
+            "peak_working_set_bytes": 22118400
+          }
+        },
+        "wall_seconds_overhead_percent": -23.191868743226085,
+        "job_cpu_seconds_overhead_percent": -5.263157894736848,
+        "root_cpu_seconds_overhead_percent": -16.666666666666664,
+        "descendant_cpu_seconds_overhead_percent": 14.28571428571428,
+        "peak_working_set_bytes_overhead_percent": -10.074937552039964,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_ratio_of_means": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.39796060000116995,
+            "job_cpu_seconds": 0.296875,
+            "root_cpu_seconds": 0.1875,
+            "descendant_cpu_seconds": 0.109375,
+            "peak_working_set_bytes": 24596480
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.3056660999991436,
+            "job_cpu_seconds": 0.28125,
+            "root_cpu_seconds": 0.15625,
+            "descendant_cpu_seconds": 0.125,
+            "peak_working_set_bytes": 22118400
+          }
+        },
+        "wall_seconds_overhead_percent": -23.191868743226085,
+        "job_cpu_seconds_overhead_percent": -5.263157894736848,
+        "root_cpu_seconds_overhead_percent": -16.666666666666664,
+        "descendant_cpu_seconds_overhead_percent": 14.28571428571428,
+        "peak_working_set_bytes_overhead_percent": -10.074937552039964,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_mean_of_pair_ratios": {
+        "wall_seconds_overhead_percent": -23.191868743226085,
+        "peak_working_set_bytes_overhead_percent": -10.074937552039964,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_median_of_roles": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.39796060000116995,
+            "job_cpu_seconds": 0.296875,
+            "root_cpu_seconds": 0.1875,
+            "descendant_cpu_seconds": 0.109375,
+            "peak_working_set_bytes": 24596480
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.3056660999991436,
+            "job_cpu_seconds": 0.28125,
+            "root_cpu_seconds": 0.15625,
+            "descendant_cpu_seconds": 0.125,
+            "peak_working_set_bytes": 22118400
+          }
+        },
+        "wall_seconds_overhead_percent": -23.191868743226085,
+        "job_cpu_seconds_overhead_percent": -5.263157894736848,
+        "root_cpu_seconds_overhead_percent": -16.666666666666664,
+        "descendant_cpu_seconds_overhead_percent": 14.28571428571428,
+        "peak_working_set_bytes_overhead_percent": -10.074937552039964,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_baseline_warmup": {
+        "sample_count": 1,
+        "wall_seconds": 0.36375910000060685,
+        "job_cpu_seconds": 0.296875,
+        "root_cpu_seconds": 0.171875,
+        "descendant_cpu_seconds": 0.125,
+        "peak_working_set_bytes": 24772608
+      },
+      "baseline_warmups_02_to_10": {
+        "sample_count": 9,
+        "wall_seconds": 0.3651002999999441,
+        "job_cpu_seconds": 0.3177083333333333,
+        "root_cpu_seconds": 0.18055555555555555,
+        "descendant_cpu_seconds": 0.1371527777777778,
+        "peak_working_set_bytes": 24673848.888888888
+      }
+    },
+    {
+      "name": "pmux_case04_feedback",
+      "review_triggered": false,
+      "selection": "first_pair",
+      "source_sha256": "d668d258d804674dd1412538e7bce04d4630d02928ffe113413b536e6b9ed70f",
+      "baseline_logic": 368,
+      "candidate_logic": 337,
+      "gain_percent": 8.423913043478262,
+      "official_selected": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.3252327000009245,
+            "job_cpu_seconds": 0.265625,
+            "root_cpu_seconds": 0.15625,
+            "descendant_cpu_seconds": 0.109375,
+            "peak_working_set_bytes": 23031808
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.3172809999996389,
+            "job_cpu_seconds": 0.265625,
+            "root_cpu_seconds": 0.15625,
+            "descendant_cpu_seconds": 0.109375,
+            "peak_working_set_bytes": 23465984
+          }
+        },
+        "wall_seconds_overhead_percent": -2.444926356194521,
+        "job_cpu_seconds_overhead_percent": 0.0,
+        "root_cpu_seconds_overhead_percent": 0.0,
+        "descendant_cpu_seconds_overhead_percent": 0.0,
+        "peak_working_set_bytes_overhead_percent": 1.8851147074515406,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_pair_only": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.3252327000009245,
+            "job_cpu_seconds": 0.265625,
+            "root_cpu_seconds": 0.15625,
+            "descendant_cpu_seconds": 0.109375,
+            "peak_working_set_bytes": 23031808
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.3172809999996389,
+            "job_cpu_seconds": 0.265625,
+            "root_cpu_seconds": 0.15625,
+            "descendant_cpu_seconds": 0.109375,
+            "peak_working_set_bytes": 23465984
+          }
+        },
+        "wall_seconds_overhead_percent": -2.444926356194521,
+        "job_cpu_seconds_overhead_percent": 0.0,
+        "root_cpu_seconds_overhead_percent": 0.0,
+        "descendant_cpu_seconds_overhead_percent": 0.0,
+        "peak_working_set_bytes_overhead_percent": 1.8851147074515406,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_ratio_of_means": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.3252327000009245,
+            "job_cpu_seconds": 0.265625,
+            "root_cpu_seconds": 0.15625,
+            "descendant_cpu_seconds": 0.109375,
+            "peak_working_set_bytes": 23031808
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.3172809999996389,
+            "job_cpu_seconds": 0.265625,
+            "root_cpu_seconds": 0.15625,
+            "descendant_cpu_seconds": 0.109375,
+            "peak_working_set_bytes": 23465984
+          }
+        },
+        "wall_seconds_overhead_percent": -2.444926356194521,
+        "job_cpu_seconds_overhead_percent": 0.0,
+        "root_cpu_seconds_overhead_percent": 0.0,
+        "descendant_cpu_seconds_overhead_percent": 0.0,
+        "peak_working_set_bytes_overhead_percent": 1.8851147074515406,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_mean_of_pair_ratios": {
+        "wall_seconds_overhead_percent": -2.444926356194521,
+        "peak_working_set_bytes_overhead_percent": 1.8851147074515406,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_median_of_roles": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.3252327000009245,
+            "job_cpu_seconds": 0.265625,
+            "root_cpu_seconds": 0.15625,
+            "descendant_cpu_seconds": 0.109375,
+            "peak_working_set_bytes": 23031808
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.3172809999996389,
+            "job_cpu_seconds": 0.265625,
+            "root_cpu_seconds": 0.15625,
+            "descendant_cpu_seconds": 0.109375,
+            "peak_working_set_bytes": 23465984
+          }
+        },
+        "wall_seconds_overhead_percent": -2.444926356194521,
+        "job_cpu_seconds_overhead_percent": 0.0,
+        "root_cpu_seconds_overhead_percent": 0.0,
+        "descendant_cpu_seconds_overhead_percent": 0.0,
+        "peak_working_set_bytes_overhead_percent": 1.8851147074515406,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_baseline_warmup": {
+        "sample_count": 1,
+        "wall_seconds": 0.33201390000067477,
+        "job_cpu_seconds": 0.265625,
+        "root_cpu_seconds": 0.15625,
+        "descendant_cpu_seconds": 0.109375,
+        "peak_working_set_bytes": 23396352
+      },
+      "baseline_warmups_02_to_10": {
+        "sample_count": 9,
+        "wall_seconds": 0.3270943000000746,
+        "job_cpu_seconds": 0.2951388888888889,
+        "root_cpu_seconds": 0.16666666666666666,
+        "descendant_cpu_seconds": 0.1284722222222222,
+        "peak_working_set_bytes": 23313976.888888888
+      }
+    },
+    {
+      "name": "pmux_case05_nested",
+      "review_triggered": false,
+      "selection": "first_pair",
+      "source_sha256": "57d64edd3704d9d74407145080a63d06390e4a598c419a948fdea22fb1147f1d",
+      "baseline_logic": 413,
+      "candidate_logic": 344,
+      "gain_percent": 16.707021791767556,
+      "official_selected": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.3471475000005739,
+            "job_cpu_seconds": 0.265625,
+            "root_cpu_seconds": 0.15625,
+            "descendant_cpu_seconds": 0.109375,
+            "peak_working_set_bytes": 24023040
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.3416008000003785,
+            "job_cpu_seconds": 0.296875,
+            "root_cpu_seconds": 0.171875,
+            "descendant_cpu_seconds": 0.125,
+            "peak_working_set_bytes": 24215552
+          }
+        },
+        "wall_seconds_overhead_percent": -1.597793445203044,
+        "job_cpu_seconds_overhead_percent": 11.764705882352944,
+        "root_cpu_seconds_overhead_percent": 10.000000000000009,
+        "descendant_cpu_seconds_overhead_percent": 14.28571428571428,
+        "peak_working_set_bytes_overhead_percent": 0.8013640238704101,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_pair_only": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.3471475000005739,
+            "job_cpu_seconds": 0.265625,
+            "root_cpu_seconds": 0.15625,
+            "descendant_cpu_seconds": 0.109375,
+            "peak_working_set_bytes": 24023040
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.3416008000003785,
+            "job_cpu_seconds": 0.296875,
+            "root_cpu_seconds": 0.171875,
+            "descendant_cpu_seconds": 0.125,
+            "peak_working_set_bytes": 24215552
+          }
+        },
+        "wall_seconds_overhead_percent": -1.597793445203044,
+        "job_cpu_seconds_overhead_percent": 11.764705882352944,
+        "root_cpu_seconds_overhead_percent": 10.000000000000009,
+        "descendant_cpu_seconds_overhead_percent": 14.28571428571428,
+        "peak_working_set_bytes_overhead_percent": 0.8013640238704101,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_ratio_of_means": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.3471475000005739,
+            "job_cpu_seconds": 0.265625,
+            "root_cpu_seconds": 0.15625,
+            "descendant_cpu_seconds": 0.109375,
+            "peak_working_set_bytes": 24023040
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.3416008000003785,
+            "job_cpu_seconds": 0.296875,
+            "root_cpu_seconds": 0.171875,
+            "descendant_cpu_seconds": 0.125,
+            "peak_working_set_bytes": 24215552
+          }
+        },
+        "wall_seconds_overhead_percent": -1.597793445203044,
+        "job_cpu_seconds_overhead_percent": 11.764705882352944,
+        "root_cpu_seconds_overhead_percent": 10.000000000000009,
+        "descendant_cpu_seconds_overhead_percent": 14.28571428571428,
+        "peak_working_set_bytes_overhead_percent": 0.8013640238704101,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_mean_of_pair_ratios": {
+        "wall_seconds_overhead_percent": -1.597793445203044,
+        "peak_working_set_bytes_overhead_percent": 0.8013640238704101,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "all_measured_including_first_median_of_roles": {
+        "roles": {
+          "baseline": {
+            "sample_count": 1,
+            "wall_seconds": 0.3471475000005739,
+            "job_cpu_seconds": 0.265625,
+            "root_cpu_seconds": 0.15625,
+            "descendant_cpu_seconds": 0.109375,
+            "peak_working_set_bytes": 24023040
+          },
+          "candidate": {
+            "sample_count": 1,
+            "wall_seconds": 0.3416008000003785,
+            "job_cpu_seconds": 0.296875,
+            "root_cpu_seconds": 0.171875,
+            "descendant_cpu_seconds": 0.125,
+            "peak_working_set_bytes": 24215552
+          }
+        },
+        "wall_seconds_overhead_percent": -1.597793445203044,
+        "job_cpu_seconds_overhead_percent": 11.764705882352944,
+        "root_cpu_seconds_overhead_percent": 10.000000000000009,
+        "descendant_cpu_seconds_overhead_percent": 14.28571428571428,
+        "peak_working_set_bytes_overhead_percent": 0.8013640238704101,
+        "efficiency_5pct_pass": true,
+        "efficiency_over_15pct": false
+      },
+      "first_baseline_warmup": {
+        "sample_count": 1,
+        "wall_seconds": 0.34816870000031486,
+        "job_cpu_seconds": 0.3125,
+        "root_cpu_seconds": 0.171875,
+        "descendant_cpu_seconds": 0.140625,
+        "peak_working_set_bytes": 25198592
+      },
+      "baseline_warmups_02_to_10": {
+        "sample_count": 9,
+        "wall_seconds": 0.34570463333329826,
+        "job_cpu_seconds": 0.2916666666666667,
+        "root_cpu_seconds": 0.16493055555555555,
+        "descendant_cpu_seconds": 0.1267361111111111,
+        "peak_working_set_bytes": 24850432
+      }
+    }
+  ],
+  "area_mean_gain_percent": 20.06190452929184,
+  "aggregation_audit": {
+    "official_selected": {
+      "wall_over_5pct": [],
+      "memory_over_5pct": [],
+      "any_over_15pct": []
+    },
+    "first_pair_only": {
+      "wall_over_5pct": [
+        "test1"
+      ],
+      "memory_over_5pct": [],
+      "any_over_15pct": [
+        "test1"
+      ]
+    },
+    "all_measured_including_first_ratio_of_means": {
+      "wall_over_5pct": [
+        "test1"
+      ],
+      "memory_over_5pct": [],
+      "any_over_15pct": [
+        "test1"
+      ]
+    },
+    "all_measured_including_first_mean_of_pair_ratios": {
+      "wall_over_5pct": [
+        "test1"
+      ],
+      "memory_over_5pct": [],
+      "any_over_15pct": [
+        "test1"
+      ]
+    },
+    "all_measured_including_first_median_of_roles": {
+      "wall_over_5pct": [],
+      "memory_over_5pct": [],
+      "any_over_15pct": []
+    }
+  },
+  "maximum_candidate_wall_seconds_all_first_and_review": 0.7049716000001354,
+  "maximum_candidate_root_peak_bytes_all_first_and_review": 24780800,
+  "interpretation": [
+    "Only official_selected is the unchanged protocol verdict. Other summaries are sensitivity analyses, not substituted verdicts.",
+    "First means the first complete flow in the formal protocol after earlier package preflight, not a verified OS-cold or first-ever executable launch.",
+    "All first and review samples are retained. No retry of the same candidate protocol occurred.",
+    "CPU is supplementary, coarse Windows process accounting; lower selected wall does not by itself prove a CPU improvement.",
+    "Actual 18 Windows ILANG objects are exported and hash-bound but not proved by this Windows meter report. A subsequent independent Linux EQY report is required.",
+    "No security settings or environment policy, ABC binary, other Yosys pass or per-case script was changed."
+  ]
+}

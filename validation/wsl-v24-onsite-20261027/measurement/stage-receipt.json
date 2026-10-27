@@ -1,0 +1,43 @@
+{
+  "status": "NEW_BUILD_STAGED_NOT_EXECUTED",
+  "completed_utc": "2026-10-27T12:30:34.790525+00:00",
+  "package": "/home/yangsenyu/fpga-v24-wsl-archive-check-20261027/FPGA-topic2-v24-WSL-0.69-20261027",
+  "build_root": "/home/yangsenyu/fpga-v24-wsl-onsite-build-20261027",
+  "output": "/home/yangsenyu/fpga-v24-onsite-measurement-20261027",
+  "staging_script_sha256": "b482fb5250785ff27cceb54808d67cb75110d9d05425ac76da5835d4d434ab4b",
+  "frozen_delivery_manifest_sha256": "6390bac7b5703f3fd59f0c4e1dcdca22da84562ed8a9dec5d052e2e92b4b8710",
+  "build_receipt_sha256": "d88a1112ca04f2a2ea4b3c15848125e546fa99251ad8658b2d4947d8108eb44c",
+  "manifest_sha256": "bdcb278bd23405cfafbfc5028a5325605a0e4c5394daf8685ff47d63ec723fa7",
+  "runner_sha256": "a738da57816cc5276fa382893162d2f7e6844673788dd6d49378cd4632e8c57b",
+  "review_v2_sha256": "5a745339f858db0077bb0053c635ba1b231d506d17c42831a1f8eab039d5aeb8",
+  "case_manifest_sha256": "6360cd97fb17315cc39ed6d6d8a21ce1d99dcc99b1541fe1a92d64dfeefc26da",
+  "comparison_to_frozen_roles": {
+    "baseline": {
+      "all_files_same": false,
+      "changed_files": [
+        "yosys",
+        "yosys-abc"
+      ],
+      "old_yosys_sha256": "723d45fa55f92460b8c233c48dddc410e0b812e908990e1ff26fc091a87eb111",
+      "new_yosys_sha256": "c38fbed2e5d1cfa35d0a6ad13a68b8cc871771cfed149ea10bbbcff85c2cd7ce",
+      "old_abc_sha256": "5f4a0405891f57cf7a5e25191c8850a05afc68e4d47c3a7f0597a51df4157c97",
+      "new_abc_sha256": "85273d5973e34dc04f07d09b2acb2b2024e5bebc94a1ebdcbb3cb7966d7e281d"
+    },
+    "candidate": {
+      "all_files_same": false,
+      "changed_files": [
+        "yosys",
+        "yosys-abc"
+      ],
+      "old_yosys_sha256": "86af253dba8c6a176593ac497acbb0d6627c2e1f41a8f2147ff5956fda04c54d",
+      "new_yosys_sha256": "76b83852cd6de0c51fb39c444c1027d220b59747dbb41e8c6dba8a15d69b72db",
+      "old_abc_sha256": "5f4a0405891f57cf7a5e25191c8850a05afc68e4d47c3a7f0597a51df4157c97",
+      "new_abc_sha256": "85273d5973e34dc04f07d09b2acb2b2024e5bebc94a1ebdcbb3cb7966d7e281d"
+    }
+  },
+  "all_role_files_identical_to_frozen": false,
+  "historical_results_copied": false,
+  "yosys_executed_by_staging": false,
+  "overall_submission_acceptance": false,
+  "scope": "Input/provenance checks only; receipt is not a performance or equivalence PASS"
+}

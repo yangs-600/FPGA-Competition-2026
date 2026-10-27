@@ -1,0 +1,8 @@
+{
+  "status": "BUILT",
+  "source_sha256": "1cb8edf3523734e26c4d98c9420c981c9e2fb21f2d6bd0388ff80b877f047604",
+  "candidate": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/build-repro/yosys-trial-1cb8edf35237",
+  "candidate_sha256": "e771a00c55b61f9380037a14af16c183bc6180ca0805d23db7ad5266d87125ac",
+  "version": "Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)",
+  "banner": "\n-- Running command `pmux_competition_opt' --\n\n1. Executing PMUX_COMPETITION_OPT v22.\nPMUX_COMPETITION_OPT substituted_bits=0\n"
+}

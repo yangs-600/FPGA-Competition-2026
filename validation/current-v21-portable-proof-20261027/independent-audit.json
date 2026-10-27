@@ -1,0 +1,59 @@
+{
+  "status": "PORTABLE_V21_TAR_AND_RELOCATED_PROOF_INDEPENDENT_AUDIT_PASS",
+  "archive": "D:\\杨森宇\\FPGA\\FPGA-topic2-v21-EQY-Linux-0.69-20261027.tar.gz",
+  "archive_sha256": "1e310f0210e364649be7905e18b7e9ba26b1b81af59ce5002ffd0d0b8b371501",
+  "archive_bytes": 43472694,
+  "root": "FPGA-topic2-v21-EQY-Linux-0.69-20261027",
+  "payload_files": 1442,
+  "archive_files": 1443,
+  "member_path_traversal": false,
+  "symlinks_or_hardlinks": false,
+  "special_members": false,
+  "setuid_or_setgid": false,
+  "portable_index_sha256": "b9ff9fdc784526dafc51d4798b8b1d22c37399e5fbd9b4d3c1553dc357190650",
+  "exact_payload_membership": true,
+  "all_indexed_sha256_verified": true,
+  "upstream_licenses": {
+    "licenses/upstream/000-COPYING": {
+      "role": "explicit upstream license/source notice",
+      "source": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/src/COPYING",
+      "sha256": "7747e4dfc1780fd5970360ab394e0950358123c190abcc76f4c3bea5a0bccf2a",
+      "bytes": 792
+    },
+    "licenses/upstream/001-copyright.txt": {
+      "role": "explicit upstream license/source notice",
+      "source": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/src/abc/copyright.txt",
+      "sha256": "819151b8f059a48f806c75732ef62b1f873b49b6a04fb128aed28bf87d3dcd6c",
+      "bytes": 1129
+    }
+  },
+  "debian_common_license_files": 17,
+  "debian_copyright_files": 41,
+  "active_fingerprint_count": 85,
+  "active_fingerprints_all_inside_relocated_kit": true,
+  "archived_fingerprints_rechecked": 84,
+  "generated_runtime_fingerprints": [
+    "results/replay-20261027-075836-127138/proof-tool-manifest.json"
+  ],
+  "executable_entries_checked": 60,
+  "launchers_without_old_ubuntu_repo_or_oss_paths": 34,
+  "formal_report_sha256": "a2e05c107f855e47463977aaaf39c0a854ce034f10d2757f3bcfa8fccc9f53d4",
+  "positive_proof_counts": {
+    "PASS": 18
+  },
+  "negative_control_status": "EXPECTED_COUNTEREXAMPLE",
+  "negative_counterexample_definite": true,
+  "linux_candidate_role": "baseline_parser_alias_for_actual_windows_netlists_only",
+  "canonical_model_sha256": "3d96aa4532000389a4ac2998cef702b7a4ed46b23707b4e0dd4cb1688b4db2d2",
+  "formal_model_sha256": "779c62ba52488c1ecb78613625bb915fb77ad45a4feaa4b7fb931186613a4b5f",
+  "windows_report_sha256": "a2d12cfe60767e44bbbb8d025bea74a1b14f7811e6e45d4ff085874b8a31f7c8",
+  "windows_manifest_sha256": "70e06917b35a15e183d6c4ba13c53e5b2cfef10d02933e2c60c8329ebc06e120",
+  "generated_runtime_manifest_sha256_verified": true,
+  "all_85_active_fingerprints_verified_against_payload_or_evidence": true,
+  "evidence_archive": "D:\\杨森宇\\FPGA\\FPGA-topic2-v21-EQY-relocation-evidence-20261027.tar.gz",
+  "evidence_archive_sha256": "d4ef4ff10ff0649d4f37b64b696bb5d12e10b46e6526a7eb60710f3e912894ca",
+  "evidence_archive_bytes": 4143990,
+  "evidence_report_and_receipt_sha256_verified": true,
+  "generated_active_scripts_scanned_for_old_dependencies": 425,
+  "generated_active_scripts_no_old_ubuntu_repo_or_oss_paths": true
+}

@@ -1,0 +1,27 @@
+{
+  "status": "READ_ONLY_ONSITE_SAMPLES_AND_BINDINGS_AUDIT_PASS",
+  "completed_utc": "2026-10-27T12:35:24.003194+00:00",
+  "auditor_sha256": "d70efe83c7fc4a9d3dc07ea301b4ae717876e326ca8ea8dded92f9b34de1d62e",
+  "raw_sha256": "264ee1d6975d08b55dcee070113d97933a574702b4ed4e629802b95ae5804bc6",
+  "manifest_sha256": "bdcb278bd23405cfafbfc5028a5325605a0e4c5394daf8685ff47d63ec723fa7",
+  "build_receipt_sha256": "d88a1112ca04f2a2ea4b3c15848125e546fa99251ad8658b2d4947d8108eb44c",
+  "historical_raw_sha256": "14ee0b54c04021925d51df0aa72f424c898d5e600e364460a1dff935730112ad",
+  "canonical_samples_verified": 118,
+  "sample_log_sidecar_and_two_output_hashes_verified": true,
+  "every_measured_json_cell_counts_match": true,
+  "all_native_meter_fields_match_report": true,
+  "independent_mean_ratios_match_saved_view": true,
+  "source_reports_unchanged": true,
+  "no_synthesis_or_performance_reexecution": true,
+  "historical_area_counts_identical": true,
+  "copied_evidence": {
+    "latest-current.json": "264ee1d6975d08b55dcee070113d97933a574702b4ed4e629802b95ae5804bc6",
+    "efficiency-interpretation-view-v2.json": "d61c067b192efd5d9a3b8a26c6586ccdc5583271094cb2dc732759dbd31e83bc",
+    "run-once.json": "cf37b7cdd5ec5493157317bdbdc6c49b4ab8609edf0c394673895f01aa31887d",
+    "stage-receipt.json": "90b9240a2aa27d1d3f7e1393a1d1049fff6bd0838868907242e464002fab4356",
+    "manifest.json": "bdcb278bd23405cfafbfc5028a5325605a0e4c5394daf8685ff47d63ec723fa7",
+    "build-receipt.json": "d88a1112ca04f2a2ea4b3c15848125e546fa99251ad8658b2d4947d8108eb44c"
+  },
+  "comparison_summary_sha256": "79e484dbb3241a54c6cd35bdd1c0621a0b9df27202ed66bad8a3cae72b4a65f5",
+  "overall_submission_acceptance": false
+}

@@ -1,0 +1,21 @@
+{
+  "status": "FINAL_V21_REPOSITORY_HEALTH_PASS",
+  "stable_manifest_sha256": "a860f38c7ea502e7850257b626b357e6f7f2b435f7079aa02442c643b1e14dae",
+  "deployed_files_sha256": {
+    "src/pmux_competition_v11.cc": "0231002c240a080e7eebe1734b9dab49f2db78159c38a68769c885599eb43678",
+    "clean-v11/pmux_competition_v11.cc": "0231002c240a080e7eebe1734b9dab49f2db78159c38a68769c885599eb43678",
+    "abc/competition_abc_dch.abc": "bb92697ba7adcd8f97827885daaf8ef501d49d79428b54e51122fbffc45c5fa7",
+    "clean-v11/competition_abc_dch.abc": "bb92697ba7adcd8f97827885daaf8ef501d49d79428b54e51122fbffc45c5fa7",
+    "clean-v11/toolchains/yosys-0.69/competition-v11/synth-intel-competition.patch": "fa6123b1ef9ea137576cd8e24333d6ae842642d7252a01aa603ace4429836ee8",
+    "README.md": "cd62b330cc8012336f8b5a20daf19e1f966044f0fc8e33c5124349325f7a18e6",
+    "docs/OPTIMIZATION_V21_20261027.md": "9f0df7cf76e35ebb143fc17e625993821afd732db92a622a644ba67ddb2a3b4a",
+    "scripts/test_pmux_fastpaths.py": "74c52464b798d9aa11ddd29151cca8dd65dfbf1ef4f6ea7c1842c178f1c808d2"
+  },
+  "all_nine_inputs_unchanged": true,
+  "retained_v19_v20_tools_unchanged": true,
+  "whitespace_check": "PASS",
+  "head": "2791affaa80b9bdf637cae5f60511056aec6d8ab",
+  "origin_main": "2791affaa80b9bdf637cae5f60511056aec6d8ab",
+  "github_pushed": false,
+  "git_status": " M .gitignore\n M README.md\n M abc/competition_abc_dch.abc\n M clean-v11/activate_competition.sh\n M clean-v11/competition_abc_dch.abc\n M clean-v11/pmux_competition_v11.cc\n M clean-v11/run_current.py\n M clean-v11/toolchains/yosys-0.69/competition-v11/synth-intel-competition.patch\n M docs/LOCAL_BUILD.md\n M scripts/build_current.py\n M scripts/run_current.py\n M src/pmux_competition_v11.cc\n?? cases_current.json\n?? competition_case/pmux_cases/\n?? docs/ACCEPTANCE_20261027.md\n?? docs/OPTIMIZATION_V21_20261027.md\n?? scripts/test_pmux_fastpaths.py\n?? scripts/test_pmux_operators.py\n?? scripts/verify_current_cases.py\n?? scripts/verify_windows_current.py\n?? scripts/windows/\n?? validation/current-20261027/\n?? validation/current-v21-20261027/\n?? validation/current-v21-fast-singlemap-20261027T065256-122318/\n"
+}

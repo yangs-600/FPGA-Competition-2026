@@ -1,0 +1,20 @@
+{
+  "path": "D:\\\u6768\u68ee\u5b87\\FPGA\\FPGA-topic2-current-Windows-0.69-20261027.zip",
+  "bytes": 87380620,
+  "sha256": "3b013a37830ae392a91310dc372b4ed79280d15125551cf8fa758b9f0c67c5e3",
+  "archive_crc": "PASS",
+  "entries": 1030,
+  "extracted_content_hashes": "PASS",
+  "relocated_clean_path_smoke": "PASS",
+  "relocated_smoke_flow_count": 18,
+  "relocated_root": "D:\\fpga-current-20261027\\delivery-relocated-from-zip\\FPGA-topic2-current-Windows-0.69-20261027",
+  "smoke_report": "D:\\fpga-current-20261027\\delivery-relocated-from-zip\\FPGA-topic2-current-Windows-0.69-20261027\\portability-smoke-m9w8gqdp\\report.json",
+  "smoke_report_sha256": "3c0a7b206efea1c017e68175e1dba913bfe2099b57be1e86bfdf951e936a1975",
+  "candidate_sha256": "235d09975fb4d13b22f940d893d771cce82782a0ae24807b432225424fefa91c",
+  "manifest_sha256": "45ced2e8bdc58cb7468ca256a763347df1fb10d259fa75ff9d1f9ea1d81ee47e",
+  "raw_report_sha256": "934342e257960bf0804a578be6e6c8a7b5c2b3b398977a19c653a847892642dd",
+  "performance": "REVIEW: seven wall-time overheads >5%, none >15%",
+  "windows_actual_formal": "PASS: 18 EQY and negative control",
+  "old_v14_archive_preserved": true,
+  "old_v14_archive_sha256": "cdcb76388fc93e2120a0ead203e06645dfc4f315b550e3de8fc9d1231f626e27"
+}

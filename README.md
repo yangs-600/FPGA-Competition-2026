@@ -1,13 +1,35 @@
-# 当前工程：v14 稀疏 PMUX 优化（兼容原 v11 路径）
+# 赛题二：Yosys 0.69 PMUX 优化 v24
 
-从仓库根目录运行 `python3 scripts/run_current.py`；激活 `source scripts/activate_competition.sh`。
+当前源码为 `v24-bounded-search`。在原版 Yosys 0.69 内加入通用 PMUX 优化，在 `synth_intel -family cycloneiv` 中调用；九例统一使用同一份 ABC9 脚本。源码 SHA-256：`f278dfa15309f735644eb09dbcb1e385f99cb6e571912b68d9d679917d4d5b12`。
 
-工作源码、工具链和最新证据在 `clean-v11/`，详细复现和清理记录见 `CLEAN_REPRODUCTION.md`、`cleanup-postcheck.json`。
+2026-10-27 已完成 WSL 最终交付材料的全新目录离线构建演练、新产物一次固定性能测量和18项新网表 EQY。九例 LUT＋NOT 缩减率的算术平均为 **20.661033%**，逐例逻辑资源均不增加。原有82项边界检查及3个负对照属于同源码的早先工具验证，本轮没有冒充重新执行。
 
-v14 在 v13 的选择位顺序搜索基础上，把 PMUX 默认输入安全补齐从“恰好缺一个编码”扩展到任意数量的缺失编码，并改用真实显式分支数进行收益门控；文件名仍保留 v11，避免破坏现有构建入口。四个公开用例按 LUT＋NOT 计的逻辑资源平均减少 21.8924%（LUT 单项平均 22.1104%），8 路正式等价验证及 11 个独立组合逻辑夹具全部通过。详细说明见 `docs/COMPETITION_V14.md`。
+本轮 test1 墙钟减少 **0.895694%**。test2 首轮根内存增加 **5.390248%**；按短例追加五次复核后，墙钟增加 **2.917401%**、根内存增加 **0.190369%**。包含首轮的五次/六次口径也均在5%以内。其余八例首轮墙钟与根内存在5%以内。严格首轮九例并非全部通过，现场成绩和正式复核认定仍以主办方评测为准。CPU口径单列在结果表，不与墙钟混用；原生Windows首次迟滞问题未被这次WSL验证修复。
 
-评测流程保持 Yosys 0.69、`synth_intel -family cycloneiv` 和内置 ABC9。资源检查同时审计 LUT、`$not`、DFF 及全部已出现的非 LUT 单元类型；正式评测目标是 Windows，仓库内 Linux 复现仅作为交叉验证。
+## 队友从这里开始
 
-本机从保留依赖重新构建的入口是 `scripts/build_current.py`，构建、运行方法和本轮验证摘要见 [docs/LOCAL_BUILD.md](docs/LOCAL_BUILD.md)。
+1. 阅读 [WSL交付说明](docs/README_V24_WSL.md) 和 [现场操作步骤](docs/ONSITE_RUNBOOK.md)。
+2. 从队内交付附件获取 `FPGA-topic2-v24-WSL-onsite-kit-20261027.zip`。源码仓库不包含大型二进制附件；该一体包带原运行/构建材料、EQY工具包、现场辅助入口及完整新证据。文件指纹见交付清单和包外 `.sha256`，不要仅下载本仓库后假设工具已安装。
+3. 使用 WSL Ubuntu 24.04 x86_64、GCC/G++13、Python3.12及已列出的基础系统工具，照步骤核验、编译、测量、证明。新的输出目录不得复用历史结果。
 
-2026-10-12 已完成四例 Windows 构建、21 轮 CPU/峰值工作集验收，以及 Windows 实际 ABC9 后 ILANG 八次 EQY 证明和负对照。见 [Windows 验收记录](docs/WINDOWS_V14_VALIDATION.md)。
+现场新增脚本也保存在 `scripts/wsl/`：`stage_rebuilt_measurement.py` 接收 `--package --build-root --output`，加 `--run` 才运行固定测量；`onsite_proof.py` 接收 `--package --proof-kit --roles-root --build-receipt --output`。它们验证外部工具包和新构建收据，不能省略依赖。
+
+## 已有 Ubuntu 仓库入口
+
+本机已经部署工具的仓库仍可执行：
+
+```bash
+/usr/bin/python3 -E -B -u scripts/run_current.py
+```
+
+此入口进行九例功能/资源验证，单独的效率测量按上面的WSL步骤执行。新机器的工具重建见 [原有Linux构建说明](docs/LOCAL_BUILD.md)。旧Windows及原生Ubuntu记录保留在 [原v24说明](docs/README_NATIVE_V24_20261027.md)，不能将它们与WSL成绩合并。
+
+## 源码、结果与材料
+
+- 实现：`src/pmux_competition_v11.cc`，兼容镜像：`clean-v11/pmux_competition_v11.cc`。
+- 集成补丁：`clean-v11/toolchains/yosys-0.69/competition-v11/synth-intel-competition.patch`。
+- 固定脚本：`abc/competition_abc_dch.abc`；九例注册表：`cases_current.json`。
+- [完整结果与两轮WSL对比](docs/RESULTS_V24_WSL.md)、[技术设计报告](docs/DESIGN_REPORT_V24_WSL.md)、[答辩说明](docs/DEFENSE_NOTES_V24_WSL.md)、[交付清单](docs/DELIVERY_CHECKLIST.md)。
+- 本轮摘要：`validation/wsl-v24-onsite-20261027/`。原始样本、失败记录及完整证明在配套证据归档中保留。
+
+技术材料已据实更新；三位队员真实分工按用户要求暂跳过。本文不宣称已经完成主办方验收或现场答辩。

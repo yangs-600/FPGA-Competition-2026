@@ -1,0 +1,13 @@
+{
+  "status": "INVALID_FIXTURE_REJECTED_BEFORE_PMUX_IN_ORIGINAL_AND_CANDIDATE",
+  "original_returncode": -11,
+  "candidate_initial_returncode": -11,
+  "source_sha256": "1c273ca1e9ffce25f07b4563230f44617a4557aeaf94439a065e2eae85711dbb",
+  "initial_report_sha256": "aea8071998f6b46de3efe6dce5b3904e849f9a0d8faba8fde97374a16d9b8f23",
+  "original_sha256": "5ac190d5096b14967864d093212858bdd457155a1b5e7d2945f314e070d5c2ef",
+  "candidate_sha256": "f5a1ddd3d80ef8bcac4b8ccb1744598e04c9fa124b522e0692995723304933d6",
+  "pmux_pass_in_baseline_flow": false,
+  "original_log_sha256": "79a251df365254092c55d47189f164b16eaf31d80b9b68d63cc20a4461078267",
+  "candidate_log_sha256": "07b7747beb614d4b70f3b097ef977d1a423f85af3397dccf8b48ce85e9bc69ea",
+  "upstream_rule": "Yosys 0.69 kernel/rtlil.cc check_expected(true) for add requires matched A_SIGNED and B_SIGNED; this hand-written icell violates it."
+}

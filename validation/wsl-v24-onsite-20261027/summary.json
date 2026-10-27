@@ -1,0 +1,296 @@
+{
+  "schema": 1,
+  "completed": true,
+  "status": "OFFLINE_REBUILD_AND_NEW_ROLES_LOCAL_VALIDATION_COMPLETE",
+  "completed_utc": "2026-10-27T12:48:06.456421+00:00",
+  "overall_submission_acceptance": false,
+  "official_review_interpretation_confirmed": false,
+  "native_windows_first_run_fixed": false,
+  "source_sha256": "f278dfa15309f735644eb09dbcb1e385f99cb6e571912b68d9d679917d4d5b12",
+  "evidence": {
+    "build": {
+      "completed": true,
+      "path": "onsite-build-completion.json",
+      "sha256": "32425dd48949ca123edd992f3d52c8fe74f60d34d7d4844556f79e9aba42f474",
+      "status": "OFFLINE_ENTRY_EXECUTED_AND_STATIC_BUILD_IDENTITY_PASS"
+    },
+    "measurement": {
+      "completed": true,
+      "path": "measurement/evidence/latest-current.json",
+      "sha256": "264ee1d6975d08b55dcee070113d97933a574702b4ed4e629802b95ae5804bc6",
+      "status": "RAW_MEASUREMENTS_COMPLETE_REVIEW_AND_FORMAL_REQUIRED",
+      "manifest": {
+        "path": "measurement/evidence/manifest.json",
+        "sha256": "bdcb278bd23405cfafbfc5028a5325605a0e4c5394daf8685ff47d63ec723fa7"
+      }
+    },
+    "formal": {
+      "completed": true,
+      "path": "proof/evidence/onsite-proof-report.json",
+      "sha256": "d103dc8edf0c92b00d5d9c88d9857802983b49d01947704d53e7fe7e37d31a6d",
+      "status": "PASS"
+    }
+  },
+  "distribution_files": [
+    {
+      "path": "docs/DEFENSE_NOTES_V24_WSL.md",
+      "sha256": "a02c369812c84761eac5d570a75a8b31e089c0a861ae8137a503db7764484f57",
+      "bytes": 8079
+    },
+    {
+      "path": "docs/DELIVERY_CHECKLIST.md",
+      "sha256": "b4e79e50bcf5adcd81460d1d2318c80f38ccf0f7c3a4b9cf6726398953026078",
+      "bytes": 5051
+    },
+    {
+      "path": "docs/DESIGN_REPORT_V24_WSL.md",
+      "sha256": "694883acaecfd0aacecd407435021cf528d2b8d7ca56a0ca406abbd1bd0778fc",
+      "bytes": 14215
+    },
+    {
+      "path": "docs/ONSITE_RUNBOOK.md",
+      "sha256": "4d123dbe47926a0461bc4a637a991e948f89fdba6c65e0494bc5bc59b38e3194",
+      "bytes": 5977
+    },
+    {
+      "path": "docs/README_V24_WSL.md",
+      "sha256": "eabb29d432f9139b3fcba823bb471fa8c21232f8bd2795d8f4237ccccfd3c2e0",
+      "bytes": 3658
+    },
+    {
+      "path": "docs/RESULTS_V24_WSL.md",
+      "sha256": "88e54c45a78d70ecf269aa75634b34e24d7c54f6b0b78641a5afaf2704e5a32e",
+      "bytes": 7863
+    },
+    {
+      "path": "docs/RESULTS_V24_WSL_HISTORICAL.md",
+      "sha256": "a73a6b6b57510ba3b6dd922fcc16e6c32a7709112b73dbbdfcdd150b80070a30",
+      "bytes": 6132
+    },
+    {
+      "path": "evidence/onsite-replay-evidence.tar.gz",
+      "sha256": "61dfb5c56a54a099e7e6976fc4430c27089e92e9a0be02b04ceb882294635d09",
+      "bytes": 107376286
+    },
+    {
+      "path": "git-index-metadata-audit.json",
+      "sha256": "a9b9b5ccc932bb020133fe8dac8a6afa4b013b9effb4dca2bd1ec8589d6ce1fd",
+      "bytes": 572
+    },
+    {
+      "path": "git-tracked-after-build.txt",
+      "sha256": "dfbe863f69ec52c6d70925da771156c6bf2344746b96e6cd5e639553e762db9e",
+      "bytes": 259073
+    },
+    {
+      "path": "git-tracked-pristine.txt",
+      "sha256": "dfbe863f69ec52c6d70925da771156c6bf2344746b96e6cd5e639553e762db9e",
+      "bytes": 259073
+    },
+    {
+      "path": "initial-identity-audit-failure.json",
+      "sha256": "bf1f7f3846143c95a31fc1fd6a83580e1dca944df50f5dbf589d994c53b65991",
+      "bytes": 514
+    },
+    {
+      "path": "measurement/evidence/audit.json",
+      "sha256": "bc028f5ce70e30372d62de689434b2b498cac6c7d0666f272a6be9ae2f9d80cc",
+      "bytes": 1693
+    },
+    {
+      "path": "measurement/evidence/build-receipt.json",
+      "sha256": "d88a1112ca04f2a2ea4b3c15848125e546fa99251ad8658b2d4947d8108eb44c",
+      "bytes": 79047
+    },
+    {
+      "path": "measurement/evidence/comparison-summary.json",
+      "sha256": "79e484dbb3241a54c6cd35bdd1c0621a0b9df27202ed66bad8a3cae72b4a65f5",
+      "bytes": 36879
+    },
+    {
+      "path": "measurement/evidence/efficiency-interpretation-view-v2.json",
+      "sha256": "d61c067b192efd5d9a3b8a26c6586ccdc5583271094cb2dc732759dbd31e83bc",
+      "bytes": 39877
+    },
+    {
+      "path": "measurement/evidence/latest-current.json",
+      "sha256": "264ee1d6975d08b55dcee070113d97933a574702b4ed4e629802b95ae5804bc6",
+      "bytes": 412573
+    },
+    {
+      "path": "measurement/evidence/manifest.json",
+      "sha256": "bdcb278bd23405cfafbfc5028a5325605a0e4c5394daf8685ff47d63ec723fa7",
+      "bytes": 72093
+    },
+    {
+      "path": "measurement/evidence/run-once.json",
+      "sha256": "cf37b7cdd5ec5493157317bdbdc6c49b4ab8609edf0c394673895f01aa31887d",
+      "bytes": 1574
+    },
+    {
+      "path": "measurement/evidence/stage-receipt.json",
+      "sha256": "90b9240a2aa27d1d3f7e1393a1d1049fff6bd0838868907242e464002fab4356",
+      "bytes": 2290
+    },
+    {
+      "path": "measurement/stage_rebuilt_measurement.py",
+      "sha256": "b482fb5250785ff27cceb54808d67cb75110d9d05425ac76da5835d4d434ab4b",
+      "bytes": 19375
+    },
+    {
+      "path": "onsite-build-completion.json",
+      "sha256": "32425dd48949ca123edd992f3d52c8fe74f60d34d7d4844556f79e9aba42f474",
+      "bytes": 2880
+    },
+    {
+      "path": "onsite-build-console.log",
+      "sha256": "ca85be80091a55a292b6fd62d8b438f82aa8bfab41eb664da16b0c8e287158aa",
+      "bytes": 2608
+    },
+    {
+      "path": "onsite-build-environment.json",
+      "sha256": "9e4b8a3aa9bd7a03b7667fb9c36b3abc2bed080985423514a877fd42ff5b674a",
+      "bytes": 1118
+    },
+    {
+      "path": "onsite-build-identity-audit.json",
+      "sha256": "20c5b4c88f8080f4fbb4672adfdb795fa3749e79f5ea4019fab0d03e7bcf0552",
+      "bytes": 75976
+    },
+    {
+      "path": "onsite-build-receipt.json",
+      "sha256": "d88a1112ca04f2a2ea4b3c15848125e546fa99251ad8658b2d4947d8108eb44c",
+      "bytes": 79047
+    },
+    {
+      "path": "onsite-build-status.json",
+      "sha256": "131e4259e8c14c3807a77ae027021a6743eb07057c5aa32405e5c83a7cf2ebdc",
+      "bytes": 1874
+    },
+    {
+      "path": "onsite-build-steps.json",
+      "sha256": "0348577651e6cf0554107afe73b641541e196b479786b10d7e44cbd0e22216ad",
+      "bytes": 5204
+    },
+    {
+      "path": "onsite-dependency-manifest.json",
+      "sha256": "670e127cbbda60061ab0d67cf3fe276cf36d7f683fd4ba50d936f991c6dad8fc",
+      "bytes": 2873
+    },
+    {
+      "path": "onsite-patch-target-line-ending-normalization.json",
+      "sha256": "b025b1d7d4f4aa6ba62e69e6756eeb178ff1970201ffdc0a26618167a072980b",
+      "bytes": 768
+    },
+    {
+      "path": "onsite-rebuilt-roles-manifest.json",
+      "sha256": "37b4a6e806e9344e385b3a519fdbd7c6b7c435461d82cb20df4809f1be3cca4a",
+      "bytes": 71184
+    },
+    {
+      "path": "proof/evidence/copy-index.json",
+      "sha256": "80c4b5418da9e2e6de1bfa12a492c182d43af6aeda9467a9fd50bf03f45ba351",
+      "bytes": 585
+    },
+    {
+      "path": "proof/evidence/invocation-receipt.json",
+      "sha256": "445dc5d0c9c8406cb99b7546642d6e4e72b235a7dd7a2a539ab6e9be20bf433c",
+      "bytes": 2575
+    },
+    {
+      "path": "proof/evidence/invocation.log",
+      "sha256": "05b1f03b3aec03a72d84e148f7ed4e6af54bc4aebd098a1013ad311df3dbbff1",
+      "bytes": 866
+    },
+    {
+      "path": "proof/evidence/measurement-binding-audit.json",
+      "sha256": "f4d59f0a09e3f65763b4fcd70aae07a8e183a481a97c5864674a4d6cf9ea6eab",
+      "bytes": 13787
+    },
+    {
+      "path": "proof/evidence/onsite-proof-report.json",
+      "sha256": "d103dc8edf0c92b00d5d9c88d9857802983b49d01947704d53e7fe7e37d31a6d",
+      "bytes": 606453
+    },
+    {
+      "path": "proof/evidence/proof-output-index.json",
+      "sha256": "99d97125e0eaaf07f387ab4ea8cbe9d9d034a4ce557640a3050a7860384206a3",
+      "bytes": 189941
+    },
+    {
+      "path": "proof/evidence/proof-tool-manifest.json",
+      "sha256": "7416860e1e56daf28f9eead6e0175300b7f220dfc59d2caf3b5c8bd0e55c8d55",
+      "bytes": 10318
+    },
+    {
+      "path": "proof/onsite_proof.py",
+      "sha256": "17760c425c0aedc2c9fc9e6a3de1a776a8f19b5d697756f4275502962fdc26c6",
+      "bytes": 20674
+    },
+    {
+      "path": "proof/run_proof.sh",
+      "sha256": "589e2e7b4f86794922e1bf219f5463fe0bac12d8c9276fbca552f49249478865",
+      "bytes": 291
+    }
+  ],
+  "mean_logic_reduction_percent": 20.66103306959685,
+  "all_case_logic_nonincrease": true,
+  "strict_first_wall_and_root_memory_within_5pct": false,
+  "conditional_review_wall_and_root_memory_within_5pct": true,
+  "absolute_observations": {
+    "candidate_sample_count": 14,
+    "max_wall_seconds": 0.204042865,
+    "max_root_peak_bytes": 34615296,
+    "within_60s_and_2e9_root_bytes": true,
+    "scope": "Only retained candidate samples and declared root-process memory measure; not all possible <=1000-cell designs."
+  },
+  "new_formal_positive_count": 18,
+  "new_formal_negative_control": "EXPECTED_COUNTEREXAMPLE",
+  "canonical_measurement_samples_verified": 118,
+  "historical_boundary": {
+    "positive_count": 82,
+    "negative_control_count": 3,
+    "reexecuted_this_rehearsal": false
+  },
+  "team_contributions": "Deferred at user request; no invented contributions",
+  "git_publication": "Recorded separately after a verified append-only main commit; packaging does not imply a push",
+  "limitations": [
+    "Local rehearsal on the existing WSL host, not official onsite judging.",
+    "Fresh baseline/ABC build; candidate incrementally reuses this same newly created baseline object tree.",
+    "test2 first root memory exceeds 5%; all three documented short-case review aggregates are within 5%.",
+    "Wall time is primary; total CPU and root-only CPU are separately reported and not interchangeable.",
+    "Formal objects were newly exported in separate unmeasured processes with the same new source/ELF/ABC; final counts match measured outputs.",
+    "Original frozen runtime archives remain unchanged. New binaries and raw evidence are preserved in the additional evidence tar."
+  ],
+  "entrypoints": {
+    "measure": {
+      "interpreter": "/usr/bin/python3",
+      "script": "measurement/stage_rebuilt_measurement.py",
+      "args": [
+        "--package",
+        "{package}",
+        "--build-root",
+        "{build}",
+        "--output",
+        "{output}",
+        "--run"
+      ]
+    },
+    "proof": {
+      "interpreter": "/bin/sh",
+      "script": "proof/run_proof.sh",
+      "args": [
+        "--package",
+        "{package}",
+        "--proof-kit",
+        "{proof_kit}",
+        "--roles-root",
+        "{build}/roles",
+        "--build-receipt",
+        "{build}/build-receipt.json",
+        "--output",
+        "{output}"
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "status": "FRESH_ONSITE_EQY_PASS_WITH_MEASUREMENT_BINDING_AUDIT",
+  "process_exit_code_observed": 0,
+  "report_sha256": "d103dc8edf0c92b00d5d9c88d9857802983b49d01947704d53e7fe7e37d31a6d",
+  "positive_proof_counts": {
+    "PASS": 18
+  },
+  "negative_control": "EXPECTED_COUNTEREXAMPLE",
+  "source_sha256": "f278dfa15309f735644eb09dbcb1e385f99cb6e571912b68d9d679917d4d5b12",
+  "roles": {
+    "baseline": {
+      "executable_sha256": "c38fbed2e5d1cfa35d0a6ad13a68b8cc871771cfed149ea10bbbcff85c2cd7ce",
+      "abc_sha256": "85273d5973e34dc04f07d09b2acb2b2024e5bebc94a1ebdcbb3cb7966d7e281d",
+      "inventory_sha256": "9a85755424134430ed4c199cbcca7b775d055d1dc8ceb70e748ebb2d59ad30fe"
+    },
+    "candidate": {
+      "executable_sha256": "76b83852cd6de0c51fb39c444c1027d220b59747dbb41e8c6dba8a15d69b72db",
+      "abc_sha256": "85273d5973e34dc04f07d09b2acb2b2024e5bebc94a1ebdcbb3cb7966d7e281d",
+      "inventory_sha256": "94756ddd73984ccb54dc1477f651fa6e24073bcc6471e7e212f486a657e22e10"
+    }
+  },
+  "new_build_receipt_sha256": "d88a1112ca04f2a2ea4b3c15848125e546fa99251ad8658b2d4947d8108eb44c",
+  "measurement_report_sha256": "264ee1d6975d08b55dcee070113d97933a574702b4ed4e629802b95ae5804bc6",
+  "measurement_manifest_sha256": "bdcb278bd23405cfafbfc5028a5325605a0e4c5394daf8685ff47d63ec723fa7",
+  "measurement_samples_checked": 118,
+  "source_elf_abc_and_final_counts_match": true,
+  "raw_postabc_bytes_identical_count": 0,
+  "performance_retested": false,
+  "timed_process_objects_formally_proved": false,
+  "overall_submission_acceptance": false,
+  "scope": "New 18 proof objects plus wrong-output counterexample; same actual source/ELF/ABC and all retained measured final-count vectors, not a replacement performance run",
+  "full_raw_evidence": "/home/yangsenyu/fpga-v24-onsite-proof-20261027/run-once",
+  "harness_sha256": "17760c425c0aedc2c9fc9e6a3de1a776a8f19b5d697756f4275502962fdc26c6",
+  "proof_kit_index_sha256": "ac50f798b70f4a105f8ad42e12ed16b03bb9ed87ce2ff2ad0194cdf66c4c6cd9",
+  "files": {
+    "onsite-proof-report.json": "d103dc8edf0c92b00d5d9c88d9857802983b49d01947704d53e7fe7e37d31a6d",
+    "proof-tool-manifest.json": "7416860e1e56daf28f9eead6e0175300b7f220dfc59d2caf3b5c8bd0e55c8d55",
+    "proof-output-index.json": "99d97125e0eaaf07f387ab4ea8cbe9d9d034a4ce557640a3050a7860384206a3",
+    "measurement-binding-audit.json": "f4d59f0a09e3f65763b4fcd70aae07a8e183a481a97c5864674a4d6cf9ea6eab",
+    "invocation.log": "05b1f03b3aec03a72d84e148f7ed4e6af54bc4aebd098a1013ad311df3dbbff1"
+  },
+  "completed_utc": "2026-10-27T12:35:23.790319+00:00"
+}

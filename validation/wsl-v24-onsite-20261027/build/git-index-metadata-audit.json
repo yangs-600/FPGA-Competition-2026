@@ -1,0 +1,10 @@
+{
+  "status": "TRACKED_BLOB_IDENTITIES_UNCHANGED",
+  "scope": "CMake Git metadata probing refreshed index stat cache; same tracked paths, modes, blob object IDs and stages",
+  "archive_index_sha256": "96ae987f80d8f201ed45340a814b2a4d19d086e931d613db8ef43057799df5a7",
+  "current_index_sha256": "e212f3b8610d83fa856cde5a7112d1c318d984bac944e7538f6514ecdf17d566",
+  "tracked_entries": 3192,
+  "tracked_stage_listing_sha256": "dfbe863f69ec52c6d70925da771156c6bf2344746b96e6cd5e639553e762db9e",
+  "git_optional_locks_disabled": true,
+  "new_algorithm_source_changes": false
+}

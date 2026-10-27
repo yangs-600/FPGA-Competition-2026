@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+unset LD_LIBRARY_PATH LD_PRELOAD PYTHONHOME PYTHONPATH PYTHONUSERBASE PYTHONSTARTUP PYTHONEXECUTABLE BASH_ENV ENV CDPATH MAKEFLAGS GNUMAKEFLAGS MAKEFILES MFLAGS
+entry=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+exec /usr/bin/python3 -I -S -B "$entry/onsite_proof.py" "$@"

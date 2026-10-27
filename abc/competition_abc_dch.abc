@@ -1,1 +1,1 @@
-&dch -f; &if -K 4 -a; &mfs
+&dch -f; &if -K 4 -a -C 4 -F 7 -A 1

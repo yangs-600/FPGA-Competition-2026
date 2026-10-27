@@ -1,0 +1,448 @@
+{
+  "status": "PASS",
+  "scope": "Generic v20 early-return and substitution semantics only; not area, timing, memory, official nine-case or full EQY acceptance",
+  "inputs_defined": true,
+  "gold_literal_x_values_are_dont_cares": true,
+  "no_frontend_proc_or_opt_expr": true,
+  "directory": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/operator-boundaries-fastpaths-v22-20261027",
+  "harness_sha256": "74c52464b798d9aa11ddd29151cca8dd65dfbf1ef4f6ea7c1842c178f1c808d2",
+  "cases": [
+    {
+      "name": "no_mux_even_with_decoder",
+      "mux": 0,
+      "pmux": 0,
+      "eq_widths": [
+        3
+      ],
+      "substituted_bits": 0,
+      "status": "PASS",
+      "source_sha256": "3a765bdcacd82f694b88679121422932547638e25380f29b881cc86c90444bcb",
+      "flow_sha256": "57ec76df1dafd778ad9ab9407edce22181674ca7c8fcd600f000b6dd66624627",
+      "exit_code": 0,
+      "timed_out": false,
+      "before": {
+        "by_type": {
+          "$xor": 1,
+          "$eq": 1
+        },
+        "eq_widths": [
+          3
+        ],
+        "mux_b": []
+      },
+      "after": {
+        "by_type": {
+          "$xor": 1,
+          "$eq": 1
+        },
+        "eq_widths": [
+          3
+        ],
+        "mux_b": []
+      },
+      "frontend_shape_pass": true,
+      "substitution_count_pass": true,
+      "no_factor_or_tree_preparation_logged": true,
+      "expected_constant_data_pass": true,
+      "sat_status": "PASS",
+      "log_sha256": "456be024a7aec0e1cb05d82baeb653184503943d3be7543532d1336dee66cb4d"
+    },
+    {
+      "name": "raw_select_pmux_without_facts",
+      "mux": 0,
+      "pmux": 1,
+      "eq_widths": [],
+      "substituted_bits": 0,
+      "status": "PASS",
+      "source_sha256": "39c835271cfc988fb93e3671f491d1fddafe02915e3d7f366a919f0706ae1d39",
+      "flow_sha256": "76eb1b9bf5492955d703f2e1992f36808e2e95f298aa3e3c3e205a4716e56fd4",
+      "exit_code": 0,
+      "timed_out": false,
+      "before": {
+        "by_type": {
+          "$pmux": 1
+        },
+        "eq_widths": [],
+        "mux_b": [
+          [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ]
+        ]
+      },
+      "after": {
+        "by_type": {
+          "$pmux": 1
+        },
+        "eq_widths": [],
+        "mux_b": [
+          [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ]
+        ]
+      },
+      "frontend_shape_pass": true,
+      "substitution_count_pass": true,
+      "no_factor_or_tree_preparation_logged": true,
+      "expected_constant_data_pass": true,
+      "sat_status": "PASS",
+      "log_sha256": "a6a5347cffafb75c7e0a7b48875a0a315a6cb0db7eea24097c32effe54fd1919"
+    },
+    {
+      "name": "wide8_pmux_substitution_before_empty_decode_return",
+      "mux": 0,
+      "pmux": 1,
+      "eq_widths": [
+        8,
+        8
+      ],
+      "substituted_bits": 16,
+      "expected_b": [
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "1",
+        "0",
+        "1",
+        "0",
+        "0",
+        "1",
+        "1",
+        "1",
+        "0",
+        "0",
+        "1"
+      ],
+      "status": "PASS",
+      "source_sha256": "b68182a4148ea6d743a0150e0007a706829d10671f328a0d08cfe9ecee2c36dd",
+      "flow_sha256": "7a714adb1b1f03a6597a49fed60470b663be4ee0f4aecf7f704a6ace07430bc1",
+      "exit_code": 0,
+      "timed_out": false,
+      "before": {
+        "by_type": {
+          "$eq": 2,
+          "$pmux": 1
+        },
+        "eq_widths": [
+          8,
+          8
+        ],
+        "mux_b": [
+          [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            9,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2
+          ]
+        ]
+      },
+      "after": {
+        "by_type": {
+          "$eq": 2,
+          "$pmux": 1
+        },
+        "eq_widths": [
+          8,
+          8
+        ],
+        "mux_b": [
+          [
+            "0",
+            "1",
+            "1",
+            "0",
+            "0",
+            "1",
+            "0",
+            "1",
+            "0",
+            "0",
+            "1",
+            "1",
+            "1",
+            "0",
+            "0",
+            "1"
+          ]
+        ]
+      },
+      "frontend_shape_pass": true,
+      "substitution_count_pass": true,
+      "no_factor_or_tree_preparation_logged": true,
+      "expected_constant_data_pass": true,
+      "sat_status": "PASS",
+      "log_sha256": "023b2207b9e836874fa7b60ed0a70facae2acac40ac3baee19c9a81382576b3f"
+    },
+    {
+      "name": "only_mux_fact_width1_still_substitutes",
+      "mux": 1,
+      "pmux": 0,
+      "eq_widths": [
+        1
+      ],
+      "substituted_bits": 8,
+      "expected_b": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "status": "PASS",
+      "source_sha256": "8fbfa4747fa71ffab0855937d57a49f3e100ed41bea4a0dc037e373d6d6ac956",
+      "flow_sha256": "834e426b2e5d63aa5b9f759ae57000c9b90d13587c9765ad1d5607c9915594b6",
+      "exit_code": 0,
+      "timed_out": false,
+      "before": {
+        "by_type": {
+          "$eq": 1,
+          "$mux": 1
+        },
+        "eq_widths": [
+          1
+        ],
+        "mux_b": [
+          [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        ]
+      },
+      "after": {
+        "by_type": {
+          "$eq": 1,
+          "$mux": 1
+        },
+        "eq_widths": [
+          1
+        ],
+        "mux_b": [
+          [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+          ]
+        ]
+      },
+      "frontend_shape_pass": true,
+      "substitution_count_pass": true,
+      "no_factor_or_tree_preparation_logged": true,
+      "expected_constant_data_pass": true,
+      "sat_status": "PASS",
+      "log_sha256": "4cb4237f55bda1173dc09f4820d95678318b3209995cd1b69878799fc6099274"
+    },
+    {
+      "name": "only_mux_fact_width8_still_substitutes",
+      "mux": 1,
+      "pmux": 0,
+      "eq_widths": [
+        8
+      ],
+      "substituted_bits": 8,
+      "expected_b": [
+        "0",
+        "1",
+        "1",
+        "0",
+        "1",
+        "0",
+        "0",
+        "1"
+      ],
+      "status": "PASS",
+      "source_sha256": "15c3d4d543090d00eb1e2c76808811f99ef9f6fa5db4aca988da7aebef42f67f",
+      "flow_sha256": "bb6aa760a1a8600639af076ca0f9abfb07b56315ba9552cc86d817b4aff78880",
+      "exit_code": 0,
+      "timed_out": false,
+      "before": {
+        "by_type": {
+          "$eq": 1,
+          "$mux": 1
+        },
+        "eq_widths": [
+          8
+        ],
+        "mux_b": [
+          [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        ]
+      },
+      "after": {
+        "by_type": {
+          "$eq": 1,
+          "$mux": 1
+        },
+        "eq_widths": [
+          8
+        ],
+        "mux_b": [
+          [
+            "0",
+            "1",
+            "1",
+            "0",
+            "1",
+            "0",
+            "0",
+            "1"
+          ]
+        ]
+      },
+      "frontend_shape_pass": true,
+      "substitution_count_pass": true,
+      "no_factor_or_tree_preparation_logged": true,
+      "expected_constant_data_pass": true,
+      "sat_status": "PASS",
+      "log_sha256": "bb241f8f966652c3f5a6d7d090bc3c740a49df668cf2277ae6e82c18e393f155"
+    },
+    {
+      "name": "only_mux_fact_width3_still_substitutes",
+      "mux": 1,
+      "pmux": 0,
+      "eq_widths": [
+        3
+      ],
+      "substituted_bits": 8,
+      "expected_b": [
+        "1",
+        "0",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "1"
+      ],
+      "status": "PASS",
+      "source_sha256": "e05905015bb684a565bc564487fd3df029037caa0861e55262065a2b108c3228",
+      "flow_sha256": "83cd1c7242201a5a35f82aee86e020f28965362e8e1c1b108dce9b1a51d71ba0",
+      "exit_code": 0,
+      "timed_out": false,
+      "before": {
+        "by_type": {
+          "$eq": 1,
+          "$mux": 1
+        },
+        "eq_widths": [
+          3
+        ],
+        "mux_b": [
+          [
+            2,
+            3,
+            2,
+            3,
+            4,
+            2,
+            3,
+            4
+          ]
+        ]
+      },
+      "after": {
+        "by_type": {
+          "$eq": 1,
+          "$mux": 1
+        },
+        "eq_widths": [
+          3
+        ],
+        "mux_b": [
+          [
+            "1",
+            "0",
+            "1",
+            "0",
+            "1",
+            "1",
+            "0",
+            "1"
+          ]
+        ]
+      },
+      "frontend_shape_pass": true,
+      "substitution_count_pass": true,
+      "no_factor_or_tree_preparation_logged": true,
+      "expected_constant_data_pass": true,
+      "sat_status": "PASS",
+      "log_sha256": "97173c682b85468b46a882ad70bb9e503ad4c111c4e419f4b5fd8716ceaad341"
+    }
+  ],
+  "candidate": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current-v22-memo/yosys",
+  "candidate_sha256": "e771a00c55b61f9380037a14af16c183bc6180ca0805d23db7ad5266d87125ac",
+  "candidate_version": "Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)",
+  "negative_control": {
+    "status": "EXPECTED_COUNTEREXAMPLE",
+    "source_sha256": "f06a9f8513107f01d65594f574927f5e31090a6163a3cc440515a8cdede63111",
+    "wrong_source_sha256": "863de9cbe14d2c21f662e3ada5c95e251d23bd67ad412343bc29514f0e74792f",
+    "flow_sha256": "616e5e04f2710d5409a160fe8eae93e69245e296e68eeac2e2c2407dcf9f8269",
+    "exit_code": 1,
+    "timed_out": false,
+    "log_sha256": "40f0eee23a7f877319d71a1c0c21299a2aa99362687e792fb5fd76f8218a9df9"
+  }
+}

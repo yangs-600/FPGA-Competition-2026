@@ -1,0 +1,11 @@
+{
+  "status": "V23_DELIVERY_INSTALLED",
+  "kit": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/portable-proof-v23-20261027/FPGA-topic2-v23-EQY-Linux-0.69-20261027",
+  "archive_sha256": "35a75c08bb0f32b6727203341c8162b4a0ce7c8b5a5b787d114bd2b8e7f9ba46",
+  "durable_preflight_receipt": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/portable-proof-v23-20261027/FPGA-topic2-v23-EQY-Linux-0.69-20261027/results/replay-20261027-100734-107916/portable-replay-receipt.json",
+  "durable_preflight_sha256": "acc7a331fdb9354ee63b930a1d086dc4f78e3c64794480ef6caa7ee626b98ff5",
+  "relocated_full_proof_sha256": "38944d8f41c81c2e3041f04933e4705684cc49b67f675f77cfb560c45c012a2f",
+  "stable_manifest_sha256": "916a9982da3de36848f2e9f0278afd492e8f4762b034aedc66a930abab71bfd8",
+  "github_pushed": false,
+  "overall_submission_acceptance": false
+}

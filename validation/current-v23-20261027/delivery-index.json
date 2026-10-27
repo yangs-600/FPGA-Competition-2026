@@ -1,0 +1,50 @@
+{
+  "status": "V23_DEPLOYED_AREA_AND_FORMAL_VERIFIED_STRICT_EFFICIENCY_NOT_PASSED",
+  "active_revision": "v23-add-orientation",
+  "overall_submission_acceptance": false,
+  "github_pushed": false,
+  "git_head": "2791affaa80b9bdf637cae5f60511056aec6d8ab",
+  "stable_manifest_sha256": "916a9982da3de36848f2e9f0278afd492e8f4762b034aedc66a930abab71bfd8",
+  "source_sha256": "62b6e92eef39be4b80e91ab2d0effd8a9550aa9083ce55f5844796956857db49",
+  "mean_logic_reduction_percent": 20.66103306959685,
+  "crossbar": {
+    "v21": 285,
+    "v23": 263,
+    "baseline": 408
+  },
+  "regression_cases": 82,
+  "linux_formal_positive": 18,
+  "actual_windows_formal_positive": 18,
+  "backup": "/home/ubuntu/FPGA/FPGA-Competition-2026/.git/before-current-v23-add-orientation-20261027T100152-276244",
+  "strict_efficiency_note": "test1 first +235.293%; all six +39.301%; five additional +1.166%. Baseline-only small-case eligibility and exclusion of first are disclosed interpretations, not official approval.",
+  "files": {
+    "windows": {
+      "path": "D:\\杨森宇\\FPGA\\FPGA-topic2-v23-Windows-0.69-20261027.zip",
+      "sha256": "3296c2c1d0fb4715db9290ea4c872770cc3a3c3c5bc55d54f32f58729e5f1706",
+      "bytes": 86156195
+    },
+    "proof_kit": {
+      "path": "D:/杨森宇/FPGA/FPGA-topic2-v23-EQY-Linux-0.69-20261027.tar.gz",
+      "sha256": "35a75c08bb0f32b6727203341c8162b4a0ce7c8b5a5b787d114bd2b8e7f9ba46",
+      "bytes": 43472415
+    },
+    "source_evidence_overlay": {
+      "path": "D:/杨森宇/FPGA/FPGA-topic2-v23-review-20261027.zip",
+      "sha256": "f20c6494de3900d98bf7816f9f70bf0d4448c6c799a2ac8ea578af1f3485e29c",
+      "bytes": 352975
+    },
+    "portable_relocation": {
+      "path": "D:/杨森宇/FPGA/FPGA-topic2-v23-EQY-relocation-evidence-20261027.tar.gz",
+      "sha256": "971d682a3377a920a89960e785ba8b9326a98a4557df08d5b6f3a93ee6bffe5c",
+      "bytes": 4141207
+    }
+  },
+  "unchanged_frozen_v21": true,
+  "clean_full_compile_this_round": false,
+  "team_division": "Deferred at user request",
+  "temporary_transfer_cleanup": {
+    "round": 4,
+    "pid": 234578,
+    "receipt": "FPGA-topic2-v23-service-cleanup-20261027.json"
+  }
+}

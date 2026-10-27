@@ -1,0 +1,34 @@
+{
+  "status": "CURRENT_V21_NINE_CASE_ACCEPTANCE_PASS",
+  "scope": "Current nine unchanged cases and recorded Windows environment under disclosed FAQ warmup/review interpretation; not a guarantee of future cases or onsite acceptance",
+  "stable_manifest": "/home/ubuntu/FPGA/FPGA-Competition-2026/clean-v11/toolchains/yosys-0.69/competition-current/manifest.json",
+  "stable_manifest_sha256": "a860f38c7ea502e7850257b626b357e6f7f2b435f7079aa02442c643b1e14dae",
+  "source_sha256": "0231002c240a080e7eebe1734b9dab49f2db78159c38a68769c885599eb43678",
+  "linux_deployed_formal": {
+    "status": "PASS",
+    "positive": 18,
+    "sha256": "129d36f907819a12a3b1930ef5e3965394f2b81a606650fab9a0714ab974279d"
+  },
+  "actual_windows_formal": {
+    "status": "PASS",
+    "positive": 18,
+    "sha256": "f7fd0e3aab8d5f45b5458802e5957ab847018cf6bdc5f924a488852886038dde"
+  },
+  "windows_raw_report_sha256": "a2d12cfe60767e44bbbb8d025bea74a1b14f7811e6e45d4ff085874b8a31f7c8",
+  "windows_independent_audit_sha256": "4a3a25a1d0d5a2d5dbf9367e816e228c0b2e4f50e33223a72ba3e1d0caee3374",
+  "mean_logic_reduction_percent": 20.06190452929184,
+  "all_nine_logic_nonincrease": true,
+  "all_nine_selected_wall_and_memory_5pct_pass": true,
+  "all_measured_candidate_absolute_limits_pass": true,
+  "unfiltered_first_pair_preserved": true,
+  "deployment_record": "/home/ubuntu/FPGA/FPGA-Competition-2026/validation/current-v21-fast-singlemap-20261027T065256-122318/deployment-record.json",
+  "deployment_record_sha256": "87d2445427e7b392bf3f9b382ed6d83a60b2615c5fb7f8028c5dcd772690df1a",
+  "backup": "/home/ubuntu/FPGA/FPGA-Competition-2026/.git/before-current-v21-fast-singlemap-20261027T065256-122318",
+  "activation": "PASS_V21_CURRENT_TOOLS",
+  "current_git_head": "2791affaa80b9bdf637cae5f60511056aec6d8ab",
+  "origin_main": "2791affaa80b9bdf637cae5f60511056aec6d8ab",
+  "github_pushed": false,
+  "local_revisions_committed": false,
+  "incremental_build": true,
+  "clean_build_reproduction": "NOT_RUN_THIS_ROUND"
+}

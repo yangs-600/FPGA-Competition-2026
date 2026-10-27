@@ -8,3 +8,19 @@ __pycache__/
 /clean-v11/local-build-v14*
 /clean-v11/scale-1000-*
 /clean-v11/postabc-*
+
+# Current nine-case generated runs; source and compact evidence remain tracked.
+/clean-v11/current-*-proof-20261027/
+/clean-v11/current-formal-*/
+/clean-v11/windows-current-formal-*/
+/clean-v11/windows-current-evidence-*/
+/clean-v11/operator-boundaries-*/
+/clean-v11/trial-*-20261027/
+/clean-v11/diagnosis-20261027/
+/clean-v11/local-build-current*
+/clean-v11/scored-logic-run-*.log
+
+# Generated local evidence; kept on disk and in delivery archives.
+/clean-v11/add-orientation-*/
+/clean-v11/invalid-mixed-sign-fixture-*/
+/clean-v11/validation-v24-private-*/
