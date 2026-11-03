@@ -1,0 +1,21 @@
+{
+  "utc": "2026-11-03T07:34:55.340561+00:00",
+  "command": [
+    "D:\\fpga-v14-work\\msys64\\ucrt64\\bin\\g++.exe",
+    "-fno-declone-ctor-dtor",
+    "-Os",
+    "-Wall",
+    "-Wextra",
+    "-Werror=unused-variable",
+    "-Werror=unused-parameter",
+    "-Werror=unused-function",
+    "-municode",
+    "-Wl,--export-all-symbols",
+    "@D:\\fpga-win-native-20261103\\v26-incremental-build\\build\\candidate\\yosys.rsp",
+    "-o",
+    "D:\\fpga-win-native-20261103\\v26-incremental-build\\build\\candidate\\yosys.exe",
+    "-Wl,--out-implib,D:\\fpga-win-native-20261103\\v26-incremental-build\\build\\candidate\\yosys.exe.a",
+    "-Wl,--major-image-version,0,--minor-image-version,0"
+  ],
+  "cwd": "D:\\fpga-win-native-20261103\\v26-incremental-build\\build\\candidate"
+}

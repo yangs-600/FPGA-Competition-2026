@@ -1,0 +1,4 @@
+read_verilog "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/negative/bad.v"
+synth_intel -family cycloneiv -top test2 -run begin:map_cells
+select test2
+write_rtlil -selected "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/negative/bad.il"

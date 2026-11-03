@@ -1,0 +1,11 @@
+plugin -i /home/yangsenyu/fpga-windows-native-v25-20261103/FPGA-topic2-v23-EQY-Linux-0.69-20261027/runtime/eqy/bin/../share/yosys/plugins/eqy_combine.so
+read_rtlil /home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/pmux_case05_nested/candidate/proof/gold.il
+uniquify
+hierarchy
+design -stash gold
+read_rtlil /home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/pmux_case05_nested/candidate/proof/gate_recoded.il
+uniquify
+hierarchy
+design -stash gate
+eqy_combine -gold_ids /home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/pmux_case05_nested/candidate/proof/gold.ids -gate_ids /home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/pmux_case05_nested/candidate/proof/gate_recoded.ids
+write_rtlil /home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/pmux_case05_nested/candidate/proof/combined.il

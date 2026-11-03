@@ -1,0 +1,37 @@
+--- approved-v24.cc
++++ approved-v25.cc
+@@ -97,6 +97,25 @@
+         const dict<SigBit, std::pair<SigSpec, int>> &decode)
+ {
+     if (module->get_bool_attribute(ID::keep)) return 0;
++    // Every rewrite below consumes at least two distinct, selected, non-kept
++    // producers of the same supported type. With no such type pair, even
++    // the first rewrite is impossible, so skip the port/bit index entirely.
++    // Iterate cells directly to avoid constructing a selected_cells vector.
++    unsigned int seen_operator_types = 0;
++    bool has_operator_pair = false;
++    for (auto cell : module->cells()) {
++        unsigned int type_mask = 0;
++        if (cell->type == ID($xor)) type_mask = 1u << 0;
++        else if (cell->type == ID($and)) type_mask = 1u << 1;
++        else if (cell->type == ID($or)) type_mask = 1u << 2;
++        else if (cell->type == ID($add)) type_mask = 1u << 3;
++        else if (cell->type == ID($sub)) type_mask = 1u << 4;
++        else continue;
++        if (cell->get_bool_attribute(ID::keep) || !module->selected(cell)) continue;
++        if (seen_operator_types & type_mask) { has_operator_pair = true; break; }
++        seen_operator_types |= type_mask;
++    }
++    if (!has_operator_pair) return 0;
+     CellTypes types;
+     types.setup();
+     dict<SigBit, pool<Cell *>> drivers, users;
+@@ -416,7 +435,7 @@
+     }
+     void execute(std::vector<std::string> args, RTLIL::Design *design) override {
+         extra_args(args, 1, design);
+-        log_header(design, "Executing PMUX_COMPETITION_OPT v24.\n");
++        log_header(design, "Executing PMUX_COMPETITION_OPT v25.\n");
+         int replaced = 0;
+         for (auto module : design->selected_modules()) {
+             if (module->get_bool_attribute(ID::blackbox)) continue;

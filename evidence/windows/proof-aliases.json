@@ -1,0 +1,18 @@
+{
+  "schema": "windows-logical-proof-aliases-v1",
+  "purpose": "Byte-identical logical names required by the frozen Linux proof helper; no Windows execution",
+  "aliases": {
+    "baseline/yosys.exe": {
+      "physical": "yosys-baseline.exe",
+      "sha256": "45c15841f039d998483142bf7ce726fc020bfa88651c4a6fc62eadf4313fa3d9"
+    },
+    "candidate/yosys.exe": {
+      "physical": "yosys-candidate.exe",
+      "sha256": "d96ae554c9ee2f68d76cfdaf34e36f288cba022ccad10b22b79d8370ce6c9d29"
+    },
+    "candidate/share/intel/competition_abc_v11.abc": {
+      "physical": "share/intel/competition_abc_v11.abc",
+      "sha256": "0ad315064a884d94676997ac6094cf7e679c7b0d3ff2d09431530b76d208c86e"
+    }
+  }
+}

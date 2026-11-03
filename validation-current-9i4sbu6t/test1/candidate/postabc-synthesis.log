@@ -1,0 +1,1065 @@
+
+-- Executing script file `D:\fpga-win-native-20261103\trial-shared-runtime-fresh\validation-current-9i4sbu6t\test1\candidate\postabc.ys' --
+
+1. Executing Verilog-2005 frontend: D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v
+Parsing Verilog input from `D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v' to AST representation.
+Generating RTLIL representation for module `\test1'.
+Successfully finished Verilog frontend.
+Warning: Feature 'synth_intel' is experimental.
+
+2. Executing SYNTH_INTEL pass.
+
+2.1. Executing Verilog-2005 frontend: D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/intel/cycloneiv/cells_sim.v
+Parsing SystemVerilog input from `D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/intel/cycloneiv/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\VCC'.
+Generating RTLIL representation for module `\GND'.
+Generating RTLIL representation for module `\cycloneiv_io_ibuf'.
+Generating RTLIL representation for module `\cycloneiv_io_obuf'.
+Generating RTLIL representation for module `\cycloneiv_lcell_comb'.
+Generating RTLIL representation for module `\dffeas'.
+Generating RTLIL representation for module `\cycloneiv_pll'.
+Successfully finished Verilog frontend.
+
+2.2. Executing Verilog-2005 frontend: D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/intel/common/m9k_bb.v
+Parsing SystemVerilog input from `D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/intel/common/m9k_bb.v' to AST representation.
+Generating RTLIL representation for module `\altsyncram'.
+Successfully finished Verilog frontend.
+
+2.3. Executing Verilog-2005 frontend: D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/intel/common/altpll_bb.v
+Parsing SystemVerilog input from `D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/intel/common/altpll_bb.v' to AST representation.
+Successfully finished Verilog frontend.
+
+2.4. Executing HIERARCHY pass (managing design hierarchy).
+
+2.4.1. Analyzing design hierarchy..
+Top module:  \test1
+
+2.4.2. Analyzing design hierarchy..
+Top module:  \test1
+Removed 0 unused modules.
+
+2.5. Executing PROC pass (convert processes to netlists).
+
+2.5.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 3 switch rules as full_case in process $proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1 in module test1.
+Removed a total of 0 dead cases.
+
+2.5.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 3 assignments to connections.
+
+2.5.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:67$4'.
+  Set init value: \state = 4'0000
+  Set init value: \por6 = 1'0
+  Set init value: \inter0007 = 1'1
+
+2.5.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \reset in `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+
+2.5.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~2 debug messages>
+
+2.5.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:67$4'.
+Creating decoders for process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+     1/21: $0\state[3:0]
+     2/21: $0\inter0007[0:0]
+     3/21: $0\q7[11:0]
+     4/21: $0\q6[11:0]
+     5/21: $0\q5[11:0]
+     6/21: $0\q4[11:0]
+     7/21: $0\q3[11:0]
+     8/21: $0\q2[11:0]
+     9/21: $0\q1[11:0]
+    10/21: $0\q0[11:0]
+    11/21: $0\i7[11:0]
+    12/21: $0\i6[11:0]
+    13/21: $0\i5[11:0]
+    14/21: $0\i4[11:0]
+    15/21: $0\i3[11:0]
+    16/21: $0\i2[11:0]
+    17/21: $0\i1[11:0]
+    18/21: $0\i0[11:0]
+    19/21: $0\inter0009[11:0]
+    20/21: $0\inter0008[11:0]
+    21/21: $0\por6[0:0]
+
+2.5.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.5.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\test1.\state' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $adff cell `$procdff$370' with positive edge clock and positive level reset.
+Creating register for signal `\test1.\por6' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$375' with positive edge clock.
+Creating register for signal `\test1.\inter0007' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $adff cell `$procdff$378' with positive edge clock and positive level reset.
+Creating register for signal `\test1.\inter0008' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$383' with positive edge clock.
+Creating register for signal `\test1.\inter0009' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$388' with positive edge clock.
+Creating register for signal `\test1.\i0' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$393' with positive edge clock.
+Creating register for signal `\test1.\i1' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$398' with positive edge clock.
+Creating register for signal `\test1.\i2' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$403' with positive edge clock.
+Creating register for signal `\test1.\i3' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$408' with positive edge clock.
+Creating register for signal `\test1.\i4' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$413' with positive edge clock.
+Creating register for signal `\test1.\i5' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$418' with positive edge clock.
+Creating register for signal `\test1.\i6' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$423' with positive edge clock.
+Creating register for signal `\test1.\i7' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$428' with positive edge clock.
+Creating register for signal `\test1.\q0' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$433' with positive edge clock.
+Creating register for signal `\test1.\q1' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$438' with positive edge clock.
+Creating register for signal `\test1.\q2' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$443' with positive edge clock.
+Creating register for signal `\test1.\q3' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$448' with positive edge clock.
+Creating register for signal `\test1.\q4' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$453' with positive edge clock.
+Creating register for signal `\test1.\q5' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$458' with positive edge clock.
+Creating register for signal `\test1.\q6' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$463' with positive edge clock.
+Creating register for signal `\test1.\q7' using process `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+  created $dff cell `$procdff$468' with positive edge clock.
+
+2.5.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.5.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:67$4'.
+Found and cleaned up 2 empty switches in `\test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+Removing empty process `test1.$proc$D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v:79$1'.
+Cleaned up 2 empty switches.
+
+2.5.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+<suppressed ~44 debug messages>
+
+2.6. Executing PMUX_COMPETITION_OPT v26.
+PMUX_OPERATOR_FACTOR groups=0
+PMUX_PACKED_TREE bit_mux_nodes=290 mux_cells=7
+PMUX_SHARED_TREE cells=5 mux_nodes=290 estimate_before=330 order=0231
+PMUX_TREE_ESTIMATE cells=5 nodes=290 before=330
+PMUX_COMPETITION_OPT substituted_bits=0
+
+2.7. Executing CHECK pass (checking for obvious problems).
+Checking module test1...
+Found and reported 0 problems.
+
+2.8. Executing FLATTEN pass (flatten design).
+
+2.9. Executing TRIBUF pass.
+
+2.10. Executing DEMINOUT pass (demote inout ports to input or output).
+
+2.11. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+Removed 80 unused cells and 158 unused wires.
+<suppressed ~81 debug messages>
+
+2.13. Executing CHECK pass (checking for obvious problems).
+Checking module test1...
+Found and reported 0 problems.
+
+2.14. Executing OPT pass (performing simple optimizations).
+
+2.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 80 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Computing hashes of 65 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+<suppressed ~45 debug messages>
+Removed a total of 15 cells.
+
+2.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \test1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~100 debug messages>
+
+2.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \test1.
+Performed a total of 0 changes.
+
+2.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 65 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+2.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+Removed 0 unused cells and 15 unused wires.
+<suppressed ~1 debug messages>
+
+2.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \test1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~100 debug messages>
+
+2.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \test1.
+Performed a total of 0 changes.
+
+2.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 65 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+2.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+
+2.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.14.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.15. Executing FSM pass (extract and optimize FSM).
+
+2.15.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+2.15.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.15.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.15.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+
+2.15.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.15.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.15.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.15.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.16. Executing OPT pass (performing simple optimizations).
+
+2.16.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.16.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 65 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+2.16.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \test1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~100 debug messages>
+
+2.16.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \test1.
+Performed a total of 0 changes.
+
+2.16.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 65 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+2.16.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$433 ($dff) from module test1 (D = \Q0 [15:4], Q = \q0).
+Adding EN signal on $procdff$428 ($dff) from module test1 (D = \I7 [15:4], Q = \i7).
+Adding EN signal on $procdff$468 ($dff) from module test1 (D = \Q7 [15:4], Q = \q7).
+Adding EN signal on $procdff$423 ($dff) from module test1 (D = \I6 [15:4], Q = \i6).
+Adding EN signal on $procdff$453 ($dff) from module test1 (D = \Q4 [15:4], Q = \q4).
+Adding EN signal on $procdff$418 ($dff) from module test1 (D = \I5 [15:4], Q = \i5).
+Adding EN signal on $procdff$413 ($dff) from module test1 (D = \I4 [15:4], Q = \i4).
+Adding EN signal on $procdff$463 ($dff) from module test1 (D = \Q6 [15:4], Q = \q6).
+Adding EN signal on $procdff$408 ($dff) from module test1 (D = \I3 [15:4], Q = \i3).
+Adding EN signal on $procdff$448 ($dff) from module test1 (D = \Q3 [15:4], Q = \q3).
+Adding EN signal on $procdff$403 ($dff) from module test1 (D = \I2 [15:4], Q = \i2).
+Adding EN signal on $procdff$398 ($dff) from module test1 (D = \I1 [15:4], Q = \i1).
+Adding EN signal on $procdff$393 ($dff) from module test1 (D = \I0 [15:4], Q = \i0).
+Adding EN signal on $procdff$443 ($dff) from module test1 (D = \Q2 [15:4], Q = \q2).
+Adding EN signal on $procdff$388 ($dff) from module test1 (D = $0\inter0009[11:0], Q = \inter0009).
+Adding EN signal on $procdff$383 ($dff) from module test1 (D = $0\inter0008[11:0], Q = \inter0008).
+Adding EN signal on $procdff$438 ($dff) from module test1 (D = \Q1 [15:4], Q = \q1).
+Adding EN signal on $procdff$375 ($dff) from module test1 (D = $0\por6[0:0], Q = \por6).
+Adding SRST signal on $auto$ff.cc:337:slice$843 ($dffe) from module test1 (D = $auto$pmux_competition_opt.cc:659:execute$469, Q = \por6, rval = 1'0).
+Adding EN signal on $procdff$458 ($dff) from module test1 (D = \Q5 [15:4], Q = \q5).
+
+2.16.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+Removed 35 unused cells and 35 unused wires.
+<suppressed ~36 debug messages>
+
+2.16.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.16.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.16.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \test1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~28 debug messages>
+
+2.16.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \test1.
+Performed a total of 0 changes.
+
+2.16.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 63 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Computing hashes of 48 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Computing hashes of 33 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+<suppressed ~90 debug messages>
+Removed a total of 30 cells.
+
+2.16.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.16.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+Removed 0 unused cells and 30 unused wires.
+<suppressed ~1 debug messages>
+
+2.16.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.16.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.16.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \test1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~28 debug messages>
+
+2.16.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \test1.
+Performed a total of 0 changes.
+
+2.16.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 33 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+2.16.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.16.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+
+2.16.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.16.23. Finished fast OPT passes. (There is nothing left to do.)
+
+2.17. Executing WREDUCE pass (reducing word size of cells).
+Removed top 3 bits (of 4) from mux cell test1.$procmux$25 ($mux).
+Removed top 3 bits (of 4) from wire test1.$procmux$25_Y.
+
+2.18. Executing PEEPOPT pass (run peephole optimizers).
+
+2.19. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.20. Executing TECHMAP pass (map to technology primitives).
+
+2.20.1. Executing Verilog-2005 frontend: D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/cmp2lut.v
+Parsing Verilog input from `D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+2.20.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~6 debug messages>
+
+2.21. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.22. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+
+2.23. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module test1:
+  created 0 $alu and 0 $macc cells.
+
+2.24. Executing OPT pass (performing simple optimizations).
+
+2.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 33 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+2.24.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \test1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~28 debug messages>
+
+2.24.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \test1.
+Performed a total of 0 changes.
+
+2.24.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 33 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+2.24.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.24.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+
+2.24.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.24.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.25. Executing MEMORY pass.
+
+2.25.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.25.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.25.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+2.25.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.25.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+2.25.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+
+2.25.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.25.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.25.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+
+2.25.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.26. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+
+2.27. Executing MEMORY_BRAM pass (mapping $mem cells to block memories).
+
+2.28. Executing TECHMAP pass (map to technology primitives).
+
+2.28.1. Executing Verilog-2005 frontend: D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/intel/common/brams_map_m9k.v
+Parsing Verilog input from `D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/intel/common/brams_map_m9k.v' to AST representation.
+Generating RTLIL representation for module `$__M9K_ALTSYNCRAM_SINGLEPORT_FULL'.
+Successfully finished Verilog frontend.
+
+2.28.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+2.29. Executing OPT pass (performing simple optimizations).
+
+2.29.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+<suppressed ~3 debug messages>
+
+2.29.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 31 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+2.29.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$370 ($adff) from module test1 (D = $0\state[3:0] [3], Q = \state [3]).
+
+2.29.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+2.29.5. Rerunning OPT passes. (Removed registers in this run.)
+
+2.29.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.29.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 35 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+2.29.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.29.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+
+2.29.10. Finished fast OPT passes.
+
+2.30. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+2.31. Executing OPT pass (performing simple optimizations).
+
+2.31.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.31.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 35 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+2.31.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \test1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~17 debug messages>
+
+2.31.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \test1.
+    Consolidated identical input bits for $mux cell $auto$pmux_competition_opt.cc:673:execute$760:
+      Old ports: A={ 4'0000 \valid \i0 [11] \Q0 [15] \i0 [10] \Q0 [14] \i0 [9] \Q0 [13] \i0 [8] \Q0 [12] \i0 [7] \Q0 [11] \i0 [6] \Q0 [10] \i0 [5] \Q0 [9] \i0 [4] \Q0 [8] \i0 [3] \Q0 [7] \i0 [2] \Q0 [6] \i0 [1] \Q0 [5] \i0 [0] \Q0 [4] \q6 [11] \q2 [11] \q4 [11] \q0 [11] \i6 [11] \i2 [11] \i4 [11] \I0 [15] \q6 [10] \q2 [10] \q4 [10] \q0 [10] \i6 [10] \i2 [10] \i4 [10] \I0 [14] \q6 [9] \q2 [9] \q4 [9] \q0 [9] \i6 [9] \i2 [9] \i4 [9] \I0 [13] \q6 [8] \q2 [8] \q4 [8] \q0 [8] \i6 [8] \i2 [8] \i4 [8] \I0 [12] \q6 [7] \q2 [7] \q4 [7] \q0 [7] \i6 [7] \i2 [7] \i4 [7] \I0 [11] \q6 [6] \q2 [6] \q4 [6] \q0 [6] \i6 [6] \i2 [6] \i4 [6] \I0 [10] \q6 [5] \q2 [5] \q4 [5] \q0 [5] \i6 [5] \i2 [5] \i4 [5] \I0 [9] \q6 [4] \q2 [4] \q4 [4] \q0 [4] \i6 [4] \i2 [4] \i4 [4] \I0 [8] \q6 [3] \q2 [3] \q4 [3] \q0 [3] \i6 [3] \i2 [3] \i4 [3] \I0 [7] \q6 [2] \q2 [2] \q4 [2] \q0 [2] \i6 [2] \i2 [2] \i4 [2] \I0 [6] \q6 [1] \q2 [1] \q4 [1] \q0 [1] \i6 [1] \i2 [1] \i4 [1] \I0 [5] \q6 [0] \q2 [0] \q4 [0] \q0 [0] \i6 [0] \i2 [0] \i4 [0] \I0 [4] 1'1 }, B={ 5'00111 \i1 [11] \q1 [11] \i1 [10] \q1 [10] \i1 [9] \q1 [9] \i1 [8] \q1 [8] \i1 [7] \q1 [7] \i1 [6] \q1 [6] \i1 [5] \q1 [5] \i1 [4] \q1 [4] \i1 [3] \q1 [3] \i1 [2] \q1 [2] \i1 [1] \q1 [1] \i1 [0] \q1 [0] \q7 [11] \q3 [11] \q5 [11] \q1 [11] \i7 [11] \i3 [11] \i5 [11] \i1 [11] \q7 [10] \q3 [10] \q5 [10] \q1 [10] \i7 [10] \i3 [10] \i5 [10] \i1 [10] \q7 [9] \q3 [9] \q5 [9] \q1 [9] \i7 [9] \i3 [9] \i5 [9] \i1 [9] \q7 [8] \q3 [8] \q5 [8] \q1 [8] \i7 [8] \i3 [8] \i5 [8] \i1 [8] \q7 [7] \q3 [7] \q5 [7] \q1 [7] \i7 [7] \i3 [7] \i5 [7] \i1 [7] \q7 [6] \q3 [6] \q5 [6] \q1 [6] \i7 [6] \i3 [6] \i5 [6] \i1 [6] \q7 [5] \q3 [5] \q5 [5] \q1 [5] \i7 [5] \i3 [5] \i5 [5] \i1 [5] \q7 [4] \q3 [4] \q5 [4] \q1 [4] \i7 [4] \i3 [4] \i5 [4] \i1 [4] \q7 [3] \q3 [3] \q5 [3] \q1 [3] \i7 [3] \i3 [3] \i5 [3] \i1 [3] \q7 [2] \q3 [2] \q5 [2] \q1 [2] \i7 [2] \i3 [2] \i5 [2] \i1 [2] \q7 [1] \q3 [1] \q5 [1] \q1 [1] \i7 [1] \i3 [1] \i5 [1] \i1 [1] \q7 [0] \q3 [0] \q5 [0] \q1 [0] \i7 [0] \i3 [0] \i5 [0] \i1 [0] 1'0 }, Y={ $auto$pmux_competition_opt.cc:659:execute$752 $auto$pmux_competition_opt.cc:659:execute$747 $auto$pmux_competition_opt.cc:659:execute$743 $auto$pmux_competition_opt.cc:659:execute$742 $auto$pmux_competition_opt.cc:659:execute$738 $auto$pmux_competition_opt.cc:659:execute$733 $auto$pmux_competition_opt.cc:659:execute$730 $auto$pmux_competition_opt.cc:659:execute$726 $auto$pmux_competition_opt.cc:659:execute$723 $auto$pmux_competition_opt.cc:659:execute$719 $auto$pmux_competition_opt.cc:659:execute$716 $auto$pmux_competition_opt.cc:659:execute$712 $auto$pmux_competition_opt.cc:659:execute$709 $auto$pmux_competition_opt.cc:659:execute$705 $auto$pmux_competition_opt.cc:659:execute$702 $auto$pmux_competition_opt.cc:659:execute$698 $auto$pmux_competition_opt.cc:659:execute$695 $auto$pmux_competition_opt.cc:659:execute$691 $auto$pmux_competition_opt.cc:659:execute$688 $auto$pmux_competition_opt.cc:659:execute$684 $auto$pmux_competition_opt.cc:659:execute$681 $auto$pmux_competition_opt.cc:659:execute$677 $auto$pmux_competition_opt.cc:659:execute$674 $auto$pmux_competition_opt.cc:659:execute$670 $auto$pmux_competition_opt.cc:659:execute$667 $auto$pmux_competition_opt.cc:659:execute$663 $auto$pmux_competition_opt.cc:659:execute$660 $auto$pmux_competition_opt.cc:659:execute$656 $auto$pmux_competition_opt.cc:659:execute$653 $auto$pmux_competition_opt.cc:659:execute$649 $auto$pmux_competition_opt.cc:659:execute$648 $auto$pmux_competition_opt.cc:659:execute$646 $auto$pmux_competition_opt.cc:659:execute$645 $auto$pmux_competition_opt.cc:659:execute$642 $auto$pmux_competition_opt.cc:659:execute$641 $auto$pmux_competition_opt.cc:659:execute$639 $auto$pmux_competition_opt.cc:659:execute$638 $auto$pmux_competition_opt.cc:659:execute$634 $auto$pmux_competition_opt.cc:659:execute$633 $auto$pmux_competition_opt.cc:659:execute$631 $auto$pmux_competition_opt.cc:659:execute$630 $auto$pmux_competition_opt.cc:659:execute$627 $auto$pmux_competition_opt.cc:659:execute$626 $auto$pmux_competition_opt.cc:659:execute$624 $auto$pmux_competition_opt.cc:659:execute$623 $auto$pmux_competition_opt.cc:659:execute$619 $auto$pmux_competition_opt.cc:659:execute$618 $auto$pmux_competition_opt.cc:659:execute$616 $auto$pmux_competition_opt.cc:659:execute$615 $auto$pmux_competition_opt.cc:659:execute$612 $auto$pmux_competition_opt.cc:659:execute$611 $auto$pmux_competition_opt.cc:659:execute$609 $auto$pmux_competition_opt.cc:659:execute$608 $auto$pmux_competition_opt.cc:659:execute$604 $auto$pmux_competition_opt.cc:659:execute$603 $auto$pmux_competition_opt.cc:659:execute$601 $auto$pmux_competition_opt.cc:659:execute$600 $auto$pmux_competition_opt.cc:659:execute$597 $auto$pmux_competition_opt.cc:659:execute$596 $auto$pmux_competition_opt.cc:659:execute$594 $auto$pmux_competition_opt.cc:659:execute$593 $auto$pmux_competition_opt.cc:659:execute$589 $auto$pmux_competition_opt.cc:659:execute$588 $auto$pmux_competition_opt.cc:659:execute$586 $auto$pmux_competition_opt.cc:659:execute$585 $auto$pmux_competition_opt.cc:659:execute$582 $auto$pmux_competition_opt.cc:659:execute$581 $auto$pmux_competition_opt.cc:659:execute$579 $auto$pmux_competition_opt.cc:659:execute$578 $auto$pmux_competition_opt.cc:659:execute$574 $auto$pmux_competition_opt.cc:659:execute$573 $auto$pmux_competition_opt.cc:659:execute$571 $auto$pmux_competition_opt.cc:659:execute$570 $auto$pmux_competition_opt.cc:659:execute$567 $auto$pmux_competition_opt.cc:659:execute$566 $auto$pmux_competition_opt.cc:659:execute$564 $auto$pmux_competition_opt.cc:659:execute$563 $auto$pmux_competition_opt.cc:659:execute$559 $auto$pmux_competition_opt.cc:659:execute$558 $auto$pmux_competition_opt.cc:659:execute$556 $auto$pmux_competition_opt.cc:659:execute$555 $auto$pmux_competition_opt.cc:659:execute$552 $auto$pmux_competition_opt.cc:659:execute$551 $auto$pmux_competition_opt.cc:659:execute$549 $auto$pmux_competition_opt.cc:659:execute$548 $auto$pmux_competition_opt.cc:659:execute$544 $auto$pmux_competition_opt.cc:659:execute$543 $auto$pmux_competition_opt.cc:659:execute$541 $auto$pmux_competition_opt.cc:659:execute$540 $auto$pmux_competition_opt.cc:659:execute$537 $auto$pmux_competition_opt.cc:659:execute$536 $auto$pmux_competition_opt.cc:659:execute$534 $auto$pmux_competition_opt.cc:659:execute$533 $auto$pmux_competition_opt.cc:659:execute$529 $auto$pmux_competition_opt.cc:659:execute$528 $auto$pmux_competition_opt.cc:659:execute$526 $auto$pmux_competition_opt.cc:659:execute$525 $auto$pmux_competition_opt.cc:659:execute$522 $auto$pmux_competition_opt.cc:659:execute$521 $auto$pmux_competition_opt.cc:659:execute$519 $auto$pmux_competition_opt.cc:659:execute$518 $auto$pmux_competition_opt.cc:659:execute$514 $auto$pmux_competition_opt.cc:659:execute$513 $auto$pmux_competition_opt.cc:659:execute$511 $auto$pmux_competition_opt.cc:659:execute$510 $auto$pmux_competition_opt.cc:659:execute$507 $auto$pmux_competition_opt.cc:659:execute$506 $auto$pmux_competition_opt.cc:659:execute$504 $auto$pmux_competition_opt.cc:659:execute$503 $auto$pmux_competition_opt.cc:659:execute$499 $auto$pmux_competition_opt.cc:659:execute$498 $auto$pmux_competition_opt.cc:659:execute$496 $auto$pmux_competition_opt.cc:659:execute$495 $auto$pmux_competition_opt.cc:659:execute$492 $auto$pmux_competition_opt.cc:659:execute$491 $auto$pmux_competition_opt.cc:659:execute$489 $auto$pmux_competition_opt.cc:659:execute$488 $auto$pmux_competition_opt.cc:659:execute$484 $auto$pmux_competition_opt.cc:659:execute$483 $auto$pmux_competition_opt.cc:659:execute$481 $auto$pmux_competition_opt.cc:659:execute$480 $auto$pmux_competition_opt.cc:659:execute$477 $auto$pmux_competition_opt.cc:659:execute$476 $auto$pmux_competition_opt.cc:659:execute$474 $auto$pmux_competition_opt.cc:659:execute$473 $auto$pmux_competition_opt.cc:659:execute$469 }
+      New ports: A={ 1'0 \valid \i0 [11] \Q0 [15] \i0 [10] \Q0 [14] \i0 [9] \Q0 [13] \i0 [8] \Q0 [12] \i0 [7] \Q0 [11] \i0 [6] \Q0 [10] \i0 [5] \Q0 [9] \i0 [4] \Q0 [8] \i0 [3] \Q0 [7] \i0 [2] \Q0 [6] \i0 [1] \Q0 [5] \i0 [0] \Q0 [4] \q6 [11] \q2 [11] \q4 [11] \q0 [11] \i6 [11] \i2 [11] \i4 [11] \I0 [15] \q6 [10] \q2 [10] \q4 [10] \q0 [10] \i6 [10] \i2 [10] \i4 [10] \I0 [14] \q6 [9] \q2 [9] \q4 [9] \q0 [9] \i6 [9] \i2 [9] \i4 [9] \I0 [13] \q6 [8] \q2 [8] \q4 [8] \q0 [8] \i6 [8] \i2 [8] \i4 [8] \I0 [12] \q6 [7] \q2 [7] \q4 [7] \q0 [7] \i6 [7] \i2 [7] \i4 [7] \I0 [11] \q6 [6] \q2 [6] \q4 [6] \q0 [6] \i6 [6] \i2 [6] \i4 [6] \I0 [10] \q6 [5] \q2 [5] \q4 [5] \q0 [5] \i6 [5] \i2 [5] \i4 [5] \I0 [9] \q6 [4] \q2 [4] \q4 [4] \q0 [4] \i6 [4] \i2 [4] \i4 [4] \I0 [8] \q6 [3] \q2 [3] \q4 [3] \q0 [3] \i6 [3] \i2 [3] \i4 [3] \I0 [7] \q6 [2] \q2 [2] \q4 [2] \q0 [2] \i6 [2] \i2 [2] \i4 [2] \I0 [6] \q6 [1] \q2 [1] \q4 [1] \q0 [1] \i6 [1] \i2 [1] \i4 [1] \I0 [5] \q6 [0] \q2 [0] \q4 [0] \q0 [0] \i6 [0] \i2 [0] \i4 [0] \I0 [4] 1'1 }, B={ 2'11 \i1 [11] \q1 [11] \i1 [10] \q1 [10] \i1 [9] \q1 [9] \i1 [8] \q1 [8] \i1 [7] \q1 [7] \i1 [6] \q1 [6] \i1 [5] \q1 [5] \i1 [4] \q1 [4] \i1 [3] \q1 [3] \i1 [2] \q1 [2] \i1 [1] \q1 [1] \i1 [0] \q1 [0] \q7 [11] \q3 [11] \q5 [11] \q1 [11] \i7 [11] \i3 [11] \i5 [11] \i1 [11] \q7 [10] \q3 [10] \q5 [10] \q1 [10] \i7 [10] \i3 [10] \i5 [10] \i1 [10] \q7 [9] \q3 [9] \q5 [9] \q1 [9] \i7 [9] \i3 [9] \i5 [9] \i1 [9] \q7 [8] \q3 [8] \q5 [8] \q1 [8] \i7 [8] \i3 [8] \i5 [8] \i1 [8] \q7 [7] \q3 [7] \q5 [7] \q1 [7] \i7 [7] \i3 [7] \i5 [7] \i1 [7] \q7 [6] \q3 [6] \q5 [6] \q1 [6] \i7 [6] \i3 [6] \i5 [6] \i1 [6] \q7 [5] \q3 [5] \q5 [5] \q1 [5] \i7 [5] \i3 [5] \i5 [5] \i1 [5] \q7 [4] \q3 [4] \q5 [4] \q1 [4] \i7 [4] \i3 [4] \i5 [4] \i1 [4] \q7 [3] \q3 [3] \q5 [3] \q1 [3] \i7 [3] \i3 [3] \i5 [3] \i1 [3] \q7 [2] \q3 [2] \q5 [2] \q1 [2] \i7 [2] \i3 [2] \i5 [2] \i1 [2] \q7 [1] \q3 [1] \q5 [1] \q1 [1] \i7 [1] \i3 [1] \i5 [1] \i1 [1] \q7 [0] \q3 [0] \q5 [0] \q1 [0] \i7 [0] \i3 [0] \i5 [0] \i1 [0] 1'0 }, Y={ $auto$pmux_competition_opt.cc:659:execute$742 $auto$pmux_competition_opt.cc:659:execute$738 $auto$pmux_competition_opt.cc:659:execute$733 $auto$pmux_competition_opt.cc:659:execute$730 $auto$pmux_competition_opt.cc:659:execute$726 $auto$pmux_competition_opt.cc:659:execute$723 $auto$pmux_competition_opt.cc:659:execute$719 $auto$pmux_competition_opt.cc:659:execute$716 $auto$pmux_competition_opt.cc:659:execute$712 $auto$pmux_competition_opt.cc:659:execute$709 $auto$pmux_competition_opt.cc:659:execute$705 $auto$pmux_competition_opt.cc:659:execute$702 $auto$pmux_competition_opt.cc:659:execute$698 $auto$pmux_competition_opt.cc:659:execute$695 $auto$pmux_competition_opt.cc:659:execute$691 $auto$pmux_competition_opt.cc:659:execute$688 $auto$pmux_competition_opt.cc:659:execute$684 $auto$pmux_competition_opt.cc:659:execute$681 $auto$pmux_competition_opt.cc:659:execute$677 $auto$pmux_competition_opt.cc:659:execute$674 $auto$pmux_competition_opt.cc:659:execute$670 $auto$pmux_competition_opt.cc:659:execute$667 $auto$pmux_competition_opt.cc:659:execute$663 $auto$pmux_competition_opt.cc:659:execute$660 $auto$pmux_competition_opt.cc:659:execute$656 $auto$pmux_competition_opt.cc:659:execute$653 $auto$pmux_competition_opt.cc:659:execute$649 $auto$pmux_competition_opt.cc:659:execute$648 $auto$pmux_competition_opt.cc:659:execute$646 $auto$pmux_competition_opt.cc:659:execute$645 $auto$pmux_competition_opt.cc:659:execute$642 $auto$pmux_competition_opt.cc:659:execute$641 $auto$pmux_competition_opt.cc:659:execute$639 $auto$pmux_competition_opt.cc:659:execute$638 $auto$pmux_competition_opt.cc:659:execute$634 $auto$pmux_competition_opt.cc:659:execute$633 $auto$pmux_competition_opt.cc:659:execute$631 $auto$pmux_competition_opt.cc:659:execute$630 $auto$pmux_competition_opt.cc:659:execute$627 $auto$pmux_competition_opt.cc:659:execute$626 $auto$pmux_competition_opt.cc:659:execute$624 $auto$pmux_competition_opt.cc:659:execute$623 $auto$pmux_competition_opt.cc:659:execute$619 $auto$pmux_competition_opt.cc:659:execute$618 $auto$pmux_competition_opt.cc:659:execute$616 $auto$pmux_competition_opt.cc:659:execute$615 $auto$pmux_competition_opt.cc:659:execute$612 $auto$pmux_competition_opt.cc:659:execute$611 $auto$pmux_competition_opt.cc:659:execute$609 $auto$pmux_competition_opt.cc:659:execute$608 $auto$pmux_competition_opt.cc:659:execute$604 $auto$pmux_competition_opt.cc:659:execute$603 $auto$pmux_competition_opt.cc:659:execute$601 $auto$pmux_competition_opt.cc:659:execute$600 $auto$pmux_competition_opt.cc:659:execute$597 $auto$pmux_competition_opt.cc:659:execute$596 $auto$pmux_competition_opt.cc:659:execute$594 $auto$pmux_competition_opt.cc:659:execute$593 $auto$pmux_competition_opt.cc:659:execute$589 $auto$pmux_competition_opt.cc:659:execute$588 $auto$pmux_competition_opt.cc:659:execute$586 $auto$pmux_competition_opt.cc:659:execute$585 $auto$pmux_competition_opt.cc:659:execute$582 $auto$pmux_competition_opt.cc:659:execute$581 $auto$pmux_competition_opt.cc:659:execute$579 $auto$pmux_competition_opt.cc:659:execute$578 $auto$pmux_competition_opt.cc:659:execute$574 $auto$pmux_competition_opt.cc:659:execute$573 $auto$pmux_competition_opt.cc:659:execute$571 $auto$pmux_competition_opt.cc:659:execute$570 $auto$pmux_competition_opt.cc:659:execute$567 $auto$pmux_competition_opt.cc:659:execute$566 $auto$pmux_competition_opt.cc:659:execute$564 $auto$pmux_competition_opt.cc:659:execute$563 $auto$pmux_competition_opt.cc:659:execute$559 $auto$pmux_competition_opt.cc:659:execute$558 $auto$pmux_competition_opt.cc:659:execute$556 $auto$pmux_competition_opt.cc:659:execute$555 $auto$pmux_competition_opt.cc:659:execute$552 $auto$pmux_competition_opt.cc:659:execute$551 $auto$pmux_competition_opt.cc:659:execute$549 $auto$pmux_competition_opt.cc:659:execute$548 $auto$pmux_competition_opt.cc:659:execute$544 $auto$pmux_competition_opt.cc:659:execute$543 $auto$pmux_competition_opt.cc:659:execute$541 $auto$pmux_competition_opt.cc:659:execute$540 $auto$pmux_competition_opt.cc:659:execute$537 $auto$pmux_competition_opt.cc:659:execute$536 $auto$pmux_competition_opt.cc:659:execute$534 $auto$pmux_competition_opt.cc:659:execute$533 $auto$pmux_competition_opt.cc:659:execute$529 $auto$pmux_competition_opt.cc:659:execute$528 $auto$pmux_competition_opt.cc:659:execute$526 $auto$pmux_competition_opt.cc:659:execute$525 $auto$pmux_competition_opt.cc:659:execute$522 $auto$pmux_competition_opt.cc:659:execute$521 $auto$pmux_competition_opt.cc:659:execute$519 $auto$pmux_competition_opt.cc:659:execute$518 $auto$pmux_competition_opt.cc:659:execute$514 $auto$pmux_competition_opt.cc:659:execute$513 $auto$pmux_competition_opt.cc:659:execute$511 $auto$pmux_competition_opt.cc:659:execute$510 $auto$pmux_competition_opt.cc:659:execute$507 $auto$pmux_competition_opt.cc:659:execute$506 $auto$pmux_competition_opt.cc:659:execute$504 $auto$pmux_competition_opt.cc:659:execute$503 $auto$pmux_competition_opt.cc:659:execute$499 $auto$pmux_competition_opt.cc:659:execute$498 $auto$pmux_competition_opt.cc:659:execute$496 $auto$pmux_competition_opt.cc:659:execute$495 $auto$pmux_competition_opt.cc:659:execute$492 $auto$pmux_competition_opt.cc:659:execute$491 $auto$pmux_competition_opt.cc:659:execute$489 $auto$pmux_competition_opt.cc:659:execute$488 $auto$pmux_competition_opt.cc:659:execute$484 $auto$pmux_competition_opt.cc:659:execute$483 $auto$pmux_competition_opt.cc:659:execute$481 $auto$pmux_competition_opt.cc:659:execute$480 $auto$pmux_competition_opt.cc:659:execute$477 $auto$pmux_competition_opt.cc:659:execute$476 $auto$pmux_competition_opt.cc:659:execute$474 $auto$pmux_competition_opt.cc:659:execute$473 $auto$pmux_competition_opt.cc:659:execute$469 }
+      New connections: { $auto$pmux_competition_opt.cc:659:execute$752 $auto$pmux_competition_opt.cc:659:execute$747 $auto$pmux_competition_opt.cc:659:execute$743 } = { 2'00 $auto$pmux_competition_opt.cc:659:execute$742 }
+  Optimizing cells in module \test1.
+    Consolidated identical input bits for $mux cell $auto$pmux_competition_opt.cc:673:execute$763:
+      Old ports: A={ $auto$pmux_competition_opt.cc:659:execute$743 $auto$pmux_competition_opt.cc:659:execute$752 $auto$pmux_competition_opt.cc:659:execute$747 $auto$pmux_competition_opt.cc:659:execute$742 $auto$pmux_competition_opt.cc:659:execute$738 $auto$pmux_competition_opt.cc:659:execute$733 $auto$pmux_competition_opt.cc:659:execute$730 $auto$pmux_competition_opt.cc:659:execute$726 $auto$pmux_competition_opt.cc:659:execute$723 $auto$pmux_competition_opt.cc:659:execute$719 $auto$pmux_competition_opt.cc:659:execute$716 $auto$pmux_competition_opt.cc:659:execute$712 $auto$pmux_competition_opt.cc:659:execute$709 $auto$pmux_competition_opt.cc:659:execute$705 $auto$pmux_competition_opt.cc:659:execute$702 $auto$pmux_competition_opt.cc:659:execute$698 $auto$pmux_competition_opt.cc:659:execute$695 $auto$pmux_competition_opt.cc:659:execute$691 $auto$pmux_competition_opt.cc:659:execute$688 $auto$pmux_competition_opt.cc:659:execute$684 $auto$pmux_competition_opt.cc:659:execute$681 $auto$pmux_competition_opt.cc:659:execute$677 $auto$pmux_competition_opt.cc:659:execute$674 $auto$pmux_competition_opt.cc:659:execute$670 $auto$pmux_competition_opt.cc:659:execute$667 $auto$pmux_competition_opt.cc:659:execute$663 $auto$pmux_competition_opt.cc:659:execute$660 $auto$pmux_competition_opt.cc:659:execute$656 $auto$pmux_competition_opt.cc:659:execute$653 $auto$pmux_competition_opt.cc:659:execute$648 $auto$pmux_competition_opt.cc:659:execute$645 $auto$pmux_competition_opt.cc:659:execute$641 $auto$pmux_competition_opt.cc:659:execute$638 $auto$pmux_competition_opt.cc:659:execute$633 $auto$pmux_competition_opt.cc:659:execute$630 $auto$pmux_competition_opt.cc:659:execute$626 $auto$pmux_competition_opt.cc:659:execute$623 $auto$pmux_competition_opt.cc:659:execute$618 $auto$pmux_competition_opt.cc:659:execute$615 $auto$pmux_competition_opt.cc:659:execute$611 $auto$pmux_competition_opt.cc:659:execute$608 $auto$pmux_competition_opt.cc:659:execute$603 $auto$pmux_competition_opt.cc:659:execute$600 $auto$pmux_competition_opt.cc:659:execute$596 $auto$pmux_competition_opt.cc:659:execute$593 $auto$pmux_competition_opt.cc:659:execute$588 $auto$pmux_competition_opt.cc:659:execute$585 $auto$pmux_competition_opt.cc:659:execute$581 $auto$pmux_competition_opt.cc:659:execute$578 $auto$pmux_competition_opt.cc:659:execute$573 $auto$pmux_competition_opt.cc:659:execute$570 $auto$pmux_competition_opt.cc:659:execute$566 $auto$pmux_competition_opt.cc:659:execute$563 $auto$pmux_competition_opt.cc:659:execute$558 $auto$pmux_competition_opt.cc:659:execute$555 $auto$pmux_competition_opt.cc:659:execute$551 $auto$pmux_competition_opt.cc:659:execute$548 $auto$pmux_competition_opt.cc:659:execute$543 $auto$pmux_competition_opt.cc:659:execute$540 $auto$pmux_competition_opt.cc:659:execute$536 $auto$pmux_competition_opt.cc:659:execute$533 $auto$pmux_competition_opt.cc:659:execute$528 $auto$pmux_competition_opt.cc:659:execute$525 $auto$pmux_competition_opt.cc:659:execute$521 $auto$pmux_competition_opt.cc:659:execute$518 $auto$pmux_competition_opt.cc:659:execute$513 $auto$pmux_competition_opt.cc:659:execute$510 $auto$pmux_competition_opt.cc:659:execute$506 $auto$pmux_competition_opt.cc:659:execute$503 $auto$pmux_competition_opt.cc:659:execute$498 $auto$pmux_competition_opt.cc:659:execute$495 $auto$pmux_competition_opt.cc:659:execute$491 $auto$pmux_competition_opt.cc:659:execute$488 $auto$pmux_competition_opt.cc:659:execute$483 $auto$pmux_competition_opt.cc:659:execute$480 $auto$pmux_competition_opt.cc:659:execute$476 $auto$pmux_competition_opt.cc:659:execute$473 $auto$pmux_competition_opt.cc:659:execute$469 }, B={ $auto$pmux_competition_opt.cc:659:execute$469 2'10 $auto$pmux_competition_opt.cc:659:execute$743 1'1 $auto$pmux_competition_opt.cc:659:execute$639 $auto$pmux_competition_opt.cc:659:execute$646 $auto$pmux_competition_opt.cc:659:execute$624 $auto$pmux_competition_opt.cc:659:execute$631 $auto$pmux_competition_opt.cc:659:execute$609 $auto$pmux_competition_opt.cc:659:execute$616 $auto$pmux_competition_opt.cc:659:execute$594 $auto$pmux_competition_opt.cc:659:execute$601 $auto$pmux_competition_opt.cc:659:execute$579 $auto$pmux_competition_opt.cc:659:execute$586 $auto$pmux_competition_opt.cc:659:execute$564 $auto$pmux_competition_opt.cc:659:execute$571 $auto$pmux_competition_opt.cc:659:execute$549 $auto$pmux_competition_opt.cc:659:execute$556 $auto$pmux_competition_opt.cc:659:execute$534 $auto$pmux_competition_opt.cc:659:execute$541 $auto$pmux_competition_opt.cc:659:execute$519 $auto$pmux_competition_opt.cc:659:execute$526 $auto$pmux_competition_opt.cc:659:execute$504 $auto$pmux_competition_opt.cc:659:execute$511 $auto$pmux_competition_opt.cc:659:execute$489 $auto$pmux_competition_opt.cc:659:execute$496 $auto$pmux_competition_opt.cc:659:execute$474 $auto$pmux_competition_opt.cc:659:execute$481 $auto$pmux_competition_opt.cc:659:execute$649 $auto$pmux_competition_opt.cc:659:execute$646 $auto$pmux_competition_opt.cc:659:execute$642 $auto$pmux_competition_opt.cc:659:execute$639 $auto$pmux_competition_opt.cc:659:execute$634 $auto$pmux_competition_opt.cc:659:execute$631 $auto$pmux_competition_opt.cc:659:execute$627 $auto$pmux_competition_opt.cc:659:execute$624 $auto$pmux_competition_opt.cc:659:execute$619 $auto$pmux_competition_opt.cc:659:execute$616 $auto$pmux_competition_opt.cc:659:execute$612 $auto$pmux_competition_opt.cc:659:execute$609 $auto$pmux_competition_opt.cc:659:execute$604 $auto$pmux_competition_opt.cc:659:execute$601 $auto$pmux_competition_opt.cc:659:execute$597 $auto$pmux_competition_opt.cc:659:execute$594 $auto$pmux_competition_opt.cc:659:execute$589 $auto$pmux_competition_opt.cc:659:execute$586 $auto$pmux_competition_opt.cc:659:execute$582 $auto$pmux_competition_opt.cc:659:execute$579 $auto$pmux_competition_opt.cc:659:execute$574 $auto$pmux_competition_opt.cc:659:execute$571 $auto$pmux_competition_opt.cc:659:execute$567 $auto$pmux_competition_opt.cc:659:execute$564 $auto$pmux_competition_opt.cc:659:execute$559 $auto$pmux_competition_opt.cc:659:execute$556 $auto$pmux_competition_opt.cc:659:execute$552 $auto$pmux_competition_opt.cc:659:execute$549 $auto$pmux_competition_opt.cc:659:execute$544 $auto$pmux_competition_opt.cc:659:execute$541 $auto$pmux_competition_opt.cc:659:execute$537 $auto$pmux_competition_opt.cc:659:execute$534 $auto$pmux_competition_opt.cc:659:execute$529 $auto$pmux_competition_opt.cc:659:execute$526 $auto$pmux_competition_opt.cc:659:execute$522 $auto$pmux_competition_opt.cc:659:execute$519 $auto$pmux_competition_opt.cc:659:execute$514 $auto$pmux_competition_opt.cc:659:execute$511 $auto$pmux_competition_opt.cc:659:execute$507 $auto$pmux_competition_opt.cc:659:execute$504 $auto$pmux_competition_opt.cc:659:execute$499 $auto$pmux_competition_opt.cc:659:execute$496 $auto$pmux_competition_opt.cc:659:execute$492 $auto$pmux_competition_opt.cc:659:execute$489 $auto$pmux_competition_opt.cc:659:execute$484 $auto$pmux_competition_opt.cc:659:execute$481 $auto$pmux_competition_opt.cc:659:execute$477 $auto$pmux_competition_opt.cc:659:execute$474 1'0 }, Y={ $auto$pmux_competition_opt.cc:659:execute$756 $auto$pmux_competition_opt.cc:659:execute$753 $auto$pmux_competition_opt.cc:659:execute$748 $auto$pmux_competition_opt.cc:659:execute$744 $auto$pmux_competition_opt.cc:659:execute$739 $auto$pmux_competition_opt.cc:659:execute$734 $auto$pmux_competition_opt.cc:659:execute$731 $auto$pmux_competition_opt.cc:659:execute$727 $auto$pmux_competition_opt.cc:659:execute$724 $auto$pmux_competition_opt.cc:659:execute$720 $auto$pmux_competition_opt.cc:659:execute$717 $auto$pmux_competition_opt.cc:659:execute$713 $auto$pmux_competition_opt.cc:659:execute$710 $auto$pmux_competition_opt.cc:659:execute$706 $auto$pmux_competition_opt.cc:659:execute$703 $auto$pmux_competition_opt.cc:659:execute$699 $auto$pmux_competition_opt.cc:659:execute$696 $auto$pmux_competition_opt.cc:659:execute$692 $auto$pmux_competition_opt.cc:659:execute$689 $auto$pmux_competition_opt.cc:659:execute$685 $auto$pmux_competition_opt.cc:659:execute$682 $auto$pmux_competition_opt.cc:659:execute$678 $auto$pmux_competition_opt.cc:659:execute$675 $auto$pmux_competition_opt.cc:659:execute$671 $auto$pmux_competition_opt.cc:659:execute$668 $auto$pmux_competition_opt.cc:659:execute$664 $auto$pmux_competition_opt.cc:659:execute$661 $auto$pmux_competition_opt.cc:659:execute$657 $auto$pmux_competition_opt.cc:659:execute$654 $auto$pmux_competition_opt.cc:659:execute$650 $auto$pmux_competition_opt.cc:659:execute$647 $auto$pmux_competition_opt.cc:659:execute$643 $auto$pmux_competition_opt.cc:659:execute$640 $auto$pmux_competition_opt.cc:659:execute$635 $auto$pmux_competition_opt.cc:659:execute$632 $auto$pmux_competition_opt.cc:659:execute$628 $auto$pmux_competition_opt.cc:659:execute$625 $auto$pmux_competition_opt.cc:659:execute$620 $auto$pmux_competition_opt.cc:659:execute$617 $auto$pmux_competition_opt.cc:659:execute$613 $auto$pmux_competition_opt.cc:659:execute$610 $auto$pmux_competition_opt.cc:659:execute$605 $auto$pmux_competition_opt.cc:659:execute$602 $auto$pmux_competition_opt.cc:659:execute$598 $auto$pmux_competition_opt.cc:659:execute$595 $auto$pmux_competition_opt.cc:659:execute$590 $auto$pmux_competition_opt.cc:659:execute$587 $auto$pmux_competition_opt.cc:659:execute$583 $auto$pmux_competition_opt.cc:659:execute$580 $auto$pmux_competition_opt.cc:659:execute$575 $auto$pmux_competition_opt.cc:659:execute$572 $auto$pmux_competition_opt.cc:659:execute$568 $auto$pmux_competition_opt.cc:659:execute$565 $auto$pmux_competition_opt.cc:659:execute$560 $auto$pmux_competition_opt.cc:659:execute$557 $auto$pmux_competition_opt.cc:659:execute$553 $auto$pmux_competition_opt.cc:659:execute$550 $auto$pmux_competition_opt.cc:659:execute$545 $auto$pmux_competition_opt.cc:659:execute$542 $auto$pmux_competition_opt.cc:659:execute$538 $auto$pmux_competition_opt.cc:659:execute$535 $auto$pmux_competition_opt.cc:659:execute$530 $auto$pmux_competition_opt.cc:659:execute$527 $auto$pmux_competition_opt.cc:659:execute$523 $auto$pmux_competition_opt.cc:659:execute$520 $auto$pmux_competition_opt.cc:659:execute$515 $auto$pmux_competition_opt.cc:659:execute$512 $auto$pmux_competition_opt.cc:659:execute$508 $auto$pmux_competition_opt.cc:659:execute$505 $auto$pmux_competition_opt.cc:659:execute$500 $auto$pmux_competition_opt.cc:659:execute$497 $auto$pmux_competition_opt.cc:659:execute$493 $auto$pmux_competition_opt.cc:659:execute$490 $auto$pmux_competition_opt.cc:659:execute$485 $auto$pmux_competition_opt.cc:659:execute$482 $auto$pmux_competition_opt.cc:659:execute$478 $auto$pmux_competition_opt.cc:659:execute$475 $auto$pmux_competition_opt.cc:659:execute$470 }
+      New ports: A={ $auto$pmux_competition_opt.cc:659:execute$742 1'0 $auto$pmux_competition_opt.cc:659:execute$738 $auto$pmux_competition_opt.cc:659:execute$733 $auto$pmux_competition_opt.cc:659:execute$730 $auto$pmux_competition_opt.cc:659:execute$726 $auto$pmux_competition_opt.cc:659:execute$723 $auto$pmux_competition_opt.cc:659:execute$719 $auto$pmux_competition_opt.cc:659:execute$716 $auto$pmux_competition_opt.cc:659:execute$712 $auto$pmux_competition_opt.cc:659:execute$709 $auto$pmux_competition_opt.cc:659:execute$705 $auto$pmux_competition_opt.cc:659:execute$702 $auto$pmux_competition_opt.cc:659:execute$698 $auto$pmux_competition_opt.cc:659:execute$695 $auto$pmux_competition_opt.cc:659:execute$691 $auto$pmux_competition_opt.cc:659:execute$688 $auto$pmux_competition_opt.cc:659:execute$684 $auto$pmux_competition_opt.cc:659:execute$681 $auto$pmux_competition_opt.cc:659:execute$677 $auto$pmux_competition_opt.cc:659:execute$674 $auto$pmux_competition_opt.cc:659:execute$670 $auto$pmux_competition_opt.cc:659:execute$667 $auto$pmux_competition_opt.cc:659:execute$663 $auto$pmux_competition_opt.cc:659:execute$660 $auto$pmux_competition_opt.cc:659:execute$656 $auto$pmux_competition_opt.cc:659:execute$653 $auto$pmux_competition_opt.cc:659:execute$648 $auto$pmux_competition_opt.cc:659:execute$645 $auto$pmux_competition_opt.cc:659:execute$641 $auto$pmux_competition_opt.cc:659:execute$638 $auto$pmux_competition_opt.cc:659:execute$633 $auto$pmux_competition_opt.cc:659:execute$630 $auto$pmux_competition_opt.cc:659:execute$626 $auto$pmux_competition_opt.cc:659:execute$623 $auto$pmux_competition_opt.cc:659:execute$618 $auto$pmux_competition_opt.cc:659:execute$615 $auto$pmux_competition_opt.cc:659:execute$611 $auto$pmux_competition_opt.cc:659:execute$608 $auto$pmux_competition_opt.cc:659:execute$603 $auto$pmux_competition_opt.cc:659:execute$600 $auto$pmux_competition_opt.cc:659:execute$596 $auto$pmux_competition_opt.cc:659:execute$593 $auto$pmux_competition_opt.cc:659:execute$588 $auto$pmux_competition_opt.cc:659:execute$585 $auto$pmux_competition_opt.cc:659:execute$581 $auto$pmux_competition_opt.cc:659:execute$578 $auto$pmux_competition_opt.cc:659:execute$573 $auto$pmux_competition_opt.cc:659:execute$570 $auto$pmux_competition_opt.cc:659:execute$566 $auto$pmux_competition_opt.cc:659:execute$563 $auto$pmux_competition_opt.cc:659:execute$558 $auto$pmux_competition_opt.cc:659:execute$555 $auto$pmux_competition_opt.cc:659:execute$551 $auto$pmux_competition_opt.cc:659:execute$548 $auto$pmux_competition_opt.cc:659:execute$543 $auto$pmux_competition_opt.cc:659:execute$540 $auto$pmux_competition_opt.cc:659:execute$536 $auto$pmux_competition_opt.cc:659:execute$533 $auto$pmux_competition_opt.cc:659:execute$528 $auto$pmux_competition_opt.cc:659:execute$525 $auto$pmux_competition_opt.cc:659:execute$521 $auto$pmux_competition_opt.cc:659:execute$518 $auto$pmux_competition_opt.cc:659:execute$513 $auto$pmux_competition_opt.cc:659:execute$510 $auto$pmux_competition_opt.cc:659:execute$506 $auto$pmux_competition_opt.cc:659:execute$503 $auto$pmux_competition_opt.cc:659:execute$498 $auto$pmux_competition_opt.cc:659:execute$495 $auto$pmux_competition_opt.cc:659:execute$491 $auto$pmux_competition_opt.cc:659:execute$488 $auto$pmux_competition_opt.cc:659:execute$483 $auto$pmux_competition_opt.cc:659:execute$480 $auto$pmux_competition_opt.cc:659:execute$476 $auto$pmux_competition_opt.cc:659:execute$473 $auto$pmux_competition_opt.cc:659:execute$469 }, B={ $auto$pmux_competition_opt.cc:659:execute$469 2'11 $auto$pmux_competition_opt.cc:659:execute$639 $auto$pmux_competition_opt.cc:659:execute$646 $auto$pmux_competition_opt.cc:659:execute$624 $auto$pmux_competition_opt.cc:659:execute$631 $auto$pmux_competition_opt.cc:659:execute$609 $auto$pmux_competition_opt.cc:659:execute$616 $auto$pmux_competition_opt.cc:659:execute$594 $auto$pmux_competition_opt.cc:659:execute$601 $auto$pmux_competition_opt.cc:659:execute$579 $auto$pmux_competition_opt.cc:659:execute$586 $auto$pmux_competition_opt.cc:659:execute$564 $auto$pmux_competition_opt.cc:659:execute$571 $auto$pmux_competition_opt.cc:659:execute$549 $auto$pmux_competition_opt.cc:659:execute$556 $auto$pmux_competition_opt.cc:659:execute$534 $auto$pmux_competition_opt.cc:659:execute$541 $auto$pmux_competition_opt.cc:659:execute$519 $auto$pmux_competition_opt.cc:659:execute$526 $auto$pmux_competition_opt.cc:659:execute$504 $auto$pmux_competition_opt.cc:659:execute$511 $auto$pmux_competition_opt.cc:659:execute$489 $auto$pmux_competition_opt.cc:659:execute$496 $auto$pmux_competition_opt.cc:659:execute$474 $auto$pmux_competition_opt.cc:659:execute$481 $auto$pmux_competition_opt.cc:659:execute$649 $auto$pmux_competition_opt.cc:659:execute$646 $auto$pmux_competition_opt.cc:659:execute$642 $auto$pmux_competition_opt.cc:659:execute$639 $auto$pmux_competition_opt.cc:659:execute$634 $auto$pmux_competition_opt.cc:659:execute$631 $auto$pmux_competition_opt.cc:659:execute$627 $auto$pmux_competition_opt.cc:659:execute$624 $auto$pmux_competition_opt.cc:659:execute$619 $auto$pmux_competition_opt.cc:659:execute$616 $auto$pmux_competition_opt.cc:659:execute$612 $auto$pmux_competition_opt.cc:659:execute$609 $auto$pmux_competition_opt.cc:659:execute$604 $auto$pmux_competition_opt.cc:659:execute$601 $auto$pmux_competition_opt.cc:659:execute$597 $auto$pmux_competition_opt.cc:659:execute$594 $auto$pmux_competition_opt.cc:659:execute$589 $auto$pmux_competition_opt.cc:659:execute$586 $auto$pmux_competition_opt.cc:659:execute$582 $auto$pmux_competition_opt.cc:659:execute$579 $auto$pmux_competition_opt.cc:659:execute$574 $auto$pmux_competition_opt.cc:659:execute$571 $auto$pmux_competition_opt.cc:659:execute$567 $auto$pmux_competition_opt.cc:659:execute$564 $auto$pmux_competition_opt.cc:659:execute$559 $auto$pmux_competition_opt.cc:659:execute$556 $auto$pmux_competition_opt.cc:659:execute$552 $auto$pmux_competition_opt.cc:659:execute$549 $auto$pmux_competition_opt.cc:659:execute$544 $auto$pmux_competition_opt.cc:659:execute$541 $auto$pmux_competition_opt.cc:659:execute$537 $auto$pmux_competition_opt.cc:659:execute$534 $auto$pmux_competition_opt.cc:659:execute$529 $auto$pmux_competition_opt.cc:659:execute$526 $auto$pmux_competition_opt.cc:659:execute$522 $auto$pmux_competition_opt.cc:659:execute$519 $auto$pmux_competition_opt.cc:659:execute$514 $auto$pmux_competition_opt.cc:659:execute$511 $auto$pmux_competition_opt.cc:659:execute$507 $auto$pmux_competition_opt.cc:659:execute$504 $auto$pmux_competition_opt.cc:659:execute$499 $auto$pmux_competition_opt.cc:659:execute$496 $auto$pmux_competition_opt.cc:659:execute$492 $auto$pmux_competition_opt.cc:659:execute$489 $auto$pmux_competition_opt.cc:659:execute$484 $auto$pmux_competition_opt.cc:659:execute$481 $auto$pmux_competition_opt.cc:659:execute$477 $auto$pmux_competition_opt.cc:659:execute$474 1'0 }, Y={ $auto$pmux_competition_opt.cc:659:execute$756 $auto$pmux_competition_opt.cc:659:execute$753 $auto$pmux_competition_opt.cc:659:execute$739 $auto$pmux_competition_opt.cc:659:execute$734 $auto$pmux_competition_opt.cc:659:execute$731 $auto$pmux_competition_opt.cc:659:execute$727 $auto$pmux_competition_opt.cc:659:execute$724 $auto$pmux_competition_opt.cc:659:execute$720 $auto$pmux_competition_opt.cc:659:execute$717 $auto$pmux_competition_opt.cc:659:execute$713 $auto$pmux_competition_opt.cc:659:execute$710 $auto$pmux_competition_opt.cc:659:execute$706 $auto$pmux_competition_opt.cc:659:execute$703 $auto$pmux_competition_opt.cc:659:execute$699 $auto$pmux_competition_opt.cc:659:execute$696 $auto$pmux_competition_opt.cc:659:execute$692 $auto$pmux_competition_opt.cc:659:execute$689 $auto$pmux_competition_opt.cc:659:execute$685 $auto$pmux_competition_opt.cc:659:execute$682 $auto$pmux_competition_opt.cc:659:execute$678 $auto$pmux_competition_opt.cc:659:execute$675 $auto$pmux_competition_opt.cc:659:execute$671 $auto$pmux_competition_opt.cc:659:execute$668 $auto$pmux_competition_opt.cc:659:execute$664 $auto$pmux_competition_opt.cc:659:execute$661 $auto$pmux_competition_opt.cc:659:execute$657 $auto$pmux_competition_opt.cc:659:execute$654 $auto$pmux_competition_opt.cc:659:execute$650 $auto$pmux_competition_opt.cc:659:execute$647 $auto$pmux_competition_opt.cc:659:execute$643 $auto$pmux_competition_opt.cc:659:execute$640 $auto$pmux_competition_opt.cc:659:execute$635 $auto$pmux_competition_opt.cc:659:execute$632 $auto$pmux_competition_opt.cc:659:execute$628 $auto$pmux_competition_opt.cc:659:execute$625 $auto$pmux_competition_opt.cc:659:execute$620 $auto$pmux_competition_opt.cc:659:execute$617 $auto$pmux_competition_opt.cc:659:execute$613 $auto$pmux_competition_opt.cc:659:execute$610 $auto$pmux_competition_opt.cc:659:execute$605 $auto$pmux_competition_opt.cc:659:execute$602 $auto$pmux_competition_opt.cc:659:execute$598 $auto$pmux_competition_opt.cc:659:execute$595 $auto$pmux_competition_opt.cc:659:execute$590 $auto$pmux_competition_opt.cc:659:execute$587 $auto$pmux_competition_opt.cc:659:execute$583 $auto$pmux_competition_opt.cc:659:execute$580 $auto$pmux_competition_opt.cc:659:execute$575 $auto$pmux_competition_opt.cc:659:execute$572 $auto$pmux_competition_opt.cc:659:execute$568 $auto$pmux_competition_opt.cc:659:execute$565 $auto$pmux_competition_opt.cc:659:execute$560 $auto$pmux_competition_opt.cc:659:execute$557 $auto$pmux_competition_opt.cc:659:execute$553 $auto$pmux_competition_opt.cc:659:execute$550 $auto$pmux_competition_opt.cc:659:execute$545 $auto$pmux_competition_opt.cc:659:execute$542 $auto$pmux_competition_opt.cc:659:execute$538 $auto$pmux_competition_opt.cc:659:execute$535 $auto$pmux_competition_opt.cc:659:execute$530 $auto$pmux_competition_opt.cc:659:execute$527 $auto$pmux_competition_opt.cc:659:execute$523 $auto$pmux_competition_opt.cc:659:execute$520 $auto$pmux_competition_opt.cc:659:execute$515 $auto$pmux_competition_opt.cc:659:execute$512 $auto$pmux_competition_opt.cc:659:execute$508 $auto$pmux_competition_opt.cc:659:execute$505 $auto$pmux_competition_opt.cc:659:execute$500 $auto$pmux_competition_opt.cc:659:execute$497 $auto$pmux_competition_opt.cc:659:execute$493 $auto$pmux_competition_opt.cc:659:execute$490 $auto$pmux_competition_opt.cc:659:execute$485 $auto$pmux_competition_opt.cc:659:execute$482 $auto$pmux_competition_opt.cc:659:execute$478 $auto$pmux_competition_opt.cc:659:execute$475 $auto$pmux_competition_opt.cc:659:execute$470 }
+      New connections: { $auto$pmux_competition_opt.cc:659:execute$748 $auto$pmux_competition_opt.cc:659:execute$744 } = { 1'0 $auto$pmux_competition_opt.cc:659:execute$742 }
+  Optimizing cells in module \test1.
+    Consolidated identical input bits for $mux cell $auto$pmux_competition_opt.cc:673:execute$764:
+      Old ports: A={ 1'x $auto$pmux_competition_opt.cc:659:execute$753 $auto$pmux_competition_opt.cc:659:execute$748 $auto$pmux_competition_opt.cc:659:execute$744 $auto$pmux_competition_opt.cc:659:execute$739 $auto$pmux_competition_opt.cc:659:execute$734 $auto$pmux_competition_opt.cc:659:execute$731 $auto$pmux_competition_opt.cc:659:execute$727 $auto$pmux_competition_opt.cc:659:execute$724 $auto$pmux_competition_opt.cc:659:execute$720 $auto$pmux_competition_opt.cc:659:execute$717 $auto$pmux_competition_opt.cc:659:execute$713 $auto$pmux_competition_opt.cc:659:execute$710 $auto$pmux_competition_opt.cc:659:execute$706 $auto$pmux_competition_opt.cc:659:execute$703 $auto$pmux_competition_opt.cc:659:execute$699 $auto$pmux_competition_opt.cc:659:execute$696 $auto$pmux_competition_opt.cc:659:execute$692 $auto$pmux_competition_opt.cc:659:execute$689 $auto$pmux_competition_opt.cc:659:execute$685 $auto$pmux_competition_opt.cc:659:execute$682 $auto$pmux_competition_opt.cc:659:execute$678 $auto$pmux_competition_opt.cc:659:execute$675 $auto$pmux_competition_opt.cc:659:execute$671 $auto$pmux_competition_opt.cc:659:execute$668 $auto$pmux_competition_opt.cc:659:execute$664 $auto$pmux_competition_opt.cc:659:execute$661 $auto$pmux_competition_opt.cc:659:execute$657 $auto$pmux_competition_opt.cc:659:execute$654 $auto$pmux_competition_opt.cc:659:execute$647 $auto$pmux_competition_opt.cc:659:execute$640 $auto$pmux_competition_opt.cc:659:execute$632 $auto$pmux_competition_opt.cc:659:execute$625 $auto$pmux_competition_opt.cc:659:execute$617 $auto$pmux_competition_opt.cc:659:execute$610 $auto$pmux_competition_opt.cc:659:execute$602 $auto$pmux_competition_opt.cc:659:execute$595 $auto$pmux_competition_opt.cc:659:execute$587 $auto$pmux_competition_opt.cc:659:execute$580 $auto$pmux_competition_opt.cc:659:execute$572 $auto$pmux_competition_opt.cc:659:execute$565 $auto$pmux_competition_opt.cc:659:execute$557 $auto$pmux_competition_opt.cc:659:execute$550 $auto$pmux_competition_opt.cc:659:execute$542 $auto$pmux_competition_opt.cc:659:execute$535 $auto$pmux_competition_opt.cc:659:execute$527 $auto$pmux_competition_opt.cc:659:execute$520 $auto$pmux_competition_opt.cc:659:execute$512 $auto$pmux_competition_opt.cc:659:execute$505 $auto$pmux_competition_opt.cc:659:execute$497 $auto$pmux_competition_opt.cc:659:execute$490 $auto$pmux_competition_opt.cc:659:execute$482 $auto$pmux_competition_opt.cc:659:execute$475 $auto$pmux_competition_opt.cc:659:execute$470 }, B={ $auto$pmux_competition_opt.cc:659:execute$756 2'x1 $auto$pmux_competition_opt.cc:659:execute$743 1'1 $auto$pmux_competition_opt.cc:659:execute$643 $auto$pmux_competition_opt.cc:659:execute$650 $auto$pmux_competition_opt.cc:659:execute$628 $auto$pmux_competition_opt.cc:659:execute$635 $auto$pmux_competition_opt.cc:659:execute$613 $auto$pmux_competition_opt.cc:659:execute$620 $auto$pmux_competition_opt.cc:659:execute$598 $auto$pmux_competition_opt.cc:659:execute$605 $auto$pmux_competition_opt.cc:659:execute$583 $auto$pmux_competition_opt.cc:659:execute$590 $auto$pmux_competition_opt.cc:659:execute$568 $auto$pmux_competition_opt.cc:659:execute$575 $auto$pmux_competition_opt.cc:659:execute$553 $auto$pmux_competition_opt.cc:659:execute$560 $auto$pmux_competition_opt.cc:659:execute$538 $auto$pmux_competition_opt.cc:659:execute$545 $auto$pmux_competition_opt.cc:659:execute$523 $auto$pmux_competition_opt.cc:659:execute$530 $auto$pmux_competition_opt.cc:659:execute$508 $auto$pmux_competition_opt.cc:659:execute$515 $auto$pmux_competition_opt.cc:659:execute$493 $auto$pmux_competition_opt.cc:659:execute$500 $auto$pmux_competition_opt.cc:659:execute$478 $auto$pmux_competition_opt.cc:659:execute$485 $auto$pmux_competition_opt.cc:659:execute$650 $auto$pmux_competition_opt.cc:659:execute$643 $auto$pmux_competition_opt.cc:659:execute$635 $auto$pmux_competition_opt.cc:659:execute$628 $auto$pmux_competition_opt.cc:659:execute$620 $auto$pmux_competition_opt.cc:659:execute$613 $auto$pmux_competition_opt.cc:659:execute$605 $auto$pmux_competition_opt.cc:659:execute$598 $auto$pmux_competition_opt.cc:659:execute$590 $auto$pmux_competition_opt.cc:659:execute$583 $auto$pmux_competition_opt.cc:659:execute$575 $auto$pmux_competition_opt.cc:659:execute$568 $auto$pmux_competition_opt.cc:659:execute$560 $auto$pmux_competition_opt.cc:659:execute$553 $auto$pmux_competition_opt.cc:659:execute$545 $auto$pmux_competition_opt.cc:659:execute$538 $auto$pmux_competition_opt.cc:659:execute$530 $auto$pmux_competition_opt.cc:659:execute$523 $auto$pmux_competition_opt.cc:659:execute$515 $auto$pmux_competition_opt.cc:659:execute$508 $auto$pmux_competition_opt.cc:659:execute$500 $auto$pmux_competition_opt.cc:659:execute$493 $auto$pmux_competition_opt.cc:659:execute$485 $auto$pmux_competition_opt.cc:659:execute$478 1'0 }, Y={ $auto$pmux_competition_opt.cc:659:execute$757 $auto$pmux_competition_opt.cc:659:execute$755 $auto$pmux_competition_opt.cc:659:execute$749 $auto$pmux_competition_opt.cc:659:execute$745 $auto$pmux_competition_opt.cc:659:execute$740 $auto$pmux_competition_opt.cc:659:execute$735 $auto$pmux_competition_opt.cc:659:execute$732 $auto$pmux_competition_opt.cc:659:execute$728 $auto$pmux_competition_opt.cc:659:execute$725 $auto$pmux_competition_opt.cc:659:execute$721 $auto$pmux_competition_opt.cc:659:execute$718 $auto$pmux_competition_opt.cc:659:execute$714 $auto$pmux_competition_opt.cc:659:execute$711 $auto$pmux_competition_opt.cc:659:execute$707 $auto$pmux_competition_opt.cc:659:execute$704 $auto$pmux_competition_opt.cc:659:execute$700 $auto$pmux_competition_opt.cc:659:execute$697 $auto$pmux_competition_opt.cc:659:execute$693 $auto$pmux_competition_opt.cc:659:execute$690 $auto$pmux_competition_opt.cc:659:execute$686 $auto$pmux_competition_opt.cc:659:execute$683 $auto$pmux_competition_opt.cc:659:execute$679 $auto$pmux_competition_opt.cc:659:execute$676 $auto$pmux_competition_opt.cc:659:execute$672 $auto$pmux_competition_opt.cc:659:execute$669 $auto$pmux_competition_opt.cc:659:execute$665 $auto$pmux_competition_opt.cc:659:execute$662 $auto$pmux_competition_opt.cc:659:execute$658 $auto$pmux_competition_opt.cc:659:execute$655 $auto$pmux_competition_opt.cc:659:execute$651 $auto$pmux_competition_opt.cc:659:execute$644 $auto$pmux_competition_opt.cc:659:execute$636 $auto$pmux_competition_opt.cc:659:execute$629 $auto$pmux_competition_opt.cc:659:execute$621 $auto$pmux_competition_opt.cc:659:execute$614 $auto$pmux_competition_opt.cc:659:execute$606 $auto$pmux_competition_opt.cc:659:execute$599 $auto$pmux_competition_opt.cc:659:execute$591 $auto$pmux_competition_opt.cc:659:execute$584 $auto$pmux_competition_opt.cc:659:execute$576 $auto$pmux_competition_opt.cc:659:execute$569 $auto$pmux_competition_opt.cc:659:execute$561 $auto$pmux_competition_opt.cc:659:execute$554 $auto$pmux_competition_opt.cc:659:execute$546 $auto$pmux_competition_opt.cc:659:execute$539 $auto$pmux_competition_opt.cc:659:execute$531 $auto$pmux_competition_opt.cc:659:execute$524 $auto$pmux_competition_opt.cc:659:execute$516 $auto$pmux_competition_opt.cc:659:execute$509 $auto$pmux_competition_opt.cc:659:execute$501 $auto$pmux_competition_opt.cc:659:execute$494 $auto$pmux_competition_opt.cc:659:execute$486 $auto$pmux_competition_opt.cc:659:execute$479 $auto$pmux_competition_opt.cc:659:execute$471 }
+      New ports: A={ 1'x $auto$pmux_competition_opt.cc:659:execute$753 1'0 $auto$pmux_competition_opt.cc:659:execute$739 $auto$pmux_competition_opt.cc:659:execute$734 $auto$pmux_competition_opt.cc:659:execute$731 $auto$pmux_competition_opt.cc:659:execute$727 $auto$pmux_competition_opt.cc:659:execute$724 $auto$pmux_competition_opt.cc:659:execute$720 $auto$pmux_competition_opt.cc:659:execute$717 $auto$pmux_competition_opt.cc:659:execute$713 $auto$pmux_competition_opt.cc:659:execute$710 $auto$pmux_competition_opt.cc:659:execute$706 $auto$pmux_competition_opt.cc:659:execute$703 $auto$pmux_competition_opt.cc:659:execute$699 $auto$pmux_competition_opt.cc:659:execute$696 $auto$pmux_competition_opt.cc:659:execute$692 $auto$pmux_competition_opt.cc:659:execute$689 $auto$pmux_competition_opt.cc:659:execute$685 $auto$pmux_competition_opt.cc:659:execute$682 $auto$pmux_competition_opt.cc:659:execute$678 $auto$pmux_competition_opt.cc:659:execute$675 $auto$pmux_competition_opt.cc:659:execute$671 $auto$pmux_competition_opt.cc:659:execute$668 $auto$pmux_competition_opt.cc:659:execute$664 $auto$pmux_competition_opt.cc:659:execute$661 $auto$pmux_competition_opt.cc:659:execute$657 $auto$pmux_competition_opt.cc:659:execute$654 $auto$pmux_competition_opt.cc:659:execute$647 $auto$pmux_competition_opt.cc:659:execute$640 $auto$pmux_competition_opt.cc:659:execute$632 $auto$pmux_competition_opt.cc:659:execute$625 $auto$pmux_competition_opt.cc:659:execute$617 $auto$pmux_competition_opt.cc:659:execute$610 $auto$pmux_competition_opt.cc:659:execute$602 $auto$pmux_competition_opt.cc:659:execute$595 $auto$pmux_competition_opt.cc:659:execute$587 $auto$pmux_competition_opt.cc:659:execute$580 $auto$pmux_competition_opt.cc:659:execute$572 $auto$pmux_competition_opt.cc:659:execute$565 $auto$pmux_competition_opt.cc:659:execute$557 $auto$pmux_competition_opt.cc:659:execute$550 $auto$pmux_competition_opt.cc:659:execute$542 $auto$pmux_competition_opt.cc:659:execute$535 $auto$pmux_competition_opt.cc:659:execute$527 $auto$pmux_competition_opt.cc:659:execute$520 $auto$pmux_competition_opt.cc:659:execute$512 $auto$pmux_competition_opt.cc:659:execute$505 $auto$pmux_competition_opt.cc:659:execute$497 $auto$pmux_competition_opt.cc:659:execute$490 $auto$pmux_competition_opt.cc:659:execute$482 $auto$pmux_competition_opt.cc:659:execute$475 $auto$pmux_competition_opt.cc:659:execute$470 }, B={ $auto$pmux_competition_opt.cc:659:execute$756 3'x11 $auto$pmux_competition_opt.cc:659:execute$643 $auto$pmux_competition_opt.cc:659:execute$650 $auto$pmux_competition_opt.cc:659:execute$628 $auto$pmux_competition_opt.cc:659:execute$635 $auto$pmux_competition_opt.cc:659:execute$613 $auto$pmux_competition_opt.cc:659:execute$620 $auto$pmux_competition_opt.cc:659:execute$598 $auto$pmux_competition_opt.cc:659:execute$605 $auto$pmux_competition_opt.cc:659:execute$583 $auto$pmux_competition_opt.cc:659:execute$590 $auto$pmux_competition_opt.cc:659:execute$568 $auto$pmux_competition_opt.cc:659:execute$575 $auto$pmux_competition_opt.cc:659:execute$553 $auto$pmux_competition_opt.cc:659:execute$560 $auto$pmux_competition_opt.cc:659:execute$538 $auto$pmux_competition_opt.cc:659:execute$545 $auto$pmux_competition_opt.cc:659:execute$523 $auto$pmux_competition_opt.cc:659:execute$530 $auto$pmux_competition_opt.cc:659:execute$508 $auto$pmux_competition_opt.cc:659:execute$515 $auto$pmux_competition_opt.cc:659:execute$493 $auto$pmux_competition_opt.cc:659:execute$500 $auto$pmux_competition_opt.cc:659:execute$478 $auto$pmux_competition_opt.cc:659:execute$485 $auto$pmux_competition_opt.cc:659:execute$650 $auto$pmux_competition_opt.cc:659:execute$643 $auto$pmux_competition_opt.cc:659:execute$635 $auto$pmux_competition_opt.cc:659:execute$628 $auto$pmux_competition_opt.cc:659:execute$620 $auto$pmux_competition_opt.cc:659:execute$613 $auto$pmux_competition_opt.cc:659:execute$605 $auto$pmux_competition_opt.cc:659:execute$598 $auto$pmux_competition_opt.cc:659:execute$590 $auto$pmux_competition_opt.cc:659:execute$583 $auto$pmux_competition_opt.cc:659:execute$575 $auto$pmux_competition_opt.cc:659:execute$568 $auto$pmux_competition_opt.cc:659:execute$560 $auto$pmux_competition_opt.cc:659:execute$553 $auto$pmux_competition_opt.cc:659:execute$545 $auto$pmux_competition_opt.cc:659:execute$538 $auto$pmux_competition_opt.cc:659:execute$530 $auto$pmux_competition_opt.cc:659:execute$523 $auto$pmux_competition_opt.cc:659:execute$515 $auto$pmux_competition_opt.cc:659:execute$508 $auto$pmux_competition_opt.cc:659:execute$500 $auto$pmux_competition_opt.cc:659:execute$493 $auto$pmux_competition_opt.cc:659:execute$485 $auto$pmux_competition_opt.cc:659:execute$478 1'0 }, Y={ $auto$pmux_competition_opt.cc:659:execute$757 $auto$pmux_competition_opt.cc:659:execute$755 $auto$pmux_competition_opt.cc:659:execute$749 $auto$pmux_competition_opt.cc:659:execute$740 $auto$pmux_competition_opt.cc:659:execute$735 $auto$pmux_competition_opt.cc:659:execute$732 $auto$pmux_competition_opt.cc:659:execute$728 $auto$pmux_competition_opt.cc:659:execute$725 $auto$pmux_competition_opt.cc:659:execute$721 $auto$pmux_competition_opt.cc:659:execute$718 $auto$pmux_competition_opt.cc:659:execute$714 $auto$pmux_competition_opt.cc:659:execute$711 $auto$pmux_competition_opt.cc:659:execute$707 $auto$pmux_competition_opt.cc:659:execute$704 $auto$pmux_competition_opt.cc:659:execute$700 $auto$pmux_competition_opt.cc:659:execute$697 $auto$pmux_competition_opt.cc:659:execute$693 $auto$pmux_competition_opt.cc:659:execute$690 $auto$pmux_competition_opt.cc:659:execute$686 $auto$pmux_competition_opt.cc:659:execute$683 $auto$pmux_competition_opt.cc:659:execute$679 $auto$pmux_competition_opt.cc:659:execute$676 $auto$pmux_competition_opt.cc:659:execute$672 $auto$pmux_competition_opt.cc:659:execute$669 $auto$pmux_competition_opt.cc:659:execute$665 $auto$pmux_competition_opt.cc:659:execute$662 $auto$pmux_competition_opt.cc:659:execute$658 $auto$pmux_competition_opt.cc:659:execute$655 $auto$pmux_competition_opt.cc:659:execute$651 $auto$pmux_competition_opt.cc:659:execute$644 $auto$pmux_competition_opt.cc:659:execute$636 $auto$pmux_competition_opt.cc:659:execute$629 $auto$pmux_competition_opt.cc:659:execute$621 $auto$pmux_competition_opt.cc:659:execute$614 $auto$pmux_competition_opt.cc:659:execute$606 $auto$pmux_competition_opt.cc:659:execute$599 $auto$pmux_competition_opt.cc:659:execute$591 $auto$pmux_competition_opt.cc:659:execute$584 $auto$pmux_competition_opt.cc:659:execute$576 $auto$pmux_competition_opt.cc:659:execute$569 $auto$pmux_competition_opt.cc:659:execute$561 $auto$pmux_competition_opt.cc:659:execute$554 $auto$pmux_competition_opt.cc:659:execute$546 $auto$pmux_competition_opt.cc:659:execute$539 $auto$pmux_competition_opt.cc:659:execute$531 $auto$pmux_competition_opt.cc:659:execute$524 $auto$pmux_competition_opt.cc:659:execute$516 $auto$pmux_competition_opt.cc:659:execute$509 $auto$pmux_competition_opt.cc:659:execute$501 $auto$pmux_competition_opt.cc:659:execute$494 $auto$pmux_competition_opt.cc:659:execute$486 $auto$pmux_competition_opt.cc:659:execute$479 $auto$pmux_competition_opt.cc:659:execute$471 }
+      New connections: $auto$pmux_competition_opt.cc:659:execute$745 = $auto$pmux_competition_opt.cc:659:execute$742
+  Optimizing cells in module \test1.
+Performed a total of 3 changes.
+
+2.31.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 35 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+2.31.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.31.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+2.31.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.31.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.31.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \test1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~17 debug messages>
+
+2.31.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \test1.
+Performed a total of 0 changes.
+
+2.31.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 35 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+2.31.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.31.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+
+2.31.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.31.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.32. Executing TECHMAP pass (map to technology primitives).
+
+2.32.1. Executing Verilog-2005 frontend: D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/techmap.v
+Parsing Verilog input from `D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+2.32.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $sdffce.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $logic_not.
+No more expansions possible.
+<suppressed ~112 debug messages>
+
+2.33. Executing OPT pass (performing simple optimizations).
+
+2.33.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+<suppressed ~12 debug messages>
+
+2.33.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 513 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Computing hashes of 512 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.33.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \test1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.33.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \test1.
+Performed a total of 0 changes.
+
+2.33.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 512 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+2.33.6. Executing OPT_SHARE pass.
+
+2.33.7. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $auto$ff.cc:337:slice$953 ($_DFFE_PP0P_) from module test1 (D = $0\state[3:0] [3], Q = \state [3]).
+Adding EN signal on $auto$ff.cc:337:slice$936 ($_DFF_PP0_) from module test1 (D = $0\state[3:0] [2], Q = \state [2]).
+Adding EN signal on $auto$ff.cc:337:slice$935 ($_DFF_PP0_) from module test1 (D = $0\state[3:0] [1], Q = \state [1]).
+
+2.33.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+Removed 3 unused cells and 20 unused wires.
+<suppressed ~4 debug messages>
+
+2.33.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+<suppressed ~6 debug messages>
+
+2.33.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.33.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \test1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.33.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \test1.
+Performed a total of 0 changes.
+
+2.33.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 507 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+2.33.14. Executing OPT_SHARE pass.
+
+2.33.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.33.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+2.33.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.33.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.33.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \test1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.33.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \test1.
+Performed a total of 0 changes.
+
+2.33.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 507 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+2.33.22. Executing OPT_SHARE pass.
+
+2.33.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.33.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+
+2.33.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.33.26. Finished fast OPT passes. (There is nothing left to do.)
+Removed 0 unused cells and 4 unused wires.
+
+2.34. Executing SETUNDEF pass (replace undef values with defined constants).
+
+2.35. Executing DFFLEGALIZE pass (convert FFs and LATCHes to types supported by the target).
+
+2.36. Executing TECHMAP pass (map to technology primitives).
+
+2.36.1. Executing Verilog-2005 frontend: D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/intel/common/ff_map.v
+Parsing Verilog input from `D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/intel/common/ff_map.v' to AST representation.
+Generating RTLIL representation for module `$_DFFE_PN0P_'.
+Successfully finished Verilog frontend.
+
+2.36.2. Continuing TECHMAP pass.
+Using template $paramod$_DFFE_PN0P_\_TECHMAP_WIREINIT_Q_=1'0 for cells of type $_DFFE_PN0P_.
+Using template $paramod$_DFFE_PN0P_\_TECHMAP_WIREINIT_Q_=1'x for cells of type $_DFFE_PN0P_.
+No more expansions possible.
+<suppressed ~243 debug messages>
+
+2.37. Executing ABC9 pass.
+
+2.37.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.37.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.37.3. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module test1.
+Found 0 SCCs.
+
+2.37.4. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.37.5. Executing TECHMAP pass (map to technology primitives).
+
+2.37.5.1. Executing Verilog-2005 frontend: D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/techmap.v
+Parsing Verilog input from `D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+2.37.5.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~86 debug messages>
+
+2.37.6. Executing OPT pass (performing simple optimizations).
+
+2.37.6.1. Executing OPT_EXPR pass (perform const folding).
+
+2.37.6.2. Executing OPT_MERGE pass (detect identical cells).
+Removed a total of 0 cells.
+
+2.37.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Removed 0 multiplexer ports.
+
+2.37.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Performed a total of 0 changes.
+
+2.37.6.5. Executing OPT_MERGE pass (detect identical cells).
+Removed a total of 0 cells.
+
+2.37.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.37.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+
+2.37.6.8. Executing OPT_EXPR pass (perform const folding).
+
+2.37.6.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.37.7. Executing TECHMAP pass (map to technology primitives).
+
+2.37.7.1. Executing Verilog-2005 frontend: D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/abc9_map.v
+Parsing Verilog input from `D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/abc9_map.v' to AST representation.
+Successfully finished Verilog frontend.
+
+2.37.7.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~2 debug messages>
+
+2.37.8. Executing Verilog-2005 frontend: D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/abc9_model.v
+Parsing Verilog input from `D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/abc9_model.v' to AST representation.
+Generating RTLIL representation for module `$__ABC9_DELAY'.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Generating RTLIL representation for module `$__DFF_N__$abc9_flop'.
+Generating RTLIL representation for module `$__DFF_P__$abc9_flop'.
+Successfully finished Verilog frontend.
+
+2.37.9. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.37.10. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~2 debug messages>
+
+2.37.11. Executing AIGMAP pass (map logic to AIG).
+Module test1: replaced 278 cells with 1916 new cells, skipped 262 cells.
+  replaced 2 cell types:
+     268 $_MUX_
+      10 $_OR_
+  not replaced 3 cell types:
+       3 $_AND_
+      37 $_NOT_
+     222 dffeas
+
+2.37.11.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.37.11.2. Executing XAIGER backend.
+<suppressed ~5 debug messages>
+Extracted 817 AND gates and 2467 wires from module `test1' to a netlist network with 481 inputs and 89 outputs.
+
+2.37.11.3. Executing ABC9_EXE pass (technology mapping using ABC9).
+
+2.37.11.4. Executing ABC9.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_lut <abc-temp-dir>/lutdefs.txt 
+ABC: + read_box <abc-temp-dir>/input.box 
+ABC: + &read <abc-temp-dir>/input.xaig 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =    481/     89  and =     741  lev =    8 (   2.35)  mem = 0.02 MB  box = 0  bb = 0
+ABC: + source <yosys-exe-dir>/share/intel/competition_abc_v11.abc 
+ABC: + &ps -l 
+ABC: <abc-temp-dir>/input : i/o =    481/     89  and =     797  lev =    8 (   2.34)  mem = 0.02 MB  box = 0  bb = 0
+ABC: Mapping (K=4)  :  lut =    224  edge =     807  lev =    4 (1.19)  mem = 0.01 MB
+ABC: LUT = 224 : 2=6 2.7 %  3=77 34.4 %  4=141 62.9 %  Ave = 3.60
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &verify 
+ABC: Networks are equivalent.  Time =     0.01 sec
+ABC: + time 
+ABC: elapse: 0.05 seconds, total: 0.05 seconds
+
+2.37.11.5. Executing AIGER frontend.
+<suppressed ~8 debug messages>
+Removed 1261 unused cells and 1775 unused wires.
+
+2.37.11.6. Executing ABC_OPS_REINTEGRATE pass (reintegrate ABC mapped design into module).
+ABC RESULTS:              $lut cells:      227
+ABC RESULTS:           input signals:       36
+ABC RESULTS:          output signals:       42
+<suppressed ~1140 debug messages>
+Removing temp directory.
+
+2.37.12. Executing TECHMAP pass (map to technology primitives).
+
+2.37.12.1. Executing Verilog-2005 frontend: D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/abc9_unmap.v
+Parsing Verilog input from `D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/abc9_unmap.v' to AST representation.
+Generating RTLIL representation for module `$__DFF_x__$abc9_flop'.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Successfully finished Verilog frontend.
+
+2.37.12.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~5 debug messages>
+Removed 0 unused cells and 4140 unused wires.
+
+2.38. Executing OPT pass (performing simple optimizations).
+
+2.38.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module test1.
+
+2.38.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\test1'.
+Computing hashes of 449 cells of `\test1'.
+Finding duplicate cells in `\test1'.
+Removed a total of 0 cells.
+
+2.38.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.38.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \test1..
+
+2.38.5. Finished fast OPT passes.
+
+2.39. Executing AUTONAME pass.
+Renamed 651 objects in module test1.
+<suppressed ~651 debug messages>
+
+3. Executing RTLIL backend.
+Output filename: D:/fpga-win-native-20261103/trial-shared-runtime-fresh/validation-current-9i4sbu6t/test1/candidate/postabc.il
+
+4. Executing SYNTH_INTEL pass.
+
+4.1. Executing TECHMAP pass (map to technology primitives).
+
+4.1.1. Executing Verilog-2005 frontend: D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/intel/cycloneiv/cells_map.v
+Parsing Verilog input from `D:\fpga-win-native-20261103\trial-shared-runtime-fresh\share/intel/cycloneiv/cells_map.v' to AST representation.
+Generating RTLIL representation for module `$__inpad'.
+Generating RTLIL representation for module `$__outpad'.
+Generating RTLIL representation for module `$lut'.
+Successfully finished Verilog frontend.
+
+4.1.2. Continuing TECHMAP pass.
+Using template $paramod$fdcae86fcfd036c1880a04306ae771a9d7579c31$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01010011 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00110101 for cells of type $lut.
+Using template $paramod$ba7f31f246a278c41fa0648a6e0512f63185dec0$lut for cells of type $lut.
+Using template $paramod$7491e7206ae8c682d288373efe06a43b67c277cf$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00011011 for cells of type $lut.
+Using template $paramod$ffc80aea4aa44f0166b2d4713ba5912f56e92991$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00100111 for cells of type $lut.
+Using template $paramod$58df2c605746858c7e53492c8f57d6f1fafa12d2$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00011101 for cells of type $lut.
+Using template $paramod$a82a699dba54b8465366aeb90aba90d3d29adde0$lut for cells of type $lut.
+Using template $paramod$c8f16510db975553c8b0be1064e8f5234175f8a8$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0010 for cells of type $lut.
+Using template $paramod$75d5c453cca75cc7a7ca320c4fb7be0932b6aaa7$lut for cells of type $lut.
+Using template $paramod$973818279bc95792902f3c09371fd2407d04a2a5$lut for cells of type $lut.
+Using template $paramod$94d2f1f461ef911482e15efdba185521de732c99$lut for cells of type $lut.
+Using template $paramod$7e3d8ac009723e554811ad53385162c0e6a41625$lut for cells of type $lut.
+Using template $paramod$2ea69c779d6c1b79ac5a87b0d1523c67d5628dba$lut for cells of type $lut.
+Using template $paramod$eab8c2e20ad6848564bec45c7148558972138f5b$lut for cells of type $lut.
+Using template $paramod$3702268f692b8bf258e428f65d3bca4e1f76d98b$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01010100 for cells of type $lut.
+Using template $paramod$c685a6e5e211287be351ac5f1078c1501564ce89$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10101011 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0001 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00000001 for cells of type $lut.
+Using template $paramod$e6a488add0b5a2d742e2ae29f62ce7616e04271d$lut for cells of type $lut.
+Using template $paramod$923a34bca12d215b7d61635060bb4ef616b5625f$lut for cells of type $lut.
+Using template $paramod$f58e0d90afc57a738914697b6a4a7319b30d7e7e$lut for cells of type $lut.
+Using template $paramod$ff58554493773336c4e06dc62f25c37448f98c7b$lut for cells of type $lut.
+Using template $paramod$068092ddede495d8462ffe530e6d91711913edbc$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00010000 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1000 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0110 for cells of type $lut.
+Using template $paramod$6a9b42dd2737c91073e6a695b8ac858c4a8587d7$lut for cells of type $lut.
+No more expansions possible.
+<suppressed ~628 debug messages>
+Removed 0 unused cells and 456 unused wires.
+
+4.2. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `test1'. Setting top module to test1.
+
+4.2.1. Analyzing design hierarchy..
+Top module:  \test1
+
+4.2.2. Analyzing design hierarchy..
+Top module:  \test1
+Removed 0 unused modules.
+
+4.3. Printing statistics.
+
+=== test1 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      243 wires
+      709 wire bits
+      243 public wires
+      709 public wire bits
+       23 ports
+      285 port bits
+      449 cells
+        3   $not
+      224   cycloneiv_lcell_comb
+      222   dffeas
+
+4.4. Executing CHECK pass (checking for obvious problems).
+Checking module test1...
+Found and reported 0 problems.
+
+5. Executing JSON backend.

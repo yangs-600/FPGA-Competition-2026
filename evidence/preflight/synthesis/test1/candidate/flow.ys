@@ -1,0 +1,4 @@
+read_verilog "D:/fpga-win-native-20261103/preflight-shared-runtime-once/package/competition_case/test1/test1.v"
+synth_intel -family cycloneiv -top test1
+write_verilog -norename -noattr "D:/fpga-win-native-20261103/preflight-shared-runtime-once/synthesis/test1/candidate/netlist.v"
+write_json "D:/fpga-win-native-20261103/preflight-shared-runtime-once/synthesis/test1/candidate/netlist.json"

@@ -1,0 +1,57 @@
+{
+  "status": "COMPILE_ONLY_DIAGNOSTIC",
+  "utc": "2026-11-03T06:37:03.794936+00:00",
+  "source_sha256": "6ca1b47ec8bc8fc7a46e78ac0e9aa6291094ee5aece4c904138c4a5cce87ca44",
+  "compiler_sha256": "ee0d178ada2e139b53fb81f46ba55ffbcdda8228ef691afed93692d7fc51a316",
+  "results": [
+    {
+      "label": "os",
+      "command": [
+        "D:\\fpga-v14-work\\msys64\\ucrt64\\bin\\g++.exe",
+        "-std=c++20",
+        "-Os",
+        "D:\\fpga-win-native-20261103\\move-ctor-diagnostic-20261103-002\\move_ctor.cc",
+        "-o",
+        "D:\\fpga-win-native-20261103\\move-ctor-diagnostic-20261103-002\\os.exe"
+      ],
+      "returncode": 1,
+      "log_sha256": "44c6443bacce01b6cf84c51e359c6c6cec83b38fce7fa424cb32e3552cb67447",
+      "executable_executions": 0
+    },
+    {
+      "label": "os_no_declone",
+      "command": [
+        "D:\\fpga-v14-work\\msys64\\ucrt64\\bin\\g++.exe",
+        "-std=c++20",
+        "-Os",
+        "-fno-declone-ctor-dtor",
+        "D:\\fpga-win-native-20261103\\move-ctor-diagnostic-20261103-002\\move_ctor.cc",
+        "-o",
+        "D:\\fpga-win-native-20261103\\move-ctor-diagnostic-20261103-002\\os_no_declone.exe"
+      ],
+      "returncode": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "executable_executions": 0,
+      "exe_bytes": 40809,
+      "exe_sha256": "865225c6cc8bd59c33997c10f5f937c1744f8e374186e4bbe622303eb7b6d904"
+    },
+    {
+      "label": "o3",
+      "command": [
+        "D:\\fpga-v14-work\\msys64\\ucrt64\\bin\\g++.exe",
+        "-std=c++20",
+        "-O3",
+        "D:\\fpga-win-native-20261103\\move-ctor-diagnostic-20261103-002\\move_ctor.cc",
+        "-o",
+        "D:\\fpga-win-native-20261103\\move-ctor-diagnostic-20261103-002\\o3.exe"
+      ],
+      "returncode": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "executable_executions": 0,
+      "exe_bytes": 40157,
+      "exe_sha256": "f85fac7cd97f77ba02523bfa09416b0d6ffbbfb444cc67288f0cddb610795beb"
+    }
+  ],
+  "existing_builds_modified": false,
+  "executable_executions": 0
+}

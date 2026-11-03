@@ -1,0 +1,44 @@
+{
+  "partition": {
+    "index": 0,
+    "name": "test4.only_5b",
+    "inbits": {
+      "clk": [
+        0
+      ],
+      "datain": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "ena": [
+        0
+      ],
+      "reset_n": [
+        0
+      ]
+    },
+    "outbits": {
+      "only_5b": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.test4.only_5b",
+    "internal": {},
+    "unused": {},
+    "cellcount": 33,
+    "bitcount": 317
+  },
+  "gate_module": {
+    "name": "gold.test4.only_5b",
+    "internal": {},
+    "unused": {},
+    "cellcount": 26,
+    "bitcount": 34
+  }
+}

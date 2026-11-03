@@ -1,0 +1,111 @@
+{
+  "partition": {
+    "index": 1,
+    "name": "pmux_case02_pipeline.data_out.6",
+    "inbits": {
+      "clk": [
+        0
+      ],
+      "ctrl_in": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "data_in": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "data_out": [
+        3,
+        4,
+        5,
+        9,
+        10,
+        11
+      ],
+      "en": [
+        0
+      ],
+      "rst": [
+        0
+      ]
+    },
+    "outbits": {
+      "data_out": [
+        6,
+        7,
+        8
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.pmux_case02_pipeline.data_out.6",
+    "internal": {},
+    "unused": {},
+    "cellcount": 84,
+    "bitcount": 249
+  },
+  "gate_module": {
+    "name": "gold.pmux_case02_pipeline.data_out.6",
+    "internal": {},
+    "unused": {},
+    "cellcount": 809,
+    "bitcount": 878
+  }
+}

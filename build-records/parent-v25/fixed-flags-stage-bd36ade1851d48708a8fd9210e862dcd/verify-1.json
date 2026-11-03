@@ -1,0 +1,25 @@
+{
+  "status": "PASS_PINNED_SOURCES_INDEX_STAT_AND_THREE_VERIFIED_UPSTREAM_OUTPUTS",
+  "utc": "2026-11-03T06:47:00.724999+00:00",
+  "roles": {
+    "baseline": {
+      "original_file_count": 7177,
+      "all_other_original_files_byte_identical": 7176,
+      "index_prepared_sha256": "96ae987f80d8f201ed45340a814b2a4d19d086e931d613db8ef43057799df5a7",
+      "index_current_sha256": "44edc30e5a74faa42aae347675425a5705c7eb299fe2343ddf7c1aafb98a4a0a",
+      "index_nonstat_content_sha256": "8a3b1076c404546a031facaf31b308e7fc556d0237784b49000a3b061f487451",
+      "index_paths_modes_objects_flags_extensions_unchanged": true,
+      "generated_upstream_resources": {}
+    },
+    "candidate": {
+      "original_file_count": 7179,
+      "all_other_original_files_byte_identical": 7178,
+      "index_prepared_sha256": "96ae987f80d8f201ed45340a814b2a4d19d086e931d613db8ef43057799df5a7",
+      "index_current_sha256": "96ae987f80d8f201ed45340a814b2a4d19d086e931d613db8ef43057799df5a7",
+      "index_nonstat_content_sha256": "8a3b1076c404546a031facaf31b308e7fc556d0237784b49000a3b061f487451",
+      "index_paths_modes_objects_flags_extensions_unchanged": true,
+      "generated_upstream_resources": {}
+    }
+  },
+  "tools_old_artifacts_runtime": "PASS"
+}

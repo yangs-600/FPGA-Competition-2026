@@ -1,0 +1,7 @@
+read_verilog "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test1/test1.v"
+synth_intel -family cycloneiv -top test1 -run begin:map_cells
+select test1
+write_rtlil -selected "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/validation-current-9i4sbu6t/test1/candidate/postabc.il"
+select *
+synth_intel -family cycloneiv -top test1 -run map_cells:
+write_json "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/validation-current-9i4sbu6t/test1/candidate/split-final.json"

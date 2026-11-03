@@ -1,0 +1,44 @@
+{
+  "partition": {
+    "index": 1,
+    "name": "test3.gpioout",
+    "inbits": {
+      "clk": [
+        0
+      ],
+      "cs": [
+        0
+      ],
+      "sr_in": [
+        0
+      ]
+    },
+    "outbits": {
+      "gpioout": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.test3.gpioout",
+    "internal": {},
+    "unused": {},
+    "cellcount": 17,
+    "bitcount": 55
+  },
+  "gate_module": {
+    "name": "gold.test3.gpioout",
+    "internal": {},
+    "unused": {},
+    "cellcount": 59,
+    "bitcount": 62
+  }
+}

@@ -1,5 +1,0 @@
-test4 test4.only_5b xbits : only_5b[0]
-test4 test4.dataout xbits : dataout[5:0]
-test4 test4.datain_5bis7 xbits : datain_5bis7[0]
-test4 test4.data_dp xbits : data_dp[0]
-test4 test4.data_dn xbits : data_dn[0]

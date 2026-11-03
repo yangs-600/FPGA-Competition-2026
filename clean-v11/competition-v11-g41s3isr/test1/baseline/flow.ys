@@ -1,4 +1,0 @@
-read_verilog "/home/ubuntu/FPGA/clean-v11/competition_case/test1/test1.v"
-synth_intel -family cycloneiv -top test1
-write_verilog -norename -noattr "/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test1/baseline/netlist.v"
-write_json "/home/ubuntu/FPGA/clean-v11/competition-v11-g41s3isr/test1/baseline/netlist.json"

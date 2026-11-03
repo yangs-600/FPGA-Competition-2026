@@ -1,0 +1,9 @@
+verilog_defaults -add -D CHECK_OUTPUTS
+read_verilog -sv ../../../partitions/pmux_case03_crossbar.data_out.5.sv
+read_rtlil ../../../partitions/pmux_case03_crossbar.data_out.5.il
+hierarchy -top miter; proc; chformal -cover -remove
+async2sync
+formalff -clk2ff -ff2anyinit gate.pmux_case03_crossbar.data_out.5
+setundef -anyseq gate.pmux_case03_crossbar.data_out.5
+flatten -wb; dffunmap; opt_expr -keepdc -undriven; opt_clean
+sat -tempinduct -set-init-undef -set-def-formal -set-def-inputs -maxsteps 5 -set-assumes -prove-asserts -show-public -dump_vcd trace.vcd miter

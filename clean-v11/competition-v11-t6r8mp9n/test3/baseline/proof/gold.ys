@@ -1,9 +1,0 @@
-read_verilog "/home/ubuntu/FPGA/clean-v11/competition_case/test3/test3.v"
-prep -top test3 -flatten
-memory_map
-opt_clean
-rename -hide
-opt_clean
-check -initdrv
-setundef -undriven -undef
-write_rtlil /home/ubuntu/FPGA/clean-v11/competition-v11-t6r8mp9n/test3/baseline/proof/gold.il

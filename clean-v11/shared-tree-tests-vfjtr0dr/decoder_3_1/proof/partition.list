@@ -1,2 +1,0 @@
-decoder_3_1 decoder_3_1.z : z[7:0]
-decoder_3_1 decoder_3_1.y : y[7:0]

@@ -1,0 +1,693 @@
+// Conditional constant propagation for mux data selected by equality decoders.
+// No testcase names, source paths, probe synthesis, or register changes.
+#include "kernel/yosys.h"
+#include "kernel/sigtools.h"
+#include "kernel/celltypes.h"
+#include <algorithm>
+#include <functional>
+#include <map>
+#include <tuple>
+USING_YOSYS_NAMESPACE
+PRIVATE_NAMESPACE_BEGIN
+
+// Count the same reduced, jointly memoized bit-mux DAG used below, but
+// with the fixed natural selector order. All actual equality codes and the
+// literal fallback are included. This is a structural heuristic, not a LUT
+// count or a synthesis probe.
+static int pmux_input_dag_nodes(const SigSpec &ctrl, const std::vector<int> &arm_codes,
+        bool default_x, const std::vector<SigSpec> &input_a,
+        const std::vector<SigSpec> &input_b)
+{
+    int bits = GetSize(ctrl), codes = 1 << bits;
+    int width = GetSize(input_a[0]), offset = default_x ? 0 : 1;
+    dict<SigBit, int> leaves;
+    auto leaf = [&](SigBit bit) {
+        if (!leaves.count(bit)) leaves[bit] = GetSize(leaves);
+        return leaves.at(bit);
+    };
+    std::vector<int> selectors;
+    for (auto bit : ctrl) selectors.push_back(leaf(bit));
+    std::map<std::tuple<int, int, int>, int> memo;
+    int nodes = 0;
+    std::function<int(const std::vector<int>&, int, int)> build;
+    build = [&](const std::vector<int> &column, int code, int depth)->int {
+        if (depth == bits) return column.at(code);
+        int a = build(column, code, depth + 1);
+        int b = build(column, code | (1 << depth), depth + 1);
+        if (a == b) return a;
+        auto key = std::make_tuple(selectors.at(depth), a, b);
+        auto it = memo.find(key);
+        if (it != memo.end()) return it->second;
+        int id = -1 - nodes++;
+        memo[key] = id;
+        return id;
+    };
+    for (int side = 0; side < 2; side++) {
+        const auto &values = side ? input_b : input_a;
+        for (int bit = 0; bit < width; bit++) {
+            SigBit fallback = default_x ? SigBit(State::Sx) : values.at(0)[bit];
+            std::vector<int> column(codes, leaf(fallback));
+            for (int arm = 0; arm < GetSize(arm_codes); arm++)
+                column.at(arm_codes.at(arm)) = leaf(values.at(offset + arm)[bit]);
+            build(column, 0, 0);
+        }
+    }
+    return nodes;
+}
+
+struct AddOrientationChoice {
+    unsigned int mask = 0;
+    int before = 0, after = 0, directions = 0;
+    long long recursion_visits = 0;
+};
+
+static AddOrientationChoice choose_add_orientation(const SigSpec &ctrl,
+        const std::vector<int> &arm_codes, bool default_x,
+        const std::vector<SigSpec> &input_a, const std::vector<SigSpec> &input_b)
+{
+    AddOrientationChoice choice;
+    int count = GetSize(input_a), bits = GetSize(ctrl);
+    if (count < 2 || count > 8 || GetSize(input_b) != count || bits < 2 || bits > 6)
+        return choice;
+    int width = GetSize(input_a[0]), codes = 1 << bits;
+    choice.directions = 1 << (count - 1);
+    // Width is not globally bounded. Cap the total recursive visits of all
+    // direction trials; skipping this heuristic leaves the original factor.
+    choice.recursion_visits = 1LL * choice.directions * 2 * width * (2 * codes - 1);
+    if (choice.recursion_visits > 262144) return choice;
+    choice.before = choice.after = pmux_input_dag_nodes(ctrl, arm_codes, default_x, input_a, input_b);
+    for (int trial = 1; trial < choice.directions; trial++) {
+        // Fix value zero: globally swapping both add inputs gives the same
+        // joint DAG, so every direction has a representative in this half.
+        unsigned int mask = unsigned(trial) << 1;
+        auto a = input_a, b = input_b;
+        for (int i = 1; i < count; i++)
+            if (mask & (1u << i)) std::swap(a.at(i), b.at(i));
+        int cost = pmux_input_dag_nodes(ctrl, arm_codes, default_x, a, b);
+        if (cost < choice.after) { choice.mask = mask; choice.after = cost; }
+    }
+    return choice;
+}
+
+// Pull full-width bitwise or conservatively profitable add/sub operators
+// through an equality-decoded PMUX.
+// The selector remains unchanged. This does not inspect names, source files,
+// timing results, or sequential cells, and does not run another synthesis pass.
+static int factor_pmux_operators(Module *module, SigMap &sigmap,
+        const dict<SigBit, std::pair<SigSpec, int>> &decode)
+{
+    if (module->get_bool_attribute(ID::keep)) return 0;
+    // Every rewrite below consumes at least two distinct, selected, non-kept
+    // producers of the same supported type. With no such type pair, even
+    // the first rewrite is impossible, so skip the port/bit index entirely.
+    // Iterate cells directly to avoid constructing a selected_cells vector.
+    unsigned int seen_operator_types = 0;
+    bool has_operator_pair = false;
+    for (auto cell : module->cells()) {
+        unsigned int type_mask = 0;
+        if (cell->type == ID($xor)) type_mask = 1u << 0;
+        else if (cell->type == ID($and)) type_mask = 1u << 1;
+        else if (cell->type == ID($or)) type_mask = 1u << 2;
+        else if (cell->type == ID($add)) type_mask = 1u << 3;
+        else if (cell->type == ID($sub)) type_mask = 1u << 4;
+        else continue;
+        if (cell->get_bool_attribute(ID::keep) || !module->selected(cell)) continue;
+        if (seen_operator_types & type_mask) { has_operator_pair = true; break; }
+        seen_operator_types |= type_mask;
+    }
+    if (!has_operator_pair) return 0;
+    CellTypes types;
+    types.setup();
+    dict<SigBit, pool<Cell *>> drivers, users;
+    pool<SigBit> kept_bits;
+    auto index_cell = [&](Cell *cell, bool add) {
+        bool known = types.cell_known(cell->type);
+        for (auto &port : cell->connections()) {
+            bool input = !known || types.cell_input(cell->type, port.first);
+            bool output = !known || types.cell_output(cell->type, port.first);
+            for (auto bit : sigmap(port.second)) {
+                if (!bit.wire) continue;
+                if (input) {
+                    if (add) users[bit].insert(cell);
+                    else users[bit].erase(cell);
+                }
+                if (output) {
+                    if (add) drivers[bit].insert(cell);
+                    else drivers[bit].erase(cell);
+                }
+            }
+        }
+    };
+    for (auto wire : module->wires()) {
+        for (auto bit : sigmap(SigSpec(wire))) {
+            if (!bit.wire) continue;
+            if (wire->get_bool_attribute(ID::keep)) kept_bits.insert(bit);
+            // A null entry denotes a module port, which cannot be removed.
+            if (wire->port_input) drivers[bit].insert(nullptr);
+            if (wire->port_output) users[bit].insert(nullptr);
+        }
+    }
+    for (auto cell : module->cells()) index_cell(cell, true);
+
+    std::vector<Cell *> roots, ordered;
+    pool<Cell *> selected_cells, targets, done, active, cyclic;
+    for (auto cell : module->selected_cells()) {
+        selected_cells.insert(cell);
+        if (cell->type == ID($pmux) && !cell->get_bool_attribute(ID::keep)) {
+            roots.push_back(cell);
+            targets.insert(cell);
+        }
+    }
+    std::sort(roots.begin(), roots.end(), [](Cell *a, Cell *b) { return a->name < b->name; });
+    // Only follow the combinational operators relevant to this rewrite. FFs
+    // are leaves, so feedback through registers cannot become a graph cycle.
+    std::function<bool(Cell *)> visit = [&](Cell *cell) {
+        if (done.count(cell)) return !cyclic.count(cell);
+        if (active.count(cell)) return false;
+        active.insert(cell);
+        bool acyclic = true;
+        if (cell->type.in(ID($pmux), ID($mux), ID($xor), ID($and), ID($or), ID($add), ID($sub))) {
+            for (auto port : {ID::A, ID::B}) {
+                for (auto bit : sigmap(cell->getPort(port))) {
+                    if (!bit.wire || GetSize(drivers[bit]) != 1) continue;
+                    Cell *parent = *drivers[bit].begin();
+                    if (parent && parent != cell &&
+                            parent->type.in(ID($pmux), ID($mux), ID($xor), ID($and), ID($or), ID($add), ID($sub)))
+                        acyclic &= visit(parent);
+                    if (parent == cell) acyclic = false;
+                }
+            }
+        }
+        active.erase(cell);
+        done.insert(cell);
+        if (!acyclic) cyclic.insert(cell);
+        if (targets.count(cell)) ordered.push_back(cell);
+        return acyclic;
+    };
+    for (auto cell : roots) visit(cell);
+
+    int factored = 0;
+    for (auto mux : ordered) {
+        if (cyclic.count(mux)) continue;
+        SigSpec select = sigmap(mux->getPort(ID::S));
+        SigSpec original_a = sigmap(mux->getPort(ID::A));
+        SigSpec original_b = sigmap(mux->getPort(ID::B));
+        SigSpec original_y = mux->getPort(ID::Y);
+        int width = GetSize(original_y), arms = GetSize(select);
+        if (width <= 0 || arms == 0 || GetSize(original_a) != width ||
+                GetSize(original_b) != arms * width || !decode.count(select[0])) continue;
+        SigSpec ctrl = decode.at(select[0]).first;
+        int ctrl_width = GetSize(ctrl);
+        if (ctrl_width < 2 || ctrl_width > 6) continue;
+        pool<int> codes;
+        bool valid = true;
+        for (auto s : select) {
+            if (!decode.count(s) || decode.at(s).first != ctrl) { valid = false; break; }
+            int code = decode.at(s).second;
+            if (code < 0 || code >= (1 << ctrl_width) || codes.count(code)) { valid = false; break; }
+            codes.insert(code);
+        }
+        if (!valid) continue;
+        pool<SigBit> select_bits;
+        for (auto bit : select) select_bits.insert(bit);
+
+        bool default_x = original_a == SigSpec(State::Sx, width);
+        std::vector<SigSpec> values;
+        if (!default_x) values.push_back(original_a);
+        for (int arm = 0; arm < arms; arm++) values.push_back(original_b.extract(arm * width, width));
+        std::vector<Cell *> producers;
+        pool<Cell *> distinct;
+        IdString operation;
+        Const signed_a, signed_b;
+        for (auto value : values) {
+            if (GetSize(value) != width || !value[0].wire || GetSize(drivers[value[0]]) != 1) { valid = false; break; }
+            Cell *producer = *drivers[value[0]].begin();
+            if (!producer || !selected_cells.count(producer) || !producer->type.in(ID($xor), ID($and), ID($or), ID($add), ID($sub)) ||
+                    producer->get_bool_attribute(ID::keep) ||
+                    sigmap(producer->getPort(ID::Y)) != value ||
+                    GetSize(producer->getPort(ID::A)) != width ||
+                    GetSize(producer->getPort(ID::B)) != width ||
+                    producer->getParam(ID::Y_WIDTH).as_int() != width ||
+                    producer->getParam(ID::A_WIDTH).as_int() != width ||
+                    producer->getParam(ID::B_WIDTH).as_int() != width) { valid = false; break; }
+            if (producers.empty()) {
+                operation = producer->type;
+                signed_a = producer->getParam(ID::A_SIGNED);
+                signed_b = producer->getParam(ID::B_SIGNED);
+            }
+            if (producer->type != operation) { valid = false; break; }
+            if (operation.in(ID($add), ID($sub)) &&
+                    (producer->getParam(ID::A_SIGNED) != signed_a ||
+                     producer->getParam(ID::B_SIGNED) != signed_b)) { valid = false; break; }
+            pool<SigBit> seen_output;
+            for (auto bit : value) {
+                if (!bit.wire || kept_bits.count(bit) || seen_output.count(bit) || GetSize(drivers[bit]) != 1 ||
+                        !drivers[bit].count(producer) || GetSize(users[bit]) != 1 ||
+                        !users[bit].count(mux) || select_bits.count(bit)) { valid = false; break; }
+                seen_output.insert(bit);
+            }
+            if (!valid) break;
+            producers.push_back(producer);
+            distinct.insert(producer);
+        }
+        // XOR preserves a literal X default: X ^ common == X. In contrast,
+        // moving AND/OR outside an X default can make output bits defined.
+        if (!valid || GetSize(distinct) < 2) continue;
+        bool arithmetic = operation.in(ID($add), ID($sub));
+        // Arithmetic may omit an X default only when every binary control
+        // code has a distinct equality arm. No default-code cofactoring or
+        // reset/enable assumptions are used to justify this condition.
+        if (default_x && operation != ID($xor) &&
+                !(arithmetic && GetSize(codes) == (1 << ctrl_width))) continue;
+
+        if (arithmetic) {
+            if (width < 4) continue;
+            std::vector<SigSpec> input_a, input_b;
+            std::vector<std::pair<SigSpec, SigSpec>> independent;
+            bool common_a = true, common_b = true;
+            for (auto producer : producers) {
+                SigSpec a = sigmap(producer->getPort(ID::A));
+                SigSpec b = sigmap(producer->getPort(ID::B));
+                pool<SigBit> bits_a, bits_b;
+                for (auto bit : a) { if (!bit.wire) valid = false; bits_a.insert(bit); }
+                for (auto bit : b) { if (!bit.wire) valid = false; bits_b.insert(bit); }
+                // Exclude the most obvious zero-cost or reduced-width
+                // arithmetic. The LUT estimate below is not a guarantee.
+                if (a == b || GetSize(bits_a) != width || GetSize(bits_b) != width) valid = false;
+                if (!valid) break;
+                if (!input_a.empty()) {
+                    common_a &= a == input_a[0];
+                    common_b &= b == input_b[0];
+                }
+                input_a.push_back(a);
+                input_b.push_back(b);
+                bool seen = false;
+                for (auto &pair : independent)
+                    if ((pair.first == a && pair.second == b) ||
+                            (operation == ID($add) && pair.first == b && pair.second == a)) {
+                        seen = true; break;
+                    }
+                if (!seen) independent.emplace_back(a, b);
+            }
+            if (!valid || GetSize(independent) < 2 || (common_a && common_b)) continue;
+            int input_muxes = int(!common_a) + int(!common_b);
+            // A word add/sub needs roughly one sum LUT per output plus
+            // carry logic. Use only one extra LUT per two lower bits, and
+            // charge a full existing PMUX estimate for each added input mux.
+            // Shared equality decoders are unchanged and are not credited.
+            int arithmetic_luts = width + (width - 1) / 2;
+            int pmux_luts = width * ((arms + 1) / 2 + (arms / 2 + 2) / 3);
+            int estimated_gain = (GetSize(independent) - 1) * arithmetic_luts -
+                                 (input_muxes - 1) * pmux_luts;
+            if (estimated_gain < std::max(2, width / 2)) continue;
+            // Preserve every original admission/profit guard above. Only an
+            // already admissible, equally signed add may change direction.
+            if (operation == ID($add) && signed_a == signed_b) {
+                std::vector<int> arm_codes;
+                for (auto s : select) arm_codes.push_back(decode.at(s).second);
+                auto choice = choose_add_orientation(ctrl, arm_codes, default_x, input_a, input_b);
+                if (choice.mask) {
+                    auto a = input_a, b = input_b;
+                    for (int i = 1; i < GetSize(a); i++)
+                        if (choice.mask & (1u << i)) std::swap(a.at(i), b.at(i));
+                    bool new_common_a = true, new_common_b = true;
+                    for (int i = 1; i < GetSize(a); i++) {
+                        new_common_a &= a.at(i) == a.at(0);
+                        new_common_b &= b.at(i) == b.at(0);
+                    }
+                    int new_input_muxes = int(!new_common_a) + int(!new_common_b);
+                    int new_gain = (GetSize(independent) - 1) * arithmetic_luts -
+                                   (new_input_muxes - 1) * pmux_luts;
+                    // Retain the old direction if its replacement would no
+                    // longer satisfy the unchanged conservative profit gate.
+                    if (!(new_common_a && new_common_b) && new_gain >= std::max(2, width / 2)) {
+                        input_a.swap(a); input_b.swap(b);
+                        common_a = new_common_a; common_b = new_common_b;
+                        input_muxes = new_input_muxes; estimated_gain = new_gain;
+                        log("PMUX_ADD_ORIENT values=%d directions=%d natural_nodes_before=%d natural_nodes_after=%d mask=%u recursion_visits=%lld\n",
+                                GetSize(input_a), choice.directions, choice.before, choice.after,
+                                choice.mask, choice.recursion_visits);
+                    }
+                }
+            }
+            int offset = default_x ? 0 : 1;
+            auto default_for = [&](const std::vector<SigSpec> &values) {
+                return default_x ? SigSpec(State::Sx, width) : values[0];
+            };
+            auto arms_for = [&](const std::vector<SigSpec> &values) {
+                SigSpec data;
+                for (int arm = 0; arm < arms; arm++) data.append(values[offset + arm]);
+                return data;
+            };
+            SigSpec original_select = mux->getPort(ID::S);
+            index_cell(mux, false);
+            for (auto producer : distinct) index_cell(producer, false);
+            SigSpec shared_a = common_a ? input_a[0] : SigSpec(module->addWire(NEW_ID, width));
+            SigSpec shared_b = common_b ? input_b[0] : SigSpec(module->addWire(NEW_ID, width));
+            // Reuse the original PMUX for the first non-shared operand.
+            const auto &first_values = common_a ? input_b : input_a;
+            mux->setPort(ID::A, default_for(first_values));
+            mux->setPort(ID::B, arms_for(first_values));
+            mux->setPort(ID::Y, common_a ? shared_b : shared_a);
+            Cell *second = nullptr;
+            if (!common_a && !common_b) {
+                second = module->addPmux(NEW_ID, default_for(input_b), arms_for(input_b), original_select, shared_b);
+                selected_cells.insert(second);
+            }
+            Cell *shared = module->addCell(NEW_ID, operation);
+            shared->setParam(ID::A_WIDTH, width);
+            shared->setParam(ID::B_WIDTH, width);
+            shared->setParam(ID::Y_WIDTH, width);
+            shared->setParam(ID::A_SIGNED, signed_a);
+            shared->setParam(ID::B_SIGNED, signed_b);
+            shared->setPort(ID::A, shared_a);
+            shared->setPort(ID::B, shared_b);
+            shared->setPort(ID::Y, original_y);
+            selected_cells.insert(shared);
+            index_cell(mux, true);
+            if (second) index_cell(second, true);
+            index_cell(shared, true);
+            for (auto producer : distinct) module->remove(producer);
+            factored++;
+            log("PMUX_ARITH_FACTOR op=%s width=%d removed=%d independent=%d input_muxes=%d estimate_gain=%d default_x=%d\n",
+                    log_id(operation), width, GetSize(distinct), GetSize(independent), input_muxes,
+                    estimated_gain, int(default_x));
+            continue;
+        }
+
+        SigSpec common;
+        std::vector<SigSpec> operands;
+        bool found = false;
+        for (auto side : {ID::A, ID::B}) {
+            SigSpec candidate = sigmap(producers[0]->getPort(side));
+            operands.clear();
+            bool all = true;
+            for (auto producer : producers) {
+                SigSpec a = sigmap(producer->getPort(ID::A));
+                SigSpec b = sigmap(producer->getPort(ID::B));
+                if (a == candidate) operands.push_back(b);
+                else if (b == candidate) operands.push_back(a);
+                else { all = false; break; }
+            }
+            if (all) { common = candidate; found = true; break; }
+        }
+        if (!found) continue;
+        SigSpec new_a = default_x ? SigSpec(State::Sx, width) : operands[0];
+        SigSpec new_b;
+        int offset = default_x ? 0 : 1;
+        for (int arm = 0; arm < arms; arm++) new_b.append(operands[offset + arm]);
+
+        // Only cell ports change; no module connections are added here. The
+        // existing SigMap stays valid, and the new wire maps to itself.
+        index_cell(mux, false);
+        for (auto producer : distinct) index_cell(producer, false);
+        SigSpec selected = module->addWire(NEW_ID, width);
+        mux->setPort(ID::A, new_a);
+        mux->setPort(ID::B, new_b);
+        mux->setPort(ID::Y, selected);
+        Cell *shared = nullptr;
+        if (operation == ID($xor)) shared = module->addXor(NEW_ID, selected, common, original_y);
+        if (operation == ID($and)) shared = module->addAnd(NEW_ID, selected, common, original_y);
+        if (operation == ID($or)) shared = module->addOr(NEW_ID, selected, common, original_y);
+        log_assert(shared != nullptr);
+        selected_cells.insert(shared);
+        index_cell(mux, true);
+        index_cell(shared, true);
+        // Every output use was the PMUX A/B data just replaced, so these
+        // producers are now unused. No multi-use producer is ever removed.
+        for (auto producer : distinct) module->remove(producer);
+        factored++;
+        log("PMUX_BITWISE_FACTOR op=%s width=%d removed=%d default_x=%d\n",
+                log_id(operation), width, GetSize(distinct), int(default_x));
+    }
+    return factored;
+}
+
+struct PmuxCompetitionOpt : public Pass {
+    PmuxCompetitionOpt() : Pass("pmux_competition_opt", "propagate decoder constraints into selected mux data") {}
+    void help() override {
+        log("    pmux_competition_opt\n");
+        log("Replace data bits implied by a true equality decoder in mux/pmux arms.\n");
+        log("Shares equality-decoded PMUX trees, safely completes default codes, and searches selector order.\n");
+        log("Preserves priority muxes and sequential cells. No synthesis probes.\n");
+        log("Factors common full-width XOR/AND/OR operands from mutually exclusive PMUX arms.\n");
+        log("Shares conservatively profitable full-width add/sub operators across equality-decoded PMUX arms.\n");
+    }
+    void execute(std::vector<std::string> args, RTLIL::Design *design) override {
+        extra_args(args, 1, design);
+        log_header(design, "Executing PMUX_COMPETITION_OPT v26.\n");
+        int replaced = 0;
+        for (auto module : design->selected_modules()) {
+            if (module->get_bool_attribute(ID::blackbox)) continue;
+            // Every rewrite below targets a selected, non-kept mux/pmux.
+            // Avoid constructing the module-wide alias map if none exists.
+            bool has_mux = false, has_pmux = false;
+            for (auto c : module->selected_cells()) {
+                if (c->get_bool_attribute(ID::keep)) continue;
+                if (c->type == ID($pmux)) has_pmux = true;
+                if (c->type.in(ID($mux), ID($pmux))) has_mux = true;
+            }
+            if (!has_mux) continue;
+            SigMap sigmap(module);
+            dict<SigBit, dict<SigBit, SigBit>> facts;
+            dict<SigBit, std::pair<SigSpec,int>> decode;
+            for (auto c : module->cells()) {
+                if (!c->type.in(ID($eq), ID($logic_not))) continue;
+                auto y = sigmap(c->getPort(ID::Y));
+                if (GetSize(y) != 1 || !y[0].wire) continue;
+                auto a = sigmap(c->getPort(ID::A));
+                SigSpec b = c->type == ID($logic_not) ? SigSpec(State::S0, GetSize(a)) : sigmap(c->getPort(ID::B));
+                if (a.is_fully_const()) std::swap(a, b);
+                if (!b.is_fully_const() || GetSize(a) != GetSize(b)) continue;
+                bool known = true;
+                for (auto bit : b) known &= bit == State::S0 || bit == State::S1;
+                if (!known) continue;
+                dict<SigBit, SigBit> f;
+                bool consistent = true;
+                for (int i = 0; i < GetSize(a); i++) {
+                    if (!a[i].wire) { consistent &= a[i] == b[i]; continue; }
+                    if (f.count(a[i]) && f.at(a[i]) != b[i]) consistent = false;
+                    f[a[i]] = b[i];
+                }
+                if (consistent) { facts[y[0]] = f; if (GetSize(a) >= 2 && GetSize(a) <= 6 && GetSize(f)==GetSize(a)) decode[y[0]] = {a,b.as_int()}; }
+            }
+            // decode is a subset of facts, so an empty facts map also rules
+            // out both operator factoring and equality-table reconstruction.
+            if (facts.empty()) continue;
+            for (auto c : module->selected_cells()) {
+                if (!c->type.in(ID($mux), ID($pmux)) || c->get_bool_attribute(ID::keep)) continue;
+                auto s = sigmap(c->getPort(ID::S));
+                auto b = c->getPort(ID::B);
+                int width = GetSize(c->getPort(ID::Y));
+                if (GetSize(b) != width * GetSize(s)) continue;
+                bool changed = false;
+                for (int arm = 0; arm < GetSize(s); arm++) {
+                    if (!facts.count(s[arm])) continue;
+                    auto &f = facts.at(s[arm]);
+                    for (int bit = 0; bit < width; bit++) {
+                        int index = arm * width + bit;
+                        auto value = sigmap(b[index]);
+                        if (f.count(value)) {
+                            b[index] = f.at(value);
+                            changed = true;
+                            replaced++;
+                        }
+                    }
+                }
+                if (changed) c->setPort(ID::B, b);
+            }
+            // Keep this guard after substitution: wider equality decoders
+            // still provide conditional facts even though decode is 2..6 bits.
+            // Substitution only changes data ports, so has_pmux is unchanged.
+            if (decode.empty() || !has_pmux) continue;
+            int factored = factor_pmux_operators(module, sigmap, decode);
+            log("PMUX_OPERATOR_FACTOR groups=%d\n", factored);
+            // Collect provably complete tables. Equality decoders on the same
+            // control vector are mutually exclusive, so every unlisted code
+            // selects the PMUX default input A.
+            struct TableTarget {
+                Cell *cell;
+                SigSpec ctrl;
+                int width;
+                int codes;
+                int explicit_arms;
+                std::vector<SigSpec> table;
+            };
+            std::vector<TableTarget> all_targets;
+            for (auto c:module->selected_cells()) {
+                if(c->type!=ID($pmux) || c->get_bool_attribute(ID::keep)) continue;
+                auto ss=sigmap(c->getPort(ID::S));int arms=GetSize(ss),width=GetSize(c->getPort(ID::Y));
+                if(width<1 || arms==0 || !decode.count(ss[0])) continue;
+                auto ctrl=decode.at(ss[0]).first; int bits=GetSize(ctrl),codes=1<<bits;
+                if(arms>codes) continue;
+                std::vector<SigSpec> table(codes); std::vector<bool> seen(codes,false);bool valid=true;
+                auto data=sigmap(c->getPort(ID::B));
+                for(int i=0;i<arms;i++) {
+                    if(!decode.count(ss[i]) || decode.at(ss[i]).first!=ctrl) {valid=false;break;}
+                    int code=decode.at(ss[i]).second;
+                    if(code<0 || code>=codes || seen[code]) {valid=false;break;}
+                    seen[code]=true;table[code]=data.extract(i*width,width);
+                }
+                if(valid && arms<codes) {
+                    if(GetSize(c->getPort(ID::A))!=width) valid=false;
+                    else {
+                        auto fallback=sigmap(c->getPort(ID::A));
+                        for(int code=0;code<codes;code++) if(!seen[code]) table[code]=fallback;
+                    }
+                }
+                if(!valid) continue;
+                all_targets.push_back({c,ctrl,width,codes,arms,table});
+            }
+            std::vector<std::vector<int>> groups;
+            for (int i=0;i<GetSize(all_targets);i++) {
+                int group=-1;
+                for (int g=0;g<GetSize(groups);g++)
+                    if(all_targets.at(groups.at(g).at(0)).ctrl==all_targets.at(i).ctrl) {group=g;break;}
+                if(group<0) groups.push_back({i}); else groups.at(group).push_back(i);
+            }
+            int total_cells=0,total_nodes=0,total_estimated=0;
+            for(auto &group:groups) {
+                auto &first=all_targets.at(group.at(0));
+                int bits=GetSize(first.ctrl),codes=first.codes;
+                dict<SigBit,int> leaves;
+                std::vector<SigBit> wires;
+                auto leaf=[&](SigBit bit) {
+                    bit=sigmap(bit);
+                    if(!leaves.count(bit)) {leaves[bit]=GetSize(wires);wires.push_back(bit);}
+                    return leaves.at(bit);
+                };
+                std::vector<int> selectors;
+                for(auto bit:first.ctrl) selectors.push_back(leaf(bit));
+                // The first trial previously registered these leaves in
+                // target/bit/code order. Hoist only this invariant work; node
+                // IDs are negative and do not depend on when later positive
+                // leaf IDs are registered. No module objects are created here.
+                std::vector<std::vector<std::vector<int>>> columns;
+                for (auto target_index : group) {
+                    auto &target = all_targets.at(target_index);
+                    std::vector<std::vector<int>> target_columns;
+                    for (int bit = 0; bit < target.width; bit++) {
+                        std::vector<int> column(codes);
+                        for (int code = 0; code < codes; code++)
+                            column.at(code) = leaf(target.table.at(code)[bit]);
+                        target_columns.push_back(std::move(column));
+                    }
+                    columns.push_back(std::move(target_columns));
+                }
+                std::vector<int> order(bits),best_order;
+                for(int i=0;i<bits;i++) order.at(i)=i;
+                std::vector<std::tuple<int,int,int>> best_nodes;
+                std::vector<std::vector<int>> best_outputs;
+                bool have_best=false;
+                auto make_graph=[&](const std::vector<int> &candidate_order,
+                                    std::vector<std::tuple<int,int,int>> &graph_nodes,
+                                    std::vector<std::vector<int>> &graph_outputs) -> bool {
+                    std::map<std::tuple<int,int,int>,int> memo;
+                    std::function<int(const std::vector<int>&,int,int)> build;
+                    build=[&](const std::vector<int> &column,int code,int depth)->int {
+                        if(depth==bits) return column.at(code);
+                        // code holds exactly the high choices made above.
+                        // Original ascending partitions also visit low then
+                        // high, so recursion, memo insertion and IDs are equal.
+                        int a=build(column,code,depth+1);
+                        int b=build(column,code|(1<<candidate_order.at(depth)),depth+1);
+                        if(a==b) return a;
+                        auto key=std::make_tuple(selectors.at(candidate_order.at(depth)),a,b);
+                        auto it=memo.find(key);if(it!=memo.end()) return it->second;
+                        int id=-1-GetSize(graph_nodes);graph_nodes.push_back(key);memo[key]=id;return id;
+                    };
+                    graph_outputs.clear();
+                    for(const auto &target_columns:columns) {
+                        std::vector<int> outputs;
+                        for(const auto &column:target_columns) {
+                            outputs.push_back(build(column,0,0));
+                            // Nodes only accumulate within a trial. Once this
+                            // lower bound reaches the incumbent, remaining
+                            // columns cannot make a strictly better graph.
+                            // No module objects are created until selection.
+                            if(have_best && GetSize(graph_nodes)>=GetSize(best_nodes))
+                                return false;
+                        }
+                        graph_outputs.push_back(outputs);
+                    }
+                    return true;
+                };
+                std::sort(order.begin(),order.end());
+                do {
+                    std::vector<std::tuple<int,int,int>> trial_nodes;
+                    std::vector<std::vector<int>> trial_outputs;
+                    bool complete=make_graph(order,trial_nodes,trial_outputs);
+                    if(complete && (!have_best || GetSize(trial_nodes)<GetSize(best_nodes))) {
+                        best_order=order;best_nodes.swap(trial_nodes);best_outputs.swap(trial_outputs);have_best=true;
+                    }
+                } while(std::next_permutation(order.begin(),order.end()));
+                int estimated_luts=0;
+                for(auto target_index:group) {
+                    auto &target=all_targets.at(target_index);
+                    // Compare against the PMUX structure actually being replaced,
+                    // not the larger completed truth-table space.
+                    estimated_luts+=target.width*((target.explicit_arms+1)/2+(target.explicit_arms/2+2)/3);
+                }
+                total_cells+=GetSize(group);total_nodes+=GetSize(best_nodes);total_estimated+=estimated_luts;
+                if(have_best && GetSize(best_nodes)<=estimated_luts) {
+                    std::vector<SigBit> mapped;
+                    mapped.reserve(GetSize(best_nodes));
+                    std::vector<int> node_depth;
+                    node_depth.reserve(GetSize(best_nodes));
+                    std::map<std::pair<int,int>,std::vector<int>> packed_nodes;
+                    // Build() inserts every child before its parent. Pack only
+                    // independent nodes at the same graph depth and selector;
+                    // grouping solely by selector could create cell-level
+                    // cycles when an aliased control bit occurs at two depths.
+                    for(int index=0;index<GetSize(best_nodes);index++) {
+                        const auto &node=best_nodes.at(index);
+                        int selector=std::get<0>(node);
+                        log_assert(selector>=0 && selector<GetSize(wires));
+                        auto child_depth=[&](int id)->int {
+                            if(id>=0) {
+                                log_assert(id<GetSize(wires));
+                                return 0;
+                            }
+                            int child=-1-id;
+                            log_assert(child>=0 && child<index);
+                            return node_depth.at(child);
+                        };
+                        int depth=1+std::max(child_depth(std::get<1>(node)),child_depth(std::get<2>(node)));
+                        node_depth.push_back(depth);
+                        packed_nodes[{depth,selector}].push_back(index);
+                        // Keep a separate output bit for each original node ID.
+                        mapped.push_back(module->addWire(NEW_ID));
+                    }
+                    auto resolve=[&](int id)->SigBit {return id>=0?wires.at(id):mapped.at(-1-id);};
+                    // std::map visits increasing depth first. Within a pack,
+                    // node IDs retain their original order and every A/B input
+                    // is a leaf or a strictly shallower node, never a peer.
+                    for(const auto &pack:packed_nodes) {
+                        SigSpec input_a,input_b,output_y;
+                        for(int index:pack.second) {
+                            const auto &node=best_nodes.at(index);
+                            input_a.append(resolve(std::get<1>(node)));
+                            input_b.append(resolve(std::get<2>(node)));
+                            output_y.append(mapped.at(index));
+                        }
+                        module->addMux(NEW_ID,input_a,input_b,resolve(pack.first.second),output_y);
+                    }
+                    log("PMUX_PACKED_TREE bit_mux_nodes=%d mux_cells=%d\n",GetSize(best_nodes),GetSize(packed_nodes));
+                    int target_number=0;
+                    for(auto target_index:group) {
+                        SigSpec result;
+                        for(int id:best_outputs.at(target_number++)) result.append(resolve(id));
+                        module->connect(all_targets.at(target_index).cell->getPort(ID::Y),result);
+                        module->remove(all_targets.at(target_index).cell);
+                    }
+                    log("PMUX_SHARED_TREE cells=%d mux_nodes=%d estimate_before=%d order=",GetSize(group),GetSize(best_nodes),estimated_luts);
+                    for(auto bit:best_order) log("%d",bit);
+                    log("\n");
+                }
+            }
+            log("PMUX_TREE_ESTIMATE cells=%d nodes=%d before=%d\n",total_cells,total_nodes,total_estimated);
+        }
+        log("PMUX_COMPETITION_OPT substituted_bits=%d\n", replaced);
+    }
+} PmuxCompetitionOpt;
+PRIVATE_NAMESPACE_END

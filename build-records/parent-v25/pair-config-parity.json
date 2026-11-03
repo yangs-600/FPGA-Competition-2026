@@ -1,0 +1,8 @@
+{
+  "status": "PASS_ALL_COMMON_NONABC_COMPILE_COMMANDS_IDENTICAL_AFTER_PATH_NORMALIZATION",
+  "utc": "2026-11-03T06:50:00.370110+00:00",
+  "common_entries": 347,
+  "candidate_extra": [
+    "passes/opt/pmux_competition_opt.cc"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "proof_started": true,
+  "scope": "18 actual Windows netlists plus mandatory negative control",
+  "kit": "/home/yangsenyu/fpga-windows-native-v25-20261103/FPGA-topic2-v23-EQY-Linux-0.69-20261027",
+  "manifest": "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/inputs/linux-proof-tool-manifest.json",
+  "bundle": "/mnt/d/fpga-win-native-20261103/shared-runtime-windows-evidence",
+  "output": "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once",
+  "kit_index_sha256": "ac50f798b70f4a105f8ad42e12ed16b03bb9ed87ce2ff2ad0194cdf66c4c6cd9",
+  "linux_proof_manifest_sha256": "3de53dc1860389ce886cfd5dd1539f61779c4aec97f64edbe5a81e7a357f51e2",
+  "windows_report_sha256": "fecd7eb44ae0aa5df482a88f892f7ef8c16cd5d6ec4e82ac5d8375280e2a53b0",
+  "inventory_sha256": "e88a9d18badd347a1367fd5521f8b9f27cb9cf5e1f757cb0c341704da9c4bfe0",
+  "frozen_kit_payload_count": 1442,
+  "windows_inventory_payload_count": 594,
+  "windows_exe_sha256": {
+    "baseline": "45c15841f039d998483142bf7ce726fc020bfa88651c4a6fc62eadf4313fa3d9",
+    "candidate": "d96ae554c9ee2f68d76cfdaf34e36f288cba022ccad10b22b79d8370ce6c9d29"
+  },
+  "windows_package_layout": "colocated_yosys_shared_runtime",
+  "windows_abc_locations": {
+    "baseline": "yosys-abc.exe",
+    "candidate": "yosys-abc.exe"
+  },
+  "performance_retested": false,
+  "overall_submission_acceptance": false,
+  "frozen_linux_proof_manifest_sha256": "22769263d7ffd2d647ec60e16b35e5063723a3d559bead2ff91a5ff922bd86aa",
+  "windows_recipe_sha256": "0ad315064a884d94676997ac6094cf7e679c7b0d3ff2d09431530b76d208c86e",
+  "proof_manifest_derivation": "Only current Windows recipe binding; frozen tools/strategies unchanged",
+  "frozen_manifest": "/home/yangsenyu/fpga-windows-native-v25-20261103/FPGA-topic2-v23-EQY-Linux-0.69-20261027/results/local-preflight/proof-tool-manifest.json",
+  "derived_manifest_changed_fields": [
+    "abc_script",
+    "abc_script_sha256",
+    "windows_recipe_binding"
+  ],
+  "command": [
+    "/home/yangsenyu/fpga-windows-native-v25-20261103/FPGA-topic2-v23-EQY-Linux-0.69-20261027/runtime/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "/home/yangsenyu/fpga-windows-native-v25-20261103/FPGA-topic2-v23-EQY-Linux-0.69-20261027/scripts/verify_windows_current.py",
+    "--repo",
+    "/home/yangsenyu/fpga-windows-native-v25-20261103/FPGA-topic2-v23-EQY-Linux-0.69-20261027",
+    "--manifest",
+    "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/inputs/linux-proof-tool-manifest.json",
+    "--bundle",
+    "/mnt/d/fpga-win-native-20261103/shared-runtime-windows-evidence",
+    "--output",
+    "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal",
+    "--strategy-timeout",
+    "300"
+  ],
+  "started_utc": "2026-11-03T08:04:17.078113+00:00",
+  "launcher_sha256": "fa07b24c15914b71aa928195b3e6624c48bb43b8d5be84de73478f6354bef9f9",
+  "helper_sha256": "7f8a8484e9886065a508aba1a2244ee74cabcc134dd06d230423e0d7e1b8731d",
+  "exit_code": 0,
+  "report_sha256": "73260427e9aa190185fbb4fe6311f6d2ef0768b20dd7b92f134a43e6a15ef5cd",
+  "positive_proof_counts": {
+    "PASS": 18
+  },
+  "negative_control": "EXPECTED_COUNTEREXAMPLE",
+  "source_kit_and_evidence_unchanged": true,
+  "completed_utc": "2026-11-03T08:05:05.254078+00:00"
+}

@@ -1,0 +1,119 @@
+{
+  "yosys_commit": "9f75ca1f9834a39a863915b5dae0c7b1e33533bc",
+  "source_origin_check": {
+    "tag": "v0.69",
+    "commit": "9f75ca1f9834a39a863915b5dae0c7b1e33533bc",
+    "matched_root_git_blobs": 3183,
+    "line_ending_comparison": "Exact Git blob bytes or CRLF to LF normalization",
+    "submodule_gitlinks": {
+      "abc": "a51bf4a7bb38ce06ea3a544b1463b40832213917",
+      "frontends/slang/lib": "b4fd362f4c53dc8ffab6946b9f866a6ea89e366d",
+      "libs/boost_regex": "2b3ac0834f31086c6e3c0e0ceb8516e427d5c39d",
+      "libs/cxxopts": "4bf61f08697b110d9e3991864650a405b3dd515d",
+      "libs/fmt": "a00f82c6b66dcae15503ba19c1598b2733057dea",
+      "libs/slang": "e222e7dc0250231312f14c37d47404a49df00fe2",
+      "libs/symfpu": "5d5e50867437fe5cabd6ab5aad3b3808ec86701f",
+      "libs/tomlplusplus": "a43ad3787293f4a46b1d70c0924b5a25d10e79fc"
+    },
+    "submodule_limit": "Expanded content pinned by previously recorded complete tar SHA-256. Local submodule Git objects unavailable; ABC exported commit matches gitlink."
+  },
+  "runtime_hashes": {
+    "yosys-abc.exe": "b17ea3f805418a28dc29250721be04ff2ec708fd8226e65a0815bbd6d11c9ad8",
+    "libffi-8.dll": "f96cf79b75f33a10023d001673b564538023395c94b3c58e1db53114976a7c25",
+    "libgcc_s_seh-1.dll": "08ab5e874e7ec066a4cbd0edd09d31779d6ee4d857ed84033d6b93b0334856c4",
+    "libstdc++-6.dll": "b70223508ddf99b98bacfb9d1484e729dcb9922982137f842e601a969da7a17c",
+    "libwinpthread-1.dll": "76cc52adfcdb8c800813b2ae8da42a908934eb1ee54ce8e9744fc8d703c76ee1",
+    "zlib1.dll": "11cd91171765cd65f1c3362e3df67e5f5a618a6b88c8cdec899b802eaf1c7b0d"
+  },
+  "toolchain": {
+    "gcc.exe": {
+      "path": "D:\\fpga-v14-work\\msys64\\ucrt64\\bin\\gcc.exe",
+      "sha256": "222b8da432c19458420bd16956a64e35a95b7af185c73e1c99c5e1f2f36a7861"
+    },
+    "g++.exe": {
+      "path": "D:\\fpga-v14-work\\msys64\\ucrt64\\bin\\g++.exe",
+      "sha256": "ee0d178ada2e139b53fb81f46ba55ffbcdda8228ef691afed93692d7fc51a316"
+    },
+    "cmake.exe": {
+      "path": "D:\\fpga-v14-work\\msys64\\ucrt64\\bin\\cmake.exe",
+      "sha256": "c149eaeba88191eec7383699873aaeabeb1625233e0b847e05e77dbf42201e55"
+    },
+    "ninja.exe": {
+      "path": "D:\\fpga-v14-work\\msys64\\ucrt64\\bin\\ninja.exe",
+      "sha256": "6db3d9e4443835fe40d4b1425a0a13012ae810c449f74ba5cb059e6ca16df4f0"
+    },
+    "strip.exe": {
+      "path": "D:\\fpga-v14-work\\msys64\\ucrt64\\bin\\strip.exe",
+      "sha256": "ad18528483f279a5abee07c4b9f7dc1f8ed74f9c1bcd72cecdbb104429d022a0"
+    },
+    "windres.exe": {
+      "path": "D:\\fpga-v14-work\\msys64\\ucrt64\\bin\\windres.exe",
+      "sha256": "38ab4f34eb2a76cfece48026d737a1321c5441b70d35ad7daee96325ea1ae210"
+    },
+    "gcc-ar.exe": {
+      "path": "D:\\fpga-v14-work\\msys64\\ucrt64\\bin\\gcc-ar.exe",
+      "sha256": "d0e00728c3c44ed7e82544a667dbb393eb3a216dd15ec3caaa8bad8880a5d7d0"
+    },
+    "gcc-ranlib.exe": {
+      "path": "D:\\fpga-v14-work\\msys64\\ucrt64\\bin\\gcc-ranlib.exe",
+      "sha256": "338ae95a5964ac1c02f8a5657ad95e0f5a97dd0756e5afb552c50abc58b87a54"
+    },
+    "ld.exe": {
+      "path": "D:\\fpga-v14-work\\msys64\\ucrt64\\bin\\ld.exe",
+      "sha256": "a279cc83f198a606f255a597b3a067b51f11a9bbf8fe46de2a0dc8bb71b47f4f"
+    },
+    "bison.exe": {
+      "path": "D:\\fpga-v14-work\\msys64\\usr\\bin\\bison.exe",
+      "sha256": "669d6187293f8b15652c1d831d0d78b1b8b9a1e02ec16d4b2f4a2433ab907eed"
+    },
+    "flex.exe": {
+      "path": "D:\\fpga-v14-work\\msys64\\usr\\bin\\flex.exe",
+      "sha256": "068c6bf3c60da00a2757a63bd009abf751236979c905e0b266411a8cd9a966c3"
+    },
+    "m4.exe": {
+      "path": "D:\\fpga-v14-work\\msys64\\usr\\bin\\m4.exe",
+      "sha256": "1ea03599e3898f5e058256c084e8ec8a7eda91f55891e61cb16cbeec3188c667"
+    },
+    "python.exe": {
+      "path": "C:\\Python314\\python.exe",
+      "sha256": "03168c01b7b7491423350e82c26fee71f35b43694d1319d3c668bda6903a0c38"
+    },
+    "git.exe": {
+      "path": "C:\\Users\\杨森宇\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd\\git.exe",
+      "sha256": "c53279919fdea03474bb23b465b3a82287157491f1bd69a5eb82dd9831582333"
+    }
+  },
+  "abc_sha256": "b17ea3f805418a28dc29250721be04ff2ec708fd8226e65a0815bbd6d11c9ad8",
+  "status": "PREPARED_INCREMENTAL_NOT_COMPILED_NOT_RUN",
+  "utc": "2026-11-03T07:34:09.487824+00:00",
+  "root": "D:\\fpga-win-native-20261103\\v26-incremental-build",
+  "candidate_version": "v26-packed-mux-f3",
+  "candidate_source_sha256": "75ed360b73180441fccbe0f5f8ed3f10e1d07147842d38eb74baedc133ce47d2",
+  "candidate_abc_script_sha256": "0ad315064a884d94676997ac6094cf7e679c7b0d3ff2d09431530b76d208c86e",
+  "patch_sha256": "9a52af4ea1ffec9b5f15ed509b014855089ce35487e94455589aa9d7e0b6a073",
+  "source_changed_files": [
+    "passes/opt/CMakeLists.txt",
+    "passes/opt/pmux_competition_opt.cc",
+    "techlibs/intel/CMakeLists.txt",
+    "techlibs/intel/competition_abc_v11.abc",
+    "techlibs/intel/synth_intel.cc"
+  ],
+  "source_overlay_files": {
+    "passes/opt/CMakeLists.txt": "bc1be15c3d70b67850bbe1c9159624f770c789f80fb0bfe047489ab194adbec6",
+    "passes/opt/pmux_competition_opt.cc": "75ed360b73180441fccbe0f5f8ed3f10e1d07147842d38eb74baedc133ce47d2",
+    "techlibs/intel/CMakeLists.txt": "d949bba4008c312eeffd657b15dd02af5aa5a35ccf0dbceb1aae20a5c2169c62",
+    "techlibs/intel/competition_abc_v11.abc": "0ad315064a884d94676997ac6094cf7e679c7b0d3ff2d09431530b76d208c86e",
+    "techlibs/intel/synth_intel.cc": "8c35ddc6a10558023b56eaf8954b1f0b1a0e0f5895718cce701f9d9e1dab25b1"
+  },
+  "build_mode": "incremental_one_translation_unit_from_fresh_v25",
+  "parent_build_root": "D:\\fpga-win-native-20261103\\minsize-fixed-build",
+  "parent_prepared_sha256": "81e7654ac19706050ddb61aefd79b79b4b07718738df48e30163b97ee1ccf4fe",
+  "parent_tree_snapshot_sha256": "a86ea6593506a907afbf8fc003e9198ea28a4fdff6e7935174752d3de01e9414",
+  "script_sha256": "7c294eb8e8d56cbbaed73f3681a7f92f81d30b28941b2c07e16c83be820ac464",
+  "incremental_plan_sha256": "d94b5df3537e37f4cf428d65f4ae1336c156b39329e91b65ba2e1b26739baacf",
+  "version_note": "Reuse original real 0.69 commit-dirty version object and its v25 build timestamp; incremental timestamp recorded separately.",
+  "flags": "Same MinSizeRel -fno-declone-ctor-dtor -Os; exactly one candidate TU recompiled. All other candidate objects and the complete baseline are reused from fresh v25.",
+  "abc_policy": "Fixed identical ABC executable bytes; candidate external script changes globally from F7 to F3. No synth_intel.cc change from v25.",
+  "formal_proofs": "NOT_RUN",
+  "performance": "NOT_RUN"
+}

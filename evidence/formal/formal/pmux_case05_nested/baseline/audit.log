@@ -1,0 +1,12 @@
+
+-- Executing script file `/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/pmux_case05_nested/baseline/audit.ys' --
+
+1. Executing Verilog-2005 frontend: /home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v
+Parsing Verilog input from `/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v' to AST representation.
+Generating RTLIL representation for module `\dffeas'.
+Successfully finished Verilog frontend.
+
+2. Executing RTLIL frontend.
+Input filename: /home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/pmux_case05_nested/baseline/postabc-lf.il
+
+3. Executing JSON backend.

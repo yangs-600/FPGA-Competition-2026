@@ -1,0 +1,975 @@
+{
+  "status": "RUNTIME_SYNTHESIS_PREFLIGHT_PASS",
+  "scope": "Copied-runtime and nine-case synthesis diagnostics only",
+  "formal_status": "NOT_RUN",
+  "performance_acceptance": false,
+  "overall_submission_acceptance": false,
+  "source_resources_inherited": false,
+  "package": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package",
+  "cases": [
+    {
+      "name": "test1",
+      "top": "test1",
+      "source_path": "competition_case/test1/test1.v",
+      "source_sha256": "2d2dba011b0e8799d0de3790b69b7f01c6eb6ac665c4321b57b0378a4972fd13",
+      "roles": {
+        "baseline": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-baseline.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\test1\\baseline\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.7699261000016122,
+          "timed_out": false,
+          "log_sha256": "49fe62cc070461fb9c21cebb72feb030221985f68af830d0d51924e179d55354",
+          "flow_sha256": "b7a2a46a3d953576ec788249f2583ff391bc7e0c26d3337bf4d748211e6228db",
+          "executable_sha256": "45c15841f039d998483142bf7ce726fc020bfa88651c4a6fc62eadf4313fa3d9",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\test1\\baseline",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "pmux_versions_in_log": [],
+          "counts": {
+            "by_type": {
+              "$not": 2,
+              "cycloneiv_lcell_comb": 286,
+              "dffeas": 222
+            },
+            "lut_cells": 286,
+            "not_cells": 2,
+            "scored_logic_cells": 288,
+            "dff_cells": 222,
+            "total_cells": 510
+          },
+          "netlist_json_sha256": "370df71e75508304675074e3a1ba809d8c0911010bab0fe82c319ff7c7b6aab5",
+          "netlist_verilog_sha256": "ded515cc76ff98664586099a5c99227eba0bf0b5dd4d000a150d6e2000424245",
+          "status": "PASS"
+        },
+        "candidate": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-candidate.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\test1\\candidate\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.3361177000006137,
+          "timed_out": false,
+          "log_sha256": "8823102f83b8b7e7090948ac0874860fba2814f5740604f72a2ba6718093a7d1",
+          "flow_sha256": "0cfb45b55a30fe4d41431110ea241b80a5748aedcfab8f9393986238b0c959d0",
+          "executable_sha256": "d96ae554c9ee2f68d76cfdaf34e36f288cba022ccad10b22b79d8370ce6c9d29",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\test1\\candidate",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "candidate_recipe_in_log": {
+            "log_token": "<yosys-exe-dir>/share/intel/competition_abc_v11.abc",
+            "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\share\\intel\\competition_abc_v11.abc",
+            "sha256": "0ad315064a884d94676997ac6094cf7e679c7b0d3ff2d09431530b76d208c86e",
+            "recipe": "&dch -f; &if -K 4 -a -C 4 -F 3 -A 1",
+            "delivery": "external_source"
+          },
+          "pmux_versions_in_log": [
+            "v26"
+          ],
+          "counts": {
+            "by_type": {
+              "$not": 3,
+              "cycloneiv_lcell_comb": 224,
+              "dffeas": 222
+            },
+            "lut_cells": 224,
+            "not_cells": 3,
+            "scored_logic_cells": 227,
+            "dff_cells": 222,
+            "total_cells": 449
+          },
+          "netlist_json_sha256": "e66e4d4abfcf913225d6dc69f344c612312df724e7e99cbe98ba3bb02b27e3be",
+          "netlist_verilog_sha256": "a50c6f99ce84bca25f15f18c662ec1a1d51bad74a5f676147ef26480ca1f2521",
+          "status": "PASS"
+        }
+      },
+      "logic_gain_percent": 21.180555555555557,
+      "logic_nonincrease": true,
+      "dff_nonincrease": true,
+      "other_cell_types_nonincrease": true
+    },
+    {
+      "name": "test2",
+      "top": "test2",
+      "source_path": "competition_case/test2/test2.v",
+      "source_sha256": "e43c9b437071488551caf3121e227e86f4fe3190751f245beac3b7ecc3fdb146",
+      "roles": {
+        "baseline": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-baseline.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\test2\\baseline\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.1782506999988982,
+          "timed_out": false,
+          "log_sha256": "986f27e67f105c42124f073bc090799b85d098739e66f7c401efd21335369f1e",
+          "flow_sha256": "ecc897aa081bd630cb0b28e83fd88a734e96846488687f8ac061338f34b79363",
+          "executable_sha256": "45c15841f039d998483142bf7ce726fc020bfa88651c4a6fc62eadf4313fa3d9",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\test2\\baseline",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "pmux_versions_in_log": [],
+          "counts": {
+            "by_type": {
+              "cycloneiv_lcell_comb": 25
+            },
+            "lut_cells": 25,
+            "not_cells": 0,
+            "scored_logic_cells": 25,
+            "dff_cells": 0,
+            "total_cells": 25
+          },
+          "netlist_json_sha256": "6a7e93e4aab8b5b610608eaa201341406c541e28915b467bb229c97bb3b55f93",
+          "netlist_verilog_sha256": "ff8eb0093f6f572d40ab89a7aedef5d0f906184e8d5c8e4e2f5dd9d3266401cd",
+          "status": "PASS"
+        },
+        "candidate": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-candidate.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\test2\\candidate\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.16384610000022803,
+          "timed_out": false,
+          "log_sha256": "5ec9b33bafb05d21c3b6b03588cb5b3e7875d71b7443887ab2f55886678b6c0c",
+          "flow_sha256": "f9f8cd38acae79fd6b88da1b8c0446a8feb2a22aae280ee01a92cdbaab8002f3",
+          "executable_sha256": "d96ae554c9ee2f68d76cfdaf34e36f288cba022ccad10b22b79d8370ce6c9d29",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\test2\\candidate",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "candidate_recipe_in_log": {
+            "log_token": "<yosys-exe-dir>/share/intel/competition_abc_v11.abc",
+            "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\share\\intel\\competition_abc_v11.abc",
+            "sha256": "0ad315064a884d94676997ac6094cf7e679c7b0d3ff2d09431530b76d208c86e",
+            "recipe": "&dch -f; &if -K 4 -a -C 4 -F 3 -A 1",
+            "delivery": "external_source"
+          },
+          "pmux_versions_in_log": [
+            "v26"
+          ],
+          "counts": {
+            "by_type": {
+              "cycloneiv_lcell_comb": 15
+            },
+            "lut_cells": 15,
+            "not_cells": 0,
+            "scored_logic_cells": 15,
+            "dff_cells": 0,
+            "total_cells": 15
+          },
+          "netlist_json_sha256": "3df658fbd493982f149cb6f4bd3a7ee41ad1173562843d8e4c01b6a90c80b267",
+          "netlist_verilog_sha256": "72858274e34d2e6760b24161a19243184b011773c2132085f4d5c0ef501b41f6",
+          "status": "PASS"
+        }
+      },
+      "logic_gain_percent": 40.0,
+      "logic_nonincrease": true,
+      "dff_nonincrease": true,
+      "other_cell_types_nonincrease": true
+    },
+    {
+      "name": "test3",
+      "top": "test3",
+      "source_path": "competition_case/test3/test3.v",
+      "source_sha256": "1551b9212622ccef6019d6e77de2c43dc8c80d267957b55a42121f34a08780e9",
+      "roles": {
+        "baseline": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-baseline.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\test3\\baseline\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.2097670000002836,
+          "timed_out": false,
+          "log_sha256": "9934bdbd314223409d57eea379da70884980de10e6ab6f24a020cf449cf07ffe",
+          "flow_sha256": "71ccdc4b1673fa1b6009083e2fc73bab32194dc73a99425fd67453ffec6af378",
+          "executable_sha256": "45c15841f039d998483142bf7ce726fc020bfa88651c4a6fc62eadf4313fa3d9",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\test3\\baseline",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "pmux_versions_in_log": [],
+          "counts": {
+            "by_type": {
+              "$not": 1,
+              "cycloneiv_lcell_comb": 12,
+              "dffeas": 17
+            },
+            "lut_cells": 12,
+            "not_cells": 1,
+            "scored_logic_cells": 13,
+            "dff_cells": 17,
+            "total_cells": 30
+          },
+          "netlist_json_sha256": "2520609b225da7d9d7b986fd9dd8e6b99a63fa3adc14d55c55ef447ad99b55b0",
+          "netlist_verilog_sha256": "2541e97e1aee2d1e09e3a4676ce4ebc05aadee106626cd9f0b60c31a4c972a81",
+          "status": "PASS"
+        },
+        "candidate": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-candidate.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\test3\\candidate\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.20597500000076252,
+          "timed_out": false,
+          "log_sha256": "06f799f6edfb6bfe08822f2f12ccd367a61291ca0cbab66f376c43a6d61d15fe",
+          "flow_sha256": "f7d3c414a73050a99dc3c5020620aa617153019d7bf562df68b80a577ae72c63",
+          "executable_sha256": "d96ae554c9ee2f68d76cfdaf34e36f288cba022ccad10b22b79d8370ce6c9d29",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\test3\\candidate",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "candidate_recipe_in_log": {
+            "log_token": "<yosys-exe-dir>/share/intel/competition_abc_v11.abc",
+            "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\share\\intel\\competition_abc_v11.abc",
+            "sha256": "0ad315064a884d94676997ac6094cf7e679c7b0d3ff2d09431530b76d208c86e",
+            "recipe": "&dch -f; &if -K 4 -a -C 4 -F 3 -A 1",
+            "delivery": "external_source"
+          },
+          "pmux_versions_in_log": [
+            "v26"
+          ],
+          "counts": {
+            "by_type": {
+              "$not": 1,
+              "cycloneiv_lcell_comb": 12,
+              "dffeas": 12
+            },
+            "lut_cells": 12,
+            "not_cells": 1,
+            "scored_logic_cells": 13,
+            "dff_cells": 12,
+            "total_cells": 25
+          },
+          "netlist_json_sha256": "adeb28b877db8982561b782e87ab010098e4747debbb0553c2d372eea2a3fac1",
+          "netlist_verilog_sha256": "045726b0f7f6dd4c67190ec7df5188709400bac5ad901661244267480c8e26c1",
+          "status": "PASS"
+        }
+      },
+      "logic_gain_percent": 0.0,
+      "logic_nonincrease": true,
+      "dff_nonincrease": true,
+      "other_cell_types_nonincrease": true
+    },
+    {
+      "name": "test4",
+      "top": "test4",
+      "source_path": "competition_case/test4/test4.v",
+      "source_sha256": "c0c5042928bd6bf568e2b7fb2193f2b6db9c4193ba3a5378fc50a331d43422d7",
+      "roles": {
+        "baseline": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-baseline.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\test4\\baseline\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.23451240000213147,
+          "timed_out": false,
+          "log_sha256": "50512856566ede11f7ae923f43d68311e073cbf6aef16621829fefbc7f753ff1",
+          "flow_sha256": "b40813364cc6f81c77c1f24de2249cfa56a2a8ec0ad9c4744cbbf88cf1a35890",
+          "executable_sha256": "45c15841f039d998483142bf7ce726fc020bfa88651c4a6fc62eadf4313fa3d9",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\test4\\baseline",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "pmux_versions_in_log": [],
+          "counts": {
+            "by_type": {
+              "$not": 1,
+              "cycloneiv_lcell_comb": 35,
+              "dffeas": 10
+            },
+            "lut_cells": 35,
+            "not_cells": 1,
+            "scored_logic_cells": 36,
+            "dff_cells": 10,
+            "total_cells": 46
+          },
+          "netlist_json_sha256": "8e77393fc9c9a26b40f46bfe251f3649ddc6da16e1b600ee02988be1658e11ae",
+          "netlist_verilog_sha256": "cdcbd68114d82a7b8d80b708302b1e38af159956c8ab038bb528e8265f2d334e",
+          "status": "PASS"
+        },
+        "candidate": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-candidate.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\test4\\candidate\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.2700552999995125,
+          "timed_out": false,
+          "log_sha256": "de7314f450ada5b62d0712a85e56dea038cfee645e82d0a4bcb1cd8a222f74d3",
+          "flow_sha256": "14839c1bac00a8735e99d7cc62f14e168b75bb5cfe3a0e5e439bf89e28202a41",
+          "executable_sha256": "d96ae554c9ee2f68d76cfdaf34e36f288cba022ccad10b22b79d8370ce6c9d29",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\test4\\candidate",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "candidate_recipe_in_log": {
+            "log_token": "<yosys-exe-dir>/share/intel/competition_abc_v11.abc",
+            "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\share\\intel\\competition_abc_v11.abc",
+            "sha256": "0ad315064a884d94676997ac6094cf7e679c7b0d3ff2d09431530b76d208c86e",
+            "recipe": "&dch -f; &if -K 4 -a -C 4 -F 3 -A 1",
+            "delivery": "external_source"
+          },
+          "pmux_versions_in_log": [
+            "v26"
+          ],
+          "counts": {
+            "by_type": {
+              "$not": 1,
+              "cycloneiv_lcell_comb": 26,
+              "dffeas": 10
+            },
+            "lut_cells": 26,
+            "not_cells": 1,
+            "scored_logic_cells": 27,
+            "dff_cells": 10,
+            "total_cells": 37
+          },
+          "netlist_json_sha256": "0926d9922ad11dcb6b7857d5d740396b14b78701ced4a993021aefb520f7a402",
+          "netlist_verilog_sha256": "c4960d756d2f366538d63d9ccd56dc4ffa9d187c6e2f3eb0c4b92df35fe49567",
+          "status": "PASS"
+        }
+      },
+      "logic_gain_percent": 25.0,
+      "logic_nonincrease": true,
+      "dff_nonincrease": true,
+      "other_cell_types_nonincrease": true
+    },
+    {
+      "name": "pmux_case01_balanced",
+      "top": "pmux_case01_balanced",
+      "source_path": "competition_case/pmux_cases/pmux_case01_balanced.v",
+      "source_sha256": "463263f4b265cbad3b634d69d316cd29e7ea0a62f91ee396dbeeecf7df5c7343",
+      "roles": {
+        "baseline": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-baseline.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case01_balanced\\baseline\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.3722905999966315,
+          "timed_out": false,
+          "log_sha256": "d645f58d4d1fad0c4cfdefc4754cb8abdd391bfac03d6191c225a78578fee34e",
+          "flow_sha256": "5d57ae6cc81109f715936aa356b76182231ecd59853a37d588d581a0028b18e8",
+          "executable_sha256": "45c15841f039d998483142bf7ce726fc020bfa88651c4a6fc62eadf4313fa3d9",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case01_balanced\\baseline",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "pmux_versions_in_log": [],
+          "counts": {
+            "by_type": {
+              "cycloneiv_lcell_comb": 426,
+              "dffeas": 12
+            },
+            "lut_cells": 426,
+            "not_cells": 0,
+            "scored_logic_cells": 426,
+            "dff_cells": 12,
+            "total_cells": 438
+          },
+          "netlist_json_sha256": "d0c3b66e7c2c2194597d4b20195a807982aae24fb644b2ae19c7f42ab50a28e5",
+          "netlist_verilog_sha256": "b2e88a5365308a7b5836e1da50baaeb8f3dad0b478fd36dbda09f2d79d4f9f9a",
+          "status": "PASS"
+        },
+        "candidate": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-candidate.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case01_balanced\\candidate\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.3497299999980896,
+          "timed_out": false,
+          "log_sha256": "230251ba9aa6b12adf783cb2512ae187d0428017fa5f3065c01a68b004cca6ea",
+          "flow_sha256": "2a9d199f3510b98e9d7215419a79ffa1f1497106fcda0da6d946ce054d533978",
+          "executable_sha256": "d96ae554c9ee2f68d76cfdaf34e36f288cba022ccad10b22b79d8370ce6c9d29",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case01_balanced\\candidate",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "candidate_recipe_in_log": {
+            "log_token": "<yosys-exe-dir>/share/intel/competition_abc_v11.abc",
+            "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\share\\intel\\competition_abc_v11.abc",
+            "sha256": "0ad315064a884d94676997ac6094cf7e679c7b0d3ff2d09431530b76d208c86e",
+            "recipe": "&dch -f; &if -K 4 -a -C 4 -F 3 -A 1",
+            "delivery": "external_source"
+          },
+          "pmux_versions_in_log": [
+            "v26"
+          ],
+          "counts": {
+            "by_type": {
+              "cycloneiv_lcell_comb": 369,
+              "dffeas": 12
+            },
+            "lut_cells": 369,
+            "not_cells": 0,
+            "scored_logic_cells": 369,
+            "dff_cells": 12,
+            "total_cells": 381
+          },
+          "netlist_json_sha256": "b03f93dc3cf5749e88fa55eac3f7541483f36480f4547af9b441e685bae82d30",
+          "netlist_verilog_sha256": "727667c79199a549fbc3effd981710035e8a99223d4b9bcded6026e915f57f1e",
+          "status": "PASS"
+        }
+      },
+      "logic_gain_percent": 13.380281690140846,
+      "logic_nonincrease": true,
+      "dff_nonincrease": true,
+      "other_cell_types_nonincrease": true
+    },
+    {
+      "name": "pmux_case02_pipeline",
+      "top": "pmux_case02_pipeline",
+      "source_path": "competition_case/pmux_cases/pmux_case02_pipeline.v",
+      "source_sha256": "8639081b2fb7c446edef52a514d63b49333e444ce21638f03bdee97dc954e0ea",
+      "roles": {
+        "baseline": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-baseline.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case02_pipeline\\baseline\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.4204692999992403,
+          "timed_out": false,
+          "log_sha256": "f8b76c7e076912cf8bb44b4cdc9a00af56457fdf9b46c9c3bceded91a5b3fd00",
+          "flow_sha256": "f62499653613ac73d82be7d4150a9eaaddf28431d73a8d36328f7e0f089c87fd",
+          "executable_sha256": "45c15841f039d998483142bf7ce726fc020bfa88651c4a6fc62eadf4313fa3d9",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case02_pipeline\\baseline",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "pmux_versions_in_log": [],
+          "counts": {
+            "by_type": {
+              "cycloneiv_lcell_comb": 450,
+              "dffeas": 24
+            },
+            "lut_cells": 450,
+            "not_cells": 0,
+            "scored_logic_cells": 450,
+            "dff_cells": 24,
+            "total_cells": 474
+          },
+          "netlist_json_sha256": "610cfb4dc8fbb58797a5dce1b2aa5a23eaf069e9caad648416de039d8cd417a3",
+          "netlist_verilog_sha256": "00d3087013965e6e588ff358368322df50ca584fda3e7aca3ea0c76b078adbdf",
+          "status": "PASS"
+        },
+        "candidate": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-candidate.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case02_pipeline\\candidate\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.37133479999829433,
+          "timed_out": false,
+          "log_sha256": "1ff775baa62b71d36177491e6b0c2e73218559804750006a2582665b651df7e8",
+          "flow_sha256": "db0ed91bb66e4763c7c72b607f1aa9c6026fa5ab088246be823807be013eaf59",
+          "executable_sha256": "d96ae554c9ee2f68d76cfdaf34e36f288cba022ccad10b22b79d8370ce6c9d29",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case02_pipeline\\candidate",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "candidate_recipe_in_log": {
+            "log_token": "<yosys-exe-dir>/share/intel/competition_abc_v11.abc",
+            "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\share\\intel\\competition_abc_v11.abc",
+            "sha256": "0ad315064a884d94676997ac6094cf7e679c7b0d3ff2d09431530b76d208c86e",
+            "recipe": "&dch -f; &if -K 4 -a -C 4 -F 3 -A 1",
+            "delivery": "external_source"
+          },
+          "pmux_versions_in_log": [
+            "v26"
+          ],
+          "counts": {
+            "by_type": {
+              "cycloneiv_lcell_comb": 348,
+              "dffeas": 24
+            },
+            "lut_cells": 348,
+            "not_cells": 0,
+            "scored_logic_cells": 348,
+            "dff_cells": 24,
+            "total_cells": 372
+          },
+          "netlist_json_sha256": "7d83c66337573c39fd468792c03af226201edd81053bdf303db409a265121cb8",
+          "netlist_verilog_sha256": "0861e28d470f5ede7555d42b8ed1c5128cb27ec20a7cbfd6bc47c36d391b6eae",
+          "status": "PASS"
+        }
+      },
+      "logic_gain_percent": 22.666666666666668,
+      "logic_nonincrease": true,
+      "dff_nonincrease": true,
+      "other_cell_types_nonincrease": true
+    },
+    {
+      "name": "pmux_case03_crossbar",
+      "top": "pmux_case03_crossbar",
+      "source_path": "competition_case/pmux_cases/pmux_case03_crossbar.v",
+      "source_sha256": "bf1fc3bf6383beb007a69587d77a29ea74fb1fbdf7429fb401c0855a31c05932",
+      "roles": {
+        "baseline": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-baseline.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case03_crossbar\\baseline\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.39718640000137384,
+          "timed_out": false,
+          "log_sha256": "6e9e22f73aa72063ed8da52bab5ea346345272e2004edc176c61f99cf6be1ad5",
+          "flow_sha256": "2ee8ed911555141e4dd5b965318a46b984d15d48b4b1364264bfa1597598aca4",
+          "executable_sha256": "45c15841f039d998483142bf7ce726fc020bfa88651c4a6fc62eadf4313fa3d9",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case03_crossbar\\baseline",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "pmux_versions_in_log": [],
+          "counts": {
+            "by_type": {
+              "cycloneiv_lcell_comb": 408,
+              "dffeas": 10
+            },
+            "lut_cells": 408,
+            "not_cells": 0,
+            "scored_logic_cells": 408,
+            "dff_cells": 10,
+            "total_cells": 418
+          },
+          "netlist_json_sha256": "4fefd8ae07c6360c17cad1a04fdbea336af56cfba704e4e05c95ff92561d116a",
+          "netlist_verilog_sha256": "6e4ec7415d43a5ae2401422c6dbc988e4faf75ad9d32a8cbb270981a4d2837d4",
+          "status": "PASS"
+        },
+        "candidate": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-candidate.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case03_crossbar\\candidate\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.28908790000059525,
+          "timed_out": false,
+          "log_sha256": "2d5a17cf0013321b75a4cf0a56bc4be8a93045f92d7acdf69c3dcc765a72cc8f",
+          "flow_sha256": "928eca19d106d0776034a1086e52377faa18e15600bf60f43fb2440344ef28c0",
+          "executable_sha256": "d96ae554c9ee2f68d76cfdaf34e36f288cba022ccad10b22b79d8370ce6c9d29",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case03_crossbar\\candidate",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "candidate_recipe_in_log": {
+            "log_token": "<yosys-exe-dir>/share/intel/competition_abc_v11.abc",
+            "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\share\\intel\\competition_abc_v11.abc",
+            "sha256": "0ad315064a884d94676997ac6094cf7e679c7b0d3ff2d09431530b76d208c86e",
+            "recipe": "&dch -f; &if -K 4 -a -C 4 -F 3 -A 1",
+            "delivery": "external_source"
+          },
+          "pmux_versions_in_log": [
+            "v26"
+          ],
+          "counts": {
+            "by_type": {
+              "cycloneiv_lcell_comb": 265,
+              "dffeas": 10
+            },
+            "lut_cells": 265,
+            "not_cells": 0,
+            "scored_logic_cells": 265,
+            "dff_cells": 10,
+            "total_cells": 275
+          },
+          "netlist_json_sha256": "0703f4e3b11c62ef0eefef869a41f8cd0c945221f1c04d89952bdbcf3766aa67",
+          "netlist_verilog_sha256": "d74447a768ccfb8a9ea42084616176ce9f322b7a91bedb9356d8eeaea8cbbb5c",
+          "status": "PASS"
+        }
+      },
+      "logic_gain_percent": 35.049019607843135,
+      "logic_nonincrease": true,
+      "dff_nonincrease": true,
+      "other_cell_types_nonincrease": true
+    },
+    {
+      "name": "pmux_case04_feedback",
+      "top": "pmux_case04_feedback",
+      "source_path": "competition_case/pmux_cases/pmux_case04_feedback.v",
+      "source_sha256": "d668d258d804674dd1412538e7bce04d4630d02928ffe113413b536e6b9ed70f",
+      "roles": {
+        "baseline": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-baseline.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case04_feedback\\baseline\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.35307010000178707,
+          "timed_out": false,
+          "log_sha256": "35a998741b147d7840ecddffc29c5c86c4a5697fadd5fbe97cf6c68e0b590305",
+          "flow_sha256": "9c7e819d3e8d5a6250172dfcd273ee843bba2ba8e863b66d16306e445f01827e",
+          "executable_sha256": "45c15841f039d998483142bf7ce726fc020bfa88651c4a6fc62eadf4313fa3d9",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case04_feedback\\baseline",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "pmux_versions_in_log": [],
+          "counts": {
+            "by_type": {
+              "$not": 1,
+              "cycloneiv_lcell_comb": 367,
+              "dffeas": 16
+            },
+            "lut_cells": 367,
+            "not_cells": 1,
+            "scored_logic_cells": 368,
+            "dff_cells": 16,
+            "total_cells": 384
+          },
+          "netlist_json_sha256": "f0cbb72624b25956ca4cc285b8aa5c4a7b3af3702dda3dda413181ae962f5f80",
+          "netlist_verilog_sha256": "447fd142f48b0bce2dfe4da8cd20bfd9c890c6ea072263e1a5013165ee454ddd",
+          "status": "PASS"
+        },
+        "candidate": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-candidate.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case04_feedback\\candidate\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.32151819999853615,
+          "timed_out": false,
+          "log_sha256": "1acd351132b54775b521d3cbcf1ee49adf34ed2a105bfa211c3f55788afdcb4d",
+          "flow_sha256": "29dba1a915f742987d82aa4fd6568b8eb99644f7958e56e28ae85076c3c66d9f",
+          "executable_sha256": "d96ae554c9ee2f68d76cfdaf34e36f288cba022ccad10b22b79d8370ce6c9d29",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case04_feedback\\candidate",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "candidate_recipe_in_log": {
+            "log_token": "<yosys-exe-dir>/share/intel/competition_abc_v11.abc",
+            "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\share\\intel\\competition_abc_v11.abc",
+            "sha256": "0ad315064a884d94676997ac6094cf7e679c7b0d3ff2d09431530b76d208c86e",
+            "recipe": "&dch -f; &if -K 4 -a -C 4 -F 3 -A 1",
+            "delivery": "external_source"
+          },
+          "pmux_versions_in_log": [
+            "v26"
+          ],
+          "counts": {
+            "by_type": {
+              "$not": 1,
+              "cycloneiv_lcell_comb": 336,
+              "dffeas": 16
+            },
+            "lut_cells": 336,
+            "not_cells": 1,
+            "scored_logic_cells": 337,
+            "dff_cells": 16,
+            "total_cells": 353
+          },
+          "netlist_json_sha256": "ac516cfd312cf4efa7cdfd4c3561468c13bf8697fb442f9599d51d305b6a64a3",
+          "netlist_verilog_sha256": "8c3f224832c8a195edecc58bcc3d72250926db839f3db7bb882e4b3d9741b866",
+          "status": "PASS"
+        }
+      },
+      "logic_gain_percent": 8.423913043478262,
+      "logic_nonincrease": true,
+      "dff_nonincrease": true,
+      "other_cell_types_nonincrease": true
+    },
+    {
+      "name": "pmux_case05_nested",
+      "top": "pmux_case05_nested",
+      "source_path": "competition_case/pmux_cases/pmux_case05_nested.v",
+      "source_sha256": "57d64edd3704d9d74407145080a63d06390e4a598c419a948fdea22fb1147f1d",
+      "roles": {
+        "baseline": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-baseline.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case05_nested\\baseline\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.3680729000006977,
+          "timed_out": false,
+          "log_sha256": "1dcaf015f4ce9f561a55e499e81fbf3ca032f7e33b20630b6600f842428722ca",
+          "flow_sha256": "a6664065d13a7eba210e839542bb73c38b92a5e7fbbb8777264a5481670f1217",
+          "executable_sha256": "45c15841f039d998483142bf7ce726fc020bfa88651c4a6fc62eadf4313fa3d9",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case05_nested\\baseline",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "pmux_versions_in_log": [],
+          "counts": {
+            "by_type": {
+              "cycloneiv_lcell_comb": 413,
+              "dffeas": 12
+            },
+            "lut_cells": 413,
+            "not_cells": 0,
+            "scored_logic_cells": 413,
+            "dff_cells": 12,
+            "total_cells": 425
+          },
+          "netlist_json_sha256": "16bfbbdc850129ff9e31ab0804d00e5ee7ab7b521f8cdfebd8934b9226c1d211",
+          "netlist_verilog_sha256": "2281e87c0f6000272fadfb3d1b2ae11a55c7f2ef2d8018466b025c7ea101adc9",
+          "status": "PASS"
+        },
+        "candidate": {
+          "command": [
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-candidate.exe",
+            "-Q",
+            "-T",
+            "-s",
+            "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case05_nested\\candidate\\flow.ys"
+          ],
+          "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+          "exit_code": 0,
+          "diagnostic_elapsed_seconds": 0.34303619999991497,
+          "timed_out": false,
+          "log_sha256": "bb4ee6208952d178ecba39d03a1fb71fe86a1d8fcb7e868e17b951c3e8f2d13d",
+          "flow_sha256": "df8f6e9177f66597f44f94765c5f9fcfb1c4df67f8b4c03a1aa860da510aa2c0",
+          "executable_sha256": "d96ae554c9ee2f68d76cfdaf34e36f288cba022ccad10b22b79d8370ce6c9d29",
+          "directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\synthesis\\pmux_case05_nested\\candidate",
+          "abc_log_commands": [
+            {
+              "log_token": "<yosys-exe-dir>/yosys-abc",
+              "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-abc.exe",
+              "interpretation": "Yosys abbreviated common executable directory"
+            }
+          ],
+          "candidate_recipe_in_log": {
+            "log_token": "<yosys-exe-dir>/share/intel/competition_abc_v11.abc",
+            "resolved_path": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\share\\intel\\competition_abc_v11.abc",
+            "sha256": "0ad315064a884d94676997ac6094cf7e679c7b0d3ff2d09431530b76d208c86e",
+            "recipe": "&dch -f; &if -K 4 -a -C 4 -F 3 -A 1",
+            "delivery": "external_source"
+          },
+          "pmux_versions_in_log": [
+            "v26"
+          ],
+          "counts": {
+            "by_type": {
+              "cycloneiv_lcell_comb": 351,
+              "dffeas": 12
+            },
+            "lut_cells": 351,
+            "not_cells": 0,
+            "scored_logic_cells": 351,
+            "dff_cells": 12,
+            "total_cells": 363
+          },
+          "netlist_json_sha256": "6ff34976fa12c938d84cd5f38b2596ef9e0b0a4ac36c5449431f212068b464c8",
+          "netlist_verilog_sha256": "c5c8f1753152e1939b913de7a379f267f4999bc7199beb940312f5584dd8a1c4",
+          "status": "PASS"
+        }
+      },
+      "logic_gain_percent": 15.012106537530267,
+      "logic_nonincrease": true,
+      "dff_nonincrease": true,
+      "other_cell_types_nonincrease": true
+    }
+  ],
+  "versions": {
+    "baseline": {
+      "command": [
+        "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-baseline.exe",
+        "--version"
+      ],
+      "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+      "exit_code": 0,
+      "diagnostic_elapsed_seconds": 0.5370500000026368,
+      "timed_out": false,
+      "log_sha256": "1e77d60f2783363eaa4dd792c83d99ff28b89891680246106d6cb3b57da5691b",
+      "text": "Yosys 0.69 (git sha1 9f75ca1f9834a39a863915b5dae0c7b1e33533bc, MinSizeRel, GNU D:/fpga-v14-work/msys64/ucrt64/bin/g++.exe 16.2.0)"
+    },
+    "candidate": {
+      "command": [
+        "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\yosys-candidate.exe",
+        "--version"
+      ],
+      "cwd": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+      "exit_code": 0,
+      "diagnostic_elapsed_seconds": 0.3724526000005426,
+      "timed_out": false,
+      "log_sha256": "564bb1389ba9d663ff45962cab38cbc67d3fcc6b20a28195770e262cd9410ec5",
+      "text": "Yosys 0.69 (git sha1 9f75ca1f9834a39a863915b5dae0c7b1e33533bc-dirty, MinSizeRel, GNU D:/fpga-v14-work/msys64/ucrt64/bin/g++.exe 16.2.0)"
+    }
+  },
+  "started_utc": "2026-11-03T07:59:19.226023+00:00",
+  "manifest_sha256": "2a258fd99ce775729658355f352773e668f862b3bada09bc88cd00fa955e56d5",
+  "runner_sha256": "8edf2322f8a25f6db8d3c7ad71b7d6174e8b9ebbe055cc8a8a56e0f342ed8baa",
+  "case_registry_sha256": "6360cd97fb17315cc39ed6d6d8a21ce1d99dcc99b1541fe1a92d64dfeefc26da",
+  "yosys_working_directory": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\neutral-cwd",
+  "yosys_lookup_policy": "Absolute tool/input/output paths; fresh empty neutral cwd; no YOSYS_DATDIR/ABC/YOSYS_ABC override; clean system-only PATH",
+  "embedded_python": {
+    "status": "PASS",
+    "executable": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\runtime\\python.exe",
+    "version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "isolated": 1,
+    "no_site": 1,
+    "ignore_environment": 1,
+    "sys_path": [
+      "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\runtime\\python312.zip",
+      "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\runtime\\DLLs",
+      "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\runtime",
+      "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package"
+    ],
+    "expected_sys_path": [
+      "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\runtime\\python312.zip",
+      "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\runtime\\DLLs",
+      "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\runtime",
+      "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package"
+    ],
+    "path_policy": "Exact frozen _pth order; parent entry restricted to this copied package root",
+    "prefix": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\runtime",
+    "intentionally_invalid_pythonhome": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\INVALID_PYTHONHOME_DO_NOT_CREATE",
+    "intentionally_invalid_pythonpath": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\INVALID_PYTHONPATH_DO_NOT_CREATE",
+    "clean_path": "C:\\Windows\\System32;C:\\Windows"
+  },
+  "completed_syntheses": 18,
+  "mean_per_case_logic_gain_percent": 20.079171455690528,
+  "all_logic_nonincrease": true,
+  "all_dff_nonincrease": true,
+  "all_other_cell_types_nonincrease": true,
+  "copied_inputs_and_tools_unchanged": true,
+  "neutral_working_directory_stayed_empty": true,
+  "automatic_executable_directory_lookup_verified": true,
+  "diagnostic_area_rule_satisfied": true,
+  "completed_utc": "2026-11-03T07:59:28.747541+00:00"
+}

@@ -1,0 +1,301 @@
+SBY 16:04:38 [test1.inter0009_out] Removing directory '/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/test1/candidate/proof/strategies/test1.inter0009_out/pdr/test1.inter0009_out'.
+SBY 16:04:38 [test1.inter0009_out] engine_0: abc pdr
+SBY 16:04:38 [test1.inter0009_out] base: starting process "cd test1.inter0009_out/src; /home/yangsenyu/fpga-windows-native-v25-20261103/FPGA-topic2-v23-EQY-Linux-0.69-20261027/runtime/bin/yosys -ql ../model/design.log ../model/design.ys"
+SBY 16:04:38 [test1.inter0009_out] base: finished (returncode=0)
+SBY 16:04:38 [test1.inter0009_out] prep: starting process "cd test1.inter0009_out/model; /home/yangsenyu/fpga-windows-native-v25-20261103/FPGA-topic2-v23-EQY-Linux-0.69-20261027/runtime/bin/yosys -ql design_prep.log design_prep.ys"
+SBY 16:04:38 [test1.inter0009_out] prep: finished (returncode=0)
+SBY 16:04:38 [test1.inter0009_out] aig: starting process "cd test1.inter0009_out/model; /home/yangsenyu/fpga-windows-native-v25-20261103/FPGA-topic2-v23-EQY-Linux-0.69-20261027/runtime/bin/yosys -ql design_aiger.log design_aiger.ys"
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_valid like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_reset like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_clock like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q7__15_4 [0] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q7__15_4 [1] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q7__15_4 [2] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q7__15_4 [3] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q7__15_4 [4] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q7__15_4 [5] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q7__15_4 [6] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q7__15_4 [7] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q7__15_4 [8] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q7__15_4 [9] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q7__15_4 [10] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q7__15_4 [11] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q6__15_4 [0] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q6__15_4 [1] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q6__15_4 [2] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q6__15_4 [3] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q6__15_4 [4] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q6__15_4 [5] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q6__15_4 [6] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q6__15_4 [7] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q6__15_4 [8] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q6__15_4 [9] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q6__15_4 [10] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q6__15_4 [11] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q5__15_4 [0] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q5__15_4 [1] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q5__15_4 [2] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q5__15_4 [3] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q5__15_4 [4] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q5__15_4 [5] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q5__15_4 [6] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q5__15_4 [7] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q5__15_4 [8] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q5__15_4 [9] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q5__15_4 [10] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q5__15_4 [11] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q4__15_4 [0] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q4__15_4 [1] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q4__15_4 [2] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q4__15_4 [3] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q4__15_4 [4] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q4__15_4 [5] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q4__15_4 [6] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q4__15_4 [7] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q4__15_4 [8] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q4__15_4 [9] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q4__15_4 [10] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q4__15_4 [11] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q3__15_4 [0] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q3__15_4 [1] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q3__15_4 [2] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q3__15_4 [3] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q3__15_4 [4] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q3__15_4 [5] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q3__15_4 [6] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q3__15_4 [7] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q3__15_4 [8] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q3__15_4 [9] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q3__15_4 [10] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q3__15_4 [11] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q2__15_4 [0] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q2__15_4 [1] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q2__15_4 [2] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q2__15_4 [3] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q2__15_4 [4] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q2__15_4 [5] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q2__15_4 [6] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q2__15_4 [7] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q2__15_4 [8] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q2__15_4 [9] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q2__15_4 [10] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q2__15_4 [11] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q1__15_4 [0] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q1__15_4 [1] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q1__15_4 [2] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q1__15_4 [3] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q1__15_4 [4] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q1__15_4 [5] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q1__15_4 [6] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q1__15_4 [7] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q1__15_4 [8] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q1__15_4 [9] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q1__15_4 [10] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q1__15_4 [11] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q0__15_4 [0] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q0__15_4 [1] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q0__15_4 [2] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q0__15_4 [3] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q0__15_4 [4] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q0__15_4 [5] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q0__15_4 [6] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q0__15_4 [7] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q0__15_4 [8] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q0__15_4 [9] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q0__15_4 [10] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_Q0__15_4 [11] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I7__15_4 [0] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I7__15_4 [1] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I7__15_4 [2] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I7__15_4 [3] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I7__15_4 [4] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I7__15_4 [5] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I7__15_4 [6] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I7__15_4 [7] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I7__15_4 [8] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I7__15_4 [9] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I7__15_4 [10] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I7__15_4 [11] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I6__15_4 [0] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I6__15_4 [1] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I6__15_4 [2] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I6__15_4 [3] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I6__15_4 [4] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I6__15_4 [5] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I6__15_4 [6] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I6__15_4 [7] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I6__15_4 [8] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I6__15_4 [9] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I6__15_4 [10] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I6__15_4 [11] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I5__15_4 [0] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I5__15_4 [1] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I5__15_4 [2] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I5__15_4 [3] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I5__15_4 [4] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I5__15_4 [5] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I5__15_4 [6] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I5__15_4 [7] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I5__15_4 [8] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I5__15_4 [9] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I5__15_4 [10] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I5__15_4 [11] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I4__15_4 [0] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I4__15_4 [1] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I4__15_4 [2] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I4__15_4 [3] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I4__15_4 [4] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I4__15_4 [5] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I4__15_4 [6] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I4__15_4 [7] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I4__15_4 [8] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I4__15_4 [9] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I4__15_4 [10] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I4__15_4 [11] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I3__15_4 [0] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I3__15_4 [1] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I3__15_4 [2] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I3__15_4 [3] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I3__15_4 [4] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I3__15_4 [5] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I3__15_4 [6] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I3__15_4 [7] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I3__15_4 [8] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I3__15_4 [9] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I3__15_4 [10] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I3__15_4 [11] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I2__15_4 [0] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I2__15_4 [1] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I2__15_4 [2] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I2__15_4 [3] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I2__15_4 [4] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I2__15_4 [5] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I2__15_4 [6] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I2__15_4 [7] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I2__15_4 [8] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I2__15_4 [9] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I2__15_4 [10] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I2__15_4 [11] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I1__15_4 [0] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I1__15_4 [1] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I1__15_4 [2] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I1__15_4 [3] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I1__15_4 [4] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I1__15_4 [5] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I1__15_4 [6] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I1__15_4 [7] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I1__15_4 [8] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I1__15_4 [9] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I1__15_4 [10] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I1__15_4 [11] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I0__15_4 [0] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I0__15_4 [1] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I0__15_4 [2] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I0__15_4 [3] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I0__15_4 [4] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I0__15_4 [5] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I0__15_4 [6] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I0__15_4 [7] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I0__15_4 [8] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I0__15_4 [9] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I0__15_4 [10] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating undriven bit miter.\__pi_I0__15_4 [11] like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: Warning: Treating a total of 195 undriven bits in miter like $anyseq.
+SBY 16:04:38 [test1.inter0009_out] aig: finished (returncode=0)
+SBY 16:04:38 [test1.inter0009_out] engine_0: starting process "cd test1.inter0009_out; /home/yangsenyu/fpga-windows-native-v25-20261103/FPGA-topic2-v23-EQY-Linux-0.69-20261027/runtime/bin/yosys-abc -c 'read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw'"
+SBY 16:04:38 [test1.inter0009_out] engine_0: ======== ABC command line "read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw"
+SBY 16:04:38 [test1.inter0009_out] engine_0: Warning: The last 2 outputs are interpreted as constraints.
+SBY 16:04:38 [test1.inter0009_out] engine_0: VarMax = 300. FrameMax = 10000. QueMax = 0. TimeMax = 119. MonoCNF = no. SkipGen = no. SolveAll = no.
+SBY 16:04:38 [test1.inter0009_out] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 16:04:38 [test1.inter0009_out] engine_0: 1 : 0 24                                                                1    24      0.01 sec  T/O =  0  PRV =  0
+SBY 16:04:38 [test1.inter0009_out] engine_0: 2 : 0 42 55                                                             4    69      0.03 sec  T/O =  0  PRV =  0
+SBY 16:04:38 [test1.inter0009_out] engine_0: 3 : 0 27 53 4                                                           2    69      0.04 sec  T/O =  0  PRV =  0
+SBY 16:04:38 [test1.inter0009_out] engine_0: 3 : 0 27 53 4                                                           2    69      0.04 sec  T/O =  0  PRV =  0
+SBY 16:04:38 [test1.inter0009_out] engine_0: 3 : 0 27 53 4                                                           2    69      0.05 sec  T/O =  0  PRV =  0
+SBY 16:04:38 [test1.inter0009_out] engine_0: 3 : 0 27 53 4                                                           2    69      0.06 sec  T/O =  0  PRV =  0
+SBY 16:04:38 [test1.inter0009_out] engine_0: 3 : 0 40 67 54                                                          4   110      0.08 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 4 : 0 51 38 66 63                                                       4   141      0.12 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 5 : 0 63 50 3 107 57                                                    6   185      0.18 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 6 : 0 75 62 3 13 22 153                                                 6   215      0.23 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 7 : 0 76 63 3 13 1 27 139                                               8   226      0.26 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: Timing out on output 0 in frame 7 (retrying in next anytime pass).
+SBY 16:04:39 [test1.inter0009_out] engine_0: 7 : 0 76 63 3 13 1 27 139                                               0   226      0.26 sec  T/O =  1  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 8 : 0 76 63 3 13 1 19 7 134                                             0   226      0.28 sec  T/O =  1  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: All outputs solved or timed out in frame 8.
+SBY 16:04:39 [test1.inter0009_out] engine_0: Starting new anytime pass, reusing clauses.
+SBY 16:04:39 [test1.inter0009_out] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 16:04:39 [test1.inter0009_out] engine_0: 1 : 0 316                                                               0     0      0.02 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 2 : 0 76 240                                                            0     0      0.03 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 3 : 0 76 63 177                                                         0     0      0.03 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 4 : 0 76 63 3 174                                                       0     0      0.04 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 5 : 0 76 63 3 13 161                                                    0     0      0.04 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 6 : 0 76 63 3 13 1 160                                                  0     0      0.05 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 7 : 0 87 74 3 13 1 19 177                                               7    67      0.09 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 8 : 0 99 86 3 13 1 1 25 198                                             8   106      0.16 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 9 : 0 111 98 3 13 1 1 2 196 56                                          9   147      0.26 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 10 : 0 115 102 3 13 1 1 2 13 25 211                                     10   173      0.33 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: Timing out on output 0 in frame 10 (retrying in next anytime pass).
+SBY 16:04:39 [test1.inter0009_out] engine_0: 10 : 0 115 102 3 13 1 1 2 13 25 211                                      0   173      0.33 sec  T/O =  1  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 11 : 0 115 102 3 13 1 1 2 13 16 10 0 ~201                                 0   173      0.36 sec  T/O =  1  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: All outputs solved or timed out in frame 11.
+SBY 16:04:39 [test1.inter0009_out] engine_0: Starting new anytime pass, reusing clauses.
+SBY 16:04:39 [test1.inter0009_out] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 16:04:39 [test1.inter0009_out] engine_0: 1 : 0 276 ~201                                                           0     0      0.02 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 2 : 0 115 161 ~201                                                       0     0      0.03 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 3 : 0 115 102 59 ~201                                                    0     0      0.04 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 4 : 0 115 102 3 56 ~201                                                  0     0      0.05 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 5 : 0 115 102 3 13 43 ~201                                               0     0      0.06 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 6 : 0 115 102 3 13 1 42 ~201                                             0     0      0.07 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 7 : 0 115 102 3 13 1 1 41 ~201                                           0     0      0.08 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 8 : 0 115 102 3 13 1 1 2 39 ~201                                         0     0      0.09 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 9 : 0 115 102 3 13 1 1 2 13 26 ~201                                      0     0      0.10 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 10 : 0 123 110 3 13 1 1 2 13 16 48 ~201                                  10    77      0.15 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 11 : 0 135 122 3 13 1 1 2 13 1 26 49 ~224                                12   123      0.24 sec  T/O =  0  PRV =  0
+SBY 16:04:39 [test1.inter0009_out] engine_0: 12 : 0 147 134 3 13 1 1 2 13 1 1 24 47 ~249                              12   157      0.34 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 13 : 0 159 146 3 13 1 1 2 13 1 1 1 25 50 ~272                            14   196      0.46 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 14 : 0 171 158 3 13 1 1 2 13 1 1 1 1 24 47 ~297                          14   230      0.58 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 15 : 0 174 161 3 13 1 1 2 13 1 1 1 1 1 25 9 ~320                         16   241      0.64 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: Timing out on output 0 in frame 15 (retrying in next anytime pass).
+SBY 16:04:40 [test1.inter0009_out] engine_0: 15 : 0 174 161 3 13 1 1 2 13 1 1 1 1 1 25 9 ~320                          0   241      0.64 sec  T/O =  1  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 16 : 0 174 161 3 13 1 1 2 13 1 1 1 1 1 21 3 0 ~326                        0   241      0.66 sec  T/O =  1  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: All outputs solved or timed out in frame 16.
+SBY 16:04:40 [test1.inter0009_out] engine_0: Starting new anytime pass, reusing clauses.
+SBY 16:04:40 [test1.inter0009_out] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 16:04:40 [test1.inter0009_out] engine_0: 1 : 0 397 ~326                                                           0     0      0.04 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 2 : 0 174 223 ~326                                                       0     0      0.05 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 3 : 0 174 161 62 ~326                                                    0     0      0.07 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 4 : 0 174 161 3 59 ~326                                                  0     0      0.09 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 5 : 0 174 161 3 13 46 ~326                                               0     0      0.10 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 6 : 0 174 161 3 13 1 45 ~326                                             0     0      0.12 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 7 : 0 174 161 3 13 1 1 44 ~326                                           0     0      0.14 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 8 : 0 174 161 3 13 1 1 2 42 ~326                                         0     0      0.16 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 9 : 0 174 161 3 13 1 1 2 13 29 ~326                                      0     0      0.18 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 10 : 0 174 161 3 13 1 1 2 13 1 28 ~326                                    0     0      0.20 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 11 : 0 174 161 3 13 1 1 2 13 1 1 27 ~326                                  0     0      0.22 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 12 : 0 174 161 3 13 1 1 2 13 1 1 1 26 ~326                                0     0      0.23 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 13 : 0 174 161 3 13 1 1 2 13 1 1 1 1 25 ~326                              0     0      0.25 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 14 : 0 174 161 3 13 1 1 2 13 1 1 1 1 1 24 ~326                            0     0      0.27 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 15 : 0 184 171 3 13 1 1 2 13 1 1 1 1 1 21 43 ~326                        15    65      0.35 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: 16 : 0 195 182 3 13 1 1 2 13 1 1 1 1 1 1 23 46 ~346                      16   103      0.49 sec  T/O =  0  PRV =  0
+SBY 16:04:40 [test1.inter0009_out] engine_0: Proved output 0 in frame 16.
+SBY 16:04:40 [test1.inter0009_out] engine_0: 17 : 0 195 182 3 13 1 1 2 13 1 1 1 1 1 1 0 0 8 ~392                       0   103      0.52 sec  T/O =  0  PRV =  1
+SBY 16:04:40 [test1.inter0009_out] engine_0: Block =  380  Oblig =  7106  Clause =  1160  Call = 25134 (sat=76.2%)  Cex =   0  Start =  57
+SBY 16:04:40 [test1.inter0009_out] engine_0: SAT solving =     1.14 sec ( 62.06 %)
+SBY 16:04:40 [test1.inter0009_out] engine_0: unsat     =     0.09 sec (  5.00 %)
+SBY 16:04:40 [test1.inter0009_out] engine_0: sat       =     1.05 sec ( 57.06 %)
+SBY 16:04:40 [test1.inter0009_out] engine_0: Generalize  =     0.63 sec ( 34.50 %)
+SBY 16:04:40 [test1.inter0009_out] engine_0: Push clause =     0.64 sec ( 34.86 %)
+SBY 16:04:40 [test1.inter0009_out] engine_0: Ternary sim =     0.17 sec (  9.18 %)
+SBY 16:04:40 [test1.inter0009_out] engine_0: Containment =     0.01 sec (  0.34 %)
+SBY 16:04:40 [test1.inter0009_out] engine_0: CNF compute =     0.05 sec (  2.83 %)
+SBY 16:04:40 [test1.inter0009_out] engine_0: Refinement  =     0.00 sec (  0.00 %)
+SBY 16:04:40 [test1.inter0009_out] engine_0: TOTAL       =     1.84 sec (100.00 %)
+SBY 16:04:40 [test1.inter0009_out] engine_0: Property proved.  Time =     1.84 sec
+SBY 16:04:40 [test1.inter0009_out] engine_0: Counter-example is not available.
+SBY 16:04:40 [test1.inter0009_out] engine_0: finished (returncode=0)
+SBY 16:04:40 [test1.inter0009_out] engine_0: Status returned by engine: PASS
+SBY 16:04:40 [test1.inter0009_out] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:02 (2)
+SBY 16:04:40 [test1.inter0009_out] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:02 (2)
+SBY 16:04:40 [test1.inter0009_out] summary: engine_0 (abc pdr) returned PASS
+SBY 16:04:40 [test1.inter0009_out] summary: engine_0 did not produce any traces
+SBY 16:04:40 [test1.inter0009_out] DONE (PASS, rc=0)

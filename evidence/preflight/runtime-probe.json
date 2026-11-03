@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "executable": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\runtime\\python.exe",
+  "version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "isolated": 1,
+  "no_site": 1,
+  "ignore_environment": 1,
+  "sys_path": [
+    "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\runtime\\python312.zip",
+    "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\runtime\\DLLs",
+    "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\runtime",
+    "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package"
+  ],
+  "expected_sys_path": [
+    "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\runtime\\python312.zip",
+    "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\runtime\\DLLs",
+    "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\runtime",
+    "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package"
+  ],
+  "path_policy": "Exact frozen _pth order; parent entry restricted to this copied package root",
+  "prefix": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\package\\runtime",
+  "intentionally_invalid_pythonhome": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\INVALID_PYTHONHOME_DO_NOT_CREATE",
+  "intentionally_invalid_pythonpath": "D:\\fpga-win-native-20261103\\preflight-shared-runtime-once\\INVALID_PYTHONPATH_DO_NOT_CREATE",
+  "clean_path": "C:\\Windows\\System32;C:\\Windows"
+}

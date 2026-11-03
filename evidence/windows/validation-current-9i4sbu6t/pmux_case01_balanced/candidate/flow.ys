@@ -1,0 +1,4 @@
+read_verilog "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/pmux_cases/pmux_case01_balanced.v"
+synth_intel -family cycloneiv -top pmux_case01_balanced
+write_verilog -norename -noattr "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/validation-current-9i4sbu6t/pmux_case01_balanced/candidate/netlist.v"
+write_json "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/validation-current-9i4sbu6t/pmux_case01_balanced/candidate/netlist.json"

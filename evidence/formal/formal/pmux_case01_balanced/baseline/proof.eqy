@@ -1,0 +1,24 @@
+[gold]
+read_verilog "/mnt/d/fpga-win-native-20261103/shared-runtime-windows-evidence/competition_case/pmux_cases/pmux_case01_balanced.v"
+prep -top pmux_case01_balanced -flatten
+memory_map
+opt_clean
+rename -hide
+
+[gate]
+read_rtlil "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/pmux_case01_balanced/baseline/postabc-lf.il"
+read_verilog -overwrite "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v"
+lut2mux -word
+prep -top pmux_case01_balanced -flatten
+memory_map
+opt_clean
+rename -hide
+
+[strategy simple]
+use sat
+depth 5
+
+[strategy pdr]
+use sby
+engine abc pdr
+timeout 300

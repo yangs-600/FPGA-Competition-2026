@@ -1,0 +1,22 @@
+{
+  "utc": "2026-11-03T07:34:42.898599+00:00",
+  "command": [
+    "D:\\fpga-v14-work\\msys64\\ucrt64\\bin\\g++.exe",
+    "-D_YOSYS_",
+    "-ID:/fpga-win-native-20261103/minsize-fixed-build/sources/candidate",
+    "-ID:/fpga-win-native-20261103/minsize-fixed-build/build/candidate",
+    "-fno-declone-ctor-dtor",
+    "-Os",
+    "-std=gnu++20",
+    "-Wall",
+    "-Wextra",
+    "-Werror=unused-variable",
+    "-Werror=unused-parameter",
+    "-Werror=unused-function",
+    "-o",
+    "D:\\fpga-win-native-20261103\\v26-incremental-build\\build\\candidate\\pmux_competition_opt.cc.obj",
+    "-c",
+    "D:\\fpga-win-native-20261103\\v26-incremental-build\\source-overlay\\passes\\opt\\pmux_competition_opt.cc"
+  ],
+  "cwd": "D:\\fpga-win-native-20261103\\v26-incremental-build\\build\\candidate"
+}

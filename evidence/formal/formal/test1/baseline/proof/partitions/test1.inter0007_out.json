@@ -1,0 +1,37 @@
+{
+  "partition": {
+    "index": 3,
+    "name": "test1.inter0007_out",
+    "inbits": {
+      "clock": [
+        0
+      ],
+      "reset": [
+        0
+      ],
+      "valid": [
+        0
+      ]
+    },
+    "outbits": {
+      "inter0007_out": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.test1.inter0007_out",
+    "internal": {},
+    "unused": {},
+    "cellcount": 23,
+    "bitcount": 32
+  },
+  "gate_module": {
+    "name": "gold.test1.inter0007_out",
+    "internal": {},
+    "unused": {},
+    "cellcount": 24,
+    "bitcount": 27
+  }
+}

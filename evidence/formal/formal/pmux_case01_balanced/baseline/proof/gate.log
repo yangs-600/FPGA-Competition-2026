@@ -1,0 +1,743 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+
+-- Executing script file `/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/pmux_case01_balanced/baseline/proof/gate.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: /home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/pmux_case01_balanced/baseline/postabc-lf.il
+
+2. Executing Verilog-2005 frontend: /home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v
+Parsing Verilog input from `/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v' to AST representation.
+Generating RTLIL representation for module `\dffeas'.
+Successfully finished Verilog frontend.
+
+3. Executing LUT2MUX pass (convert $lut to $mux/$_MUX_).
+ARGS: [lut2mux] [-word]
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_$lut_Y_A_3_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_A_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_2_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_2_$lut_Y_A_3_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_A to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_A to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_3_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_2_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_2_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y_A_$lut_Y_A_2_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_2_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_2_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y_A_$lut_Y_A_3_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_2_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_A_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_A to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_A to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_A to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_2_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_3_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_3_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_A to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_2_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_A to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_2_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_A_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_A to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_A to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_A to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_2_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_A_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_2_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_A_Y_$lut_A to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_2_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_3_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_2_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_1_d_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_A to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_A to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_A to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_9_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_A to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_3_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_2_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_A_Y_$lut_A to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_3_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_2_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_2_$lut_A to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_$lut_Y_A_2_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_10_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_6_d_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_5_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_2_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_11_d_$lut_Y_A_$lut_Y_A_1_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y to 3 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_7_d_$lut_Y_A_1_$lut_Y_A_1_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_2_$lut_Y_A_1_$lut_Y_A_$lut_A to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_8_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_$lut_Y_A_2_$lut_Y_A_1_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_$lut_Y_A_1_$lut_Y to 7 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_4_d_$lut_Y_A_2_$lut_Y_A_$lut_Y to 15 MUX cells.
+Converted pmux_case01_balanced.data_out_dffeas_q_3_d_$lut_Y_A_$lut_Y to 15 MUX cells.
+
+4. Executing PREP pass.
+
+4.1. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1.1. Analyzing design hierarchy..
+Top module:  \pmux_case01_balanced
+Used module:     \dffeas
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+
+4.1.2. Executing AST frontend in derive mode using pre-parsed AST for module `\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Generating RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+Parameter \power_up = 24'011011000110111101110111
+Parameter \is_wysiwyg = 1414681925
+Found cached RTLIL representation for module `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas'.
+
+4.1.3. Analyzing design hierarchy..
+Top module:  \pmux_case01_balanced
+Used module:     $paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas
+
+4.1.4. Analyzing design hierarchy..
+Top module:  \pmux_case01_balanced
+Used module:     $paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas
+Removing unused module `\dffeas'.
+Removed 1 unused modules.
+
+4.2. Executing PROC pass (convert processes to netlists).
+
+4.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:3$20254'.
+Cleaned up 2 empty switches.
+
+4.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:7$20252 in module $paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.
+Removed a total of 0 dead cases.
+
+4.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 3 assignments to connections.
+
+4.2.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:3$20254'.
+  Set init value: \q = 1'0
+
+4.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \clrn in `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:7$20252'.
+
+4.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+4.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:3$20254'.
+Creating decoders for process `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:7$20252'.
+     1/1: $0\q[0:0]
+
+4.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+4.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.\q' using process `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:7$20252'.
+  created $adff cell `$procdff$20261' with positive edge clock and positive level reset.
+
+4.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:3$20254'.
+Found and cleaned up 1 empty switch in `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:7$20252'.
+Removing empty process `$paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.$proc$/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:7$20252'.
+Cleaned up 1 empty switch.
+
+4.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.
+<suppressed ~2 debug messages>
+Optimizing module pmux_case01_balanced.
+<suppressed ~1719 debug messages>
+
+4.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod$72d24ac0d0f8825e0938023f8931b6f1081d5a17\dffeas.
+<suppressed ~12 debug messages>
+
+4.4. Executing FUTURE pass.
+
+4.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pmux_case01_balanced.
+<suppressed ~36 debug messages>
+
+4.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pmux_case01_balanced..
+Removed 0 unused cells and 1827 unused wires.
+<suppressed ~1 debug messages>
+
+4.7. Executing CHECK pass (checking for obvious problems).
+Checking module pmux_case01_balanced...
+Found and reported 0 problems.
+
+4.8. Executing OPT pass (performing simple optimizations).
+
+4.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pmux_case01_balanced.
+
+4.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\pmux_case01_balanced'.
+Computing hashes of 2607 cells of `\pmux_case01_balanced'.
+Finding duplicate cells in `\pmux_case01_balanced'.
+Removed a total of 0 cells.
+
+4.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \pmux_case01_balanced..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3009 debug messages>
+
+4.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \pmux_case01_balanced.
+Performed a total of 0 changes.
+
+4.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\pmux_case01_balanced'.
+Computing hashes of 2607 cells of `\pmux_case01_balanced'.
+Finding duplicate cells in `\pmux_case01_balanced'.
+Computing hashes of 1733 cells of `\pmux_case01_balanced'.
+Finding duplicate cells in `\pmux_case01_balanced'.
+Computing hashes of 1510 cells of `\pmux_case01_balanced'.
+Finding duplicate cells in `\pmux_case01_balanced'.
+Computing hashes of 1509 cells of `\pmux_case01_balanced'.
+Finding duplicate cells in `\pmux_case01_balanced'.
+<suppressed ~3294 debug messages>
+Removed a total of 1098 cells.
+
+4.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pmux_case01_balanced..
+Removed 0 unused cells and 1098 unused wires.
+<suppressed ~1 debug messages>
+
+4.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pmux_case01_balanced.
+<suppressed ~99 debug messages>
+
+4.8.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.8.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \pmux_case01_balanced..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3154 debug messages>
+
+4.8.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \pmux_case01_balanced.
+Performed a total of 0 changes.
+
+4.8.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\pmux_case01_balanced'.
+Computing hashes of 1410 cells of `\pmux_case01_balanced'.
+Finding duplicate cells in `\pmux_case01_balanced'.
+Removed a total of 0 cells.
+
+4.8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pmux_case01_balanced..
+Removed 0 unused cells and 99 unused wires.
+<suppressed ~1 debug messages>
+
+4.8.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pmux_case01_balanced.
+
+4.8.14. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.8.15. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \pmux_case01_balanced..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3154 debug messages>
+
+4.8.16. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \pmux_case01_balanced.
+Performed a total of 0 changes.
+
+4.8.17. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\pmux_case01_balanced'.
+Computing hashes of 1410 cells of `\pmux_case01_balanced'.
+Finding duplicate cells in `\pmux_case01_balanced'.
+Removed a total of 0 cells.
+
+4.8.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pmux_case01_balanced..
+
+4.8.19. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pmux_case01_balanced.
+
+4.8.20. Finished fast OPT passes. (There is nothing left to do.)
+
+4.9. Executing WREDUCE pass (reducing word size of cells).
+
+4.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pmux_case01_balanced..
+
+4.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+4.12. Executing OPT pass (performing simple optimizations).
+
+4.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pmux_case01_balanced.
+
+4.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\pmux_case01_balanced'.
+Computing hashes of 1410 cells of `\pmux_case01_balanced'.
+Finding duplicate cells in `\pmux_case01_balanced'.
+Removed a total of 0 cells.
+
+4.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pmux_case01_balanced..
+
+4.12.4. Finished fast OPT passes.
+
+4.13. Executing SORT pass.
+
+4.14. Printing statistics.
+
+=== pmux_case01_balanced ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     1512 wires
+     1585 wire bits
+      552 public wires
+      625 public wire bits
+        6 ports
+       79 port bits
+     1410 cells
+       12   $adff
+     1386   $mux
+       12   $scopeinfo
+
+4.15. Executing CHECK pass (checking for obvious problems).
+Checking module pmux_case01_balanced...
+Found and reported 0 problems.
+
+5. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pmux_case01_balanced..
+
+7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pmux_case01_balanced..
+Removed 0 unused cells and 120 unused wires.
+<suppressed ~1 debug messages>
+
+8. Executing CHECK pass (checking for obvious problems).
+Checking module pmux_case01_balanced...
+Found and reported 0 problems.
+
+9. Executing SETUNDEF pass (replace undef values with defined constants).
+
+10. Executing RTLIL backend.
+Output filename: /home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/pmux_case01_balanced/baseline/proof/gate.il
+
+End of script. Logfile hash: f7fe9b44a9, time: 0.11s, user: 0.11s, system: 0.01s, MEM: 30.63 MB peak
+Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+Time spent: 26% 7x opt_expr (0 sec), 23% 8x opt_clean (0 sec), ...

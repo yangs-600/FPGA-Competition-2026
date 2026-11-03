@@ -1,0 +1,4 @@
+pmux_case02_pipeline pmux_case02_pipeline.data_out.10 xbits : data_out[11:9]
+pmux_case02_pipeline pmux_case02_pipeline.data_out.6 xbits : data_out[8:6]
+pmux_case02_pipeline pmux_case02_pipeline.data_out.3 xbits : data_out[5:3]
+pmux_case02_pipeline pmux_case02_pipeline.data_out.0 xbits : data_out

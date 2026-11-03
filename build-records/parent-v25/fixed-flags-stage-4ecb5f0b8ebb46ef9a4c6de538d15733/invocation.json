@@ -1,0 +1,9 @@
+{
+  "utc": "2026-11-03T06:48:58.850898+00:00",
+  "stage": "configure",
+  "role": "candidate",
+  "script_sha256": "4a06156d75dacde29ff3f90997a07dfcbd16c7a6bd71934668535ee9311bcb8d",
+  "compatibility_flag": "-fno-declone-ctor-dtor",
+  "prior_experiment_unchanged": true,
+  "new_source_and_object_roots": true
+}

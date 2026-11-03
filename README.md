@@ -1,35 +1,31 @@
-# 赛题二：Yosys 0.69 PMUX 优化 v24
+# Yosys 0.69 PMUX Windows 原生作品
 
-当前源码为 `v24-bounded-search`。在原版 Yosys 0.69 内加入通用 PMUX 优化，在 `synth_intel -family cycloneiv` 中调用；九例统一使用同一份 ABC9 脚本。源码 SHA-256：`f278dfa15309f735644eb09dbcb1e385f99cb6e571912b68d9d679917d4d5b12`。
+九例平均 LUT+独立 NOT 降幅 **20.079171%**；每例资源不增加；按预先声明口径，九例时间与峰值内存增幅均不超过 5%；18 项形式证明通过，负对照成功检出反例。
 
-2026-10-27 已完成 WSL 最终交付材料的全新目录离线构建演练、新产物一次固定性能测量和18项新网表 EQY。九例 LUT＋NOT 缩减率的算术平均为 **20.661033%**，逐例逻辑资源均不增加。原有82项边界检查及3个负对照属于同源码的早先工具验证，本轮没有冒充重新执行。
+解压到 ASCII 路径（例如 `D:\FPGA\submission`），双击 **run_cases.cmd**。在 PowerShell 当前目录也可运行：
 
-本轮 test1 墙钟减少 **0.895694%**。test2 首轮根内存增加 **5.390248%**；按短例追加五次复核后，墙钟增加 **2.917401%**、根内存增加 **0.190369%**。包含首轮的五次/六次口径也均在5%以内。其余八例首轮墙钟与根内存在5%以内。严格首轮九例并非全部通过，现场成绩和正式复核认定仍以主办方评测为准。CPU口径单列在结果表，不与墙钟混用；原生Windows首次迟滞问题未被这次WSL验证修复。
-
-## 队友从这里开始
-
-1. 阅读 [WSL交付说明](docs/README_V24_WSL.md) 和 [现场操作步骤](docs/ONSITE_RUNBOOK.md)。
-2. 从队内交付附件获取 `FPGA-topic2-v24-WSL-onsite-kit-20261027.zip`。源码仓库不包含大型二进制附件；该一体包带原运行/构建材料、EQY工具包、现场辅助入口及完整新证据。文件指纹见交付清单和包外 `.sha256`，不要仅下载本仓库后假设工具已安装。
-3. 使用 WSL Ubuntu 24.04 x86_64、GCC/G++13、Python3.12及已列出的基础系统工具，照步骤核验、编译、测量、证明。新的输出目录不得复用历史结果。
-
-现场新增脚本也保存在 `scripts/wsl/`：`stage_rebuilt_measurement.py` 接收 `--package --build-root --output`，加 `--run` 才运行固定测量；`onsite_proof.py` 接收 `--package --proof-kit --roles-root --build-receipt --output`。它们验证外部工具包和新构建收据，不能省略依赖。
-
-## 已有 Ubuntu 仓库入口
-
-本机已经部署工具的仓库仍可执行：
-
-```bash
-/usr/bin/python3 -E -B -u scripts/run_current.py
+```powershell
+.\run_cases.cmd
 ```
 
-此入口进行九例功能/资源验证，单独的效率测量按上面的WSL步骤执行。新机器的工具重建见 [原有Linux构建说明](docs/LOCAL_BUILD.md)。旧Windows及原生Ubuntu记录保留在 [原v24说明](docs/README_NATIVE_V24_20261027.md)，不能将它们与WSL成绩合并。
+已包含 Windows x64 的 yosys-baseline.exe 与 yosys-candidate.exe，共享根目录 ABC、五个 DLL 和一套 share 资源，另附 Python 与九个用例。直接运行无需 Ubuntu、WSL 或安装编译器。该命令重新综合、测量并导出实际网表，创建新的 `validation-current-*`；不会把随包历史证据当作本轮运行结果。
 
-## 源码、结果与材料
+首轮原始数据全部保留。两侧首轮各自不足 1 秒且任一增幅超过 5%时，固定追加五对复核，比较两侧各自算术平均；触发首轮单列，不计入这五对。此次有 1 例进入复核，首轮单独满足两项 5% 的为 8/9 例。具体数字与口径见 [VALIDATION.md](VALIDATION.md)。
 
-- 实现：`src/pmux_competition_v11.cc`，兼容镜像：`clean-v11/pmux_competition_v11.cc`。
-- 集成补丁：`clean-v11/toolchains/yosys-0.69/competition-v11/synth-intel-competition.patch`。
-- 固定脚本：`abc/competition_abc_dch.abc`；九例注册表：`cases_current.json`。
-- [完整结果与两轮WSL对比](docs/RESULTS_V24_WSL.md)、[技术设计报告](docs/DESIGN_REPORT_V24_WSL.md)、[答辩说明](docs/DEFENSE_NOTES_V24_WSL.md)、[交付清单](docs/DELIVERY_CHECKLIST.md)。
-- 本轮摘要：`validation/wsl-v24-onsite-20261027/`。原始样本、失败记录及完整证明在配套证据归档中保留。
+Linux EQY 只证明 Windows 实际导出的网表，未替代 Windows 性能测量。随包保存发布前的 18 项证明及负对照；普通 Windows 运行入口不会宣称已经重新运行 EQY。
 
-技术材料已据实更新；三位队员真实分工按用户要求暂跳过。本文不宣称已经完成主办方验收或现场答辩。
+- [Windows 运行依赖](REQUIREMENTS_WINDOWS.md)
+- [源码重建](source/BUILD_WINDOWS.md)：完整原版源码、五文件补丁和便携脚本位于 `source/`。
+- [证明复现](PROOF_REPLAY_GUIDE.md)：需要单独的 Linux EQY 工具环境。
+- [完整 Windows 数据](evidence/windows/report.json)、[独立审核](evidence/independent-audit.json)、[形式证明](evidence/formal/formal/report.json)。
+- [原始问题汇总](requirements/FAQ.xlsx)及 [口径说明](requirements/FAQ.md)。
+
+根目录保留本次 `validation-current-9i4sbu6t/` 的逐字节副本，使独立审计脚本可在解压后直接复算；它属于发布证据，不是新运行的成绩。在包根目录执行以下命令只审核既有记录，不执行 Yosys：
+
+```powershell
+.\runtime\python.exe -I -S -X utf8 .\evidence\audit_native_measurements.py --package . --report .\evidence\windows\report.json --output ..\audit-release.json
+```
+
+输出文件须尚不存在。真正重新运行九例仍使用 `run_cases.cmd`，每次建立全新的测量目录。
+
+原始 `manifest.json` 和 Windows 报告中的 PENDING 字段保留原字节；最终证据汇总在 [release-status.json](release-status.json)。`payload-index.json` 列出每个交付文件的 SHA-256 和大小（不含清单自身）。

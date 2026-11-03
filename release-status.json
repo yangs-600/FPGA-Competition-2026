@@ -1,0 +1,62 @@
+{
+  "schema": "native-windows-release-v1",
+  "status": "RELEASE_EVIDENCE_PASS_UNDER_PREDECLARED_PROTOCOL",
+  "created_utc": "2026-11-03T08:16:08.592982+00:00",
+  "case_count": 9,
+  "measurement_criteria_pass": true,
+  "independent_audit": "PASS",
+  "positive_proof_counts": {
+    "PASS": 18
+  },
+  "negative_control": "EXPECTED_COUNTEREXAMPLE",
+  "preflight": "RUNTIME_SYNTHESIS_PREFLIGHT_PASS",
+  "metrics": {
+    "average_gain_percent": 20.079171455690528,
+    "all_logic_cells_nonincrease": true,
+    "all_efficiency_5pct_pass": true,
+    "any_efficiency_over_15pct": false,
+    "all_absolute_limits_pass": true,
+    "area_average_at_least_20pct": true,
+    "predeclared_measurement_criteria_pass": true,
+    "candidate_measured_sample_count": 14,
+    "candidate_max_wall_seconds": 0.8150477999988652,
+    "candidate_max_root_peak_working_set_bytes": 23453696
+  },
+  "original_manifest_status": "BUILT_VALIDATION_PENDING",
+  "original_windows_report_status": "MEASUREMENTS_PASS_FORMAL_PENDING",
+  "original_windows_formal_status": "PENDING",
+  "original_records_rewritten": false,
+  "official_interpretation_confirmed": false,
+  "linux_used_for_proof_only": true,
+  "runtime_manifest_sha256": "2a258fd99ce775729658355f352773e668f862b3bada09bc88cd00fa955e56d5",
+  "windows_report_sha256": "fecd7eb44ae0aa5df482a88f892f7ef8c16cd5d6ec4e82ac5d8375280e2a53b0",
+  "evidence_inventory_sha256": "e88a9d18badd347a1367fd5521f8b9f27cb9cf5e1f757cb0c341704da9c4bfe0",
+  "formal_report_sha256": "73260427e9aa190185fbb4fe6311f6d2ef0768b20dd7b92f134a43e6a15ef5cd",
+  "proof_launch_sha256": "6530ba48f91162b92356fca1afde01f1be48aa32bfe71b8dcc7e5c04212912a9",
+  "independent_audit_sha256": "eecfdada9e397a9050788f092bce3e146e356450b2cc97fd1ac594049f5ff7bd",
+  "faq_sha256": "dddf422c6945666f5e3548a8f582c363f3f3ab2051b88b7c7eb9251fd37a3c09",
+  "assembler_sha256": "f3c223cc6b076e1a4c002f828d37e23cb3bd7776d1c3610745bb329b842cba7c",
+  "runtime_root": ".",
+  "windows_evidence_root": "evidence/windows",
+  "formal_evidence_root": "evidence/formal",
+  "payload_index": "payload-index.json",
+  "executables_run_during_assembly": 0,
+  "compression_performed": false,
+  "pdf_generated": false,
+  "read_only_reaudit": {
+    "status": "INDEPENDENT_AUDIT_PASS",
+    "recomputed": {
+      "average_gain_percent": 20.079171455690528,
+      "all_logic_cells_nonincrease": true,
+      "all_efficiency_5pct_pass": true,
+      "any_efficiency_over_15pct": false,
+      "all_absolute_limits_pass": true,
+      "area_average_at_least_20pct": true,
+      "predeclared_measurement_criteria_pass": true,
+      "candidate_measured_sample_count": 14,
+      "candidate_max_wall_seconds": 0.8150477999988652,
+      "candidate_max_root_peak_working_set_bytes": 23453696
+    }
+  },
+  "acceptance_scope": "Recorded Windows environment, nine registered cases, predeclared five-additional-pair protocol; not a universal performance guarantee."
+}

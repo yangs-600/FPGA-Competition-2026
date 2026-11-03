@@ -1,0 +1,1912 @@
+{
+  "status": "INDEPENDENT_AUDIT_PASS",
+  "package": "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh",
+  "raw_report": "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\report.json",
+  "raw_report_sha256": "fecd7eb44ae0aa5df482a88f892f7ef8c16cd5d6ec4e82ac5d8375280e2a53b0",
+  "raw_status": "MEASUREMENTS_PASS_FORMAL_PENDING",
+  "shared_abc": {
+    "layout": "colocated_yosys_shared_runtime",
+    "shared_abc_path": "yosys-abc.exe",
+    "sha256": "b17ea3f805418a28dc29250721be04ff2ec708fd8226e65a0815bbd6d11c9ad8",
+    "role_abc_shadows_absent": true,
+    "shared_dll_count": 5,
+    "shared_resource_count": 317,
+    "physical_executables": {
+      "baseline": "yosys-baseline.exe",
+      "candidate": "yosys-candidate.exe"
+    }
+  },
+  "script_sha256": "882c71efcf3e7096ce0f55a67ce64a23c2525a8693bc650fc1669a0c2c1ed6ee",
+  "cases": [
+    {
+      "name": "test1",
+      "review_time_eligible": true,
+      "review_triggered": true,
+      "first_pair_sum_seconds": 1.1654216999959317,
+      "first_pair_sum_under_1s": false,
+      "selected": {
+        "available": true,
+        "pair_count": 5,
+        "metrics": {
+          "wall_seconds": {
+            "baseline_mean": 0.34931386000025666,
+            "candidate_mean": 0.33226015999971426,
+            "overhead_percent": -4.882056497995779
+          },
+          "peak_working_set_bytes": {
+            "baseline_mean": 21346713.6,
+            "candidate_mean": 20862566.4,
+            "overhead_percent": -2.2680174994243796
+          },
+          "cpu_seconds": {
+            "baseline_mean": 0.3,
+            "candidate_mean": 0.2875,
+            "overhead_percent": -4.166666666666674
+          },
+          "root_cpu_seconds": {
+            "baseline_mean": 0.2125,
+            "candidate_mean": 0.2,
+            "overhead_percent": -5.88235294117646
+          }
+        }
+      },
+      "logic_gain_percent": 21.180555555555557,
+      "counts": {
+        "baseline": {
+          "by_type": {
+            "$not": 2,
+            "cycloneiv_lcell_comb": 286,
+            "dffeas": 222
+          },
+          "lut_cells": 286,
+          "not_cells": 2,
+          "scored_logic_cells": 288,
+          "dff_cells": 222,
+          "total_cells": 510
+        },
+        "candidate": {
+          "by_type": {
+            "$not": 3,
+            "cycloneiv_lcell_comb": 224,
+            "dffeas": 222
+          },
+          "lut_cells": 224,
+          "not_cells": 3,
+          "scored_logic_cells": 227,
+          "dff_cells": 222,
+          "total_cells": 449
+        }
+      },
+      "logic_nonincrease": true,
+      "efficiency_5pct_pass": true,
+      "efficiency_over_15pct": false,
+      "absolute_limits_pass": true,
+      "sensitivity_diagnostic_only": {
+        "first_pair": {
+          "available": true,
+          "pair_count": 1,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.3503738999970665,
+              "candidate_mean": 0.8150477999988652,
+              "overhead_percent": 132.62229292926477
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 21217280,
+              "candidate_mean": 20856832,
+              "overhead_percent": -1.698841698841702
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.28125,
+              "candidate_mean": 0.34375,
+              "overhead_percent": 22.222222222222232
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.171875,
+              "candidate_mean": 0.296875,
+              "overhead_percent": 72.72727272727273
+            }
+          }
+        },
+        "five_additional_pairs": {
+          "available": true,
+          "pair_count": 5,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.34931386000025666,
+              "candidate_mean": 0.33226015999971426,
+              "overhead_percent": -4.882056497995779
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 21346713.6,
+              "candidate_mean": 20862566.4,
+              "overhead_percent": -2.2680174994243796
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.3,
+              "candidate_mean": 0.2875,
+              "overhead_percent": -4.166666666666674
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.2125,
+              "candidate_mean": 0.2,
+              "overhead_percent": -5.88235294117646
+            }
+          }
+        },
+        "first_plus_first_four": {
+          "available": true,
+          "pair_count": 5,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.350874979999935,
+              "candidate_mean": 0.4308871999994153,
+              "overhead_percent": 22.803626522328592
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 21329510.4,
+              "candidate_mean": 20864204.8,
+              "overhead_percent": -2.181510926758068
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.30625,
+              "candidate_mean": 0.3,
+              "overhead_percent": -2.0408163265306256
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.20625,
+              "candidate_mean": 0.221875,
+              "overhead_percent": 7.575757575757569
+            }
+          }
+        },
+        "all_six_pairs": {
+          "available": true,
+          "pair_count": 6,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.3494905333330583,
+              "candidate_mean": 0.4127247666662394,
+              "overhead_percent": 18.09326070440942
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 21325141.333333332,
+              "candidate_mean": 20861610.666666668,
+              "overhead_percent": -2.1736346757154634
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.296875,
+              "candidate_mean": 0.296875,
+              "overhead_percent": 0.0
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.20572916666666666,
+              "candidate_mean": 0.21614583333333334,
+              "overhead_percent": 5.063291139240511
+            }
+          }
+        },
+        "all_measured_pairs": {
+          "available": true,
+          "pair_count": 6,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.3494905333330583,
+              "candidate_mean": 0.4127247666662394,
+              "overhead_percent": 18.09326070440942
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 21325141.333333332,
+              "candidate_mean": 20861610.666666668,
+              "overhead_percent": -2.1736346757154634
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.296875,
+              "candidate_mean": 0.296875,
+              "overhead_percent": 0.0
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.20572916666666666,
+              "candidate_mean": 0.21614583333333334,
+              "overhead_percent": 5.063291139240511
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "test2",
+      "review_time_eligible": true,
+      "review_triggered": false,
+      "first_pair_sum_seconds": 0.35119500000291737,
+      "first_pair_sum_under_1s": true,
+      "selected": {
+        "available": true,
+        "pair_count": 1,
+        "metrics": {
+          "wall_seconds": {
+            "baseline_mean": 0.18189260000144714,
+            "candidate_mean": 0.16930240000147023,
+            "overhead_percent": -6.921776916640221
+          },
+          "peak_working_set_bytes": {
+            "baseline_mean": 15319040,
+            "candidate_mean": 15351808,
+            "overhead_percent": 0.21390374331551332
+          },
+          "cpu_seconds": {
+            "baseline_mean": 0.125,
+            "candidate_mean": 0.140625,
+            "overhead_percent": 12.5
+          },
+          "root_cpu_seconds": {
+            "baseline_mean": 0.0625,
+            "candidate_mean": 0.0625,
+            "overhead_percent": 0.0
+          }
+        }
+      },
+      "logic_gain_percent": 40.0,
+      "counts": {
+        "baseline": {
+          "by_type": {
+            "cycloneiv_lcell_comb": 25
+          },
+          "lut_cells": 25,
+          "not_cells": 0,
+          "scored_logic_cells": 25,
+          "dff_cells": 0,
+          "total_cells": 25
+        },
+        "candidate": {
+          "by_type": {
+            "cycloneiv_lcell_comb": 15
+          },
+          "lut_cells": 15,
+          "not_cells": 0,
+          "scored_logic_cells": 15,
+          "dff_cells": 0,
+          "total_cells": 15
+        }
+      },
+      "logic_nonincrease": true,
+      "efficiency_5pct_pass": true,
+      "efficiency_over_15pct": false,
+      "absolute_limits_pass": true,
+      "sensitivity_diagnostic_only": {
+        "first_pair": {
+          "available": true,
+          "pair_count": 1,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.18189260000144714,
+              "candidate_mean": 0.16930240000147023,
+              "overhead_percent": -6.921776916640221
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 15319040,
+              "candidate_mean": 15351808,
+              "overhead_percent": 0.21390374331551332
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.125,
+              "candidate_mean": 0.140625,
+              "overhead_percent": 12.5
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.0625,
+              "candidate_mean": 0.0625,
+              "overhead_percent": 0.0
+            }
+          }
+        },
+        "five_additional_pairs": {
+          "available": false,
+          "pair_count": 0,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "first_plus_first_four": {
+          "available": false,
+          "pair_count": 1,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "all_six_pairs": {
+          "available": false,
+          "pair_count": 1,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "all_measured_pairs": {
+          "available": true,
+          "pair_count": 1,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.18189260000144714,
+              "candidate_mean": 0.16930240000147023,
+              "overhead_percent": -6.921776916640221
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 15319040,
+              "candidate_mean": 15351808,
+              "overhead_percent": 0.21390374331551332
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.125,
+              "candidate_mean": 0.140625,
+              "overhead_percent": 12.5
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.0625,
+              "candidate_mean": 0.0625,
+              "overhead_percent": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "test3",
+      "review_time_eligible": true,
+      "review_triggered": false,
+      "first_pair_sum_seconds": 0.38278790000185836,
+      "first_pair_sum_under_1s": true,
+      "selected": {
+        "available": true,
+        "pair_count": 1,
+        "metrics": {
+          "wall_seconds": {
+            "baseline_mean": 0.20469230000162497,
+            "candidate_mean": 0.1780956000002334,
+            "overhead_percent": -12.993502931561396
+          },
+          "peak_working_set_bytes": {
+            "baseline_mean": 15912960,
+            "candidate_mean": 15745024,
+            "overhead_percent": -1.0553410553410525
+          },
+          "cpu_seconds": {
+            "baseline_mean": 0.140625,
+            "candidate_mean": 0.15625,
+            "overhead_percent": 11.111111111111116
+          },
+          "root_cpu_seconds": {
+            "baseline_mean": 0.078125,
+            "candidate_mean": 0.0625,
+            "overhead_percent": -19.999999999999996
+          }
+        }
+      },
+      "logic_gain_percent": 0.0,
+      "counts": {
+        "baseline": {
+          "by_type": {
+            "$not": 1,
+            "cycloneiv_lcell_comb": 12,
+            "dffeas": 17
+          },
+          "lut_cells": 12,
+          "not_cells": 1,
+          "scored_logic_cells": 13,
+          "dff_cells": 17,
+          "total_cells": 30
+        },
+        "candidate": {
+          "by_type": {
+            "$not": 1,
+            "cycloneiv_lcell_comb": 12,
+            "dffeas": 12
+          },
+          "lut_cells": 12,
+          "not_cells": 1,
+          "scored_logic_cells": 13,
+          "dff_cells": 12,
+          "total_cells": 25
+        }
+      },
+      "logic_nonincrease": true,
+      "efficiency_5pct_pass": true,
+      "efficiency_over_15pct": false,
+      "absolute_limits_pass": true,
+      "sensitivity_diagnostic_only": {
+        "first_pair": {
+          "available": true,
+          "pair_count": 1,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.20469230000162497,
+              "candidate_mean": 0.1780956000002334,
+              "overhead_percent": -12.993502931561396
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 15912960,
+              "candidate_mean": 15745024,
+              "overhead_percent": -1.0553410553410525
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.140625,
+              "candidate_mean": 0.15625,
+              "overhead_percent": 11.111111111111116
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.078125,
+              "candidate_mean": 0.0625,
+              "overhead_percent": -19.999999999999996
+            }
+          }
+        },
+        "five_additional_pairs": {
+          "available": false,
+          "pair_count": 0,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "first_plus_first_four": {
+          "available": false,
+          "pair_count": 1,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "all_six_pairs": {
+          "available": false,
+          "pair_count": 1,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "all_measured_pairs": {
+          "available": true,
+          "pair_count": 1,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.20469230000162497,
+              "candidate_mean": 0.1780956000002334,
+              "overhead_percent": -12.993502931561396
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 15912960,
+              "candidate_mean": 15745024,
+              "overhead_percent": -1.0553410553410525
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.140625,
+              "candidate_mean": 0.15625,
+              "overhead_percent": 11.111111111111116
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.078125,
+              "candidate_mean": 0.0625,
+              "overhead_percent": -19.999999999999996
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "test4",
+      "review_time_eligible": true,
+      "review_triggered": false,
+      "first_pair_sum_seconds": 0.376013500001136,
+      "first_pair_sum_under_1s": true,
+      "selected": {
+        "available": true,
+        "pair_count": 1,
+        "metrics": {
+          "wall_seconds": {
+            "baseline_mean": 0.191887000000861,
+            "candidate_mean": 0.18412650000027497,
+            "overhead_percent": -4.044307326995167
+          },
+          "peak_working_set_bytes": {
+            "baseline_mean": 16744448,
+            "candidate_mean": 16470016,
+            "overhead_percent": -1.6389432485322875
+          },
+          "cpu_seconds": {
+            "baseline_mean": 0.171875,
+            "candidate_mean": 0.140625,
+            "overhead_percent": -18.181818181818176
+          },
+          "root_cpu_seconds": {
+            "baseline_mean": 0.078125,
+            "candidate_mean": 0.078125,
+            "overhead_percent": 0.0
+          }
+        }
+      },
+      "logic_gain_percent": 25.0,
+      "counts": {
+        "baseline": {
+          "by_type": {
+            "$not": 1,
+            "cycloneiv_lcell_comb": 35,
+            "dffeas": 10
+          },
+          "lut_cells": 35,
+          "not_cells": 1,
+          "scored_logic_cells": 36,
+          "dff_cells": 10,
+          "total_cells": 46
+        },
+        "candidate": {
+          "by_type": {
+            "$not": 1,
+            "cycloneiv_lcell_comb": 26,
+            "dffeas": 10
+          },
+          "lut_cells": 26,
+          "not_cells": 1,
+          "scored_logic_cells": 27,
+          "dff_cells": 10,
+          "total_cells": 37
+        }
+      },
+      "logic_nonincrease": true,
+      "efficiency_5pct_pass": true,
+      "efficiency_over_15pct": false,
+      "absolute_limits_pass": true,
+      "sensitivity_diagnostic_only": {
+        "first_pair": {
+          "available": true,
+          "pair_count": 1,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.191887000000861,
+              "candidate_mean": 0.18412650000027497,
+              "overhead_percent": -4.044307326995167
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 16744448,
+              "candidate_mean": 16470016,
+              "overhead_percent": -1.6389432485322875
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.171875,
+              "candidate_mean": 0.140625,
+              "overhead_percent": -18.181818181818176
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.078125,
+              "candidate_mean": 0.078125,
+              "overhead_percent": 0.0
+            }
+          }
+        },
+        "five_additional_pairs": {
+          "available": false,
+          "pair_count": 0,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "first_plus_first_four": {
+          "available": false,
+          "pair_count": 1,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "all_six_pairs": {
+          "available": false,
+          "pair_count": 1,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "all_measured_pairs": {
+          "available": true,
+          "pair_count": 1,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.191887000000861,
+              "candidate_mean": 0.18412650000027497,
+              "overhead_percent": -4.044307326995167
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 16744448,
+              "candidate_mean": 16470016,
+              "overhead_percent": -1.6389432485322875
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.171875,
+              "candidate_mean": 0.140625,
+              "overhead_percent": -18.181818181818176
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.078125,
+              "candidate_mean": 0.078125,
+              "overhead_percent": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "pmux_case01_balanced",
+      "review_time_eligible": true,
+      "review_triggered": false,
+      "first_pair_sum_seconds": 0.7025958000012906,
+      "first_pair_sum_under_1s": true,
+      "selected": {
+        "available": true,
+        "pair_count": 1,
+        "metrics": {
+          "wall_seconds": {
+            "baseline_mean": 0.365984700001718,
+            "candidate_mean": 0.3366110999995726,
+            "overhead_percent": -8.025909280362676
+          },
+          "peak_working_set_bytes": {
+            "baseline_mean": 24092672,
+            "candidate_mean": 23293952,
+            "overhead_percent": -3.3151989119347136
+          },
+          "cpu_seconds": {
+            "baseline_mean": 0.296875,
+            "candidate_mean": 0.28125,
+            "overhead_percent": -5.263157894736848
+          },
+          "root_cpu_seconds": {
+            "baseline_mean": 0.1875,
+            "candidate_mean": 0.203125,
+            "overhead_percent": 8.333333333333325
+          }
+        }
+      },
+      "logic_gain_percent": 13.380281690140846,
+      "counts": {
+        "baseline": {
+          "by_type": {
+            "cycloneiv_lcell_comb": 426,
+            "dffeas": 12
+          },
+          "lut_cells": 426,
+          "not_cells": 0,
+          "scored_logic_cells": 426,
+          "dff_cells": 12,
+          "total_cells": 438
+        },
+        "candidate": {
+          "by_type": {
+            "cycloneiv_lcell_comb": 369,
+            "dffeas": 12
+          },
+          "lut_cells": 369,
+          "not_cells": 0,
+          "scored_logic_cells": 369,
+          "dff_cells": 12,
+          "total_cells": 381
+        }
+      },
+      "logic_nonincrease": true,
+      "efficiency_5pct_pass": true,
+      "efficiency_over_15pct": false,
+      "absolute_limits_pass": true,
+      "sensitivity_diagnostic_only": {
+        "first_pair": {
+          "available": true,
+          "pair_count": 1,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.365984700001718,
+              "candidate_mean": 0.3366110999995726,
+              "overhead_percent": -8.025909280362676
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 24092672,
+              "candidate_mean": 23293952,
+              "overhead_percent": -3.3151989119347136
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.296875,
+              "candidate_mean": 0.28125,
+              "overhead_percent": -5.263157894736848
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.1875,
+              "candidate_mean": 0.203125,
+              "overhead_percent": 8.333333333333325
+            }
+          }
+        },
+        "five_additional_pairs": {
+          "available": false,
+          "pair_count": 0,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "first_plus_first_four": {
+          "available": false,
+          "pair_count": 1,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "all_six_pairs": {
+          "available": false,
+          "pair_count": 1,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "all_measured_pairs": {
+          "available": true,
+          "pair_count": 1,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.365984700001718,
+              "candidate_mean": 0.3366110999995726,
+              "overhead_percent": -8.025909280362676
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 24092672,
+              "candidate_mean": 23293952,
+              "overhead_percent": -3.3151989119347136
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.296875,
+              "candidate_mean": 0.28125,
+              "overhead_percent": -5.263157894736848
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.1875,
+              "candidate_mean": 0.203125,
+              "overhead_percent": 8.333333333333325
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "pmux_case02_pipeline",
+      "review_time_eligible": true,
+      "review_triggered": false,
+      "first_pair_sum_seconds": 0.8014688000039314,
+      "first_pair_sum_under_1s": true,
+      "selected": {
+        "available": true,
+        "pair_count": 1,
+        "metrics": {
+          "wall_seconds": {
+            "baseline_mean": 0.41267250000237254,
+            "candidate_mean": 0.38879630000155885,
+            "overhead_percent": -5.78575020159483
+          },
+          "peak_working_set_bytes": {
+            "baseline_mean": 24088576,
+            "candidate_mean": 23453696,
+            "overhead_percent": -2.635606189423567
+          },
+          "cpu_seconds": {
+            "baseline_mean": 0.390625,
+            "candidate_mean": 0.3125,
+            "overhead_percent": -19.999999999999996
+          },
+          "root_cpu_seconds": {
+            "baseline_mean": 0.265625,
+            "candidate_mean": 0.203125,
+            "overhead_percent": -23.529411764705888
+          }
+        }
+      },
+      "logic_gain_percent": 22.666666666666668,
+      "counts": {
+        "baseline": {
+          "by_type": {
+            "cycloneiv_lcell_comb": 450,
+            "dffeas": 24
+          },
+          "lut_cells": 450,
+          "not_cells": 0,
+          "scored_logic_cells": 450,
+          "dff_cells": 24,
+          "total_cells": 474
+        },
+        "candidate": {
+          "by_type": {
+            "cycloneiv_lcell_comb": 348,
+            "dffeas": 24
+          },
+          "lut_cells": 348,
+          "not_cells": 0,
+          "scored_logic_cells": 348,
+          "dff_cells": 24,
+          "total_cells": 372
+        }
+      },
+      "logic_nonincrease": true,
+      "efficiency_5pct_pass": true,
+      "efficiency_over_15pct": false,
+      "absolute_limits_pass": true,
+      "sensitivity_diagnostic_only": {
+        "first_pair": {
+          "available": true,
+          "pair_count": 1,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.41267250000237254,
+              "candidate_mean": 0.38879630000155885,
+              "overhead_percent": -5.78575020159483
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 24088576,
+              "candidate_mean": 23453696,
+              "overhead_percent": -2.635606189423567
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.390625,
+              "candidate_mean": 0.3125,
+              "overhead_percent": -19.999999999999996
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.265625,
+              "candidate_mean": 0.203125,
+              "overhead_percent": -23.529411764705888
+            }
+          }
+        },
+        "five_additional_pairs": {
+          "available": false,
+          "pair_count": 0,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "first_plus_first_four": {
+          "available": false,
+          "pair_count": 1,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "all_six_pairs": {
+          "available": false,
+          "pair_count": 1,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "all_measured_pairs": {
+          "available": true,
+          "pair_count": 1,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.41267250000237254,
+              "candidate_mean": 0.38879630000155885,
+              "overhead_percent": -5.78575020159483
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 24088576,
+              "candidate_mean": 23453696,
+              "overhead_percent": -2.635606189423567
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.390625,
+              "candidate_mean": 0.3125,
+              "overhead_percent": -19.999999999999996
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.265625,
+              "candidate_mean": 0.203125,
+              "overhead_percent": -23.529411764705888
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "pmux_case03_crossbar",
+      "review_time_eligible": true,
+      "review_triggered": false,
+      "first_pair_sum_seconds": 0.7479807999989134,
+      "first_pair_sum_under_1s": true,
+      "selected": {
+        "available": true,
+        "pair_count": 1,
+        "metrics": {
+          "wall_seconds": {
+            "baseline_mean": 0.43781529999978375,
+            "candidate_mean": 0.3101654999991297,
+            "overhead_percent": -29.156084769243364
+          },
+          "peak_working_set_bytes": {
+            "baseline_mean": 22929408,
+            "candidate_mean": 20873216,
+            "overhead_percent": -8.967488388710255
+          },
+          "cpu_seconds": {
+            "baseline_mean": 0.390625,
+            "candidate_mean": 0.25,
+            "overhead_percent": -36.0
+          },
+          "root_cpu_seconds": {
+            "baseline_mean": 0.25,
+            "candidate_mean": 0.15625,
+            "overhead_percent": -37.5
+          }
+        }
+      },
+      "logic_gain_percent": 35.049019607843135,
+      "counts": {
+        "baseline": {
+          "by_type": {
+            "cycloneiv_lcell_comb": 408,
+            "dffeas": 10
+          },
+          "lut_cells": 408,
+          "not_cells": 0,
+          "scored_logic_cells": 408,
+          "dff_cells": 10,
+          "total_cells": 418
+        },
+        "candidate": {
+          "by_type": {
+            "cycloneiv_lcell_comb": 265,
+            "dffeas": 10
+          },
+          "lut_cells": 265,
+          "not_cells": 0,
+          "scored_logic_cells": 265,
+          "dff_cells": 10,
+          "total_cells": 275
+        }
+      },
+      "logic_nonincrease": true,
+      "efficiency_5pct_pass": true,
+      "efficiency_over_15pct": false,
+      "absolute_limits_pass": true,
+      "sensitivity_diagnostic_only": {
+        "first_pair": {
+          "available": true,
+          "pair_count": 1,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.43781529999978375,
+              "candidate_mean": 0.3101654999991297,
+              "overhead_percent": -29.156084769243364
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 22929408,
+              "candidate_mean": 20873216,
+              "overhead_percent": -8.967488388710255
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.390625,
+              "candidate_mean": 0.25,
+              "overhead_percent": -36.0
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.25,
+              "candidate_mean": 0.15625,
+              "overhead_percent": -37.5
+            }
+          }
+        },
+        "five_additional_pairs": {
+          "available": false,
+          "pair_count": 0,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "first_plus_first_four": {
+          "available": false,
+          "pair_count": 1,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "all_six_pairs": {
+          "available": false,
+          "pair_count": 1,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "all_measured_pairs": {
+          "available": true,
+          "pair_count": 1,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.43781529999978375,
+              "candidate_mean": 0.3101654999991297,
+              "overhead_percent": -29.156084769243364
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 22929408,
+              "candidate_mean": 20873216,
+              "overhead_percent": -8.967488388710255
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.390625,
+              "candidate_mean": 0.25,
+              "overhead_percent": -36.0
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.25,
+              "candidate_mean": 0.15625,
+              "overhead_percent": -37.5
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "pmux_case04_feedback",
+      "review_time_eligible": true,
+      "review_triggered": false,
+      "first_pair_sum_seconds": 0.6660986999995657,
+      "first_pair_sum_under_1s": true,
+      "selected": {
+        "available": true,
+        "pair_count": 1,
+        "metrics": {
+          "wall_seconds": {
+            "baseline_mean": 0.3427902000003087,
+            "candidate_mean": 0.32330849999925704,
+            "overhead_percent": -5.6832721591907
+          },
+          "peak_working_set_bytes": {
+            "baseline_mean": 22347776,
+            "candidate_mean": 22118400,
+            "overhead_percent": -1.026392961876832
+          },
+          "cpu_seconds": {
+            "baseline_mean": 0.34375,
+            "candidate_mean": 0.28125,
+            "overhead_percent": -18.181818181818176
+          },
+          "root_cpu_seconds": {
+            "baseline_mean": 0.1875,
+            "candidate_mean": 0.1875,
+            "overhead_percent": 0.0
+          }
+        }
+      },
+      "logic_gain_percent": 8.423913043478262,
+      "counts": {
+        "baseline": {
+          "by_type": {
+            "$not": 1,
+            "cycloneiv_lcell_comb": 367,
+            "dffeas": 16
+          },
+          "lut_cells": 367,
+          "not_cells": 1,
+          "scored_logic_cells": 368,
+          "dff_cells": 16,
+          "total_cells": 384
+        },
+        "candidate": {
+          "by_type": {
+            "$not": 1,
+            "cycloneiv_lcell_comb": 336,
+            "dffeas": 16
+          },
+          "lut_cells": 336,
+          "not_cells": 1,
+          "scored_logic_cells": 337,
+          "dff_cells": 16,
+          "total_cells": 353
+        }
+      },
+      "logic_nonincrease": true,
+      "efficiency_5pct_pass": true,
+      "efficiency_over_15pct": false,
+      "absolute_limits_pass": true,
+      "sensitivity_diagnostic_only": {
+        "first_pair": {
+          "available": true,
+          "pair_count": 1,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.3427902000003087,
+              "candidate_mean": 0.32330849999925704,
+              "overhead_percent": -5.6832721591907
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 22347776,
+              "candidate_mean": 22118400,
+              "overhead_percent": -1.026392961876832
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.34375,
+              "candidate_mean": 0.28125,
+              "overhead_percent": -18.181818181818176
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.1875,
+              "candidate_mean": 0.1875,
+              "overhead_percent": 0.0
+            }
+          }
+        },
+        "five_additional_pairs": {
+          "available": false,
+          "pair_count": 0,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "first_plus_first_four": {
+          "available": false,
+          "pair_count": 1,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "all_six_pairs": {
+          "available": false,
+          "pair_count": 1,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "all_measured_pairs": {
+          "available": true,
+          "pair_count": 1,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.3427902000003087,
+              "candidate_mean": 0.32330849999925704,
+              "overhead_percent": -5.6832721591907
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 22347776,
+              "candidate_mean": 22118400,
+              "overhead_percent": -1.026392961876832
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.34375,
+              "candidate_mean": 0.28125,
+              "overhead_percent": -18.181818181818176
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.1875,
+              "candidate_mean": 0.1875,
+              "overhead_percent": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "pmux_case05_nested",
+      "review_time_eligible": true,
+      "review_triggered": false,
+      "first_pair_sum_seconds": 0.7112536000022374,
+      "first_pair_sum_under_1s": true,
+      "selected": {
+        "available": true,
+        "pair_count": 1,
+        "metrics": {
+          "wall_seconds": {
+            "baseline_mean": 0.3674174000007042,
+            "candidate_mean": 0.34383620000153314,
+            "overhead_percent": -6.418095604379614
+          },
+          "peak_working_set_bytes": {
+            "baseline_mean": 22704128,
+            "candidate_mean": 22769664,
+            "overhead_percent": 0.288652354320762
+          },
+          "cpu_seconds": {
+            "baseline_mean": 0.328125,
+            "candidate_mean": 0.3125,
+            "overhead_percent": -4.761904761904767
+          },
+          "root_cpu_seconds": {
+            "baseline_mean": 0.21875,
+            "candidate_mean": 0.234375,
+            "overhead_percent": 7.14285714285714
+          }
+        }
+      },
+      "logic_gain_percent": 15.012106537530267,
+      "counts": {
+        "baseline": {
+          "by_type": {
+            "cycloneiv_lcell_comb": 413,
+            "dffeas": 12
+          },
+          "lut_cells": 413,
+          "not_cells": 0,
+          "scored_logic_cells": 413,
+          "dff_cells": 12,
+          "total_cells": 425
+        },
+        "candidate": {
+          "by_type": {
+            "cycloneiv_lcell_comb": 351,
+            "dffeas": 12
+          },
+          "lut_cells": 351,
+          "not_cells": 0,
+          "scored_logic_cells": 351,
+          "dff_cells": 12,
+          "total_cells": 363
+        }
+      },
+      "logic_nonincrease": true,
+      "efficiency_5pct_pass": true,
+      "efficiency_over_15pct": false,
+      "absolute_limits_pass": true,
+      "sensitivity_diagnostic_only": {
+        "first_pair": {
+          "available": true,
+          "pair_count": 1,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.3674174000007042,
+              "candidate_mean": 0.34383620000153314,
+              "overhead_percent": -6.418095604379614
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 22704128,
+              "candidate_mean": 22769664,
+              "overhead_percent": 0.288652354320762
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.328125,
+              "candidate_mean": 0.3125,
+              "overhead_percent": -4.761904761904767
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.21875,
+              "candidate_mean": 0.234375,
+              "overhead_percent": 7.14285714285714
+            }
+          }
+        },
+        "five_additional_pairs": {
+          "available": false,
+          "pair_count": 0,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "first_plus_first_four": {
+          "available": false,
+          "pair_count": 1,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "all_six_pairs": {
+          "available": false,
+          "pair_count": 1,
+          "reason": "Not enough recorded pairs; no inferred samples or reruns"
+        },
+        "all_measured_pairs": {
+          "available": true,
+          "pair_count": 1,
+          "metrics": {
+            "wall_seconds": {
+              "baseline_mean": 0.3674174000007042,
+              "candidate_mean": 0.34383620000153314,
+              "overhead_percent": -6.418095604379614
+            },
+            "peak_working_set_bytes": {
+              "baseline_mean": 22704128,
+              "candidate_mean": 22769664,
+              "overhead_percent": 0.288652354320762
+            },
+            "cpu_seconds": {
+              "baseline_mean": 0.328125,
+              "candidate_mean": 0.3125,
+              "overhead_percent": -4.761904761904767
+            },
+            "root_cpu_seconds": {
+              "baseline_mean": 0.21875,
+              "candidate_mean": 0.234375,
+              "overhead_percent": 7.14285714285714
+            }
+          }
+        }
+      }
+    }
+  ],
+  "runner_change_audit": {
+    "status": "PASS_INDEPENDENT_SOURCE_AND_AST_COMPARISON",
+    "parent_runner_sha256": "0db05e1a8a3fde6edd9cc421e3449afa70caa4558178d2bd3e27b7739baaced6",
+    "new_runner_sha256": "8edf2322f8a25f6db8d3c7ad71b7d6174e8b9ebbe055cc8a8a56e0f342ed8baa",
+    "protected_measurement_section_sha256": "37c7a889cdab0ffbeee75ca72d178b391c29bab77362533732b9cfda32cade15",
+    "measurement_section_unchanged_after_two_exe_path_normalizations": true,
+    "non_main_toplevel_ast_unchanged_except_declared_resolver": true,
+    "warmups_reviews_thresholds_timing_memory_aggregation_unchanged": true,
+    "meter_self_test_and_measure_calls_unchanged": true,
+    "main_initialization_changes_reviewed_and_entire_new_runner_sha256_pinned": true
+  },
+  "formula": "100 * (mean(candidate) / mean(baseline) - 1); never mean(pair percentages)",
+  "protocol_scope": "Predeclared v25 both-first-executions-under-1s eligibility; five additional pairs",
+  "formal_status": "NOT_AUDITED; no proof success is asserted",
+  "official_interpretation_confirmed": false,
+  "sensitivity_is_not_an_extra_acceptance_gate": true,
+  "declared_order_and_labels_verified_not_external_execution_timestamps": true,
+  "security_environment_condition_not_verified": true,
+  "no_yosys_abc_or_performance_runs": true,
+  "recomputed": {
+    "average_gain_percent": 20.079171455690528,
+    "all_logic_cells_nonincrease": true,
+    "all_efficiency_5pct_pass": true,
+    "any_efficiency_over_15pct": false,
+    "all_absolute_limits_pass": true,
+    "area_average_at_least_20pct": true,
+    "predeclared_measurement_criteria_pass": true,
+    "candidate_measured_sample_count": 14,
+    "candidate_max_wall_seconds": 0.8150477999988652,
+    "candidate_max_root_peak_working_set_bytes": 23453696
+  },
+  "additional_interpretation_information_only": {
+    "time_eligible_cases": [
+      "test1",
+      "test2",
+      "test3",
+      "test4",
+      "pmux_case01_balanced",
+      "pmux_case02_pipeline",
+      "pmux_case03_crossbar",
+      "pmux_case04_feedback",
+      "pmux_case05_nested"
+    ],
+    "reviewed_cases": [
+      "test1"
+    ],
+    "all_time_eligible_first_pair_sums_under_1s": false,
+    "all_reviewed_first_pair_sums_under_1s": false,
+    "time_eligible_sum_at_least_1s": [
+      "test1"
+    ],
+    "reviewed_sum_at_least_1s": [
+      "test1"
+    ],
+    "affects_predeclared_verdict": false
+  },
+  "file_fingerprints": {
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\report.json": "fecd7eb44ae0aa5df482a88f892f7ef8c16cd5d6ec4e82ac5d8375280e2a53b0",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\manifest.json": "2a258fd99ce775729658355f352773e668f862b3bada09bc88cd00fa955e56d5",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\run_current_cases.py": "8edf2322f8a25f6db8d3c7ad71b7d6174e8b9ebbe055cc8a8a56e0f342ed8baa",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\windows_metrics.py": "2eb7ffc6564a40a09310e17be8e7b5746766ca148bbe1564d03cc533540496bf",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\cases_current.json": "6360cd97fb17315cc39ed6d6d8a21ce1d99dcc99b1541fe1a92d64dfeefc26da",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\libffi-8.dll": "f96cf79b75f33a10023d001673b564538023395c94b3c58e1db53114976a7c25",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\libgcc_s_seh-1.dll": "08ab5e874e7ec066a4cbd0edd09d31779d6ee4d857ed84033d6b93b0334856c4",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\libstdc++-6.dll": "b70223508ddf99b98bacfb9d1484e729dcb9922982137f842e601a969da7a17c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\libwinpthread-1.dll": "76cc52adfcdb8c800813b2ae8da42a908934eb1ee54ce8e9744fc8d703c76ee1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\yosys-abc.exe": "b17ea3f805418a28dc29250721be04ff2ec708fd8226e65a0815bbd6d11c9ad8",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\zlib1.dll": "11cd91171765cd65f1c3362e3df67e5f5a618a6b88c8cdec899b802eaf1c7b0d",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\abc9_map.v": "f611eeeaedaf4f80fa05c244906b56cfac4fcb6960aaefa9e5569850d5ab193a",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\abc9_model.v": "38fedb5415db4102058e11d029b93343393df8f64d86d1ed40fc4685ecc60d26",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\abc9_unmap.v": "346b6d45d416d1631bb44385930b5271b84cb9626d09d140dddf7472a68d99e3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\achronix\\speedster22i\\cells_map.v": "19d4d91947d32e457c7c50a7b1a65e64bc7f15537a0d27aceae5766613e10bbc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\achronix\\speedster22i\\cells_sim.v": "03a3821ee1c07817926fdb00096598658fd39c48e711a888d8bee8739a9a4b96",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\adff2dff.v": "b71f5443956a75ce32bdb0abddb025073978d08b40569f4ae8e63a177466659b",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\analogdevices\\abc9_model.v": "575810a2f862ecbd617b70b0ddf8c869cb25768814c6baf8901fb73c4729d5ed",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\analogdevices\\arith_map.v": "00643f2d8a1ada0661312065928601a8fb7d18a87576092bff6ebffbd30a6c08",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\analogdevices\\brams.txt": "c7623881c7940cf26a703e0a8806d746284e02297148f12af86e17194db6f37e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\analogdevices\\brams_defs.vh": "8985aa9207613b073d0d10c2a5a977a37c9f1d2896f671d01391743eb361fe45",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\analogdevices\\brams_map.v": "785aca392ae9dbcfc523d1eb0ea1901b33e7782b401fa43fd22276a4fc4166a7",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\analogdevices\\cells_map.v": "4e09166901ffb8081255a80bf5bb833216ea9d6be8a1822cb15aadb75c02602d",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\analogdevices\\cells_sim.v": "f83e8e951ec7c2c554e1f358dfc40d9f70f88577864567b11a2431f3af653a18",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\analogdevices\\dsp_map.v": "ecec60d9d83611fb3a2a919887ca34b6e9f4008ad662170393d0274327e465f7",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\analogdevices\\ff_map.v": "3b63e50a5850cba2ed1741f91b827f04d2455c8263b3f3d1a40bca3a8977e1c6",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\analogdevices\\lut_map.v": "2b5d1e9dd35c977fedcdd6d8dff6728868b39727ef8a5e4b1f5ecad33cc87684",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\analogdevices\\lutrams.txt": "5647b3e5ec2f9c3a83aaaa779cfa778402b1d035b501691d1c38b97366412e35",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\analogdevices\\lutrams_map.v": "c3c27141e57eb1454b7ff17d5b08784960d3049b54c15574e737f3833ce4c61d",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\analogdevices\\mux_map.v": "bc0c0f39c3f477635edd305817c1a12cd3b24e92a609dc757dd292bf10efde72",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\anlogic\\arith_map.v": "8657fb27e204c8b112ebe7b433c657c43c803d207d8a271d86ba84a123a42fc3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\anlogic\\brams.txt": "5e466341568851bc3d3a73cc276301b3e50531c6bf7c77a547346cb3c8a1ac2a",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\anlogic\\brams_map.v": "d796192ea32dfe32002282d77ed3a87af11a90c7687b543d0c11877346292be2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\anlogic\\cells_map.v": "129abab8f94398657c33436e38a991292e68f46187158868fcd3ae049ad1bbb9",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\anlogic\\cells_sim.v": "48f3934fa13f5c0dbcc8577b1dee604bfc9033ec3d1aaf4229e7ef9314031f6d",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\anlogic\\eagle_bb.v": "32a220bfd9370cf925b1692f9be3d925691d7c0ca53ceb66c75602b1f34004f9",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\anlogic\\lutrams.txt": "a9f8db65cda5f7bfa41f11e70b43c24d2c75241594df6c369f70839e47bd17ea",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\anlogic\\lutrams_map.v": "abbde8f2f11e51736f75b92a34457bb201429ce7b03bd00682f1281f01333dbc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\choices\\han-carlson.v": "c9442e2e8a77f5dee8e3645ce6be2613eee9df4431eea32ebc9cdd5b0a143b42",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\choices\\kogge-stone.v": "f2601d85ad37cfa8fc1eb6940c58c7256031b97677a7c091bc3e12f82e53adcd",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\choices\\sklansky.v": "17539d9725ace7a9862cc5adda794b684d1a59dcf877fcd80be1dfc592d229a2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\cmp2lcu.v": "a573c2ea4536815454b1d84397b030230ffba80087bac65f1f50e2f0a473bab9",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\cmp2lut.v": "b20be58ce24372269227c2d71418dd81106ba8b7bca192a05b60e50926565c7a",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\cmp2softlogic.v": "4bdd76ad92417cbf37718c0599967a338b833958785f662dab6a554f444176f0",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\dff2ff.v": "fe6b781b109ebf56d89b02f315dca5226cb04706f811a9112618cd9d6d68d767",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\ecp5\\ccu2c_sim.vh": "dfad729a0536c9b0cce476a076ebe050eb77c3b3309661888b98ad63d01525af",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\ecp5\\cells_bb.v": "927e3d1677a4432569d8ae6f9d0ad5d9a618a23d7ee5e6e636dcdca5733f94c3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\ecp5\\cells_ff.vh": "4e70a64b7204fc778858270654672ee63592144f48dd60e0de8a3f85bc6c9ae3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\ecp5\\cells_io.vh": "e2b7974f2308459293ea3b91e4747618099da8c21e5886b28b1d129535e689f9",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\ecp5\\cells_sim.v": "c0741a7386ca708727310836c0288ae735d34644f28c0b3689868259b8bfbb94",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\ecp5\\common_sim.vh": "4d6b9d1de62c7205726aac08dc45bf01ab9dd02c10230a0aa9e9a344c89c14d0",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\efinix\\arith_map.v": "5266d8576785f8a919be2fd10ae2ba27b0dcbd79a22c9bb65c3e4c3c8d85ee46",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\efinix\\brams.txt": "eeb2bbb3d219270ee938d5ea6d6b797f81e5e8b172481239aef59642619dc417",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\efinix\\brams_map.v": "268e09a5aa2a59b5ac1175e6b8f3cb75dd4159fb4dae11470cedadb875ccac6e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\efinix\\cells_map.v": "e9605a3cff270ddf4e82c20ef65977f4897ba2e5c270c186ea063beef4ec533f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\efinix\\cells_sim.v": "c17605a3d6dccfe6faf4bd704fac7c3094b74ec82be326ceab14e6356f56524c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\efinix\\gbuf_map.v": "54d1895ec6d03df13827a845255f219920fde461d70eb465ce57a91ecb5ec565",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gate2lut.v": "35089c62c6734851473c1c0055d260719330aaec02a1b7deb712c0616c172ad2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gatemate\\arith_map.v": "53c2f3f308f45a9521f583fcf4c5507e4818730e31604d175849adfa8c1cfc3e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gatemate\\brams.txt": "9c66b3b127c40d5018415c19337d6814fdfb2afe6bd5bee55af2f1219e0cfcae",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gatemate\\brams_init_20.vh": "786d10c743b0bac5261dd72dc79dac4dcbb57fac1eef8996daea494af426d2da",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gatemate\\brams_init_40.vh": "98407a5d8b7eb5d427c6f0fc83c31dfa6687510d19c90c6069f0950666f17e5e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gatemate\\brams_map.v": "759958b89414cd9e9b04dc78d4bc32837a6f843a8c7803bb7ea4742c008fd573",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gatemate\\cells_bb.v": "43bda366c37e57218ca3226a4b48dadf242915aed86b6f21d41631d7765a4036",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gatemate\\cells_sim.v": "591003eccac3e8afda35013c00ce320a576984292c0889852a782e30b8fd6dde",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gatemate\\inv_map.v": "88d5c17188f0deba9953aff21e7f63d856a0f7a1460e472b6bd87a0b50b300eb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gatemate\\lut_map.v": "30cdfa2d4878d12ed558a8146bf2145a8f6feb907a5893de079ebea27ec04fd3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gatemate\\lut_tree_cells.genlib": "93f13142725b43030cade4ed4b61b0a8e79b3769e6328cdd5f999ee32c5186ef",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gatemate\\lut_tree_map.v": "d06d71b38149281e9ee1f56ad087b58909cea8a94c62eefa2a06a766f9d34df1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gatemate\\mul_map.v": "53703cbc31bfa27f64e22816e19865126f2ebf8557f701212d5159b7d1bb823b",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gatemate\\mux_map.v": "9db277cf9a35f59e107b94eced546696148aa41541e652e90f33c2448174cbde",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gatemate\\reg_map.v": "5fd706a655be0a113cd517a6122e2df16b124da7734d5dbded2efc3a61f92947",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gowin\\arith_map.v": "105a66f1789ec954c6103f2b3d40df90595a889fee89b6495468f085260b6449",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gowin\\brams.txt": "84a6820d5a27094e8c2a56520c94686c1843ef8ab84f146d7a0a2d1e62e467c2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gowin\\brams_map.v": "5bb411c6fb632e2d346c5eb360c42a923b3e944745cd2e9b91a477842ae83a03",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gowin\\brams_map_gw5a.v": "033e305e4cdf638cee419052d24f8d5cc4bfa172adc25925cf67b5797053eb93",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gowin\\cells_latch.v": "433d7bd239568ab26b3ddc0e048189a72c5ebab8d2155064534e52ae51066c7e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gowin\\cells_map.v": "364a0e83dc6c53a47d9021c0c640245f96c8f7fbfd76f6bb9cc23986bce2b13d",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gowin\\cells_sim.v": "04efb7ae17c02b93d45115fda4f5541406495ab6b8a1f0b127ee807013d8dd42",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gowin\\cells_xtra_gw1n.v": "f53405b7fa0aa642e0cc6f1c2ef0410e002f938a6ee8bbe1dc15829f2afc6256",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gowin\\cells_xtra_gw2a.v": "272f22e49516ca4737d21ccf2c10da7b810d9ccde7eabf65a4521ce5879657de",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gowin\\cells_xtra_gw5a.v": "d9e8dab3b943e3db8606c3a3fca69e67ea6855ed61c53ffacb8220dfeb2e628f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gowin\\dsp_map.v": "48a21da21f89c66a920b14c4a5157c5a7b26d2eac135743a47e1f3c295351d0d",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gowin\\lutrams.txt": "2da5f7b66ba3f81b0d839e24e6d90bf899d0a15298dca913d4578e04fb4fed2d",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\gowin\\lutrams_map.v": "9ad90035e6a78317d5999dff62e68876f95d43b3c22f3687c427a252b04adf13",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\ice40\\abc9_model.v": "81caa7e17fc9a5c4665fe4d415a552826ef5847b98b97aebdc7fd9e4ed0c3e3a",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\ice40\\arith_map.v": "063c6171cb5d1894ae19b2bbe62d16dafce7281927c827bedf15639289588a26",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\ice40\\brams.txt": "3d0a9d60824351f3052093808077a3ed0e8ccba5e59a9efa7a442899942cb0fd",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\ice40\\brams_map.v": "e1c56044f79743775fa3645bb7a58d42a482767b61d85c8c72ad0d8319fe37ac",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\ice40\\cells_map.v": "18efc6be9498a385031417e795068cf0db3cb0d51cd36c34f73ad178027158a2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\ice40\\cells_sim.v": "4d5f6a5caa1b68f6374273044411e74bce2c02604ec680ee0992ecc1f7e1d554",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\ice40\\dsp_map.v": "a347e13cc34f7c0d31e53690b1b4d22d482dea4ac20353ba5f355e13e26b0906",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\ice40\\ff_map.v": "1e10762cfaa6ca988348b374e1f7722629e15afaecae7f5a3287e0a7c1a4a957",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\ice40\\latches_map.v": "10900547548ef48157ece04a888335da18644d943972df297ec8af5fc0b3633b",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\ice40\\spram.txt": "d5d8a1eedf9e0c1d8ae88c89a1fad86f54cecd296cf1c8a1f118fd636254bf21",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\ice40\\spram_map.v": "de67215bf64152761394f46aa3509dedabeaef729df5d399ac83328b35c71ae5",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\backends\\cxxrtl\\runtime\\cxxrtl\\capi\\cxxrtl_capi.cc": "31e5713b70d58f7e3fac4556158bb3d301f342b7d262f445d723347c6650661e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\backends\\cxxrtl\\runtime\\cxxrtl\\capi\\cxxrtl_capi.h": "52e80b1e78e19895f228cf8bf449138c18edf7ac1a86b295bfcc9d474a204147",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\backends\\cxxrtl\\runtime\\cxxrtl\\capi\\cxxrtl_capi_vcd.cc": "9208092e09c0f70fdc7465cb770cef9f72cac96884df69960802dbddd8cf3680",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\backends\\cxxrtl\\runtime\\cxxrtl\\capi\\cxxrtl_capi_vcd.h": "3aa08885a2fb407521333970e228e4a41eec80ddbb45c9f8bde192da8b3f4cde",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\backends\\cxxrtl\\runtime\\cxxrtl\\cxxrtl.h": "0e15bc9fcd11604d342ac16b74f0ec2a7838a882d6ee41395540ed32568f222f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\backends\\cxxrtl\\runtime\\cxxrtl\\cxxrtl_replay.h": "66d30bf4c8a20c82b76f17b03176620650e4d84987bf24130fa93d444bffc946",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\backends\\cxxrtl\\runtime\\cxxrtl\\cxxrtl_time.h": "2c9224e58f9234130025e7945976eb77be95ebc350e3b5c2b0960f00a76e8fc6",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\backends\\cxxrtl\\runtime\\cxxrtl\\cxxrtl_vcd.h": "884db77fd99095f9ef00495f32e1573b9c90b984a89c18b8f40b3a87229ccd2f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\backends\\cxxrtl\\runtime\\README.txt": "ba0bc596517ffdaa0eb34e2cb23cb72d58d9ec3e99443b2bedd10d149093be4a",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\backends\\rtlil\\rtlil_backend.h": "dc9c1e398844c470a2bad016adc88cd60904282c2ebff36e0958f8466ec7ebaf",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\frontends\\blif\\blifparse.h": "9a219ca1f3744aecd72b1fe50ca0a17b97fced13790ac5ae315387bbcd3c0f0c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\binding.h": "295509278f3076f00e6e88a1cf40112a0f434e1e6aac699a772d0385970efab7",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\bitpattern.h": "6ac101e0579fa94dd8b1569527695a6a418b847bfdd2d4359068b8abdaff3a92",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\cellaigs.h": "2af52c0e0d9c1e54c4d1e02f78fb7a0ec97181946ef55ace3560fad87debd9d3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\celledges.h": "e1200303445310e5e1d2c4f6fe1414112c72e87feae50276ea579f2555a37df4",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\celltypes.h": "2920c09a07bc57540f2cfb2606bef16210e187ba8b8b5df746de343b770932e5",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\consteval.h": "d5ae4582341044a42bff30f8b763c1fe3964be7bd748cc1bcf29b82328b356c2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\constids.inc": "ee26a4f99771b34881014bca42ee428b4ecfdd6bebf88c1159fd54661c0713cd",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\cost.h": "39cb4e9026d8e703d23bfa32956e5b64df8c5620681b9a87a123809d490d4d7c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\drivertools.h": "23c636bd3ace7eeb70ffcd59e31eafe38c4d792061dfb23832b3b6685e7f35fd",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\ff.h": "78878d2487d5d0a1973b9a7884124836fbc2c6411abd3106343a6052d90c735f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\ffinit.h": "50834e3d5f144927b47104435d6562e23ea858d5aa449f5a0f27f418ebd96ef3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\ffmerge.h": "6004b90ebdc9d0a27536b341e7bbf276181357e8ed10340f5de02cd6b5cda6c6",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\fmt.h": "7b85cb2c780a3698b21f5d5294f127d663101abf62d91b3842b4fc1c1c762504",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\fstdata.h": "3e8ae4912a76d9fe24a96327ee42b2950fb476a8305d80f52b465953655c6bb3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\gzip.h": "9019023d26cd84db6dbbde4a32c2fea6aa81945585435e72622d13b068c0d0fc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\hashlib.h": "0969acc6f48b8f5f4d9773f65c6353ceb8a92891358651d7fff5c4899a8bb004",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\io.h": "13e53e6e568a68e8c85e0bbaa98da330c5f88e2c8ba30723f8fff36e69909522",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\json.h": "9ed5da43081db5fc464fbca05c5c43a915c54c39e5a56c83effc5fd9fb2810cd",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\log.h": "fce3cee5058247c73a8ec1cd0ba9a54873d8b6deb5d61bf414239222b6665566",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\macc.h": "667e4c031d465e47a46b325bf8eced99d462f022cd3ce0ca0c33ad36a102a74c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\mem.h": "6d2d9afc3867a6cf412254f8df61108ed1f921a8a423d681f11fa7900486335e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\modtools.h": "97e07b7877f01f42dd080d213b8e5269c415d3e06a2c5c6ebcc0c8afeb958ac0",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\newcelltypes.h": "5943ba16c3d84038d068aa5c66a5362420be439342953a3cb1b0845393cac2c0",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\qcsat.h": "9a0f9831fbbaccc5d97d462792184dbed26a43bcf49a87ff1eb7796fb45c95ca",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\register.h": "15cd47ecb90ed4c06c925e56123d809fede989cc3e88e54fd458e6aed656429b",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\rtlil.h": "00c09a955218f9362e91e80bf334664809ce5f7a306231a3ba226559ee21e269",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\satgen.h": "588b45098c1ccd70e497a7123705e763d01c164e2a3d304f3cb19fd6473fa233",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\scopeinfo.h": "218490d2cea6271650d9285a0902892c2c0177b68ddaf7703b06ca136e838caf",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\sexpr.h": "2c56588bfa99d2a60c949febac1474965a3ffaeee90f03a42d48b26eff4faa57",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\sigtools.h": "380e0ebdf2fba2dbfe5bb73fadd29edb1e4fb915f3d3a0e7e94e5861840f04c0",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\threading.h": "ebd4d1a9edf00266b9e5c6cd2a7e4b390f90ece349b2b29cfb2bdfe37ecbf8bf",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\timinginfo.h": "58c3832ca9b254e8fdf3c66343ce85d8da907b065e6f79aadee1839a1ee7e526",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\unused_bits.h": "af766f01e7f26535e3bff347e6f0773d231f69d1c2e212620379ef2e33258de7",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\utils.h": "9c0d45c1bca132e3179d40128177d8ee8c76a5f7ac261df69734d7b9587bc8b8",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\yosys.h": "18762922c4275d0e4660d93b6c11fea24a34820a0616b6ae7a66410ca2f2c456",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\yosys_common.h": "68a75cfc67614ce23dc7ec3d33b5ca425e3a8f99d256c771508b9085a5de4412",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\yosys_config.h": "b04164150537427509cbeed6f0f508ec6ccc2fd1ab6833af9ab9c02f95525e5c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\kernel\\yw.h": "fc677fd7d7c8143bcd26b88a06fd38c37d7d60b08be3d4cd95efcf3d58fc3422",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\libs\\ezsat\\ezcmdline.h": "591f4f108c3c4314b1f972c60437c8a85a9f9be222d8971e5f06b454bdbf8b3e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\libs\\ezsat\\ezminisat.h": "1a75ab25e4c0e255d9119467b5cb313bce8c871d893191c3362c63548149cd1e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\libs\\ezsat\\ezsat.h": "eb839cf23aad3754ec9e6bb31e550148aa8aea33f9bd9eda33a8a9d441708387",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\libs\\fst\\fstapi.h": "32b53513eea34b603f15897178361029932271cf96d35ae5a0f821b11f9f534f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\libs\\json11\\json11.hpp": "d653ab8c6e132d97d41fe95a75f9a6f089af456631e8ad541d3adfc00238b8d2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\libs\\sha1\\sha1.h": "159f84f592625d9c1b43a0ea056a69d191a61f26e5365a3b5fb5112f0bf5eaa0",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\passes\\fsm\\fsmdata.h": "e2bf400035600f0e5cd6cd102858914aa842d61df31039c3c9dcf866f3dcc61c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\include\\passes\\techmap\\libparse.h": "1b22ce061b9d2373db99b757d7a917e59bc99c8e4d7f0d7bbf04c099736761b1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel\\common\\altpll_bb.v": "2a2aebbc0467d2f7b06fc868b48c865b375e91f9e6221e69d28c4a875624e577",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel\\common\\brams_m9k.txt": "24e509e1307973d28cb94db289afa5e60eea6d9ac02c186464006e81d8328d94",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel\\common\\brams_map_m9k.v": "179719c46ce1cbed3791257d2455a9dd6154f9d855833f7533259d271b460e45",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel\\common\\ff_map.v": "b1d533e121c100cf833b24fcb9550b4b6309c0805f48e6985db44d49b6ce22ec",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel\\common\\m9k_bb.v": "a3eb44b87064de45d64b44bc99582e39b8b4a6cc574a93b058bacd9bacef5f5d",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel\\cyclone10lp\\cells_map.v": "fc1b4bafa8f89bf07b14a873c14f9f048dc11426a7627a62f7cc4b13a18bee42",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel\\cyclone10lp\\cells_sim.v": "b24b2e88b9a6ad0afcc49639cf950ab5a5ce78ce7b17ae3fe6ed7259a3ab3ed0",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel\\cycloneiv\\cells_map.v": "b8f2da90b1f7035893ae9c5489ac04da0385e8a47cbf116a85281686f97db805",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel\\cycloneiv\\cells_sim.v": "a6014340ce18a73a234e0b39f6d5478cd74487903735f720ed0c21dff2f1cdfc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel\\cycloneive\\cells_map.v": "083c7d82ff2ce8ff00531951baa265886a735d9b241b6490b1c2b447268ba512",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel\\cycloneive\\cells_sim.v": "cf07682b8ad9503517628dd6c2b7c602d14c86d06d24f001088904f25d3fdc5b",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel\\max10\\cells_map.v": "8584f96f3e29d4c1c6b9c1a53e2a180fca62f43793cbbc1836854908990ab94d",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel\\max10\\cells_sim.v": "22e536173eb8dd041b6d3703e5f8e7055a833cb3462df1544f507a066e3ed22c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel\\max10\\dsp_map.v": "66c3cfce44fef0d154612580660f202cf768149044f9385f62585233e3da4308",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel_alm\\common\\abc9_map.v": "5665f855a7635bc16a62c626e342b17017b641696d6b4557e179da2ecc3bbb88",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel_alm\\common\\abc9_model.v": "105c6db856300d7b536c8ec84dad61a1d149c2af9999897901180cf3537a6d16",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel_alm\\common\\abc9_unmap.v": "32bd37531acbf141841c1b8ec9bedf90228b118afc0a76ca0728f59a9cf9c6da",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel_alm\\common\\alm_map.v": "ed91bfe3ea5f3d8fc8d8f4edc668446240502b4316f1a96479f89d27380ae856",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel_alm\\common\\alm_sim.v": "151b45d78cb308db67e1133fccc90b495671c28217bed12d4036e3a5ab68a22d",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel_alm\\common\\arith_alm_map.v": "673a10abd724ba0cb8c628f3296f60819a84e373f0f0191a1f84546299df588d",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel_alm\\common\\bram_m10k.txt": "a2f8963b535e47d3a9acf536468fe5ad659097d81db4ca770af0205ff161742f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel_alm\\common\\bram_m10k_map.v": "8e87028b25546ac4612402c898bd52dd7835be8fc417a254cffc300605c2de85",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel_alm\\common\\dff_map.v": "3675087bd0a218eaaa7d7da71eb20b817c9cffe5ce19c73a76099a86b52d030d",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel_alm\\common\\dff_sim.v": "4b41b2286240147ee59d074d2deb5f95db8885efc637bea324f74dd848d6004f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel_alm\\common\\dsp_map.v": "69e61e59c0d31206efd5403b4695ca96b1d85bb47fe7172d766f0841c760cdf6",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel_alm\\common\\dsp_sim.v": "fd605fa7c24b73805ff9d50f3708ce605e9df2e28e6428f6eefb6254d6fd0734",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel_alm\\common\\lutram_mlab.txt": "bc297dc51669c2de12d0db0a2202484ed8c7fe800964af934120ab368f919171",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel_alm\\common\\megafunction_bb.v": "cc4d65d7b7149642808d10a5d6b1b2ab0308b04ef1c608e00c5102c9e6a31f72",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel_alm\\common\\mem_sim.v": "174deb9ed4f885fe8bc89df52829d25eebaa8a3c6e362a73288ae010132d8a3a",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel_alm\\common\\misc_sim.v": "0216e05499781ed0ab3c0e45c8fbe877666744aa04f0e7485baea5de5b044282",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel_alm\\cyclonev\\cells_sim.v": "b2b4f3506a5225f78cf53bf1f0355846b1b2a9b0a9d492b5e208a304acb38bc2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\arith_map_ccu2c.v": "088886caffff983ba4f03c6e866a783c77e264c20b855ffc57935f9d4e53c5b8",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\arith_map_ccu2d.v": "73c397c2726511034a0bd91a3c17a6f5059526121edb1473fdc28c5852e986dc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\arith_map_nexus.v": "c373af75f7885a8414167484bbb243009e117584381034edb56eefeece78f1ec",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\brams_16kd.txt": "62e49a39c1a267237350600c1bedaf75d0db2835f11fa242547b1aedbd1b482d",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\brams_8kc.txt": "05a51bb24e0eba12f2c9ce6d008a1be271059d4defee778ddd2731089d55b2f8",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\brams_map_16kd.v": "1d04463984e481ae727300b8ae01010129e38e7959560ba4b769ada7d8c984b9",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\brams_map_8kc.v": "479881179adbb864cb660f8d87e419ca33faa6d2741f732203e6764ba0b0dfcf",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\brams_map_nexus.v": "84257e8caa2ccc63b46969e371ec8eb36c21008e89c7fb0de3ef6c30f2937e7f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\brams_nexus.txt": "69f9fc8af8bd12b59d3e061e82265380232f18e3e95f5c9777417c7026b11d9e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\ccu2c_sim.vh": "dfad729a0536c9b0cce476a076ebe050eb77c3b3309661888b98ad63d01525af",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\ccu2d_sim.vh": "7f478e227842665dde23ae4e5fd3ac5ac627e4c493f03f7a5c292aac43b0d073",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\cells_bb_ecp5.v": "927e3d1677a4432569d8ae6f9d0ad5d9a618a23d7ee5e6e636dcdca5733f94c3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\cells_bb_nexus.v": "d2174165a0fb21cfbbb2aa3db3279e5bb2a8b8e23ad6ac17b6066fe66bab8f58",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\cells_bb_xo2.v": "c4a3156b931c60e5b3be3a81d4179dffc887bf570908cc7a58cd438b900d4749",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\cells_bb_xo3.v": "c4a3156b931c60e5b3be3a81d4179dffc887bf570908cc7a58cd438b900d4749",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\cells_bb_xo3d.v": "ca03c3bba62acbd90632cc73823c999e6daf9e23959f1d558f2548dc1391533c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\cells_ff.vh": "4e70a64b7204fc778858270654672ee63592144f48dd60e0de8a3f85bc6c9ae3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\cells_io.vh": "e2b7974f2308459293ea3b91e4747618099da8c21e5886b28b1d129535e689f9",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\cells_map_nexus.v": "fedef65b2c6bd625f8b39c125ddb2b69df718d379c4dd997893ccad0edf4903b",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\cells_map_trellis.v": "dafaf7801e4256585c8bb962730dbca8a70351e0eedf1915726434c18fb6d73a",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\cells_sim_ecp5.v": "c0741a7386ca708727310836c0288ae735d34644f28c0b3689868259b8bfbb94",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\cells_sim_nexus.v": "fdc2a8ccd121fb2462164b6d278c215616a8628ec4eac0c1646189a7e1eb9355",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\cells_sim_xo2.v": "a4dae92d97208ca1b9df734cd0765fa34149355f75ff1b4906e427b888a48ad3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\cells_sim_xo3.v": "a4dae92d97208ca1b9df734cd0765fa34149355f75ff1b4906e427b888a48ad3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\cells_sim_xo3d.v": "a4dae92d97208ca1b9df734cd0765fa34149355f75ff1b4906e427b888a48ad3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\common_sim.vh": "4d6b9d1de62c7205726aac08dc45bf01ab9dd02c10230a0aa9e9a344c89c14d0",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\dsp_map_18x18.v": "d9250c0cd0772246c16f37d273536d597a0cf8ee718d9a9fe9a055b7d49f0129",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\dsp_map_nexus.v": "a9562a0faf14d07316bcfa1732ce2e986f01ecd541866a135acfbfe8b40ab4a7",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\latches_map.v": "10900547548ef48157ece04a888335da18644d943972df297ec8af5fc0b3633b",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\lrams_map_nexus.v": "7cd413be5c8b092ef3f90da940289ac9ea5206113c45eade2ca6d1cf47839ffc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\lrams_nexus.txt": "91a1624a64c0243562092dc26386c360b9500073b7f7bbf1d08aeb388bd8eefb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\lutrams_map_nexus.v": "7a4dab58994020d912244c8ad4bb946720904088bb4cbe7757087a222824a3e9",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\lutrams_map_trellis.v": "274b9fef3da7b2d6ee468a83b7775419b8b492b730f4923d403144349df809d3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\lutrams_nexus.txt": "ca93c10d5d3ec96aa4baa5052ea42d27ad971c0777a30ed95a515b45ec6c5817",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\lutrams_trellis.txt": "a5a6012a21dde53e8197cf5174e532f933d2dbbd151904b4800c124a04777916",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\lattice\\parse_init.vh": "d661f1bcd8250b7efdeb4a9b80497662eab2e5054033403e360f66ab725a8331",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\microchip\\arith_map.v": "ba6058fdc024e29025a0eac22be0a8c067a44fab3655bf4eb46b0ee4ce790e37",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\microchip\\brams_defs.vh": "db9d1cef41cf20762eded931fcfaf88c1c83df1196e11ef8246b53cd1d6eff1f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\microchip\\cells_map.v": "1e923edd21d05d3e3d9461780b400c8d46eda37b1f6df3e69e8cbf7536dfe6b3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\microchip\\cells_sim.v": "bcf7ca6a0955a74dbcf5a5b38c5fdedfe7b832c0799975e3fe0839891e4f06dd",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\microchip\\LSRAM.txt": "23d2e0195eb40621dd9088367d151111ad3807bc43a0f47d42659ec3c7472ee0",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\microchip\\LSRAM_map.v": "cbe57589392cfbc41f8f45b804a2614b00b0e75ed630bfbb71a45c157a96defd",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\microchip\\polarfire_dsp_map.v": "919495e0c886ec1e4c255dc5998e4dbd4ee05a0a628926bfb869160f485658fc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\microchip\\uSRAM.txt": "11becc36f0283025db92a90b4c931c2ede53049f081bf5e73d466419c0fce28f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\microchip\\uSRAM_map.v": "1f73e62c97429d0f2ca44f8194d78ba0a0c44cd9bccc4ae91164688aeae9941f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\mul2dsp.v": "9a9941e96f956fba0e63b93a1d708f44e6c8d1a344ef2c00f253a67cc4fd98b9",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\arith_map.v": "1070fc0ad666ecc8db98a5609ecef3bfd1a6fa4bae9ef049b64fc9537443e9f0",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\brams.txt": "25f86ebc97c64cd1d5e23c65620bc79b17b8ac76f86f1e17c43084ee1c952bc8",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\brams_init.vh": "62bb1f058c1474dc79f31794097558746f7ba94619645c05562211260df4493c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\brams_map.v": "bbd68755fcd9a98e21d15941d426321f0a281e03b53df09aff28ae0e4af21593",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\cells_bb.v": "10e2de9851e4c3da81d1052d11b8c24fe0e83e661ef8755a0dd5d515d30866a8",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\cells_bb_l.v": "e412825f9dbed7f43395e22b93c0448a71a6805116341fffdc4440c88f5e5592",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\cells_bb_m.v": "79738bb41e143bb4819a61a5700998e76afad4cc0614193142b7f88cc4f4d3a3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\cells_bb_u.v": "7fb82687c63ccde12aa90e39d98917eb662f1f5a43d06daf8ce55dc455309f33",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\cells_map.v": "b6e9bb65e319ac2a3f1e7239a4d612cb576646ac9bbc64080990a2cf90e22d3d",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\cells_sim.v": "1f6919220bb15a327a3a33b0ab1b709a58fce33d8c144c9a7d5902dd80a350b4",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\cells_sim_l.v": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\cells_sim_m.v": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\cells_sim_u.v": "f528b7ede35ca2d20a3968f53ced527dfe274ee0d0fde3944c148227bd0f1665",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\cells_wrap.v": "a4358f6811171a0113a8059b51761342f224d87a27061ac6b4299027afb91943",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\cells_wrap_l.v": "5a012da8f15f872cc03d4a77af69a2e4c70ae722b56a41c5fc722b4615deb139",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\cells_wrap_m.v": "8a4fce91f8cc30ca95ef88831e493daf2499fab1d63230ee1da30947b40a9526",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\cells_wrap_u.v": "5ab814f9b3fa27200a4fa53c915a6c468a6529fdb64c7d1d14da2fdadb8ed1dd",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\io_map.v": "1183614f072d53eb264f8ec186fd2f037497ea05aac7e459aa3fcee8a530084f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\latches_map.v": "10900547548ef48157ece04a888335da18644d943972df297ec8af5fc0b3633b",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\rf_init.vh": "6e4369c925efad0da3fcb3fb5478375fd2bdb5e5b00aa0351f19f0bc1066b69e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\rf_rams_l.txt": "b033d09c7fba67ee17b64d45a63dafa8cb8097e263984b6e1be45250c6933395",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\rf_rams_m.txt": "d3b649b41fc12d96e5de79292c768ee759ddd2049128f626cf662ab7600ef0ee",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\rf_rams_map_l.v": "6ad525ecac9bbb3f96c5c3528f14448befb590e8fc3b110b70adde6904359587",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\rf_rams_map_m.v": "f304f2f03716fc90a173f3710eeffa048f05b449deddc89e930b6e0da1ca0088",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\rf_rams_map_u.v": "20700223a9438ea7473762ae55dce29b9ff95f52eb7b0d7aeff2e94d796c9636",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nanoxplore\\rf_rams_u.txt": "5cc6deb9f7c36382f9ef2acc759fddb5ede6b8e81cff32e6aae7780777cde926",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nexus\\cells_sim.v": "fdc2a8ccd121fb2462164b6d278c215616a8628ec4eac0c1646189a7e1eb9355",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nexus\\cells_xtra.v": "d2174165a0fb21cfbbb2aa3db3279e5bb2a8b8e23ad6ac17b6066fe66bab8f58",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\nexus\\parse_init.vh": "d661f1bcd8250b7efdeb4a9b80497662eab2e5054033403e360f66ab725a8331",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\pmux2mux.v": "c0d310564fe91bebe94303fde2c78c610ee77aa2d54602ebc2c0488d9afd7a8b",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\python3\\smtio.py": "1db3ae474363dc631e8048d253879204e0a5cf4a228a461d8d095db2a1ffac77",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\python3\\ywio.py": "41f4b9f9dd9c0fc4aa5f7cecef10506c3487e4e34a9c542bea360e631fa1d866",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\common\\cells_sim.v": "7c7c92e73c3998eb8b59751b4fb45cddfd66f55a283b605669907587e9dfb09a",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\pp3\\abc9_map.v": "5db789a07dc3305c9bca10795d2222205feb3f2ad937f6a39d181a988d822756",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\pp3\\abc9_model.v": "d26489d018d3353fa28bc2a6f772a7c14181bc23d3a29cb1f9996c3822414ff5",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\pp3\\abc9_unmap.v": "a9e7bfb41b2a686711446d16e99b1ef5b3c7b24d67e5876e1993a32c86f71fe9",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\pp3\\cells_map.v": "8f97ba62bf7a23ad0b3bc4b4888a164e323c8a3bbefd23e4b22766ccaf8941c6",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\pp3\\cells_sim.v": "70cdb08f0455ffa34e984cd7980a3efdfc3912bb9886028a72b4247cea6c8024",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\pp3\\ffs_map.v": "44daaf117c961d9a00f2b83c13b5046244b4f422f626e5dad6b9569c935c3abe",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\pp3\\latches_map.v": "77b54a80c55182bb81fca3f5c128cc5bbb3f0174fdfb0671ac7964db004f47f3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\pp3\\lut_map.v": "7de4952eaa0af9cb6bcc0ebaec1f82ac4960894c6c804be02c351b3aee255a4e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\qlf_k6n10f\\arith_map.v": "1894ab2aa4f60af4d81a3ad7cb147c0302ca774e22087bffe5d99b1dd9610ba0",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\qlf_k6n10f\\bram_types_sim.v": "feb9766c5fc3a6e4a3b97daef88c49124224597770636267500bc2a40c983bd5",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\qlf_k6n10f\\brams_map.v": "6ca87fae45d264a1c1f27f2451f3441e918da9bb5d45988c2a829fdcb412a5e7",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\qlf_k6n10f\\brams_sim.v": "cdbac4e1c70978508d2542ce6907cd21f6e849a7f9f13eff645872247aa68838",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\qlf_k6n10f\\cells_sim.v": "c5dc8302b6b789352502b420009d0936f5d44c8d7ed57b97bc9af1361411fe02",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\qlf_k6n10f\\dsp_final_map.v": "268ad3312af0d0911363f71e83349f2a242b4dae2059024b9e9e1513dc248263",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\qlf_k6n10f\\dsp_map.v": "afeb88645d31762c6ef0926c11937d79156b9f4177788adb8e8a7c10b2c5f629",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\qlf_k6n10f\\dsp_sim.v": "26d3e6abf1a0d3756b649561188b73aefaa9b8fff84b185add19c15e77ddcb25",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\qlf_k6n10f\\ffs_map.v": "6c1025c8362904ba41f9d6e9de2b00f0d3e8e214ba16778e4c456188d740420c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\qlf_k6n10f\\libmap_brams.txt": "13b03f0571c247b30f465b69c7a4e3d1a9d6508659268f44470f7274baf032fd",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\qlf_k6n10f\\libmap_brams_map.v": "8e652fa05b5f379c10d0d528db49986c580eccd27bcb2449d467d69593fcca64",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\qlf_k6n10f\\sram1024x18_mem.v": "d600fd902c635cb9b6f316292d040d59b6fdceac16e9450802eb91c4cd1443e7",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\qlf_k6n10f\\TDP18K_FIFO.v": "0ede44f06715d422613f2c1c667bfedc97b8b8ece39e9610da33922fce78272e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\quicklogic\\qlf_k6n10f\\ufifo_ctl.v": "78245e3f4a5b8fc4fc407cc1998ebb6d49a6cf86172e64c64771b78f4a1bede3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\sdc\\graph-stubs.sdc": "a21f3cf68874844a23f0044ac3195c8ab2a4b3e344e741473fe370711720e88f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\sf2\\arith_map.v": "b78e527935eda7038851c9fac1eb108998f58ceed800419f5312b782b3237ac2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\sf2\\cells_map.v": "22854151b7126d8f30169b4d56d06f53a3387fc6924bbf4490edeb313032b436",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\sf2\\cells_sim.v": "d4249e446653d245eac96979a618ceaef827ea29924852f60f063526f4e14ca7",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\simcells.v": "0156162837d52b32bea761b03195aa8786dca602d75e09d7bb1bdb0c7f4183da",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\simlib.v": "243315bbec98becca5f42a713764e7274f226cc8dbdb82cc1ff08a5ceeb00f36",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\smtmap.v": "020f02b09e2c2cfb005e45ab09c9f24d362d21771bb5af9b5470b688e651c992",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\techmap.v": "8af1bc8ac65660634d39928fae779358f7fd009d9efb705ee28efb6dd3c37117",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\abc9_model.v": "bab0f9afab07f838b978fb842b630cbfdaadbfb04cc4890bbbf4a342c5beb91a",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\arith_map.v": "b7415cae95037f3b0c281eb707466a6314e855b747976652e8b3ec8151ac0c78",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\brams_defs.vh": "8985aa9207613b073d0d10c2a5a977a37c9f1d2896f671d01391743eb361fe45",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\brams_xc2v.txt": "c35bf0edb3a74900b1b9f798aa48010727adf907e449c98d86191eeb2054883e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\brams_xc2v_map.v": "05e8cfd1318900d8ff64da1a9a7a9c7a2055dec1d8859dbdd4677fc0ef29ff8d",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\brams_xc3sda.txt": "c44ef2591bf385cb5b735a641d3eb3c2031ae158a721a34f91d3877f7266e911",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\brams_xc3sda_map.v": "f2611848956577aaf64d6b04b1022a5c1a335f5592fe51f064bbabc3a6635090",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\brams_xc4v.txt": "43f05a61a3b299bf0414e3252e21b870b189c9d7f8948de59fbd6f0a5dec7257",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\brams_xc4v_map.v": "158eb9fc028439b5baa6ec6ed95037a935e5b551d3094fc8017acd70e2dfa841",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\brams_xc5v_map.v": "80570a54952a618153068eccff740c770ba74ad30305ac0e545cf8c4eb328c1e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\brams_xc6v_map.v": "f0ad804a7d7f0ed2ac884235f4d961e1e70802ec3adad5a14d9bcc38c12479e5",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\brams_xcu_map.v": "223ba8d24a465f251fba50b2bb7a65f70bf59261469fcc9de4d4b662c66537c1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\brams_xcv.txt": "5a5a4b4b88efb1ca56891b8922a6c89107158b7d79a0a1ddf6d1a87df40fb0bb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\brams_xcv_map.v": "992dd92f7e5c7c3fa3bd9ba028ca236148a316be71af69f73b9fb7b7b209f085",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\cells_map.v": "aadf20841e917b6fdfdf131f3a7f5ae6347833b7dfd78084db2fd429d0e14f4d",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\cells_sim.v": "4b348c0cb9a8de1348712c018140dd0894ddb20708974ea1bc3587aac24eb404",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\cells_xtra.v": "9cb8814b290dda1383641e67c78bd2e1512920cee54d62ba5432d803e85be355",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\ff_map.v": "3d18bfcf9dafef89b9203c85100dfc258cd05ef289d1ddf494fdfba71b88dbb1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\lut_map.v": "fb5313bccf95832ab8169088c03bfb12f90a19c57d4551a96bdd5dbf976d9f71",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\lutrams_xc5v.txt": "a2c377986596f4a52a2f8439502ba366ef1a35e0894a85523ac28759c5fc56f0",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\lutrams_xc5v_map.v": "318307ba314cfc4a5bda94530765a06869636e547e381cd6515eaaa2f30eeef2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\lutrams_xcu.txt": "dd5ea6246a6cb350e47bb7f057783951d02890122c37aab1e47b26297df160e0",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\lutrams_xcv.txt": "60fd7a330a1deb8bd07347246b8441d358e066e815bac33f20639ffa0983e891",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\lutrams_xcv_map.v": "a27f4dedde8296f1c99bd1b615b3a090be3457654f83d9138ef4698d100fcd80",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\mux_map.v": "5c4758262ee7ed49d79db53fd0670a6531aa2147582a44313e28c63a401b2ffb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\urams.txt": "e5281ea8be1fdb2f59694488bff15aa8172e6f81dfeb4561caa6df516deb132f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\urams_map.v": "b5a4ceb8babdf45f58a179c7afb7de22815f50267c9368940c0ef882e519a566",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\xc3s_mult_map.v": "c7a4cea62df508ab0ee01af41139a9d556c3eac7e746460d97f66d842ccb66ea",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\xc3sda_dsp_map.v": "50d50621788c91fcb1cdcd41a063b4bc954f934f61274eaf17a9251be7f7a7a0",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\xc4v_dsp_map.v": "781b1c55de1095c2c2012187e901e30c711a5bf675a7d3fc5e5dade4482a5ee1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\xc5v_dsp_map.v": "7efac9d36950267aa8d2d2994de3bb9a02e82b8a726cb601bf3677a0312fc8f7",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\xc6s_dsp_map.v": "ae4bff7d46020777cf6e93f34d2ae24fe09bd31b286c9990cf139b70eaa2a390",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\xc7_dsp_map.v": "b90d9592c7849255a70e255b93d9fd08b14936b7a7b25b5fc20b6b4e9cb859d1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\xilinx\\xcu_dsp_map.v": "a39aee1a0b8ba7e4e93bfdebb4f5d553f3a3515c02a0ccb8b66b50d4c045f090",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\yosys-baseline.exe": "45c15841f039d998483142bf7ce726fc020bfa88651c4a6fc62eadf4313fa3d9",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share\\intel\\competition_abc_v11.abc": "0ad315064a884d94676997ac6094cf7e679c7b0d3ff2d09431530b76d208c86e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\yosys-candidate.exe": "d96ae554c9ee2f68d76cfdaf34e36f288cba022ccad10b22b79d8370ce6c9d29",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\runtime\\DLLs\\_ctypes.pyd": "441655d1c076bda8b250c0f1360a83fae18ad9cf7901f589d9faf1ae6afb379c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\runtime\\DLLs\\_socket.pyd": "2e121ae5def1a4e83caa53c8e461767b43ede8bfcf343242f75a12209c0069e5",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\runtime\\DLLs\\_wmi.pyd": "f6999adaf91df470253a96d735f88773c88736025f160b47e4bc5f02ee3bc8ad",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\runtime\\DLLs\\libffi-8.dll": "710509106efbee520c518eb4ba536935e7dca9a72b346d08547589aa7bbc8473",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\runtime\\DLLs\\select.pyd": "7618630e4c33ea24e757363e54a3c4edd2e0ce8da036b34a50aabb2b0bdf150f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\runtime\\LICENSE.txt": "886a0ead2d89030ee62dbff52b04e47ab91998341295bb9c56fb952b4e081c7a",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\runtime\\python.exe": "7a4102b91959bb234507850ea584e1d31d300a6831b171e4aadc59ff592f0234",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\runtime\\python3.dll": "67bdf2c2ee177edf2cac76c7b2586206899918f7604c953810ac6a4e6d3f1646",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\runtime\\python312._pth": "023dc5c098ea903bded3f2d0b126aa9513862b47d5c3977132555c5b2476fb71",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\runtime\\python312.dll": "e39aa2da5ea2d310d89994f71bf913a0a137ebaf9f692a565b8c896081512f28",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\runtime\\python312.zip": "e64ab55298b4481b992b35decb0e8472ca08cea891feea4280ab9e98be4dba9c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\runtime\\vcruntime140.dll": "d5e4d9a3e835fa679450145d6a7d94e36573a509317111904d9b3712c30d9066",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\runtime\\vcruntime140_1.dll": "1f2d41c4aa5db0bc33ebf7b66d72943a817d7ce6cbe880502a9403823633093f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\source\\yosys-0.69-pristine.tar.gz": "086045e23253917b93c71fc2d9db495df3c153cdc5d212bac505df7c4ad62e2f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\source\\pmux_competition_v11.cc": "75ed360b73180441fccbe0f5f8ed3f10e1d07147842d38eb74baedc133ce47d2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\source\\competition_abc_dch.abc": "0ad315064a884d94676997ac6094cf7e679c7b0d3ff2d09431530b76d208c86e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\source\\synth-intel-competition.patch": "9a52af4ea1ffec9b5f15ed509b014855089ce35487e94455589aa9d7e0b6a073",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\build-records\\prepared.json": "089329684b3d067a97ec6a1cbf17579b2325162c4c199353c5715c2b262c2eaa",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\build-records\\pair-config-parity.json": "5ecbc7437aa47c9ab2e5f7cac4faba4a44309ee0d1d6e703284f16f21e96a205",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\build-records\\built-baseline.json": "9ffbd9ca7edf8bbcad3ef152a59485e457447528e97ec0685ab9c0c43c7601a3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\build-records\\built-candidate.json": "40a566cda389c29a455d817eba8ddf40c2e23e2abc4258f7ecac4461a6fb402b",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\source\\parent_run_current_cases_v26_separate.py": "0db05e1a8a3fde6edd9cc421e3449afa70caa4558178d2bd3e27b7739baaced6",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\deployment-records\\runner-before.py": "0db05e1a8a3fde6edd9cc421e3449afa70caa4558178d2bd3e27b7739baaced6",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\deployment-records\\deployment-receipt.json": "480489250d5b8bb4f4674ce6c581076695de9c4b7069d5632da12135a3bcdf11",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\deployment-records\\parent-manifest.json": "8e9276621054adf00367875ad756bd5bc0d0741a421a35090d0c180bab5fcf57",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\deployment-records\\parent-package-inventory.json": "1b15f7e4871d5ad2f394db87cc738a62aceb67b2fce4595a0978be77ffe8faf2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\deployment-records\\parent-packaging-receipt.json": "9f69a6fb0f57f58032770ae6e0e042019e92e3afe14f778f296cf38631b6494c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\deployment-records\\parent-README_CURRENT.md": "0a5c6ce1782a40fb52394e61222c2034437a762527a3fd15bc48ca5928e353c8",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\deployment-records\\parent-source\\BUILD_WINDOWS.md": "1c8470b1bf3c477d7f07eea6b560fe547a1aa658b5629a56938950a98fcbd4c3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\deployment-records\\parent-source\\build_windows_portable.py": "37cd87e2d56f88c6f7b99a050cc2ab24b99916ebaeca3948fbcb6100ce4681a3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\deployment-records\\parent-source\\bundle_native_evidence.py": "35cc56b9ff09f194d70a9d6f423e76cae82587eefbf57ba6def5c232b1795e20",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\deployment-records\\parent-source\\PROOF_REPLAY_GUIDE.md": "7997c451bcd4e3745dc16f1dc17d50ae9f5b3ee8693301853904dd2b95560292",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\deployment-records\\parent-source\\prove_windows_native_once.py": "06fcd1f290cbbf5f45c506f089317e467c22e242c3621e530fbc4e81a44f6e7c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\deployment-records\\runner-change-audit.json": "7481ef0302b36aeb63b24c0f75e004234c298e629e4e6eada426236f776beb53",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\deployment-records\\runner-path-only.diff": "55a292c6df10d87e005becf3254d39eefb8e4fed8f425afbec73f353d23e0f6f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\competition_case\\test1\\test1.v": "2d2dba011b0e8799d0de3790b69b7f01c6eb6ac665c4321b57b0378a4972fd13",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\warmup-01.log": "ae35a8bd21dc13573683bcf05d450f3aa928463809a8ec5fa36e610657cff7eb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\warmup-02.log": "ae35a8bd21dc13573683bcf05d450f3aa928463809a8ec5fa36e610657cff7eb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\warmup-03.log": "ae35a8bd21dc13573683bcf05d450f3aa928463809a8ec5fa36e610657cff7eb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\warmup-04.log": "ae35a8bd21dc13573683bcf05d450f3aa928463809a8ec5fa36e610657cff7eb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\warmup-05.log": "ae35a8bd21dc13573683bcf05d450f3aa928463809a8ec5fa36e610657cff7eb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\warmup-06.log": "ae35a8bd21dc13573683bcf05d450f3aa928463809a8ec5fa36e610657cff7eb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\warmup-07.log": "840ccef8de73efd57d618eccedbe01bfac3fc135b85ad0284f4aff9e473aca58",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\warmup-08.log": "ae35a8bd21dc13573683bcf05d450f3aa928463809a8ec5fa36e610657cff7eb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\warmup-09.log": "fcd45c4677c6de8a8f8c4dbb8122908d0c15e2063596514725602e433bd3a242",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\warmup-10.log": "fcd45c4677c6de8a8f8c4dbb8122908d0c15e2063596514725602e433bd3a242",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\first.log": "ae35a8bd21dc13573683bcf05d450f3aa928463809a8ec5fa36e610657cff7eb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\review-01.log": "ae35a8bd21dc13573683bcf05d450f3aa928463809a8ec5fa36e610657cff7eb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\review-02.log": "ae35a8bd21dc13573683bcf05d450f3aa928463809a8ec5fa36e610657cff7eb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\review-03.log": "fcd45c4677c6de8a8f8c4dbb8122908d0c15e2063596514725602e433bd3a242",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\review-04.log": "ae35a8bd21dc13573683bcf05d450f3aa928463809a8ec5fa36e610657cff7eb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\review-05.log": "ae35a8bd21dc13573683bcf05d450f3aa928463809a8ec5fa36e610657cff7eb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\candidate\\first.log": "3167b79609bf42a28d451ea91e507bfececf4bcdde34bb554c743d3c14eca3b2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\candidate\\review-01.log": "3167b79609bf42a28d451ea91e507bfececf4bcdde34bb554c743d3c14eca3b2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\candidate\\review-02.log": "ee950bcfbb0b2e3688d6caa4f71d702e6cf671ec4c0591be93d708364db00790",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\candidate\\review-03.log": "3167b79609bf42a28d451ea91e507bfececf4bcdde34bb554c743d3c14eca3b2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\candidate\\review-04.log": "3167b79609bf42a28d451ea91e507bfececf4bcdde34bb554c743d3c14eca3b2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\candidate\\review-05.log": "3167b79609bf42a28d451ea91e507bfececf4bcdde34bb554c743d3c14eca3b2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\flow.ys": "2de5b4c931fb00198a9e1a3ef7f1231d1648d97b9fabf5ce4d9e8fea1b085fdb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\postabc.ys": "4778a4bdb250d653a84589ea03f00d00791f6578ac6ac02f54245938e4d75934",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\postabc.il": "c2252a4f794dc75d272f290b97049f8c7883b00ac2f209d6c67d82a3bcf9aedb",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\netlist.json": "7d9e79e9676d79a4be1c2a8bdfcc280be9526740ad26f456366d5d4a91291678",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\baseline\\split-final.json": "7d9e79e9676d79a4be1c2a8bdfcc280be9526740ad26f456366d5d4a91291678",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\candidate\\flow.ys": "216f334dabb0d26825d817ca692d7be620120449d1f14f3f920d19c1a5018942",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\candidate\\postabc.ys": "931a11cee8b588c3fc6931eddb2aedf96874411860f54be0c95c22722a3c924b",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\candidate\\postabc.il": "cb3f0713ed098cea620c5091e5aee48544c2740eacefa35f6d514edb2bfffbf2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\candidate\\netlist.json": "240b4f29c1c16102f7053498c87866ebb4acee89b70c36c7b0d60f496587b740",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test1\\candidate\\split-final.json": "240b4f29c1c16102f7053498c87866ebb4acee89b70c36c7b0d60f496587b740",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\competition_case\\test2\\test2.v": "e43c9b437071488551caf3121e227e86f4fe3190751f245beac3b7ecc3fdb146",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\baseline\\warmup-01.log": "045cfe3e55c1a34cd648a5238f6da53a65bd7f728cd547b414c3f85e874351a1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\baseline\\warmup-02.log": "045cfe3e55c1a34cd648a5238f6da53a65bd7f728cd547b414c3f85e874351a1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\baseline\\warmup-03.log": "045cfe3e55c1a34cd648a5238f6da53a65bd7f728cd547b414c3f85e874351a1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\baseline\\warmup-04.log": "045cfe3e55c1a34cd648a5238f6da53a65bd7f728cd547b414c3f85e874351a1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\baseline\\warmup-05.log": "045cfe3e55c1a34cd648a5238f6da53a65bd7f728cd547b414c3f85e874351a1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\baseline\\warmup-06.log": "045cfe3e55c1a34cd648a5238f6da53a65bd7f728cd547b414c3f85e874351a1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\baseline\\warmup-07.log": "045cfe3e55c1a34cd648a5238f6da53a65bd7f728cd547b414c3f85e874351a1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\baseline\\warmup-08.log": "6a592a79d1ddbad08e4ffc82a6229d6e850a71dba2ec28d3835daad7dbbdf752",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\baseline\\warmup-09.log": "045cfe3e55c1a34cd648a5238f6da53a65bd7f728cd547b414c3f85e874351a1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\baseline\\warmup-10.log": "045cfe3e55c1a34cd648a5238f6da53a65bd7f728cd547b414c3f85e874351a1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\baseline\\first.log": "045cfe3e55c1a34cd648a5238f6da53a65bd7f728cd547b414c3f85e874351a1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\candidate\\first.log": "e29769ee0d7e795cb383ee3b4714bb0636d5ddcef48c5613218860a72ee6e1e2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\baseline\\flow.ys": "7513eaa9afca5b589d4d2a2817deb4cc9742339ae36778a15ff0c4abb8d65bf9",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\baseline\\postabc.ys": "da7070324bbec23a0dbb9c134716b6325e5c73bad328a20510cad5b900ea0c04",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\baseline\\postabc.il": "550e75848c19ccd4b61921bec72abb7555c313421bb749f7d8141d70630f0278",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\baseline\\netlist.json": "de8c18787b52b907b5a0599493b3665350b4953390281afec8d5d5e91a2dfd47",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\baseline\\split-final.json": "de8c18787b52b907b5a0599493b3665350b4953390281afec8d5d5e91a2dfd47",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\candidate\\flow.ys": "8ba24da7c79813a6f98b7c83155486f7e12b8173161e04c85b0b5b418257a418",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\candidate\\postabc.ys": "8715794f6ac19afac57269bb8f42aa8793d5710feb5ec608696d8342d0536935",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\candidate\\postabc.il": "8c89c93c1dc9012a5ec936ef16e326de632f7de0532fbcc3f60c311721d60e05",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\candidate\\netlist.json": "cbbcec37c867244d93a249bd9492676fa72ef1105f48c4eb05ea6cb4cf04e87f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test2\\candidate\\split-final.json": "cbbcec37c867244d93a249bd9492676fa72ef1105f48c4eb05ea6cb4cf04e87f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\competition_case\\test3\\test3.v": "1551b9212622ccef6019d6e77de2c43dc8c80d267957b55a42121f34a08780e9",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\baseline\\warmup-01.log": "ff0cc9ee24666a0fd21d41119f9d0c1fc203b0237178d09d951f0e0e46a97094",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\baseline\\warmup-02.log": "ff0cc9ee24666a0fd21d41119f9d0c1fc203b0237178d09d951f0e0e46a97094",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\baseline\\warmup-03.log": "ff0cc9ee24666a0fd21d41119f9d0c1fc203b0237178d09d951f0e0e46a97094",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\baseline\\warmup-04.log": "783cbfbaf064df51addcf5d43c66dbbe863683acf01ee9e7762b7143427b9cba",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\baseline\\warmup-05.log": "783cbfbaf064df51addcf5d43c66dbbe863683acf01ee9e7762b7143427b9cba",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\baseline\\warmup-06.log": "ff0cc9ee24666a0fd21d41119f9d0c1fc203b0237178d09d951f0e0e46a97094",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\baseline\\warmup-07.log": "ff0cc9ee24666a0fd21d41119f9d0c1fc203b0237178d09d951f0e0e46a97094",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\baseline\\warmup-08.log": "ff0cc9ee24666a0fd21d41119f9d0c1fc203b0237178d09d951f0e0e46a97094",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\baseline\\warmup-09.log": "ff0cc9ee24666a0fd21d41119f9d0c1fc203b0237178d09d951f0e0e46a97094",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\baseline\\warmup-10.log": "783cbfbaf064df51addcf5d43c66dbbe863683acf01ee9e7762b7143427b9cba",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\baseline\\first.log": "ff0cc9ee24666a0fd21d41119f9d0c1fc203b0237178d09d951f0e0e46a97094",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\candidate\\first.log": "4a0d409e0a1384b8fd2b0d6d1058c66f1a8858f7589754ef837fc4e27d8c4c55",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\baseline\\flow.ys": "09dc941bf22d80b195a3cc5e7e1795711c0f17d93b7c12c571987770b25b1f33",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\baseline\\postabc.ys": "7ed96db2ea31fff6fc7e128e72e112bb2997ef0eeaee5d41095499d3b8139710",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\baseline\\postabc.il": "5f4cfe35034b1fac22330a036f835f822c1be706a765f95f8d18cd9fadf919f7",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\baseline\\netlist.json": "3210b090df8c9da85bff8ad8076dee2e5bfb35b0a1b0749e945f3330f8c4e2c9",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\baseline\\split-final.json": "3210b090df8c9da85bff8ad8076dee2e5bfb35b0a1b0749e945f3330f8c4e2c9",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\candidate\\flow.ys": "f9e4c0581a26e6ba6929622316621242b8ccf6001ea9f600f4dc142656180c25",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\candidate\\postabc.ys": "7dc113397805aba7be42a5ffd367b0289798833be321bca1d80fb3548478197f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\candidate\\postabc.il": "1b9a9fd146c8b0d9d16362099bdcde69e63ada6093d650ddd97d2241eaccf695",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\candidate\\netlist.json": "c966954c4bb3d95894b7c04d9c2b95c2df7eeb860ded39aed20bdff36c25f897",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test3\\candidate\\split-final.json": "c966954c4bb3d95894b7c04d9c2b95c2df7eeb860ded39aed20bdff36c25f897",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\competition_case\\test4\\test4.v": "c0c5042928bd6bf568e2b7fb2193f2b6db9c4193ba3a5378fc50a331d43422d7",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\baseline\\warmup-01.log": "b843354f468a75dd2974f3695d711f99f0cea89c29adfdf5e15ccf2c78fcb6dc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\baseline\\warmup-02.log": "b843354f468a75dd2974f3695d711f99f0cea89c29adfdf5e15ccf2c78fcb6dc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\baseline\\warmup-03.log": "b843354f468a75dd2974f3695d711f99f0cea89c29adfdf5e15ccf2c78fcb6dc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\baseline\\warmup-04.log": "b843354f468a75dd2974f3695d711f99f0cea89c29adfdf5e15ccf2c78fcb6dc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\baseline\\warmup-05.log": "b843354f468a75dd2974f3695d711f99f0cea89c29adfdf5e15ccf2c78fcb6dc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\baseline\\warmup-06.log": "b843354f468a75dd2974f3695d711f99f0cea89c29adfdf5e15ccf2c78fcb6dc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\baseline\\warmup-07.log": "b843354f468a75dd2974f3695d711f99f0cea89c29adfdf5e15ccf2c78fcb6dc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\baseline\\warmup-08.log": "b843354f468a75dd2974f3695d711f99f0cea89c29adfdf5e15ccf2c78fcb6dc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\baseline\\warmup-09.log": "b843354f468a75dd2974f3695d711f99f0cea89c29adfdf5e15ccf2c78fcb6dc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\baseline\\warmup-10.log": "b843354f468a75dd2974f3695d711f99f0cea89c29adfdf5e15ccf2c78fcb6dc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\baseline\\first.log": "b843354f468a75dd2974f3695d711f99f0cea89c29adfdf5e15ccf2c78fcb6dc",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\candidate\\first.log": "095624f726cb24973bf36fe95faf8288aff23d81305e284aecc250ad99780db3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\baseline\\flow.ys": "c9e5f2b3177f47056b96637af3a89b08bbe4b85c833236cdddf2a042fe7cf299",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\baseline\\postabc.ys": "d7aaf41e3d97eb0d405db6c5f3a95b5b5b36431f18e757bf5ca1ec49d870e83c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\baseline\\postabc.il": "1fdf594993b6c8f20067d6cc382bdacb8659c34db837fd92487a7b071da20cc6",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\baseline\\netlist.json": "5e0c6814d8bf5703f226321c62ed34eab655977affafba6ad6babe0844bc8dfa",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\baseline\\split-final.json": "5e0c6814d8bf5703f226321c62ed34eab655977affafba6ad6babe0844bc8dfa",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\candidate\\flow.ys": "db863a61656e049695d748a8b88c678951aa1b5b3aae690453dda71a593dce0c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\candidate\\postabc.ys": "dc244fb834e4481839953e4757cacbd8e051eec390722baff7fe36858732c9c5",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\candidate\\postabc.il": "69a58795ce9e72db06626272fcec1a1c3fcaf3cb12b4a1083699d3cfbac4d08b",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\candidate\\netlist.json": "1d3ae9febc023e4a6933d2af41cf96b7a1340db4b7051be61a4904f5eaf6c3ae",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\test4\\candidate\\split-final.json": "1d3ae9febc023e4a6933d2af41cf96b7a1340db4b7051be61a4904f5eaf6c3ae",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\competition_case\\pmux_cases\\pmux_case01_balanced.v": "463263f4b265cbad3b634d69d316cd29e7ea0a62f91ee396dbeeecf7df5c7343",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\baseline\\warmup-01.log": "194c1f929261bd0207ea3e69ba0a085e37e98098a9f2ee727121091584cbffbf",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\baseline\\warmup-02.log": "f15c4ee3cd2a290959e58e44e86dcd661024073d08abbe060f3f1ec942928249",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\baseline\\warmup-03.log": "194c1f929261bd0207ea3e69ba0a085e37e98098a9f2ee727121091584cbffbf",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\baseline\\warmup-04.log": "f15c4ee3cd2a290959e58e44e86dcd661024073d08abbe060f3f1ec942928249",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\baseline\\warmup-05.log": "194c1f929261bd0207ea3e69ba0a085e37e98098a9f2ee727121091584cbffbf",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\baseline\\warmup-06.log": "194c1f929261bd0207ea3e69ba0a085e37e98098a9f2ee727121091584cbffbf",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\baseline\\warmup-07.log": "194c1f929261bd0207ea3e69ba0a085e37e98098a9f2ee727121091584cbffbf",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\baseline\\warmup-08.log": "194c1f929261bd0207ea3e69ba0a085e37e98098a9f2ee727121091584cbffbf",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\baseline\\warmup-09.log": "f15c4ee3cd2a290959e58e44e86dcd661024073d08abbe060f3f1ec942928249",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\baseline\\warmup-10.log": "f15c4ee3cd2a290959e58e44e86dcd661024073d08abbe060f3f1ec942928249",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\baseline\\first.log": "f15c4ee3cd2a290959e58e44e86dcd661024073d08abbe060f3f1ec942928249",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\candidate\\first.log": "2e7ebbb5a65d3f9bc7da2443cfd75ee10302e970136b241806b5017d207092b4",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\baseline\\flow.ys": "4b3ac58166b5fd9077dd3fe6065f448c9f9063505e9b020dd1f70a28dda68df2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\baseline\\postabc.ys": "50de084f4ef8be3c725eb467ecc2eb540c52e6ab096562f90939bb46c8b69ef1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\baseline\\postabc.il": "7dbd7100821e0de5a0d253098cbcd691173564c3ddf60bea49ba4a6d84bce3a1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\baseline\\netlist.json": "6eed44738375797e8c9ff004f43379b786cfe70e5e1dfd03a63f4263fa487979",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\baseline\\split-final.json": "6eed44738375797e8c9ff004f43379b786cfe70e5e1dfd03a63f4263fa487979",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\candidate\\flow.ys": "7e4d37bef7cdc435dea8cadb10860743427e60c58cf49304f06c8bc2aa6e047e",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\candidate\\postabc.ys": "1d2bd8f4233e69cfb7f727c07f552cdf256300578d99c762380b9dea9b728093",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\candidate\\postabc.il": "d65df63199b6886673b11b372f427886e52d4bd880838776e616c3f57cc59974",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\candidate\\netlist.json": "2a12589a44610652e44cd7a8c491c30720cd4adefbe8c81b15abc68fe4abb880",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case01_balanced\\candidate\\split-final.json": "2a12589a44610652e44cd7a8c491c30720cd4adefbe8c81b15abc68fe4abb880",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\competition_case\\pmux_cases\\pmux_case02_pipeline.v": "8639081b2fb7c446edef52a514d63b49333e444ce21638f03bdee97dc954e0ea",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\baseline\\warmup-01.log": "114374918273ec12ead1e922ea1b9fda16cb0c68d222fbf85d4de41a94d23432",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\baseline\\warmup-02.log": "114374918273ec12ead1e922ea1b9fda16cb0c68d222fbf85d4de41a94d23432",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\baseline\\warmup-03.log": "114374918273ec12ead1e922ea1b9fda16cb0c68d222fbf85d4de41a94d23432",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\baseline\\warmup-04.log": "114374918273ec12ead1e922ea1b9fda16cb0c68d222fbf85d4de41a94d23432",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\baseline\\warmup-05.log": "114374918273ec12ead1e922ea1b9fda16cb0c68d222fbf85d4de41a94d23432",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\baseline\\warmup-06.log": "114374918273ec12ead1e922ea1b9fda16cb0c68d222fbf85d4de41a94d23432",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\baseline\\warmup-07.log": "114374918273ec12ead1e922ea1b9fda16cb0c68d222fbf85d4de41a94d23432",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\baseline\\warmup-08.log": "114374918273ec12ead1e922ea1b9fda16cb0c68d222fbf85d4de41a94d23432",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\baseline\\warmup-09.log": "114374918273ec12ead1e922ea1b9fda16cb0c68d222fbf85d4de41a94d23432",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\baseline\\warmup-10.log": "114374918273ec12ead1e922ea1b9fda16cb0c68d222fbf85d4de41a94d23432",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\baseline\\first.log": "114374918273ec12ead1e922ea1b9fda16cb0c68d222fbf85d4de41a94d23432",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\candidate\\first.log": "ff1c05b6127346d775256026f3a79030af1b1c056500308dda28fe29aa8fd432",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\baseline\\flow.ys": "869be29e6dd1fdc3b092b9ce8a734efcd3c4f31b4f87fcae11c85e9a5bdea83c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\baseline\\postabc.ys": "d1a88e5de819e63a381a456782b9096fc9431a3a93481d940f6919bc3ac1664f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\baseline\\postabc.il": "6b1a8306326fefa894ea4a5f6c59a5b8b85591d5e1a58016698ff1d9d87ea7b5",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\baseline\\netlist.json": "4f3a37b3a1922f221ee2626bbaefb85df30e604434fc0e132e55b5140f0b93f8",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\baseline\\split-final.json": "4f3a37b3a1922f221ee2626bbaefb85df30e604434fc0e132e55b5140f0b93f8",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\candidate\\flow.ys": "e8ed77040b30f0ce646227b3ca974a2e8ea45275ffe68e7396f3ee352bebebd2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\candidate\\postabc.ys": "2c18ececa54064b19eabddcc1cf5458afdecba81553f286002d2092607d78574",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\candidate\\postabc.il": "4d3c8a8ecc53f433dac80f84159003e0cd3a51bb2834f6edc566d9918fb82e0a",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\candidate\\netlist.json": "9b867888fdc73f8c2be4691c73a0c0aeb6ff5864690b280823877ed54f207dc8",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case02_pipeline\\candidate\\split-final.json": "9b867888fdc73f8c2be4691c73a0c0aeb6ff5864690b280823877ed54f207dc8",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\competition_case\\pmux_cases\\pmux_case03_crossbar.v": "bf1fc3bf6383beb007a69587d77a29ea74fb1fbdf7429fb401c0855a31c05932",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\baseline\\warmup-01.log": "75e89a39eaea970729281f5a65ce246d6da24c36bbdcd1b69b1bb9e131bae401",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\baseline\\warmup-02.log": "75e89a39eaea970729281f5a65ce246d6da24c36bbdcd1b69b1bb9e131bae401",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\baseline\\warmup-03.log": "75e89a39eaea970729281f5a65ce246d6da24c36bbdcd1b69b1bb9e131bae401",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\baseline\\warmup-04.log": "1538e53caf83ea1136056070e949566a5d7d83f5f20b11ed071da2ebdf542fd3",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\baseline\\warmup-05.log": "75e89a39eaea970729281f5a65ce246d6da24c36bbdcd1b69b1bb9e131bae401",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\baseline\\warmup-06.log": "75e89a39eaea970729281f5a65ce246d6da24c36bbdcd1b69b1bb9e131bae401",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\baseline\\warmup-07.log": "75e89a39eaea970729281f5a65ce246d6da24c36bbdcd1b69b1bb9e131bae401",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\baseline\\warmup-08.log": "75e89a39eaea970729281f5a65ce246d6da24c36bbdcd1b69b1bb9e131bae401",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\baseline\\warmup-09.log": "75e89a39eaea970729281f5a65ce246d6da24c36bbdcd1b69b1bb9e131bae401",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\baseline\\warmup-10.log": "75e89a39eaea970729281f5a65ce246d6da24c36bbdcd1b69b1bb9e131bae401",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\baseline\\first.log": "75e89a39eaea970729281f5a65ce246d6da24c36bbdcd1b69b1bb9e131bae401",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\candidate\\first.log": "c7dec0dc7c4bd12a917758808e58c0b0ac6ba5ba4f24a128cc7b260eef8ab78b",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\baseline\\flow.ys": "257eda699703a11cb4173b39564bb1cf46509882fd616562ee89b0565fd66e5c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\baseline\\postabc.ys": "f9475967437ceea86337b1487009fc6a24dc84cbda9172366f41669672ee0e56",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\baseline\\postabc.il": "bad0c449f4f1469eff5a856ad7177b8c283c866be0ef8b745ce10d2263a41dc2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\baseline\\netlist.json": "a47ab389dd551acbe0799d944954742c8e37023f07706824d0d5196d7be2ed0f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\baseline\\split-final.json": "a47ab389dd551acbe0799d944954742c8e37023f07706824d0d5196d7be2ed0f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\candidate\\flow.ys": "ff95ce01caa5692e53983482ac6251b40b5813cd257863896ceed9e4c21a84fe",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\candidate\\postabc.ys": "2a293d6e9b882053f67717e7628b967da9b49de4b88ed1ab81593e91e82daa03",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\candidate\\postabc.il": "535484bf15257eaf0fa1d074e23022a8fae86c4c0f8ecf9a725cb42cbdb258e4",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\candidate\\netlist.json": "43e53bfde0ee1151435bc5eba6aa10ffa3e2e2e09478c96bc600fa574196e897",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case03_crossbar\\candidate\\split-final.json": "43e53bfde0ee1151435bc5eba6aa10ffa3e2e2e09478c96bc600fa574196e897",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\competition_case\\pmux_cases\\pmux_case04_feedback.v": "d668d258d804674dd1412538e7bce04d4630d02928ffe113413b536e6b9ed70f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\baseline\\warmup-01.log": "a70f90b0f89485bd12f76cdd448c6e0910976e4aa2f09f431fce068cb8ad675b",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\baseline\\warmup-02.log": "63aac3e99ff82fa427be53635e96a90ca586c94f25b137e5ad485e566c9bf396",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\baseline\\warmup-03.log": "e70d0df8f7772efdaf4973c151c8da9a9a05214625cc5fe7d1900de3d3c058c4",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\baseline\\warmup-04.log": "e70d0df8f7772efdaf4973c151c8da9a9a05214625cc5fe7d1900de3d3c058c4",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\baseline\\warmup-05.log": "e70d0df8f7772efdaf4973c151c8da9a9a05214625cc5fe7d1900de3d3c058c4",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\baseline\\warmup-06.log": "9f2ab16ba61a22723dd821172cc8723ae8ab713717a1a6a963d4c659a0565971",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\baseline\\warmup-07.log": "e70d0df8f7772efdaf4973c151c8da9a9a05214625cc5fe7d1900de3d3c058c4",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\baseline\\warmup-08.log": "e70d0df8f7772efdaf4973c151c8da9a9a05214625cc5fe7d1900de3d3c058c4",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\baseline\\warmup-09.log": "e70d0df8f7772efdaf4973c151c8da9a9a05214625cc5fe7d1900de3d3c058c4",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\baseline\\warmup-10.log": "e70d0df8f7772efdaf4973c151c8da9a9a05214625cc5fe7d1900de3d3c058c4",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\baseline\\first.log": "9f2ab16ba61a22723dd821172cc8723ae8ab713717a1a6a963d4c659a0565971",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\candidate\\first.log": "47458bb2e0e016e3109786f8f15d48223b221b8f12b54f5b8223f72b9131b7b9",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\baseline\\flow.ys": "2459ffa689d0393a5a10dbc700d7f34b2422e09d6e5e3803d6416b88911c54e6",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\baseline\\postabc.ys": "6aa753d82fcf5a597ebb9dc92b927d1f4676b25a0b44d0f2d25aa0bef8a30ed2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\baseline\\postabc.il": "11f133edad04ef9034bb87c11e79d5d11aea54af03c84b3e226d9dc8471cb100",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\baseline\\netlist.json": "892b09936db8e1ec05fb7526c748a71939a22ea3ff5be8364a3916e103e0a315",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\baseline\\split-final.json": "892b09936db8e1ec05fb7526c748a71939a22ea3ff5be8364a3916e103e0a315",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\candidate\\flow.ys": "473e3946e1ca50d0a04a0b46d3a398abd6714178b40140cd396729cf5b60c1b5",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\candidate\\postabc.ys": "f47dd219d69ef4b06dc86a810df9f78b1e5765a41d8285d81960206c99d2b52c",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\candidate\\postabc.il": "6a70eb266e18fba99a8a512b4ef108b46b6b80c12b81e73aa828ebd6aa2c1336",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\candidate\\netlist.json": "1b093cb89582806e782fb67fc847c9e1d70a3634a7e6c2063e4b15f0526b92b2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case04_feedback\\candidate\\split-final.json": "1b093cb89582806e782fb67fc847c9e1d70a3634a7e6c2063e4b15f0526b92b2",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\competition_case\\pmux_cases\\pmux_case05_nested.v": "57d64edd3704d9d74407145080a63d06390e4a598c419a948fdea22fb1147f1d",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\baseline\\warmup-01.log": "6174ab24be8d231cf3d8d977f8293676edb906a317e0a61d104867b3a0147382",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\baseline\\warmup-02.log": "694d26c448966e53ee900f1e794072a79ea6966ac4f48c76e3ff58ab6997fc0f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\baseline\\warmup-03.log": "6174ab24be8d231cf3d8d977f8293676edb906a317e0a61d104867b3a0147382",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\baseline\\warmup-04.log": "6174ab24be8d231cf3d8d977f8293676edb906a317e0a61d104867b3a0147382",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\baseline\\warmup-05.log": "6174ab24be8d231cf3d8d977f8293676edb906a317e0a61d104867b3a0147382",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\baseline\\warmup-06.log": "6174ab24be8d231cf3d8d977f8293676edb906a317e0a61d104867b3a0147382",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\baseline\\warmup-07.log": "694d26c448966e53ee900f1e794072a79ea6966ac4f48c76e3ff58ab6997fc0f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\baseline\\warmup-08.log": "eae6c2be279f7cf475f4c915351a9f0f0a1096a31ba6fdc8ef9a69deb7fc304a",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\baseline\\warmup-09.log": "6174ab24be8d231cf3d8d977f8293676edb906a317e0a61d104867b3a0147382",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\baseline\\warmup-10.log": "694d26c448966e53ee900f1e794072a79ea6966ac4f48c76e3ff58ab6997fc0f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\baseline\\first.log": "694d26c448966e53ee900f1e794072a79ea6966ac4f48c76e3ff58ab6997fc0f",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\candidate\\first.log": "56892cd833025f84104dea6894c45a700533f168b77f5c303bc4002bc26b0c85",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\baseline\\flow.ys": "d230c8b5d69d1e992ac67cc7cd816f52eb03a9081e8c07c16b78c999c75a58e5",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\baseline\\postabc.ys": "4172a4e1a98702d3bbeab58760c77228f778e266d526aa73054c1cd15b33fe73",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\baseline\\postabc.il": "487bdc77fcad203d2fdce6844a3b348c7bb09047f5d08d9afc56593acb6dace1",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\baseline\\netlist.json": "eb0b7f6ea9a4c01945130feed4d6eaaa01f67773baf16cf45529ef46ace79cb4",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\baseline\\split-final.json": "eb0b7f6ea9a4c01945130feed4d6eaaa01f67773baf16cf45529ef46ace79cb4",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\candidate\\flow.ys": "3f513434ad87d877a5a670ae2c39f4db7f0f4f9b067fa06fd303552213a8a129",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\candidate\\postabc.ys": "ab16e3db61b58bbb9bd8cef3ad57fbeb799caa34c216c43c507f0db5388e56ab",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\candidate\\postabc.il": "d19e0c89a38496955af65c97d812b1a55a6476bc2f4b6e48ff0ef3036fc8c990",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\candidate\\netlist.json": "53bc5ce6bc1227cf105098fc5cebdec68ce93094d66fe136ca7c75fc57430a59",
+    "D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\validation-current-9i4sbu6t\\pmux_case05_nested\\candidate\\split-final.json": "53bc5ce6bc1227cf105098fc5cebdec68ce93094d66fe136ca7c75fc57430a59"
+  },
+  "all_inputs_unchanged_after_audit": true,
+  "audited_utc": "2026-11-03T08:02:59.686331+00:00"
+}

@@ -1,0 +1,11 @@
+read_rtlil "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/pmux_case01_balanced/candidate/postabc-lf.il"
+read_verilog -overwrite "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v"
+lut2mux -word
+prep -top pmux_case01_balanced -flatten
+memory_map
+opt_clean
+rename -hide
+opt_clean
+check -initdrv
+setundef -undriven -undef
+write_rtlil /home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/pmux_case01_balanced/candidate/proof/gate.il

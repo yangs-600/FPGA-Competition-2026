@@ -1,0 +1,254 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+
+-- Executing script file `run.ys' --
+
+1. Executing Verilog-2005 frontend: ../../../partitions/pmux_case03_crossbar.data_out.5.sv
+Parsing SystemVerilog input from `../../../partitions/pmux_case03_crossbar.data_out.5.sv' to AST representation.
+Generating RTLIL representation for module `\miter'.
+Generating RTLIL representation for module `\miter_cmp_prop'.
+Generating RTLIL representation for module `\miter_def_prop'.
+Generating RTLIL representation for module `\gold.pmux_case03_crossbar.data_out.5'.
+Generating RTLIL representation for module `\gate.pmux_case03_crossbar.data_out.5'.
+Successfully finished Verilog frontend.
+
+2. Executing RTLIL frontend.
+Input filename: ../../../partitions/pmux_case03_crossbar.data_out.5.il
+Replacing existing blackbox module \gold.pmux_case03_crossbar.data_out.5.
+Replacing existing blackbox module \gate.pmux_case03_crossbar.data_out.5.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     \miter_cmp_prop
+Used module:     \gate.pmux_case03_crossbar.data_out.5
+Used module:     \gold.pmux_case03_crossbar.data_out.5
+Parameter 1 (\WIDTH) = 5
+Parameter 2 (\TYPE) = 48'011000010111001101110011011001010111001001110100
+
+3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\miter_cmp_prop'.
+Parameter 1 (\WIDTH) = 5
+Parameter 2 (\TYPE) = 48'011000010111001101110011011001010111001001110100
+Generating RTLIL representation for module `$paramod$364b7ff17874d1f1a0e0c9435489136686baa64f\miter_cmp_prop'.
+
+3.3. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     $paramod$364b7ff17874d1f1a0e0c9435489136686baa64f\miter_cmp_prop
+Used module:     \gate.pmux_case03_crossbar.data_out.5
+Used module:     \gold.pmux_case03_crossbar.data_out.5
+
+3.4. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     $paramod$364b7ff17874d1f1a0e0c9435489136686baa64f\miter_cmp_prop
+Used module:     \gate.pmux_case03_crossbar.data_out.5
+Used module:     \gold.pmux_case03_crossbar.data_out.5
+Removing unused module `\miter_def_prop'.
+Removing unused module `\miter_cmp_prop'.
+Removed 2 unused modules.
+Module $paramod$364b7ff17874d1f1a0e0c9435489136686baa64f\miter_cmp_prop directly or indirectly contains formal properties -> setting "keep" attribute.
+Module miter directly or indirectly contains formal properties -> setting "keep" attribute.
+Mapping positional arguments of cell miter.__po_data_out__9_5__assert ($paramod$364b7ff17874d1f1a0e0c9435489136686baa64f\miter_cmp_prop).
+
+4. Executing PROC pass (convert processes to netlists).
+
+4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 3 assignments to connections.
+
+4.4. Executing PROC_INIT pass (extract init attributes).
+
+4.5. Executing PROC_ARST pass (detect async resets in processes).
+
+4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$364b7ff17874d1f1a0e0c9435489136686baa64f\miter_cmp_prop.$proc$../../../partitions/pmux_case03_crossbar.data_out.5.sv:74$22436'.
+Creating decoders for process `$paramod$364b7ff17874d1f1a0e0c9435489136686baa64f\miter_cmp_prop.$proc$../../../partitions/pmux_case03_crossbar.data_out.5.sv:68$22415'.
+
+4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod$364b7ff17874d1f1a0e0c9435489136686baa64f\miter_cmp_prop.\i' from process `$paramod$364b7ff17874d1f1a0e0c9435489136686baa64f\miter_cmp_prop.$proc$../../../partitions/pmux_case03_crossbar.data_out.5.sv:68$22415'.
+No latch inferred for signal `$paramod$364b7ff17874d1f1a0e0c9435489136686baa64f\miter_cmp_prop.\okay' from process `$paramod$364b7ff17874d1f1a0e0c9435489136686baa64f\miter_cmp_prop.$proc$../../../partitions/pmux_case03_crossbar.data_out.5.sv:68$22415'.
+
+4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$364b7ff17874d1f1a0e0c9435489136686baa64f\miter_cmp_prop.$proc$../../../partitions/pmux_case03_crossbar.data_out.5.sv:74$22436'.
+Removing empty process `$paramod$364b7ff17874d1f1a0e0c9435489136686baa64f\miter_cmp_prop.$proc$../../../partitions/pmux_case03_crossbar.data_out.5.sv:68$22415'.
+Cleaned up 0 empty switches.
+
+4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gold.pmux_case03_crossbar.data_out.5.
+Optimizing module $paramod$364b7ff17874d1f1a0e0c9435489136686baa64f\miter_cmp_prop.
+<suppressed ~1 debug messages>
+Optimizing module gate.pmux_case03_crossbar.data_out.5.
+Optimizing module miter.
+
+5. Executing ASYNC2SYNC pass.
+Replacing gate.pmux_case03_crossbar.data_out.5.$flatten\data_out_dffeas_q_5.$procdff$21867 ($adff): ARST=1'1, D=$auto$rename.cc:496:execute$22085, Q=\data_out [9]
+Replacing gate.pmux_case03_crossbar.data_out.5.$flatten\data_out_dffeas_q_7.$procdff$21867 ($adff): ARST=1'1, D=$auto$rename.cc:496:execute$22207, Q=\data_out [8]
+Replacing gate.pmux_case03_crossbar.data_out.5.$flatten\data_out_dffeas_q_9.$procdff$21867 ($adff): ARST=1'1, D=$auto$rename.cc:496:execute$22309, Q=\data_out [7]
+Replacing gate.pmux_case03_crossbar.data_out.5.$flatten\data_out_dffeas_q_1.$procdff$21867 ($adff): ARST=1'1, D=$auto$rename.cc:496:execute$21892, Q=\data_out [6]
+Replacing gate.pmux_case03_crossbar.data_out.5.$flatten\data_out_dffeas_q_2.$procdff$21867 ($adff): ARST=1'1, D=$auto$rename.cc:496:execute$21940, Q=\data_out [5]
+
+6. Executing FORMALFF pass.
+
+7. Executing SETUNDEF pass (replace undef values with defined constants).
+
+8. Executing FLATTEN pass (flatten design).
+Deleting now unused module gold.pmux_case03_crossbar.data_out.5.
+Deleting now unused module $paramod$364b7ff17874d1f1a0e0c9435489136686baa64f\miter_cmp_prop.
+Deleting now unused module gate.pmux_case03_crossbar.data_out.5.
+<suppressed ~3 debug messages>
+
+9. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+10. Executing OPT_EXPR pass (perform const folding).
+Optimizing module miter.
+<suppressed ~11 debug messages>
+
+11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \miter..
+Removed 1 unused cells and 17 unused wires.
+<suppressed ~2 debug messages>
+
+12. Executing SAT pass (solving SAT problems in the circuit).
+Using SAT solver `minisat`.
+
+Setting up time step 1:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_en
+Import def constraint for this timestep: \__pi_rst
+Import def constraint for this timestep: \__pi_ctrl_in__26_16
+Import def constraint for this timestep: \__pi_data_in__39_20
+Imported 746 cells to SAT database.
+Import proof for assert: \__po_data_out__9_5__assert.okay when 1'1.
+
+** Trying induction with length 1 **
+
+Setting up time step 1:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_en
+Import def constraint for this timestep: \__pi_rst
+Import def constraint for this timestep: \__pi_ctrl_in__26_16
+Import def constraint for this timestep: \__pi_data_in__39_20
+Imported 746 cells to SAT database.
+Import set-constraint from init attribute: \gate.data_out [9:5] = 5'00000
+Final init constraint equation: { \gold.data_out [9:5] \gate.data_out [9:5] } = 10'xxxxx00000
+Import proof for assert: \__po_data_out__9_5__assert.okay when 1'1.
+Import show expression: \gate.ctrl_in
+Import show expression: \gate.data_in
+Import show expression: \gate.data_out
+Import show expression: \gate.rst
+Import show expression: \gate.en
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_ctrl_in__26_16
+Import show expression: \gate.__pi_data_in__39_20
+Import show expression: \gate.__pi_en
+Import show expression: \gate.__pi_rst
+Import show expression: \gate.__po_data_out__9_5
+Import show expression: \__po_data_out__9_5__assert.i
+Import show expression: \__po_data_out__9_5__assert.okay
+Import show expression: \__po_data_out__9_5__assert.in_gate
+Import show expression: \__po_data_out__9_5__assert.in_gold
+Import show expression: \gold.ctrl_in
+Import show expression: \gold.data_in
+Import show expression: \gold.data_out
+Import show expression: \gold.rst
+Import show expression: \gold.en
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_ctrl_in__26_16
+Import show expression: \gold.__pi_data_in__39_20
+Import show expression: \gold.__pi_en
+Import show expression: \gold.__pi_rst
+Import show expression: \gold.__po_data_out__9_5
+Import show expression: \__po_data_out__9_5__gate
+Import show expression: \__po_data_out__9_5__gold
+Import show expression: \__pi_rst
+Import show expression: \__pi_en
+Import show expression: \__pi_data_in__39_20
+Import show expression: \__pi_ctrl_in__26_16
+Import show expression: \__pi_clk
+
+[base case 1] Solving problem with 18085 variables and 49102 clauses..
+Base case for induction length 1 proven.
+
+Setting up time step 2:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_en
+Import def constraint for this timestep: \__pi_rst
+Import def constraint for this timestep: \__pi_ctrl_in__26_16
+Import def constraint for this timestep: \__pi_data_in__39_20
+Imported 746 cells to SAT database.
+Import proof for assert: \__po_data_out__9_5__assert.okay when 1'1.
+Import show expression: \gate.ctrl_in
+Import show expression: \gate.data_in
+Import show expression: \gate.data_out
+Import show expression: \gate.rst
+Import show expression: \gate.en
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_ctrl_in__26_16
+Import show expression: \gate.__pi_data_in__39_20
+Import show expression: \gate.__pi_en
+Import show expression: \gate.__pi_rst
+Import show expression: \gate.__po_data_out__9_5
+Import show expression: \__po_data_out__9_5__assert.i
+Import show expression: \__po_data_out__9_5__assert.okay
+Import show expression: \__po_data_out__9_5__assert.in_gate
+Import show expression: \__po_data_out__9_5__assert.in_gold
+Import show expression: \gold.ctrl_in
+Import show expression: \gold.data_in
+Import show expression: \gold.data_out
+Import show expression: \gold.rst
+Import show expression: \gold.en
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_ctrl_in__26_16
+Import show expression: \gold.__pi_data_in__39_20
+Import show expression: \gold.__pi_en
+Import show expression: \gold.__pi_rst
+Import show expression: \gold.__po_data_out__9_5
+Import show expression: \__po_data_out__9_5__gate
+Import show expression: \__po_data_out__9_5__gold
+Import show expression: \__pi_rst
+Import show expression: \__pi_en
+Import show expression: \__pi_data_in__39_20
+Import show expression: \__pi_ctrl_in__26_16
+Import show expression: \__pi_clk
+
+[induction step 1] Solving problem with 36193 variables and 98253 clauses..
+Induction step proven: SUCCESS!
+
+                  /$$$$$$      /$$$$$$$$     /$$$$$$$    
+                 /$$__  $$    | $$_____/    | $$__  $$   
+                | $$  \ $$    | $$          | $$  \ $$   
+                | $$  | $$    | $$$$$       | $$  | $$   
+                | $$  | $$    | $$__/       | $$  | $$   
+                | $$/$$ $$    | $$          | $$  | $$   
+                |  $$$$$$/ /$$| $$$$$$$$ /$$| $$$$$$$//$$
+                 \____ $$$|__/|________/|__/|_______/|__/
+                       \__/                              
+
+End of script. Logfile hash: 88c84f6fc5, time: 0.16s, user: 0.14s, system: 0.02s, MEM: 58.10 MB peak
+Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+Time spent: 93% 1x sat (0 sec), 1% 2x opt_expr (0 sec), ...

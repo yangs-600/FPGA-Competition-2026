@@ -1,0 +1,108 @@
+--- separate/run_current_cases.py
++++ colocated/run_current_cases.py
+@@ -42,6 +42,15 @@
+     if not result.is_file():
+         raise FileNotFoundError(result)
+     return result
++
++
++def role_file(root, manifest, role, name):
++    """Resolve one logical role file to its declared colocated physical file."""
++    description = manifest["roles"][role]
++    expected = "yosys-" + role + ".exe" if name == "yosys.exe" else name
++    if description["file_origins"].get(name) != expected:
++        raise RuntimeError("Unexpected physical origin for " + role + "/" + name)
++    return relative_file(root, expected)
+ 
+ 
+ def counts(path, top):
+@@ -152,30 +161,40 @@
+     manifest = json.loads(manifest_path.read_text(encoding="utf-8-sig"))
+     if str(manifest.get("yosys_release")) != "0.69":
+         raise RuntimeError("Expected the Yosys 0.69 package")
++    if manifest.get("package_layout") != "colocated_yosys_shared_runtime":
++        raise RuntimeError("Unsupported colocated package layout")
++    if set(manifest.get("shared_files", {})) != {"yosys-abc.exe", "libffi-8.dll", "libgcc_s_seh-1.dll", "libstdc++-6.dll", "libwinpthread-1.dll", "zlib1.dll"}:
++        raise RuntimeError("Unexpected shared runtime file set")
++    resources = {}
+     for role in ROLES:
++        if (root / role).exists():
++            raise RuntimeError("Role directory would violate the colocated layout")
+         files = manifest["roles"][role]["files"]
+-        for name, digest in files.items():
+-            origins = manifest["roles"][role].get("file_origins", {})
+-            if origins != {"yosys-abc.exe": "yosys-abc.exe"}:
+-                raise RuntimeError("Expected the declared shared ABC layout")
+-            if (root / role / "yosys-abc.exe").exists():
+-                raise RuntimeError("Role-local ABC would shadow the declared shared binary")
+-            file = relative_file(root, origins.get(name, role + "/" + name))
+-            if sha(file).lower() != digest.lower():
+-                raise RuntimeError("Package fingerprint mismatch: " + role + "/" + name)
++        origins = manifest["roles"][role]["file_origins"]
++        expected = {name: "yosys-" + role + ".exe" if name == "yosys.exe" else name for name in files}
++        if origins != expected:
++            raise RuntimeError("Every role file must declare its colocated origin")
+         if "yosys.exe" not in files or "yosys-abc.exe" not in files:
+             raise RuntimeError("Missing pinned Yosys/ABC executable for " + role)
+-    if manifest["roles"]["baseline"]["files"]["yosys-abc.exe"] != manifest["roles"]["candidate"]["files"]["yosys-abc.exe"]:
+-        raise RuntimeError("Baseline and candidate must use the same bundled ABC binary")
+-    if manifest.get("package_layout") != "separate_yosys_shared_parent_abc":
+-        raise RuntimeError("Unsupported package layout")
+-    if "yosys-abc.exe" not in manifest.get("shared_files", {}):
+-        raise RuntimeError("Missing shared ABC fingerprint")
++        for name, digest in files.items():
++            if name != "yosys.exe" and not name.startswith("share/") and name not in manifest["shared_files"]:
++                raise RuntimeError("Unexpected logical role file: " + name)
++            if sha(role_file(root, manifest, role, name)).lower() != digest.lower():
++                raise RuntimeError("Package fingerprint mismatch: " + role + "/" + name)
++            if name.startswith("share/"):
++                if name in resources and resources[name] != digest:
++                    raise RuntimeError("Role resources have different bytes: " + name)
++                resources[name] = digest
++            elif name != "yosys.exe" and manifest["shared_files"].get(name) != digest:
++                raise RuntimeError("Role and shared runtime identities differ: " + name)
++    if manifest.get("shared_resources") != resources:
++        raise RuntimeError("Shared resources must equal the complete role union")
++    actual_resources = {p.relative_to(root).as_posix() for p in (root / "share").rglob("*") if p.is_file()}
++    if actual_resources != set(resources):
++        raise RuntimeError("Unexpected or missing shared resource files")
+     for name, digest in manifest["shared_files"].items():
+         if sha(relative_file(root, name)).lower() != digest.lower():
+             raise RuntimeError("Shared runtime fingerprint mismatch: " + name)
+-    if manifest["shared_files"]["yosys-abc.exe"] != manifest["roles"]["baseline"]["files"]["yosys-abc.exe"]:
+-        raise RuntimeError("Shared and role ABC fingerprints differ")
+     case_manifest = relative_file(root, args.cases)
+     cases = load_cases(root, case_manifest)
+     meter_path = relative_file(root, "windows_metrics.py")
+@@ -184,11 +203,11 @@
+     spec.loader.exec_module(meter)
+     temp = root / "tmp"
+     temp.mkdir(exist_ok=True)
+-    env = dict(os.environ, PATH=os.environ["SystemRoot"] + "/System32;" + os.environ["SystemRoot"])
++    env = dict(os.environ, PATH=str(root) + ";" + os.environ["SystemRoot"] + "/System32;" + os.environ["SystemRoot"])
+     for key in ("ABC", "YOSYS_ABC", "YOSYS_DATDIR"):
+         env.pop(key, None)
+     env["TMP"] = env["TEMP"] = env["TMPDIR"] = str(temp)
+-    role_env = {role: dict(env, YOSYS_DATDIR=str(root / role / "share")) for role in ROLES}
++    role_env = {role: dict(env, YOSYS_DATDIR=str(root / "share")) for role in ROLES}
+     out = Path(tempfile.mkdtemp(prefix="validation-current-", dir=root))
+     report = dict(
+         status="RUNNING", formal_status="PENDING", case_count=EXPECTED_CASES, cases=[],
+@@ -240,7 +259,7 @@
+                     f'synth_intel -family cycloneiv -top {top}\n'
+                     f'write_verilog -norename -noattr "{directory.as_posix()}/netlist.v"\n'
+                     f'write_json "{directory.as_posix()}/netlist.json"\n', encoding="utf-8")
+-                commands[role] = [str(root / role / "yosys.exe"), "-Q", "-T", "-s", str(flow)]
++                commands[role] = [str(role_file(root, manifest, role, "yosys.exe")), "-Q", "-T", "-s", str(flow)]
+                 row["roles"][role] = dict(
+                     path=directory.relative_to(root).as_posix(), samples=[],
+                     executable_sha256=manifest["roles"][role]["files"]["yosys.exe"], flow_sha256=sha(flow))
+@@ -327,7 +346,7 @@
+                     f'synth_intel -family cycloneiv -top {top} -run map_cells:\n'
+                     f'write_json "{directory.as_posix()}/split-final.json"\n', encoding="utf-8")
+                 with (directory / "postabc-synthesis.log").open("w", encoding="utf-8") as log:
+-                    subprocess.run([str(root / role / "yosys.exe"), "-Q", "-T", "-s", str(split)],
++                    subprocess.run([str(role_file(root, manifest, role, "yosys.exe")), "-Q", "-T", "-s", str(split)],
+                                    env=role_env[role], cwd=root, stdout=log, stderr=subprocess.STDOUT,
+                                    timeout=args.timeout, check=True)
+                 if counts(directory / "split-final.json", top)["by_type"] != row["roles"][role]["by_type"]:

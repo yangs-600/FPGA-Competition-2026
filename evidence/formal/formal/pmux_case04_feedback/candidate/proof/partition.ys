@@ -1,0 +1,4 @@
+plugin -i /home/yangsenyu/fpga-windows-native-v25-20261103/FPGA-topic2-v23-EQY-Linux-0.69-20261027/runtime/eqy/bin/../share/yosys/plugins/eqy_partition.so
+read_rtlil combined.il
+insbuf -chain
+eqy_partition -matched_ids matched.ids -partition_ids partition.ids

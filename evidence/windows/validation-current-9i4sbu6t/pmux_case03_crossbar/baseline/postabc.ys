@@ -1,0 +1,7 @@
+read_verilog "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/pmux_cases/pmux_case03_crossbar.v"
+synth_intel -family cycloneiv -top pmux_case03_crossbar -run begin:map_cells
+select pmux_case03_crossbar
+write_rtlil -selected "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/validation-current-9i4sbu6t/pmux_case03_crossbar/baseline/postabc.il"
+select *
+synth_intel -family cycloneiv -top pmux_case03_crossbar -run map_cells:
+write_json "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/validation-current-9i4sbu6t/pmux_case03_crossbar/baseline/split-final.json"

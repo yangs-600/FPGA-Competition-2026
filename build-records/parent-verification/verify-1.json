@@ -1,0 +1,81 @@
+{
+  "status": "PASS_PINNED_SOURCES_INDEX_STAT_AND_THREE_VERIFIED_UPSTREAM_OUTPUTS",
+  "utc": "2026-11-03T07:33:34.568418+00:00",
+  "roles": {
+    "baseline": {
+      "original_file_count": 7177,
+      "all_other_original_files_byte_identical": 7176,
+      "index_prepared_sha256": "96ae987f80d8f201ed45340a814b2a4d19d086e931d613db8ef43057799df5a7",
+      "index_current_sha256": "44edc30e5a74faa42aae347675425a5705c7eb299fe2343ddf7c1aafb98a4a0a",
+      "index_nonstat_content_sha256": "8a3b1076c404546a031facaf31b308e7fc556d0237784b49000a3b061f487451",
+      "index_paths_modes_objects_flags_extensions_unchanged": true,
+      "generated_upstream_resources": {
+        "techlibs/gatemate/lut_tree_cells.genlib": {
+          "sha256": "93f13142725b43030cade4ed4b61b0a8e79b3769e6328cdd5f999ee32c5186ef",
+          "share_copy": "D:\\fpga-win-native-20261103\\minsize-fixed-build\\build\\baseline\\share\\gatemate\\lut_tree_cells.genlib",
+          "generator": {
+            "sha256": "eb32dbea1c8ed19bc8d441bc52acfe36b9064f34ad14adad8ab78afcb1197434",
+            "ninja_rule": "build D$:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/techlibs/gatemate/lut_tree_cells.genlib D$:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/techlibs/gatemate/lut_tree_map.v: CUSTOM_COMMAND D$:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/techlibs/gatemate/make_lut_tree_lib.py",
+            "command": "C:\\WINDOWS\\system32\\cmd.exe /C \"cd /D D:\\fpga-win-native-20261103\\minsize-fixed-build\\sources\\baseline\\techlibs\\gatemate && C:\\Python314\\python.exe make_lut_tree_lib.py\""
+          }
+        },
+        "techlibs/gatemate/lut_tree_map.v": {
+          "sha256": "d06d71b38149281e9ee1f56ad087b58909cea8a94c62eefa2a06a766f9d34df1",
+          "share_copy": "D:\\fpga-win-native-20261103\\minsize-fixed-build\\build\\baseline\\share\\gatemate\\lut_tree_map.v",
+          "generator": {
+            "sha256": "eb32dbea1c8ed19bc8d441bc52acfe36b9064f34ad14adad8ab78afcb1197434",
+            "ninja_rule": "build D$:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/techlibs/gatemate/lut_tree_cells.genlib D$:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/techlibs/gatemate/lut_tree_map.v: CUSTOM_COMMAND D$:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/techlibs/gatemate/make_lut_tree_lib.py",
+            "command": "C:\\WINDOWS\\system32\\cmd.exe /C \"cd /D D:\\fpga-win-native-20261103\\minsize-fixed-build\\sources\\baseline\\techlibs\\gatemate && C:\\Python314\\python.exe make_lut_tree_lib.py\""
+          }
+        },
+        "techlibs/quicklogic/qlf_k6n10f/bram_types_sim.v": {
+          "sha256": "feb9766c5fc3a6e4a3b97daef88c49124224597770636267500bc2a40c983bd5",
+          "share_copy": "D:\\fpga-win-native-20261103\\minsize-fixed-build\\build\\baseline\\share\\quicklogic\\qlf_k6n10f\\bram_types_sim.v",
+          "generator": {
+            "sha256": "541a765d56a76d3e00eeed3b6338c98b8bbbc2add2039502c20895802b37017a",
+            "ninja_rule": "build D$:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/techlibs/quicklogic/qlf_k6n10f/bram_types_sim.v: CUSTOM_COMMAND D$:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/techlibs/quicklogic/qlf_k6n10f/generate_bram_types_sim.py",
+            "command": "C:\\WINDOWS\\system32\\cmd.exe /C \"cd /D D:\\fpga-win-native-20261103\\minsize-fixed-build\\sources\\baseline\\techlibs\\quicklogic && C:\\Python314\\python.exe qlf_k6n10f/generate_bram_types_sim.py qlf_k6n10f/bram_types_sim.v\""
+          }
+        }
+      }
+    },
+    "candidate": {
+      "original_file_count": 7179,
+      "all_other_original_files_byte_identical": 7178,
+      "index_prepared_sha256": "96ae987f80d8f201ed45340a814b2a4d19d086e931d613db8ef43057799df5a7",
+      "index_current_sha256": "5f5ce3b537c1435fafbfc723524495b6b5fda5c5950ad69abd5fc533fb4c12eb",
+      "index_nonstat_content_sha256": "8a3b1076c404546a031facaf31b308e7fc556d0237784b49000a3b061f487451",
+      "index_paths_modes_objects_flags_extensions_unchanged": true,
+      "generated_upstream_resources": {
+        "techlibs/gatemate/lut_tree_cells.genlib": {
+          "sha256": "93f13142725b43030cade4ed4b61b0a8e79b3769e6328cdd5f999ee32c5186ef",
+          "share_copy": "D:\\fpga-win-native-20261103\\minsize-fixed-build\\build\\candidate\\share\\gatemate\\lut_tree_cells.genlib",
+          "generator": {
+            "sha256": "eb32dbea1c8ed19bc8d441bc52acfe36b9064f34ad14adad8ab78afcb1197434",
+            "ninja_rule": "build D$:/fpga-win-native-20261103/minsize-fixed-build/sources/candidate/techlibs/gatemate/lut_tree_cells.genlib D$:/fpga-win-native-20261103/minsize-fixed-build/sources/candidate/techlibs/gatemate/lut_tree_map.v: CUSTOM_COMMAND D$:/fpga-win-native-20261103/minsize-fixed-build/sources/candidate/techlibs/gatemate/make_lut_tree_lib.py",
+            "command": "C:\\WINDOWS\\system32\\cmd.exe /C \"cd /D D:\\fpga-win-native-20261103\\minsize-fixed-build\\sources\\candidate\\techlibs\\gatemate && C:\\Python314\\python.exe make_lut_tree_lib.py\""
+          }
+        },
+        "techlibs/gatemate/lut_tree_map.v": {
+          "sha256": "d06d71b38149281e9ee1f56ad087b58909cea8a94c62eefa2a06a766f9d34df1",
+          "share_copy": "D:\\fpga-win-native-20261103\\minsize-fixed-build\\build\\candidate\\share\\gatemate\\lut_tree_map.v",
+          "generator": {
+            "sha256": "eb32dbea1c8ed19bc8d441bc52acfe36b9064f34ad14adad8ab78afcb1197434",
+            "ninja_rule": "build D$:/fpga-win-native-20261103/minsize-fixed-build/sources/candidate/techlibs/gatemate/lut_tree_cells.genlib D$:/fpga-win-native-20261103/minsize-fixed-build/sources/candidate/techlibs/gatemate/lut_tree_map.v: CUSTOM_COMMAND D$:/fpga-win-native-20261103/minsize-fixed-build/sources/candidate/techlibs/gatemate/make_lut_tree_lib.py",
+            "command": "C:\\WINDOWS\\system32\\cmd.exe /C \"cd /D D:\\fpga-win-native-20261103\\minsize-fixed-build\\sources\\candidate\\techlibs\\gatemate && C:\\Python314\\python.exe make_lut_tree_lib.py\""
+          }
+        },
+        "techlibs/quicklogic/qlf_k6n10f/bram_types_sim.v": {
+          "sha256": "feb9766c5fc3a6e4a3b97daef88c49124224597770636267500bc2a40c983bd5",
+          "share_copy": "D:\\fpga-win-native-20261103\\minsize-fixed-build\\build\\candidate\\share\\quicklogic\\qlf_k6n10f\\bram_types_sim.v",
+          "generator": {
+            "sha256": "541a765d56a76d3e00eeed3b6338c98b8bbbc2add2039502c20895802b37017a",
+            "ninja_rule": "build D$:/fpga-win-native-20261103/minsize-fixed-build/sources/candidate/techlibs/quicklogic/qlf_k6n10f/bram_types_sim.v: CUSTOM_COMMAND D$:/fpga-win-native-20261103/minsize-fixed-build/sources/candidate/techlibs/quicklogic/qlf_k6n10f/generate_bram_types_sim.py",
+            "command": "C:\\WINDOWS\\system32\\cmd.exe /C \"cd /D D:\\fpga-win-native-20261103\\minsize-fixed-build\\sources\\candidate\\techlibs\\quicklogic && C:\\Python314\\python.exe qlf_k6n10f/generate_bram_types_sim.py qlf_k6n10f/bram_types_sim.v\""
+          }
+        }
+      }
+    }
+  },
+  "tools_old_artifacts_runtime": "PASS"
+}

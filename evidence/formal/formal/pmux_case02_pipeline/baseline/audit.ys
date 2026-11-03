@@ -1,0 +1,3 @@
+read_verilog -lib "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v"
+read_rtlil "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/pmux_case02_pipeline/baseline/postabc-lf.il"
+write_json "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/pmux_case02_pipeline/baseline/audit.json"

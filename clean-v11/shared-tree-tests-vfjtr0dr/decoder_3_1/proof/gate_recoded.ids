@@ -1,5 +1,0 @@
-decoder_3_1 . A:src="/home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr/decoder_3_1/netlist.v:3.1-1030.10" A:top=1
-decoder_3_1 data w=63:0 A:src="/home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr/decoder_3_1/netlist.v:6.16-6.20" P=I
-decoder_3_1 sel w=2:0 A:src="/home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr/decoder_3_1/netlist.v:4.15-4.18" P=I
-decoder_3_1 y w=7:0 A:src="/home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr/decoder_3_1/netlist.v:8.16-8.17" P=O
-decoder_3_1 z w=7:0 A:src="/home/ubuntu/FPGA/clean-v11/shared-tree-tests-vfjtr0dr/decoder_3_1/netlist.v:10.16-10.17" P=O

@@ -1,0 +1,29 @@
+{
+  "status": "PREPARED_FIXED_FLAGS_NOT_CONFIGURED_NOT_BUILT_NOT_RUN",
+  "utc": "2026-11-03T06:44:27.623290+00:00",
+  "script_sha256": "4a06156d75dacde29ff3f90997a07dfcbd16c7a6bd71934668535ee9311bcb8d",
+  "v2_sha256": "ec95006de6edd929f2d34fa7dddd82f240bb0f881325b555d00e95d095b9e309",
+  "original_sha256": "f7e20ec1e2e3b048ee11e6a6e534b64b1119c75507db8fa0359bde08f43ab452",
+  "v1_sha256": "f52e7dacb288e0df954b132a0b40badfbae8f29832f88ea214b6d32ffab42b94",
+  "root": "D:\\fpga-win-native-20261103\\minsize-fixed-build",
+  "flag": "-fno-declone-ctor-dtor",
+  "scope": "same CMAKE_CXX_FLAGS for both roles",
+  "reason": "GCC 16 C++20 -Os ctor/dtor decloning produces an unresolved std::string move constructor; independent tiny program reproduces and the negative decloning flag fixes linking.",
+  "diagnostic_files": {
+    "report.json": "c230af7070fd910dd0e529df4f87220fac932479e96eef86b1cc853b716b5963",
+    "flag-order-check.json": "771a5b7be3ee58621c1307c098a187f2bf75716e22a15b7f3bb797f718249d78",
+    "move_ctor.cc": "6ca1b47ec8bc8fc7a46e78ac0e9aa6291094ee5aece4c904138c4a5cce87ca44",
+    "os.log": "44c6443bacce01b6cf84c51e359c6c6cec83b38fce7fa424cb32e3552cb67447",
+    "os_no_declone.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "o3.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "nodeclone_then_os.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "upstream_sources": [
+    "https://github.com/msys2/MINGW-packages/issues/31015",
+    "https://gcc.gnu.org/bugzilla/show_bug.cgi?id=125359"
+  ],
+  "prior_failure_preserved_at": "D:/fpga-win-native-20261103/minsize-build",
+  "source_abi_library_patches": "NONE",
+  "yosysexecutions": 0,
+  "validation": "New full build and later correctness/performance acceptance still required."
+}

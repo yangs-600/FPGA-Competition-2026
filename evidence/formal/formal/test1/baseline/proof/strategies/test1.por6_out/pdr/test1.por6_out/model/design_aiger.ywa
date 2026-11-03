@@ -1,0 +1,23 @@
+{
+  "version": "Yosys Witness Aiger map",
+  "gennerator": "Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)",
+  "latch_count": 15,
+  "input_count": 3,
+  "clocks": [
+    {"edge": "posedge", "input": 2, "offset": 0, "path": ["\\__pi_clock"]}
+  ],
+  "inputs": [
+    {"input": 0, "offset": 0, "path": ["\\__pi_valid"]},
+    {"input": 1, "offset": 0, "path": ["\\__pi_reset"]},
+    {"input": 2, "offset": 0, "path": ["\\__pi_clock"]}
+  ],
+  "seqs": [],
+  "inits": [],
+  "asserts": [
+    ["\\_witness_", "\\assert_flatten___po_por6_out__assert__assert________________partitions_test1_por6_out_sv_66_20894"]
+  ],
+  "assumes": [
+    ["$auto$formalff.cc:987:execute$21655"],
+    ["\\_witness_", "\\assume_auto_xprop_cc_1237_execute_20933"]
+  ]
+}

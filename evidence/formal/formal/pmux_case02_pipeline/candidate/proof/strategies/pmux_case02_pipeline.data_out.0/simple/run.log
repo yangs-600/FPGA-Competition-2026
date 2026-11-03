@@ -1,0 +1,882 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+
+-- Executing script file `run.ys' --
+
+1. Executing Verilog-2005 frontend: ../../../partitions/pmux_case02_pipeline.data_out.0.sv
+Parsing SystemVerilog input from `../../../partitions/pmux_case02_pipeline.data_out.0.sv' to AST representation.
+Generating RTLIL representation for module `\miter'.
+Generating RTLIL representation for module `\miter_cmp_prop'.
+Generating RTLIL representation for module `\miter_def_prop'.
+Generating RTLIL representation for module `\gold.pmux_case02_pipeline.data_out.0'.
+Generating RTLIL representation for module `\gate.pmux_case02_pipeline.data_out.0'.
+Successfully finished Verilog frontend.
+
+2. Executing RTLIL frontend.
+Input filename: ../../../partitions/pmux_case02_pipeline.data_out.0.il
+Replacing existing blackbox module \gold.pmux_case02_pipeline.data_out.0.
+Replacing existing blackbox module \gate.pmux_case02_pipeline.data_out.0.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     \miter_cmp_prop
+Used module:     \gate.pmux_case02_pipeline.data_out.0
+Used module:     \gold.pmux_case02_pipeline.data_out.0
+Parameter 1 (\WIDTH) = 3
+Parameter 2 (\TYPE) = 48'011000010111001101110011011001010111001001110100
+
+3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\miter_cmp_prop'.
+Parameter 1 (\WIDTH) = 3
+Parameter 2 (\TYPE) = 48'011000010111001101110011011001010111001001110100
+Generating RTLIL representation for module `$paramod$bcceff1170c0a4a433d91044c349d65cc0af8cce\miter_cmp_prop'.
+
+3.3. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     $paramod$bcceff1170c0a4a433d91044c349d65cc0af8cce\miter_cmp_prop
+Used module:     \gate.pmux_case02_pipeline.data_out.0
+Used module:     \gold.pmux_case02_pipeline.data_out.0
+
+3.4. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     $paramod$bcceff1170c0a4a433d91044c349d65cc0af8cce\miter_cmp_prop
+Used module:     \gate.pmux_case02_pipeline.data_out.0
+Used module:     \gold.pmux_case02_pipeline.data_out.0
+Removing unused module `\miter_def_prop'.
+Removing unused module `\miter_cmp_prop'.
+Removed 2 unused modules.
+Module $paramod$bcceff1170c0a4a433d91044c349d65cc0af8cce\miter_cmp_prop directly or indirectly contains formal properties -> setting "keep" attribute.
+Module miter directly or indirectly contains formal properties -> setting "keep" attribute.
+Mapping positional arguments of cell miter.__po_data_out__2_0__assert ($paramod$bcceff1170c0a4a433d91044c349d65cc0af8cce\miter_cmp_prop).
+
+4. Executing PROC pass (convert processes to netlists).
+
+4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 3 assignments to connections.
+
+4.4. Executing PROC_INIT pass (extract init attributes).
+
+4.5. Executing PROC_ARST pass (detect async resets in processes).
+
+4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$bcceff1170c0a4a433d91044c349d65cc0af8cce\miter_cmp_prop.$proc$../../../partitions/pmux_case02_pipeline.data_out.0.sv:94$20307'.
+Creating decoders for process `$paramod$bcceff1170c0a4a433d91044c349d65cc0af8cce\miter_cmp_prop.$proc$../../../partitions/pmux_case02_pipeline.data_out.0.sv:88$20294'.
+
+4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod$bcceff1170c0a4a433d91044c349d65cc0af8cce\miter_cmp_prop.\i' from process `$paramod$bcceff1170c0a4a433d91044c349d65cc0af8cce\miter_cmp_prop.$proc$../../../partitions/pmux_case02_pipeline.data_out.0.sv:88$20294'.
+No latch inferred for signal `$paramod$bcceff1170c0a4a433d91044c349d65cc0af8cce\miter_cmp_prop.\okay' from process `$paramod$bcceff1170c0a4a433d91044c349d65cc0af8cce\miter_cmp_prop.$proc$../../../partitions/pmux_case02_pipeline.data_out.0.sv:88$20294'.
+
+4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$bcceff1170c0a4a433d91044c349d65cc0af8cce\miter_cmp_prop.$proc$../../../partitions/pmux_case02_pipeline.data_out.0.sv:94$20307'.
+Removing empty process `$paramod$bcceff1170c0a4a433d91044c349d65cc0af8cce\miter_cmp_prop.$proc$../../../partitions/pmux_case02_pipeline.data_out.0.sv:88$20294'.
+Cleaned up 0 empty switches.
+
+4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gold.pmux_case02_pipeline.data_out.0.
+Optimizing module $paramod$bcceff1170c0a4a433d91044c349d65cc0af8cce\miter_cmp_prop.
+<suppressed ~1 debug messages>
+Optimizing module gate.pmux_case02_pipeline.data_out.0.
+Optimizing module miter.
+
+5. Executing ASYNC2SYNC pass.
+Replacing gate.pmux_case02_pipeline.data_out.0.$flatten\data_out_dffeas_q_4.$procdff$19632 ($adff): ARST=1'1, D=$auto$rename.cc:496:execute$19793, Q=\data_out [2]
+Replacing gate.pmux_case02_pipeline.data_out.0.$flatten\lane[0].right_mid_dffeas_q_1.$procdff$19632 ($adff): ARST=1'1, D=$auto$rename.cc:496:execute$20116, Q=$auto$rename.cc:496:execute$20119
+Replacing gate.pmux_case02_pipeline.data_out.0.$flatten\lane[0].right_mid_dffeas_q_2.$procdff$19632 ($adff): ARST=1'1, D=$auto$rename.cc:496:execute$20144, Q=$auto$rename.cc:496:execute$20147
+Replacing gate.pmux_case02_pipeline.data_out.0.$flatten\lane[0].right_mid_dffeas_q.$procdff$19632 ($adff): ARST=1'1, D=$auto$rename.cc:496:execute$20106, Q=$auto$rename.cc:496:execute$20109
+Replacing gate.pmux_case02_pipeline.data_out.0.$flatten\lane[0].left_mid_dffeas_q_1.$procdff$19632 ($adff): ARST=1'1, D=$auto$rename.cc:496:execute$19968, Q=$auto$rename.cc:496:execute$19971
+Replacing gate.pmux_case02_pipeline.data_out.0.$flatten\lane[0].mid_dffeas_q_1.$procdff$19632 ($adff): ARST=1'1, D=$auto$rename.cc:496:execute$20042, Q=$auto$rename.cc:496:execute$20045
+Replacing gate.pmux_case02_pipeline.data_out.0.$flatten\lane[0].mid_dffeas_q_2.$procdff$19632 ($adff): ARST=1'1, D=$auto$rename.cc:496:execute$20070, Q=$auto$rename.cc:496:execute$20073
+Replacing gate.pmux_case02_pipeline.data_out.0.$flatten\lane[0].mid_dffeas_q.$procdff$19632 ($adff): ARST=1'1, D=$auto$rename.cc:496:execute$20032, Q=$auto$rename.cc:496:execute$20035
+Replacing gate.pmux_case02_pipeline.data_out.0.$flatten\lane[0].left_mid_dffeas_q_2.$procdff$19632 ($adff): ARST=1'1, D=$auto$rename.cc:496:execute$19996, Q=$auto$rename.cc:496:execute$19999
+Replacing gate.pmux_case02_pipeline.data_out.0.$flatten\lane[0].left_mid_dffeas_q.$procdff$19632 ($adff): ARST=1'1, D=$auto$rename.cc:496:execute$19958, Q=$auto$rename.cc:496:execute$19961
+Replacing gate.pmux_case02_pipeline.data_out.0.$flatten\data_out_dffeas_q_5.$procdff$19632 ($adff): ARST=1'1, D=$auto$rename.cc:496:execute$19821, Q=\data_out [1]
+Replacing gate.pmux_case02_pipeline.data_out.0.$flatten\data_out_dffeas_q_6.$procdff$19632 ($adff): ARST=1'1, D=$auto$rename.cc:496:execute$19845, Q=\data_out [0]
+
+6. Executing FORMALFF pass.
+
+7. Executing SETUNDEF pass (replace undef values with defined constants).
+
+8. Executing FLATTEN pass (flatten design).
+Deleting now unused module gold.pmux_case02_pipeline.data_out.0.
+Deleting now unused module $paramod$bcceff1170c0a4a433d91044c349d65cc0af8cce\miter_cmp_prop.
+Deleting now unused module gate.pmux_case02_pipeline.data_out.0.
+<suppressed ~3 debug messages>
+
+9. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+10. Executing OPT_EXPR pass (perform const folding).
+Optimizing module miter.
+<suppressed ~25 debug messages>
+
+11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \miter..
+Removed 1 unused cells and 31 unused wires.
+<suppressed ~2 debug messages>
+
+12. Executing SAT pass (solving SAT problems in the circuit).
+Using SAT solver `minisat`.
+
+Setting up time step 1:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_en
+Import def constraint for this timestep: \__pi_rst
+Import def constraint for this timestep: \__pi_data_out__5_3
+Import def constraint for this timestep: \__pi_data_out__11_9
+Import def constraint for this timestep: \__pi_ctrl_in__21_16
+Import def constraint for this timestep: \__pi_ctrl_in__53_48
+Import def constraint for this timestep: \__pi_ctrl_in__11_0
+Import def constraint for this timestep: \__pi_data_in__47_36
+Import def constraint for this timestep: \__pi_data_in__23_0
+Imported 908 cells to SAT database.
+Import proof for assert: \__po_data_out__2_0__assert.okay when 1'1.
+
+** Trying induction with length 1 **
+
+Setting up time step 1:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_en
+Import def constraint for this timestep: \__pi_rst
+Import def constraint for this timestep: \__pi_data_out__5_3
+Import def constraint for this timestep: \__pi_data_out__11_9
+Import def constraint for this timestep: \__pi_ctrl_in__21_16
+Import def constraint for this timestep: \__pi_ctrl_in__53_48
+Import def constraint for this timestep: \__pi_ctrl_in__11_0
+Import def constraint for this timestep: \__pi_data_in__47_36
+Import def constraint for this timestep: \__pi_data_in__23_0
+Imported 908 cells to SAT database.
+Import set-constraint from init attribute: \gate.data_out [2:0] = 3'000
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$20311 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$20313 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$20315 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$20317 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$20319 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$20321 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$20323 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$20325 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$20327 = 1'0
+Final init constraint equation: { \gold.data_out [2:0] $flatten\gold.$auto$rename.cc:496:execute$254 $flatten\gold.$auto$rename.cc:496:execute$250 $flatten\gold.$auto$rename.cc:496:execute$251 $flatten\gate.$auto$async2sync.cc:253:execute$20327 $flatten\gate.$auto$async2sync.cc:253:execute$20325 $flatten\gate.$auto$async2sync.cc:253:execute$20323 $flatten\gate.$auto$async2sync.cc:253:execute$20321 $flatten\gate.$auto$async2sync.cc:253:execute$20319 $flatten\gate.$auto$async2sync.cc:253:execute$20317 $flatten\gate.$auto$async2sync.cc:253:execute$20315 $flatten\gate.$auto$async2sync.cc:253:execute$20313 $flatten\gate.$auto$async2sync.cc:253:execute$20311 \gate.data_out [2:0] } = 24'xxxxxxxxxxxx000000000000
+Import proof for assert: \__po_data_out__2_0__assert.okay when 1'1.
+Import show expression: \gate.ctrl_in
+Import show expression: \gate.data_in
+Import show expression: \gate.data_out
+Import show expression: \gate.rst
+Import show expression: \gate.en
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_ctrl_in__11_0
+Import show expression: \gate.__pi_ctrl_in__21_16
+Import show expression: \gate.__pi_ctrl_in__53_48
+Import show expression: \gate.__pi_data_in__23_0
+Import show expression: \gate.__pi_data_in__47_36
+Import show expression: \gate.__pi_data_out__5_3
+Import show expression: \gate.__pi_data_out__11_9
+Import show expression: \gate.__pi_en
+Import show expression: \gate.__pi_rst
+Import show expression: \gate.__po_data_out__2_0
+Import show expression: \__po_data_out__2_0__assert.i
+Import show expression: \__po_data_out__2_0__assert.okay
+Import show expression: \__po_data_out__2_0__assert.in_gate
+Import show expression: \__po_data_out__2_0__assert.in_gold
+Import show expression: \gold.ctrl_in
+Import show expression: \gold.data_in
+Import show expression: \gold.data_out
+Import show expression: \gold.rst
+Import show expression: \gold.en
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_ctrl_in__11_0
+Import show expression: \gold.__pi_ctrl_in__21_16
+Import show expression: \gold.__pi_ctrl_in__53_48
+Import show expression: \gold.__pi_data_in__23_0
+Import show expression: \gold.__pi_data_in__47_36
+Import show expression: \gold.__pi_data_out__5_3
+Import show expression: \gold.__pi_data_out__11_9
+Import show expression: \gold.__pi_en
+Import show expression: \gold.__pi_rst
+Import show expression: \gold.__po_data_out__2_0
+Import show expression: \__po_data_out__2_0__gate
+Import show expression: \__po_data_out__2_0__gold
+Import show expression: \__pi_rst
+Import show expression: \__pi_en
+Import show expression: \__pi_data_out__11_9
+Import show expression: \__pi_data_out__5_3
+Import show expression: \__pi_data_in__47_36
+Import show expression: \__pi_data_in__23_0
+Import show expression: \__pi_ctrl_in__53_48
+Import show expression: \__pi_ctrl_in__21_16
+Import show expression: \__pi_ctrl_in__11_0
+Import show expression: \__pi_clk
+
+[base case 1] Solving problem with 21715 variables and 58848 clauses..
+Base case for induction length 1 proven.
+
+Setting up time step 2:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_en
+Import def constraint for this timestep: \__pi_rst
+Import def constraint for this timestep: \__pi_data_out__5_3
+Import def constraint for this timestep: \__pi_data_out__11_9
+Import def constraint for this timestep: \__pi_ctrl_in__21_16
+Import def constraint for this timestep: \__pi_ctrl_in__53_48
+Import def constraint for this timestep: \__pi_ctrl_in__11_0
+Import def constraint for this timestep: \__pi_data_in__47_36
+Import def constraint for this timestep: \__pi_data_in__23_0
+Imported 908 cells to SAT database.
+Import proof for assert: \__po_data_out__2_0__assert.okay when 1'1.
+Import show expression: \gate.ctrl_in
+Import show expression: \gate.data_in
+Import show expression: \gate.data_out
+Import show expression: \gate.rst
+Import show expression: \gate.en
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_ctrl_in__11_0
+Import show expression: \gate.__pi_ctrl_in__21_16
+Import show expression: \gate.__pi_ctrl_in__53_48
+Import show expression: \gate.__pi_data_in__23_0
+Import show expression: \gate.__pi_data_in__47_36
+Import show expression: \gate.__pi_data_out__5_3
+Import show expression: \gate.__pi_data_out__11_9
+Import show expression: \gate.__pi_en
+Import show expression: \gate.__pi_rst
+Import show expression: \gate.__po_data_out__2_0
+Import show expression: \__po_data_out__2_0__assert.i
+Import show expression: \__po_data_out__2_0__assert.okay
+Import show expression: \__po_data_out__2_0__assert.in_gate
+Import show expression: \__po_data_out__2_0__assert.in_gold
+Import show expression: \gold.ctrl_in
+Import show expression: \gold.data_in
+Import show expression: \gold.data_out
+Import show expression: \gold.rst
+Import show expression: \gold.en
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_ctrl_in__11_0
+Import show expression: \gold.__pi_ctrl_in__21_16
+Import show expression: \gold.__pi_ctrl_in__53_48
+Import show expression: \gold.__pi_data_in__23_0
+Import show expression: \gold.__pi_data_in__47_36
+Import show expression: \gold.__pi_data_out__5_3
+Import show expression: \gold.__pi_data_out__11_9
+Import show expression: \gold.__pi_en
+Import show expression: \gold.__pi_rst
+Import show expression: \gold.__po_data_out__2_0
+Import show expression: \__po_data_out__2_0__gate
+Import show expression: \__po_data_out__2_0__gold
+Import show expression: \__pi_rst
+Import show expression: \__pi_en
+Import show expression: \__pi_data_out__11_9
+Import show expression: \__pi_data_out__5_3
+Import show expression: \__pi_data_in__47_36
+Import show expression: \__pi_data_in__23_0
+Import show expression: \__pi_ctrl_in__53_48
+Import show expression: \__pi_ctrl_in__21_16
+Import show expression: \__pi_ctrl_in__11_0
+Import show expression: \__pi_clk
+
+[induction step 1] Solving problem with 43416 variables and 117596 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                      Dec       Hex                                                                 Bin
+  ---- -------------------------------------------------------- ----------- --------- -------------------------------------------------------------------
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20311                1         1                                                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20313                1         1                                                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20315                0         0                                                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20317                1         1                                                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20319                0         0                                                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20321                1         1                                                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20323                0         0                                                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20325                0         0                                                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20327                0         0                                                                   0
+  init $flatten\gold.$auto$rename.cc:496:execute$250                      0         0                                                                 000
+  init $flatten\gold.$auto$rename.cc:496:execute$251                      7         7                                                                 111
+  init $flatten\gold.$auto$rename.cc:496:execute$254                      1         1                                                                 001
+  init \gate.data_out [1:0]                                               3         3                                                                  11
+  init \gate.data_out [2]                                                 0         0                                                                   0
+  init \gold.data_out [2:0]                                               3         3                                                                 011
+  ---- -------------------------------------------------------- ----------- --------- -------------------------------------------------------------------
+     1 \__pi_clk                                                          0         0                                                                   0
+     1 \__pi_ctrl_in__11_0                                             1686       696                                                        011010010110
+     1 \__pi_ctrl_in__21_16                                               4         4                                                              000100
+     1 \__pi_ctrl_in__53_48                                               2         2                                                              000010
+     1 \__pi_data_in__23_0                                          7343520    700da0                                            011100000000110110100000
+     1 \__pi_data_in__47_36                                            1656       678                                                        011001111000
+     1 \__pi_data_out__11_9                                               0         0                                                                 000
+     1 \__pi_data_out__5_3                                                2         2                                                                 010
+     1 \__pi_en                                                           1         1                                                                   1
+     1 \__pi_rst                                                          0         0                                                                   0
+     1 \__po_data_out__2_0__assert.i                                      3         3                                    00000000000000000000000000000011
+     1 \__po_data_out__2_0__assert.in_gate                                3         3                                                                 011
+     1 \__po_data_out__2_0__assert.in_gold                                3         3                                                                 011
+     1 \__po_data_out__2_0__assert.okay                                   1         1                                                                   1
+     1 \__po_data_out__2_0__gate                                          3         3                                                                 011
+     1 \__po_data_out__2_0__gold                                          3         3                                                                 011
+     1 \gate.__pi_clk                                                     0         0                                                                   0
+     1 \gate.__pi_ctrl_in__11_0                                        1686       696                                                        011010010110
+     1 \gate.__pi_ctrl_in__21_16                                          4         4                                                              000100
+     1 \gate.__pi_ctrl_in__53_48                                          2         2                                                              000010
+     1 \gate.__pi_data_in__23_0                                     7343520    700da0                                            011100000000110110100000
+     1 \gate.__pi_data_in__47_36                                       1656       678                                                        011001111000
+     1 \gate.__pi_data_out__11_9                                          0         0                                                                 000
+     1 \gate.__pi_data_out__5_3                                           2         2                                                                 010
+     1 \gate.__pi_en                                                      1         1                                                                   1
+     1 \gate.__pi_rst                                                     0         0                                                                   0
+     1 \gate.__po_data_out__2_0                                           3         3                                                                 011
+     1 \gate.clk                                                          0         0                                                                   0
+     1 \gate.ctrl_in                                                     --        --    0000000000000010000000000000000000000000000001000000011010010110
+     1 \gate.data_in                                                     --        --                    011001111000000000000000011100000000110110100000
+     1 \gate.data_out                                                    19        13                                                        000000010011
+     1 \gate.en                                                           1         1                                                                   1
+     1 \gate.rst                                                          0         0                                                                   0
+     1 \gold.__pi_clk                                                     0         0                                                                   0
+     1 \gold.__pi_ctrl_in__11_0                                        1686       696                                                        011010010110
+     1 \gold.__pi_ctrl_in__21_16                                          4         4                                                              000100
+     1 \gold.__pi_ctrl_in__53_48                                          2         2                                                              000010
+     1 \gold.__pi_data_in__23_0                                     7343520    700da0                                            011100000000110110100000
+     1 \gold.__pi_data_in__47_36                                       1656       678                                                        011001111000
+     1 \gold.__pi_data_out__11_9                                          0         0                                                                 000
+     1 \gold.__pi_data_out__5_3                                           2         2                                                                 010
+     1 \gold.__pi_en                                                      1         1                                                                   1
+     1 \gold.__pi_rst                                                     0         0                                                                   0
+     1 \gold.__po_data_out__2_0                                           3         3                                                                 011
+     1 \gold.clk                                                          0         0                                                                   0
+     1 \gold.ctrl_in                                                     --        --    0000000000000010000000000000000000000000000001000000011010010110
+     1 \gold.data_in                                                     --        --                    011001111000000000000000011100000000110110100000
+     1 \gold.data_out                                                    19        13                                                        000000010011
+     1 \gold.en                                                           1         1                                                                   1
+     1 \gold.rst                                                          0         0                                                                   0
+  ---- -------------------------------------------------------- ----------- --------- -------------------------------------------------------------------
+     2 \__pi_clk                                                          0         0                                                                   0
+     2 \__pi_ctrl_in__11_0                                             3535       dcf                                                        110111001111
+     2 \__pi_ctrl_in__21_16                                              23        17                                                              010111
+     2 \__pi_ctrl_in__53_48                                              23        17                                                              010111
+     2 \__pi_data_in__23_0                                         13217886    c9b05e                                            110010011011000001011110
+     2 \__pi_data_in__47_36                                              31        1f                                                        000000011111
+     2 \__pi_data_out__11_9                                               1         1                                                                 001
+     2 \__pi_data_out__5_3                                                1         1                                                                 001
+     2 \__pi_en                                                           1         1                                                                   1
+     2 \__pi_rst                                                          1         1                                                                   1
+     2 \__po_data_out__2_0__assert.i                                      3         3                                    00000000000000000000000000000011
+     2 \__po_data_out__2_0__assert.in_gate                                4         4                                                                 100
+     2 \__po_data_out__2_0__assert.in_gold                                1         1                                                                 001
+     2 \__po_data_out__2_0__assert.okay                                   0         0                                                                   0
+     2 \__po_data_out__2_0__gate                                          4         4                                                                 100
+     2 \__po_data_out__2_0__gold                                          1         1                                                                 001
+     2 \gate.__pi_clk                                                     0         0                                                                   0
+     2 \gate.__pi_ctrl_in__11_0                                        3535       dcf                                                        110111001111
+     2 \gate.__pi_ctrl_in__21_16                                         23        17                                                              010111
+     2 \gate.__pi_ctrl_in__53_48                                         23        17                                                              010111
+     2 \gate.__pi_data_in__23_0                                    13217886    c9b05e                                            110010011011000001011110
+     2 \gate.__pi_data_in__47_36                                         31        1f                                                        000000011111
+     2 \gate.__pi_data_out__11_9                                          1         1                                                                 001
+     2 \gate.__pi_data_out__5_3                                           1         1                                                                 001
+     2 \gate.__pi_en                                                      1         1                                                                   1
+     2 \gate.__pi_rst                                                     1         1                                                                   1
+     2 \gate.__po_data_out__2_0                                           4         4                                                                 100
+     2 \gate.clk                                                          0         0                                                                   0
+     2 \gate.ctrl_in                                                     --        --    0000000000010111000000000000000000000000000101110000110111001111
+     2 \gate.data_in                                                     --        --                    000000011111000000000000110010011011000001011110
+     2 \gate.data_out                                                   524       20c                                                        001000001100
+     2 \gate.en                                                           1         1                                                                   1
+     2 \gate.rst                                                          1         1                                                                   1
+     2 \gold.__pi_clk                                                     0         0                                                                   0
+     2 \gold.__pi_ctrl_in__11_0                                        3535       dcf                                                        110111001111
+     2 \gold.__pi_ctrl_in__21_16                                         23        17                                                              010111
+     2 \gold.__pi_ctrl_in__53_48                                         23        17                                                              010111
+     2 \gold.__pi_data_in__23_0                                    13217886    c9b05e                                            110010011011000001011110
+     2 \gold.__pi_data_in__47_36                                         31        1f                                                        000000011111
+     2 \gold.__pi_data_out__11_9                                          1         1                                                                 001
+     2 \gold.__pi_data_out__5_3                                           1         1                                                                 001
+     2 \gold.__pi_en                                                      1         1                                                                   1
+     2 \gold.__pi_rst                                                     1         1                                                                   1
+     2 \gold.__po_data_out__2_0                                           1         1                                                                 001
+     2 \gold.clk                                                          0         0                                                                   0
+     2 \gold.ctrl_in                                                     --        --    0000000000010111000000000000000000000000000101110000110111001111
+     2 \gold.data_in                                                     --        --                    000000011111000000000000110010011011000001011110
+     2 \gold.data_out                                                   521       209                                                        001000001001
+     2 \gold.en                                                           1         1                                                                   1
+     2 \gold.rst                                                          1         1                                                                   1
+
+** Trying induction with length 2 **
+
+Setting up time step 2:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_en
+Import def constraint for this timestep: \__pi_rst
+Import def constraint for this timestep: \__pi_data_out__5_3
+Import def constraint for this timestep: \__pi_data_out__11_9
+Import def constraint for this timestep: \__pi_ctrl_in__21_16
+Import def constraint for this timestep: \__pi_ctrl_in__53_48
+Import def constraint for this timestep: \__pi_ctrl_in__11_0
+Import def constraint for this timestep: \__pi_data_in__47_36
+Import def constraint for this timestep: \__pi_data_in__23_0
+Imported 908 cells to SAT database.
+Import proof for assert: \__po_data_out__2_0__assert.okay when 1'1.
+Import show expression: \gate.ctrl_in
+Import show expression: \gate.data_in
+Import show expression: \gate.data_out
+Import show expression: \gate.rst
+Import show expression: \gate.en
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_ctrl_in__11_0
+Import show expression: \gate.__pi_ctrl_in__21_16
+Import show expression: \gate.__pi_ctrl_in__53_48
+Import show expression: \gate.__pi_data_in__23_0
+Import show expression: \gate.__pi_data_in__47_36
+Import show expression: \gate.__pi_data_out__5_3
+Import show expression: \gate.__pi_data_out__11_9
+Import show expression: \gate.__pi_en
+Import show expression: \gate.__pi_rst
+Import show expression: \gate.__po_data_out__2_0
+Import show expression: \__po_data_out__2_0__assert.i
+Import show expression: \__po_data_out__2_0__assert.okay
+Import show expression: \__po_data_out__2_0__assert.in_gate
+Import show expression: \__po_data_out__2_0__assert.in_gold
+Import show expression: \gold.ctrl_in
+Import show expression: \gold.data_in
+Import show expression: \gold.data_out
+Import show expression: \gold.rst
+Import show expression: \gold.en
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_ctrl_in__11_0
+Import show expression: \gold.__pi_ctrl_in__21_16
+Import show expression: \gold.__pi_ctrl_in__53_48
+Import show expression: \gold.__pi_data_in__23_0
+Import show expression: \gold.__pi_data_in__47_36
+Import show expression: \gold.__pi_data_out__5_3
+Import show expression: \gold.__pi_data_out__11_9
+Import show expression: \gold.__pi_en
+Import show expression: \gold.__pi_rst
+Import show expression: \gold.__po_data_out__2_0
+Import show expression: \__po_data_out__2_0__gate
+Import show expression: \__po_data_out__2_0__gold
+Import show expression: \__pi_rst
+Import show expression: \__pi_en
+Import show expression: \__pi_data_out__11_9
+Import show expression: \__pi_data_out__5_3
+Import show expression: \__pi_data_in__47_36
+Import show expression: \__pi_data_in__23_0
+Import show expression: \__pi_ctrl_in__53_48
+Import show expression: \__pi_ctrl_in__21_16
+Import show expression: \__pi_ctrl_in__11_0
+Import show expression: \__pi_clk
+
+[base case 2] Solving problem with 43736 variables and 118602 clauses..
+Base case for induction length 2 proven.
+
+Setting up time step 3:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_en
+Import def constraint for this timestep: \__pi_rst
+Import def constraint for this timestep: \__pi_data_out__5_3
+Import def constraint for this timestep: \__pi_data_out__11_9
+Import def constraint for this timestep: \__pi_ctrl_in__21_16
+Import def constraint for this timestep: \__pi_ctrl_in__53_48
+Import def constraint for this timestep: \__pi_ctrl_in__11_0
+Import def constraint for this timestep: \__pi_data_in__47_36
+Import def constraint for this timestep: \__pi_data_in__23_0
+Imported 908 cells to SAT database.
+Import proof for assert: \__po_data_out__2_0__assert.okay when 1'1.
+Import show expression: \gate.ctrl_in
+Import show expression: \gate.data_in
+Import show expression: \gate.data_out
+Import show expression: \gate.rst
+Import show expression: \gate.en
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_ctrl_in__11_0
+Import show expression: \gate.__pi_ctrl_in__21_16
+Import show expression: \gate.__pi_ctrl_in__53_48
+Import show expression: \gate.__pi_data_in__23_0
+Import show expression: \gate.__pi_data_in__47_36
+Import show expression: \gate.__pi_data_out__5_3
+Import show expression: \gate.__pi_data_out__11_9
+Import show expression: \gate.__pi_en
+Import show expression: \gate.__pi_rst
+Import show expression: \gate.__po_data_out__2_0
+Import show expression: \__po_data_out__2_0__assert.i
+Import show expression: \__po_data_out__2_0__assert.okay
+Import show expression: \__po_data_out__2_0__assert.in_gate
+Import show expression: \__po_data_out__2_0__assert.in_gold
+Import show expression: \gold.ctrl_in
+Import show expression: \gold.data_in
+Import show expression: \gold.data_out
+Import show expression: \gold.rst
+Import show expression: \gold.en
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_ctrl_in__11_0
+Import show expression: \gold.__pi_ctrl_in__21_16
+Import show expression: \gold.__pi_ctrl_in__53_48
+Import show expression: \gold.__pi_data_in__23_0
+Import show expression: \gold.__pi_data_in__47_36
+Import show expression: \gold.__pi_data_out__5_3
+Import show expression: \gold.__pi_data_out__11_9
+Import show expression: \gold.__pi_en
+Import show expression: \gold.__pi_rst
+Import show expression: \gold.__po_data_out__2_0
+Import show expression: \__po_data_out__2_0__gate
+Import show expression: \__po_data_out__2_0__gold
+Import show expression: \__pi_rst
+Import show expression: \__pi_en
+Import show expression: \__pi_data_out__11_9
+Import show expression: \__pi_data_out__5_3
+Import show expression: \__pi_data_in__47_36
+Import show expression: \__pi_data_in__23_0
+Import show expression: \__pi_ctrl_in__53_48
+Import show expression: \__pi_ctrl_in__21_16
+Import show expression: \__pi_ctrl_in__11_0
+Import show expression: \__pi_clk
+
+[induction step 2] Solving problem with 65654 variables and 178024 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                      Dec       Hex                                                                 Bin
+  ---- -------------------------------------------------------- ----------- --------- -------------------------------------------------------------------
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20311                0         0                                                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20313                1         1                                                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20315                0         0                                                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20317                0         0                                                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20319                0         0                                                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20321                1         1                                                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20323                0         0                                                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20325                0         0                                                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$20327                1         1                                                                   1
+  init $flatten\gold.$auto$rename.cc:496:execute$250                      5         5                                                                 101
+  init $flatten\gold.$auto$rename.cc:496:execute$251                      4         4                                                                 100
+  init $flatten\gold.$auto$rename.cc:496:execute$254                      2         2                                                                 010
+  init \gate.data_out [1:0]                                               0         0                                                                  00
+  init \gate.data_out [2]                                                 1         1                                                                   1
+  init \gold.data_out [2:0]                                               4         4                                                                 100
+  ---- -------------------------------------------------------- ----------- --------- -------------------------------------------------------------------
+     1 \__pi_clk                                                          0         0                                                                   0
+     1 \__pi_ctrl_in__11_0                                             2458       99a                                                        100110011010
+     1 \__pi_ctrl_in__21_16                                               4         4                                                              000100
+     1 \__pi_ctrl_in__53_48                                              54        36                                                              110110
+     1 \__pi_data_in__23_0                                          7341468    70059c                                            011100000000010110011100
+     1 \__pi_data_in__47_36                                            3234       ca2                                                        110010100010
+     1 \__pi_data_out__11_9                                               2         2                                                                 010
+     1 \__pi_data_out__5_3                                                2         2                                                                 010
+     1 \__pi_en                                                           0         0                                                                   0
+     1 \__pi_rst                                                          0         0                                                                   0
+     1 \__po_data_out__2_0__assert.i                                      3         3                                    00000000000000000000000000000011
+     1 \__po_data_out__2_0__assert.in_gate                                4         4                                                                 100
+     1 \__po_data_out__2_0__assert.in_gold                                4         4                                                                 100
+     1 \__po_data_out__2_0__assert.okay                                   1         1                                                                   1
+     1 \__po_data_out__2_0__gate                                          4         4                                                                 100
+     1 \__po_data_out__2_0__gold                                          4         4                                                                 100
+     1 \gate.__pi_clk                                                     0         0                                                                   0
+     1 \gate.__pi_ctrl_in__11_0                                        2458       99a                                                        100110011010
+     1 \gate.__pi_ctrl_in__21_16                                          4         4                                                              000100
+     1 \gate.__pi_ctrl_in__53_48                                         54        36                                                              110110
+     1 \gate.__pi_data_in__23_0                                     7341468    70059c                                            011100000000010110011100
+     1 \gate.__pi_data_in__47_36                                       3234       ca2                                                        110010100010
+     1 \gate.__pi_data_out__11_9                                          2         2                                                                 010
+     1 \gate.__pi_data_out__5_3                                           2         2                                                                 010
+     1 \gate.__pi_en                                                      0         0                                                                   0
+     1 \gate.__pi_rst                                                     0         0                                                                   0
+     1 \gate.__po_data_out__2_0                                           4         4                                                                 100
+     1 \gate.clk                                                          0         0                                                                   0
+     1 \gate.ctrl_in                                                     --        --    0000000000110110000000000000000000000000000001000000100110011010
+     1 \gate.data_in                                                     --        --                    110010100010000000000000011100000000010110011100
+     1 \gate.data_out                                                  1044       414                                                        010000010100
+     1 \gate.en                                                           0         0                                                                   0
+     1 \gate.rst                                                          0         0                                                                   0
+     1 \gold.__pi_clk                                                     0         0                                                                   0
+     1 \gold.__pi_ctrl_in__11_0                                        2458       99a                                                        100110011010
+     1 \gold.__pi_ctrl_in__21_16                                          4         4                                                              000100
+     1 \gold.__pi_ctrl_in__53_48                                         54        36                                                              110110
+     1 \gold.__pi_data_in__23_0                                     7341468    70059c                                            011100000000010110011100
+     1 \gold.__pi_data_in__47_36                                       3234       ca2                                                        110010100010
+     1 \gold.__pi_data_out__11_9                                          2         2                                                                 010
+     1 \gold.__pi_data_out__5_3                                           2         2                                                                 010
+     1 \gold.__pi_en                                                      0         0                                                                   0
+     1 \gold.__pi_rst                                                     0         0                                                                   0
+     1 \gold.__po_data_out__2_0                                           4         4                                                                 100
+     1 \gold.clk                                                          0         0                                                                   0
+     1 \gold.ctrl_in                                                     --        --    0000000000110110000000000000000000000000000001000000100110011010
+     1 \gold.data_in                                                     --        --                    110010100010000000000000011100000000010110011100
+     1 \gold.data_out                                                  1044       414                                                        010000010100
+     1 \gold.en                                                           0         0                                                                   0
+     1 \gold.rst                                                          0         0                                                                   0
+  ---- -------------------------------------------------------- ----------- --------- -------------------------------------------------------------------
+     2 \__pi_clk                                                          0         0                                                                   0
+     2 \__pi_ctrl_in__11_0                                               71        47                                                        000001000111
+     2 \__pi_ctrl_in__21_16                                               5         5                                                              000101
+     2 \__pi_ctrl_in__53_48                                               8         8                                                              001000
+     2 \__pi_data_in__23_0                                         13234554    c9f17a                                            110010011111000101111010
+     2 \__pi_data_in__47_36                                            1675       68b                                                        011010001011
+     2 \__pi_data_out__11_9                                               3         3                                                                 011
+     2 \__pi_data_out__5_3                                                1         1                                                                 001
+     2 \__pi_en                                                           1         1                                                                   1
+     2 \__pi_rst                                                          0         0                                                                   0
+     2 \__po_data_out__2_0__assert.i                                      3         3                                    00000000000000000000000000000011
+     2 \__po_data_out__2_0__assert.in_gate                                4         4                                                                 100
+     2 \__po_data_out__2_0__assert.in_gold                                4         4                                                                 100
+     2 \__po_data_out__2_0__assert.okay                                   1         1                                                                   1
+     2 \__po_data_out__2_0__gate                                          4         4                                                                 100
+     2 \__po_data_out__2_0__gold                                          4         4                                                                 100
+     2 \gate.__pi_clk                                                     0         0                                                                   0
+     2 \gate.__pi_ctrl_in__11_0                                          71        47                                                        000001000111
+     2 \gate.__pi_ctrl_in__21_16                                          5         5                                                              000101
+     2 \gate.__pi_ctrl_in__53_48                                          8         8                                                              001000
+     2 \gate.__pi_data_in__23_0                                    13234554    c9f17a                                            110010011111000101111010
+     2 \gate.__pi_data_in__47_36                                       1675       68b                                                        011010001011
+     2 \gate.__pi_data_out__11_9                                          3         3                                                                 011
+     2 \gate.__pi_data_out__5_3                                           1         1                                                                 001
+     2 \gate.__pi_en                                                      1         1                                                                   1
+     2 \gate.__pi_rst                                                     0         0                                                                   0
+     2 \gate.__po_data_out__2_0                                           4         4                                                                 100
+     2 \gate.clk                                                          0         0                                                                   0
+     2 \gate.ctrl_in                                                     --        --    0000000000001000000000000000000000000000000001010000000001000111
+     2 \gate.data_in                                                     --        --                    011010001011000000000000110010011111000101111010
+     2 \gate.data_out                                                  1548       60c                                                        011000001100
+     2 \gate.en                                                           1         1                                                                   1
+     2 \gate.rst                                                          0         0                                                                   0
+     2 \gold.__pi_clk                                                     0         0                                                                   0
+     2 \gold.__pi_ctrl_in__11_0                                          71        47                                                        000001000111
+     2 \gold.__pi_ctrl_in__21_16                                          5         5                                                              000101
+     2 \gold.__pi_ctrl_in__53_48                                          8         8                                                              001000
+     2 \gold.__pi_data_in__23_0                                    13234554    c9f17a                                            110010011111000101111010
+     2 \gold.__pi_data_in__47_36                                       1675       68b                                                        011010001011
+     2 \gold.__pi_data_out__11_9                                          3         3                                                                 011
+     2 \gold.__pi_data_out__5_3                                           1         1                                                                 001
+     2 \gold.__pi_en                                                      1         1                                                                   1
+     2 \gold.__pi_rst                                                     0         0                                                                   0
+     2 \gold.__po_data_out__2_0                                           4         4                                                                 100
+     2 \gold.clk                                                          0         0                                                                   0
+     2 \gold.ctrl_in                                                     --        --    0000000000001000000000000000000000000000000001010000000001000111
+     2 \gold.data_in                                                     --        --                    011010001011000000000000110010011111000101111010
+     2 \gold.data_out                                                  1548       60c                                                        011000001100
+     2 \gold.en                                                           1         1                                                                   1
+     2 \gold.rst                                                          0         0                                                                   0
+  ---- -------------------------------------------------------- ----------- --------- -------------------------------------------------------------------
+     3 \__pi_clk                                                          0         0                                                                   0
+     3 \__pi_ctrl_in__11_0                                             3157       c55                                                        110001010101
+     3 \__pi_ctrl_in__21_16                                              12         c                                                              001100
+     3 \__pi_ctrl_in__53_48                                              23        17                                                              010111
+     3 \__pi_data_in__23_0                                            27354      6ada                                            000000000110101011011010
+     3 \__pi_data_in__47_36                                               7         7                                                        000000000111
+     3 \__pi_data_out__11_9                                               7         7                                                                 111
+     3 \__pi_data_out__5_3                                                1         1                                                                 001
+     3 \__pi_en                                                           1         1                                                                   1
+     3 \__pi_rst                                                          1         1                                                                   1
+     3 \__po_data_out__2_0__assert.i                                      3         3                                    00000000000000000000000000000011
+     3 \__po_data_out__2_0__assert.in_gate                                3         3                                                                 011
+     3 \__po_data_out__2_0__assert.in_gold                                7         7                                                                 111
+     3 \__po_data_out__2_0__assert.okay                                   0         0                                                                   0
+     3 \__po_data_out__2_0__gate                                          3         3                                                                 011
+     3 \__po_data_out__2_0__gold                                          7         7                                                                 111
+     3 \gate.__pi_clk                                                     0         0                                                                   0
+     3 \gate.__pi_ctrl_in__11_0                                        3157       c55                                                        110001010101
+     3 \gate.__pi_ctrl_in__21_16                                         12         c                                                              001100
+     3 \gate.__pi_ctrl_in__53_48                                         23        17                                                              010111
+     3 \gate.__pi_data_in__23_0                                       27354      6ada                                            000000000110101011011010
+     3 \gate.__pi_data_in__47_36                                          7         7                                                        000000000111
+     3 \gate.__pi_data_out__11_9                                          7         7                                                                 111
+     3 \gate.__pi_data_out__5_3                                           1         1                                                                 001
+     3 \gate.__pi_en                                                      1         1                                                                   1
+     3 \gate.__pi_rst                                                     1         1                                                                   1
+     3 \gate.__po_data_out__2_0                                           3         3                                                                 011
+     3 \gate.clk                                                          0         0                                                                   0
+     3 \gate.ctrl_in                                                     --        --    0000000000010111000000000000000000000000000011000000110001010101
+     3 \gate.data_in                                                     --        --                    000000000111000000000000000000000110101011011010
+     3 \gate.data_out                                                  3595       e0b                                                        111000001011
+     3 \gate.en                                                           1         1                                                                   1
+     3 \gate.rst                                                          1         1                                                                   1
+     3 \gold.__pi_clk                                                     0         0                                                                   0
+     3 \gold.__pi_ctrl_in__11_0                                        3157       c55                                                        110001010101
+     3 \gold.__pi_ctrl_in__21_16                                         12         c                                                              001100
+     3 \gold.__pi_ctrl_in__53_48                                         23        17                                                              010111
+     3 \gold.__pi_data_in__23_0                                       27354      6ada                                            000000000110101011011010
+     3 \gold.__pi_data_in__47_36                                          7         7                                                        000000000111
+     3 \gold.__pi_data_out__11_9                                          7         7                                                                 111
+     3 \gold.__pi_data_out__5_3                                           1         1                                                                 001
+     3 \gold.__pi_en                                                      1         1                                                                   1
+     3 \gold.__pi_rst                                                     1         1                                                                   1
+     3 \gold.__po_data_out__2_0                                           7         7                                                                 111
+     3 \gold.clk                                                          0         0                                                                   0
+     3 \gold.ctrl_in                                                     --        --    0000000000010111000000000000000000000000000011000000110001010101
+     3 \gold.data_in                                                     --        --                    000000000111000000000000000000000110101011011010
+     3 \gold.data_out                                                  3599       e0f                                                        111000001111
+     3 \gold.en                                                           1         1                                                                   1
+     3 \gold.rst                                                          1         1                                                                   1
+
+** Trying induction with length 3 **
+
+Setting up time step 3:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_en
+Import def constraint for this timestep: \__pi_rst
+Import def constraint for this timestep: \__pi_data_out__5_3
+Import def constraint for this timestep: \__pi_data_out__11_9
+Import def constraint for this timestep: \__pi_ctrl_in__21_16
+Import def constraint for this timestep: \__pi_ctrl_in__53_48
+Import def constraint for this timestep: \__pi_ctrl_in__11_0
+Import def constraint for this timestep: \__pi_data_in__47_36
+Import def constraint for this timestep: \__pi_data_in__23_0
+Imported 908 cells to SAT database.
+Import proof for assert: \__po_data_out__2_0__assert.okay when 1'1.
+Import show expression: \gate.ctrl_in
+Import show expression: \gate.data_in
+Import show expression: \gate.data_out
+Import show expression: \gate.rst
+Import show expression: \gate.en
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_ctrl_in__11_0
+Import show expression: \gate.__pi_ctrl_in__21_16
+Import show expression: \gate.__pi_ctrl_in__53_48
+Import show expression: \gate.__pi_data_in__23_0
+Import show expression: \gate.__pi_data_in__47_36
+Import show expression: \gate.__pi_data_out__5_3
+Import show expression: \gate.__pi_data_out__11_9
+Import show expression: \gate.__pi_en
+Import show expression: \gate.__pi_rst
+Import show expression: \gate.__po_data_out__2_0
+Import show expression: \__po_data_out__2_0__assert.i
+Import show expression: \__po_data_out__2_0__assert.okay
+Import show expression: \__po_data_out__2_0__assert.in_gate
+Import show expression: \__po_data_out__2_0__assert.in_gold
+Import show expression: \gold.ctrl_in
+Import show expression: \gold.data_in
+Import show expression: \gold.data_out
+Import show expression: \gold.rst
+Import show expression: \gold.en
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_ctrl_in__11_0
+Import show expression: \gold.__pi_ctrl_in__21_16
+Import show expression: \gold.__pi_ctrl_in__53_48
+Import show expression: \gold.__pi_data_in__23_0
+Import show expression: \gold.__pi_data_in__47_36
+Import show expression: \gold.__pi_data_out__5_3
+Import show expression: \gold.__pi_data_out__11_9
+Import show expression: \gold.__pi_en
+Import show expression: \gold.__pi_rst
+Import show expression: \gold.__po_data_out__2_0
+Import show expression: \__po_data_out__2_0__gate
+Import show expression: \__po_data_out__2_0__gold
+Import show expression: \__pi_rst
+Import show expression: \__pi_en
+Import show expression: \__pi_data_out__11_9
+Import show expression: \__pi_data_out__5_3
+Import show expression: \__pi_data_in__47_36
+Import show expression: \__pi_data_in__23_0
+Import show expression: \__pi_ctrl_in__53_48
+Import show expression: \__pi_ctrl_in__21_16
+Import show expression: \__pi_ctrl_in__11_0
+Import show expression: \__pi_clk
+
+[base case 3] Solving problem with 65925 variables and 178884 clauses..
+Base case for induction length 3 proven.
+
+Setting up time step 4:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_en
+Import def constraint for this timestep: \__pi_rst
+Import def constraint for this timestep: \__pi_data_out__5_3
+Import def constraint for this timestep: \__pi_data_out__11_9
+Import def constraint for this timestep: \__pi_ctrl_in__21_16
+Import def constraint for this timestep: \__pi_ctrl_in__53_48
+Import def constraint for this timestep: \__pi_ctrl_in__11_0
+Import def constraint for this timestep: \__pi_data_in__47_36
+Import def constraint for this timestep: \__pi_data_in__23_0
+Imported 908 cells to SAT database.
+Import proof for assert: \__po_data_out__2_0__assert.okay when 1'1.
+Import show expression: \gate.ctrl_in
+Import show expression: \gate.data_in
+Import show expression: \gate.data_out
+Import show expression: \gate.rst
+Import show expression: \gate.en
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_ctrl_in__11_0
+Import show expression: \gate.__pi_ctrl_in__21_16
+Import show expression: \gate.__pi_ctrl_in__53_48
+Import show expression: \gate.__pi_data_in__23_0
+Import show expression: \gate.__pi_data_in__47_36
+Import show expression: \gate.__pi_data_out__5_3
+Import show expression: \gate.__pi_data_out__11_9
+Import show expression: \gate.__pi_en
+Import show expression: \gate.__pi_rst
+Import show expression: \gate.__po_data_out__2_0
+Import show expression: \__po_data_out__2_0__assert.i
+Import show expression: \__po_data_out__2_0__assert.okay
+Import show expression: \__po_data_out__2_0__assert.in_gate
+Import show expression: \__po_data_out__2_0__assert.in_gold
+Import show expression: \gold.ctrl_in
+Import show expression: \gold.data_in
+Import show expression: \gold.data_out
+Import show expression: \gold.rst
+Import show expression: \gold.en
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_ctrl_in__11_0
+Import show expression: \gold.__pi_ctrl_in__21_16
+Import show expression: \gold.__pi_ctrl_in__53_48
+Import show expression: \gold.__pi_data_in__23_0
+Import show expression: \gold.__pi_data_in__47_36
+Import show expression: \gold.__pi_data_out__5_3
+Import show expression: \gold.__pi_data_out__11_9
+Import show expression: \gold.__pi_en
+Import show expression: \gold.__pi_rst
+Import show expression: \gold.__po_data_out__2_0
+Import show expression: \__po_data_out__2_0__gate
+Import show expression: \__po_data_out__2_0__gold
+Import show expression: \__pi_rst
+Import show expression: \__pi_en
+Import show expression: \__pi_data_out__11_9
+Import show expression: \__pi_data_out__5_3
+Import show expression: \__pi_data_in__47_36
+Import show expression: \__pi_data_in__23_0
+Import show expression: \__pi_ctrl_in__53_48
+Import show expression: \__pi_ctrl_in__21_16
+Import show expression: \__pi_ctrl_in__11_0
+Import show expression: \__pi_clk
+
+[induction step 3] Solving problem with 88061 variables and 238982 clauses..
+Induction step proven: SUCCESS!
+
+                  /$$$$$$      /$$$$$$$$     /$$$$$$$    
+                 /$$__  $$    | $$_____/    | $$__  $$   
+                | $$  \ $$    | $$          | $$  \ $$   
+                | $$  | $$    | $$$$$       | $$  | $$   
+                | $$  | $$    | $$__/       | $$  | $$   
+                | $$/$$ $$    | $$          | $$  | $$   
+                |  $$$$$$/ /$$| $$$$$$$$ /$$| $$$$$$$//$$
+                 \____ $$$|__/|________/|__/|_______/|__/
+                       \__/                              
+
+End of script. Logfile hash: 431177337f, time: 0.43s, user: 0.40s, system: 0.03s, MEM: 99.48 MB peak
+Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+Time spent: 97% 1x sat (0 sec), 0% 2x opt_expr (0 sec), ...

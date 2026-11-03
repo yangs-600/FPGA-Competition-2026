@@ -1,0 +1,8 @@
+{
+  "utc": "2026-11-03T07:34:58.748205+00:00",
+  "command": [
+    "D:\\fpga-v14-work\\msys64\\ucrt64\\bin\\strip.exe",
+    "D:\\fpga-win-native-20261103\\v26-incremental-build\\roles\\candidate\\yosys.exe"
+  ],
+  "cwd": "D:\\fpga-win-native-20261103\\v26-incremental-build\\build\\candidate"
+}

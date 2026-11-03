@@ -1,8 +1,0 @@
-{
-  "status": "AUDIT_V1_STOPPED_ON_ADDITIONAL_METADATA_FILE",
-  "original_script": "audit_offline_build.py",
-  "additional_path": ".git/index",
-  "reason": "Initial strict whole-tree check did not distinguish Git metadata from program source; metadata identity investigation retained separately",
-  "build_recipe_failed": false,
-  "resolution": "audit_offline_build_v2.py requires unchanged tracked blob identities and still permits only the approved five source changes plus known upstream generated resources"
-}

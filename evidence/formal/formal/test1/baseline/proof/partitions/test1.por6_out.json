@@ -1,0 +1,37 @@
+{
+  "partition": {
+    "index": 0,
+    "name": "test1.por6_out",
+    "inbits": {
+      "clock": [
+        0
+      ],
+      "reset": [
+        0
+      ],
+      "valid": [
+        0
+      ]
+    },
+    "outbits": {
+      "por6_out": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.test1.por6_out",
+    "internal": {},
+    "unused": {},
+    "cellcount": 23,
+    "bitcount": 32
+  },
+  "gate_module": {
+    "name": "gold.test1.por6_out",
+    "internal": {},
+    "unused": {},
+    "cellcount": 27,
+    "bitcount": 30
+  }
+}

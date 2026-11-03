@@ -1,0 +1,65 @@
+--- v25/passes/opt/pmux_competition_opt.cc
++++ v26/passes/opt/pmux_competition_opt.cc
+@@ -435,7 +435,7 @@
+     }
+     void execute(std::vector<std::string> args, RTLIL::Design *design) override {
+         extra_args(args, 1, design);
+-        log_header(design, "Executing PMUX_COMPETITION_OPT v25.\n");
++        log_header(design, "Executing PMUX_COMPETITION_OPT v26.\n");
+         int replaced = 0;
+         for (auto module : design->selected_modules()) {
+             if (module->get_bool_attribute(ID::blackbox)) continue;
+@@ -631,12 +631,48 @@
+                 total_cells+=GetSize(group);total_nodes+=GetSize(best_nodes);total_estimated+=estimated_luts;
+                 if(have_best && GetSize(best_nodes)<=estimated_luts) {
+                     std::vector<SigBit> mapped;
++                    mapped.reserve(GetSize(best_nodes));
++                    std::vector<int> node_depth;
++                    node_depth.reserve(GetSize(best_nodes));
++                    std::map<std::pair<int,int>,std::vector<int>> packed_nodes;
++                    // Build() inserts every child before its parent. Pack only
++                    // independent nodes at the same graph depth and selector;
++                    // grouping solely by selector could create cell-level
++                    // cycles when an aliased control bit occurs at two depths.
++                    for(int index=0;index<GetSize(best_nodes);index++) {
++                        const auto &node=best_nodes.at(index);
++                        int selector=std::get<0>(node);
++                        log_assert(selector>=0 && selector<GetSize(wires));
++                        auto child_depth=[&](int id)->int {
++                            if(id>=0) {
++                                log_assert(id<GetSize(wires));
++                                return 0;
++                            }
++                            int child=-1-id;
++                            log_assert(child>=0 && child<index);
++                            return node_depth.at(child);
++                        };
++                        int depth=1+std::max(child_depth(std::get<1>(node)),child_depth(std::get<2>(node)));
++                        node_depth.push_back(depth);
++                        packed_nodes[{depth,selector}].push_back(index);
++                        // Keep a separate output bit for each original node ID.
++                        mapped.push_back(module->addWire(NEW_ID));
++                    }
+                     auto resolve=[&](int id)->SigBit {return id>=0?wires.at(id):mapped.at(-1-id);};
+-                    for(auto node:best_nodes) {
+-                        SigBit out=module->addWire(NEW_ID);
+-                        module->addMux(NEW_ID,resolve(std::get<1>(node)),resolve(std::get<2>(node)),resolve(std::get<0>(node)),out);
+-                        mapped.push_back(out);
+-                    }
++                    // std::map visits increasing depth first. Within a pack,
++                    // node IDs retain their original order and every A/B input
++                    // is a leaf or a strictly shallower node, never a peer.
++                    for(const auto &pack:packed_nodes) {
++                        SigSpec input_a,input_b,output_y;
++                        for(int index:pack.second) {
++                            const auto &node=best_nodes.at(index);
++                            input_a.append(resolve(std::get<1>(node)));
++                            input_b.append(resolve(std::get<2>(node)));
++                            output_y.append(mapped.at(index));
++                        }
++                        module->addMux(NEW_ID,input_a,input_b,resolve(pack.first.second),output_y);
++                    }
++                    log("PMUX_PACKED_TREE bit_mux_nodes=%d mux_cells=%d\n",GetSize(best_nodes),GetSize(packed_nodes));
+                     int target_number=0;
+                     for(auto target_index:group) {
+                         SigSpec result;

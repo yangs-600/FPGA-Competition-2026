@@ -1,0 +1,27 @@
+{
+  "status": "DEPLOYMENT_PREPARED_NOT_EXECUTED",
+  "utc": "2026-11-03T07:56:51.766887+00:00",
+  "preparer_sha256": "8b5d9631b99923136d9eb13d5017b7d63f339984122d4794004c170e3d582bb6",
+  "parent_manifest_sha256": "8e9276621054adf00367875ad756bd5bc0d0741a421a35090d0c180bab5fcf57",
+  "roles_executable_sha256": {
+    "baseline": "45c15841f039d998483142bf7ce726fc020bfa88651c4a6fc62eadf4313fa3d9",
+    "candidate": "d96ae554c9ee2f68d76cfdaf34e36f288cba022ccad10b22b79d8370ce6c9d29"
+  },
+  "logical_roles_files_unchanged": true,
+  "cpp_source_patch_recipe_and_binary_bytes_unchanged": true,
+  "shared_runtime": {
+    "libffi-8.dll": "f96cf79b75f33a10023d001673b564538023395c94b3c58e1db53114976a7c25",
+    "libgcc_s_seh-1.dll": "08ab5e874e7ec066a4cbd0edd09d31779d6ee4d857ed84033d6b93b0334856c4",
+    "libstdc++-6.dll": "b70223508ddf99b98bacfb9d1484e729dcb9922982137f842e601a969da7a17c",
+    "libwinpthread-1.dll": "76cc52adfcdb8c800813b2ae8da42a908934eb1ee54ce8e9744fc8d703c76ee1",
+    "yosys-abc.exe": "b17ea3f805418a28dc29250721be04ff2ec708fd8226e65a0815bbd6d11c9ad8",
+    "zlib1.dll": "11cd91171765cd65f1c3362e3df67e5f5a618a6b88c8cdec899b802eaf1c7b0d"
+  },
+  "shared_resource_count": 317,
+  "new_package_root_role_directories": false,
+  "runner_audit": "runner-change-audit.json",
+  "program_executions": 0,
+  "performance": "NOT_RUN",
+  "formal": "NOT_RUN",
+  "old_failed_results_preserved": true
+}

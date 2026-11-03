@@ -1,0 +1,89 @@
+======== ABC command line "read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw"
+Warning: The last 2 outputs are interpreted as constraints.
+VarMax = 300. FrameMax = 10000. QueMax = 0. TimeMax = 119. MonoCNF = no. SkipGen = no. SolveAll = no.
+Frame Clauses                                                     Max Queue Flops Time
+1 : 0 24                                                                1    24      0.01 sec  T/O =  0  PRV =  0
+2 : 0 42 55                                                             4    69      0.03 sec  T/O =  0  PRV =  0
+3 : 0 27 53 4                                                           2    69      0.04 sec  T/O =  0  PRV =  0
+3 : 0 27 53 4                                                           2    69      0.04 sec  T/O =  0  PRV =  0
+3 : 0 27 53 4                                                           2    69      0.05 sec  T/O =  0  PRV =  0
+3 : 0 27 53 4                                                           2    69      0.06 sec  T/O =  0  PRV =  0
+3 : 0 40 67 54                                                          4   110      0.08 sec  T/O =  0  PRV =  0
+4 : 0 51 38 66 63                                                       4   141      0.12 sec  T/O =  0  PRV =  0
+5 : 0 63 50 3 107 57                                                    6   185      0.18 sec  T/O =  0  PRV =  0
+6 : 0 75 62 3 13 22 153                                                 6   215      0.23 sec  T/O =  0  PRV =  0
+7 : 0 76 63 3 13 1 27 139                                               8   226      0.26 sec  T/O =  0  PRV =  0
+Timing out on output 0 in frame 7 (retrying in next anytime pass).
+7 : 0 76 63 3 13 1 27 139                                               0   226      0.26 sec  T/O =  1  PRV =  0
+8 : 0 76 63 3 13 1 19 7 134                                             0   226      0.28 sec  T/O =  1  PRV =  0
+All outputs solved or timed out in frame 8.
+Starting new anytime pass, reusing clauses.
+Frame Clauses                                                     Max Queue Flops Time
+1 : 0 316                                                               0     0      0.02 sec  T/O =  0  PRV =  0
+2 : 0 76 240                                                            0     0      0.03 sec  T/O =  0  PRV =  0
+3 : 0 76 63 177                                                         0     0      0.03 sec  T/O =  0  PRV =  0
+4 : 0 76 63 3 174                                                       0     0      0.04 sec  T/O =  0  PRV =  0
+5 : 0 76 63 3 13 161                                                    0     0      0.04 sec  T/O =  0  PRV =  0
+6 : 0 76 63 3 13 1 160                                                  0     0      0.05 sec  T/O =  0  PRV =  0
+7 : 0 87 74 3 13 1 19 177                                               7    67      0.09 sec  T/O =  0  PRV =  0
+8 : 0 99 86 3 13 1 1 25 198                                             8   106      0.16 sec  T/O =  0  PRV =  0
+9 : 0 111 98 3 13 1 1 2 196 56                                          9   147      0.26 sec  T/O =  0  PRV =  0
+10 : 0 115 102 3 13 1 1 2 13 25 211                                     10   173      0.33 sec  T/O =  0  PRV =  0
+Timing out on output 0 in frame 10 (retrying in next anytime pass).
+10 : 0 115 102 3 13 1 1 2 13 25 211                                      0   173      0.33 sec  T/O =  1  PRV =  0
+11 : 0 115 102 3 13 1 1 2 13 16 10 0 ~201                                 0   173      0.36 sec  T/O =  1  PRV =  0
+All outputs solved or timed out in frame 11.
+Starting new anytime pass, reusing clauses.
+Frame Clauses                                                     Max Queue Flops Time
+1 : 0 276 ~201                                                           0     0      0.02 sec  T/O =  0  PRV =  0
+2 : 0 115 161 ~201                                                       0     0      0.03 sec  T/O =  0  PRV =  0
+3 : 0 115 102 59 ~201                                                    0     0      0.04 sec  T/O =  0  PRV =  0
+4 : 0 115 102 3 56 ~201                                                  0     0      0.05 sec  T/O =  0  PRV =  0
+5 : 0 115 102 3 13 43 ~201                                               0     0      0.06 sec  T/O =  0  PRV =  0
+6 : 0 115 102 3 13 1 42 ~201                                             0     0      0.07 sec  T/O =  0  PRV =  0
+7 : 0 115 102 3 13 1 1 41 ~201                                           0     0      0.08 sec  T/O =  0  PRV =  0
+8 : 0 115 102 3 13 1 1 2 39 ~201                                         0     0      0.09 sec  T/O =  0  PRV =  0
+9 : 0 115 102 3 13 1 1 2 13 26 ~201                                      0     0      0.10 sec  T/O =  0  PRV =  0
+10 : 0 123 110 3 13 1 1 2 13 16 48 ~201                                  10    77      0.15 sec  T/O =  0  PRV =  0
+11 : 0 135 122 3 13 1 1 2 13 1 26 49 ~224                                12   123      0.24 sec  T/O =  0  PRV =  0
+12 : 0 147 134 3 13 1 1 2 13 1 1 24 47 ~249                              12   157      0.34 sec  T/O =  0  PRV =  0
+13 : 0 159 146 3 13 1 1 2 13 1 1 1 25 50 ~272                            14   196      0.46 sec  T/O =  0  PRV =  0
+14 : 0 171 158 3 13 1 1 2 13 1 1 1 1 24 47 ~297                          14   230      0.58 sec  T/O =  0  PRV =  0
+15 : 0 174 161 3 13 1 1 2 13 1 1 1 1 1 25 9 ~320                         16   241      0.64 sec  T/O =  0  PRV =  0
+Timing out on output 0 in frame 15 (retrying in next anytime pass).
+15 : 0 174 161 3 13 1 1 2 13 1 1 1 1 1 25 9 ~320                          0   241      0.64 sec  T/O =  1  PRV =  0
+16 : 0 174 161 3 13 1 1 2 13 1 1 1 1 1 21 3 0 ~326                        0   241      0.66 sec  T/O =  1  PRV =  0
+All outputs solved or timed out in frame 16.
+Starting new anytime pass, reusing clauses.
+Frame Clauses                                                     Max Queue Flops Time
+1 : 0 397 ~326                                                           0     0      0.04 sec  T/O =  0  PRV =  0
+2 : 0 174 223 ~326                                                       0     0      0.05 sec  T/O =  0  PRV =  0
+3 : 0 174 161 62 ~326                                                    0     0      0.07 sec  T/O =  0  PRV =  0
+4 : 0 174 161 3 59 ~326                                                  0     0      0.09 sec  T/O =  0  PRV =  0
+5 : 0 174 161 3 13 46 ~326                                               0     0      0.10 sec  T/O =  0  PRV =  0
+6 : 0 174 161 3 13 1 45 ~326                                             0     0      0.12 sec  T/O =  0  PRV =  0
+7 : 0 174 161 3 13 1 1 44 ~326                                           0     0      0.14 sec  T/O =  0  PRV =  0
+8 : 0 174 161 3 13 1 1 2 42 ~326                                         0     0      0.16 sec  T/O =  0  PRV =  0
+9 : 0 174 161 3 13 1 1 2 13 29 ~326                                      0     0      0.18 sec  T/O =  0  PRV =  0
+10 : 0 174 161 3 13 1 1 2 13 1 28 ~326                                    0     0      0.20 sec  T/O =  0  PRV =  0
+11 : 0 174 161 3 13 1 1 2 13 1 1 27 ~326                                  0     0      0.22 sec  T/O =  0  PRV =  0
+12 : 0 174 161 3 13 1 1 2 13 1 1 1 26 ~326                                0     0      0.23 sec  T/O =  0  PRV =  0
+13 : 0 174 161 3 13 1 1 2 13 1 1 1 1 25 ~326                              0     0      0.25 sec  T/O =  0  PRV =  0
+14 : 0 174 161 3 13 1 1 2 13 1 1 1 1 1 24 ~326                            0     0      0.27 sec  T/O =  0  PRV =  0
+15 : 0 184 171 3 13 1 1 2 13 1 1 1 1 1 21 43 ~326                        15    65      0.35 sec  T/O =  0  PRV =  0
+16 : 0 195 182 3 13 1 1 2 13 1 1 1 1 1 1 23 46 ~346                      16   103      0.49 sec  T/O =  0  PRV =  0
+Proved output 0 in frame 16.
+17 : 0 195 182 3 13 1 1 2 13 1 1 1 1 1 1 0 0 8 ~392                       0   103      0.52 sec  T/O =  0  PRV =  1
+Block =  380  Oblig =  7106  Clause =  1160  Call = 25134 (sat=76.2%)  Cex =   0  Start =  57
+SAT solving =     1.14 sec ( 62.06 %)
+unsat     =     0.09 sec (  5.00 %)
+sat       =     1.05 sec ( 57.06 %)
+Generalize  =     0.63 sec ( 34.50 %)
+Push clause =     0.64 sec ( 34.86 %)
+Ternary sim =     0.17 sec (  9.18 %)
+Containment =     0.01 sec (  0.34 %)
+CNF compute =     0.05 sec (  2.83 %)
+Refinement  =     0.00 sec (  0.00 %)
+TOTAL       =     1.84 sec (100.00 %)
+Property proved.  Time =     1.84 sec
+Counter-example is not available.

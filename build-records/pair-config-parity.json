@@ -1,0 +1,15 @@
+{
+  "status": "PASS_INHERITED_COMMON_FLAGS_ONE_PMUX_TU_EXACT_PARENT_FLAGS",
+  "utc": "2026-11-03T07:34:09.546468+00:00",
+  "build_mode": "incremental_one_translation_unit_from_fresh_v25",
+  "common_entries": 347,
+  "candidate_extra": [
+    "passes/opt/pmux_competition_opt.cc"
+  ],
+  "parent_pair_receipt_sha256": "96e48f0e0c1835f14d783e547f9b6e99183e4bbefc817220fa79f32131e0a785",
+  "recompiled_translation_units": [
+    "passes/opt/pmux_competition_opt.cc"
+  ],
+  "all_other_objects_reused_read_only": true,
+  "new_compile_only_differences": "Source path and object output path; all flags and include paths unchanged."
+}

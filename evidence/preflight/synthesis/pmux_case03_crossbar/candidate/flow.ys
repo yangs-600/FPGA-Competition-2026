@@ -1,0 +1,4 @@
+read_verilog "D:/fpga-win-native-20261103/preflight-shared-runtime-once/package/competition_case/pmux_cases/pmux_case03_crossbar.v"
+synth_intel -family cycloneiv -top pmux_case03_crossbar
+write_verilog -norename -noattr "D:/fpga-win-native-20261103/preflight-shared-runtime-once/synthesis/pmux_case03_crossbar/candidate/netlist.v"
+write_json "D:/fpga-win-native-20261103/preflight-shared-runtime-once/synthesis/pmux_case03_crossbar/candidate/netlist.json"

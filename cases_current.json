@@ -1,7 +1,5 @@
 {
   "schema": 1,
-  "source_archive_sha256": "03a2aaf3c3aeccb50f2633df949fd5d88e8c4bcc0090f81099e5cb21d231fe9e",
-  "area_metric": "mean of per-case percentage reduction of LUT plus standalone NOT",
   "cases": [
     {
       "name": "test1",

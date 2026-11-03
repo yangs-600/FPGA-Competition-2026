@@ -1,0 +1,754 @@
+[1/680] Compiling pattern matcher techlibs/ice40/ice40_dsp_pm.h
+Could not find platform independent libraries <prefix>
+[2/680] Compiling pattern matcher techlibs/xilinx/xilinx_srl_pm.h
+Could not find platform independent libraries <prefix>
+[3/680] Copying share/include/kernel/binding.h
+[4/680] Copying share/include/kernel/bitpattern.h
+[5/680] Copying share/include/kernel/cellaigs.h
+[6/680] Copying share/include/kernel/celledges.h
+[7/680] Copying share/include/kernel/celltypes.h
+[8/680] Copying share/include/kernel/consteval.h
+[9/680] Copying share/include/kernel/constids.inc
+[10/680] Copying share/include/kernel/cost.h
+[11/680] Copying share/include/kernel/drivertools.h
+[12/680] Copying share/include/kernel/ff.h
+[13/680] Copying share/include/kernel/ffinit.h
+[14/680] Copying share/include/kernel/ffmerge.h
+[15/680] Copying share/include/kernel/fmt.h
+[16/680] Copying share/include/kernel/gzip.h
+[17/680] Copying share/include/kernel/hashlib.h
+[18/680] Copying share/include/kernel/io.h
+[19/680] Building CXX object libs/dlfcn-win32/CMakeFiles/dlfcn.dir/dlfcn.cc.obj
+[20/680] Copying share/include/kernel/json.h
+[21/680] Copying share/include/kernel/log.h
+[22/680] Copying share/include/kernel/macc.h
+[23/680] Copying share/include/kernel/mem.h
+[24/680] Copying share/include/kernel/modtools.h
+[25/680] Copying share/include/kernel/newcelltypes.h
+[26/680] Linking CXX static library libs\dlfcn-win32\libdlfcn.a
+[27/680] Copying share/include/kernel/qcsat.h
+[28/680] Copying share/include/kernel/register.h
+[29/680] Copying share/include/kernel/rtlil.h
+[30/680] Copying share/include/kernel/satgen.h
+[31/680] Copying share/include/kernel/scopeinfo.h
+[32/680] Copying share/include/kernel/sexpr.h
+[33/680] Copying share/include/kernel/sigtools.h
+[34/680] Copying share/include/kernel/threading.h
+[35/680] Copying share/include/kernel/timinginfo.h
+[36/680] Copying share/include/kernel/unused_bits.h
+[37/680] Copying share/include/kernel/utils.h
+[38/680] Copying share/include/kernel/yosys.h
+[39/680] Copying share/include/kernel/yosys_common.h
+[40/680] Copying share/include/kernel/yosys_config.h
+[41/680] Copying share/include/kernel/yw.h
+[42/680] Generating D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/techlibs/gatemate/lut_tree_cells.genlib, D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/techlibs/gatemate/lut_tree_map.v
+Could not find platform independent libraries <prefix>
+[43/680] Generating D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/techlibs/quicklogic/qlf_k6n10f/bram_types_sim.v
+Could not find platform independent libraries <prefix>
+[44/680] Building CXX object techlibs/xilinx/CMakeFiles/yosys_xilinx_srl.dir/xilinx_srl.cc.obj
+[45/680] Building CXX object techlibs/ice40/CMakeFiles/yosys_ice40_dsp.dir/ice40_dsp.cc.obj
+[46/680] Copying share/include/libs/ezsat/ezcmdline.h
+[47/680] Copying share/include/libs/ezsat/ezminisat.h
+[48/680] Copying share/include/libs/ezsat/ezsat.h
+[49/680] Copying share/include/libs/fst/fstapi.h
+[50/680] Copying share/include/libs/json11/json11.hpp
+[51/680] Copying share/include/libs/sha1/sha1.h
+[52/680] Generating simlib_help.inc
+Could not find platform independent libraries <prefix>
+[53/680] Generating simcells_help.inc
+Could not find platform independent libraries <prefix>
+[54/680] Copying share/include/kernel/fstdata.h
+[55/680] Copying share/sdc/graph-stubs.sdc
+[56/680] Copying share/include/passes/techmap/libparse.h
+[57/680] Compiling pattern matcher passes/opt/peepopt_pm.h
+Could not find platform independent libraries <prefix>
+[58/680] Copying share/include/frontends/blif/blifparse.h
+[59/680] [FLEX][verilog_lexer] Building scanner with flex 2.6.4
+[60/680] Copying share/include/backends/cxxrtl/runtime/README.txt
+[61/680] Copying share/include/backends/cxxrtl/runtime/cxxrtl/capi/cxxrtl_capi.cc
+[62/680] Copying share/include/backends/cxxrtl/runtime/cxxrtl/capi/cxxrtl_capi.h
+[63/680] Copying share/include/backends/cxxrtl/runtime/cxxrtl/capi/cxxrtl_capi_vcd.cc
+[64/680] Copying share/include/backends/cxxrtl/runtime/cxxrtl/capi/cxxrtl_capi_vcd.h
+[65/680] Copying share/include/backends/cxxrtl/runtime/cxxrtl/cxxrtl.h
+[66/680] Copying share/include/backends/cxxrtl/runtime/cxxrtl/cxxrtl_replay.h
+[67/680] [BISON][verilog_parser] Building parser with bison 3.8.2
+[68/680] Copying share/include/backends/cxxrtl/runtime/cxxrtl/cxxrtl_time.h
+[69/680] Copying share/include/backends/cxxrtl/runtime/cxxrtl/cxxrtl_vcd.h
+[70/680] Copying share/include/backends/rtlil/rtlil_backend.h
+[71/680] Copying share/python3/smtio.py
+[72/680] Copying share/python3/ywio.py
+[73/680] Copying share/achronix/speedster22i/cells_map.v
+[74/680] Copying share/achronix/speedster22i/cells_sim.v
+[75/680] Copying share/analogdevices/abc9_model.v
+[76/680] Copying share/analogdevices/arith_map.v
+[77/680] Copying share/analogdevices/brams.txt
+[78/680] Copying share/analogdevices/brams_defs.vh
+[79/680] Copying share/analogdevices/brams_map.v
+[80/680] Copying share/analogdevices/cells_map.v
+[81/680] Copying share/analogdevices/cells_sim.v
+[82/680] Copying share/analogdevices/dsp_map.v
+[83/680] Copying share/analogdevices/ff_map.v
+[84/680] Copying share/analogdevices/lut_map.v
+[85/680] Copying share/analogdevices/lutrams.txt
+[86/680] Copying share/analogdevices/lutrams_map.v
+[87/680] Copying share/analogdevices/mux_map.v
+[88/680] Copying share/anlogic/arith_map.v
+[89/680] Copying share/anlogic/brams.txt
+[90/680] Copying share/anlogic/brams_map.v
+[91/680] Copying share/anlogic/cells_map.v
+[92/680] Copying share/anlogic/cells_sim.v
+[93/680] Copying share/anlogic/eagle_bb.v
+[94/680] Copying share/anlogic/lutrams.txt
+[95/680] Copying share/anlogic/lutrams_map.v
+[96/680] Copying share/abc9_map.v
+[97/680] Copying share/abc9_model.v
+[98/680] Copying share/abc9_unmap.v
+[99/680] Copying share/adff2dff.v
+[100/680] Copying share/choices/han-carlson.v
+[101/680] Copying share/choices/kogge-stone.v
+[102/680] Copying share/choices/sklansky.v
+[103/680] Copying share/cmp2lcu.v
+[104/680] Copying share/cmp2lut.v
+[105/680] Copying share/cmp2softlogic.v
+[106/680] Copying share/dff2ff.v
+[107/680] Copying share/gate2lut.v
+[108/680] Copying share/mul2dsp.v
+[109/680] Copying share/pmux2mux.v
+[110/680] Copying share/simcells.v
+[111/680] Copying share/simlib.v
+[112/680] Copying share/smtmap.v
+[113/680] Copying share/techmap.v
+[114/680] Copying share/efinix/arith_map.v
+[115/680] Copying share/efinix/brams.txt
+[116/680] Copying share/efinix/brams_map.v
+[117/680] Copying share/efinix/cells_map.v
+[118/680] Copying share/efinix/cells_sim.v
+[119/680] Copying share/efinix/gbuf_map.v
+[120/680] Copying share/gatemate/arith_map.v
+[121/680] Copying share/gatemate/brams.txt
+[122/680] Copying share/gatemate/brams_init_20.vh
+[123/680] Copying share/gatemate/brams_init_40.vh
+[124/680] Copying share/gatemate/brams_map.v
+[125/680] Copying share/gatemate/cells_bb.v
+[126/680] Copying share/gatemate/cells_sim.v
+[127/680] Copying share/gatemate/inv_map.v
+[128/680] Copying share/gatemate/lut_map.v
+[129/680] Copying share/gatemate/lut_tree_cells.genlib
+[130/680] Copying share/gatemate/lut_tree_map.v
+[131/680] Copying share/gatemate/mul_map.v
+[132/680] Copying share/gatemate/mux_map.v
+[133/680] Copying share/gatemate/reg_map.v
+[134/680] Copying share/gowin/arith_map.v
+[135/680] Copying share/gowin/brams.txt
+[136/680] Copying share/gowin/brams_map.v
+[137/680] Copying share/gowin/brams_map_gw5a.v
+[138/680] Copying share/gowin/cells_latch.v
+[139/680] Copying share/gowin/cells_map.v
+[140/680] Copying share/gowin/cells_sim.v
+[141/680] Copying share/gowin/cells_xtra_gw1n.v
+[142/680] Copying share/gowin/cells_xtra_gw2a.v
+[143/680] Copying share/gowin/cells_xtra_gw5a.v
+[144/680] Copying share/gowin/dsp_map.v
+[145/680] Copying share/gowin/lutrams.txt
+[146/680] Copying share/gowin/lutrams_map.v
+[147/680] Compiling pattern matcher techlibs/ice40/ice40_wrapcarry_pm.h
+Could not find platform independent libraries <prefix>
+[148/680] Copying share/ice40/abc9_model.v
+[149/680] Copying share/ice40/arith_map.v
+[150/680] Copying share/ice40/brams.txt
+[151/680] Copying share/ice40/brams_map.v
+[152/680] Copying share/ice40/cells_map.v
+[153/680] Copying share/ice40/cells_sim.v
+[154/680] Copying share/ice40/dsp_map.v
+[155/680] Copying share/ice40/ff_map.v
+[156/680] Copying share/ice40/latches_map.v
+[157/680] Copying share/ice40/spram.txt
+[158/680] Copying share/ice40/spram_map.v
+[159/680] Copying share/intel/common/altpll_bb.v
+[160/680] Copying share/intel/common/brams_m9k.txt
+[161/680] Copying share/intel/common/brams_map_m9k.v
+[162/680] Copying share/intel/common/ff_map.v
+[163/680] Copying share/intel/common/m9k_bb.v
+[164/680] Copying share/intel/cyclone10lp/cells_map.v
+[165/680] Copying share/intel/cyclone10lp/cells_sim.v
+[166/680] Copying share/intel/cycloneiv/cells_map.v
+[167/680] Copying share/intel/cycloneiv/cells_sim.v
+[168/680] Copying share/intel/cycloneive/cells_map.v
+[169/680] Copying share/intel/cycloneive/cells_sim.v
+[170/680] Copying share/intel/max10/cells_map.v
+[171/680] Copying share/intel/max10/cells_sim.v
+[172/680] Copying share/intel/max10/dsp_map.v
+[173/680] Copying share/intel_alm/common/abc9_map.v
+[174/680] Copying share/intel_alm/common/abc9_model.v
+[175/680] Copying share/intel_alm/common/abc9_unmap.v
+[176/680] Copying share/intel_alm/common/alm_map.v
+[177/680] Copying share/intel_alm/common/alm_sim.v
+[178/680] Copying share/intel_alm/common/arith_alm_map.v
+[179/680] Copying share/intel_alm/common/bram_m10k.txt
+[180/680] Copying share/intel_alm/common/bram_m10k_map.v
+[181/680] Copying share/intel_alm/common/dff_map.v
+[182/680] Copying share/intel_alm/common/dff_sim.v
+[183/680] Copying share/intel_alm/common/dsp_map.v
+[184/680] Copying share/intel_alm/common/dsp_sim.v
+[185/680] Copying share/intel_alm/common/lutram_mlab.txt
+[186/680] Copying share/intel_alm/common/megafunction_bb.v
+[187/680] Copying share/intel_alm/common/mem_sim.v
+[188/680] Copying share/intel_alm/common/misc_sim.v
+[189/680] Copying share/intel_alm/cyclonev/cells_sim.v
+[190/680] Compiling pattern matcher techlibs/lattice/lattice_dsp_nexus_pm.h
+Could not find platform independent libraries <prefix>
+[191/680] Copying share/ecp5/ccu2c_sim.vh
+[192/680] Copying share/ecp5/cells_bb.v
+[193/680] Copying share/ecp5/cells_ff.vh
+[194/680] Copying share/ecp5/cells_io.vh
+[195/680] Copying share/ecp5/cells_sim.v
+[196/680] Copying share/ecp5/common_sim.vh
+[197/680] Copying share/lattice/arith_map_ccu2c.v
+[198/680] Copying share/lattice/arith_map_ccu2d.v
+[199/680] Copying share/lattice/arith_map_nexus.v
+[200/680] Copying share/lattice/brams_16kd.txt
+[201/680] Copying share/lattice/brams_8kc.txt
+[202/680] Copying share/lattice/brams_map_16kd.v
+[203/680] Copying share/lattice/brams_map_8kc.v
+[204/680] Copying share/lattice/brams_map_nexus.v
+[205/680] Copying share/lattice/brams_nexus.txt
+[206/680] Copying share/lattice/ccu2c_sim.vh
+[207/680] Copying share/lattice/ccu2d_sim.vh
+[208/680] Copying share/lattice/cells_bb_ecp5.v
+[209/680] Copying share/lattice/cells_bb_nexus.v
+[210/680] Copying share/lattice/cells_bb_xo2.v
+[211/680] Copying share/lattice/cells_bb_xo3.v
+[212/680] Copying share/lattice/cells_bb_xo3d.v
+[213/680] Copying share/lattice/cells_ff.vh
+[214/680] Copying share/lattice/cells_io.vh
+[215/680] Copying share/lattice/cells_map_nexus.v
+[216/680] Copying share/lattice/cells_map_trellis.v
+[217/680] Copying share/lattice/cells_sim_ecp5.v
+[218/680] Copying share/lattice/cells_sim_nexus.v
+[219/680] Copying share/lattice/cells_sim_xo2.v
+[220/680] Copying share/lattice/cells_sim_xo3.v
+[221/680] Copying share/lattice/cells_sim_xo3d.v
+[222/680] Copying share/lattice/common_sim.vh
+[223/680] Copying share/lattice/dsp_map_18x18.v
+[224/680] Copying share/lattice/dsp_map_nexus.v
+[225/680] Copying share/lattice/latches_map.v
+[226/680] Copying share/lattice/lrams_map_nexus.v
+[227/680] Copying share/lattice/lrams_nexus.txt
+[228/680] Copying share/lattice/lutrams_map_nexus.v
+[229/680] Copying share/lattice/lutrams_map_trellis.v
+[230/680] Copying share/lattice/lutrams_nexus.txt
+[231/680] Copying share/lattice/lutrams_trellis.txt
+[232/680] Copying share/lattice/parse_init.vh
+[233/680] Copying share/nexus/cells_sim.v
+[234/680] Copying share/nexus/cells_xtra.v
+[235/680] Copying share/nexus/parse_init.vh
+[236/680] Compiling pattern matcher techlibs/microchip/microchip_dsp_pm.h
+Could not find platform independent libraries <prefix>
+[237/680] Compiling pattern matcher techlibs/microchip/microchip_dsp_cascade_pm.h
+Could not find platform independent libraries <prefix>
+[238/680] Compiling pattern matcher techlibs/microchip/microchip_dsp_CREG_pm.h
+Could not find platform independent libraries <prefix>
+[239/680] Copying share/microchip/LSRAM.txt
+[240/680] Copying share/microchip/LSRAM_map.v
+[241/680] Copying share/microchip/arith_map.v
+[242/680] Copying share/microchip/brams_defs.vh
+[243/680] Copying share/microchip/cells_map.v
+[244/680] Copying share/microchip/cells_sim.v
+[245/680] Copying share/microchip/polarfire_dsp_map.v
+[246/680] Copying share/microchip/uSRAM.txt
+[247/680] Copying share/microchip/uSRAM_map.v
+[248/680] Copying share/nanoxplore/arith_map.v
+[249/680] Copying share/nanoxplore/brams.txt
+[250/680] Copying share/nanoxplore/brams_init.vh
+[251/680] Copying share/nanoxplore/brams_map.v
+[252/680] Copying share/nanoxplore/cells_bb.v
+[253/680] Copying share/nanoxplore/cells_bb_l.v
+[254/680] Copying share/nanoxplore/cells_bb_m.v
+[255/680] Copying share/nanoxplore/cells_bb_u.v
+[256/680] Copying share/nanoxplore/cells_map.v
+[257/680] Copying share/nanoxplore/cells_sim.v
+[258/680] Copying share/nanoxplore/cells_sim_l.v
+[259/680] Copying share/nanoxplore/cells_sim_m.v
+[260/680] Copying share/nanoxplore/cells_sim_u.v
+[261/680] Copying share/nanoxplore/cells_wrap.v
+[262/680] Copying share/nanoxplore/cells_wrap_l.v
+[263/680] Copying share/nanoxplore/cells_wrap_m.v
+[264/680] Copying share/nanoxplore/cells_wrap_u.v
+[265/680] Copying share/nanoxplore/io_map.v
+[266/680] Copying share/nanoxplore/latches_map.v
+[267/680] Copying share/nanoxplore/rf_init.vh
+[268/680] Copying share/nanoxplore/rf_rams_l.txt
+[269/680] Copying share/nanoxplore/rf_rams_m.txt
+[270/680] Copying share/nanoxplore/rf_rams_map_l.v
+[271/680] Copying share/nanoxplore/rf_rams_map_m.v
+[272/680] Copying share/nanoxplore/rf_rams_map_u.v
+[273/680] Copying share/nanoxplore/rf_rams_u.txt
+[274/680] Copying share/quicklogic/common/cells_sim.v
+[275/680] Compiling pattern matcher techlibs/quicklogic/ql_dsp_macc_pm.h
+Could not find platform independent libraries <prefix>
+[276/680] Copying share/quicklogic/pp3/abc9_map.v
+[277/680] Copying share/quicklogic/pp3/abc9_model.v
+[278/680] Copying share/quicklogic/pp3/abc9_unmap.v
+[279/680] Copying share/quicklogic/pp3/cells_map.v
+[280/680] Copying share/quicklogic/pp3/cells_sim.v
+[281/680] Copying share/quicklogic/pp3/ffs_map.v
+[282/680] Copying share/quicklogic/pp3/latches_map.v
+[283/680] Copying share/quicklogic/pp3/lut_map.v
+[284/680] Copying share/quicklogic/qlf_k6n10f/TDP18K_FIFO.v
+[285/680] Copying share/quicklogic/qlf_k6n10f/arith_map.v
+[286/680] Copying share/quicklogic/qlf_k6n10f/brams_map.v
+[287/680] Copying share/quicklogic/qlf_k6n10f/brams_sim.v
+[288/680] Copying share/quicklogic/qlf_k6n10f/cells_sim.v
+[289/680] Copying share/quicklogic/qlf_k6n10f/dsp_final_map.v
+[290/680] Copying share/quicklogic/qlf_k6n10f/dsp_map.v
+[291/680] Copying share/quicklogic/qlf_k6n10f/bram_types_sim.v
+[292/680] Copying share/quicklogic/qlf_k6n10f/dsp_sim.v
+[293/680] Copying share/quicklogic/qlf_k6n10f/ffs_map.v
+[294/680] Copying share/quicklogic/qlf_k6n10f/libmap_brams.txt
+[295/680] Copying share/quicklogic/qlf_k6n10f/libmap_brams_map.v
+[296/680] Copying share/quicklogic/qlf_k6n10f/sram1024x18_mem.v
+[297/680] Copying share/quicklogic/qlf_k6n10f/ufifo_ctl.v
+[298/680] Copying share/sf2/arith_map.v
+[299/680] Copying share/sf2/cells_map.v
+[300/680] Copying share/sf2/cells_sim.v
+[301/680] Compiling pattern matcher passes/pmgen/test_pmgen_pm.h
+Could not find platform independent libraries <prefix>
+[302/680] Compiling pattern matcher techlibs/xilinx/xilinx_dsp_pm.h
+Could not find platform independent libraries <prefix>
+[303/680] Compiling pattern matcher techlibs/xilinx/xilinx_dsp48a_pm.h
+Could not find platform independent libraries <prefix>
+[304/680] Compiling pattern matcher techlibs/xilinx/xilinx_dsp_CREG_pm.h
+Could not find platform independent libraries <prefix>
+[305/680] Copying share/xilinx/abc9_model.v
+[306/680] Compiling pattern matcher techlibs/xilinx/xilinx_dsp_cascade_pm.h
+Could not find platform independent libraries <prefix>
+[307/680] Copying share/xilinx/arith_map.v
+[308/680] Copying share/xilinx/brams_defs.vh
+[309/680] Copying share/xilinx/brams_xc2v.txt
+[310/680] Copying share/xilinx/brams_xc2v_map.v
+[311/680] Copying share/xilinx/brams_xc3sda.txt
+[312/680] Copying share/xilinx/brams_xc3sda_map.v
+[313/680] Copying share/xilinx/brams_xc4v.txt
+[314/680] Copying share/xilinx/brams_xc4v_map.v
+[315/680] Copying share/xilinx/brams_xc5v_map.v
+[316/680] Copying share/xilinx/brams_xc6v_map.v
+[317/680] Copying share/xilinx/brams_xcu_map.v
+[318/680] Copying share/xilinx/brams_xcv.txt
+[319/680] Copying share/xilinx/brams_xcv_map.v
+[320/680] Copying share/xilinx/cells_map.v
+[321/680] Copying share/xilinx/cells_sim.v
+[322/680] Copying share/xilinx/cells_xtra.v
+[323/680] Copying share/xilinx/ff_map.v
+[324/680] Copying share/xilinx/lut_map.v
+[325/680] Copying share/xilinx/lutrams_xc5v.txt
+[326/680] Copying share/xilinx/lutrams_xc5v_map.v
+[327/680] Copying share/xilinx/lutrams_xcu.txt
+[328/680] Copying share/xilinx/lutrams_xcv.txt
+[329/680] Copying share/xilinx/lutrams_xcv_map.v
+[330/680] Copying share/xilinx/mux_map.v
+[331/680] Copying share/xilinx/urams.txt
+[332/680] Copying share/xilinx/urams_map.v
+[333/680] Copying share/xilinx/xc3s_mult_map.v
+[334/680] Copying share/xilinx/xc3sda_dsp_map.v
+[335/680] Copying share/xilinx/xc4v_dsp_map.v
+[336/680] Copying share/xilinx/xc5v_dsp_map.v
+[337/680] Copying share/xilinx/xc6s_dsp_map.v
+[338/680] Copying share/xilinx/xc7_dsp_map.v
+[339/680] Copying share/xilinx/xcu_dsp_map.v
+[340/680] Building CXX object libs/bigint/CMakeFiles/yosys_bigint.dir/BigIntegerAlgorithms.cc.obj
+[341/680] Building CXX object libs/bigint/CMakeFiles/yosys_bigint.dir/BigInteger.cc.obj
+[342/680] Building CXX object libs/bigint/CMakeFiles/yosys_bigint.dir/BigUnsigned.cc.obj
+[343/680] Building CXX object libs/bigint/CMakeFiles/yosys_bigint.dir/BigIntegerUtils.cc.obj
+[344/680] Building CXX object libs/bigint/CMakeFiles/yosys_bigint.dir/BigUnsignedInABase.cc.obj
+[345/680] Building CXX object libs/ezsat/CMakeFiles/yosys_ezsat.dir/ezminisat.cc.obj
+[346/680] Building CXX object libs/ezsat/CMakeFiles/yosys_ezsat.dir/ezsat.cc.obj
+[347/680] Building CXX object libs/fst/CMakeFiles/yosys_fst.dir/fastlz.cc.obj
+[348/680] Building CXX object libs/fst/CMakeFiles/yosys_fst.dir/fstapi.cc.obj
+[349/680] Building CXX object libs/ezsat/CMakeFiles/yosys_ezsat.dir/ezcmdline.cc.obj
+[350/680] Building CXX object libs/json11/CMakeFiles/yosys_json11.dir/json11.cpp.obj
+[351/680] Building CXX object libs/minisat/CMakeFiles/yosys_minisat.dir/Options.cc.obj
+[352/680] Building CXX object libs/fst/CMakeFiles/yosys_fst.dir/lz4.cc.obj
+[353/680] Building CXX object libs/minisat/CMakeFiles/yosys_minisat.dir/SimpSolver.cc.obj
+In file included from D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/Sort.h:24,
+                 from D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/SimpSolver.cc:27:
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/Vec.h: In instantiation of 'void Minisat::vec<T, _Size>::capacity(Size) [with T = Minisat::vec<unsigned int>; _Size = int; Size = int]':
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/Vec.h:125:13:   required from 'void Minisat::vec<T, _Size>::growTo(Size) [with T = Minisat::vec<unsigned int>; _Size = int; Size = int]'
+  125 |     capacity(size);
+      |     ~~~~~~~~^~~~~~
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/IntMap.h:48:58:   required from 'void Minisat::IntMap<K, V, MkIndex>::reserve(K) [with K = int; V = Minisat::vec<unsigned int>; MkIndex = Minisat::MkIndexDefault<int>]'
+   48 |         void     reserve(K key)              { map.growTo(index(key)+1); }
+      |                                                ~~~~~~~~~~^~~~~~~~~~~~~~
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/SolverTypes.h:338:49:   required from 'void Minisat::OccLists<K, Vec, Deleted, MkIndex>::init(const K&) [with K = int; Vec = Minisat::vec<unsigned int>; Deleted = Minisat::SimpSolver::ClauseDeleted; MkIndex = Minisat::MkIndexDefault<int>]'
+  338 |     void  init      (const K& idx){ occs.reserve(idx); occs[idx].clear(); dirty.reserve(idx, 0); }
+      |                                     ~~~~~~~~~~~~^~~~~
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/SimpSolver.cc:92:26:   required from here
+   92 |         occurs    .init  (v);
+      |         ~~~~~~~~~~~~~~~~~^~~
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/Vec.h:107:35: warning: 'void* realloc(void*, size_t)' moving an object of non-trivially copyable type 'class Minisat::vec<unsigned int>'; use 'new' and 'delete' instead [-Wclass-memaccess]
+  107 |             ((data = (T*)::realloc(data, (cap += add) * sizeof(T))) == NULL)
+      |                          ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/Vec.h:39:7: note: 'class Minisat::vec<unsigned int>' declared here
+   39 | class vec {
+      |       ^~~
+[354/680] Building CXX object libs/minisat/CMakeFiles/yosys_minisat.dir/Solver.cc.obj
+In file included from D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/Alg.h:24,
+                 from D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/Solver.cc:29:
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/Vec.h: In instantiation of 'void Minisat::vec<T, _Size>::capacity(Size) [with T = Minisat::vec<Minisat::Solver::Watcher>; _Size = int; Size = int]':
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/Vec.h:125:13:   required from 'void Minisat::vec<T, _Size>::growTo(Size) [with T = Minisat::vec<Minisat::Solver::Watcher>; _Size = int; Size = int]'
+  125 |     capacity(size);
+      |     ~~~~~~~~^~~~~~
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/IntMap.h:48:58:   required from 'void Minisat::IntMap<K, V, MkIndex>::reserve(K) [with K = Minisat::Lit; V = Minisat::vec<Minisat::Solver::Watcher>; MkIndex = Minisat::MkIndexLit]'
+   48 |         void     reserve(K key)              { map.growTo(index(key)+1); }
+      |                                                ~~~~~~~~~~^~~~~~~~~~~~~~
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/SolverTypes.h:338:49:   required from 'void Minisat::OccLists<K, Vec, Deleted, MkIndex>::init(const K&) [with K = Minisat::Lit; Vec = Minisat::vec<Minisat::Solver::Watcher>; Deleted = Minisat::Solver::WatcherDeleted; MkIndex = Minisat::MkIndexLit]'
+  338 |     void  init      (const K& idx){ occs.reserve(idx); occs[idx].clear(); dirty.reserve(idx, 0); }
+      |                                     ~~~~~~~~~~~~^~~~~
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/Solver.cc:134:19:   required from here
+  134 |     watches  .init(mkLit(v, false));
+      |     ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/Vec.h:107:35: warning: 'void* realloc(void*, size_t)' moving an object of non-trivially copyable type 'class Minisat::vec<Minisat::Solver::Watcher>'; use 'new' and 'delete' instead [-Wclass-memaccess]
+  107 |             ((data = (T*)::realloc(data, (cap += add) * sizeof(T))) == NULL)
+      |                          ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/libs/minisat/Vec.h:39:7: note: 'class Minisat::vec<Minisat::Solver::Watcher>' declared here
+   39 | class vec {
+      |       ^~~
+[355/680] Building CXX object libs/minisat/CMakeFiles/yosys_minisat.dir/System.cc.obj
+[356/680] Building CXX object libs/sha1/CMakeFiles/yosys_sha1.dir/sha1.cpp.obj
+[357/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/binding.cc.obj
+[358/680] Building CXX object libs/subcircuit/CMakeFiles/yosys_subcircuit.dir/subcircuit.cc.obj
+[359/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/calc.cc.obj
+[360/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/cellaigs.cc.obj
+[361/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/celledges.cc.obj
+[362/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/compressor_tree.cc.obj
+[363/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/cost.cc.obj
+[364/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/drivertools.cc.obj
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/kernel/drivertools.cc: In member function 'bool Yosys::DriveChunkMultiple::try_append(const Yosys::DriveBitMultiple&)':
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/kernel/drivertools.cc:263:79: warning: 'constant' may be used uninitialized [-Wmaybe-uninitialized]
+  263 |                                 single.constant().append(RTLIL::Const(constant));
+      |                                                                               ^
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/kernel/drivertools.cc:252:15: note: 'constant' was declared here
+  252 |         State constant;
+      |               ^~~~~~~~
+[365/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/ff.cc.obj
+[366/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/fmt.cc.obj
+[367/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/ffmerge.cc.obj
+[368/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/gzip.cc.obj
+[369/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/io.cc.obj
+[370/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/functional.cc.obj
+[371/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/json.cc.obj
+[372/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/log.cc.obj
+[373/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/log_help.cc.obj
+[374/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/qcsat.cc.obj
+[375/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/mem.cc.obj
+[376/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/rtlil_bufnorm.cc.obj
+[377/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/register.cc.obj
+[378/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/satgen.cc.obj
+[379/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/rtlil.cc.obj
+[380/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/scopeinfo.cc.obj
+[381/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/sexpr.cc.obj
+[382/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/tclapi.cc.obj
+[383/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/version.cc.obj
+[384/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/threading.cc.obj
+[385/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/yw.cc.obj
+[386/680] Building CXX object kernel/CMakeFiles/yosys_kernel.dir/yosys.cc.obj
+[387/680] Building CXX object kernel/CMakeFiles/yosys_fstdata.dir/fstdata.cc.obj
+[388/680] Building CXX object kernel/CMakeFiles/yosys_driver.dir/driver.cc.obj
+[389/680] Building CXX object passes/cmds/CMakeFiles/yosys_exec.dir/exec.cc.obj
+[390/680] Building CXX object passes/cmds/CMakeFiles/yosys_add.dir/add.cc.obj
+[391/680] Building CXX object passes/cmds/CMakeFiles/yosys_delete.dir/delete.cc.obj
+[392/680] Building CXX object passes/cmds/CMakeFiles/yosys_design.dir/design.cc.obj
+[393/680] Building CXX object passes/cmds/CMakeFiles/yosys_design_equal.dir/design_equal.cc.obj
+[394/680] Building CXX object passes/cmds/CMakeFiles/yosys_select.dir/select.cc.obj
+[395/680] Building CXX object passes/cmds/CMakeFiles/yosys_show.dir/show.cc.obj
+[396/680] Building CXX object passes/cmds/CMakeFiles/yosys_rename.dir/rename.cc.obj
+[397/680] Building CXX object passes/cmds/CMakeFiles/yosys_viz.dir/viz.cc.obj
+[398/680] Building CXX object passes/cmds/CMakeFiles/yosys_autoname.dir/autoname.cc.obj
+[399/680] Building CXX object passes/cmds/CMakeFiles/yosys_connect.dir/connect.cc.obj
+[400/680] Building CXX object passes/cmds/CMakeFiles/yosys_scatter.dir/scatter.cc.obj
+[401/680] Building CXX object passes/cmds/CMakeFiles/yosys_setundef.dir/setundef.cc.obj
+[402/680] Building CXX object passes/cmds/CMakeFiles/yosys_splitnets.dir/splitnets.cc.obj
+[403/680] Building CXX object passes/cmds/CMakeFiles/yosys_splitcells.dir/splitcells.cc.obj
+[404/680] Building CXX object passes/cmds/CMakeFiles/yosys_stat.dir/stat.cc.obj
+[405/680] Building CXX object passes/cmds/CMakeFiles/yosys_internal_stats.dir/internal_stats.cc.obj
+[406/680] Building CXX object passes/cmds/CMakeFiles/yosys_copy.dir/copy.cc.obj
+[407/680] Building CXX object passes/cmds/CMakeFiles/yosys_setattr.dir/setattr.cc.obj
+[408/680] Building CXX object passes/cmds/CMakeFiles/yosys_splice.dir/splice.cc.obj
+[409/680] Building CXX object passes/cmds/CMakeFiles/yosys_scc.dir/scc.cc.obj
+[410/680] Building CXX object passes/cmds/CMakeFiles/yosys_glift.dir/glift.cc.obj
+[411/680] Building CXX object passes/cmds/CMakeFiles/yosys_torder.dir/torder.cc.obj
+[412/680] Building CXX object passes/cmds/CMakeFiles/yosys_logcmd.dir/logcmd.cc.obj
+[413/680] Building CXX object passes/cmds/CMakeFiles/yosys_tee.dir/tee.cc.obj
+[414/680] Building CXX object passes/cmds/CMakeFiles/yosys_write_file.dir/write_file.cc.obj
+[415/680] Building CXX object passes/cmds/CMakeFiles/yosys_connwrappers.dir/connwrappers.cc.obj
+[416/680] Building CXX object passes/cmds/CMakeFiles/yosys_trace.dir/trace.cc.obj
+[417/680] Building CXX object passes/cmds/CMakeFiles/yosys_plugin.dir/plugin.cc.obj
+[418/680] Building CXX object passes/cmds/CMakeFiles/yosys_edgetypes.dir/edgetypes.cc.obj
+[419/680] Building CXX object passes/cmds/CMakeFiles/yosys_check.dir/check.cc.obj
+[420/680] Building CXX object passes/cmds/CMakeFiles/yosys_portlist.dir/portlist.cc.obj
+[421/680] Building CXX object passes/cmds/CMakeFiles/yosys_chformal.dir/chformal.cc.obj
+[422/680] Building CXX object passes/cmds/CMakeFiles/yosys_chtype.dir/chtype.cc.obj
+[423/680] Building CXX object passes/cmds/CMakeFiles/yosys_blackbox.dir/blackbox.cc.obj
+[424/680] Building CXX object passes/cmds/CMakeFiles/yosys_linux_perf.dir/linux_perf.cc.obj
+[425/680] Building CXX object passes/cmds/CMakeFiles/yosys_ltp.dir/ltp.cc.obj
+[426/680] Building CXX object passes/cmds/CMakeFiles/yosys_bugpoint.dir/bugpoint.cc.obj
+[427/680] Building CXX object passes/cmds/CMakeFiles/yosys_scratchpad.dir/scratchpad.cc.obj
+[428/680] Building CXX object passes/cmds/CMakeFiles/yosys_printattrs.dir/printattrs.cc.obj
+[429/680] Building CXX object passes/cmds/CMakeFiles/yosys_logger.dir/logger.cc.obj
+[430/680] Building CXX object passes/cmds/CMakeFiles/yosys_sta.dir/sta.cc.obj
+[431/680] Building CXX object passes/cmds/CMakeFiles/yosys_clean_zerowidth.dir/clean_zerowidth.cc.obj
+[432/680] Building CXX object passes/cmds/CMakeFiles/yosys_xprop.dir/xprop.cc.obj
+[433/680] Building CXX object passes/cmds/CMakeFiles/yosys_dft_tag.dir/dft_tag.cc.obj
+[434/680] Building CXX object passes/cmds/CMakeFiles/yosys_box_derive.dir/box_derive.cc.obj
+[435/680] Building CXX object passes/cmds/CMakeFiles/yosys_future.dir/future.cc.obj
+[436/680] Building CXX object passes/cmds/CMakeFiles/yosys_example_dt.dir/example_dt.cc.obj
+[437/680] Building CXX object passes/cmds/CMakeFiles/yosys_portarcs.dir/portarcs.cc.obj
+[438/680] Building CXX object passes/cmds/CMakeFiles/yosys_setenv.dir/setenv.cc.obj
+[439/680] Building CXX object passes/cmds/CMakeFiles/yosys_wrapcell.dir/wrapcell.cc.obj
+[440/680] Building CXX object passes/cmds/CMakeFiles/yosys_test_select.dir/test_select.cc.obj
+[441/680] Building CXX object passes/cmds/CMakeFiles/yosys_abstract.dir/abstract.cc.obj
+[442/680] Building CXX object passes/cmds/CMakeFiles/yosys_timeest.dir/timeest.cc.obj
+[443/680] Building CXX object passes/cmds/CMakeFiles/yosys_linecoverage.dir/linecoverage.cc.obj
+[444/680] Building CXX object passes/cmds/CMakeFiles/yosys_sort.dir/sort.cc.obj
+[445/680] Building CXX object passes/cmds/CMakeFiles/yosys_icell_liberty.dir/icell_liberty.cc.obj
+[446/680] Building CXX object passes/cmds/sdc/CMakeFiles/yosys_sdc.dir/sdc.cc.obj
+[447/680] Building CXX object passes/cmds/CMakeFiles/yosys_symfpu.dir/symfpu.cc.obj
+[448/680] Building CXX object passes/equiv/CMakeFiles/yosys_equiv_make.dir/equiv_make.cc.obj
+[449/680] Building CXX object passes/equiv/CMakeFiles/yosys_equiv_miter.dir/equiv_miter.cc.obj
+[450/680] Building CXX object passes/equiv/CMakeFiles/yosys_equiv_simple.dir/equiv_simple.cc.obj
+[451/680] Building CXX object passes/equiv/CMakeFiles/yosys_equiv_status.dir/equiv_status.cc.obj
+[452/680] Building CXX object passes/equiv/CMakeFiles/yosys_equiv_remove.dir/equiv_remove.cc.obj
+[453/680] Building CXX object passes/equiv/CMakeFiles/yosys_equiv_add.dir/equiv_add.cc.obj
+[454/680] Building CXX object passes/equiv/CMakeFiles/yosys_equiv_struct.dir/equiv_struct.cc.obj
+[455/680] Building CXX object passes/equiv/CMakeFiles/yosys_equiv_induct.dir/equiv_induct.cc.obj
+[456/680] Building CXX object passes/equiv/CMakeFiles/yosys_equiv_purge.dir/equiv_purge.cc.obj
+[457/680] Building CXX object passes/equiv/CMakeFiles/yosys_equiv_mark.dir/equiv_mark.cc.obj
+[458/680] Building CXX object passes/equiv/CMakeFiles/yosys_equiv_opt.dir/equiv_opt.cc.obj
+[459/680] Building CXX object passes/fsm/CMakeFiles/yosys_fsm_detect.dir/fsm_detect.cc.obj
+[460/680] Building CXX object passes/fsm/CMakeFiles/yosys_fsm_extract.dir/fsm_extract.cc.obj
+[461/680] Building CXX object passes/fsm/CMakeFiles/yosys_fsm_opt.dir/fsm_opt.cc.obj
+[462/680] Building CXX object passes/fsm/CMakeFiles/yosys_fsm_expand.dir/fsm_expand.cc.obj
+[463/680] Building CXX object passes/fsm/CMakeFiles/yosys_fsm_recode.dir/fsm_recode.cc.obj
+[464/680] Building CXX object passes/fsm/CMakeFiles/yosys_fsm_info.dir/fsm_info.cc.obj
+[465/680] Building CXX object passes/fsm/CMakeFiles/yosys_fsm_export.dir/fsm_export.cc.obj
+[466/680] Building CXX object passes/fsm/CMakeFiles/yosys_fsm.dir/fsm.cc.obj
+[467/680] Copying share/include/passes/fsm/fsmdata.h
+[468/680] Building CXX object passes/fsm/CMakeFiles/yosys_fsm_map.dir/fsm_map.cc.obj
+[469/680] Building CXX object passes/hierarchy/CMakeFiles/yosys_flatten.dir/flatten.cc.obj
+[470/680] Building CXX object passes/hierarchy/CMakeFiles/yosys_hierarchy.dir/hierarchy.cc.obj
+[471/680] Building CXX object passes/hierarchy/CMakeFiles/yosys_keep_hierarchy.dir/keep_hierarchy.cc.obj
+[472/680] Building CXX object passes/hierarchy/CMakeFiles/yosys_uniquify.dir/uniquify.cc.obj
+[473/680] Building CXX object passes/hierarchy/CMakeFiles/yosys_submod.dir/submod.cc.obj
+[474/680] Building CXX object passes/memory/CMakeFiles/yosys_memlib.dir/memlib.cc.obj
+[475/680] Building CXX object passes/memory/CMakeFiles/yosys_memory_dff.dir/memory_dff.cc.obj
+[476/680] Building CXX object passes/memory/CMakeFiles/yosys_memory_collect.dir/memory_collect.cc.obj
+[477/680] Building CXX object passes/memory/CMakeFiles/yosys_memory_share.dir/memory_share.cc.obj
+[478/680] Building CXX object passes/memory/CMakeFiles/yosys_memory_unpack.dir/memory_unpack.cc.obj
+[479/680] Building CXX object passes/memory/CMakeFiles/yosys_memory_bram.dir/memory_bram.cc.obj
+[480/680] Building CXX object passes/memory/CMakeFiles/yosys_memory_map.dir/memory_map.cc.obj
+[481/680] Building CXX object passes/memory/CMakeFiles/yosys_memory_memx.dir/memory_memx.cc.obj
+[482/680] Building CXX object passes/memory/CMakeFiles/yosys_memory_nordff.dir/memory_nordff.cc.obj
+[483/680] Building CXX object passes/memory/CMakeFiles/yosys_memory_narrow.dir/memory_narrow.cc.obj
+[484/680] Building CXX object passes/memory/CMakeFiles/yosys_memory_bmux2rom.dir/memory_bmux2rom.cc.obj
+[485/680] Building CXX object passes/memory/CMakeFiles/yosys_memory_libmap.dir/memory_libmap.cc.obj
+[486/680] Building CXX object passes/memory/CMakeFiles/yosys_memory.dir/memory.cc.obj
+[487/680] Building CXX object passes/opt/CMakeFiles/yosys_opt_mem_widen.dir/opt_mem_widen.cc.obj
+[488/680] Building CXX object passes/opt/CMakeFiles/yosys_opt_merge.dir/opt_merge.cc.obj
+[489/680] Building CXX object passes/opt/CMakeFiles/yosys_opt_muxtree.dir/opt_muxtree.cc.obj
+[490/680] Building CXX object passes/opt/CMakeFiles/yosys_opt_reduce.dir/opt_reduce.cc.obj
+[491/680] Building CXX object passes/opt/CMakeFiles/yosys_opt_share.dir/opt_share.cc.obj
+[492/680] Building CXX object passes/opt/CMakeFiles/yosys_opt_hier.dir/opt_hier.cc.obj
+[493/680] Building CXX object passes/opt/CMakeFiles/yosys_opt_expr.dir/opt_expr.cc.obj
+[494/680] Building CXX object passes/opt/CMakeFiles/yosys_opt.dir/opt.cc.obj
+[495/680] Building CXX object passes/opt/CMakeFiles/yosys_opt_mem.dir/opt_mem.cc.obj
+[496/680] Building CXX object passes/opt/CMakeFiles/yosys_opt_mem_feedback.dir/opt_mem_feedback.cc.obj
+[497/680] Building CXX object passes/opt/CMakeFiles/yosys_opt_mem_priority.dir/opt_mem_priority.cc.obj
+[498/680] Building CXX object passes/opt/CMakeFiles/yosys_wreduce.dir/wreduce.cc.obj
+[499/680] Building CXX object passes/opt/CMakeFiles/yosys_share.dir/share.cc.obj
+[500/680] Building CXX object passes/opt/CMakeFiles/yosys_rmports.dir/rmports.cc.obj
+[501/680] Building CXX object passes/opt/CMakeFiles/yosys_opt_demorgan.dir/opt_demorgan.cc.obj
+[502/680] Building CXX object passes/opt/CMakeFiles/yosys_opt_lut_ins.dir/opt_lut_ins.cc.obj
+[503/680] Building CXX object passes/opt/CMakeFiles/yosys_opt_lut.dir/opt_lut.cc.obj
+[504/680] Building CXX object passes/opt/CMakeFiles/yosys_opt_ffinv.dir/opt_ffinv.cc.obj
+[505/680] Building CXX object passes/opt/CMakeFiles/yosys_pmux2shiftx.dir/pmux2shiftx.cc.obj
+[506/680] Building CXX object passes/opt/CMakeFiles/yosys_muxpack.dir/muxpack.cc.obj
+[507/680] Building CXX object passes/opt/CMakeFiles/yosys_opt_balance_tree.dir/opt_balance_tree.cc.obj
+[508/680] Building CXX object passes/opt/CMakeFiles/yosys_peepopt.dir/peepopt.cc.obj
+[509/680] Building CXX object passes/opt/clean/CMakeFiles/yosys_opt_clean.dir/cells_temp.cc.obj
+[510/680] Building CXX object passes/opt/clean/CMakeFiles/yosys_opt_clean.dir/cells_all.cc.obj
+[511/680] Building CXX object passes/opt/clean/CMakeFiles/yosys_opt_clean.dir/inits.cc.obj
+[512/680] Building CXX object passes/opt/clean/CMakeFiles/yosys_opt_clean.dir/wires.cc.obj
+[513/680] Building CXX object passes/opt/clean/CMakeFiles/yosys_opt_clean.dir/opt_clean.cc.obj
+[514/680] Building CXX object passes/opt/dff/CMakeFiles/yosys_opt_dff.dir/opt_dff.cc.obj
+[515/680] Building CXX object passes/opt/dff/CMakeFiles/yosys_opt_dff.dir/simple.cc.obj
+[516/680] Building CXX object passes/opt/dff/CMakeFiles/yosys_opt_dff.dir/constbits.cc.obj
+[517/680] Building CXX object passes/opt/dff/CMakeFiles/yosys_opt_dff.dir/eqbits.cc.obj
+[518/680] Building CXX object passes/pmgen/CMakeFiles/yosys_test_pmgen.dir/test_pmgen.cc.obj
+[519/680] Building CXX object passes/proc/CMakeFiles/yosys_proc_prune.dir/proc_prune.cc.obj
+[520/680] Building CXX object passes/proc/CMakeFiles/yosys_proc_clean.dir/proc_clean.cc.obj
+[521/680] Building CXX object passes/proc/CMakeFiles/yosys_proc_rmdead.dir/proc_rmdead.cc.obj
+[522/680] Building CXX object passes/proc/CMakeFiles/yosys_proc_init.dir/proc_init.cc.obj
+[523/680] Building CXX object passes/proc/CMakeFiles/yosys_proc_arst.dir/proc_arst.cc.obj
+[524/680] Building CXX object passes/proc/CMakeFiles/yosys_proc_rom.dir/proc_rom.cc.obj
+[525/680] Building CXX object passes/proc/CMakeFiles/yosys_proc_mux.dir/proc_mux.cc.obj
+[526/680] Building CXX object passes/proc/CMakeFiles/yosys_proc_dlatch.dir/proc_dlatch.cc.obj
+[527/680] Building CXX object passes/proc/CMakeFiles/yosys_proc_dff.dir/proc_dff.cc.obj
+[528/680] Building CXX object passes/proc/CMakeFiles/yosys_proc_memwr.dir/proc_memwr.cc.obj
+[529/680] Building CXX object passes/proc/CMakeFiles/yosys_proc.dir/proc.cc.obj
+[530/680] Building CXX object passes/sat/CMakeFiles/yosys_freduce.dir/freduce.cc.obj
+[531/680] Building CXX object passes/sat/CMakeFiles/yosys_sat.dir/sat.cc.obj
+[532/680] Building CXX object passes/sat/CMakeFiles/yosys_eval.dir/eval.cc.obj
+[533/680] Building CXX object passes/sat/CMakeFiles/yosys_miter.dir/miter.cc.obj
+[534/680] Building CXX object passes/sat/CMakeFiles/yosys_sim.dir/sim.cc.obj
+[535/680] Building CXX object passes/sat/CMakeFiles/yosys_assertpmux.dir/assertpmux.cc.obj
+[536/680] Building CXX object passes/sat/CMakeFiles/yosys_expose.dir/expose.cc.obj
+[537/680] Building CXX object passes/sat/CMakeFiles/yosys_clk2fflogic.dir/clk2fflogic.cc.obj
+[538/680] Building CXX object passes/sat/CMakeFiles/yosys_async2sync.dir/async2sync.cc.obj
+[539/680] Building CXX object passes/sat/CMakeFiles/yosys_supercover.dir/supercover.cc.obj
+[540/680] Building CXX object passes/sat/CMakeFiles/yosys_formalff.dir/formalff.cc.obj
+[541/680] Building CXX object passes/sat/CMakeFiles/yosys_fmcombine.dir/fmcombine.cc.obj
+[542/680] Building CXX object passes/sat/CMakeFiles/yosys_mutate.dir/mutate.cc.obj
+[543/680] Building CXX object passes/sat/CMakeFiles/yosys_cutpoint.dir/cutpoint.cc.obj
+[544/680] Building CXX object passes/sat/CMakeFiles/yosys_fminit.dir/fminit.cc.obj
+[545/680] Building CXX object passes/sat/CMakeFiles/yosys_recover_names.dir/recover_names.cc.obj
+[546/680] Building CXX object passes/sat/CMakeFiles/yosys_qbfsat.dir/qbfsat.cc.obj
+[547/680] Building CXX object passes/sat/CMakeFiles/yosys_synthprop.dir/synthprop.cc.obj
+[548/680] Building CXX object passes/techmap/CMakeFiles/yosys_simplemap.dir/simplemap.cc.obj
+[549/680] Building CXX object passes/techmap/CMakeFiles/yosys_techmap.dir/techmap.cc.obj
+[550/680] Building CXX object passes/techmap/CMakeFiles/yosys_dfflibmap.dir/dfflibmap.cc.obj
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/passes/techmap/dfflibmap.cc: In function 'void {anonymous}::find_cell(std::vector<const Yosys::LibertyAst*>, Yosys::RTLIL::IdString, FfSpec, std::vector<std::__cxx11::basic_string<char> >&)':
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/passes/techmap/dfflibmap.cc:387:198: warning: 'cell_enable_pol' may be used uninitialized [-Wmaybe-uninitialized]
+  387 |                         if (!parse_next_state(cell, storage->find("next_state"), cell_data_pin, cell_data_pol, cell_enable_pin, cell_enable_pol) || (spec.dff_has_enable && (cell_enable_pin.empty() || cell_enable_pol != spec.dff_enapol)))
+      |                                                                                                                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/fpga-win-native-20261103/minsize-fixed-build/sources/baseline/passes/techmap/dfflibmap.cc:379:94: note: 'cell_enable_pol' was declared here
+  379 |                 bool cell_ctrl_pol, cell_rst_pol, cell_set_pol, cell_clr_pol, cell_data_pol, cell_enable_pol;
+      |                                                                                              ^~~~~~~~~~~~~~~
+[551/680] Building CXX object passes/techmap/CMakeFiles/yosys_maccmap.dir/maccmap.cc.obj
+[552/680] Building CXX object passes/techmap/CMakeFiles/yosys_libcache.dir/libcache.cc.obj
+[553/680] Building CXX object passes/techmap/CMakeFiles/yosys_booth.dir/booth.cc.obj
+[554/680] Building CXX object passes/techmap/CMakeFiles/yosys_abc9_exe.dir/abc9_exe.cc.obj
+[555/680] Building CXX object passes/techmap/CMakeFiles/yosys_abc.dir/abc.cc.obj
+[556/680] Building CXX object passes/techmap/CMakeFiles/yosys_abc9_ops.dir/abc9_ops.cc.obj
+[557/680] Building CXX object passes/techmap/CMakeFiles/yosys_abc_ops_reintegrate.dir/abc_ops_reintegrate.cc.obj
+[558/680] Building CXX object passes/techmap/CMakeFiles/yosys_abc9.dir/abc9.cc.obj
+[559/680] Building CXX object passes/techmap/CMakeFiles/yosys_abc_new.dir/abc_new.cc.obj
+[560/680] Building CXX object passes/techmap/CMakeFiles/yosys_iopadmap.dir/iopadmap.cc.obj
+[561/680] Building CXX object passes/techmap/CMakeFiles/yosys_clkbufmap.dir/clkbufmap.cc.obj
+[562/680] Building CXX object passes/techmap/CMakeFiles/yosys_hilomap.dir/hilomap.cc.obj
+[563/680] Building CXX object passes/techmap/CMakeFiles/yosys_extract.dir/extract.cc.obj
+[564/680] Building CXX object passes/techmap/CMakeFiles/yosys_extract_fa.dir/extract_fa.cc.obj
+[565/680] Building CXX object passes/techmap/CMakeFiles/yosys_extract_counter.dir/extract_counter.cc.obj
+[566/680] Building CXX object passes/techmap/CMakeFiles/yosys_extract_reduce.dir/extract_reduce.cc.obj
+[567/680] Building CXX object passes/techmap/CMakeFiles/yosys_alumacc.dir/alumacc.cc.obj
+[568/680] Building CXX object passes/techmap/CMakeFiles/yosys_dffinit.dir/dffinit.cc.obj
+[569/680] Building CXX object passes/techmap/CMakeFiles/yosys_pmuxtree.dir/pmuxtree.cc.obj
+[570/680] Building CXX object passes/techmap/CMakeFiles/yosys_bmuxmap.dir/bmuxmap.cc.obj
+[571/680] Building CXX object passes/techmap/CMakeFiles/yosys_demuxmap.dir/demuxmap.cc.obj
+[572/680] Building CXX object passes/techmap/CMakeFiles/yosys_bwmuxmap.dir/bwmuxmap.cc.obj
+[573/680] Building CXX object passes/techmap/CMakeFiles/yosys_aigmap.dir/aigmap.cc.obj
+[574/680] Building CXX object passes/techmap/CMakeFiles/yosys_muxcover.dir/muxcover.cc.obj
+[575/680] Building CXX object passes/techmap/CMakeFiles/yosys_tribuf.dir/tribuf.cc.obj
+[576/680] Building CXX object passes/techmap/CMakeFiles/yosys_lut2mux.dir/lut2mux.cc.obj
+[577/680] Building CXX object passes/techmap/CMakeFiles/yosys_lut2bmux.dir/lut2bmux.cc.obj
+[578/680] Building CXX object passes/techmap/CMakeFiles/yosys_shregmap.dir/shregmap.cc.obj
+[579/680] Building CXX object passes/techmap/CMakeFiles/yosys_deminout.dir/deminout.cc.obj
+[580/680] Building CXX object passes/techmap/CMakeFiles/yosys_insbuf.dir/insbuf.cc.obj
+[581/680] Building CXX object passes/techmap/CMakeFiles/yosys_bufnorm.dir/bufnorm.cc.obj
+[582/680] Building CXX object passes/techmap/CMakeFiles/yosys_attrmvcp.dir/attrmvcp.cc.obj
+[583/680] Building CXX object passes/techmap/CMakeFiles/yosys_attrmap.dir/attrmap.cc.obj
+[584/680] Building CXX object passes/techmap/CMakeFiles/yosys_zinit.dir/zinit.cc.obj
+[585/680] Building CXX object passes/techmap/CMakeFiles/yosys_dfflegalize.dir/dfflegalize.cc.obj
+[586/680] Building CXX object passes/techmap/CMakeFiles/yosys_dffunmap.dir/dffunmap.cc.obj
+[587/680] Building CXX object passes/techmap/CMakeFiles/yosys_extractinv.dir/extractinv.cc.obj
+[588/680] Building CXX object passes/techmap/CMakeFiles/yosys_cellmatch.dir/cellmatch.cc.obj
+[589/680] Building CXX object passes/techmap/CMakeFiles/yosys_clockgate.dir/clockgate.cc.obj
+[590/680] Building CXX object passes/techmap/CMakeFiles/yosys_constmap.dir/constmap.cc.obj
+[591/680] Building CXX object passes/techmap/CMakeFiles/yosys_arith_tree.dir/arith_tree.cc.obj
+[592/680] Building CXX object passes/techmap/CMakeFiles/yosys_libparse.dir/libparse.cc.obj
+[593/680] Building CXX object passes/tests/CMakeFiles/yosys_test_autotb.dir/test_autotb.cc.obj
+[594/680] Building CXX object passes/tests/CMakeFiles/yosys_test_cell.dir/test_cell.cc.obj
+[595/680] Building CXX object passes/tests/CMakeFiles/yosys_test_abcloop.dir/test_abcloop.cc.obj
+[596/680] Building CXX object passes/tests/CMakeFiles/yosys_test_kogge_stone.dir/test_kogge_stone.cc.obj
+[597/680] Building CXX object passes/tests/CMakeFiles/yosys_raise_error.dir/raise_error.cc.obj
+[598/680] Building CXX object frontends/aiger2/CMakeFiles/yosys_read_xaiger2.dir/xaiger.cc.obj
+[599/680] Building CXX object frontends/aiger/CMakeFiles/yosys_read_aiger.dir/aigerparse.cc.obj
+[600/680] Building CXX object frontends/ast/CMakeFiles/yosys_ast.dir/ast_binding.cc.obj
+[601/680] Building CXX object frontends/ast/CMakeFiles/yosys_ast.dir/ast.cc.obj
+[602/680] Building CXX object frontends/ast/CMakeFiles/yosys_ast.dir/dpicall.cc.obj
+[603/680] Building CXX object frontends/ast/CMakeFiles/yosys_ast.dir/genrtlil.cc.obj
+[604/680] Building CXX object frontends/blif/CMakeFiles/yosys_read_blif.dir/blifparse.cc.obj
+[605/680] Building CXX object frontends/ast/CMakeFiles/yosys_ast.dir/simplify.cc.obj
+[606/680] Building CXX object frontends/json/CMakeFiles/yosys_read_json.dir/jsonparse.cc.obj
+[607/680] Building CXX object frontends/liberty/CMakeFiles/yosys_read_liberty.dir/liberty.cc.obj
+[608/680] Building CXX object frontends/rpc/CMakeFiles/yosys_read_rpc.dir/rpc_frontend.cc.obj
+[609/680] Building CXX object frontends/rtlil/CMakeFiles/yosys_read_rtlil.dir/rtlil_frontend.cc.obj
+[610/680] Building CXX object frontends/verific/CMakeFiles/yosys_read_verific.dir/verific.cc.obj
+[611/680] Building CXX object frontends/verilog/CMakeFiles/yosys_read_verilog.dir/const2ast.cc.obj
+[612/680] Building CXX object frontends/verilog/CMakeFiles/yosys_read_verilog.dir/preproc.cc.obj
+[613/680] Building CXX object frontends/verilog/CMakeFiles/yosys_read_verilog.dir/verilog_error.cc.obj
+[614/680] Building CXX object frontends/verilog/CMakeFiles/yosys_read_verilog.dir/verilog_frontend.cc.obj
+[615/680] Building CXX object frontends/verilog/CMakeFiles/yosys_read_verilog.dir/verilog_lexer.cc.obj
+[616/680] Building CXX object frontends/verilog/CMakeFiles/yosys_read_verilog.dir/verilog_parser.tab.cc.obj
+[617/680] Building CXX object backends/aiger/CMakeFiles/yosys_write_aiger.dir/aiger.cc.obj
+[618/680] Building CXX object backends/aiger/CMakeFiles/yosys_write_xaiger.dir/xaiger.cc.obj
+[619/680] Building CXX object backends/aiger2/CMakeFiles/yosys_write_aiger2.dir/aiger.cc.obj
+[620/680] Building CXX object backends/blif/CMakeFiles/yosys_write_blif.dir/blif.cc.obj
+[621/680] Building CXX object backends/btor/CMakeFiles/yosys_write_btor.dir/btor.cc.obj
+[622/680] Building CXX object backends/edif/CMakeFiles/yosys_write_edif.dir/edif.cc.obj
+[623/680] Building CXX object backends/cxxrtl/CMakeFiles/yosys_write_cxxrtl.dir/cxxrtl_backend.cc.obj
+[624/680] Building CXX object backends/firrtl/CMakeFiles/yosys_write_firrtl.dir/firrtl.cc.obj
+[625/680] Building CXX object backends/functional/CMakeFiles/yosys_write_functional_cxx.dir/cxx.cc.obj
+[626/680] Building CXX object backends/functional/CMakeFiles/yosys_write_functional_smt2.dir/smtlib.cc.obj
+[627/680] Building CXX object backends/functional/CMakeFiles/yosys_write_functional_rosette.dir/smtlib_rosette.cc.obj
+[628/680] Building CXX object backends/functional/CMakeFiles/yosys_test_generic.dir/test_generic.cc.obj
+[629/680] Building CXX object backends/intersynth/CMakeFiles/yosys_write_intersynth.dir/intersynth.cc.obj
+[630/680] Building CXX object backends/jny/CMakeFiles/yosys_write_jny.dir/jny.cc.obj
+[631/680] Building CXX object backends/json/CMakeFiles/yosys_write_json.dir/json.cc.obj
+[632/680] Building CXX object backends/rtlil/CMakeFiles/yosys_write_rtlil.dir/rtlil_backend.cc.obj
+[633/680] Building CXX object backends/simplec/CMakeFiles/yosys_write_simplec.dir/simplec.cc.obj
+[634/680] Building CXX object backends/smt2/CMakeFiles/yosys_write_smt2.dir/smt2.cc.obj
+[635/680] Building CXX object backends/smv/CMakeFiles/yosys_write_smv.dir/smv.cc.obj
+[636/680] Building CXX object backends/spice/CMakeFiles/yosys_write_spice.dir/spice.cc.obj
+[637/680] Building CXX object backends/table/CMakeFiles/yosys_write_table.dir/table.cc.obj
+[638/680] Building CXX object techlibs/achronix/CMakeFiles/yosys_synth_achronix.dir/synth_achronix.cc.obj
+[639/680] Building CXX object backends/verilog/CMakeFiles/yosys_write_verilog.dir/verilog_backend.cc.obj
+[640/680] Building CXX object techlibs/analogdevices/CMakeFiles/yosys_synth_analogdevices.dir/synth_analogdevices.cc.obj
+[641/680] Building CXX object techlibs/anlogic/CMakeFiles/yosys_anlogic_eqn.dir/anlogic_eqn.cc.obj
+[642/680] Building CXX object techlibs/anlogic/CMakeFiles/yosys_anlogic_fixcarry.dir/anlogic_fixcarry.cc.obj
+[643/680] Building CXX object techlibs/anlogic/CMakeFiles/yosys_synth_anlogic.dir/synth_anlogic.cc.obj
+[644/680] Building CXX object techlibs/common/CMakeFiles/yosys_prep.dir/prep.cc.obj
+[645/680] Building CXX object techlibs/common/CMakeFiles/yosys_opensta.dir/opensta.cc.obj
+[646/680] Building CXX object techlibs/common/CMakeFiles/yosys_sdc_expand.dir/sdc_expand.cc.obj
+[647/680] Building CXX object techlibs/common/CMakeFiles/yosys_synth.dir/synth.cc.obj
+[648/680] Building CXX object techlibs/easic/CMakeFiles/yosys_synth_easic.dir/synth_easic.cc.obj
+[649/680] Building CXX object techlibs/efinix/CMakeFiles/yosys_efinix_fixcarry.dir/efinix_fixcarry.cc.obj
+[650/680] Building CXX object techlibs/efinix/CMakeFiles/yosys_synth_efinix.dir/synth_efinix.cc.obj
+[651/680] Building CXX object techlibs/fabulous/CMakeFiles/yosys_synth_fabulous.dir/synth_fabulous.cc.obj
+[652/680] Building CXX object techlibs/gatemate/CMakeFiles/yosys_gatemate_foldinv.dir/gatemate_foldinv.cc.obj
+[653/680] Building CXX object techlibs/gatemate/CMakeFiles/yosys_synth_gatemate.dir/synth_gatemate.cc.obj
+[654/680] Building CXX object techlibs/gowin/CMakeFiles/yosys_synth_gowin.dir/synth_gowin.cc.obj
+[655/680] Building CXX object techlibs/ice40/CMakeFiles/yosys_ice40_braminit.dir/ice40_braminit.cc.obj
+[656/680] Building CXX object techlibs/ice40/CMakeFiles/yosys_ice40_opt.dir/ice40_opt.cc.obj
+[657/680] Building CXX object techlibs/ice40/CMakeFiles/yosys_ice40_wrapcarry.dir/ice40_wrapcarry.cc.obj
+[658/680] Building CXX object techlibs/ice40/CMakeFiles/yosys_synth_ice40.dir/synth_ice40.cc.obj
+[659/680] Building CXX object techlibs/intel/CMakeFiles/yosys_synth_intel.dir/synth_intel.cc.obj
+[660/680] Building CXX object techlibs/intel_alm/CMakeFiles/yosys_synth_intel_alm.dir/synth_intel_alm.cc.obj
+[661/680] Building CXX object techlibs/lattice/CMakeFiles/yosys_lattice_gsr.dir/lattice_gsr.cc.obj
+[662/680] Building CXX object techlibs/lattice/CMakeFiles/yosys_lattice_dsp_nexus.dir/lattice_dsp_nexus.cc.obj
+[663/680] Building CXX object techlibs/lattice/CMakeFiles/yosys_synth_lattice.dir/synth_lattice.cc.obj
+[664/680] Building CXX object techlibs/microchip/CMakeFiles/yosys_microchip_dffopt.dir/microchip_dffopt.cc.obj
+[665/680] Building CXX object techlibs/microchip/CMakeFiles/yosys_synth_microchip.dir/synth_microchip.cc.obj
+[666/680] Building CXX object techlibs/microchip/CMakeFiles/yosys_microchip_dsp.dir/microchip_dsp.cc.obj
+[667/680] Building CXX object techlibs/nanoxplore/CMakeFiles/yosys_nx_carry.dir/nx_carry.cc.obj
+[668/680] Building CXX object techlibs/nanoxplore/CMakeFiles/yosys_synth_nanoxplore.dir/synth_nanoxplore.cc.obj
+[669/680] Building CXX object techlibs/quicklogic/CMakeFiles/yosys_ql_bram_merge.dir/ql_bram_merge.cc.obj
+[670/680] Building CXX object techlibs/quicklogic/CMakeFiles/yosys_ql_bram_types.dir/ql_bram_types.cc.obj
+[671/680] Building CXX object techlibs/quicklogic/CMakeFiles/yosys_ql_dsp_macc.dir/ql_dsp_macc.cc.obj
+[672/680] Building CXX object techlibs/quicklogic/CMakeFiles/yosys_ql_dsp_simd.dir/ql_dsp_simd.cc.obj
+[673/680] Building CXX object techlibs/quicklogic/CMakeFiles/yosys_ql_dsp_io_regs.dir/ql_dsp_io_regs.cc.obj
+[674/680] Building CXX object techlibs/quicklogic/CMakeFiles/yosys_ql_ioff.dir/ql_ioff.cc.obj
+[675/680] Building CXX object techlibs/quicklogic/CMakeFiles/yosys_synth_quicklogic.dir/synth_quicklogic.cc.obj
+[676/680] Building CXX object techlibs/sf2/CMakeFiles/yosys_synth_sf2.dir/synth_sf2.cc.obj
+[677/680] Building CXX object techlibs/xilinx/CMakeFiles/yosys_xilinx_dffopt.dir/xilinx_dffopt.cc.obj
+[678/680] Building CXX object techlibs/xilinx/CMakeFiles/yosys_synth_xilinx.dir/synth_xilinx.cc.obj
+[679/680] Building CXX object techlibs/xilinx/CMakeFiles/yosys_xilinx_dsp.dir/xilinx_dsp.cc.obj
+[680/680] Linking CXX executable yosys.exe

@@ -1,0 +1,2 @@
+D:/fpga-v14-work/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:\fpga-win-native-20261103\move-ctor-diagnostic-20261103-002\tmp\ccCOsa5I.o:move_ctor.cc:(.text+0x9): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)'
+collect2.exe: error: ld returned 1 exit status

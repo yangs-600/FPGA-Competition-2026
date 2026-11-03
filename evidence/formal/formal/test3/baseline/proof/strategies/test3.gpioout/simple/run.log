@@ -1,0 +1,1143 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+
+-- Executing script file `run.ys' --
+
+1. Executing Verilog-2005 frontend: ../../../partitions/test3.gpioout.sv
+Parsing SystemVerilog input from `../../../partitions/test3.gpioout.sv' to AST representation.
+Generating RTLIL representation for module `\miter'.
+Generating RTLIL representation for module `\miter_cmp_prop'.
+Generating RTLIL representation for module `\miter_def_prop'.
+Generating RTLIL representation for module `\gold.test3.gpioout'.
+Generating RTLIL representation for module `\gate.test3.gpioout'.
+Successfully finished Verilog frontend.
+
+2. Executing RTLIL frontend.
+Input filename: ../../../partitions/test3.gpioout.il
+Replacing existing blackbox module \gold.test3.gpioout.
+Replacing existing blackbox module \gate.test3.gpioout.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     \miter_cmp_prop
+Used module:     \gate.test3.gpioout
+Used module:     \gold.test3.gpioout
+Parameter 1 (\WIDTH) = 8
+Parameter 2 (\TYPE) = 48'011000010111001101110011011001010111001001110100
+
+3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\miter_cmp_prop'.
+Parameter 1 (\WIDTH) = 8
+Parameter 2 (\TYPE) = 48'011000010111001101110011011001010111001001110100
+Generating RTLIL representation for module `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop'.
+
+3.3. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     $paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop
+Used module:     \gate.test3.gpioout
+Used module:     \gold.test3.gpioout
+
+3.4. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     $paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop
+Used module:     \gate.test3.gpioout
+Used module:     \gold.test3.gpioout
+Removing unused module `\miter_def_prop'.
+Removing unused module `\miter_cmp_prop'.
+Removed 2 unused modules.
+Module $paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop directly or indirectly contains formal properties -> setting "keep" attribute.
+Module miter directly or indirectly contains formal properties -> setting "keep" attribute.
+Mapping positional arguments of cell miter.__po_gpioout__assert ($paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop).
+
+4. Executing PROC pass (convert processes to netlists).
+
+4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 3 assignments to connections.
+
+4.4. Executing PROC_INIT pass (extract init attributes).
+
+4.5. Executing PROC_ARST pass (detect async resets in processes).
+
+4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.$proc$../../../partitions/test3.gpioout.sv:66$1308'.
+Creating decoders for process `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.$proc$../../../partitions/test3.gpioout.sv:60$1275'.
+
+4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.\i' from process `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.$proc$../../../partitions/test3.gpioout.sv:60$1275'.
+No latch inferred for signal `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.\okay' from process `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.$proc$../../../partitions/test3.gpioout.sv:60$1275'.
+
+4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.$proc$../../../partitions/test3.gpioout.sv:66$1308'.
+Removing empty process `$paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.$proc$../../../partitions/test3.gpioout.sv:60$1275'.
+Cleaned up 0 empty switches.
+
+4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gold.test3.gpioout.
+Optimizing module $paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.
+<suppressed ~1 debug messages>
+Optimizing module gate.test3.gpioout.
+Optimizing module miter.
+
+5. Executing ASYNC2SYNC pass.
+Replacing gate.test3.gpioout.$flatten\gpioout_dffeas_q_1.$procdff$1037 ($adff): ARST=1'1, D=$flatten\gpioout_dffeas_q_1.$0\q[0:0], Q=\gpioout [7]
+Replacing gate.test3.gpioout.$flatten\sr_dffeas_q_4.$procdff$1037 ($adff): ARST=1'1, D=$flatten\sr_dffeas_q_4.$0\q[0:0], Q=$auto$rename.cc:496:execute$1200
+Replacing gate.test3.gpioout.$flatten\sr_dffeas_q_1.$procdff$1037 ($adff): ARST=1'1, D=$flatten\sr_dffeas_q_1.$0\q[0:0], Q=$auto$rename.cc:496:execute$1173
+Replacing gate.test3.gpioout.$flatten\sr_dffeas_q_2.$procdff$1037 ($adff): ARST=1'1, D=$flatten\sr_dffeas_q_2.$0\q[0:0], Q=$auto$rename.cc:496:execute$1182
+Replacing gate.test3.gpioout.$flatten\sr_dffeas_q_3.$procdff$1037 ($adff): ARST=1'1, D=$flatten\sr_dffeas_q_3.$0\q[0:0], Q=$auto$rename.cc:496:execute$1191
+Replacing gate.test3.gpioout.$flatten\sr_dffeas_q_5.$procdff$1037 ($adff): ARST=1'1, D=$flatten\sr_dffeas_q_5.$0\q[0:0], Q=$auto$rename.cc:496:execute$1209
+Replacing gate.test3.gpioout.$flatten\sr_dffeas_q_6.$procdff$1037 ($adff): ARST=1'1, D=$flatten\sr_dffeas_q_6.$0\q[0:0], Q=$auto$rename.cc:496:execute$1218
+Replacing gate.test3.gpioout.$flatten\sr_dffeas_q.$procdff$1037 ($adff): ARST=1'1, D=$flatten\sr_dffeas_q.$0\q[0:0], Q=$auto$rename.cc:496:execute$1164
+Replacing gate.test3.gpioout.$flatten\rw_dffeas_q.$procdff$1037 ($adff): ARST=1'1, D=$flatten\rw_dffeas_q.$0\q[0:0], Q=$auto$rename.cc:496:execute$1154
+Replacing gate.test3.gpioout.$flatten\gpioout_dffeas_q.$procdff$1037 ($adff): ARST=1'1, D=$flatten\gpioout_dffeas_q.$0\q[0:0], Q=\gpioout [6]
+Replacing gate.test3.gpioout.$flatten\gpioout_dffeas_q_7.$procdff$1037 ($adff): ARST=1'1, D=$flatten\gpioout_dffeas_q_7.$0\q[0:0], Q=\gpioout [5]
+Replacing gate.test3.gpioout.$flatten\gpioout_dffeas_q_5.$procdff$1037 ($adff): ARST=1'1, D=$flatten\gpioout_dffeas_q_5.$0\q[0:0], Q=\gpioout [4]
+Replacing gate.test3.gpioout.$flatten\gpioout_dffeas_q_4.$procdff$1037 ($adff): ARST=1'1, D=$flatten\gpioout_dffeas_q_4.$0\q[0:0], Q=\gpioout [3]
+Replacing gate.test3.gpioout.$flatten\gpioout_dffeas_q_3.$procdff$1037 ($adff): ARST=1'1, D=$flatten\gpioout_dffeas_q_3.$0\q[0:0], Q=\gpioout [2]
+Replacing gate.test3.gpioout.$flatten\gpioout_dffeas_q_6.$procdff$1037 ($adff): ARST=1'1, D=$flatten\gpioout_dffeas_q_6.$0\q[0:0], Q=\gpioout [1]
+Replacing gate.test3.gpioout.$flatten\gpioout_dffeas_q_2.$procdff$1037 ($adff): ARST=1'1, D=$flatten\gpioout_dffeas_q_2.$0\q[0:0], Q=\gpioout [0]
+
+6. Executing FORMALFF pass.
+
+7. Executing SETUNDEF pass (replace undef values with defined constants).
+
+8. Executing FLATTEN pass (flatten design).
+Deleting now unused module gold.test3.gpioout.
+Deleting now unused module $paramod$a769009af63a4a765f4b4241ea056b727873f867\miter_cmp_prop.
+Deleting now unused module gate.test3.gpioout.
+<suppressed ~3 debug messages>
+
+9. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+10. Executing OPT_EXPR pass (perform const folding).
+Optimizing module miter.
+<suppressed ~33 debug messages>
+
+11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \miter..
+Removed 1 unused cells and 39 unused wires.
+<suppressed ~3 debug messages>
+
+12. Executing SAT pass (solving SAT problems in the circuit).
+Using SAT solver `minisat`.
+
+Setting up time step 1:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_cs
+Import def constraint for this timestep: \__pi_sr_in
+Imported 117 cells to SAT database.
+Import proof for assert: \__po_gpioout__assert.okay when 1'1.
+
+** Trying induction with length 1 **
+
+Setting up time step 1:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_cs
+Import def constraint for this timestep: \__pi_sr_in
+Imported 117 cells to SAT database.
+Import set-constraint from init attribute: \gate.gpioout = 8'00000000
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$1312 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$1314 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$1316 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$1318 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$1320 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$1322 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$1324 = 1'0
+Import set-constraint from init attribute: $flatten\gate.$auto$async2sync.cc:253:execute$1326 = 1'0
+Final init constraint equation: { \gold.gpioout $flatten\gold.$auto$rename.cc:496:execute$40 $flatten\gold.$auto$rename.cc:496:execute$41 [6:0] $flatten\gate.$auto$async2sync.cc:253:execute$1326 $flatten\gate.$auto$async2sync.cc:253:execute$1324 $flatten\gate.$auto$async2sync.cc:253:execute$1322 $flatten\gate.$auto$async2sync.cc:253:execute$1320 $flatten\gate.$auto$async2sync.cc:253:execute$1318 $flatten\gate.$auto$async2sync.cc:253:execute$1316 $flatten\gate.$auto$async2sync.cc:253:execute$1314 $flatten\gate.$auto$async2sync.cc:253:execute$1312 \gate.gpioout } = 32'xxxxxxxxxxxxxxxx0000000000000000
+Import proof for assert: \__po_gpioout__assert.okay when 1'1.
+Import show expression: \gate.gpioout
+Import show expression: \gate.cs
+Import show expression: \gate.sr_in
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_cs
+Import show expression: \gate.__pi_sr_in
+Import show expression: \gate.__po_gpioout
+Import show expression: \__po_gpioout__assert.i
+Import show expression: \__po_gpioout__assert.okay
+Import show expression: \__po_gpioout__assert.in_gate
+Import show expression: \__po_gpioout__assert.in_gold
+Import show expression: \gold.gpioout
+Import show expression: \gold.cs
+Import show expression: \gold.sr_in
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_cs
+Import show expression: \gold.__pi_sr_in
+Import show expression: \gold.__po_gpioout
+Import show expression: \__po_gpioout__gate
+Import show expression: \__po_gpioout__gold
+Import show expression: \__pi_sr_in
+Import show expression: \__pi_cs
+Import show expression: \__pi_clk
+
+[base case 1] Solving problem with 2971 variables and 8112 clauses..
+Base case for induction length 1 proven.
+
+Setting up time step 2:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_cs
+Import def constraint for this timestep: \__pi_sr_in
+Imported 117 cells to SAT database.
+Import proof for assert: \__po_gpioout__assert.okay when 1'1.
+Import show expression: \gate.gpioout
+Import show expression: \gate.cs
+Import show expression: \gate.sr_in
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_cs
+Import show expression: \gate.__pi_sr_in
+Import show expression: \gate.__po_gpioout
+Import show expression: \__po_gpioout__assert.i
+Import show expression: \__po_gpioout__assert.okay
+Import show expression: \__po_gpioout__assert.in_gate
+Import show expression: \__po_gpioout__assert.in_gold
+Import show expression: \gold.gpioout
+Import show expression: \gold.cs
+Import show expression: \gold.sr_in
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_cs
+Import show expression: \gold.__pi_sr_in
+Import show expression: \gold.__po_gpioout
+Import show expression: \__po_gpioout__gate
+Import show expression: \__po_gpioout__gold
+Import show expression: \__pi_sr_in
+Import show expression: \__pi_cs
+Import show expression: \__pi_clk
+
+[induction step 1] Solving problem with 5971 variables and 16229 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                     Dec       Hex                                 Bin
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1312                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1314                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1316                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1318                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1320                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1322                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1324                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1326                0         0                                   0
+  init $flatten\gold.$auto$rename.cc:496:execute$40                      1         1                                   1
+  init $flatten\gold.$auto$rename.cc:496:execute$41 [6:0]                0         0                             0000000
+  init \gate.gpioout [6:0]                                             115        73                             1110011
+  init \gate.gpioout [7]                                                 1         1                                   1
+  init \gold.gpioout                                                   243        f3                            11110011
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     1 \__pi_clk                                                         0         0                                   0
+     1 \__pi_cs                                                          1         1                                   1
+     1 \__pi_sr_in                                                       0         0                                   0
+     1 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     1 \__po_gpioout__assert.in_gate                                   243        f3                            11110011
+     1 \__po_gpioout__assert.in_gold                                   243        f3                            11110011
+     1 \__po_gpioout__assert.okay                                        1         1                                   1
+     1 \__po_gpioout__gate                                             243        f3                            11110011
+     1 \__po_gpioout__gold                                             243        f3                            11110011
+     1 \gate.__pi_clk                                                    0         0                                   0
+     1 \gate.__pi_cs                                                     1         1                                   1
+     1 \gate.__pi_sr_in                                                  0         0                                   0
+     1 \gate.__po_gpioout                                              243        f3                            11110011
+     1 \gate.clk                                                         0         0                                   0
+     1 \gate.cs                                                          1         1                                   1
+     1 \gate.gpioout                                                   243        f3                            11110011
+     1 \gate.sr_in                                                       0         0                                   0
+     1 \gold.__pi_clk                                                    0         0                                   0
+     1 \gold.__pi_cs                                                     1         1                                   1
+     1 \gold.__pi_sr_in                                                  0         0                                   0
+     1 \gold.__po_gpioout                                              243        f3                            11110011
+     1 \gold.clk                                                         0         0                                   0
+     1 \gold.cs                                                          1         1                                   1
+     1 \gold.gpioout                                                   243        f3                            11110011
+     1 \gold.sr_in                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     2 \__pi_clk                                                         0         0                                   0
+     2 \__pi_cs                                                          0         0                                   0
+     2 \__pi_sr_in                                                       0         0                                   0
+     2 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     2 \__po_gpioout__assert.in_gate                                   243        f3                            11110011
+     2 \__po_gpioout__assert.in_gold                                   242        f2                            11110010
+     2 \__po_gpioout__assert.okay                                        0         0                                   0
+     2 \__po_gpioout__gate                                             243        f3                            11110011
+     2 \__po_gpioout__gold                                             242        f2                            11110010
+     2 \gate.__pi_clk                                                    0         0                                   0
+     2 \gate.__pi_cs                                                     0         0                                   0
+     2 \gate.__pi_sr_in                                                  0         0                                   0
+     2 \gate.__po_gpioout                                              243        f3                            11110011
+     2 \gate.clk                                                         0         0                                   0
+     2 \gate.cs                                                          0         0                                   0
+     2 \gate.gpioout                                                   243        f3                            11110011
+     2 \gate.sr_in                                                       0         0                                   0
+     2 \gold.__pi_clk                                                    0         0                                   0
+     2 \gold.__pi_cs                                                     0         0                                   0
+     2 \gold.__pi_sr_in                                                  0         0                                   0
+     2 \gold.__po_gpioout                                              242        f2                            11110010
+     2 \gold.clk                                                         0         0                                   0
+     2 \gold.cs                                                          0         0                                   0
+     2 \gold.gpioout                                                   242        f2                            11110010
+     2 \gold.sr_in                                                       0         0                                   0
+
+** Trying induction with length 2 **
+
+Setting up time step 2:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_cs
+Import def constraint for this timestep: \__pi_sr_in
+Imported 117 cells to SAT database.
+Import proof for assert: \__po_gpioout__assert.okay when 1'1.
+Import show expression: \gate.gpioout
+Import show expression: \gate.cs
+Import show expression: \gate.sr_in
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_cs
+Import show expression: \gate.__pi_sr_in
+Import show expression: \gate.__po_gpioout
+Import show expression: \__po_gpioout__assert.i
+Import show expression: \__po_gpioout__assert.okay
+Import show expression: \__po_gpioout__assert.in_gate
+Import show expression: \__po_gpioout__assert.in_gold
+Import show expression: \gold.gpioout
+Import show expression: \gold.cs
+Import show expression: \gold.sr_in
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_cs
+Import show expression: \gold.__pi_sr_in
+Import show expression: \gold.__po_gpioout
+Import show expression: \__po_gpioout__gate
+Import show expression: \__po_gpioout__gold
+Import show expression: \__pi_sr_in
+Import show expression: \__pi_cs
+Import show expression: \__pi_clk
+
+[base case 2] Solving problem with 6357 variables and 17449 clauses..
+Base case for induction length 2 proven.
+
+Setting up time step 3:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_cs
+Import def constraint for this timestep: \__pi_sr_in
+Imported 117 cells to SAT database.
+Import proof for assert: \__po_gpioout__assert.okay when 1'1.
+Import show expression: \gate.gpioout
+Import show expression: \gate.cs
+Import show expression: \gate.sr_in
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_cs
+Import show expression: \gate.__pi_sr_in
+Import show expression: \gate.__po_gpioout
+Import show expression: \__po_gpioout__assert.i
+Import show expression: \__po_gpioout__assert.okay
+Import show expression: \__po_gpioout__assert.in_gate
+Import show expression: \__po_gpioout__assert.in_gold
+Import show expression: \gold.gpioout
+Import show expression: \gold.cs
+Import show expression: \gold.sr_in
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_cs
+Import show expression: \gold.__pi_sr_in
+Import show expression: \gold.__po_gpioout
+Import show expression: \__po_gpioout__gate
+Import show expression: \__po_gpioout__gold
+Import show expression: \__pi_sr_in
+Import show expression: \__pi_cs
+Import show expression: \__pi_clk
+
+[induction step 2] Solving problem with 9646 variables and 26464 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                     Dec       Hex                                 Bin
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1312                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1314                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1316                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1318                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1320                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1322                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1324                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1326                1         1                                   1
+  init $flatten\gold.$auto$rename.cc:496:execute$40                      0         0                                   0
+  init $flatten\gold.$auto$rename.cc:496:execute$41 [6:0]               63        3f                             0111111
+  init \gate.gpioout [6:0]                                             117        75                             1110101
+  init \gate.gpioout [7]                                                 0         0                                   0
+  init \gold.gpioout                                                   117        75                            01110101
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     1 \__pi_clk                                                         0         0                                   0
+     1 \__pi_cs                                                          0         0                                   0
+     1 \__pi_sr_in                                                       0         0                                   0
+     1 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     1 \__po_gpioout__assert.in_gate                                   117        75                            01110101
+     1 \__po_gpioout__assert.in_gold                                   117        75                            01110101
+     1 \__po_gpioout__assert.okay                                        1         1                                   1
+     1 \__po_gpioout__gate                                             117        75                            01110101
+     1 \__po_gpioout__gold                                             117        75                            01110101
+     1 \gate.__pi_clk                                                    0         0                                   0
+     1 \gate.__pi_cs                                                     0         0                                   0
+     1 \gate.__pi_sr_in                                                  0         0                                   0
+     1 \gate.__po_gpioout                                              117        75                            01110101
+     1 \gate.clk                                                         0         0                                   0
+     1 \gate.cs                                                          0         0                                   0
+     1 \gate.gpioout                                                   117        75                            01110101
+     1 \gate.sr_in                                                       0         0                                   0
+     1 \gold.__pi_clk                                                    0         0                                   0
+     1 \gold.__pi_cs                                                     0         0                                   0
+     1 \gold.__pi_sr_in                                                  0         0                                   0
+     1 \gold.__po_gpioout                                              117        75                            01110101
+     1 \gold.clk                                                         0         0                                   0
+     1 \gold.cs                                                          0         0                                   0
+     1 \gold.gpioout                                                   117        75                            01110101
+     1 \gold.sr_in                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     2 \__pi_clk                                                         0         0                                   0
+     2 \__pi_cs                                                          1         1                                   1
+     2 \__pi_sr_in                                                       0         0                                   0
+     2 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     2 \__po_gpioout__assert.in_gate                                   117        75                            01110101
+     2 \__po_gpioout__assert.in_gold                                   117        75                            01110101
+     2 \__po_gpioout__assert.okay                                        1         1                                   1
+     2 \__po_gpioout__gate                                             117        75                            01110101
+     2 \__po_gpioout__gold                                             117        75                            01110101
+     2 \gate.__pi_clk                                                    0         0                                   0
+     2 \gate.__pi_cs                                                     1         1                                   1
+     2 \gate.__pi_sr_in                                                  0         0                                   0
+     2 \gate.__po_gpioout                                              117        75                            01110101
+     2 \gate.clk                                                         0         0                                   0
+     2 \gate.cs                                                          1         1                                   1
+     2 \gate.gpioout                                                   117        75                            01110101
+     2 \gate.sr_in                                                       0         0                                   0
+     2 \gold.__pi_clk                                                    0         0                                   0
+     2 \gold.__pi_cs                                                     1         1                                   1
+     2 \gold.__pi_sr_in                                                  0         0                                   0
+     2 \gold.__po_gpioout                                              117        75                            01110101
+     2 \gold.clk                                                         0         0                                   0
+     2 \gold.cs                                                          1         1                                   1
+     2 \gold.gpioout                                                   117        75                            01110101
+     2 \gold.sr_in                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     3 \__pi_clk                                                         0         0                                   0
+     3 \__pi_cs                                                          1         1                                   1
+     3 \__pi_sr_in                                                       0         0                                   0
+     3 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     3 \__po_gpioout__assert.in_gate                                    85        55                            01010101
+     3 \__po_gpioout__assert.in_gold                                   117        75                            01110101
+     3 \__po_gpioout__assert.okay                                        0         0                                   0
+     3 \__po_gpioout__gate                                              85        55                            01010101
+     3 \__po_gpioout__gold                                             117        75                            01110101
+     3 \gate.__pi_clk                                                    0         0                                   0
+     3 \gate.__pi_cs                                                     1         1                                   1
+     3 \gate.__pi_sr_in                                                  0         0                                   0
+     3 \gate.__po_gpioout                                               85        55                            01010101
+     3 \gate.clk                                                         0         0                                   0
+     3 \gate.cs                                                          1         1                                   1
+     3 \gate.gpioout                                                    85        55                            01010101
+     3 \gate.sr_in                                                       0         0                                   0
+     3 \gold.__pi_clk                                                    0         0                                   0
+     3 \gold.__pi_cs                                                     1         1                                   1
+     3 \gold.__pi_sr_in                                                  0         0                                   0
+     3 \gold.__po_gpioout                                              117        75                            01110101
+     3 \gold.clk                                                         0         0                                   0
+     3 \gold.cs                                                          1         1                                   1
+     3 \gold.gpioout                                                   117        75                            01110101
+     3 \gold.sr_in                                                       0         0                                   0
+
+** Trying induction with length 3 **
+
+Setting up time step 3:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_cs
+Import def constraint for this timestep: \__pi_sr_in
+Imported 117 cells to SAT database.
+Import proof for assert: \__po_gpioout__assert.okay when 1'1.
+Import show expression: \gate.gpioout
+Import show expression: \gate.cs
+Import show expression: \gate.sr_in
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_cs
+Import show expression: \gate.__pi_sr_in
+Import show expression: \gate.__po_gpioout
+Import show expression: \__po_gpioout__assert.i
+Import show expression: \__po_gpioout__assert.okay
+Import show expression: \__po_gpioout__assert.in_gate
+Import show expression: \__po_gpioout__assert.in_gold
+Import show expression: \gold.gpioout
+Import show expression: \gold.cs
+Import show expression: \gold.sr_in
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_cs
+Import show expression: \gold.__pi_sr_in
+Import show expression: \gold.__po_gpioout
+Import show expression: \__po_gpioout__gate
+Import show expression: \__po_gpioout__gold
+Import show expression: \__pi_sr_in
+Import show expression: \__pi_cs
+Import show expression: \__pi_clk
+
+[base case 3] Solving problem with 9967 variables and 27490 clauses..
+Base case for induction length 3 proven.
+
+Setting up time step 4:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_cs
+Import def constraint for this timestep: \__pi_sr_in
+Imported 117 cells to SAT database.
+Import proof for assert: \__po_gpioout__assert.okay when 1'1.
+Import show expression: \gate.gpioout
+Import show expression: \gate.cs
+Import show expression: \gate.sr_in
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_cs
+Import show expression: \gate.__pi_sr_in
+Import show expression: \gate.__po_gpioout
+Import show expression: \__po_gpioout__assert.i
+Import show expression: \__po_gpioout__assert.okay
+Import show expression: \__po_gpioout__assert.in_gate
+Import show expression: \__po_gpioout__assert.in_gold
+Import show expression: \gold.gpioout
+Import show expression: \gold.cs
+Import show expression: \gold.sr_in
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_cs
+Import show expression: \gold.__pi_sr_in
+Import show expression: \gold.__po_gpioout
+Import show expression: \__po_gpioout__gate
+Import show expression: \__po_gpioout__gold
+Import show expression: \__pi_sr_in
+Import show expression: \__pi_cs
+Import show expression: \__pi_clk
+
+[induction step 3] Solving problem with 13546 variables and 37405 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                     Dec       Hex                                 Bin
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1312                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1314                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1316                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1318                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1320                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1322                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1324                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1326                1         1                                   1
+  init $flatten\gold.$auto$rename.cc:496:execute$40                      0         0                                   0
+  init $flatten\gold.$auto$rename.cc:496:execute$41 [6:0]               31        1f                             0011111
+  init \gate.gpioout [6:0]                                              92        5c                             1011100
+  init \gate.gpioout [7]                                                 0         0                                   0
+  init \gold.gpioout                                                    92        5c                            01011100
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     1 \__pi_clk                                                         0         0                                   0
+     1 \__pi_cs                                                          0         0                                   0
+     1 \__pi_sr_in                                                       1         1                                   1
+     1 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     1 \__po_gpioout__assert.in_gate                                    92        5c                            01011100
+     1 \__po_gpioout__assert.in_gold                                    92        5c                            01011100
+     1 \__po_gpioout__assert.okay                                        1         1                                   1
+     1 \__po_gpioout__gate                                              92        5c                            01011100
+     1 \__po_gpioout__gold                                              92        5c                            01011100
+     1 \gate.__pi_clk                                                    0         0                                   0
+     1 \gate.__pi_cs                                                     0         0                                   0
+     1 \gate.__pi_sr_in                                                  1         1                                   1
+     1 \gate.__po_gpioout                                               92        5c                            01011100
+     1 \gate.clk                                                         0         0                                   0
+     1 \gate.cs                                                          0         0                                   0
+     1 \gate.gpioout                                                    92        5c                            01011100
+     1 \gate.sr_in                                                       1         1                                   1
+     1 \gold.__pi_clk                                                    0         0                                   0
+     1 \gold.__pi_cs                                                     0         0                                   0
+     1 \gold.__pi_sr_in                                                  1         1                                   1
+     1 \gold.__po_gpioout                                               92        5c                            01011100
+     1 \gold.clk                                                         0         0                                   0
+     1 \gold.cs                                                          0         0                                   0
+     1 \gold.gpioout                                                    92        5c                            01011100
+     1 \gold.sr_in                                                       1         1                                   1
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     2 \__pi_clk                                                         0         0                                   0
+     2 \__pi_cs                                                          0         0                                   0
+     2 \__pi_sr_in                                                       0         0                                   0
+     2 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     2 \__po_gpioout__assert.in_gate                                    92        5c                            01011100
+     2 \__po_gpioout__assert.in_gold                                    92        5c                            01011100
+     2 \__po_gpioout__assert.okay                                        1         1                                   1
+     2 \__po_gpioout__gate                                              92        5c                            01011100
+     2 \__po_gpioout__gold                                              92        5c                            01011100
+     2 \gate.__pi_clk                                                    0         0                                   0
+     2 \gate.__pi_cs                                                     0         0                                   0
+     2 \gate.__pi_sr_in                                                  0         0                                   0
+     2 \gate.__po_gpioout                                               92        5c                            01011100
+     2 \gate.clk                                                         0         0                                   0
+     2 \gate.cs                                                          0         0                                   0
+     2 \gate.gpioout                                                    92        5c                            01011100
+     2 \gate.sr_in                                                       0         0                                   0
+     2 \gold.__pi_clk                                                    0         0                                   0
+     2 \gold.__pi_cs                                                     0         0                                   0
+     2 \gold.__pi_sr_in                                                  0         0                                   0
+     2 \gold.__po_gpioout                                               92        5c                            01011100
+     2 \gold.clk                                                         0         0                                   0
+     2 \gold.cs                                                          0         0                                   0
+     2 \gold.gpioout                                                    92        5c                            01011100
+     2 \gold.sr_in                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     3 \__pi_clk                                                         0         0                                   0
+     3 \__pi_cs                                                          1         1                                   1
+     3 \__pi_sr_in                                                       0         0                                   0
+     3 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     3 \__po_gpioout__assert.in_gate                                    92        5c                            01011100
+     3 \__po_gpioout__assert.in_gold                                    92        5c                            01011100
+     3 \__po_gpioout__assert.okay                                        1         1                                   1
+     3 \__po_gpioout__gate                                              92        5c                            01011100
+     3 \__po_gpioout__gold                                              92        5c                            01011100
+     3 \gate.__pi_clk                                                    0         0                                   0
+     3 \gate.__pi_cs                                                     1         1                                   1
+     3 \gate.__pi_sr_in                                                  0         0                                   0
+     3 \gate.__po_gpioout                                               92        5c                            01011100
+     3 \gate.clk                                                         0         0                                   0
+     3 \gate.cs                                                          1         1                                   1
+     3 \gate.gpioout                                                    92        5c                            01011100
+     3 \gate.sr_in                                                       0         0                                   0
+     3 \gold.__pi_clk                                                    0         0                                   0
+     3 \gold.__pi_cs                                                     1         1                                   1
+     3 \gold.__pi_sr_in                                                  0         0                                   0
+     3 \gold.__po_gpioout                                               92        5c                            01011100
+     3 \gold.clk                                                         0         0                                   0
+     3 \gold.cs                                                          1         1                                   1
+     3 \gold.gpioout                                                    92        5c                            01011100
+     3 \gold.sr_in                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     4 \__pi_clk                                                         0         0                                   0
+     4 \__pi_cs                                                          1         1                                   1
+     4 \__pi_sr_in                                                       0         0                                   0
+     4 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     4 \__po_gpioout__assert.in_gate                                    85        55                            01010101
+     4 \__po_gpioout__assert.in_gold                                    92        5c                            01011100
+     4 \__po_gpioout__assert.okay                                        0         0                                   0
+     4 \__po_gpioout__gate                                              85        55                            01010101
+     4 \__po_gpioout__gold                                              92        5c                            01011100
+     4 \gate.__pi_clk                                                    0         0                                   0
+     4 \gate.__pi_cs                                                     1         1                                   1
+     4 \gate.__pi_sr_in                                                  0         0                                   0
+     4 \gate.__po_gpioout                                               85        55                            01010101
+     4 \gate.clk                                                         0         0                                   0
+     4 \gate.cs                                                          1         1                                   1
+     4 \gate.gpioout                                                    85        55                            01010101
+     4 \gate.sr_in                                                       0         0                                   0
+     4 \gold.__pi_clk                                                    0         0                                   0
+     4 \gold.__pi_cs                                                     1         1                                   1
+     4 \gold.__pi_sr_in                                                  0         0                                   0
+     4 \gold.__po_gpioout                                               92        5c                            01011100
+     4 \gold.clk                                                         0         0                                   0
+     4 \gold.cs                                                          1         1                                   1
+     4 \gold.gpioout                                                    92        5c                            01011100
+     4 \gold.sr_in                                                       0         0                                   0
+
+** Trying induction with length 4 **
+
+Setting up time step 4:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_cs
+Import def constraint for this timestep: \__pi_sr_in
+Imported 117 cells to SAT database.
+Import proof for assert: \__po_gpioout__assert.okay when 1'1.
+Import show expression: \gate.gpioout
+Import show expression: \gate.cs
+Import show expression: \gate.sr_in
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_cs
+Import show expression: \gate.__pi_sr_in
+Import show expression: \gate.__po_gpioout
+Import show expression: \__po_gpioout__assert.i
+Import show expression: \__po_gpioout__assert.okay
+Import show expression: \__po_gpioout__assert.in_gate
+Import show expression: \__po_gpioout__assert.in_gold
+Import show expression: \gold.gpioout
+Import show expression: \gold.cs
+Import show expression: \gold.sr_in
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_cs
+Import show expression: \gold.__pi_sr_in
+Import show expression: \gold.__po_gpioout
+Import show expression: \__po_gpioout__gate
+Import show expression: \__po_gpioout__gold
+Import show expression: \__pi_sr_in
+Import show expression: \__pi_cs
+Import show expression: \__pi_clk
+
+[base case 4] Solving problem with 13802 variables and 38237 clauses..
+Base case for induction length 4 proven.
+
+Setting up time step 5:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_cs
+Import def constraint for this timestep: \__pi_sr_in
+Imported 117 cells to SAT database.
+Import proof for assert: \__po_gpioout__assert.okay when 1'1.
+Import show expression: \gate.gpioout
+Import show expression: \gate.cs
+Import show expression: \gate.sr_in
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_cs
+Import show expression: \gate.__pi_sr_in
+Import show expression: \gate.__po_gpioout
+Import show expression: \__po_gpioout__assert.i
+Import show expression: \__po_gpioout__assert.okay
+Import show expression: \__po_gpioout__assert.in_gate
+Import show expression: \__po_gpioout__assert.in_gold
+Import show expression: \gold.gpioout
+Import show expression: \gold.cs
+Import show expression: \gold.sr_in
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_cs
+Import show expression: \gold.__pi_sr_in
+Import show expression: \gold.__po_gpioout
+Import show expression: \__po_gpioout__gate
+Import show expression: \__po_gpioout__gold
+Import show expression: \__pi_sr_in
+Import show expression: \__pi_cs
+Import show expression: \__pi_clk
+
+[induction step 4] Solving problem with 17671 variables and 49052 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                     Dec       Hex                                 Bin
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1312                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1314                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1316                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1318                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1320                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1322                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1324                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1326                0         0                                   0
+  init $flatten\gold.$auto$rename.cc:496:execute$40                      0         0                                   0
+  init $flatten\gold.$auto$rename.cc:496:execute$41 [6:0]              127        7f                             1111111
+  init \gate.gpioout [6:0]                                             100        64                             1100100
+  init \gate.gpioout [7]                                                 1         1                                   1
+  init \gold.gpioout                                                   228        e4                            11100100
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     1 \__pi_clk                                                         0         0                                   0
+     1 \__pi_cs                                                          1         1                                   1
+     1 \__pi_sr_in                                                       1         1                                   1
+     1 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     1 \__po_gpioout__assert.in_gate                                   228        e4                            11100100
+     1 \__po_gpioout__assert.in_gold                                   228        e4                            11100100
+     1 \__po_gpioout__assert.okay                                        1         1                                   1
+     1 \__po_gpioout__gate                                             228        e4                            11100100
+     1 \__po_gpioout__gold                                             228        e4                            11100100
+     1 \gate.__pi_clk                                                    0         0                                   0
+     1 \gate.__pi_cs                                                     1         1                                   1
+     1 \gate.__pi_sr_in                                                  1         1                                   1
+     1 \gate.__po_gpioout                                              228        e4                            11100100
+     1 \gate.clk                                                         0         0                                   0
+     1 \gate.cs                                                          1         1                                   1
+     1 \gate.gpioout                                                   228        e4                            11100100
+     1 \gate.sr_in                                                       1         1                                   1
+     1 \gold.__pi_clk                                                    0         0                                   0
+     1 \gold.__pi_cs                                                     1         1                                   1
+     1 \gold.__pi_sr_in                                                  1         1                                   1
+     1 \gold.__po_gpioout                                              228        e4                            11100100
+     1 \gold.clk                                                         0         0                                   0
+     1 \gold.cs                                                          1         1                                   1
+     1 \gold.gpioout                                                   228        e4                            11100100
+     1 \gold.sr_in                                                       1         1                                   1
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     2 \__pi_clk                                                         0         0                                   0
+     2 \__pi_cs                                                          0         0                                   0
+     2 \__pi_sr_in                                                       1         1                                   1
+     2 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     2 \__po_gpioout__assert.in_gate                                   228        e4                            11100100
+     2 \__po_gpioout__assert.in_gold                                   228        e4                            11100100
+     2 \__po_gpioout__assert.okay                                        1         1                                   1
+     2 \__po_gpioout__gate                                             228        e4                            11100100
+     2 \__po_gpioout__gold                                             228        e4                            11100100
+     2 \gate.__pi_clk                                                    0         0                                   0
+     2 \gate.__pi_cs                                                     0         0                                   0
+     2 \gate.__pi_sr_in                                                  1         1                                   1
+     2 \gate.__po_gpioout                                              228        e4                            11100100
+     2 \gate.clk                                                         0         0                                   0
+     2 \gate.cs                                                          0         0                                   0
+     2 \gate.gpioout                                                   228        e4                            11100100
+     2 \gate.sr_in                                                       1         1                                   1
+     2 \gold.__pi_clk                                                    0         0                                   0
+     2 \gold.__pi_cs                                                     0         0                                   0
+     2 \gold.__pi_sr_in                                                  1         1                                   1
+     2 \gold.__po_gpioout                                              228        e4                            11100100
+     2 \gold.clk                                                         0         0                                   0
+     2 \gold.cs                                                          0         0                                   0
+     2 \gold.gpioout                                                   228        e4                            11100100
+     2 \gold.sr_in                                                       1         1                                   1
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     3 \__pi_clk                                                         0         0                                   0
+     3 \__pi_cs                                                          0         0                                   0
+     3 \__pi_sr_in                                                       0         0                                   0
+     3 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     3 \__po_gpioout__assert.in_gate                                   228        e4                            11100100
+     3 \__po_gpioout__assert.in_gold                                   228        e4                            11100100
+     3 \__po_gpioout__assert.okay                                        1         1                                   1
+     3 \__po_gpioout__gate                                             228        e4                            11100100
+     3 \__po_gpioout__gold                                             228        e4                            11100100
+     3 \gate.__pi_clk                                                    0         0                                   0
+     3 \gate.__pi_cs                                                     0         0                                   0
+     3 \gate.__pi_sr_in                                                  0         0                                   0
+     3 \gate.__po_gpioout                                              228        e4                            11100100
+     3 \gate.clk                                                         0         0                                   0
+     3 \gate.cs                                                          0         0                                   0
+     3 \gate.gpioout                                                   228        e4                            11100100
+     3 \gate.sr_in                                                       0         0                                   0
+     3 \gold.__pi_clk                                                    0         0                                   0
+     3 \gold.__pi_cs                                                     0         0                                   0
+     3 \gold.__pi_sr_in                                                  0         0                                   0
+     3 \gold.__po_gpioout                                              228        e4                            11100100
+     3 \gold.clk                                                         0         0                                   0
+     3 \gold.cs                                                          0         0                                   0
+     3 \gold.gpioout                                                   228        e4                            11100100
+     3 \gold.sr_in                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     4 \__pi_clk                                                         0         0                                   0
+     4 \__pi_cs                                                          1         1                                   1
+     4 \__pi_sr_in                                                       0         0                                   0
+     4 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     4 \__po_gpioout__assert.in_gate                                   228        e4                            11100100
+     4 \__po_gpioout__assert.in_gold                                   228        e4                            11100100
+     4 \__po_gpioout__assert.okay                                        1         1                                   1
+     4 \__po_gpioout__gate                                             228        e4                            11100100
+     4 \__po_gpioout__gold                                             228        e4                            11100100
+     4 \gate.__pi_clk                                                    0         0                                   0
+     4 \gate.__pi_cs                                                     1         1                                   1
+     4 \gate.__pi_sr_in                                                  0         0                                   0
+     4 \gate.__po_gpioout                                              228        e4                            11100100
+     4 \gate.clk                                                         0         0                                   0
+     4 \gate.cs                                                          1         1                                   1
+     4 \gate.gpioout                                                   228        e4                            11100100
+     4 \gate.sr_in                                                       0         0                                   0
+     4 \gold.__pi_clk                                                    0         0                                   0
+     4 \gold.__pi_cs                                                     1         1                                   1
+     4 \gold.__pi_sr_in                                                  0         0                                   0
+     4 \gold.__po_gpioout                                              228        e4                            11100100
+     4 \gold.clk                                                         0         0                                   0
+     4 \gold.cs                                                          1         1                                   1
+     4 \gold.gpioout                                                   228        e4                            11100100
+     4 \gold.sr_in                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     5 \__pi_clk                                                         0         0                                   0
+     5 \__pi_cs                                                          1         1                                   1
+     5 \__pi_sr_in                                                       0         0                                   0
+     5 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     5 \__po_gpioout__assert.in_gate                                   228        e4                            11100100
+     5 \__po_gpioout__assert.in_gold                                   244        f4                            11110100
+     5 \__po_gpioout__assert.okay                                        0         0                                   0
+     5 \__po_gpioout__gate                                             228        e4                            11100100
+     5 \__po_gpioout__gold                                             244        f4                            11110100
+     5 \gate.__pi_clk                                                    0         0                                   0
+     5 \gate.__pi_cs                                                     1         1                                   1
+     5 \gate.__pi_sr_in                                                  0         0                                   0
+     5 \gate.__po_gpioout                                              228        e4                            11100100
+     5 \gate.clk                                                         0         0                                   0
+     5 \gate.cs                                                          1         1                                   1
+     5 \gate.gpioout                                                   228        e4                            11100100
+     5 \gate.sr_in                                                       0         0                                   0
+     5 \gold.__pi_clk                                                    0         0                                   0
+     5 \gold.__pi_cs                                                     1         1                                   1
+     5 \gold.__pi_sr_in                                                  0         0                                   0
+     5 \gold.__po_gpioout                                              244        f4                            11110100
+     5 \gold.clk                                                         0         0                                   0
+     5 \gold.cs                                                          1         1                                   1
+     5 \gold.gpioout                                                   244        f4                            11110100
+     5 \gold.sr_in                                                       0         0                                   0
+
+** Trying induction with length 5 **
+
+Setting up time step 5:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_cs
+Import def constraint for this timestep: \__pi_sr_in
+Imported 117 cells to SAT database.
+Import proof for assert: \__po_gpioout__assert.okay when 1'1.
+Import show expression: \gate.gpioout
+Import show expression: \gate.cs
+Import show expression: \gate.sr_in
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_cs
+Import show expression: \gate.__pi_sr_in
+Import show expression: \gate.__po_gpioout
+Import show expression: \__po_gpioout__assert.i
+Import show expression: \__po_gpioout__assert.okay
+Import show expression: \__po_gpioout__assert.in_gate
+Import show expression: \__po_gpioout__assert.in_gold
+Import show expression: \gold.gpioout
+Import show expression: \gold.cs
+Import show expression: \gold.sr_in
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_cs
+Import show expression: \gold.__pi_sr_in
+Import show expression: \gold.__po_gpioout
+Import show expression: \__po_gpioout__gate
+Import show expression: \__po_gpioout__gold
+Import show expression: \__pi_sr_in
+Import show expression: \__pi_cs
+Import show expression: \__pi_clk
+
+[base case 5] Solving problem with 17862 variables and 49690 clauses..
+Base case for induction length 5 proven.
+
+Setting up time step 6:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \__pi_clk
+Import def constraint for this timestep: \__pi_cs
+Import def constraint for this timestep: \__pi_sr_in
+Imported 117 cells to SAT database.
+Import proof for assert: \__po_gpioout__assert.okay when 1'1.
+Import show expression: \gate.gpioout
+Import show expression: \gate.cs
+Import show expression: \gate.sr_in
+Import show expression: \gate.clk
+Import show expression: \gate.__pi_clk
+Import show expression: \gate.__pi_cs
+Import show expression: \gate.__pi_sr_in
+Import show expression: \gate.__po_gpioout
+Import show expression: \__po_gpioout__assert.i
+Import show expression: \__po_gpioout__assert.okay
+Import show expression: \__po_gpioout__assert.in_gate
+Import show expression: \__po_gpioout__assert.in_gold
+Import show expression: \gold.gpioout
+Import show expression: \gold.cs
+Import show expression: \gold.sr_in
+Import show expression: \gold.clk
+Import show expression: \gold.__pi_clk
+Import show expression: \gold.__pi_cs
+Import show expression: \gold.__pi_sr_in
+Import show expression: \gold.__po_gpioout
+Import show expression: \__po_gpioout__gate
+Import show expression: \__po_gpioout__gold
+Import show expression: \__pi_sr_in
+Import show expression: \__pi_cs
+Import show expression: \__pi_clk
+
+[induction step 5] Solving problem with 22021 variables and 61405 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                     Dec       Hex                                 Bin
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1312                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1314                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1316                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1318                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1320                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1322                0         0                                   0
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1324                1         1                                   1
+  init $flatten\gate.$auto$async2sync.cc:253:execute$1326                0         0                                   0
+  init $flatten\gold.$auto$rename.cc:496:execute$40                      1         1                                   1
+  init $flatten\gold.$auto$rename.cc:496:execute$41 [6:0]              106        6a                             1101010
+  init \gate.gpioout [6:0]                                             116        74                             1110100
+  init \gate.gpioout [7]                                                 0         0                                   0
+  init \gold.gpioout                                                   116        74                            01110100
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     1 \__pi_clk                                                         0         0                                   0
+     1 \__pi_cs                                                          1         1                                   1
+     1 \__pi_sr_in                                                       1         1                                   1
+     1 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     1 \__po_gpioout__assert.in_gate                                   116        74                            01110100
+     1 \__po_gpioout__assert.in_gold                                   116        74                            01110100
+     1 \__po_gpioout__assert.okay                                        1         1                                   1
+     1 \__po_gpioout__gate                                             116        74                            01110100
+     1 \__po_gpioout__gold                                             116        74                            01110100
+     1 \gate.__pi_clk                                                    0         0                                   0
+     1 \gate.__pi_cs                                                     1         1                                   1
+     1 \gate.__pi_sr_in                                                  1         1                                   1
+     1 \gate.__po_gpioout                                              116        74                            01110100
+     1 \gate.clk                                                         0         0                                   0
+     1 \gate.cs                                                          1         1                                   1
+     1 \gate.gpioout                                                   116        74                            01110100
+     1 \gate.sr_in                                                       1         1                                   1
+     1 \gold.__pi_clk                                                    0         0                                   0
+     1 \gold.__pi_cs                                                     1         1                                   1
+     1 \gold.__pi_sr_in                                                  1         1                                   1
+     1 \gold.__po_gpioout                                              116        74                            01110100
+     1 \gold.clk                                                         0         0                                   0
+     1 \gold.cs                                                          1         1                                   1
+     1 \gold.gpioout                                                   116        74                            01110100
+     1 \gold.sr_in                                                       1         1                                   1
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     2 \__pi_clk                                                         0         0                                   0
+     2 \__pi_cs                                                          0         0                                   0
+     2 \__pi_sr_in                                                       1         1                                   1
+     2 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     2 \__po_gpioout__assert.in_gate                                   116        74                            01110100
+     2 \__po_gpioout__assert.in_gold                                   116        74                            01110100
+     2 \__po_gpioout__assert.okay                                        1         1                                   1
+     2 \__po_gpioout__gate                                             116        74                            01110100
+     2 \__po_gpioout__gold                                             116        74                            01110100
+     2 \gate.__pi_clk                                                    0         0                                   0
+     2 \gate.__pi_cs                                                     0         0                                   0
+     2 \gate.__pi_sr_in                                                  1         1                                   1
+     2 \gate.__po_gpioout                                              116        74                            01110100
+     2 \gate.clk                                                         0         0                                   0
+     2 \gate.cs                                                          0         0                                   0
+     2 \gate.gpioout                                                   116        74                            01110100
+     2 \gate.sr_in                                                       1         1                                   1
+     2 \gold.__pi_clk                                                    0         0                                   0
+     2 \gold.__pi_cs                                                     0         0                                   0
+     2 \gold.__pi_sr_in                                                  1         1                                   1
+     2 \gold.__po_gpioout                                              116        74                            01110100
+     2 \gold.clk                                                         0         0                                   0
+     2 \gold.cs                                                          0         0                                   0
+     2 \gold.gpioout                                                   116        74                            01110100
+     2 \gold.sr_in                                                       1         1                                   1
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     3 \__pi_clk                                                         0         0                                   0
+     3 \__pi_cs                                                          1         1                                   1
+     3 \__pi_sr_in                                                       0         0                                   0
+     3 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     3 \__po_gpioout__assert.in_gate                                   116        74                            01110100
+     3 \__po_gpioout__assert.in_gold                                   116        74                            01110100
+     3 \__po_gpioout__assert.okay                                        1         1                                   1
+     3 \__po_gpioout__gate                                             116        74                            01110100
+     3 \__po_gpioout__gold                                             116        74                            01110100
+     3 \gate.__pi_clk                                                    0         0                                   0
+     3 \gate.__pi_cs                                                     1         1                                   1
+     3 \gate.__pi_sr_in                                                  0         0                                   0
+     3 \gate.__po_gpioout                                              116        74                            01110100
+     3 \gate.clk                                                         0         0                                   0
+     3 \gate.cs                                                          1         1                                   1
+     3 \gate.gpioout                                                   116        74                            01110100
+     3 \gate.sr_in                                                       0         0                                   0
+     3 \gold.__pi_clk                                                    0         0                                   0
+     3 \gold.__pi_cs                                                     1         1                                   1
+     3 \gold.__pi_sr_in                                                  0         0                                   0
+     3 \gold.__po_gpioout                                              116        74                            01110100
+     3 \gold.clk                                                         0         0                                   0
+     3 \gold.cs                                                          1         1                                   1
+     3 \gold.gpioout                                                   116        74                            01110100
+     3 \gold.sr_in                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     4 \__pi_clk                                                         0         0                                   0
+     4 \__pi_cs                                                          0         0                                   0
+     4 \__pi_sr_in                                                       0         0                                   0
+     4 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     4 \__po_gpioout__assert.in_gate                                   117        75                            01110101
+     4 \__po_gpioout__assert.in_gold                                   117        75                            01110101
+     4 \__po_gpioout__assert.okay                                        1         1                                   1
+     4 \__po_gpioout__gate                                             117        75                            01110101
+     4 \__po_gpioout__gold                                             117        75                            01110101
+     4 \gate.__pi_clk                                                    0         0                                   0
+     4 \gate.__pi_cs                                                     0         0                                   0
+     4 \gate.__pi_sr_in                                                  0         0                                   0
+     4 \gate.__po_gpioout                                              117        75                            01110101
+     4 \gate.clk                                                         0         0                                   0
+     4 \gate.cs                                                          0         0                                   0
+     4 \gate.gpioout                                                   117        75                            01110101
+     4 \gate.sr_in                                                       0         0                                   0
+     4 \gold.__pi_clk                                                    0         0                                   0
+     4 \gold.__pi_cs                                                     0         0                                   0
+     4 \gold.__pi_sr_in                                                  0         0                                   0
+     4 \gold.__po_gpioout                                              117        75                            01110101
+     4 \gold.clk                                                         0         0                                   0
+     4 \gold.cs                                                          0         0                                   0
+     4 \gold.gpioout                                                   117        75                            01110101
+     4 \gold.sr_in                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     5 \__pi_clk                                                         0         0                                   0
+     5 \__pi_cs                                                          1         1                                   1
+     5 \__pi_sr_in                                                       0         0                                   0
+     5 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     5 \__po_gpioout__assert.in_gate                                   117        75                            01110101
+     5 \__po_gpioout__assert.in_gold                                   117        75                            01110101
+     5 \__po_gpioout__assert.okay                                        1         1                                   1
+     5 \__po_gpioout__gate                                             117        75                            01110101
+     5 \__po_gpioout__gold                                             117        75                            01110101
+     5 \gate.__pi_clk                                                    0         0                                   0
+     5 \gate.__pi_cs                                                     1         1                                   1
+     5 \gate.__pi_sr_in                                                  0         0                                   0
+     5 \gate.__po_gpioout                                              117        75                            01110101
+     5 \gate.clk                                                         0         0                                   0
+     5 \gate.cs                                                          1         1                                   1
+     5 \gate.gpioout                                                   117        75                            01110101
+     5 \gate.sr_in                                                       0         0                                   0
+     5 \gold.__pi_clk                                                    0         0                                   0
+     5 \gold.__pi_cs                                                     1         1                                   1
+     5 \gold.__pi_sr_in                                                  0         0                                   0
+     5 \gold.__po_gpioout                                              117        75                            01110101
+     5 \gold.clk                                                         0         0                                   0
+     5 \gold.cs                                                          1         1                                   1
+     5 \gold.gpioout                                                   117        75                            01110101
+     5 \gold.sr_in                                                       0         0                                   0
+  ---- ------------------------------------------------------- ----------- --------- -----------------------------------
+     6 \__pi_clk                                                         0         0                                   0
+     6 \__pi_cs                                                          1         1                                   1
+     6 \__pi_sr_in                                                       0         0                                   0
+     6 \__po_gpioout__assert.i                                           8         8    00000000000000000000000000001000
+     6 \__po_gpioout__assert.in_gate                                   117        75                            01110101
+     6 \__po_gpioout__assert.in_gold                                    85        55                            01010101
+     6 \__po_gpioout__assert.okay                                        0         0                                   0
+     6 \__po_gpioout__gate                                             117        75                            01110101
+     6 \__po_gpioout__gold                                              85        55                            01010101
+     6 \gate.__pi_clk                                                    0         0                                   0
+     6 \gate.__pi_cs                                                     1         1                                   1
+     6 \gate.__pi_sr_in                                                  0         0                                   0
+     6 \gate.__po_gpioout                                              117        75                            01110101
+     6 \gate.clk                                                         0         0                                   0
+     6 \gate.cs                                                          1         1                                   1
+     6 \gate.gpioout                                                   117        75                            01110101
+     6 \gate.sr_in                                                       0         0                                   0
+     6 \gold.__pi_clk                                                    0         0                                   0
+     6 \gold.__pi_cs                                                     1         1                                   1
+     6 \gold.__pi_sr_in                                                  0         0                                   0
+     6 \gold.__po_gpioout                                               85        55                            01010101
+     6 \gold.clk                                                         0         0                                   0
+     6 \gold.cs                                                          1         1                                   1
+     6 \gold.gpioout                                                    85        55                            01010101
+     6 \gold.sr_in                                                       0         0                                   0
+
+Reached maximum number of time steps -> proof failed.
+Dumping SAT model to VCD file trace.vcd
+
+   ______                   ___       ___       _ _            _ _ 
+  (_____ \                 / __)     / __)     (_) |          | | |
+   _____) )___ ___   ___ _| |__    _| |__ _____ _| | _____  __| | |
+  |  ____/ ___) _ \ / _ (_   __)  (_   __|____ | | || ___ |/ _  |_|
+  | |   | |  | |_| | |_| || |       | |  / ___ | | || ____( (_| |_ 
+  |_|   |_|   \___/ \___/ |_|       |_|  \_____|_|\_)_____)\____|_|
+
+End of script. Logfile hash: bb61dd6356, time: 0.09s, user: 0.09s, system: 0.00s, MEM: 41.97 MB peak
+Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)
+Time spent: 96% 1x sat (0 sec), 0% 2x read_verilog (0 sec), ...

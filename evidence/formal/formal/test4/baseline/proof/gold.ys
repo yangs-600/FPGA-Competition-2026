@@ -1,0 +1,9 @@
+read_verilog "/mnt/d/fpga-win-native-20261103/shared-runtime-windows-evidence/competition_case/test4/test4.v"
+prep -top test4 -flatten
+memory_map
+opt_clean
+rename -hide
+opt_clean
+check -initdrv
+setundef -undriven -undef
+write_rtlil /home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/test4/baseline/proof/gold.il

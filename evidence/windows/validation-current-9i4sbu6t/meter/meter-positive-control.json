@@ -1,0 +1,12 @@
+{
+  "exit_code": 0,
+  "cpu_seconds": 0.734375,
+  "root_cpu_seconds": 0.15625,
+  "wall_seconds": 0.810585600000195,
+  "peak_working_set_bytes": 83390464,
+  "total_job_processes": 3,
+  "active_job_processes": 0,
+  "limit_terminated_processes": 0,
+  "memory_counter_reads": 61,
+  "final_memory_counter_read": true
+}

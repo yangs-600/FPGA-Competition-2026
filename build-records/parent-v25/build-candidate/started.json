@@ -1,0 +1,13 @@
+{
+  "utc": "2026-11-03T06:50:59.691738+00:00",
+  "command": [
+    "D:\\fpga-v14-work\\msys64\\ucrt64\\bin\\cmake.exe",
+    "--build",
+    "D:\\fpga-win-native-20261103\\minsize-fixed-build\\build\\candidate",
+    "--target",
+    "yosys",
+    "--parallel",
+    "2"
+  ],
+  "candidate_execution": false
+}

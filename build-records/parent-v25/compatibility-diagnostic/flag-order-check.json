@@ -1,0 +1,15 @@
+{
+  "command": [
+    "D:\\fpga-v14-work\\msys64\\ucrt64\\bin\\g++.exe",
+    "-std=c++20",
+    "-fno-declone-ctor-dtor",
+    "-Os",
+    "D:\\fpga-win-native-20261103\\move-ctor-diagnostic-20261103-002\\move_ctor.cc",
+    "-o",
+    "D:\\fpga-win-native-20261103\\move-ctor-diagnostic-20261103-002\\nodeclone_then_os.exe"
+  ],
+  "returncode": 0,
+  "flag_order": "-fno-declone-ctor-dtor before -Os, matching CMAKE_CXX_FLAGS precedence",
+  "exe_sha256": "c1e2057e09b56f9b900fe31af52fe3436278ad093abeac64b62218eb17b755f6",
+  "executable_executions": 0
+}

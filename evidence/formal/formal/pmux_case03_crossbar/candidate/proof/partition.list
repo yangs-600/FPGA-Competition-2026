@@ -1,0 +1,2 @@
+pmux_case03_crossbar pmux_case03_crossbar.data_out.5 xbits : data_out[9:5]
+pmux_case03_crossbar pmux_case03_crossbar.data_out.0 xbits : data_out

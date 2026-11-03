@@ -1,2 +1,0 @@
-test3 test3.sr_out xbits : sr_out[0]
-test3 test3.gpioout xbits : gpioout[7:0]

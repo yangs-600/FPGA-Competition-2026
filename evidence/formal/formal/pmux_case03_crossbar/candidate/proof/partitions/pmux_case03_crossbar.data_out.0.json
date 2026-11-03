@@ -1,0 +1,76 @@
+{
+  "partition": {
+    "index": 1,
+    "name": "pmux_case03_crossbar.data_out.0",
+    "inbits": {
+      "clk": [
+        0
+      ],
+      "ctrl_in": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "data_in": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "en": [
+        0
+      ],
+      "rst": [
+        0
+      ]
+    },
+    "outbits": {
+      "data_out": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.pmux_case03_crossbar.data_out.0",
+    "internal": {},
+    "unused": {},
+    "cellcount": 43,
+    "bitcount": 173
+  },
+  "gate_module": {
+    "name": "gold.pmux_case03_crossbar.data_out.0",
+    "internal": {},
+    "unused": {},
+    "cellcount": 508,
+    "bitcount": 542
+  }
+}

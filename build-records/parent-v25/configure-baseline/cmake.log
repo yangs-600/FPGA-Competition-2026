@@ -1,0 +1,132 @@
+-- The C compiler identification is GNU 16.2.0
+-- The CXX compiler identification is GNU 16.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: D:/fpga-v14-work/msys64/ucrt64/bin/gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: D:/fpga-v14-work/msys64/ucrt64/bin/g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found FLEX: D:/fpga-v14-work/msys64/usr/bin/flex.exe (found suitable version "2.6.4", minimum required is "2.6")
+-- Found BISON: D:/fpga-v14-work/msys64/usr/bin/bison.exe (found suitable version "3.8.2", minimum required is "3.6")
+-- Found Python3: C:/Python314/python.exe (found suitable version "3.14.6", minimum required is "3.7") found components: Interpreter
+-- Looking for glob
+-- Looking for glob - not found
+-- Looking for system
+-- Looking for system - found
+-- Looking for popen
+-- Looking for popen - found
+-- Performing Test HAVE_PTHREAD_CREATE
+-- Performing Test HAVE_PTHREAD_CREATE - Success
+-- Found PkgConfig: D:/fpga-v14-work/msys64/ucrt64/bin/pkg-config.exe (found version "3.0.7")
+-- Checking for module 'zlib'
+--   Found zlib, version 1.3.2
+-- Checking for module 'libffi'
+--   Found libffi, version 3.8.0
+-- Checking for module 'libedit'
+--   Package 'libedit' not found
+-- Checking for module 'readline'
+--   Package 'readline' not found
+-- Checking for module 'tcl'
+--   Package 'tcl' not found
+-- Found GTest: C:/anacoda/anzahung/Library/lib/cmake/GTest/GTestConfig.cmake (found version "1.11.0")
+-- 
+-- The following packages have been found:
+
+ * FLEX (required version >= 2.6), The Fast Lexical Analyzer, <https://github.com/westes/flex>
+   Compiling the Verilog lexer
+ * BISON (required version >= 3.6), The Yacc-compatible Parser Generator, <https://www.gnu.org/software/bison/>
+   Compiling the Verilog parser
+ * Python3 (required version >= 3.7), Dynamic programming language (Interpreter), <https://www.python.org/>
+   Generating data files
+   Running external SMT2 solvers
+ * PkgConfig, Library metadata manager, <https://www.freedesktop.org/wiki/Software/pkg-config/>
+   Discovering dependencies
+ * zlib, A massively spiffy yet delicately unobtrusive compression library, <https://github.com/madler/zlib>
+   Handling Gzip and FST file formats
+ * libffi, A Portable Foreign Function Interface Library, <https://sourceware.org/libffi/>
+   Implementing Verilog DPI-C
+ * GTest, C++ testing and mocking framework by Google, <https://google.github.io/googletest/>
+   Running unit tests
+
+-- The following packages have not been found:
+
+ * editline, Line editing and history library (BSD), <https://www.thrysoee.dk/editline/>
+   Enhancing the command prompt
+ * readline, Line editing and history library (GPL), <https://tiswww.case.edu/php/chet/readline/rltop.html>
+   Enhancing the command prompt
+ * tcl, Dynamic programming language, <https://www.tcl-lang.org/>
+   Parsing SDC constraint files
+   Binding Yosys API
+
+-- The following features have been enabled:
+
+ * have_spawn, Passes that invoke external tools
+ * have_threads, Multithreaded netlist operations
+ * have_plugins, Dynamically loadable binary plugins
+ * with_abc, Production-quality logic synthesis flow
+ * with_zlib, Transparent Gzip decompression and FST file format support
+ * with_libffi, Verilog DPI-C foreign function interface
+
+-- The following features have been disabled:
+
+ * have_glob, Glob expansion in filenames
+ * with_readline, Using readline for prompt editing and history
+ * with_editline, Using editline for prompt editing and history
+ * with_tcl, Tcl scripting and SDC parsing
+ * with_python, Python scripting and embedding
+ * with_verific, Verific frontend integration
+
+-- Configuring Yosys 0.69
+-- Git commit 9f75ca1f9834a39a863915b5dae0c7b1e33533bc
+-- Building ABC: C:/Program Files (x86)/yosys/bin/yosys-abc.exe
+-- {fmt} version: 12.2.1
+-- Build type: MinSizeRel
+-- C++ modules support is disabled. Enable with -DTOMLPLUSPLUS_BUILD_MODULES=ON
+-- Found Threads: TRUE
+-- Performing Test HAVE_C_-fpermissive
+-- Performing Test HAVE_C_-fpermissive - Success
+-- Performing Test HAVE_C_-fno-exceptions
+-- Performing Test HAVE_C_-fno-exceptions - Success
+-- Performing Test HAVE_C_-Wno-write-strings
+-- Performing Test HAVE_C_-Wno-write-strings - Success
+-- Performing Test HAVE_C_-Wno-changes-meaning
+-- Performing Test HAVE_C_-Wno-changes-meaning - Failed
+-- Performing Test HAVE_C_-Wno-attributes
+-- Performing Test HAVE_C_-Wno-attributes - Success
+-- Performing Test HAVE_C_-Wno-deprecated-declarations
+-- Performing Test HAVE_C_-Wno-deprecated-declarations - Success
+-- Performing Test HAVE_C_-Wno-deprecated-comma-subscript
+-- Performing Test HAVE_C_-Wno-deprecated-comma-subscript - Failed
+-- Performing Test HAVE_C_-Wno-format
+-- Performing Test HAVE_C_-Wno-format - Success
+-- Performing Test HAVE_C_-Wno-constant-logical-operand
+-- Performing Test HAVE_C_-Wno-constant-logical-operand - Failed
+-- Performing Test HAVE_C_-Wno-sizeof-pointer-memaccess
+-- Performing Test HAVE_C_-Wno-sizeof-pointer-memaccess - Success
+-- Performing Test HAVE_CXX_-fpermissive
+-- Performing Test HAVE_CXX_-fpermissive - Success
+-- Performing Test HAVE_CXX_-fno-exceptions
+-- Performing Test HAVE_CXX_-fno-exceptions - Success
+-- Performing Test HAVE_CXX_-Wno-write-strings
+-- Performing Test HAVE_CXX_-Wno-write-strings - Success
+-- Performing Test HAVE_CXX_-Wno-changes-meaning
+-- Performing Test HAVE_CXX_-Wno-changes-meaning - Success
+-- Performing Test HAVE_CXX_-Wno-attributes
+-- Performing Test HAVE_CXX_-Wno-attributes - Success
+-- Performing Test HAVE_CXX_-Wno-deprecated-declarations
+-- Performing Test HAVE_CXX_-Wno-deprecated-declarations - Success
+-- Performing Test HAVE_CXX_-Wno-deprecated-comma-subscript
+-- Performing Test HAVE_CXX_-Wno-deprecated-comma-subscript - Failed
+-- Performing Test HAVE_CXX_-Wno-format
+-- Performing Test HAVE_CXX_-Wno-format - Success
+-- Performing Test HAVE_CXX_-Wno-constant-logical-operand
+-- Performing Test HAVE_CXX_-Wno-constant-logical-operand - Failed
+-- Performing Test HAVE_CXX_-Wno-sizeof-pointer-memaccess
+-- Performing Test HAVE_CXX_-Wno-sizeof-pointer-memaccess - Success
+-- Configuring done (30.8s)
+-- Generating done (1.6s)
+-- Build files have been written to: D:/fpga-win-native-20261103/minsize-fixed-build/build/baseline

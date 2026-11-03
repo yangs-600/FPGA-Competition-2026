@@ -1,0 +1,1440 @@
+{
+  "creator": "Yosys 0.69 (git sha1 9f75ca1f9-dirty, Release, GNU /usr/bin/g++ 11.4.0)",
+  "modules": {
+    "dffeas": {
+      "attributes": {
+        "blackbox": "00000000000000000000000000000001",
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:1.1-10.10"
+      },
+      "parameter_default_values": {
+        "is_wysiwyg": "false",
+        "power_up": "dontcare"
+      },
+      "ports": {
+        "d": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "clrn": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "prn": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "ena": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "asdata": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "aload": {
+          "direction": "input",
+          "bits": [ 8 ]
+        },
+        "sclr": {
+          "direction": "input",
+          "bits": [ 9 ]
+        },
+        "sload": {
+          "direction": "input",
+          "bits": [ 10 ]
+        },
+        "q": {
+          "direction": "output",
+          "bits": [ 11 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "aload": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:1.47-1.52"
+          }
+        },
+        "asdata": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:1.40-1.46"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:1.23-1.26"
+          }
+        },
+        "clrn": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:1.27-1.31"
+          }
+        },
+        "d": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:1.21-1.22"
+          }
+        },
+        "ena": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:1.36-1.39"
+          }
+        },
+        "prn": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:1.32-1.35"
+          }
+        },
+        "q": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:1.75-1.76"
+          }
+        },
+        "sclr": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:1.53-1.57"
+          }
+        },
+        "sload": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "/home/yangsenyu/fpga-windows-native-v25-20261103/proof-shared-runtime-once/formal/formal_dffeas.v:1.58-1.63"
+          }
+        }
+      }
+    },
+    "test4": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:1.1-85.10"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "reset_n": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "ena": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "datain": {
+          "direction": "input",
+          "bits": [ 5, 6, 7, 8, 9 ]
+        },
+        "dataout": {
+          "direction": "output",
+          "bits": [ 10, 11, 12, 13, 14, 15 ]
+        },
+        "only_5b": {
+          "direction": "output",
+          "bits": [ 16 ]
+        },
+        "datain_5bis7": {
+          "direction": "output",
+          "bits": [ 17 ]
+        },
+        "data_dp": {
+          "direction": "output",
+          "bits": [ 18 ]
+        },
+        "data_dn": {
+          "direction": "output",
+          "bits": [ 19 ]
+        }
+      },
+      "cells": {
+        "data_dn_dffeas_q": {
+          "hide_name": 0,
+          "type": "dffeas",
+          "parameters": {
+            "is_wysiwyg": "TRUE",
+            "power_up": "low"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:30.1-83.4|D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share/intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "aload": "input",
+            "asdata": "input",
+            "clk": "input",
+            "clrn": "input",
+            "d": "input",
+            "ena": "input",
+            "prn": "input",
+            "q": "output",
+            "sclr": "input",
+            "sload": "input"
+          },
+          "connections": {
+            "aload": [ "0" ],
+            "asdata": [ "0" ],
+            "clk": [ 2 ],
+            "clrn": [ 3 ],
+            "d": [ 20 ],
+            "ena": [ "1" ],
+            "prn": [ "1" ],
+            "q": [ 19 ],
+            "sclr": [ "0" ],
+            "sload": [ "0" ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "01000000",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 4, 21 ],
+            "Y": [ 20 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0000000000000100",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 4, 21, 22 ],
+            "Y": [ 23 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1111001011110000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4, 24, 23, 25 ],
+            "Y": [ 26 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0010",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 27 ],
+            "Y": [ 25 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_A_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0010101010101000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 7, 6, 5 ],
+            "Y": [ 27 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_A_1_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0101010001000000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 7, 6, 5 ],
+            "Y": [ 24 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1100110000001000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 4, 28, 29 ],
+            "Y": [ 30 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_1": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4, 31, 32, 33 ],
+            "Y": [ 34 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_1_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0000000000110010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7, 6, 5, 35 ],
+            "Y": [ 33 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_1_A_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0000000100010001",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 8, 7, 5 ],
+            "Y": [ 35 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_1_A_1_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1000000000000000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 8, 7, 5 ],
+            "Y": [ 31 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_1_A_2_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0000000000000001",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 8, 7, 5 ],
+            "Y": [ 32 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_2": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "11100000",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 36, 37 ],
+            "Y": [ 38 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_2_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0111111000010111",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 7, 6, 5 ],
+            "Y": [ 36 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_2_A_1_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1111000011010000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 5, 4, 39 ],
+            "Y": [ 37 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_3": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1100010010000000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 4, 27, 40 ],
+            "Y": [ 41 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_3_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "00001011",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5, 39, 24 ],
+            "Y": [ 40 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_3_A_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "00000010",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 7, 6 ],
+            "Y": [ 39 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_4": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "10001100",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 4, 42 ],
+            "Y": [ 43 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_4_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0111111111111110",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 7, 6, 5 ],
+            "Y": [ 42 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0011001100110010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 7, 6, 5 ],
+            "Y": [ 28 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_A_1_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0000110000001101",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 44, 45, 46 ],
+            "Y": [ 29 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_A_1_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1010101010101000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 7, 6, 5 ],
+            "Y": [ 46 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_A_1_$lut_Y_A_1_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "00101010",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7, 6, 5 ],
+            "Y": [ 44 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_A_1_$lut_Y_A_2_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0001000000000101",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 7, 6, 5 ],
+            "Y": [ 45 ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0010100010000000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 7, 6, 5 ],
+            "Y": [ 21 ]
+          }
+        },
+        "data_dp_dffeas_q": {
+          "hide_name": 0,
+          "type": "dffeas",
+          "parameters": {
+            "is_wysiwyg": "TRUE",
+            "power_up": "low"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:30.1-83.4|D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share/intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "aload": "input",
+            "asdata": "input",
+            "clk": "input",
+            "clrn": "input",
+            "d": "input",
+            "ena": "input",
+            "prn": "input",
+            "q": "output",
+            "sclr": "input",
+            "sload": "input"
+          },
+          "connections": {
+            "aload": [ "0" ],
+            "asdata": [ "0" ],
+            "clk": [ 2 ],
+            "clrn": [ 3 ],
+            "d": [ 47 ],
+            "ena": [ "1" ],
+            "prn": [ "1" ],
+            "q": [ 18 ],
+            "sclr": [ "0" ],
+            "sload": [ "0" ]
+          }
+        },
+        "data_dp_dffeas_q_d_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0001011000000000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7, 6, 5, 48 ],
+            "Y": [ 47 ]
+          }
+        },
+        "data_dp_dffeas_q_d_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "00100000",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 8, 4 ],
+            "Y": [ 48 ]
+          }
+        },
+        "datain_5bis7_dffeas_q": {
+          "hide_name": 0,
+          "type": "dffeas",
+          "parameters": {
+            "is_wysiwyg": "TRUE",
+            "power_up": "low"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:30.1-83.4|D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share/intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "aload": "input",
+            "asdata": "input",
+            "clk": "input",
+            "clrn": "input",
+            "d": "input",
+            "ena": "input",
+            "prn": "input",
+            "q": "output",
+            "sclr": "input",
+            "sload": "input"
+          },
+          "connections": {
+            "aload": [ "0" ],
+            "asdata": [ "0" ],
+            "clk": [ 2 ],
+            "clrn": [ "1" ],
+            "d": [ 49 ],
+            "ena": [ 3 ],
+            "prn": [ "1" ],
+            "q": [ 17 ],
+            "sclr": [ "0" ],
+            "sload": [ "0" ]
+          }
+        },
+        "datain_5bis7_dffeas_q_d_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "01000000",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 4, 22 ],
+            "Y": [ 49 ]
+          }
+        },
+        "datain_5bis7_dffeas_q_d_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0100000000000000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 7, 6, 5 ],
+            "Y": [ 22 ]
+          }
+        },
+        "dataout_dffeas_q": {
+          "hide_name": 0,
+          "type": "dffeas",
+          "parameters": {
+            "is_wysiwyg": "TRUE",
+            "power_up": "low"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:30.1-83.4|D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share/intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "aload": "input",
+            "asdata": "input",
+            "clk": "input",
+            "clrn": "input",
+            "d": "input",
+            "ena": "input",
+            "prn": "input",
+            "q": "output",
+            "sclr": "input",
+            "sload": "input"
+          },
+          "connections": {
+            "aload": [ "0" ],
+            "asdata": [ "0" ],
+            "clk": [ 2 ],
+            "clrn": [ 3 ],
+            "d": [ 34 ],
+            "ena": [ "1" ],
+            "prn": [ "1" ],
+            "q": [ 14 ],
+            "sclr": [ "0" ],
+            "sload": [ "0" ]
+          }
+        },
+        "dataout_dffeas_q_1": {
+          "hide_name": 0,
+          "type": "dffeas",
+          "parameters": {
+            "is_wysiwyg": "TRUE",
+            "power_up": "low"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:30.1-83.4|D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share/intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "aload": "input",
+            "asdata": "input",
+            "clk": "input",
+            "clrn": "input",
+            "d": "input",
+            "ena": "input",
+            "prn": "input",
+            "q": "output",
+            "sclr": "input",
+            "sload": "input"
+          },
+          "connections": {
+            "aload": [ "0" ],
+            "asdata": [ "0" ],
+            "clk": [ 2 ],
+            "clrn": [ 3 ],
+            "d": [ 38 ],
+            "ena": [ "1" ],
+            "prn": [ "1" ],
+            "q": [ 15 ],
+            "sclr": [ "0" ],
+            "sload": [ "0" ]
+          }
+        },
+        "dataout_dffeas_q_2": {
+          "hide_name": 0,
+          "type": "dffeas",
+          "parameters": {
+            "is_wysiwyg": "TRUE",
+            "power_up": "low"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:30.1-83.4|D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share/intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "aload": "input",
+            "asdata": "input",
+            "clk": "input",
+            "clrn": "input",
+            "d": "input",
+            "ena": "input",
+            "prn": "input",
+            "q": "output",
+            "sclr": "input",
+            "sload": "input"
+          },
+          "connections": {
+            "aload": [ "0" ],
+            "asdata": [ "0" ],
+            "clk": [ 2 ],
+            "clrn": [ 3 ],
+            "d": [ 43 ],
+            "ena": [ "1" ],
+            "prn": [ "1" ],
+            "q": [ 11 ],
+            "sclr": [ "0" ],
+            "sload": [ "0" ]
+          }
+        },
+        "dataout_dffeas_q_3": {
+          "hide_name": 0,
+          "type": "dffeas",
+          "parameters": {
+            "is_wysiwyg": "TRUE",
+            "power_up": "low"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:30.1-83.4|D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share/intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "aload": "input",
+            "asdata": "input",
+            "clk": "input",
+            "clrn": "input",
+            "d": "input",
+            "ena": "input",
+            "prn": "input",
+            "q": "output",
+            "sclr": "input",
+            "sload": "input"
+          },
+          "connections": {
+            "aload": [ "0" ],
+            "asdata": [ "0" ],
+            "clk": [ 2 ],
+            "clrn": [ 3 ],
+            "d": [ 26 ],
+            "ena": [ "1" ],
+            "prn": [ "1" ],
+            "q": [ 10 ],
+            "sclr": [ "0" ],
+            "sload": [ "0" ]
+          }
+        },
+        "dataout_dffeas_q_4": {
+          "hide_name": 0,
+          "type": "dffeas",
+          "parameters": {
+            "is_wysiwyg": "TRUE",
+            "power_up": "low"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:30.1-83.4|D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share/intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "aload": "input",
+            "asdata": "input",
+            "clk": "input",
+            "clrn": "input",
+            "d": "input",
+            "ena": "input",
+            "prn": "input",
+            "q": "output",
+            "sclr": "input",
+            "sload": "input"
+          },
+          "connections": {
+            "aload": [ "0" ],
+            "asdata": [ "0" ],
+            "clk": [ 2 ],
+            "clrn": [ 3 ],
+            "d": [ 41 ],
+            "ena": [ "1" ],
+            "prn": [ "1" ],
+            "q": [ 12 ],
+            "sclr": [ "0" ],
+            "sload": [ "0" ]
+          }
+        },
+        "dataout_dffeas_q_5": {
+          "hide_name": 0,
+          "type": "dffeas",
+          "parameters": {
+            "is_wysiwyg": "TRUE",
+            "power_up": "low"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:30.1-83.4|D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share/intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "aload": "input",
+            "asdata": "input",
+            "clk": "input",
+            "clrn": "input",
+            "d": "input",
+            "ena": "input",
+            "prn": "input",
+            "q": "output",
+            "sclr": "input",
+            "sload": "input"
+          },
+          "connections": {
+            "aload": [ "0" ],
+            "asdata": [ "0" ],
+            "clk": [ 2 ],
+            "clrn": [ 3 ],
+            "d": [ 30 ],
+            "ena": [ "1" ],
+            "prn": [ "1" ],
+            "q": [ 13 ],
+            "sclr": [ "0" ],
+            "sload": [ "0" ]
+          }
+        },
+        "only_5b_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "01",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 50 ],
+            "Y": [ 16 ]
+          }
+        },
+        "only_5b_$lut_Y_A_dffeas_q": {
+          "hide_name": 0,
+          "type": "dffeas",
+          "parameters": {
+            "is_wysiwyg": "TRUE",
+            "power_up": "low"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:30.1-83.4|D:\\fpga-win-native-20261103\\trial-shared-runtime-fresh\\share/intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "aload": "input",
+            "asdata": "input",
+            "clk": "input",
+            "clrn": "input",
+            "d": "input",
+            "ena": "input",
+            "prn": "input",
+            "q": "output",
+            "sclr": "input",
+            "sload": "input"
+          },
+          "connections": {
+            "aload": [ "0" ],
+            "asdata": [ "0" ],
+            "clk": [ 2 ],
+            "clrn": [ 3 ],
+            "d": [ 51 ],
+            "ena": [ "1" ],
+            "prn": [ "1" ],
+            "q": [ 50 ],
+            "sclr": [ "0" ],
+            "sload": [ "0" ]
+          }
+        },
+        "only_5b_$lut_Y_A_dffeas_q_d_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "01001111",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 52, 53 ],
+            "Y": [ 51 ]
+          }
+        },
+        "only_5b_$lut_Y_A_dffeas_q_d_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1100110011000100",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 4, 54, 55 ],
+            "Y": [ 53 ]
+          }
+        },
+        "only_5b_$lut_Y_A_dffeas_q_d_$lut_Y_A_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0001010101010100",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 7, 6, 5 ],
+            "Y": [ 54 ]
+          }
+        },
+        "only_5b_$lut_Y_A_dffeas_q_d_$lut_Y_A_$lut_Y_A_1_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0000001000101000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 7, 6, 5 ],
+            "Y": [ 55 ]
+          }
+        },
+        "only_5b_$lut_Y_A_dffeas_q_d_$lut_Y_A_1_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1100000100010111",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 7, 6, 5 ],
+            "Y": [ 52 ]
+          }
+        }
+      },
+      "netnames": {
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:14.8-14.11"
+          }
+        },
+        "data_dn": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:22.9-22.16"
+          }
+        },
+        "data_dn_dffeas_q_d": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:30.1-83.4"
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_A": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_A_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_A_1": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y": {
+          "hide_name": 0,
+          "bits": [ 26, 43, 41, 30, 34, 38 ],
+          "attributes": {
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:30.1-83.4"
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_1_A": {
+          "hide_name": 0,
+          "bits": [ 33 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_1_A_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [ 35 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_1_A_1": {
+          "hide_name": 0,
+          "bits": [ 31 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_1_A_2": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_2_A": {
+          "hide_name": 0,
+          "bits": [ 36 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_2_A_1": {
+          "hide_name": 0,
+          "bits": [ 37 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_3_A": {
+          "hide_name": 0,
+          "bits": [ 40 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_3_A_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [ 39 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_4_A": {
+          "hide_name": 0,
+          "bits": [ 42 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [ 28 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_A_1": {
+          "hide_name": 0,
+          "bits": [ 29 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_A_1_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [ 46 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_A_1_$lut_Y_A_1": {
+          "hide_name": 0,
+          "bits": [ 44 ],
+          "attributes": {
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_A_Y_$lut_A_Y_$lut_Y_A_1_$lut_Y_A_2": {
+          "hide_name": 0,
+          "bits": [ 45 ],
+          "attributes": {
+          }
+        },
+        "data_dp": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:21.9-21.16"
+          }
+        },
+        "data_dp_dffeas_q_d": {
+          "hide_name": 0,
+          "bits": [ 47 ],
+          "attributes": {
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:30.1-83.4"
+          }
+        },
+        "data_dp_dffeas_q_d_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [ 48 ],
+          "attributes": {
+          }
+        },
+        "datain": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8, 9 ],
+          "attributes": {
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:17.12-17.18"
+          }
+        },
+        "datain_5bis7": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:20.9-20.21"
+          }
+        },
+        "datain_5bis7_dffeas_q_d": {
+          "hide_name": 0,
+          "bits": [ 49 ],
+          "attributes": {
+          }
+        },
+        "datain_5bis7_dffeas_q_d_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+          }
+        },
+        "dataout": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15 ],
+          "attributes": {
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:18.13-18.20"
+          }
+        },
+        "ena": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:16.8-16.11"
+          }
+        },
+        "only_5b": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:19.9-19.16"
+          }
+        },
+        "only_5b_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [ 50 ],
+          "attributes": {
+          }
+        },
+        "only_5b_$lut_Y_A_dffeas_q_d": {
+          "hide_name": 0,
+          "bits": [ 51 ],
+          "attributes": {
+          }
+        },
+        "only_5b_$lut_Y_A_dffeas_q_d_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [ 53 ],
+          "attributes": {
+          }
+        },
+        "only_5b_$lut_Y_A_dffeas_q_d_$lut_Y_A_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [ 54 ],
+          "attributes": {
+          }
+        },
+        "only_5b_$lut_Y_A_dffeas_q_d_$lut_Y_A_$lut_Y_A_1": {
+          "hide_name": 0,
+          "bits": [ 55 ],
+          "attributes": {
+          }
+        },
+        "only_5b_$lut_Y_A_dffeas_q_d_$lut_Y_A_1": {
+          "hide_name": 0,
+          "bits": [ 52 ],
+          "attributes": {
+          }
+        },
+        "reset_n": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "D:/fpga-win-native-20261103/trial-shared-runtime-fresh/competition_case/test4/test4.v:15.8-15.15"
+          }
+        }
+      }
+    }
+  }
+}

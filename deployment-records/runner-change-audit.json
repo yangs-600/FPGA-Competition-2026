@@ -1,0 +1,38 @@
+{
+  "status": "PASS_EXACT_PATH_ONLY_REPLACEMENTS",
+  "parent_runner_sha256": "0db05e1a8a3fde6edd9cc421e3449afa70caa4558178d2bd3e27b7739baaced6",
+  "new_runner_sha256": "8edf2322f8a25f6db8d3c7ad71b7d6174e8b9ebbe055cc8a8a56e0f342ed8baa",
+  "scope": [
+    "manifest physical path validation",
+    "role_file resolver",
+    "two Yosys executable path expressions",
+    "common package-root PATH and share YOSYS_DATDIR for both roles"
+  ],
+  "replacements": [
+    {
+      "label": "role_file resolver",
+      "occurrences": 1
+    },
+    {
+      "label": "colocated manifest validation",
+      "occurrences": 1
+    },
+    {
+      "label": "shared package-root PATH",
+      "occurrences": 1
+    },
+    {
+      "label": "shared YOSYS_DATDIR",
+      "occurrences": 1
+    },
+    {
+      "label": "physical EXE path",
+      "occurrences": 2
+    }
+  ],
+  "protected_measurement_section_sha256": "37c7a889cdab0ffbeee75ca72d178b391c29bab77362533732b9cfda32cade15",
+  "measurement_section_unchanged_after_two_exe_path_normalizations": true,
+  "meter_sha256": "2eb7ffc6564a40a09310e17be8e7b5746766ca148bbe1564d03cc533540496bf",
+  "warmups_reviews_thresholds_timing_memory_aggregation_unchanged": true,
+  "meter_self_test_and_measure_calls_unchanged": true
+}

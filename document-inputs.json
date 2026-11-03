@@ -1,0 +1,63 @@
+{
+  "schema": "windows-report-inputs-v1",
+  "status": "COMPLETE",
+  "runtime_root": ".",
+  "files": {
+    "windows_report": {
+      "path": "evidence/windows/report.json",
+      "sha256": "fecd7eb44ae0aa5df482a88f892f7ef8c16cd5d6ec4e82ac5d8375280e2a53b0"
+    },
+    "evidence_inventory": {
+      "path": "evidence/windows/evidence-inventory.json",
+      "sha256": "e88a9d18badd347a1367fd5521f8b9f27cb9cf5e1f757cb0c341704da9c4bfe0"
+    },
+    "runtime_manifest": {
+      "path": "evidence/windows/manifest.json",
+      "sha256": "2a258fd99ce775729658355f352773e668f862b3bada09bc88cd00fa955e56d5"
+    },
+    "formal_report": {
+      "path": "evidence/formal/formal/report.json",
+      "sha256": "73260427e9aa190185fbb4fe6311f6d2ef0768b20dd7b92f134a43e6a15ef5cd"
+    },
+    "proof_launch": {
+      "path": "evidence/formal/launch.json",
+      "sha256": "6530ba48f91162b92356fca1afde01f1be48aa32bfe71b8dcc7e5c04212912a9"
+    },
+    "package_manifest": {
+      "path": "release-status.json",
+      "sha256": "731f08c5fdedcac891807fec09cb57f5c7b5096364d17ee899719b068ca82588"
+    },
+    "pmux_source": {
+      "path": "source/pmux_competition_v11.cc",
+      "sha256": "75ed360b73180441fccbe0f5f8ed3f10e1d07147842d38eb74baedc133ce47d2"
+    },
+    "source_patch": {
+      "path": "source/synth-intel-competition.patch",
+      "sha256": "9a52af4ea1ffec9b5f15ed509b014855089ce35487e94455589aa9d7e0b6a073"
+    },
+    "pristine_source": {
+      "path": "source/yosys-0.69-pristine.tar.gz",
+      "sha256": "086045e23253917b93c71fc2d9db495df3c153cdc5d212bac505df7c4ad62e2f"
+    },
+    "faq": {
+      "path": "requirements/FAQ.xlsx",
+      "sha256": "dddf422c6945666f5e3548a8f582c363f3f3ab2051b88b7c7eb9251fd37a3c09"
+    },
+    "run_entry": {
+      "path": "run_cases.cmd",
+      "sha256": "92449eb8af9922479898a0aff795ebac8795fcb4ab53a6b3ff4ec370b644446c"
+    },
+    "rebuild_guide": {
+      "path": "source/BUILD_WINDOWS.md",
+      "sha256": "937b4095a19619d13e07df8a36d40cd92a7ccf9e8d870b096bc2dfdcee68a7ea"
+    },
+    "proof_guide": {
+      "path": "PROOF_REPLAY_GUIDE.md",
+      "sha256": "2f61ad542307d4b7023cd8c61e0a8cd12b6db163396d0f2dc061e4b9240b528d"
+    },
+    "requirements_guide": {
+      "path": "REQUIREMENTS_WINDOWS.md",
+      "sha256": "58b12e411462ddb888fbf96d1ba7ac04603315b07097cc5ff66554ce9a62034e"
+    }
+  }
+}

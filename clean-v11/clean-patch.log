@@ -1,9 +1,0 @@
-['git', 'apply', '--check', '/home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/competition-v11/synth-intel-competition.patch']
-error: 打补丁失败：passes/opt/CMakeLists.txt:91
-error: passes/opt/CMakeLists.txt：补丁未应用
-error: 打补丁失败：techlibs/intel/synth_intel.cc:209
-error: techlibs/intel/synth_intel.cc：补丁未应用
-error: 打补丁失败：techlibs/intel/CMakeLists.txt:27
-error: techlibs/intel/CMakeLists.txt：补丁未应用
-['git', 'apply', '--check', '/home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/competition-v11/synth-intel-competition.patch']
-['git', 'apply', '/home/ubuntu/FPGA/clean-v11/toolchains/yosys-0.69/competition-v11/synth-intel-competition.patch']

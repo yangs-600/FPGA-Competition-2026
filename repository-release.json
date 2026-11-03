@@ -1,0 +1,34 @@
+{
+  "schema": "repository-release-scope-v1",
+  "release_name": "windows-native-v26-final",
+  "release_payload_index_sha256": "daefcb876db83cc4766583ba188c234e126561aa817cacf80f1a01a213792ba4",
+  "release_file_count_including_index": 2727,
+  "index_scope": "Original immutable release files only; excludes Git metadata and declared repository additions.",
+  "repository_files": {
+    "docs/technical-report.pdf": {
+      "sha256": "5d379f24f1c92581ef88491edb7a53b750852594ec971abef75b9896572cc4fc",
+      "bytes": 435285
+    },
+    "docs/technical-report.docx": {
+      "sha256": "a410494048e136fd1b047afcae45060a3a2ac7e651c72835064e8c80b48de722",
+      "bytes": 203469
+    },
+    "verify_repository_payload.py": {
+      "sha256": "00e980f359d21bb293ebfcad2c0bf2e471b764ce64dc797cda07d5be81cbecbe",
+      "bytes": 4424
+    },
+    ".gitattributes": {
+      "sha256": "72b813a95604c6408a28c7c15d6f3ae6d5e16ab2cbf45273d635e907d37c7f40",
+      "bytes": 108
+    },
+    ".gitignore": {
+      "sha256": "ffad3cc0cd1d12c9291115a6e685f110357b43fb948e617b9225c5358e9b5070",
+      "bytes": 106
+    },
+    "REPOSITORY.md": {
+      "sha256": "e0d792d18116d3589027ff63a894e26ec6bfb8bc73e246986c007def43a1ed3d",
+      "bytes": 2324
+    }
+  },
+  "scope_manifest_self_hash": "Bound by transport manifest and Git commit, not recursively by itself."
+}

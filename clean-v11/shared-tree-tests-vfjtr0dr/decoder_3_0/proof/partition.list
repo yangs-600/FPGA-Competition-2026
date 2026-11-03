@@ -1,2 +1,0 @@
-decoder_3_0 decoder_3_0.z xbits : z[7:0]
-decoder_3_0 decoder_3_0.y xbits : y[7:0]
