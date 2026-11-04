@@ -1,0 +1,80 @@
+{
+  "schema": "portable-delivery-validation-v1",
+  "date": "2026-11-04",
+  "scope": "Execution portability checks on this Windows machine; not an official score or a guarantee of every later performance run.",
+  "measurements": {
+    "new_nine_cases": true,
+    "external_path_removed": true,
+    "eqy_requested": false,
+    "audit_status": "INDEPENDENT_AUDIT_PASS",
+    "overall_status": "MEASUREMENTS_PASS_FORMAL_PENDING",
+    "average_gain_percent": 20.079171455690528
+  },
+  "windows_full": {
+    "entry": "run_full.cmd --backend windows --no-pause",
+    "suite_selected_by": "oss_cad_suite_path.txt",
+    "suite_release": "2026-10-11 Windows x64",
+    "external_path_removed": true,
+    "wsl_used": false,
+    "exit_code": 0,
+    "overall_status": "MEASUREMENTS_AND_FORMAL_PASS",
+    "audit_status": "INDEPENDENT_AUDIT_PASS",
+    "positive_proof_counts": {
+      "PASS": 18
+    },
+    "negative_control": "EXPECTED_COUNTEREXAMPLE",
+    "average_gain_percent": 20.079171455690528
+  },
+  "wsl_full": {
+    "distribution": "WSL2 Ubuntu-24.04",
+    "setup_from_bundled_archive": true,
+    "status": "PASS",
+    "positive_proof_counts": {
+      "PASS": 18
+    },
+    "negative_control": {
+      "status": "EXPECTED_COUNTEREXAMPLE"
+    },
+    "windows_report_sha256": "3f01dc2763a3c4b165fa3f5d281121bd211d7b62b8d7b10a95683365682a5bb2"
+  },
+  "guards": {
+    "status": "ENTRY_GUARDS_PASS",
+    "bad_arguments_exit": 2,
+    "parallel_run_exit": 4,
+    "latest_report_unchanged_on_rejected_start": true,
+    "missing_windows_backend_result": {
+      "status": "ERROR",
+      "backend": "windows",
+      "started_at": "2026-11-04T04:22:35.720689+00:00",
+      "completed_at": "2026-11-04T04:22:35.721899+00:00",
+      "positive_proof_counts": {},
+      "negative_control": {
+        "status": "NOT_COMPLETED"
+      },
+      "error": "没有找到预装 Windows OSS CAD Suite：C:\\fpga-nonexistent-suite-20261104。请修改 oss_cad_suite_path.txt，或明确选择 --backend wsl。",
+      "automatic_fallback_after_failure": false
+    },
+    "proof_error_never_overrides_measurement_pass": true,
+    "proof_pass_never_hides_measurement_failure": true
+  },
+  "job_timeout_check": {
+    "status": "NATIVE_JOB_CONTROL_PASS",
+    "nonzero_exit": {
+      "exit_code": 7,
+      "timed_out": false,
+      "elapsed_seconds": 0.11000000000058208,
+      "descendant_cleanup_verified": true,
+      "total_job_processes": 2
+    },
+    "timeout_with_child": {
+      "exit_code": 124,
+      "timed_out": true,
+      "elapsed_seconds": 2.0309999999990396,
+      "descendant_cleanup_verified": true,
+      "total_job_processes": 3
+    }
+  },
+  "failed_development_attempts": "Earlier native preflight/path compatibility failures were retained during development; this summary does not claim they passed.",
+  "frozen_algorithm_and_measurement_protocol_unchanged": true,
+  "full_raw_test_logs": "Retained on development machine; this file is a compact validation summary, not the complete proof evidence."
+}

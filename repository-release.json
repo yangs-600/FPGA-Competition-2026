@@ -3,32 +3,450 @@
   "release_name": "windows-native-v26-final",
   "release_payload_index_sha256": "daefcb876db83cc4766583ba188c234e126561aa817cacf80f1a01a213792ba4",
   "release_file_count_including_index": 2727,
-  "index_scope": "Original immutable release files only; excludes Git metadata and declared repository additions.",
+  "index_scope": "Original immutable release files only; excludes Git metadata, declared repository/demo additions and generated local outputs.",
   "repository_files": {
-    "docs/technical-report.pdf": {
-      "sha256": "5d379f24f1c92581ef88491edb7a53b750852594ec971abef75b9896572cc4fc",
-      "bytes": 435285
-    },
-    "docs/technical-report.docx": {
-      "sha256": "a410494048e136fd1b047afcae45060a3a2ac7e651c72835064e8c80b48de722",
-      "bytes": 203469
-    },
-    "verify_repository_payload.py": {
-      "sha256": "00e980f359d21bb293ebfcad2c0bf2e471b764ce64dc797cda07d5be81cbecbe",
-      "bytes": 4424
-    },
     ".gitattributes": {
       "sha256": "72b813a95604c6408a28c7c15d6f3ae6d5e16ab2cbf45273d635e907d37c7f40",
       "bytes": 108
+    },
+    ".github/README.md": {
+      "sha256": "5e3449dff2f2732bdf30dd6def877a228caa3fb521ea1003ae99c27a51a6e629",
+      "bytes": 3674
     },
     ".gitignore": {
       "sha256": "ffad3cc0cd1d12c9291115a6e685f110357b43fb948e617b9225c5358e9b5070",
       "bytes": 106
     },
+    "compact_report.py": {
+      "sha256": "d3c9fbb6f931b14679149349b62067cf4ea4c2fe2bfb3c4931f381cc9e45f511",
+      "bytes": 15590
+    },
+    "demo-extension.json": {
+      "sha256": "56e2a3c839e6a0176ef56612e5da2e56d18bab0dad0654038ac0c7ad19901ca7",
+      "bytes": 2913
+    },
+    "demo_formal.py": {
+      "sha256": "98d47c16654525368180c53159db10d6a507f1025d3142fb96742158f64e195b",
+      "bytes": 21517
+    },
+    "demo_metadata.py": {
+      "sha256": "9fae4939f55b0975d28faee56ac1da94564e3099276b1cd694754fd4c96321ea",
+      "bytes": 22625
+    },
+    "docs/PORTABLE_RUNTIME_VALIDATION.json": {
+      "sha256": "c6def8128e10a7b7fb4cbabefc1526e4bc3626d4f914a2d827fb165700e8bfd2",
+      "bytes": 3067
+    },
+    "docs/PORTABLE_RUNTIME_VALIDATION.md": {
+      "sha256": "9bc2eb94cf4f945378ed1ce3527b7559e17638f20736edaf461ec584e094108d",
+      "bytes": 1306
+    },
+    "docs/technical-report.docx": {
+      "sha256": "a410494048e136fd1b047afcae45060a3a2ac7e651c72835064e8c80b48de722",
+      "bytes": 203469
+    },
+    "docs/technical-report.pdf": {
+      "sha256": "5d379f24f1c92581ef88491edb7a53b750852594ec971abef75b9896572cc4fc",
+      "bytes": 435285
+    },
+    "formal_dispatch.py": {
+      "sha256": "1916df19e60155dbad62ea497d477a28321829a531ac0644e2781e44263c49c4",
+      "bytes": 3017
+    },
+    "launch_demo.py": {
+      "sha256": "844c3545188bcb5bd9f85450f91aaf3a19e10cd7d0c10d6550a71910f5ef5fd4",
+      "bytes": 3510
+    },
+    "native_formal.py": {
+      "sha256": "f9b3fb8b5fd30353beac38c26682496e69ee76030e5951b48125c6f2364cac8c",
+      "bytes": 20768
+    },
+    "native_job.py": {
+      "sha256": "5309ae969d9c48fba4eca51af05c5fb1868112ee37b0cb17adeecae44bfd9803",
+      "bytes": 4931
+    },
+    "native_support/licenses/bash-5.3.020-1/desc": {
+      "sha256": "d72af8161f66bda6f193f457ad50755b2e30a25d01812fcd396c78bb2b84d4bc",
+      "bytes": 416
+    },
+    "native_support/licenses/bash-5.3.020-1/files": {
+      "sha256": "7dea3579d80f96d38f6fcd8960a2504b9cb37f70bad9fb8460e9e383a0bedcbd",
+      "bytes": 6460
+    },
+    "native_support/licenses/bash-5.3.020-1/mtree": {
+      "sha256": "aecac205aff759c5f85fbd5f3cc2fb15e1dcedea866f75915ce7dd64bd99bd9e",
+      "bytes": 4081
+    },
+    "native_support/licenses/common/GPL-2.0.txt": {
+      "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6",
+      "bytes": 17984
+    },
+    "native_support/licenses/common/GPL-3.0.txt": {
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149
+    },
+    "native_support/licenses/common/LGPL-2.1.txt": {
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+      "bytes": 26419
+    },
+    "native_support/licenses/common/LGPL-3.0.txt": {
+      "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+      "bytes": 7652
+    },
+    "native_support/licenses/coreutils-8.32-5/desc": {
+      "sha256": "05e3eb9143c7a1fa0706f464293cf28ce9cf7bbbf2dd75e64a807b0f0e1c9ae3",
+      "bytes": 416
+    },
+    "native_support/licenses/coreutils-8.32-5/files": {
+      "sha256": "60b41edecc90d52890110c5f3a7582bed528ec448a4a336666a7ee215d3ca0b5",
+      "bytes": 12592
+    },
+    "native_support/licenses/coreutils-8.32-5/mtree": {
+      "sha256": "8bd287afc3e3cd74227d552952b6099fad1c8262eedfe964a34133616d13df62",
+      "bytes": 19768
+    },
+    "native_support/licenses/gawk-5.4.1-1/desc": {
+      "sha256": "6718e5696bb0654b861d92c3cfa92e8c47d6241c10c19d0db9d9a6fb2bd67217",
+      "bytes": 433
+    },
+    "native_support/licenses/gawk-5.4.1-1/files": {
+      "sha256": "1329865f87773013cc13807070c27cc4f5ec697087bb77264d081860a6350b98",
+      "bytes": 4301
+    },
+    "native_support/licenses/gawk-5.4.1-1/mtree": {
+      "sha256": "bb131db4cd5ad69fcc5461061a150e99aa66b5c39553b5180fdc45af21e2d0bc",
+      "bytes": 5518
+    },
+    "native_support/licenses/gcc-libs-15.3.0-1/desc": {
+      "sha256": "18911241eaedf4fc0fbb920ec2ddbf456f1c93b75d9c91fa3675fd18470565e4",
+      "bytes": 493
+    },
+    "native_support/licenses/gcc-libs-15.3.0-1/files": {
+      "sha256": "3c40fd241e0c98d17c7bebfe8cb94b7224998c24447658d40593c2e8e230aaf4",
+      "bytes": 352
+    },
+    "native_support/licenses/gcc-libs-15.3.0-1/mtree": {
+      "sha256": "b5e26859be4305cc5f038cd66763bd18332b7a75abf59773e092ab2ea3d4838b",
+      "bytes": 763
+    },
+    "native_support/licenses/gcc-libs-15.3.0-1/usr_share_licenses_gcc-libs_RUNTIME.LIBRARY.EXCEPTION": {
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+      "bytes": 3324
+    },
+    "native_support/licenses/gmp-6.3.0-2/desc": {
+      "sha256": "0b547cb18ffacfa8dabe65e5de7fd6b230148436809d3ebbb88556894bf5a154",
+      "bytes": 358
+    },
+    "native_support/licenses/gmp-6.3.0-2/files": {
+      "sha256": "23c970bb5be7f20dc19e5c7b9ddc8bfb294e6b494dbf6b11f20293be7b91ffc6",
+      "bytes": 184
+    },
+    "native_support/licenses/gmp-6.3.0-2/mtree": {
+      "sha256": "12f1e84e1c21a7ccf1fecc5a5b0446a240631d4c746ca9dd511f8a014b36ca50",
+      "bytes": 534
+    },
+    "native_support/licenses/grep-1~3.0-7/desc": {
+      "sha256": "cb0f4c2ba208aafb2182ebe4bcfd0b16bfe0545b8a0bcd5f9660e17364c4ed44",
+      "bytes": 365
+    },
+    "native_support/licenses/grep-1~3.0-7/files": {
+      "sha256": "630be478d0b2c1d2ff1c1c96b11ad5f940c995da0a7b2474c82a4fb17d5049f5",
+      "bytes": 4334
+    },
+    "native_support/licenses/grep-1~3.0-7/mtree": {
+      "sha256": "418353ff8c9bf2b1ffb077d0cd9347a7c9029b284cf98a5f5abf1252365b3283",
+      "bytes": 3083
+    },
+    "native_support/licenses/libiconv-1.19-1/desc": {
+      "sha256": "4f2c6e205db392dfc5d775ad5a5fdc002b1552e3432016d20eb33e5ef659ff6d",
+      "bytes": 389
+    },
+    "native_support/licenses/libiconv-1.19-1/files": {
+      "sha256": "f99092f6646338af2fb2d201096af33ead9873aa8b7ddcd32eab0b737bf2508c",
+      "bytes": 4413
+    },
+    "native_support/licenses/libiconv-1.19-1/mtree": {
+      "sha256": "6454b75443ce7575a942be98e6c7688fe60fe807155b4ca2db10efc8e090e956",
+      "bytes": 3307
+    },
+    "native_support/licenses/libintl-0.22.5-1/desc": {
+      "sha256": "2ab8871775f566fa7c9720c0b6bb6037bd4363d041ba5fb719812d9257720328",
+      "bytes": 403
+    },
+    "native_support/licenses/libintl-0.22.5-1/files": {
+      "sha256": "3529923a67eb82cea1e1cbb74abad452004b2a94bc1a92aa7e19d24fcdbd863a",
+      "bytes": 47
+    },
+    "native_support/licenses/libintl-0.22.5-1/mtree": {
+      "sha256": "3ec6eb05085c912c5546fd67699e3e8ac31d33931017c68d845ff14e353cd3cb",
+      "bytes": 305
+    },
+    "native_support/licenses/libpcre-8.45-5/desc": {
+      "sha256": "f8cc37034ec83d24b118723e89f25169bf7c77452cbe42f734828d0c0d7fecd5",
+      "bytes": 391
+    },
+    "native_support/licenses/libpcre-8.45-5/files": {
+      "sha256": "3f18fbc183e522018bc68bf8635342906751ee966c8d9f2ce9df9bf3723d627d",
+      "bytes": 47
+    },
+    "native_support/licenses/libpcre-8.45-5/mtree": {
+      "sha256": "5a68e717e6491306bb29bcbbf9d099e67ddfb5355dac2366495a8873217290b1",
+      "bytes": 306
+    },
+    "native_support/licenses/libpcre-8.45-5/PCRE_LICENCE": {
+      "sha256": "51b3dea44f63338b84b9c97b3d793826a8397309068cf9379a423216ab8ea5b2",
+      "bytes": 3190
+    },
+    "native_support/licenses/libreadline-8.3.006-1/desc": {
+      "sha256": "9a575cc0f0bcc4ab65ba1aa47710655b450873d1a114ec34503dae57e064ea4f",
+      "bytes": 453
+    },
+    "native_support/licenses/libreadline-8.3.006-1/files": {
+      "sha256": "3e8150b696d75e2f8be161780a94d58271744457bd46cf6092168bee29376b63",
+      "bytes": 1231
+    },
+    "native_support/licenses/libreadline-8.3.006-1/mtree": {
+      "sha256": "156d1d52d1013c1d905bfc4f5137b53ea1067f88fd2502d098912700e43433d5",
+      "bytes": 2054
+    },
+    "native_support/licenses/make-4.4.1-3/desc": {
+      "sha256": "1c0ef5af67a442eb6a4d116fb7802764b5d0be92af8fba9c9767b6417fc4cde7",
+      "bytes": 399
+    },
+    "native_support/licenses/make-4.4.1-3/files": {
+      "sha256": "56acf69441ca4da7b1d54399aced2d1a04e943be1f50cbbf809b2bbda845fa3c",
+      "bytes": 3149
+    },
+    "native_support/licenses/make-4.4.1-3/mtree": {
+      "sha256": "88a776e6cc3e83c5051f1e1265bea3d4b58ab60a321a29d58ac5abbf62e23675",
+      "bytes": 2435
+    },
+    "native_support/licenses/mpfr-4.2.2-1/desc": {
+      "sha256": "7f4aac7c5cd86c196e09a5a5e7014e773d46cffdc43aeccb7c3a295912f2588b",
+      "bytes": 391
+    },
+    "native_support/licenses/mpfr-4.2.2-1/files": {
+      "sha256": "f05c5eef68ff539e4c33442af608b3b3083fb846e83c7121d577fa1ead40c52b",
+      "bytes": 620
+    },
+    "native_support/licenses/mpfr-4.2.2-1/mtree": {
+      "sha256": "2326707ae0e29d83b491b8bd073a0408321f962ca8ff985527147348e0e109ff",
+      "bytes": 1180
+    },
+    "native_support/licenses/mpfr-4.2.2-1/usr_share_doc_mpfr_COPYING": {
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149
+    },
+    "native_support/licenses/mpfr-4.2.2-1/usr_share_doc_mpfr_COPYING.LESSER": {
+      "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+      "bytes": 7652
+    },
+    "native_support/licenses/msys2-runtime-3.6.10-7/desc": {
+      "sha256": "15d88356711ea2f28e5e9af7a6cafbd58982e3aa20a6019e99520acc7c3db9ee",
+      "bytes": 492
+    },
+    "native_support/licenses/msys2-runtime-3.6.10-7/files": {
+      "sha256": "2df0d89894792c25c172e33e1c32d07ca21a9175f5ba6edc1d28b47b3b112377",
+      "bytes": 6105
+    },
+    "native_support/licenses/msys2-runtime-3.6.10-7/mtree": {
+      "sha256": "41a16000ef0bcf7c37b9d479cfe445b1b8293bfdde69c9f664640f20dd895b64",
+      "bytes": 8722
+    },
+    "native_support/licenses/msys2-runtime-3.6.10-7/usr_share_doc_Cygwin_COPYING": {
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147
+    },
+    "native_support/licenses/msys2-runtime-3.6.10-7/usr_share_doc_Cygwin_CYGWIN_LICENSE": {
+      "sha256": "794433752103cf4bbb4a84a1bdb8fbc150abb1762704bb35fecc9f7f820be984",
+      "bytes": 1458
+    },
+    "native_support/licenses/ncurses-6.6-2/desc": {
+      "sha256": "470c7c2c3025dd47c30ae914ef320cd97d1f063c009b461875fa80253273855c",
+      "bytes": 422
+    },
+    "native_support/licenses/ncurses-6.6-2/files": {
+      "sha256": "ae93d007498350ca4b92424d9d0efa42f89fd3b8e20889890c6e3fd5383650ba",
+      "bytes": 213391
+    },
+    "native_support/licenses/ncurses-6.6-2/mtree": {
+      "sha256": "12d48d899c6a9f525af292ef6e24172d35139f021d4de0035ae0a0f4c07cb537",
+      "bytes": 232675
+    },
+    "native_support/licenses/ncurses-6.6-2/usr_share_licenses_ncurses_LICENSE": {
+      "sha256": "708999f95527e1ffa670c6fce288c6c600cb477dd04afcc1171422b3dd4ee226",
+      "bytes": 1447
+    },
+    "native_support/licenses/sed-4.9-1/desc": {
+      "sha256": "9546537fe88c60515fd4b0e45569630d3ca40afd4cc3546381ac5448ab0f439a",
+      "bytes": 321
+    },
+    "native_support/licenses/sed-4.9-1/files": {
+      "sha256": "804f0db082fa0be9ddb7a94f8102fecc83166f76c6f0ec37802d5e09228e85a0",
+      "bytes": 3924
+    },
+    "native_support/licenses/sed-4.9-1/mtree": {
+      "sha256": "8d989f7918841bbe3db5806d233c228db380c0e78b1eb59e90212e811f336df2",
+      "bytes": 3723
+    },
+    "native_support/provenance.json": {
+      "sha256": "02c8c535c5f85b00424e0e93c10e62cd67a12394cabf4c188e5e783db18baffe",
+      "bytes": 11361
+    },
+    "native_support/README.txt": {
+      "sha256": "ed28250785e7ce7a31638ba1b9ad6abefbcd8a185b766a9de8e3553ba160c0e1",
+      "bytes": 1400
+    },
+    "native_support/source-urls-check.json": {
+      "sha256": "ad52fe290e35ca54f74a4560bb3e900865249f7afa02225f311609daf3c14a0c",
+      "bytes": 2091
+    },
+    "native_support/usr/bin/awk.exe": {
+      "sha256": "f123d2c120b2ad2158aa8c69d8eeedf14c0d681e68ee76ff103e06ac49986200",
+      "bytes": 1202279
+    },
+    "native_support/usr/bin/bash.exe": {
+      "sha256": "7b4dc5d6878aacdec5d09ca9c5d8e2b43b925a6bbf631873a24c692980b792b2",
+      "bytes": 2449374
+    },
+    "native_support/usr/bin/cat.exe": {
+      "sha256": "f1b37048ee5c70fdc31dde509e562261c9b2d102d94c903393f55b45e883ef90",
+      "bytes": 38719
+    },
+    "native_support/usr/bin/dirname.exe": {
+      "sha256": "53896fda354605a1a1d1f5e6802daba5ba6c05961f3074b892194e068aa82772",
+      "bytes": 34830
+    },
+    "native_support/usr/bin/env.exe": {
+      "sha256": "b5d80f13e6b4b422a8c22d32be9cc1f5fd9b482fc60008ed80e513a2fa938cdc",
+      "bytes": 44180
+    },
+    "native_support/usr/bin/gawk.exe": {
+      "sha256": "f123d2c120b2ad2158aa8c69d8eeedf14c0d681e68ee76ff103e06ac49986200",
+      "bytes": 1202279
+    },
+    "native_support/usr/bin/grep.exe": {
+      "sha256": "497202418334f8a48d9f34cd2e1b2c03c4f957e02304b613e10931c0457e8d4a",
+      "bytes": 213710
+    },
+    "native_support/usr/bin/make.exe": {
+      "sha256": "91b7e155590d59db22e5eb0a3ffeec6350149f70f9ed2c242d133e584eb72fee",
+      "bytes": 236000
+    },
+    "native_support/usr/bin/mkdir.exe": {
+      "sha256": "fc9b9e49fd6496cdddfc5681208d74bd649ac934818eafdfd50a9571bdcb4861",
+      "bytes": 71435
+    },
+    "native_support/usr/bin/msys-2.0.dll": {
+      "sha256": "4af689451202148f6a7bdc65a7a8d40166d40259f3f54136c52390576d6f4aa9",
+      "bytes": 3369089
+    },
+    "native_support/usr/bin/msys-gcc_s-seh-1.dll": {
+      "sha256": "59b816ee2880c2140ac8d7726f59e4e7435e309f272a80fd590d3130215f77f5",
+      "bytes": 141537
+    },
+    "native_support/usr/bin/msys-gmp-10.dll": {
+      "sha256": "e3d88ffc1bd3bb3bdda1d84f3f823e6f0f07c89dfd17e2d003c588f56dd80784",
+      "bytes": 605220
+    },
+    "native_support/usr/bin/msys-iconv-2.dll": {
+      "sha256": "50012969ed96a5232220185d2fc1ac1e3abe5790f6b3027f4fc3c4cad3fd38f0",
+      "bytes": 1103690
+    },
+    "native_support/usr/bin/msys-intl-8.dll": {
+      "sha256": "50f7de0c712d867ddca2c9eb8562ca6ee2d69e120e798ec6126ad29dd1ed5402",
+      "bytes": 111181
+    },
+    "native_support/usr/bin/msys-mpfr-6.dll": {
+      "sha256": "7be008ed823d8ce65a205669c44fd8ad56eee5838111101d29c6684f8eccc4f4",
+      "bytes": 652490
+    },
+    "native_support/usr/bin/msys-ncursesw6.dll": {
+      "sha256": "aef26ffbcd20ee5781c3a5e81265390494090e13561a13336d000d9d5f9a84cb",
+      "bytes": 353237
+    },
+    "native_support/usr/bin/msys-pcre-1.dll": {
+      "sha256": "a94b1a5ba095ac7ff81e138a1231e42e3a07391e85eeb86c3bb5c9245244597a",
+      "bytes": 289270
+    },
+    "native_support/usr/bin/msys-readline8.dll": {
+      "sha256": "0c7c38f1b76e087add0faca414659c3d25008a893dd4b185604a4183bb68132b",
+      "bytes": 286879
+    },
+    "native_support/usr/bin/sed.exe": {
+      "sha256": "8d54e322dfc3faa60f0464691aba8634197406e53367aa8942409181c0808be8",
+      "bytes": 178140
+    },
+    "native_support/usr/bin/sh.exe": {
+      "sha256": "7b4dc5d6878aacdec5d09ca9c5d8e2b43b925a6bbf631873a24c692980b792b2",
+      "bytes": 2449374
+    },
+    "native_support/usr/bin/touch.exe": {
+      "sha256": "1d895e0f77cbc8b77c3a38da009e8ad8d23a371afd398da5408bdeffcddf5fc0",
+      "bytes": 107463
+    },
+    "native_support/usr/bin/tr.exe": {
+      "sha256": "7cf90be63820ba9ec66a10c0c4af84f0a2e3ec90a722ea6904219ec0b93bf1c1",
+      "bytes": 49460
+    },
+    "oss_cad_suite_path.txt": {
+      "sha256": "d70c3eede3cab9316efdc55935b1414f679aa0bcc16198fcf7770642a28827a2",
+      "bytes": 18
+    },
+    "proof-tools/FPGA-topic2-v23-EQY-Linux-0.69-20261027.tar.gz": {
+      "sha256": "35a75c08bb0f32b6727203341c8162b4a0ce7c8b5a5b787d114bd2b8e7f9ba46",
+      "bytes": 43472415
+    },
+    "README_DEMO.md": {
+      "sha256": "7e3d1024257c9fefdbc7ae712547763fc2f387af4a89e9ce5c85c2674991dcfe",
+      "bytes": 2601
+    },
     "REPOSITORY.md": {
-      "sha256": "e0d792d18116d3589027ff63a894e26ec6bfb8bc73e246986c007def43a1ed3d",
-      "bytes": 2324
+      "sha256": "b8926dfc653911f01bf9756d54b51ed93ab14135854fb03aeb585122884a55ca",
+      "bytes": 2375
+    },
+    "run_demo.cmd": {
+      "sha256": "cb4cc2f0eee5cf8b661316828502260fcf2c1fa840cfe721f17f73f7e9bb3877",
+      "bytes": 154
+    },
+    "run_demo.py": {
+      "sha256": "52e2a569ecc62c4e8d971e31d3f79d64c98e9bb99328be84664ee36175832526",
+      "bytes": 10280
+    },
+    "run_full.cmd": {
+      "sha256": "c9f93d2cca835d96c07e2826aed5f60b28bba5e2f56b7c442f8cf901c2ebfb66",
+      "bytes": 146
+    },
+    "setup_wsl_eqy.py": {
+      "sha256": "5c039d115ab1f00be9efe867662931fb3ab9c8d2e1af479e7162c56f8ed85424",
+      "bytes": 13690
+    },
+    "verify_repository_payload.py": {
+      "sha256": "00e980f359d21bb293ebfcad2c0bf2e471b764ce64dc797cda07d5be81cbecbe",
+      "bytes": 4424
+    },
+    "使用说明.md": {
+      "sha256": "3b2fdd4cf80501223d6fe00186a36e93fedcfd2f61ac0b3e4fb89b7270f3f2bc",
+      "bytes": 5824
+    },
+    "测试文档.md": {
+      "sha256": "5f2bd4d364ce698d646ef955cefc017dddd7eb18c39b2d347b4b756e8ac5b1fa",
+      "bytes": 4124
     }
   },
-  "scope_manifest_self_hash": "Bound by transport manifest and Git commit, not recursively by itself."
+  "scope_manifest_self_hash": "Bound by transport manifest and Git commit, not recursively by itself.",
+  "delivery_extension": "portable-three-mode-20261104-r3-compact-report-github-flat",
+  "repository_documentation": {
+    "display_readme": ".github/README.md",
+    "frozen_readme_preserved": true,
+    "layout": "flat-inner-package",
+    "outer_wrappers": "Not copied; the package's existing inner launchers resolve this flat layout.",
+    "historical_test_document": "测试文档.md",
+    "full_archive": {
+      "name": "全部代码.rar",
+      "bytes": 97217374,
+      "sha256": "0fdc2fda8de15040f24b7614a15852c938a4d96227408a650202ec855055289d"
+    },
+    "preparation_executed_project_tests": false
+  }
 }

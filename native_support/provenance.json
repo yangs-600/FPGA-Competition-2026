@@ -1,0 +1,301 @@
+{
+  "purpose": "Standalone command dependencies for official Windows EQY make/bash strategies; no WSL or external MSYS installation",
+  "files": {
+    "mkdir.exe": {
+      "file": "usr/bin/mkdir.exe",
+      "sha256": "fc9b9e49fd6496cdddfc5681208d74bd649ac934818eafdfd50a9571bdcb4861",
+      "bytes": 71435,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\mkdir.exe"
+    },
+    "msys-2.0.dll": {
+      "file": "usr/bin/msys-2.0.dll",
+      "sha256": "4af689451202148f6a7bdc65a7a8d40166d40259f3f54136c52390576d6f4aa9",
+      "bytes": 3369089,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\msys-2.0.dll"
+    },
+    "msys-intl-8.dll": {
+      "file": "usr/bin/msys-intl-8.dll",
+      "sha256": "50f7de0c712d867ddca2c9eb8562ca6ee2d69e120e798ec6126ad29dd1ed5402",
+      "bytes": 111181,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\msys-intl-8.dll"
+    },
+    "msys-iconv-2.dll": {
+      "file": "usr/bin/msys-iconv-2.dll",
+      "sha256": "50012969ed96a5232220185d2fc1ac1e3abe5790f6b3027f4fc3c4cad3fd38f0",
+      "bytes": 1103690,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\msys-iconv-2.dll"
+    },
+    "touch.exe": {
+      "file": "usr/bin/touch.exe",
+      "sha256": "1d895e0f77cbc8b77c3a38da009e8ad8d23a371afd398da5408bdeffcddf5fc0",
+      "bytes": 107463,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\touch.exe"
+    },
+    "dirname.exe": {
+      "file": "usr/bin/dirname.exe",
+      "sha256": "53896fda354605a1a1d1f5e6802daba5ba6c05961f3074b892194e068aa82772",
+      "bytes": 34830,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\dirname.exe"
+    },
+    "tr.exe": {
+      "file": "usr/bin/tr.exe",
+      "sha256": "7cf90be63820ba9ec66a10c0c4af84f0a2e3ec90a722ea6904219ec0b93bf1c1",
+      "bytes": 49460,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\tr.exe"
+    },
+    "sed.exe": {
+      "file": "usr/bin/sed.exe",
+      "sha256": "8d54e322dfc3faa60f0464691aba8634197406e53367aa8942409181c0808be8",
+      "bytes": 178140,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\sed.exe"
+    },
+    "env.exe": {
+      "file": "usr/bin/env.exe",
+      "sha256": "b5d80f13e6b4b422a8c22d32be9cc1f5fd9b482fc60008ed80e513a2fa938cdc",
+      "bytes": 44180,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\env.exe"
+    },
+    "cat.exe": {
+      "file": "usr/bin/cat.exe",
+      "sha256": "f1b37048ee5c70fdc31dde509e562261c9b2d102d94c903393f55b45e883ef90",
+      "bytes": 38719,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\cat.exe"
+    },
+    "awk.exe": {
+      "file": "usr/bin/awk.exe",
+      "sha256": "f123d2c120b2ad2158aa8c69d8eeedf14c0d681e68ee76ff103e06ac49986200",
+      "bytes": 1202279,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\awk.exe"
+    },
+    "msys-readline8.dll": {
+      "file": "usr/bin/msys-readline8.dll",
+      "sha256": "0c7c38f1b76e087add0faca414659c3d25008a893dd4b185604a4183bb68132b",
+      "bytes": 286879,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\msys-readline8.dll"
+    },
+    "msys-ncursesw6.dll": {
+      "file": "usr/bin/msys-ncursesw6.dll",
+      "sha256": "aef26ffbcd20ee5781c3a5e81265390494090e13561a13336d000d9d5f9a84cb",
+      "bytes": 353237,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\msys-ncursesw6.dll"
+    },
+    "msys-mpfr-6.dll": {
+      "file": "usr/bin/msys-mpfr-6.dll",
+      "sha256": "7be008ed823d8ce65a205669c44fd8ad56eee5838111101d29c6684f8eccc4f4",
+      "bytes": 652490,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\msys-mpfr-6.dll"
+    },
+    "msys-gcc_s-seh-1.dll": {
+      "file": "usr/bin/msys-gcc_s-seh-1.dll",
+      "sha256": "59b816ee2880c2140ac8d7726f59e4e7435e309f272a80fd590d3130215f77f5",
+      "bytes": 141537,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\msys-gcc_s-seh-1.dll"
+    },
+    "msys-gmp-10.dll": {
+      "file": "usr/bin/msys-gmp-10.dll",
+      "sha256": "e3d88ffc1bd3bb3bdda1d84f3f823e6f0f07c89dfd17e2d003c588f56dd80784",
+      "bytes": 605220,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\msys-gmp-10.dll"
+    },
+    "gawk.exe": {
+      "file": "usr/bin/gawk.exe",
+      "sha256": "f123d2c120b2ad2158aa8c69d8eeedf14c0d681e68ee76ff103e06ac49986200",
+      "bytes": 1202279,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\gawk.exe"
+    },
+    "grep.exe": {
+      "file": "usr/bin/grep.exe",
+      "sha256": "497202418334f8a48d9f34cd2e1b2c03c4f957e02304b613e10931c0457e8d4a",
+      "bytes": 213710,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\grep.exe"
+    },
+    "msys-pcre-1.dll": {
+      "file": "usr/bin/msys-pcre-1.dll",
+      "sha256": "a94b1a5ba095ac7ff81e138a1231e42e3a07391e85eeb86c3bb5c9245244597a",
+      "bytes": 289270,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\msys-pcre-1.dll"
+    },
+    "sh.exe": {
+      "file": "usr/bin/sh.exe",
+      "sha256": "7b4dc5d6878aacdec5d09ca9c5d8e2b43b925a6bbf631873a24c692980b792b2",
+      "bytes": 2449374,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\sh.exe"
+    },
+    "bash.exe": {
+      "file": "usr/bin/bash.exe",
+      "sha256": "7b4dc5d6878aacdec5d09ca9c5d8e2b43b925a6bbf631873a24c692980b792b2",
+      "bytes": 2449374,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\bash.exe"
+    },
+    "make.exe": {
+      "file": "usr/bin/make.exe",
+      "sha256": "91b7e155590d59db22e5eb0a3ffeec6350149f70f9ed2c242d133e584eb72fee",
+      "bytes": 236000,
+      "source": "D:\\fpga-v14-work\\msys64\\usr\\bin\\make.exe"
+    }
+  },
+  "system_dlls": [
+    "KERNEL32.dll",
+    "USER32.dll",
+    "ntdll.dll"
+  ],
+  "packages": {
+    "bash-5.3.020-1": {
+      "files": [
+        "usr/bin/bash.exe",
+        "usr/bin/sh.exe"
+      ],
+      "name": "bash",
+      "version": "5.3.020-1",
+      "source_package_base": "bash",
+      "source_package_url": "https://repo.msys2.org/msys/sources/bash-5.3.020-1.src.tar.zst",
+      "build_recipe": "https://github.com/msys2/MSYS2-packages/tree/master/bash"
+    },
+    "coreutils-8.32-5": {
+      "files": [
+        "usr/bin/cat.exe",
+        "usr/bin/dirname.exe",
+        "usr/bin/env.exe",
+        "usr/bin/mkdir.exe",
+        "usr/bin/touch.exe",
+        "usr/bin/tr.exe"
+      ],
+      "name": "coreutils",
+      "version": "8.32-5",
+      "source_package_base": "coreutils",
+      "source_package_url": "https://repo.msys2.org/msys/sources/coreutils-8.32-5.src.tar.zst",
+      "build_recipe": "https://github.com/msys2/MSYS2-packages/tree/master/coreutils"
+    },
+    "gawk-5.4.1-1": {
+      "files": [
+        "usr/bin/awk.exe",
+        "usr/bin/gawk.exe"
+      ],
+      "name": "gawk",
+      "version": "5.4.1-1",
+      "source_package_base": "gawk",
+      "source_package_url": "https://repo.msys2.org/msys/sources/gawk-5.4.1-1.src.tar.zst",
+      "build_recipe": "https://github.com/msys2/MSYS2-packages/tree/master/gawk"
+    },
+    "gcc-libs-15.3.0-1": {
+      "files": [
+        "usr/bin/msys-gcc_s-seh-1.dll"
+      ],
+      "name": "gcc-libs",
+      "version": "15.3.0-1",
+      "source_package_base": "gcc",
+      "source_package_url": "https://repo.msys2.org/msys/sources/gcc-15.3.0-1.src.tar.zst",
+      "build_recipe": "https://github.com/msys2/MSYS2-packages/tree/master/gcc"
+    },
+    "gmp-6.3.0-2": {
+      "files": [
+        "usr/bin/msys-gmp-10.dll"
+      ],
+      "name": "gmp",
+      "version": "6.3.0-2",
+      "source_package_base": "gmp",
+      "source_package_url": "https://repo.msys2.org/msys/sources/gmp-6.3.0-2.src.tar.zst",
+      "build_recipe": "https://github.com/msys2/MSYS2-packages/tree/master/gmp"
+    },
+    "grep-1~3.0-7": {
+      "files": [
+        "usr/bin/grep.exe"
+      ],
+      "name": "grep",
+      "version": "1~3.0-7",
+      "source_package_base": "grep",
+      "source_package_url": "https://repo.msys2.org/msys/sources/grep-1~3.0-7.src.tar.zst",
+      "build_recipe": "https://github.com/msys2/MSYS2-packages/tree/master/grep"
+    },
+    "libiconv-1.19-1": {
+      "files": [
+        "usr/bin/msys-iconv-2.dll"
+      ],
+      "name": "libiconv",
+      "version": "1.19-1",
+      "source_package_base": "libiconv",
+      "source_package_url": "https://repo.msys2.org/msys/sources/libiconv-1.19-1.src.tar.zst",
+      "build_recipe": "https://github.com/msys2/MSYS2-packages/tree/master/libiconv"
+    },
+    "libintl-0.22.5-1": {
+      "files": [
+        "usr/bin/msys-intl-8.dll"
+      ],
+      "name": "libintl",
+      "version": "0.22.5-1",
+      "source_package_base": "gettext",
+      "source_package_url": "https://repo.msys2.org/msys/sources/gettext-0.22.5-1.src.tar.zst",
+      "build_recipe": "https://github.com/msys2/MSYS2-packages/tree/master/gettext"
+    },
+    "libpcre-8.45-5": {
+      "files": [
+        "usr/bin/msys-pcre-1.dll"
+      ],
+      "name": "libpcre",
+      "version": "8.45-5",
+      "source_package_base": "pcre",
+      "source_package_url": "https://repo.msys2.org/msys/sources/pcre-8.45-5.src.tar.zst",
+      "build_recipe": "https://github.com/msys2/MSYS2-packages/tree/master/pcre"
+    },
+    "libreadline-8.3.006-1": {
+      "files": [
+        "usr/bin/msys-readline8.dll"
+      ],
+      "name": "libreadline",
+      "version": "8.3.006-1",
+      "source_package_base": "readline",
+      "source_package_url": "https://repo.msys2.org/msys/sources/readline-8.3.006-1.src.tar.zst",
+      "build_recipe": "https://github.com/msys2/MSYS2-packages/tree/master/readline"
+    },
+    "make-4.4.1-3": {
+      "files": [
+        "usr/bin/make.exe"
+      ],
+      "name": "make",
+      "version": "4.4.1-3",
+      "source_package_base": "make",
+      "source_package_url": "https://repo.msys2.org/msys/sources/make-4.4.1-3.src.tar.zst",
+      "build_recipe": "https://github.com/msys2/MSYS2-packages/tree/master/make"
+    },
+    "mpfr-4.2.2-1": {
+      "files": [
+        "usr/bin/msys-mpfr-6.dll"
+      ],
+      "name": "mpfr",
+      "version": "4.2.2-1",
+      "source_package_base": "mpfr",
+      "source_package_url": "https://repo.msys2.org/msys/sources/mpfr-4.2.2-1.src.tar.zst",
+      "build_recipe": "https://github.com/msys2/MSYS2-packages/tree/master/mpfr"
+    },
+    "msys2-runtime-3.6.10-7": {
+      "files": [
+        "usr/bin/msys-2.0.dll"
+      ],
+      "name": "msys2-runtime",
+      "version": "3.6.10-7",
+      "source_package_base": "msys2-runtime",
+      "source_package_url": "https://repo.msys2.org/msys/sources/msys2-runtime-3.6.10-7.src.tar.zst",
+      "build_recipe": "https://github.com/msys2/MSYS2-packages/tree/master/msys2-runtime"
+    },
+    "ncurses-6.6-2": {
+      "files": [
+        "usr/bin/msys-ncursesw6.dll"
+      ],
+      "name": "ncurses",
+      "version": "6.6-2",
+      "source_package_base": "ncurses",
+      "source_package_url": "https://repo.msys2.org/msys/sources/ncurses-6.6-2.src.tar.zst",
+      "build_recipe": "https://github.com/msys2/MSYS2-packages/tree/master/ncurses"
+    },
+    "sed-4.9-1": {
+      "files": [
+        "usr/bin/sed.exe"
+      ],
+      "name": "sed",
+      "version": "4.9-1",
+      "source_package_base": "sed",
+      "source_package_url": "https://repo.msys2.org/msys/sources/sed-4.9-1.src.tar.zst",
+      "build_recipe": "https://github.com/msys2/MSYS2-packages/tree/master/sed"
+    }
+  }
+}

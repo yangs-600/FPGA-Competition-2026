@@ -1,0 +1,68 @@
+{
+  "schema": "portable-demo-extension-v1",
+  "base_payload_index_sha256": "daefcb876db83cc4766583ba188c234e126561aa817cacf80f1a01a213792ba4",
+  "base_release_file_count_including_index": 2727,
+  "scope": "Portable measurement entry and Windows-native/WSL proof orchestration. Original frozen v26 optimizer, measurement binaries, protocol and canonical proof model unchanged.",
+  "files": {
+    "README_DEMO.md": {
+      "sha256": "525de09b0db830587c7ba3945bf8fc5f4b25a0ce6e9abcc175c66cc20af357f0",
+      "bytes": 2629
+    },
+    "demo_formal.py": {
+      "sha256": "98d47c16654525368180c53159db10d6a507f1025d3142fb96742158f64e195b",
+      "bytes": 21517
+    },
+    "demo_metadata.py": {
+      "sha256": "9fae4939f55b0975d28faee56ac1da94564e3099276b1cd694754fd4c96321ea",
+      "bytes": 22625
+    },
+    "formal_dispatch.py": {
+      "sha256": "1916df19e60155dbad62ea497d477a28321829a531ac0644e2781e44263c49c4",
+      "bytes": 3017
+    },
+    "launch_demo.py": {
+      "sha256": "844c3545188bcb5bd9f85450f91aaf3a19e10cd7d0c10d6550a71910f5ef5fd4",
+      "bytes": 3510
+    },
+    "native_formal.py": {
+      "sha256": "f9b3fb8b5fd30353beac38c26682496e69ee76030e5951b48125c6f2364cac8c",
+      "bytes": 20768
+    },
+    "native_job.py": {
+      "sha256": "5309ae969d9c48fba4eca51af05c5fb1868112ee37b0cb17adeecae44bfd9803",
+      "bytes": 4931
+    },
+    "oss_cad_suite_path.txt": {
+      "sha256": "d70c3eede3cab9316efdc55935b1414f679aa0bcc16198fcf7770642a28827a2",
+      "bytes": 18
+    },
+    "run_demo.cmd": {
+      "sha256": "cb4cc2f0eee5cf8b661316828502260fcf2c1fa840cfe721f17f73f7e9bb3877",
+      "bytes": 154
+    },
+    "run_demo.py": {
+      "sha256": "52e2a569ecc62c4e8d971e31d3f79d64c98e9bb99328be84664ee36175832526",
+      "bytes": 10280
+    },
+    "run_full.cmd": {
+      "sha256": "c9f93d2cca835d96c07e2826aed5f60b28bba5e2f56b7c442f8cf901c2ebfb66",
+      "bytes": 146
+    },
+    "setup_wsl_eqy.py": {
+      "sha256": "5c039d115ab1f00be9efe867662931fb3ab9c8d2e1af479e7162c56f8ed85424",
+      "bytes": 13690
+    },
+    "compact_report.py": {
+      "sha256": "d3c9fbb6f931b14679149349b62067cf4ea4c2fe2bfb3c4931f381cc9e45f511",
+      "bytes": 15590
+    }
+  },
+  "excludes": [
+    "demo-extension.json"
+  ],
+  "generated_outputs": "tmp/demo-results/; fresh validation-current-*; latest-current.json",
+  "report_format_version": "5.0",
+  "environment_note": "Run-bound before/after snapshots; tool version probes only after all measurements. Frozen v26 source, binaries and measurement rules unchanged.",
+  "formal_note": "run_demo is measurement-only; run_full requires new run-bound proofs. Windows uses configured suite; WSL auto-configures bundled kit. Raw measurement reports are unchanged.",
+  "additional_dependencies": "All native_support files and bundled proof-tools archive are individually declared in repository-release.json."
+}
